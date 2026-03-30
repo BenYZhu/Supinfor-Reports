@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年2月 电力行业情报月报</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: { extend: {
+    fontFamily: { 'serif-cn':['Noto Serif SC','serif'], 'sans-cn':['Noto Sans SC','sans-serif'], 'display':['Playfair Display','serif'], 'inter':['Inter','sans-serif'] },
+    colors: { volt:{50:'#fffbeb',100:'#fef3c7',200:'#fde68a',300:'#fcd34d',400:'#fbbf24',500:'#f59e0b',600:'#d97706',700:'#b45309',800:'#92400e',900:'#78350f'}, grid:{50:'#f0fdf4',100:'#dcfce7',200:'#bbf7d0',500:'#22c55e',600:'#16a34a',700:'#15803d',900:'#14532d'} }
+  }}
+}
+</script>
+<style>
+::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:transparent}::-webkit-scrollbar-thumb{background:#d97706;border-radius:4px}
+.dark ::-webkit-scrollbar-thumb{background:#fbbf24}
+*{transition:background-color .3s,color .3s,border-color .3s}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-gradient{background:linear-gradient(-45deg,#78350f,#92400e,#1e3a5f,#0c4a6e);background-size:400% 400%;animation:gradientShift 15s ease infinite}
+.insight-card{transition:transform .3s,box-shadow .3s}.insight-card:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.12)}
+.dark .insight-card:hover{box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.deep-insight{background:linear-gradient(135deg,#fffbeb,#f0fdf4);border-left:4px solid #d97706}
+.dark .deep-insight{background:linear-gradient(135deg,#1c1917,#0f172a);border-left-color:#fbbf24}
+.section-divider{height:3px;background:linear-gradient(90deg,transparent,#d97706,transparent)}
+.dark .section-divider{background:linear-gradient(90deg,transparent,#fbbf24,transparent)}
+.lang-switch{position:relative;width:76px;height:34px}
+.lang-switch input{opacity:0;width:0;height:0}
+.lang-slider{position:absolute;cursor:pointer;inset:0;background:rgba(255,255,255,.2);border-radius:17px;transition:.3s;backdrop-filter:blur(4px);border:1px solid rgba(255,255,255,.3)}
+.lang-slider::before{content:'中';position:absolute;height:26px;width:26px;left:4px;bottom:3px;background:#fff;border-radius:50%;transition:.3s;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:#78350f;line-height:26px;text-align:center}
+.lang-switch input:checked+.lang-slider::before{transform:translateX(42px);content:'EN'}
+#progress-bar{position:fixed;top:0;left:0;height:3px;z-index:9999;background:linear-gradient(90deg,#d97706,#f59e0b);transition:width .1s}
+@media print{.no-print{display:none!important}}
+</style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 font-sans-cn">
+<div id="progress-bar" style="width:0%"></div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="fixed top-0 left-0 right-0 z-50 no-print backdrop-blur-xl bg-white/80 dark:bg-slate-950/80 border-b border-slate-200/50 dark:border-slate-800/50">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-14">
+  <div class="flex items-center gap-2">
+    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-volt-600 to-volt-400 flex items-center justify-center"><i class="fa-solid fa-bolt text-white text-xs"></i></div>
+    <span class="font-serif-cn font-bold text-sm text-slate-900 dark:text-white zh-text">电力行业月报</span>
+    <span class="font-inter font-bold text-sm text-slate-900 dark:text-white en-text hidden">Power Industry Monthly</span>
+  </div>
+  <div class="flex items-center gap-3">
+    <span class="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">中文</span>
+    <label class="lang-switch"><input type="checkbox" id="langToggle" onchange="toggleLanguage()"><span class="lang-slider"></span></label>
+    <span class="text-xs text-slate-500 dark:text-slate-400 hidden sm:inline">EN</span>
+    <button onclick="toggleDarkMode()" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700" aria-label="Toggle dark mode">
+      <i class="fa-solid fa-moon text-slate-600 dark:hidden text-sm"></i><i class="fa-solid fa-sun text-yellow-400 hidden dark:inline text-sm"></i>
+    </button>
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="w-8 h-8 rounded-lg bg-slate-100 dark:bg-slate-800 flex items-center justify-center hover:bg-slate-200 dark:hover:bg-slate-700" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up text-slate-600 dark:text-slate-400 text-xs"></i>
+    </button>
+  </div>
+</div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="hero-gradient relative overflow-hidden pt-14">
+<div class="absolute inset-0 opacity-10"><svg width="100%" height="100%"><defs><pattern id="g" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0L0 0 0 40" fill="none" stroke="#fff" stroke-width=".5"/></pattern></defs><rect width="100%" height="100%" fill="url(#g)"/></svg></div>
+<div class="absolute top-20 right-10 w-64 h-64 bg-volt-400/10 rounded-full blur-3xl"></div>
+<div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-32 text-center">
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 mb-8">
+    <span class="w-2 h-2 rounded-full bg-volt-400 animate-pulse"></span>
+    <span class="text-white/90 text-sm font-medium zh-text">2026年2月刊</span>
+    <span class="text-white/90 text-sm font-medium en-text hidden">February 2026 Edition</span>
+  </div>
+  <h1 class="font-serif-cn font-black text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-6">
+    <span class="zh-text">电力行业<br><span class="text-volt-300">情报月报</span></span>
+    <span class="en-text hidden font-display">Power Industry<br><span class="text-volt-300">Intelligence Monthly</span></span>
+  </h1>
+  <p class="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10 font-light leading-relaxed zh-text">GE Vernova订单储备达1500亿美元，中国储能成本仅为欧美1/3，2500GW项目因电网并网排队受阻——AI、储能、电网三重驱动力正在重塑电力产业</p>
+  <p class="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto mb-10 font-light leading-relaxed en-text hidden">GE Vernova backlog reaches $150B. Chinese storage costs just 1/3 of Western levels. 2,500GW projects stuck in grid queues — AI, storage &amp; grid triple forces reshaping the power industry</p>
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-4xl mx-auto">
+    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"><div class="text-3xl font-bold text-white">$150B</div><div class="text-white/60 text-sm mt-1 zh-text">GE Vernova订单储备</div><div class="text-white/60 text-sm mt-1 en-text hidden">GE Vernova order backlog</div></div>
+    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"><div class="text-3xl font-bold text-emerald-300">$73<span class="text-lg">/kWh</span></div><div class="text-white/60 text-sm mt-1 zh-text">中国BESS成本</div><div class="text-white/60 text-sm mt-1 en-text hidden">China BESS cost</div></div>
+    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"><div class="text-3xl font-bold text-red-300">2,500<span class="text-lg">GW</span></div><div class="text-white/60 text-sm mt-1 zh-text">并网排队受阻项目</div><div class="text-white/60 text-sm mt-1 en-text hidden">Grid queue backlog</div></div>
+    <div class="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/10"><div class="text-3xl font-bold text-volt-300">11.2<span class="text-lg">TW</span></div><div class="text-white/60 text-sm mt-1 zh-text">2035年全球可再生装机</div><div class="text-white/60 text-sm mt-1 en-text hidden">2035 global renewable capacity</div></div>
+  </div>
+  <div class="mt-14 animate-bounce"><i class="fa-solid fa-chevron-down text-white/40 text-xl"></i></div>
+</div>
+<div class="absolute bottom-0 left-0 right-0"><svg viewBox="0 0 1440 60" fill="none"><path d="M0 60h1440V20c-240 25-480 40-720 25S240 0 0 20v40z" class="fill-white dark:fill-slate-950"/></svg></div>
+</header>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<section id="executive-summary" class="mb-20">
+  <div class="flex items-center gap-3 mb-10">
+    <div class="w-10 h-10 rounded-xl bg-volt-600 flex items-center justify-center"><i class="fa-solid fa-bullseye text-white"></i></div>
+    <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white zh-text">执行摘要</h2>
+    <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white en-text hidden">Executive Summary</h2>
+  </div>
+  <div class="grid gap-4">
+    <div class="insight-card bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/30 dark:to-orange-950/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/30">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center flex-shrink-0 mt-1"><span class="text-amber-600 dark:text-amber-400 font-bold text-sm">1</span></div>
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">AI数据中心电力需求爆发重塑能源基建格局</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">AI Data Center Power Demand Explosion Reshapes Energy Infrastructure</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed zh-text">GE Vernova订单量增长65%，储备达1500亿美元，燃气轮机成为AI算力基建的核心受益品类。</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed en-text hidden">GE Vernova orders up 65%, backlog reaches $150B. Gas turbines become the core beneficiary of AI compute infrastructure.</p>
+        </div>
+      </div>
+    </div>
+    <div class="insight-card bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/20 rounded-2xl p-6 border border-emerald-100 dark:border-emerald-900/30">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center flex-shrink-0 mt-1"><span class="text-emerald-600 dark:text-emerald-400 font-bold text-sm">2</span></div>
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">储能市场进入全球化竞标阶段</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">Energy Storage Market Enters Global Bidding Phase</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed zh-text">巴西2GW储能项目吸引中国企业集体竞标，中国BESS成本仅为欧美的1/3，成本优势驱动市场格局重塑。</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed en-text hidden">Brazil's 2GW storage project attracts collective bidding from Chinese firms. Chinese BESS costs only 1/3 of Western levels, driving market restructuring.</p>
+        </div>
+      </div>
+    </div>
+    <div class="insight-card bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-900/30">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center flex-shrink-0 mt-1"><span class="text-blue-600 dark:text-blue-400 font-bold text-sm">3</span></div>
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">电力企业业绩分化加剧</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">Power Company Performance Divergence Intensifies</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed zh-text">Iberdrola净利润增12%、Schneider营收破400亿欧元，而First Solar 2026指引远低于预期，股价暴跌14%。</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed en-text hidden">Iberdrola net profit up 12%, Schneider revenue exceeds €40B, while First Solar 2026 guidance falls far below expectations with stock plunging 14%.</p>
+        </div>
+      </div>
+    </div>
+    <div class="insight-card bg-gradient-to-r from-red-50 to-rose-50 dark:from-red-950/30 dark:to-rose-950/20 rounded-2xl p-6 border border-red-100 dark:border-red-900/30">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-red-100 dark:bg-red-900/50 flex items-center justify-center flex-shrink-0 mt-1"><span class="text-red-600 dark:text-red-400 font-bold text-sm">4</span></div>
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">欧盟对中资风电企业启动外国补贴调查</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">EU Launches Foreign Subsidy Investigation on Chinese Wind Companies</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed zh-text">金风科技成为首个被FSR调查的中资风电企业，中国新能源企业欧洲布局面临系统性政策风险。</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed en-text hidden">Goldwind becomes the first Chinese wind company under FSR investigation. Chinese clean energy firms face systemic policy risks in Europe.</p>
+        </div>
+      </div>
+    </div>
+    <div class="insight-card bg-gradient-to-r from-purple-50 to-fuchsia-50 dark:from-purple-950/30 dark:to-fuchsia-950/20 rounded-2xl p-6 border border-purple-100 dark:border-purple-900/30">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-full bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center flex-shrink-0 mt-1"><span class="text-purple-600 dark:text-purple-400 font-bold text-sm">5</span></div>
+        <div>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">西班牙大停电责任争议暴露电网管理深层矛盾</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">Spain Blackout Blame Game Exposes Deep Grid Management Contradictions</h3>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed zh-text">发电企业与电网运营商互相指责，凸显可再生能源高渗透率下电网稳定性的治理困境。</p>
+          <p class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed en-text hidden">Generators and grid operators blame each other, highlighting grid stability governance challenges under high renewable penetration.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== CHAPTER 1: 市场动态与竞争格局 ===== -->
+<section id="chapter1" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-amber-600 flex items-center justify-center"><i class="fa-solid fa-chart-line text-white"></i></div>
+    <div><span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider zh-text">第一章</span><span class="text-xs font-semibold text-amber-600 dark:text-amber-400 uppercase tracking-wider en-text hidden">Chapter 1</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">市场动态与竞争格局</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Market Dynamics &amp; Competitive Landscape</h2>
+
+  <!-- GE Vernova -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-fire-flame-curved mr-1"></i><span class="zh-text">燃气轮机</span><span class="en-text hidden">Gas Turbines</span></span>
+    </div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">AI数据中心驱动燃气轮机需求激增，GE Vernova成能源基建核心受益者</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">AI Data Centers Drive Gas Turbine Demand Surge — GE Vernova Becomes Core Energy Infrastructure Beneficiary</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <h4 class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider mb-3"><i class="fa-solid fa-lightbulb mr-1 text-amber-500"></i><span class="zh-text">关键洞察</span><span class="en-text hidden">Key Insights</span></h4>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-amber-500 mt-1 flex-shrink-0"></i><span class="zh-text">GE Vernova订单量增长65%，订单储备达1500亿美元</span><span class="en-text hidden">GE Vernova orders up 65%, backlog reaches $150B</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-amber-500 mt-1 flex-shrink-0"></i><span class="zh-text">季度分红翻倍至每股0.5美元，授权100亿美元股票回购</span><span class="en-text hidden">Quarterly dividend doubled to $0.50/share; $10B share buyback authorized</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-amber-500 mt-1 flex-shrink-0"></i><span class="zh-text">股价过去一年涨幅163.9%，多家机构上调目标价至820-910美元</span><span class="en-text hidden">Stock up 163.9% over past year; multiple firms raise target to $820-910</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-amber-500 mt-1 flex-shrink-0"></i><span class="zh-text">全球25%的电力生产依赖GE Vernova技术</span><span class="en-text hidden">25% of global power generation relies on GE Vernova technology</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-amber-50 dark:bg-amber-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">NRG Energy等大型电力企业60亿美元燃气轮机订单推高设备需求</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">$6B gas turbine orders from NRG Energy and other major utilities drive equipment demand</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">AI算力基建正在创造新一轮能源基础设施超级周期，燃气发电作为过渡性基荷电源的战略价值被重新定价。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">AI compute infrastructure is creating a new energy infrastructure super-cycle. Gas power's strategic value as transitional baseload is being repriced.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- China BESS -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4">
+      <span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-battery-full mr-1"></i><span class="zh-text">储能</span><span class="en-text hidden">Storage</span></span>
+    </div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">中国储能企业以1/3成本优势抢占巴西2GW储能市场</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Chinese Energy Storage Firms Capture Brazil's 2GW Market with 1/3 Cost Advantage</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-emerald-500 mt-1 flex-shrink-0"></i><span class="zh-text">巴西计划2028年交付2GW储能项目，Sungrow、BYD、CATL、华为等集体竞标</span><span class="en-text hidden">Brazil plans 2GW storage delivery by 2028; Sungrow, BYD, CATL, Huawei collectively bid</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-emerald-500 mt-1 flex-shrink-0"></i><span class="zh-text">中国BESS成本约73美元/kWh，欧美分别为177和219美元/kWh</span><span class="en-text hidden">Chinese BESS cost ~$73/kWh vs. Europe $177 and US $219/kWh</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-emerald-500 mt-1 flex-shrink-0"></i><span class="zh-text">华为已在巴西部署400MWh储能系统，晶科专设储能业务团队</span><span class="en-text hidden">Huawei deployed 400MWh storage in Brazil; JinkoSolar establishes dedicated storage team</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-emerald-500 mt-1 flex-shrink-0"></i><span class="zh-text">巴西储能市场预计2030年吸引450亿雷亚尔投资</span><span class="en-text hidden">Brazil storage market expected to attract R$45B investment by 2030</span></li>
+        </ul>
+      </div>
+      <div>
+        <!-- BESS Cost Comparison -->
+        <div class="bg-emerald-50 dark:bg-emerald-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-3"><i class="fa-solid fa-chart-bar mr-1"></i><span class="zh-text">BESS成本对比 ($/kWh)</span><span class="en-text hidden">BESS Cost Comparison ($/kWh)</span></div>
+          <div class="space-y-2">
+            <div class="flex items-center gap-2"><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 zh-text">中国</span><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 en-text hidden">China</span><div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full h-4 overflow-hidden"><div class="bg-emerald-500 h-full rounded-full flex items-center justify-end pr-1" style="width:33%"><span class="text-[10px] text-white font-bold">$73</span></div></div></div>
+            <div class="flex items-center gap-2"><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 zh-text">欧洲</span><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 en-text hidden">Europe</span><div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full h-4 overflow-hidden"><div class="bg-blue-500 h-full rounded-full flex items-center justify-end pr-1" style="width:81%"><span class="text-[10px] text-white font-bold">$177</span></div></div></div>
+            <div class="flex items-center gap-2"><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 zh-text">美国</span><span class="text-xs w-14 text-right text-slate-600 dark:text-slate-400 en-text hidden">US</span><div class="flex-1 bg-slate-200 dark:bg-slate-700 rounded-full h-4 overflow-hidden"><div class="bg-red-500 h-full rounded-full flex items-center justify-end pr-1" style="width:100%"><span class="text-[10px] text-white font-bold">$219</span></div></div></div>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">中国储能企业正以压倒性成本优势重塑全球储能市场竞争格局，本地化运营经验将成为差异化竞争的关键。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Chinese storage firms are reshaping global competition with overwhelming cost advantages. Localized operational experience will be key to differentiation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Insight 1 -->
+  <div class="deep-insight rounded-2xl p-6 sm:p-8 mb-6">
+    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-diamond text-volt-600 dark:text-volt-400"></i><span class="font-bold text-volt-600 dark:text-volt-400 text-sm">Deep Insight</span></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4">
+        <div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-fire mr-1"></i><span class="zh-text">核心趋势</span><span class="en-text hidden">Core Trend</span></div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 zh-text">AI驱动的电力需求与储能成本下降正在同步重塑全球能源基建投资逻辑</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">AI-driven power demand and declining storage costs are simultaneously reshaping global energy infrastructure investment logic</p>
+      </div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4">
+        <div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2"><i class="fa-solid fa-signal mr-1"></i><span class="zh-text">竞争信号</span><span class="en-text hidden">Competitive Signal</span></div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 zh-text">中国企业在储能领域的成本优势已形成结构性壁垒</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Chinese companies' cost advantage in energy storage has formed a structural barrier</p>
+      </div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4">
+        <div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-2"><i class="fa-solid fa-compass mr-1"></i><span class="zh-text">未来方向</span><span class="en-text hidden">Future Direction</span></div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 zh-text">燃气发电+储能的组合将成为AI时代能源基建的标准配置</p>
+        <p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Gas power + storage combination will become the standard configuration for AI-era energy infrastructure</p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== CHAPTER 2: 企业经营与战略调整 ===== -->
+<section id="chapter2" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center"><i class="fa-solid fa-building text-white"></i></div>
+    <div><span class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider zh-text">第二章</span><span class="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-wider en-text hidden">Chapter 2</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">企业经营与战略调整</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Corporate Operations &amp; Strategic Adjustments</h2>
+
+  <!-- Schneider -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-server mr-1"></i><span class="zh-text">数据中心</span><span class="en-text hidden">Data Center</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">Schneider Electric营收破400亿欧元，数据中心业务实现三位数增长</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Schneider Electric Revenue Exceeds €40B — Data Center Business Achieves Triple-Digit Growth</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-blue-500 mt-1 flex-shrink-0"></i><span class="zh-text">2025年营收401.5亿欧元，有机增长8.9%，Q4有机增长10.7%远超预期</span><span class="en-text hidden">2025 revenue €40.15B, organic growth 8.9%; Q4 organic growth 10.7% far exceeds expectations</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-blue-500 mt-1 flex-shrink-0"></i><span class="zh-text">数据中心及网络业务Q4实现三位数同比增长</span><span class="en-text hidden">Data center &amp; network business achieves triple-digit YoY growth in Q4</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-blue-500 mt-1 flex-shrink-0"></i><span class="zh-text">2026年预期有机营收增长7%-10%，利润率提升50-80个基点</span><span class="en-text hidden">2026 expected organic revenue growth 7-10%, margin improvement 50-80 bps</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-blue-50 dark:bg-blue-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-blue-600 dark:text-blue-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">北美市场有机增长15%，成为核心增长动力</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">North America organic growth 15%, becoming the core growth driver</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">数据中心电力管理正成为Schneider的第二增长曲线，AI算力需求将持续驱动该业务高速增长。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Data center power management is becoming Schneider's second growth curve. AI compute demand will continue driving high-speed growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Iberdrola -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-plug-circle-bolt mr-1"></i><span class="zh-text">电网</span><span class="en-text hidden">Grid</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">Iberdrola净利润创历史新高，电网业务EBITDA增长21%成核心引擎</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Iberdrola Net Profit Hits Record High — Grid Business EBITDA Up 21% Becomes Core Engine</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-green-500 mt-1 flex-shrink-0"></i><span class="zh-text">2025年净利润62.9亿欧元，同比增长12%，创历史新高</span><span class="en-text hidden">2025 net profit €6.29B, up 12% YoY, record high</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-green-500 mt-1 flex-shrink-0"></i><span class="zh-text">电网业务EBITDA同比增长21%，62%投资投向电网</span><span class="en-text hidden">Grid EBITDA up 21% YoY; 62% of investment directed to grid</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-green-500 mt-1 flex-shrink-0"></i><span class="zh-text">全年投资144.6亿欧元创纪录，新增可再生能源装机2700MW</span><span class="en-text hidden">Record €14.46B annual investment; 2,700MW new renewable capacity added</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-green-500 mt-1 flex-shrink-0"></i><span class="zh-text">拟分红45亿欧元，每股0.68欧元，同比增长12%</span><span class="en-text hidden">Proposed €4.5B dividend, €0.68/share, up 12% YoY</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-green-50 dark:bg-green-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-green-600 dark:text-green-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">2028年目标净利润超76亿欧元</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">2028 target net profit exceeds €7.6B</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">电网资产正从"成本中心"转变为"利润引擎"，监管环境改善与资产规模扩大为电网业务提供了持续增长动力。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Grid assets are transforming from "cost centers" to "profit engines." Improved regulatory environment and asset scale expansion provide sustained growth momentum.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- First Solar -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-solar-panel mr-1"></i><span class="zh-text">光伏</span><span class="en-text hidden">Solar PV</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">First Solar 2026营收指引远低预期，东南亚产能利用率低迷拖累前景</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">First Solar 2026 Revenue Guidance Far Below Expectations — SE Asia Utilization Drags Outlook</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">2025年营收52.2亿美元增长24%，但2026年指引49-52亿美元远低于预期的61.2亿</span><span class="en-text hidden">2025 revenue $5.22B up 24%, but 2026 guidance $4.9-5.2B far below expected $6.12B</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">股价盘后暴跌近14%</span><span class="en-text hidden">Stock plunges ~14% after hours</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">东南亚工厂产能利用率极低，2025年取消订单达8.3GW</span><span class="en-text hidden">SE Asia factory utilization extremely low; 8.3GW orders cancelled in 2025</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">美国本土产能扩张取得进展，合同储备50.1GW价值150亿美元</span><span class="en-text hidden">US domestic capacity expansion progresses; contract backlog 50.1GW worth $15B</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-red-50 dark:bg-red-950/20 rounded-xl p-4 border border-red-200 dark:border-red-900/30 mb-4">
+          <div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i><span class="zh-text">预期差距</span><span class="en-text hidden">Expectation Gap</span></div>
+          <div class="flex items-end gap-3">
+            <div class="text-center"><div class="text-xs text-slate-500 dark:text-slate-400 zh-text">指引</div><div class="text-xs text-slate-500 dark:text-slate-400 en-text hidden">Guidance</div><div class="text-2xl font-bold text-red-600 dark:text-red-400">$5.05B</div></div>
+            <div class="text-slate-400 mb-1">vs</div>
+            <div class="text-center"><div class="text-xs text-slate-500 dark:text-slate-400 zh-text">预期</div><div class="text-xs text-slate-500 dark:text-slate-400 en-text hidden">Expected</div><div class="text-2xl font-bold text-slate-800 dark:text-slate-200">$6.12B</div></div>
+            <div class="text-red-600 dark:text-red-400 font-bold text-sm mb-1">-17%</div>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">光伏行业正面临产能过剩与贸易壁垒的双重挤压，区域化产能布局与订单质量管理成为生存关键。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">The solar PV industry faces dual pressure from overcapacity and trade barriers. Regionalized capacity deployment and order quality management become survival keys.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Insight 2 -->
+  <div class="deep-insight rounded-2xl p-6 sm:p-8 mb-6">
+    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-diamond text-volt-600 dark:text-volt-400"></i><span class="font-bold text-volt-600 dark:text-volt-400 text-sm">Deep Insight</span></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-fire mr-1"></i><span class="zh-text">核心趋势</span><span class="en-text hidden">Core Trend</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">电力企业业绩分化加剧，数据中心与电网业务成为增长高地</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Power company performance divergence intensifies; data center and grid businesses become growth highlands</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2"><i class="fa-solid fa-signal mr-1"></i><span class="zh-text">竞争信号</span><span class="en-text hidden">Competitive Signal</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">光伏行业产能过剩风险上升，关税与贸易政策成为关键变量</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Solar PV overcapacity risk rises; tariffs and trade policy become key variables</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-2"><i class="fa-solid fa-compass mr-1"></i><span class="zh-text">未来方向</span><span class="en-text hidden">Future Direction</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">电力企业需在AI驱动的新需求与传统可再生能源之间重新配置资源</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Power companies must reallocate resources between AI-driven new demand and traditional renewables</p></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== CHAPTER 3: 政策与监管环境 ===== -->
+<section id="chapter3" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center"><i class="fa-solid fa-gavel text-white"></i></div>
+    <div><span class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider zh-text">第三章</span><span class="text-xs font-semibold text-red-600 dark:text-red-400 uppercase tracking-wider en-text hidden">Chapter 3</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">政策与监管环境</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Policy &amp; Regulatory Environment</h2>
+
+  <!-- FSR -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-shield-halved mr-1"></i><span class="zh-text">贸易壁垒</span><span class="en-text hidden">Trade Barriers</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">欧盟首次以FSR调查中资风电企业，中国新能源欧洲布局面临系统性风险</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">EU First Uses FSR to Investigate Chinese Wind Company — China's Clean Energy European Strategy Faces Systemic Risk</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">欧盟对金风科技启动外国补贴规则（FSR）正式调查</span><span class="en-text hidden">EU launches formal FSR investigation on Goldwind</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">此前隆基绿能、上海电气已因FSR调查放弃约30亿元合同</span><span class="en-text hidden">LONGi Green Energy and Shanghai Electric previously abandoned ~¥3B contracts due to FSR</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">中车四方因FSR调查退出保加利亚项目投标</span><span class="en-text hidden">CRRC Sifang withdrew from Bulgaria project bid due to FSR investigation</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-red-500 mt-1 flex-shrink-0"></i><span class="zh-text">中国外交部批评欧盟释放保护主义信号</span><span class="en-text hidden">China's Foreign Ministry criticizes EU for sending protectionist signals</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-red-50 dark:bg-red-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">FSR已成为欧盟限制中资企业的系统性工具</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">FSR has become the EU's systematic tool for restricting Chinese companies</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">FSR正在从个案执法演变为针对中资新能源企业的常态化监管工具，中国企业需重新评估欧洲市场的风险收益比。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">FSR is evolving from case-by-case enforcement to a normalized regulatory tool targeting Chinese clean energy firms. Companies must reassess Europe's risk-reward ratio.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Spain Blackout -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-plug-circle-xmark mr-1"></i><span class="zh-text">电网治理</span><span class="en-text hidden">Grid Governance</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">西班牙大停电责任争议暴露可再生能源高渗透率下的电网治理困境</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Spain Blackout Blame Game Exposes Grid Governance Challenges Under High Renewable Penetration</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-purple-500 mt-1 flex-shrink-0"></i><span class="zh-text">Endesa、Iberdrola高管直指Red Eléctrica（REE）为唯一责任方</span><span class="en-text hidden">Endesa, Iberdrola executives directly blame Red Eléctrica (REE) as sole responsible party</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-purple-500 mt-1 flex-shrink-0"></i><span class="zh-text">Iberdrola披露2024年3月测试产生0.8Hz振荡但未引发停电的关键证据</span><span class="en-text hidden">Iberdrola discloses key evidence: March 2024 test produced 0.8Hz oscillation without causing blackout</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-purple-500 mt-1 flex-shrink-0"></i><span class="zh-text">REE反驳称操作严格遵守法规，结论应基于毫秒级技术数据</span><span class="en-text hidden">REE counters that operations strictly followed regulations; conclusions should be based on millisecond-level technical data</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-purple-500 mt-1 flex-shrink-0"></i><span class="zh-text">电网企业与电力公司就投资不足、回报率等问题持续对峙</span><span class="en-text hidden">Grid companies and utilities continue standoff over underinvestment and return rates</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-purple-50 dark:bg-purple-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-purple-600 dark:text-purple-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">西班牙配电网络回报率6.58%，低于其他欧洲国家</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">Spain's distribution network return rate 6.58%, below other European countries</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">可再生能源高渗透率对电网稳定性提出全新挑战，电网投资不足与监管框架滞后是深层矛盾。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">High renewable penetration poses new challenges to grid stability. Underinvestment and lagging regulatory frameworks are the deep-rooted contradictions.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Insight 3 -->
+  <div class="deep-insight rounded-2xl p-6 sm:p-8 mb-6">
+    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-diamond text-volt-600 dark:text-volt-400"></i><span class="font-bold text-volt-600 dark:text-volt-400 text-sm">Deep Insight</span></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-fire mr-1"></i><span class="zh-text">核心趋势</span><span class="en-text hidden">Core Trend</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">贸易保护主义与电网治理困境是电力行业面临的两大政策风险</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Trade protectionism and grid governance challenges are the two major policy risks facing the power industry</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2"><i class="fa-solid fa-signal mr-1"></i><span class="zh-text">竞争信号</span><span class="en-text hidden">Competitive Signal</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">欧盟FSR调查范围可能进一步扩大至储能等领域</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">EU FSR investigation scope may further expand to energy storage and other sectors</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-2"><i class="fa-solid fa-compass mr-1"></i><span class="zh-text">未来方向</span><span class="en-text hidden">Future Direction</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">电网现代化投资与跨境监管协调将成为政策重点</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Grid modernization investment and cross-border regulatory coordination will become policy priorities</p></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== CHAPTER 4: 技术突破与产业趋势 ===== -->
+<section id="chapter4" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-violet-600 flex items-center justify-center"><i class="fa-solid fa-microchip text-white"></i></div>
+    <div><span class="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider zh-text">第四章</span><span class="text-xs font-semibold text-violet-600 dark:text-violet-400 uppercase tracking-wider en-text hidden">Chapter 4</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">技术突破与产业趋势</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Technology Breakthroughs &amp; Industry Trends</h2>
+
+  <!-- Renewable Growth -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-wind mr-1"></i><span class="zh-text">可再生能源</span><span class="en-text hidden">Renewables</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">全球可再生能源装机2035年将达11.2TW，AI技术重塑能源系统运营</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Global Renewable Capacity to Reach 11.2TW by 2035 — AI Reshapes Energy System Operations</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-violet-500 mt-1 flex-shrink-0"></i><span class="zh-text">GlobalData预测2024-2035年全球可再生能源装机年复合增长率11%</span><span class="en-text hidden">GlobalData forecasts 11% CAGR for global renewable capacity 2024-2035</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-violet-500 mt-1 flex-shrink-0"></i><span class="zh-text">太阳能光伏和风电分别占总装机56%和33%</span><span class="en-text hidden">Solar PV and wind account for 56% and 33% of total capacity respectively</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-violet-500 mt-1 flex-shrink-0"></i><span class="zh-text">AI算法可预测能源产量、实时监控电网、优化储能策略</span><span class="en-text hidden">AI algorithms can predict energy output, monitor grids in real-time, optimize storage strategies</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-violet-500 mt-1 flex-shrink-0"></i><span class="zh-text">2024年光伏产业吸引投资3291亿美元，远超风电</span><span class="en-text hidden">Solar PV attracted $329.1B investment in 2024, far exceeding wind</span></li>
+        </ul>
+      </div>
+      <div>
+        <!-- Capacity Growth Visualization -->
+        <div class="bg-violet-50 dark:bg-violet-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-violet-600 dark:text-violet-400 mb-3"><i class="fa-solid fa-chart-line mr-1"></i><span class="zh-text">装机增长预测</span><span class="en-text hidden">Capacity Growth Forecast</span></div>
+          <div class="flex items-end justify-between gap-2 h-24">
+            <div class="flex flex-col items-center gap-1 flex-1"><div class="bg-violet-300 dark:bg-violet-700 rounded-t w-full" style="height:30%"></div><div class="text-[10px] text-slate-500 dark:text-slate-400">2024</div><div class="text-xs font-bold text-slate-700 dark:text-slate-300">3.4TW</div></div>
+            <div class="flex flex-col items-center gap-1 flex-1"><div class="bg-violet-400 dark:bg-violet-600 rounded-t w-full" style="height:55%"></div><div class="text-[10px] text-slate-500 dark:text-slate-400">2029</div><div class="text-xs font-bold text-slate-700 dark:text-slate-300">~7TW</div></div>
+            <div class="flex flex-col items-center gap-1 flex-1"><div class="bg-violet-600 dark:bg-violet-400 rounded-t w-full" style="height:100%"></div><div class="text-[10px] text-slate-500 dark:text-slate-400">2035</div><div class="text-xs font-bold text-slate-700 dark:text-slate-300">11.2TW</div></div>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">AI正在从"辅助工具"升级为能源系统的"核心操作系统"，智能化将成为可再生能源规模化部署的关键使能技术。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">AI is upgrading from "auxiliary tool" to the "core operating system" of energy systems. Intelligence will become the key enabling technology for renewable scale deployment.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Data Center Grid Bottleneck -->
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-server mr-1"></i><span class="zh-text">数据中心</span><span class="en-text hidden">Data Centers</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">全球数据中心基础设施市场2035年达450亿美元，电网瓶颈成最大制约</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">Global Data Center Infrastructure Market Reaches $45B by 2035 — Grid Bottleneck Becomes Biggest Constraint</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-orange-500 mt-1 flex-shrink-0"></i><span class="zh-text">2024年市场规模278亿美元，预计2035年增至450亿美元</span><span class="en-text hidden">2024 market size $27.8B, expected to grow to $45B by 2035</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-orange-500 mt-1 flex-shrink-0"></i><span class="zh-text">PJM Interconnection警告2027年可能出现电力供应缺口</span><span class="en-text hidden">PJM Interconnection warns of potential power supply gap by 2027</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-orange-500 mt-1 flex-shrink-0"></i><span class="zh-text">超2500GW项目因并网排队受阻，约1/5数据中心建设面临延误</span><span class="en-text hidden">2,500+ GW projects stuck in interconnection queues; ~1/5 data center builds face delays</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-orange-500 mt-1 flex-shrink-0"></i><span class="zh-text">特朗普政府要求科技企业自建电厂</span><span class="en-text hidden">Trump administration requires tech companies to build their own power plants</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-orange-50 dark:bg-orange-950/30 rounded-xl p-4 border border-orange-200 dark:border-orange-900/30 mb-4">
+          <div class="text-xs font-semibold text-orange-600 dark:text-orange-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i><span class="zh-text">瓶颈警示</span><span class="en-text hidden">Bottleneck Alert</span></div>
+          <div class="flex items-center gap-3">
+            <span class="text-3xl font-black text-orange-600 dark:text-orange-400">2,500+</span>
+            <span class="text-sm text-slate-500 dark:text-slate-400 zh-text">GW项目因并网排队受阻</span>
+            <span class="text-sm text-slate-500 dark:text-slate-400 en-text hidden">GW projects stuck in queue</span>
+          </div>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">电网并网瓶颈正在成为全球数据中心扩张的最大制约因素，电网投资滞后将拖累AI产业发展速度。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Grid interconnection bottlenecks are becoming the biggest constraint on global data center expansion. Lagging grid investment will slow AI industry development.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Insight 4 -->
+  <div class="deep-insight rounded-2xl p-6 sm:p-8 mb-6">
+    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-diamond text-volt-600 dark:text-volt-400"></i><span class="font-bold text-volt-600 dark:text-volt-400 text-sm">Deep Insight</span></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-fire mr-1"></i><span class="zh-text">核心趋势</span><span class="en-text hidden">Core Trend</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">可再生能源规模化与AI驱动的电力需求正在同步加速</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Renewable scale-up and AI-driven power demand are accelerating simultaneously</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2"><i class="fa-solid fa-signal mr-1"></i><span class="zh-text">竞争信号</span><span class="en-text hidden">Competitive Signal</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">电网并网能力成为产业发展的关键瓶颈</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Grid interconnection capacity becomes the critical bottleneck for industry development</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-2"><i class="fa-solid fa-compass mr-1"></i><span class="zh-text">未来方向</span><span class="en-text hidden">Future Direction</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">智能电网、分布式储能与AI优化将成为解决供需矛盾的核心路径</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Smart grids, distributed storage, and AI optimization will become core paths to resolving supply-demand contradictions</p></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== CHAPTER 5: 行业风险警示 ===== -->
+<section id="chapter5" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-rose-600 flex items-center justify-center"><i class="fa-solid fa-triangle-exclamation text-white"></i></div>
+    <div><span class="text-xs font-semibold text-rose-600 dark:text-rose-400 uppercase tracking-wider zh-text">第五章</span><span class="text-xs font-semibold text-rose-600 dark:text-rose-400 uppercase tracking-wider en-text hidden">Chapter 5</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">行业风险警示</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Industry Risk Alerts</h2>
+
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="flex items-center gap-2 mb-4"><span class="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 text-xs"><i class="fa-solid fa-helmet-safety mr-1"></i><span class="zh-text">安全生产</span><span class="en-text hidden">Safety</span></span></div>
+    <h3 class="font-serif-cn font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug zh-text">德国风电场工人坠亡、美国风机雷击起火，安全生产风险不容忽视</h3>
+    <h3 class="font-bold text-lg sm:text-xl text-slate-900 dark:text-white mb-4 leading-snug en-text hidden">German Wind Farm Worker Falls to Death, US Turbine Lightning Fire — Safety Risks Cannot Be Ignored</h3>
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-rose-500 mt-1 flex-shrink-0"></i><span class="zh-text">德国黑森州在建风电场两名安装工从机舱坠落死亡</span><span class="en-text hidden">Two installers fall to death from nacelle at wind farm under construction in Hesse, Germany</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-rose-500 mt-1 flex-shrink-0"></i><span class="zh-text">美国德州La Casa风电场风机遭雷击起火，旋翼断裂</span><span class="en-text hidden">La Casa wind farm turbine in Texas struck by lightning, catches fire, blade breaks</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-rose-500 mt-1 flex-shrink-0"></i><span class="zh-text">意大利福利尼奥变压器起火引发全城大面积停电</span><span class="en-text hidden">Transformer fire in Foligno, Italy causes city-wide blackout</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-rose-500 mt-1 flex-shrink-0"></i><span class="zh-text">巴西圣保罗地下电网设备故障导致2万用户停电超两天</span><span class="en-text hidden">Underground grid equipment failure in São Paulo causes 20,000 users to lose power for 2+ days</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-rose-50 dark:bg-rose-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-rose-600 dark:text-rose-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">德国事故涉及Vestas V172型7.2MW风机，原计划2026年底运营</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">German incident involves Vestas V172 7.2MW turbine, originally planned for operation by end of 2026</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">随着风电装机规模扩大与设备大型化，安全生产管理的复杂度显著提升，行业需建立更严格的施工与运维安全标准。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">As wind installations scale up and equipment grows larger, safety management complexity increases significantly. The industry needs stricter construction and O&amp;M safety standards.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Deep Insight 5 -->
+  <div class="deep-insight rounded-2xl p-6 sm:p-8 mb-6">
+    <div class="flex items-center gap-2 mb-4"><i class="fa-solid fa-diamond text-volt-600 dark:text-volt-400"></i><span class="font-bold text-volt-600 dark:text-volt-400 text-sm">Deep Insight</span></div>
+    <div class="grid sm:grid-cols-3 gap-4">
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-red-600 dark:text-red-400 mb-2"><i class="fa-solid fa-fire mr-1"></i><span class="zh-text">核心趋势</span><span class="en-text hidden">Core Trend</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">大型化风电设备的安全风险与老旧电网的可靠性问题并存</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Safety risks of large-scale wind equipment coexist with aging grid reliability issues</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-amber-600 dark:text-amber-400 mb-2"><i class="fa-solid fa-signal mr-1"></i><span class="zh-text">竞争信号</span><span class="en-text hidden">Competitive Signal</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">安全事故频发可能引发更严格的监管要求与保险成本上升</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Frequent safety incidents may trigger stricter regulatory requirements and rising insurance costs</p></div>
+      <div class="bg-white/60 dark:bg-slate-800/60 rounded-xl p-4"><div class="text-xs font-semibold text-emerald-600 dark:text-emerald-400 mb-2"><i class="fa-solid fa-compass mr-1"></i><span class="zh-text">未来方向</span><span class="en-text hidden">Future Direction</span></div><p class="text-sm text-slate-700 dark:text-slate-300 zh-text">预测性维护、数字孪生等技术将成为降低安全风险的关键手段</p><p class="text-sm text-slate-700 dark:text-slate-300 en-text hidden">Predictive maintenance, digital twins and other technologies will become key means to reduce safety risks</p></div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== FUTURE TRENDS ===== -->
+<section id="future-trends" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-volt-600 to-amber-500 flex items-center justify-center"><i class="fa-solid fa-rocket text-white"></i></div>
+    <div><span class="text-xs font-semibold text-volt-600 dark:text-volt-400 uppercase tracking-wider zh-text">行业未来趋势</span><span class="text-xs font-semibold text-volt-600 dark:text-volt-400 uppercase tracking-wider en-text hidden">Industry Future Trends</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-4 zh-text">电力行业正经历"需求侧革命"</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-4 en-text hidden">The Power Industry's "Demand-Side Revolution"</h2>
+  <p class="text-slate-500 dark:text-slate-400 mb-10 zh-text">AI、储能、电网三重驱动力重塑产业</p>
+  <p class="text-slate-500 dark:text-slate-400 mb-10 en-text hidden">AI, Storage, Grid — Triple Forces Reshaping the Industry</p>
+
+  <div class="grid sm:grid-cols-3 gap-6 mb-8">
+    <div class="insight-card bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-2xl p-6 border border-amber-100 dark:border-amber-900/30">
+      <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center mb-4"><i class="fa-solid fa-brain text-amber-600 dark:text-amber-400 text-xl"></i></div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">AI驱动</h3>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">AI-Driven</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">数据中心创造前所未有的集中式电力需求</p>
+      <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Data centers create unprecedented concentrated power demand</p>
+    </div>
+    <div class="insight-card bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl p-6 border border-emerald-100 dark:border-emerald-900/30">
+      <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center mb-4"><i class="fa-solid fa-battery-full text-emerald-600 dark:text-emerald-400 text-xl"></i></div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">储能革命</h3>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">Storage Revolution</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">成本下降使"可再生能源+储能"组合经济性持续提升</p>
+      <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Cost declines make "renewables + storage" combinations increasingly economical</p>
+    </div>
+    <div class="insight-card bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl p-6 border border-blue-100 dark:border-blue-900/30">
+      <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center mb-4"><i class="fa-solid fa-plug-circle-bolt text-blue-600 dark:text-blue-400 text-xl"></i></div>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 zh-text">电网升级</h3>
+      <h3 class="font-bold text-slate-900 dark:text-white mb-2 en-text hidden">Grid Upgrade</h3>
+      <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">从"被动扩容"转向"智能化升级"</p>
+      <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Shifting from "passive expansion" to "intelligent upgrade"</p>
+    </div>
+  </div>
+
+  <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 border border-slate-200 dark:border-slate-800 shadow-sm mb-6">
+    <div class="grid sm:grid-cols-2 gap-6">
+      <div>
+        <ul class="space-y-2 text-sm text-slate-700 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-volt-500 mt-1 flex-shrink-0"></i><span class="zh-text">分布式能源与集中式电网的融合成为新课题</span><span class="en-text hidden">Integration of distributed energy and centralized grids becomes a new challenge</span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-caret-right text-volt-500 mt-1 flex-shrink-0"></i><span class="zh-text">地缘政治与贸易壁垒加速能源供应链区域化</span><span class="en-text hidden">Geopolitics and trade barriers accelerate energy supply chain regionalization</span></li>
+        </ul>
+      </div>
+      <div>
+        <div class="bg-volt-50 dark:bg-amber-950/30 rounded-xl p-4 mb-4">
+          <div class="text-xs font-semibold text-volt-600 dark:text-volt-400 mb-1"><i class="fa-solid fa-database mr-1"></i><span class="zh-text">关键数据</span><span class="en-text hidden">Key Data</span></div>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold zh-text">全球电网投资滞后，超2500GW项目因并网排队受阻</p>
+          <p class="text-slate-800 dark:text-slate-200 font-semibold en-text hidden">Global grid investment lags; 2,500+ GW projects stuck in interconnection queues</p>
+        </div>
+        <div class="bg-slate-50 dark:bg-slate-800/50 rounded-xl p-4">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-1"><i class="fa-solid fa-expand mr-1"></i><span class="zh-text">洞察延伸</span><span class="en-text hidden">Extended Insight</span></div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">电力行业正从"供给侧主导"转向"需求侧驱动"，AI时代的电力需求特征将重新定义能源基础设施的投资逻辑与技术路线。</p>
+          <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">The power industry is shifting from "supply-side led" to "demand-side driven." AI-era power demand characteristics will redefine energy infrastructure investment logic and technology roadmaps.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="section-divider mb-20"></div>
+
+<!-- ===== STRATEGIC RECOMMENDATIONS ===== -->
+<section id="strategy" class="mb-20">
+  <div class="flex items-center gap-3 mb-3">
+    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-volt-700 to-amber-600 flex items-center justify-center"><i class="fa-solid fa-chess-queen text-white"></i></div>
+    <div><span class="text-xs font-semibold text-volt-700 dark:text-volt-400 uppercase tracking-wider zh-text">战略建议</span><span class="text-xs font-semibold text-volt-700 dark:text-volt-400 uppercase tracking-wider en-text hidden">Strategic Recommendations</span></div>
+  </div>
+  <h2 class="font-serif-cn font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 zh-text">战略建议</h2>
+  <h2 class="font-display font-bold text-2xl sm:text-3xl text-slate-900 dark:text-white mb-10 en-text hidden">Strategic Recommendations</h2>
+  <div class="grid sm:grid-cols-2 gap-6">
+    <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-amber-500 to-orange-500"></div>
+      <div class="pl-4"><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-amber-100 dark:bg-amber-900/50 flex items-center justify-center"><i class="fa-solid fa-microchip text-amber-600 dark:text-amber-400 text-sm"></i></div><span class="font-bold text-sm text-slate-900 dark:text-white zh-text">技术维度</span><span class="font-bold text-sm text-slate-900 dark:text-white en-text hidden">Technology</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">加速AI在电网调度、储能优化、预测性维护中的应用，建立智能化运营能力</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Accelerate AI in grid dispatch, storage optimization, predictive maintenance. Build intelligent operations capabilities.</p>
+      </div>
+    </div>
+    <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-emerald-500 to-teal-500"></div>
+      <div class="pl-4"><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center"><i class="fa-solid fa-boxes-stacked text-emerald-600 dark:text-emerald-400 text-sm"></i></div><span class="font-bold text-sm text-slate-900 dark:text-white zh-text">产品维度</span><span class="font-bold text-sm text-slate-900 dark:text-white en-text hidden">Product</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">关注"燃气发电+储能"组合方案的市场机会，布局数据中心电力解决方案</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Focus on "gas power + storage" combo market opportunities. Deploy data center power solutions.</p>
+      </div>
+    </div>
+    <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-blue-500 to-indigo-500"></div>
+      <div class="pl-4"><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-900/50 flex items-center justify-center"><i class="fa-solid fa-link text-blue-600 dark:text-blue-400 text-sm"></i></div><span class="font-bold text-sm text-slate-900 dark:text-white zh-text">供应链维度</span><span class="font-bold text-sm text-slate-900 dark:text-white en-text hidden">Supply Chain</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">评估中国储能供应链的成本优势与地缘政治风险，建立多元化供应体系</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Assess Chinese storage supply chain cost advantages vs. geopolitical risks. Build diversified supply systems.</p>
+      </div>
+    </div>
+    <div class="insight-card bg-white dark:bg-slate-900 rounded-2xl p-6 border border-slate-200 dark:border-slate-800 shadow-sm relative overflow-hidden">
+      <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-purple-500 to-fuchsia-500"></div>
+      <div class="pl-4"><div class="flex items-center gap-2 mb-3"><div class="w-8 h-8 rounded-lg bg-purple-100 dark:bg-purple-900/50 flex items-center justify-center"><i class="fa-solid fa-globe text-purple-600 dark:text-purple-400 text-sm"></i></div><span class="font-bold text-sm text-slate-900 dark:text-white zh-text">市场维度</span><span class="font-bold text-sm text-slate-900 dark:text-white en-text hidden">Market</span></div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 zh-text">重点关注AI数据中心集中区域的电力需求增长，提前布局电网并网与配套服务</p>
+        <p class="text-sm text-slate-600 dark:text-slate-400 en-text hidden">Focus on power demand growth in AI data center clusters. Pre-position grid interconnection and supporting services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center">
+    <div class="flex items-center justify-center gap-2 mb-4">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-volt-600 to-volt-400 flex items-center justify-center"><i class="fa-solid fa-bolt text-white text-xs"></i></div>
+      <span class="font-serif-cn font-bold text-slate-900 dark:text-white zh-text">电力行业情报月报</span>
+      <span class="font-inter font-bold text-slate-900 dark:text-white en-text hidden">Power Industry Intelligence Monthly</span>
+    </div>
+    <p class="text-sm text-slate-500 dark:text-slate-400 mb-2 zh-text">本报告基于2026年2月公开行业信息整理，观点不代表报告提供者立场。</p>
+    <p class="text-sm text-slate-500 dark:text-slate-400 mb-2 en-text hidden">This report is compiled from publicly available industry information as of February 2026. Views do not represent the position of the report provider.</p>
+    <div class="flex items-center justify-center gap-4 mt-6 text-xs text-slate-400 dark:text-slate-500">
+      <span>Author: Supinfor Ltd.</span><span>|</span><span>&copy; 2026 Supinfor Ltd. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+function toggleDarkMode(){document.documentElement.classList.toggle('dark');localStorage.setItem('darkMode',document.documentElement.classList.contains('dark'))}
+(function(){const s=localStorage.getItem('darkMode');if(s==='true'||(s===null&&window.matchMedia('(prefers-color-scheme:dark)').matches))document.documentElement.classList.add('dark')})();
+let currentLang='zh';
+function toggleLanguage(){currentLang=currentLang==='zh'?'en':'zh';document.querySelectorAll('.zh-text').forEach(e=>e.classList.toggle('hidden',currentLang==='en'));document.querySelectorAll('.en-text').forEach(e=>e.classList.toggle('hidden',currentLang==='zh'));document.documentElement.lang=currentLang==='zh'?'zh-CN':'en'}
+window.addEventListener('scroll',function(){const t=document.documentElement.scrollTop||document.body.scrollTop;const h=document.documentElement.scrollHeight-document.documentElement.clientHeight;document.getElementById('progress-bar').style.width=(t/h)*100+'%'});
+const obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)'}})},{threshold:0.1});
+document.querySelectorAll('.insight-card,.deep-insight').forEach(function(el){el.style.opacity='0';el.style.transform='translateY(20px)';el.style.transition='opacity .6s ease,transform .6s ease';obs.observe(el)});
+</script>
+</body>
+</html>

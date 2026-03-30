@@ -1,0 +1,1954 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴西 区域国别洞察报告 | Supinfor Ltd.</title>
+<meta name="description" content="基于2026年2月巴西国别资讯月报，269条原始资讯提炼50条深度洞察">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;0,8..60,900;1,8..60,400&family=IBM+Plex+Mono:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        brazil: {
+          green: '#064e3b',
+          gold: '#eab308',
+          'gold-bright': '#facc15',
+          'dark-bg': '#0a1a14',
+          'dark-surface': '#0f2a1f',
+          'dark-card': '#132e22',
+          'light-bg': '#faf9f6',
+          'light-surface': '#f5f3ee',
+          'light-card': '#ffffff',
+        }
+      },
+      fontFamily: {
+        'serif-display': ['"Source Serif 4"', 'serif'],
+        'mono': ['"IBM Plex Mono"', 'monospace'],
+        'body': ['"Noto Sans SC"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+  /* Base styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Noto Sans SC', sans-serif; transition: background-color 0.3s, color 0.3s; }
+
+  /* Light theme */
+  :root {
+    --bg: #faf9f6; --surface: #f5f3ee; --card: #ffffff;
+    --text: #064e3b; --text-secondary: #1a5c3a; --text-muted: #4a7c5c;
+    --gold: #eab308; --gold-hover: #ca8a04; --border: #d4d0c8;
+    --hero-bg: #064e3b; --hero-text: #e2e8f0; --hero-gold: #facc15;
+    --insight-border: #064e3b; --insight-hover-border: #eab308;
+    --table-header: #064e3b; --table-header-text: #ffffff;
+    --table-row-alt: #f0ede5; --shadow: rgba(0,0,0,0.08);
+    --toc-bg: #ffffff; --toc-active: #064e3b; --toc-text: #1a5c3a;
+    --code-bg: #f0ede5; --badge-bg: rgba(234,179,8,0.15); --badge-text: #92400e;
+    --section-num-color: #064e3b;
+  }
+  .dark {
+    --bg: #0a1a14; --surface: #0f2a1f; --card: #132e22;
+    --text: #e2e8f0; --text-secondary: #a7c4b8; --text-muted: #6b9a84;
+    --gold: #facc15; --gold-hover: #eab308; --border: #1e4a38;
+    --hero-bg: #064e3b; --hero-text: #e2e8f0; --hero-gold: #facc15;
+    --insight-border: #1e4a38; --insight-hover-border: #facc15;
+    --table-header: #0f3d2e; --table-header-text: #e2e8f0;
+    --table-row-alt: #0f2a1f; --shadow: rgba(0,0,0,0.3);
+    --toc-bg: #0f2a1f; --toc-active: #facc15; --toc-text: #a7c4b8;
+    --code-bg: #0f2a1f; --badge-bg: rgba(250,204,21,0.15); --badge-text: #facc15;
+    --section-num-color: #facc15;
+  }
+
+  body { background: var(--bg); color: var(--text); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: var(--surface); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--gold); }
+
+  /* Hero diamond pattern */
+  .hero-diamonds {
+    background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 0L40 20L20 40L0 20Z' fill='none' stroke='rgba(250,204,21,0.08)' stroke-width='1'/%3E%3C/svg%3E");
+  }
+
+  /* Animations */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up.visible:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up.visible:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up.visible:nth-child(4) { transition-delay: 0.3s; }
+
+  /* Insight card */
+  .insight-card {
+    border-left: 4px solid var(--insight-border);
+    background: var(--card);
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px var(--shadow);
+  }
+  .insight-card:hover {
+    border-left-color: var(--gold);
+    box-shadow: 0 4px 12px var(--shadow);
+    transform: translateX(4px);
+  }
+
+  /* Section label */
+  .section-label {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* TOC sidebar */
+  .toc-sidebar {
+    background: var(--toc-bg);
+    border-right: 1px solid var(--border);
+    transition: transform 0.3s ease;
+  }
+  .toc-sidebar a {
+    color: var(--toc-text);
+    transition: all 0.2s;
+    display: block;
+    padding: 4px 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+  }
+  .toc-sidebar a:hover, .toc-sidebar a.active {
+    color: var(--toc-active);
+    font-weight: 600;
+  }
+  .toc-sidebar a.active { border-left: 2px solid var(--gold); padding-left: 8px; }
+  .toc-sub { padding-left: 16px; font-size: 0.75rem; }
+  .toc-sub a { padding: 2px 0; color: var(--text-muted); }
+
+  /* Summary grid */
+  .summary-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+  .summary-card h3 { color: var(--gold); font-family: 'Source Serif 4', serif; }
+
+  /* Tables */
+  .styled-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+  .styled-table thead th {
+    background: var(--table-header); color: var(--table-header-text);
+    padding: 10px 14px; text-align: left; font-weight: 600;
+  }
+  .styled-table tbody td { padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  .styled-table tbody tr:nth-child(even) { background: var(--table-row-alt); }
+
+  /* Gold bullet */
+  .gold-bullet { color: var(--gold); margin-right: 8px; }
+
+  /* Back to top */
+  .back-to-top {
+    position: fixed; bottom: 32px; right: 32px; z-index: 999;
+    width: 48px; height: 48px; border-radius: 50%;
+    background: var(--gold); color: #064e3b;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    opacity: 0; transform: translateY(20px);
+    transition: all 0.3s ease; cursor: pointer;
+    font-size: 1.2rem;
+  }
+  .back-to-top.show { opacity: 1; transform: translateY(0); }
+  .back-to-top:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,0.3); }
+
+  /* Theme toggle */
+  .theme-toggle {
+    background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.2);
+    color: #facc15; border-radius: 9999px; padding: 8px 14px;
+    cursor: pointer; font-size: 0.9rem; transition: all 0.2s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .theme-toggle:hover { background: rgba(255,255,255,0.25); }
+
+  /* Mobile TOC toggle */
+  .toc-toggle {
+    display: none; position: fixed; top: 16px; left: 16px; z-index: 1001;
+    background: var(--gold); color: #064e3b; border: none;
+    width: 44px; height: 44px; border-radius: 50%;
+    font-size: 1.1rem; cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  }
+
+  /* Stat card in hero */
+  .hero-stat {
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(250,204,21,0.2);
+    border-radius: 12px; padding: 20px; text-align: center;
+    backdrop-filter: blur(8px); transition: all 0.3s;
+  }
+  .hero-stat:hover { background: rgba(255,255,255,0.12); border-color: rgba(250,204,21,0.4); transform: translateY(-2px); }
+  .hero-stat .stat-num { font-family: 'IBM Plex Mono', monospace; font-size: 2.5rem; font-weight: 700; color: #facc15; line-height: 1; }
+  .hero-stat .stat-label { font-size: 0.85rem; color: rgba(226,232,240,0.8); margin-top: 6px; }
+
+  /* Core summary number */
+  .core-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 3rem; font-weight: 700; color: var(--gold);
+    line-height: 1; min-width: 80px;
+  }
+
+  /* Viz: Approval bars */
+  .approval-card {
+    border-radius: 12px; padding: 24px; text-align: center;
+    font-family: 'IBM Plex Mono', monospace;
+  }
+  .approval-card .pct { font-size: 2.8rem; font-weight: 700; line-height: 1; }
+  .approval-card .label { font-size: 0.9rem; margin-top: 8px; font-family: 'Noto Sans SC', sans-serif; }
+
+  /* Viz: Cascade bars */
+  .cascade-bar {
+    height: 44px; border-radius: 8px; display: flex;
+    align-items: center; padding: 0 16px; color: white;
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem;
+    font-weight: 600; margin-bottom: 10px; transition: all 0.3s;
+    position: relative;
+  }
+  .cascade-bar:hover { filter: brightness(1.1); }
+  .cascade-bar .bar-label { position: absolute; right: 16px; }
+
+  /* Viz: Dispute bars */
+  .dispute-container { display: flex; align-items: center; gap: 0; }
+  .dispute-bar { height: 48px; display: flex; align-items: center; padding: 0 16px;
+    font-family: 'IBM Plex Mono', monospace; font-size: 0.85rem; font-weight: 600; color: white; }
+
+  /* Section heading */
+  .section-heading {
+    font-family: 'Source Serif 4', serif;
+    font-weight: 700;
+    color: var(--text);
+    position: relative;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .toc-sidebar { position: fixed; left: 0; top: 0; z-index: 1000; transform: translateX(-100%); width: 280px; height: 100vh; overflow-y: auto; }
+    .toc-sidebar.open { transform: translateX(0); box-shadow: 4px 0 20px rgba(0,0,0,0.3); }
+    .toc-toggle { display: flex; align-items: center; justify-content: center; }
+    .main-content { margin-left: 0 !important; }
+  }
+  @media (min-width: 1025px) {
+    .toc-sidebar { position: fixed; left: 0; top: 0; width: 260px; height: 100vh; overflow-y: auto; padding: 20px 16px; z-index: 100; }
+    .main-content { margin-left: 260px; }
+  }
+
+  /* Print */
+  @media print {
+    .toc-sidebar, .toc-toggle, .back-to-top, .theme-toggle { display: none !important; }
+    .main-content { margin-left: 0 !important; }
+  }
+</style>
+</head>
+<body class="font-body">
+
+<!-- TOC Toggle (mobile) -->
+<button class="toc-toggle" id="tocToggle" aria-label="Toggle navigation">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- TOC Sidebar -->
+<nav class="toc-sidebar" id="tocSidebar">
+  <div class="mb-4 pb-3" style="border-bottom: 1px solid var(--border);">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--gold); text-transform:uppercase;">Country Insight</div>
+    <div style="font-family:'Source Serif 4',serif; font-weight:700; font-size:1.1rem; color:var(--text); margin-top:2px;">巴西洞察报告</div>
+  </div>
+  <div style="font-size:0.7rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--text-muted); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">目录导航</div>
+
+  <a href="#core-summary">核心洞察摘要</a>
+
+  <div style="margin-top:8px;">
+    <a href="#section-1" class="font-semibold">一、政治格局与选举动态</a>
+    <div class="toc-sub">
+      <a href="#insight-1-1">1.1 2026大选提前开打</a>
+      <a href="#insight-1-2">1.2 Lula支持率下滑</a>
+      <a href="#insight-1-3">1.3 灾害应对政治化</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-2" class="font-semibold">二、司法危机与制度信任</a>
+    <div class="toc-sub">
+      <a href="#insight-2-1">2.1 STF保护Toffoli</a>
+      <a href="#insight-2-2">2.2 法官性侵丑闻</a>
+      <a href="#insight-2-3">2.3 里约犯罪勾结</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-3" class="font-semibold">三、外交与国际合作</a>
+    <div class="toc-sub">
+      <a href="#insight-3-1">3.1 Mercosul-欧盟协定</a>
+      <a href="#insight-3-2">3.2 战略自主外交</a>
+      <a href="#insight-3-3">3.3 亚洲合作深化</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-4" class="font-semibold">四、宏观经济与财政风险</a>
+    <div class="toc-sub">
+      <a href="#insight-4-1">4.1 经济亮眼财政隐忧</a>
+      <a href="#insight-4-2">4.2 Master银行危机</a>
+      <a href="#insight-4-3">4.3 选举周期不确定性</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-5" class="font-semibold">五、劳工改革与社会博弈</a>
+    <div class="toc-sub">
+      <a href="#insight-5-1">5.1 6x1工作制改革</a>
+      <a href="#insight-5-2">5.2 大众奴役劳工案</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-6" class="font-semibold">六、产业发展与基础设施</a>
+    <div class="toc-sub">
+      <a href="#insight-6-1">6.1 交通基建投资</a>
+      <a href="#insight-6-2">6.2 农业出口强劲</a>
+      <a href="#insight-6-3">6.3 数字基础设施</a>
+      <a href="#insight-6-4">6.4 未来燃料法</a>
+      <a href="#insight-6-5">6.5 建筑行业转型</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-7" class="font-semibold">七、国防与安全</a>
+    <div class="toc-sub">
+      <a href="#insight-7-1">7.1 国防投资与出口</a>
+      <a href="#insight-7-2">7.2 公共安全立法</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-8" class="font-semibold">八、科技创新与AI治理</a>
+    <div class="toc-sub">
+      <a href="#insight-8-1">8.1 AI战略多维推进</a>
+      <a href="#insight-8-2">8.2 科研投入与合作</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-9" class="font-semibold">九、教育改革与争议</a>
+    <div class="toc-sub">
+      <a href="#insight-9-1">9.1 教育投入成效</a>
+      <a href="#insight-9-2">9.2 军政学校争议</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-10" class="font-semibold">十、人文与社会思潮</a>
+    <div class="toc-sub">
+      <a href="#insight-10-1">10.1 性别不平等</a>
+      <a href="#insight-10-2">10.2 反种族主义</a>
+      <a href="#insight-10-3">10.3 跨性别运动员</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-11" class="font-semibold">十一、医疗卫生体系</a>
+    <div class="toc-sub">
+      <a href="#insight-11-1">11.1 SUS手术量新高</a>
+      <a href="#insight-11-2">11.2 Mounjaro专利争议</a>
+      <a href="#insight-11-3">11.3 疫苗接种不足</a>
+      <a href="#insight-11-4">11.4 癌症防控升级</a>
+      <a href="#insight-11-5">11.5 假酒中毒防控</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-12" class="font-semibold">十二、民生保障与社会治理</a>
+    <div class="toc-sub">
+      <a href="#insight-12-1">12.1 民生政策密集落地</a>
+      <a href="#insight-12-2">12.2 公共安全挑战</a>
+      <a href="#insight-12-3">12.3 社保与女性权益</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-13" class="font-semibold">十三、环保与能源转型</a>
+    <div class="toc-sub">
+      <a href="#insight-13-1">13.1 原住民权益冲突</a>
+      <a href="#insight-13-2">13.2 能源转型路线图</a>
+      <a href="#insight-13-3">13.3 毁林率下降</a>
+      <a href="#insight-13-4">13.4 循环经济政策</a>
+      <a href="#insight-13-5">13.5 亚马逊河口勘探</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-14" class="font-semibold">十四、选举制度与民主治理</a>
+    <div class="toc-sub">
+      <a href="#insight-14-1">14.1 选举新规则</a>
+      <a href="#insight-14-2">14.2 超标福利争议</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-15" class="font-semibold">十五、税收改革与营商环境</a>
+    <div class="toc-sub">
+      <a href="#insight-15-1">15.1 税收政策调整</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-16" class="font-semibold">十六、宗教与社会冲突</a>
+    <div class="toc-sub">
+      <a href="#insight-16-1">16.1 狂欢节宗教交锋</a>
+      <a href="#insight-16-2">16.2 宗教歧视与暴力</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-17" class="font-semibold">十七、原住民权益与领土争议</a>
+    <div class="toc-sub">
+      <a href="#insight-17-1">17.1 文化政策与划界</a>
+      <a href="#insight-17-2">17.2 亚马逊土地冲突</a>
+    </div>
+  </div>
+
+  <div style="margin-top:6px;">
+    <a href="#section-18" class="font-semibold">十八、地方治理与区域发展</a>
+    <div class="toc-sub">
+      <a href="#insight-18-1">18.1 各州发展差异</a>
+      <a href="#insight-18-2">18.2 里约BRT改革</a>
+    </div>
+  </div>
+
+  <div style="margin-top:10px; border-top: 1px solid var(--border); padding-top:8px;">
+    <a href="#full-summary">全文总结</a>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+<!-- ==================== HERO ==================== -->
+<header id="hero" class="hero-diamonds relative overflow-hidden" style="background: linear-gradient(135deg, #042f24 0%, #064e3b 40%, #0a5c45 70%, #064e3b 100%); min-height: 520px;">
+  <!-- Decorative elements -->
+  <div style="position:absolute;top:-60px;right:-60px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(250,204,21,0.06) 0%,transparent 70%);"></div>
+  <div style="position:absolute;bottom:-40px;left:-40px;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,rgba(250,204,21,0.04) 0%,transparent 70%);"></div>
+
+  <!-- Top bar -->
+  <div class="flex justify-between items-center px-6 py-4 relative z-10">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:rgba(226,232,240,0.5); letter-spacing:0.1em;">SUPINFOR LTD.</div>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+      <i class="fas fa-sun" id="themeIcon"></i>
+      <span id="themeLabel" style="font-size:0.8rem;">主题</span>
+    </button>
+  </div>
+
+  <div class="max-w-5xl mx-auto px-6 py-12 relative z-10 text-center">
+    <!-- Badge -->
+    <div class="inline-block mb-6 fade-up">
+      <span style="font-family:'IBM Plex Mono',monospace; font-size:0.75rem; letter-spacing:0.2em; color:#facc15; background:rgba(250,204,21,0.1); border:1px solid rgba(250,204,21,0.25); padding:6px 20px; border-radius:9999px;">
+        COUNTRY INSIGHT REPORT · BRAZIL
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="fade-up" style="font-family:'Source Serif 4',serif; font-size:3.2rem; font-weight:900; color:#e2e8f0; line-height:1.2; margin-bottom:16px;">
+      <span style="color:#facc15;">巴西</span> 区域国别洞察报告
+    </h1>
+    <p class="fade-up" style="font-size:1rem; color:rgba(226,232,240,0.7); max-width:600px; margin:0 auto 12px;">
+      基于：2026年2月巴西国别资讯月报 · 分析日期：2026年3月28日
+    </p>
+
+    <!-- Viz 1: Hero Dashboard Stats -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 max-w-3xl mx-auto fade-up">
+      <div class="hero-stat">
+        <div class="stat-num">269</div>
+        <div class="stat-label">原始资讯</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">50</div>
+        <div class="stat-label">洞察提炼</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">18</div>
+        <div class="stat-label">主题域</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-num">28</div>
+        <div class="stat-label">关联簇</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom wave -->
+  <svg viewBox="0 0 1440 60" style="display:block;width:100%;" preserveAspectRatio="none">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="var(--bg)"/>
+  </svg>
+</header>
+
+<!-- ==================== CORE SUMMARY ==================== -->
+<section id="core-summary" class="max-w-5xl mx-auto px-6 py-16">
+  <div class="text-center mb-12 fade-up">
+    <div class="section-label mb-2">EXECUTIVE SUMMARY</div>
+    <h2 class="section-heading text-3xl">核心洞察摘要</h2>
+  </div>
+
+  <div class="space-y-8">
+    <!-- Core 1 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">01</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">2026大选全面提前开打</strong>，左右阵营在圣保罗州形成决战态势，Lula支持率下滑与Lulinha贪腐丑闻叠加，选情充满变数
+        </p>
+      </div>
+    </div>
+    <!-- Core 2 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">02</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">STF连续操作保护Toffoli免受CPI调查</strong>，司法公信力遭受系统性损害，立法与司法权力之争升级为制度性危机
+        </p>
+      </div>
+    </div>
+    <!-- Core 3 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">03</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">Mercosul-欧盟自贸协定众议院已通过</strong>，巴西加速推动临时生效，但农业保障措施与欧盟内部阻力构成双重不确定性
+        </p>
+      </div>
+    </div>
+    <!-- Core 4 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">04</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">6x1工作制改革进入立法快车道</strong>，企业界与劳工界博弈激烈，选举年政治动能可能加速法案通过但也放大民粹风险
+        </p>
+      </div>
+    </div>
+    <!-- Core 5 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">05</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">Master银行欺诈引发连锁金融危机</strong>，BRB面临50亿雷亚尔损失，FGC损失超560亿雷亚尔，暴露金融监管结构性漏洞
+        </p>
+      </div>
+    </div>
+    <!-- Core 6 -->
+    <div class="flex gap-6 items-start fade-up">
+      <div class="core-num">06</div>
+      <div style="flex:1; padding-top:8px;">
+        <p style="font-size:1rem; line-height:1.8; color:var(--text-secondary);">
+          <strong style="color:var(--text);">亚马逊开发与原住民权益冲突持续升级</strong>，Tapajós河疏浚法令被撤销标志原住民抗争取得阶段性胜利，但发展与保护的深层矛盾未解
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 1 ==================== -->
+<section id="section-1" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 01</div>
+    <h2 class="section-heading text-2xl mt-1">一、政治格局与选举动态</h2>
+  </div>
+
+  <!-- Insight 1.1 -->
+  <div id="insight-1-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 1.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">2026大选提前开打，圣保罗州成左右阵营核心战场</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2026年巴西大选竞争已全面提前启动，圣保罗州作为最大选举人票州成为双方必争之地。Lula力推财政部长Haddad参选州长对抗现任州长Tarcísio，右翼则由Flávio Bolsonaro获Tarcísio明确支持组建总统竞选联盟，双方在教育、安全、私有化等议题上形成尖锐对立。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Lula计划让副总统Alckmin（曾四度担任圣保罗州长）协助Haddad争取内陆保守选民</li>
+        <li><span class="gold-bullet">◆</span>Flávio Bolsonaro将于3月30日在圣保罗正式宣布参选总统，Tarcísio担任其圣保罗竞选协调人</li>
+        <li><span class="gold-bullet">◆</span>右翼联盟整合Novo、Podemos、Republicanos等党派，推出多州候选人布局</li>
+        <li><span class="gold-bullet">◆</span>PT副领袖称Haddad是该党参选最佳人选，可配合联邦项目如Santos-Guarujá隧道、Jundiaí-Campinas铁路</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Insight 1.2 with Viz 2: Lula Approval Rating -->
+  <div id="insight-1-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 1.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Lula支持率持续下滑，贪腐丑闻与民生政策未能有效止血</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Atlas/Bloomberg调查显示Lula认可率降至46.6%、不认可率升至51.5%，定性评价中"差或很差"达48.4%。Lulinha涉INSS贪腐案被CPI调查进一步消耗选民信任，而政府推出的个税减免、燃气补贴等民生政策未能如预期提振支持率，反腐话语权正从左翼向右翼转移。</p>
+    </div>
+
+    <!-- Viz 2: Approval Rating Cards + Bar -->
+    <div class="my-6 p-5 rounded-xl" style="background:var(--surface);">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:12px;">LULA APPROVAL RATING — ATLAS/BLOOMBERG</div>
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div class="approval-card" style="background:rgba(22,163,74,0.12); border:1px solid rgba(22,163,74,0.3);">
+          <div class="pct" style="color:#16a34a;">46.6%</div>
+          <div class="label" style="color:var(--text-secondary);">认可 <i class="fas fa-thumbs-up" style="color:#16a34a;"></i></div>
+        </div>
+        <div class="approval-card" style="background:rgba(220,38,38,0.12); border:1px solid rgba(220,38,38,0.3);">
+          <div class="pct" style="color:#dc2626;">51.5%</div>
+          <div class="label" style="color:var(--text-secondary);">不认可 <i class="fas fa-thumbs-down" style="color:#dc2626;"></i></div>
+        </div>
+      </div>
+      <div style="border-radius:8px; overflow:hidden; height:28px; display:flex;">
+        <div style="width:47.5%; background:linear-gradient(90deg,#16a34a,#22c55e); display:flex; align-items:center; justify-content:center; color:white; font-size:0.75rem; font-weight:600; font-family:'IBM Plex Mono',monospace;">46.6%</div>
+        <div style="width:52.5%; background:linear-gradient(90deg,#ef4444,#dc2626); display:flex; align-items:center; justify-content:center; color:white; font-size:0.75rem; font-weight:600; font-family:'IBM Plex Mono',monospace;">51.5%</div>
+      </div>
+      <div style="font-size:0.7rem; color:var(--text-muted); margin-top:6px; text-align:center;">"差或很差"评价达 48.4%</div>
+    </div>
+
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>认可率较此前下降2.1个百分点，不认可率上升0.8个百分点</li>
+        <li><span class="gold-bullet">◆</span>不认可群体以福音派（74.2%）、中西部居民（69%）、25-34岁人群（63.4%）为主</li>
+        <li><span class="gold-bullet">◆</span>Lula在就业（49%对45%）、民主（49%对45%）、环境（47%对44%）等领域仍领先Flávio</li>
+        <li><span class="gold-bullet">◆</span>CPI批准调取Lulinha财务情报报告，政府派质疑投票程序合法性</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Insight 1.3 -->
+  <div id="insight-1-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 1.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">灾害应对政治化加剧朝野对立，选举前阵营冲突白热化</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">米纳斯吉拉斯州洪灾（至少68人死亡）成为政治角力场，Lula指责州长Zema未使用35亿雷亚尔联邦防洪资金，议员Nikolas因灾区拍视频阻碍救援遭起诉但反以筹款220万雷亚尔回击，灾害应对中的政治作秀与实际救灾脱节问题凸显，进一步激化左右翼对立。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>联邦政府通过新PAC计划为米纳斯州预留35亿雷亚尔防灾资金，州政府未提交项目</li>
+        <li><span class="gold-bullet">◆</span>议员Erika Hilton依据《刑法》第265条起诉Nikolas干扰公共服务</li>
+        <li><span class="gold-bullet">◆</span>约3600名居民流离失所，Juiz de Fora当月降雨量达历史平均两倍多</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2 ==================== -->
+<section id="section-2" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 02</div>
+    <h2 class="section-heading text-2xl mt-1">二、司法危机与制度信任</h2>
+  </div>
+
+  <div id="insight-2-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 2.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">STF系统性保护Toffoli引发司法公信力危机，立法与司法权力之争升级</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">STF内部连续采取多项行动保护大法官Toffoli免受CPI调查——Gilmar Mendes撤销CPI查抄令、André Mendonça豁免Toffoli兄妹作证、Fachin封存联邦警察报告、STF秘密安排Toffoli退出Master银行案审理。这一系列操作被外界广泛批评为"司法包庇"，严重损害了巴西最高司法机构的公众信任。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Gilmar Mendes以CPI"滥用权力、偏离调查目的"为由撤销对Toffoli家族企业Maridt的查抄令</li>
+        <li><span class="gold-bullet">◆</span>多名反对派议员（Sérgio Moro、Eduardo Girão等）批评裁决为STF内部"自我保护"</li>
+        <li><span class="gold-bullet">◆</span>CPI主席Contarato表示将评估法律途径，称Banco Master案与犯罪组织调查存在因果关联</li>
+        <li><span class="gold-bullet">◆</span>STF正审理司法人员薪资是否超出宪法上限问题，部分退休法官月收入逼近30万雷亚尔</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-2-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 2.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">MG州法官性侵丑闻与荒谬判决暴露司法系统双重失职</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">法官Magid Láuar先以"自愿恋爱关系"宣判35岁男子性侵12岁女孩无罪引发全国公愤，后又被至少5名受害者指控性侵，遭CNJ停职调查。此案暴露了司法系统中法官对性侵案的不当判决与司法人员自身违法的双重问题，推动了性别视角审判协议的落实呼声。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>巴西刑法明确规定与14岁以下未成年人发生性关系无论是否同意均构成性侵</li>
+        <li><span class="gold-bullet">◆</span>Láuar在司法系统任职34年，曾担任全国州法官协会主席</li>
+        <li><span class="gold-bullet">◆</span>AGU和妇女部联合向CNJ投诉，妇女部呼吁全面采用性别视角审判</li>
+        <li><span class="gold-bullet">◆</span>联邦警察对其住所和办公室执行搜查令</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-2-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 2.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">里约政坛与犯罪组织深度勾结，"封建犯罪"模式侵蚀国家治理</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">前议会主席Bacellar等人被起诉向Comando Vermelho泄露警方行动信息，Marielle Franco遇刺案终审判决揭露了政客与民兵组织的系统性勾结。里约的"封建犯罪"模式——民兵由前警察组成、控制贫民区、与政客深度勾结——已构成对国家主权的实质性侵蚀。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Bacellar提前向TH Jóias通风报信使其在"Zargun行动"中规避逮捕</li>
+        <li><span class="gold-bullet">◆</span>Marielle案主谋Brazão兄弟因双重谋杀等罪名被判超70年监禁</li>
+        <li><span class="gold-bullet">◆</span>TRF-2法官Macário Judice Neto被指为犯罪组织提供司法便利</li>
+        <li><span class="gold-bullet">◆</span>犯罪组织从巴拉圭进口武器、从中国进口反无人机设备</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 3 ==================== -->
+<section id="section-3" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 03</div>
+    <h2 class="section-heading text-2xl mt-1">三、外交与国际合作</h2>
+  </div>
+
+  <div id="insight-3-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 3.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Mercosul-欧盟自贸协定进入关键落地期，农业保障措施成核心博弈点</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">协定覆盖7.2亿人口、22万亿美元GDP，众议院已通过并送交参议院。巴西政府积极推动临时生效以应对欧盟议会司法审查可能带来的2年延迟，但国内农业界要求建立双边保障机制，政府则担忧此举会给欧盟反对方提供口实。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>协定将逐步削减超90%的双边贸易关税</li>
+        <li><span class="gold-bullet">◆</span>副总统Alckmin宣布将在短期内发布保障措施法令</li>
+        <li><span class="gold-bullet">◆</span>欧盟保障规则允许在敏感农产品进口3年平均增长5%时启动调查</li>
+        <li><span class="gold-bullet">◆</span>巴西农业议会阵线要求制定国内保障措施作为批准条件</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-3-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 3.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">巴西在大国博弈中坚持战略自主，多边外交与双边务实并行</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Lula政府在中美俄之间维持战略平衡：与美国通过高层谈判缓解关税冲突、计划3月访美会晤特朗普；与俄罗斯召开第八次高层合作委员会深化战略伙伴关系；明确拒绝签署排他性矿产协议，强调资源需在本土加工。在俄乌问题上采取"军事中立、道德谴责"立场。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>美国最高法院以6:3判定特朗普对巴西等国关税非法</li>
+        <li><span class="gold-bullet">◆</span>巴俄双方计划2028年庆祝建交200周年，深化农业、工业、核能等合作</li>
+        <li><span class="gold-bullet">◆</span>巴西与韩国年贸易额约110亿美元，双方将在半导体、航天等领域深化合作</li>
+        <li><span class="gold-bullet">◆</span>巴西与Interpol合作组建南美缉毒特遣队，投资1100万雷亚尔</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-3-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 3.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">巴西深化与韩国、印度等亚洲国家合作，矿产本土加工战略加速推进</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Lula访韩签署多项合作协议，双方将在半导体（巴西矿产+韩国技术）、航天（韩国Innospace在阿尔坎塔拉发射中心合作）、健康产业等领域深化合作。与印度签署关键矿产合作协议后，ANM获授权在边境七州推进矿产勘探。巴西明确拒绝与美国签署排他性矿产协议，强调作为全球第二大矿产储备国可供应多个国家。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>韩国是巴西第四大亚洲投资者，累计投资90亿美元</li>
+        <li><span class="gold-bullet">◆</span>巴西寻求获得韩国牛肉市场准入</li>
+        <li><span class="gold-bullet">◆</span>边境七州（南里奥格兰德、罗赖马等）开放金、铜、镍等战略矿产勘探</li>
+        <li><span class="gold-bullet">◆</span>巴西坚持资源需在本土加工，而非仅出口原材料</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4 ==================== -->
+<section id="section-4" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 04</div>
+    <h2 class="section-heading text-2xl mt-1">四、宏观经济与财政风险</h2>
+  </div>
+
+  <!-- Insight 4.1 with Viz 3: Public Debt SVG -->
+  <div id="insight-4-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 4.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">2025年经济成果亮眼但财政隐忧加剧，公共债务轨迹不可持续</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2025年巴西GDP连续三年增长、失业率降至5.2%历史最低、外资达777亿美元，但公共债务从2023年的71.7%GDP升至2025年的78.7%GDP，预计2026年底达83.6%GDP。96%的初级财政支出为强制性支出，仅4%可用于生产性投资，前财长警告未来2-3年可能出现财政崩溃。</p>
+    </div>
+    <!-- Viz 3: Public Debt Trajectory SVG -->
+    <div class="my-6 p-5 rounded-xl" style="background:var(--surface);">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:12px;">PUBLIC DEBT / GDP TRAJECTORY</div>
+      <svg viewBox="0 0 600 220" style="width:100%; max-width:600px; margin:0 auto; display:block;" xmlns="http://www.w3.org/2000/svg">
+        <!-- Grid lines -->
+        <line x1="80" y1="30" x2="80" y2="180" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4"/>
+        <line x1="300" y1="30" x2="300" y2="180" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4"/>
+        <line x1="520" y1="30" x2="520" y2="180" stroke="var(--border)" stroke-width="0.5" stroke-dasharray="4"/>
+        <!-- Area fill -->
+        <path d="M80,140 L300,82 L520,42 L520,180 L80,180 Z" fill="url(#debtGrad)" opacity="0.3"/>
+        <defs>
+          <linearGradient id="debtGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#dc2626" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="#dc2626" stop-opacity="0.05"/>
+          </linearGradient>
+        </defs>
+        <!-- Line -->
+        <polyline points="80,140 300,82 520,42" fill="none" stroke="#dc2626" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        <!-- Points -->
+        <circle cx="80" cy="140" r="7" fill="#dc2626" stroke="var(--card)" stroke-width="3"/>
+        <circle cx="300" cy="82" r="7" fill="#dc2626" stroke="var(--card)" stroke-width="3"/>
+        <circle cx="520" cy="42" r="7" fill="#dc2626" stroke="var(--card)" stroke-width="3"/>
+        <!-- Labels -->
+        <text x="80" y="165" text-anchor="middle" fill="var(--text-secondary)" font-family="IBM Plex Mono,monospace" font-size="12" font-weight="600">71.7%</text>
+        <text x="80" y="195" text-anchor="middle" fill="var(--text-muted)" font-family="Noto Sans SC,sans-serif" font-size="11">2023</text>
+        <text x="300" y="105" text-anchor="middle" fill="var(--text-secondary)" font-family="IBM Plex Mono,monospace" font-size="12" font-weight="600">78.7%</text>
+        <text x="300" y="195" text-anchor="middle" fill="var(--text-muted)" font-family="Noto Sans SC,sans-serif" font-size="11">2025</text>
+        <text x="520" y="32" text-anchor="middle" fill="#dc2626" font-family="IBM Plex Mono,monospace" font-size="14" font-weight="700">83.6%</text>
+        <text x="520" y="195" text-anchor="middle" fill="var(--text-muted)" font-family="Noto Sans SC,sans-serif" font-size="11">2026E</text>
+        <!-- Arrow indicator -->
+        <text x="420" y="55" fill="#dc2626" font-family="IBM Plex Mono,monospace" font-size="10">▲ 不可持续</text>
+      </svg>
+      <div style="font-size:0.7rem; color:var(--text-muted); text-align:center; margin-top:8px;">96% 初级支出为强制性支出，仅 4% 可用于生产性投资</div>
+    </div>
+
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>通胀率降至4.26%（七年新低），劳动者平均月薪升至3574雷亚尔</li>
+        <li><span class="gold-bullet">◆</span>200万家庭因收入增长脱离Bolsa Família，1740万人摆脱贫困</li>
+        <li><span class="gold-bullet">◆</span>联邦税收达2.886万亿雷亚尔创历史新高，但仍难覆盖庞大福利支出</li>
+        <li><span class="gold-bullet">◆</span>公职人员平均薪资较私营部门高72%，国会新增约53亿雷亚尔年度薪资支出</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Insight 4.2 with Viz 4: Master Bank Crisis Cascade -->
+  <div id="insight-4-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 4.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Master银行欺诈引发连锁金融危机，暴露FGC监管漏洞</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Master银行因大规模欺诈被央行清算，FGC损失超560亿雷亚尔，牵连BRB面临至少50亿雷亚尔损失。事件暴露了存款保险基金的监管漏洞——Master通过发行高收益CDB、向壳公司放贷、伪造资产等方式实施欺诈，引发Letsbank、Will、Pleno等多家银行连锁倒闭。</p>
+    </div>
+
+    <!-- Viz 4: Crisis Cascade Bars -->
+    <div class="my-6 p-5 rounded-xl" style="background:var(--surface);">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:16px;">MASTER BANK CRISIS CASCADE — 损失规模</div>
+      <div style="max-width:500px;">
+        <div class="cascade-bar" style="width:100%; background:linear-gradient(90deg,#991b1b,#dc2626);">
+          FGC损失 560亿
+          <span class="bar-label">100%</span>
+        </div>
+        <div class="cascade-bar" style="width:45%; background:linear-gradient(90deg,#b91c1c,#ef4444);">
+          BRB损失 50亿
+          <span class="bar-label">9%</span>
+        </div>
+        <div class="cascade-bar" style="width:22%; background:linear-gradient(90deg,#dc2626,#f87171);">
+          冻结 3.764亿
+          <span class="bar-label">0.7%</span>
+        </div>
+      </div>
+      <div style="font-size:0.7rem; color:var(--text-muted); margin-top:8px;">连锁效应：Letsbank、Will、Pleno 等多家银行倒闭</div>
+    </div>
+
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>BRB此前收购Master银行超120亿雷亚尔的可疑信贷组合</li>
+        <li><span class="gold-bullet">◆</span>联邦区政府提出向BRB注入12处公共不动产作为担保</li>
+        <li><span class="gold-bullet">◆</span>司法部门冻结涉案方持有的价值3.764亿雷亚尔的BRB股份</li>
+        <li><span class="gold-bullet">◆</span>TCU要求财政部等机构15天内提交BRB联邦化可行性研究</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Insight 4.3 -->
+  <div id="insight-4-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 4.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">选举周期加剧市场不确定性，财政纪律与民粹政策的张力凸显</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2026年选举周期对经济政策产生显著影响：Lula政府推出所得税豁免扩至月薪5000雷亚尔（影响约1700万人、注入280亿雷亚尔）等民生政策争取选民，但经济学家批评这是"政治上有效、经济上糟糕"的短期手段。市场预计Copom将降息至12.5%，但若选情胶着，汇市与股市波动可能放大。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>约1130万此前纳税人将不再缴纳所得税，另有570万人享受减税</li>
+        <li><span class="gold-bullet">◆</span>政府推出对月薪5万雷亚尔以上群体征收最低税以弥补缺口</li>
+        <li><span class="gold-bullet">◆</span>XP研究显示选举年资产波动多受外部冲击影响，但2026年政治极化加剧</li>
+        <li><span class="gold-bullet">◆</span>里约狂欢节预计创收100亿雷亚尔，带动旅游业就业</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 5 ==================== -->
+<section id="section-5" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 05</div>
+    <h2 class="section-heading text-2xl mt-1">五、劳工改革与社会博弈</h2>
+  </div>
+
+  <!-- Insight 5.1 with Viz 5: 6x1 Reform Cost Dispute -->
+  <div id="insight-5-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 5.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">6x1工作制改革成为选举年核心议题，企业界与劳工界分歧尖锐</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">终结6x1工作制（改为5x2、周工时从44降至40小时且不减薪）已进入立法快车道，众议院计划5月表决。72%民众支持该改革，但企业界强烈反对：CNI估算年增成本1782-2672亿雷亚尔，CNC称商业工资单将上涨21%。Ipea研究则显示工业、商业运营成本增幅不足1%，改革可提升生产力并缩小不平等。</p>
+    </div>
+    <!-- Viz 5: 6x1 Reform Cost Dispute -->
+    <div class="my-6 p-5 rounded-xl" style="background:var(--surface);">
+      <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:16px;">6×1 REFORM COST DISPUTE — 成本估算分歧</div>
+      <div style="display:flex; align-items:center; max-width:500px; margin:0 auto;">
+        <!-- Left: Business estimate (red) -->
+        <div style="flex:1; text-align:right; padding-right:4px;">
+          <div style="background:linear-gradient(270deg,#dc2626,#991b1b); height:48px; border-radius:8px 0 0 8px; display:flex; align-items:center; justify-content:flex-start; padding:0 14px; color:white; font-family:'IBM Plex Mono',monospace; font-size:0.85rem; font-weight:600;">
+            2672亿 R$
+          </div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">企业界估算 (CNI)</div>
+        </div>
+        <!-- Center divider -->
+        <div style="width:3px; height:60px; background:var(--gold); border-radius:2px; flex-shrink:0;"></div>
+        <!-- Right: Ipea estimate (green) -->
+        <div style="flex:0.3; text-align:left; padding-left:4px;">
+          <div style="background:linear-gradient(90deg,#16a34a,#15803d); height:48px; border-radius:0 8px 8px 0; display:flex; align-items:center; justify-content:flex-end; padding:0 14px; color:white; font-family:'IBM Plex Mono',monospace; font-size:0.85rem; font-weight:600;">
+            &lt;1%
+          </div>
+          <div style="font-size:0.75rem; color:var(--text-muted); margin-top:4px;">Ipea研究</div>
+        </div>
+      </div>
+      <div style="font-size:0.7rem; color:var(--text-muted); text-align:center; margin-top:10px;">72% 民众支持改革 · 众议院计划5月表决</div>
+    </div>
+
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>众议院议长Hugo Motta推动3月CCJ审议、4月特别委员会、5月全会表决</li>
+        <li><span class="gold-bullet">◆</span>报告人Paulo Azi建议配套推出工资单减税或税收激励</li>
+        <li><span class="gold-bullet">◆</span>巴西劳动生产力仅为美国、德国的约1/4，批评者认为应优先解决生产效率</li>
+        <li><span class="gold-bullet">◆</span>参议院全票通过"休息PEC"保障卡车司机休息权益</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Insight 5.2 -->
+  <div id="insight-5-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 5.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">大众汽车奴役劳工案判赔1.65亿雷亚尔，历史正义与当代劳工保护并行</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">劳工法院维持对大众汽车在军政府时期实施奴隶制劳工制度的判决，赔偿金额为巴西此类案件最高。同时，肉加工企业MBRF因77名孕期员工流产被起诉、建筑公司因类似奴隶制劳工条件被判赔500万雷亚尔，显示当代劳工权益侵害问题依然严峻。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>大众汽车在帕拉州农场通过债务绑定限制工人自由，1974-1986年间</li>
+        <li><span class="gold-bullet">◆</span>MBRF工厂部分区域噪音超标达93分贝（法定限制80分贝）</li>
+        <li><span class="gold-bullet">◆</span>"pejotização"行为导致社保与FGTS年收入损失达1000亿雷亚尔</li>
+        <li><span class="gold-bullet">◆</span>劳工高等法院扩大平权政策，在外包合同中预留5%岗位给跨性别女性</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6 ==================== -->
+<section id="section-6" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 06</div>
+    <h2 class="section-heading text-2xl mt-1">六、产业发展与基础设施</h2>
+  </div>
+
+  <div id="insight-6-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 6.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">交通基础设施投资大规模推进，公路特许经营成核心抓手</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">联邦政府将交通基建作为国家战略，未来4年将有35个新公路特许项目、总投资3960亿雷亚尔。贝洛奥里藏特地铁扩建投入28亿雷亚尔，港口货物吞吐量达14亿吨同比增长6.1%，11个机场获92亿雷亚尔投资。这些项目既服务经济发展，也是选举年的重要政绩展示。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Sucuriú铁路项目获24亿雷亚尔投资，为新铁路监管框架下首个短程铁路</li>
+        <li><span class="gold-bullet">◆</span>Rota da Celulose公路特许项目涵盖870公里路段，总投资100亿雷亚尔</li>
+        <li><span class="gold-bullet">◆</span>2025年巴西港口货物吞吐量达14亿吨，同比增长6.1%</li>
+        <li><span class="gold-bullet">◆</span>Move Brasil项目一个月内批准19亿雷亚尔信贷支持新卡车购买</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-6-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 6.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">农业出口持续强劲但面临多重挑战，牛肉出口创历史新高</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2025年巴西成为全球最大牛肉生产出口国，出口345万吨创收180亿美元。农业是巴西经济的核心支柱，但面临欧盟反毁林条例合规成本、亚马逊开发与环保冲突、以及国际贸易保护主义等多重挑战。巴西首船生咖啡出口孟加拉、开放坚果对土耳其出口，显示市场多元化战略持续推进。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>牛肉出口同比增长20.9%，创收较2024年增长39.31%</li>
+        <li><span class="gold-bullet">◆</span>众议院批准8350万雷亚尔专项信贷应对禽流感等农业紧急卫生事件</li>
+        <li><span class="gold-bullet">◆</span>戈亚斯州大豆占出口总量48.16%，中国为最大出口市场占38.91%</li>
+        <li><span class="gold-bullet">◆</span>巴西对孟加拉农产品出口超27亿美元</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-6-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 6.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">数字基础设施与数据主权成为新战略焦点</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">众议院通过Redata法案为数据中心免税（涉及52亿雷亚尔税收减免），但该法案在参议院遇阻后失效，政府正推动重启。当前60%巴西人个人数据在境外处理，政府将数据中心视为吸引科技投资、发展AI产业、保障数据主权的核心抓手，目标未来10年吸引2万亿雷亚尔投资。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>副总统Alckmin强调巴西拥有丰富可再生能源，具备成为全球数字基础设施枢纽优势</li>
+        <li><span class="gold-bullet">◆</span>英伟达指出巴西进口芯片高税是数据中心落地障碍</li>
+        <li><span class="gold-bullet">◆</span>众议院议长将数据中心激励和AI监管列为2026年优先立法议题</li>
+        <li><span class="gold-bullet">◆</span>通信部已为超150个城市授权数字电视转播，启动20亿雷亚尔手机信号覆盖招标</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-6-4" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 6.4</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">《未来燃料法》推动交通低碳转型，生物燃料产业迎政策红利</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2024年颁布的《未来燃料法》整合RenovaBio等政策，要求航空领域2027年SAF使用比例达1%（2037年提升至10%），引入绿色柴油（初始比例可达3%），天然气领域2026年起混入生物甲烷（初始1%可提至10%），乙醇在汽油中混合比例最高可提至35%。巴西作为全球第二大生物燃料生产国，该法律为其生物燃料产业创造了巨大的国内市场空间。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>生物柴油在柴油中的强制混合比例最高可达25%</li>
+        <li><span class="gold-bullet">◆</span>CNPE设立"未来燃料常设技术委员会"负责监管协调</li>
+        <li><span class="gold-bullet">◆</span>E30技术可行性已验证</li>
+        <li><span class="gold-bullet">◆</span>超过15%的生物柴油混合需技术验证</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-6-5" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 6.5</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">建筑行业面临转型，工业4.0与劳动力短缺并存</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2026年选举年的政策调整将影响住房项目和城市发展走向，新税收改革模式推行促使建筑企业延伸产业链。行业启动AI、先进生产技术实验室项目向工业4.0转型，但劳动力短缺与技能不足仍是核心挑战，贝洛奥里藏特新城市规划讨论也将影响投资方向。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>利率若稳定或下降将有力拉动行业投资复苏</li>
+        <li><span class="gold-bullet">◆</span>技术创新成为核心方向，推动智能管理应用</li>
+        <li><span class="gold-bullet">◆</span>劳动力短缺需全国性措施结构性解决</li>
+        <li><span class="gold-bullet">◆</span>新税收改革促使企业整合产品与服务提升竞争力</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7 ==================== -->
+<section id="section-7" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 07</div>
+    <h2 class="section-heading text-2xl mt-1">七、国防与安全</h2>
+  </div>
+
+  <div id="insight-7-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 7.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Lula政府加大国防投资争取军方支持，国防工业出口创纪录</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Lula考虑在连任纲领中纳入增加国防投资内容，已签署法律计划至2031年拨出300亿雷亚尔用于装备更新。国防工业出口两年增长约110%创新纪录，海军采购"奥亚波基"号多用途码头舰（排水量1.8万吨）并与英国深化海军现代化合作。这些举措既服务国防现代化，也意在争取传统上支持博索纳罗的军事选民。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>《国家国防政策与战略》及《国防法指南》于2025年11月正式获批</li>
+        <li><span class="gold-bullet">◆</span>陆军与科研机构合作在亚马逊建立陆军研究所</li>
+        <li><span class="gold-bullet">◆</span>"阿特拉斯2025"联合军事演习有3400名军人和国际观察员参与</li>
+        <li><span class="gold-bullet">◆</span>国防部面向783个市政管理者开展"北湾项目"合作指导培训</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-7-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 7.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">公共安全立法推进但力度遭质疑，反帮派法移除博彩税引发争议</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">众议院通过反帮派法创建"结构化社会控制"新罪名（最高40年监禁），但移除了每年约300亿雷亚尔的博彩业Cide-Bets税收条款，被批评为向中间派和博彩游说集团妥协。公共安全PEC拟移除最低刑年龄降至16岁的争议条款以争取广泛支持，但前公共安全秘书批评法案仅打击底层、未触及高层。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>PEC计划将联邦公路警察升级为负责所有联邦交通模式的警察</li>
+        <li><span class="gold-bullet">◆</span>政府原计划通过博彩业15%特别税每年筹集300亿雷亚尔用于公共安全</li>
+        <li><span class="gold-bullet">◆</span>里约2025年10月"遏制行动"致122人死亡，为巴西史上最致命警察行动</li>
+        <li><span class="gold-bullet">◆</span>联邦警察无法下载里约州提供的945个行动视频文件，取证受阻</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 8 ==================== -->
+<section id="section-8" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 08</div>
+    <h2 class="section-heading text-2xl mt-1">八、科技创新与AI治理</h2>
+  </div>
+
+  <div id="insight-8-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 8.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">巴西AI战略多维推进，监管与产业发展并行</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Lula在印度AI峰会推出含54项行动的AI合作计划，国内推进AI监管法案（参议院已通过、待众议院审议），CNJ成立AI委员会规范司法AI应用。产业端80%保险公司已采用AI，里约获彭博1000万美元资助利用AI识别弱势家庭。但AI在选举中生成虚假内容的风险成为重大关切。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>巴西开发AI算法分析1500万条历史警务数据评估性别暴力风险</li>
+        <li><span class="gold-bullet">◆</span>TSE将于3月2日审议AI生成假新闻管控规则</li>
+        <li><span class="gold-bullet">◆</span>CNJ警惕Prompt Injection等技术欺诈，推广经审核的内部AI系统</li>
+        <li><span class="gold-bullet">◆</span>劳工党主席主张在选举中监管AI使用</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-8-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 8.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">科研投入达33亿雷亚尔覆盖13个领域，国际科技合作网络持续拓展</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">MCTI与Finep联合推出33亿雷亚尔科研投资计划，覆盖农工业、健康、国防、数字转型等13个领域。巴西与德国深化AI、量子技术合作，与韩国在半导体领域互补（巴西矿产+韩国技术），与俄罗斯计划加强航天、核技术合作，科技外交成为提升国际竞争力的重要工具。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>投入3亿雷亚尔用于国防工业基础创新，减少对外国技术依赖</li>
+        <li><span class="gold-bullet">◆</span>亚马逊和塞拉多森林砍伐预警区域分别下降35%和6%</li>
+        <li><span class="gold-bullet">◆</span>Futuras Cientistas项目覆盖470名公立学校高中女生</li>
+        <li><span class="gold-bullet">◆</span>巴西参与全球最大地面望远镜ELT项目，贡献光谱仪技术</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 9 ==================== -->
+<section id="section-9" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 09</div>
+    <h2 class="section-heading text-2xl mt-1">九、教育改革与争议</h2>
+  </div>
+
+  <div id="insight-9-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 9.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">联邦教育投入成效显著但供需失衡问题突出</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">"Pé-de-Meia"项目使高中辍学率降低一半，校园互联网连通率从45%提升至70%，适龄儿童识字率从37%提升至约60%。但2025年教育普查揭示结构性失衡：仍有700万0-3岁儿童未入托，公立高中一年流失近50万学生（部分因青年过早进入非正式就业），私立高中入学增长2.46%。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>政府自2023年以来交付2250多所学校、托育中心和体育场地</li>
+        <li><span class="gold-bullet">◆</span>众议院通过法案为教育部新增1.63万个岗位</li>
+        <li><span class="gold-bullet">◆</span>91%的城市已推行全日制教育政策</li>
+        <li><span class="gold-bullet">◆</span>学校餐食经费累计上调55%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-9-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 9.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">军政学校模式快速扩张引发教育公平与民主价值观争议</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">圣保罗州新增100所军政学校，全国已超1500所，但该模式遭学界和司法批评：发型着装规定涉嫌歧视（尤其针对非裔学生）、缺乏系统数据支持教育效果、多在选举年扩张属选举策略而非教育需求、选择的学校多为资源较好的全日制学校未覆盖弱势群体。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>联邦区一所军政学校被指强迫学生做俯卧撑、跪地，涉事军警已停职</li>
+        <li><span class="gold-bullet">◆</span>圣保罗州法院限制军警仅能负责校园安全，不得干预发型着装</li>
+        <li><span class="gold-bullet">◆</span>USP教授指出该模式存在种族歧视、恐同等问题</li>
+        <li><span class="gold-bullet">◆</span>医学教育评估权归属引发政府与议会争议，参议院支持CFM主导新考试</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 10 ==================== -->
+<section id="section-10" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 10</div>
+    <h2 class="section-heading text-2xl mt-1">十、人文与社会思潮</h2>
+  </div>
+
+  <div id="insight-10-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 10.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">性别不平等问题多维度凸显，女性谋杀案创历史新高</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2025年巴西女性谋杀案达1518起创历史新高，每10名女性中有7名曾遭性骚扰。政治代表率极低（众议院仅18.1%为女性，全球排名第133位），家务分工严重不平等（女性每周21小时、男性11小时）。政府拟向WHO提议将女性杀害纳入国际疾病分类，以建立跨部门监测体系。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>2297个城市议会女性占比不足20%</li>
+        <li><span class="gold-bullet">◆</span>黑人女性在非正规就业占比、家务劳动时长上差距更为显著</li>
+        <li><span class="gold-bullet">◆</span>研究发现部分受害女性在就医后3至32天内遇害，医疗系统存在干预契机</li>
+        <li><span class="gold-bullet">◆</span>政府计划2026年新增6个"巴西女性之家"，累计投入3.73亿雷亚尔</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-10-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 10.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">非裔文化传承与反种族主义斗争持续推进，身份政治引发学界分裂</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Afoxé Alafim Oyó团体成立40年持续以文化为载体开展反种族主义斗争，但巴西80%以上遭警方干预死亡的是黑人，结构性种族主义持续存在。UFF学生因推广"parditude"（混血群体独立身份认同）概念被退学，暴露了学界在身份政治上的严重分裂和对学术自由的压制。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>50%的贫民窟居民认为肤色对就业机会产生负面影响</li>
+        <li><span class="gold-bullet">◆</span>议员提交紧急议案建立"Vini Jr.反种族歧视计划"，收集400个签名</li>
+        <li><span class="gold-bullet">◆</span>里约热内卢州已通过"Vini Jr.法"，联邦层面正推动全国化</li>
+        <li><span class="gold-bullet">◆</span>38%贫民窟居民希望创业，超过16%希望进入公职</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-10-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 10.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">跨性别运动员参赛权争议折射地方与联邦立法冲突</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Londrina市议会以12:4通过决议禁止跨性别运动员Tifanny参赛，但STF法官发布临时禁令允许其参赛，认为市政法违反联邦体育立法和人权原则。此案凸显了地方保守立法与联邦人权保障之间的制度性冲突，以及性别权益在巴西社会的深层争议。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Tifanny是巴西首位参加顶级排球联赛的跨性别运动员</li>
+        <li><span class="gold-bullet">◆</span>CBV表示Tifanny符合联合会跨性别运动员参赛标准</li>
+        <li><span class="gold-bullet">◆</span>FIVB禁止其参加2025年世俱杯和2026年南美俱乐部赛</li>
+        <li><span class="gold-bullet">◆</span>反对决议的议员指出该法律违宪且混淆性取向与性别认同</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 11 ==================== -->
+<section id="section-11" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 11</div>
+    <h2 class="section-heading text-2xl mt-1">十一、医疗卫生体系</h2>
+  </div>
+
+  <div id="insight-11-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 11.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">SUS手术量创历史新高，联邦政府全方位扩容公共医疗资源</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2025年SUS完成超1400万例手术（较2002年增长40%），政府通过"现在有专家"项目在全国27州部署583名专科医生（48.7%在乡村地区），新增1206个专科岗位。里约Cardoso Fontes医院重启后医护人员增至2241人（增幅57%），巴伊亚州获超3亿雷亚尔PAC健康投资。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>SAMU已覆盖全国88.74%人口，计划2026年前交付2420辆救护车</li>
+        <li><span class="gold-bullet">◆</span>2025年完成近700万次化疗，较2022年增长80%</li>
+        <li><span class="gold-bullet">◆</span>新增24台直线加速器，2026年计划再购131台</li>
+        <li><span class="gold-bullet">◆</span>Butantan研究所获14亿雷亚尔投资新建疫苗工厂</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-11-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 11.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Mounjaro专利强制许可争议凸显药物可及性与创新保护的政策困境</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">众议院通过紧急审议推进Mounjaro专利废除法案，理由是巴西肥胖率2006-2024年飙升118%。但制药行业强烈反对，Eli Lilly称巴西是其全球五大市场之一、2025年已投资7.6亿雷亚尔开展49项临床试验，专利保护削弱将影响新药引入。此案是巴西自2007年HIV药物以来首次面临的重大强制许可争议。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>当前25.7%的成年人患有肥胖症，超重比例高达62.6%</li>
+        <li><span class="gold-bullet">◆</span>巴西专利法规定新药享有20年专利保护期</li>
+        <li><span class="gold-bullet">◆</span>反对者指出市场上已有多种替代疗法，肥胖不构成公共卫生紧急事件</li>
+        <li><span class="gold-bullet">◆</span>仿制药生产需复杂技术准备，无法立即实现降价</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-11-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 11.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">疫苗接种覆盖率不足成为公共卫生隐患，地方反疫苗法令遭STF叫停</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">圣卡塔琳娜州20个市镇发布豁免新冠疫苗入学证明的法令被STF裁定无效，该州5-11岁儿童新冠疫苗接种率仅1.99%。全国仅卡介苗（96.8%）和乙肝疫苗（95.1%）达到WHO推荐的95%覆盖率，脊髓灰质炎疫苗不足90%，疫苗信任度亟待提升。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Fiocruz报告显示儿童新冠疫苗有效率近90%</li>
+        <li><span class="gold-bullet">◆</span>2021年8月至2022年7月新冠是19岁以下人群可预防死因之首</li>
+        <li><span class="gold-bullet">◆</span>3-4岁儿童两剂疫苗接种率不足25%</li>
+        <li><span class="gold-bullet">◆</span>亚诺玛米原住民区百日咳疫情引发争议，1岁以下疫苗覆盖率仅57.8%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-11-4" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 11.4</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">癌症防控体系全面升级，从筛查到治疗构建全链条支持</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">INCA预测巴西每年新增约78.1万癌症病例，政府将癌症列为SUS核心优先领域。乳腺癌筛查年龄扩大至40-74岁，2025年完成约300万次乳腺X光检查；在12个州推广国产HPV-DNA分子检测；纳入HER2阳性乳腺癌新型国产疗法（成本较市场价低50%）。"Viva Mais Brasil"战略投入3.4亿雷亚尔从源头预防癌症。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>50-69岁女性筛查率达92%</li>
+        <li><span class="gold-bullet">◆</span>33辆女性健康流动服务车在全国巡诊</li>
+        <li><span class="gold-bullet">◆</span>HPV疫苗9-14岁女孩接种率达85%，男孩达73%</li>
+        <li><span class="gold-bullet">◆</span>2025年完成近700万次化疗，较2022年增长80%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-11-5" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 11.5</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">假酒中毒防控法案推进，建立追溯系统与应急体系</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">针对近期多起甲醇中毒事件，众议员提出法案建立国家蒸馏酒追溯系统（所有酒精度13%以上产品需印唯一识别码）、设立国家战略解毒剂库存（确保6小时内配送至任何地区）、加重处罚力度（致死最高30年监禁）。该法案反映了巴西在食品安全监管与公共卫生应急体系方面的补短板需求。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Anvisa牵头协调追溯系统，联合联邦税务局和地方卫生部门</li>
+        <li><span class="gold-bullet">◆</span>储备甲吡唑、药用乙醇等特效解毒剂</li>
+        <li><span class="gold-bullet">◆</span>售假场所需对消费者损失承担连带责任</li>
+        <li><span class="gold-bullet">◆</span>法案需经多个委员会审议后提交全会表决</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 12 ==================== -->
+<section id="section-12" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 12</div>
+    <h2 class="section-heading text-2xl mt-1">十二、民生保障与社会治理</h2>
+  </div>
+
+  <div id="insight-12-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 12.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">多项民生政策密集落地构建选举年"收获期"叙事</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Lula政府将2026年定位为"收获之年"，密集推出民生政策：个税免税额提至月薪5000雷亚尔、"Gás do Povo"为1550万家庭免费发放燃气罐（51亿雷亚尔）、电费折扣惠及1700万家庭（36亿雷亚尔）、FGTS贷款上限提至225万雷亚尔。政府正研究将"Compra Assistida"购房补贴计划扩展至全国。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>"Reforma Casa Brasil"提供40亿雷亚尔信贷支持住房装修</li>
+        <li><span class="gold-bullet">◆</span>INSS最低养老金调整为1621雷亚尔，涨幅6.79%</li>
+        <li><span class="gold-bullet">◆</span>2025年社保部门发放410万次临时伤残福利，同比增长15.19%</li>
+        <li><span class="gold-bullet">◆</span>联邦医疗鉴定完成超1000万次服务，远程医疗增长211%</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-12-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 12.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">公共安全治理面临系统性挑战，犯罪组织渗透公共权力</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">亚马逊地区近半（46.9%）的农村土地冲突发生在该区域，2021-2022年有25名土地和环境维权者被杀害。里约"遏制行动"致122人死亡暴露警方行动的致命性问题，而联邦警察无法获取完整视频证据可能影响人权调查。犯罪组织对政治体系的渗透已从地方延伸至州级层面。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>帕拉州2014-2023年记录1999起土地冲突，马拉尼昂州1926起</li>
+        <li><span class="gold-bullet">◆</span>里约警方在Paciência地区与民兵交火，4名民兵被捕、1人死亡</li>
+        <li><span class="gold-bullet">◆</span>反帮派法创建"结构化社会控制"新罪名，最高40年监禁</li>
+        <li><span class="gold-bullet">◆</span>联邦政府为MG州洪灾受灾民众每人发放800雷亚尔救助金</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-12-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 12.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">社保体系调整升级与反欺诈并行，女性权益保障持续强化</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">INSS每月为2430万退休人员发放养老金、注入474亿雷亚尔，Lula签署法律禁止INSS收取不合理关联扣款。女性保护方面，全国已有11个"巴西女性之家"运营，2026年再增6个，Ligue 180求助热线日均处理近3000次求助。政府推进将性别平等内容纳入基础教育全阶段课程。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>63.46%的临时伤残福利发放给女性群体</li>
+        <li><span class="gold-bullet">◆</span>新增500名医疗鉴定医生，解决15年未招聘的缺口</li>
+        <li><span class="gold-bullet">◆</span>2025年投入4700万雷亚尔到女性暴力专项服务</li>
+        <li><span class="gold-bullet">◆</span>2026年3月将在北大河州建立集体洗衣房减轻女性家务负担</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 13 ==================== -->
+<section id="section-13" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 13</div>
+    <h2 class="section-heading text-2xl mt-1">十三、环保与能源转型</h2>
+  </div>
+
+  <div id="insight-13-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 13.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">亚马逊开发与原住民权益冲突持续升级，Tapajós法令撤销标志阶段性胜利</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">政府撤销将Tapajós、Madeira、Tocantins三条河流纳入私有化计划的第12600号法令，是14个原住民部落持续抗议的阶段性胜利。但交通部长表示水路研究仍将继续，União Brasil党领袖提案要求重新纳入PND，发展与保护的深层矛盾远未解决。Ferrogrão铁路项目也因未充分咨询原住民被建议暂停。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>约7000名来自14个族群的原住民生活在Tapajós河下游</li>
+        <li><span class="gold-bullet">◆</span>原住民占领Cargill公司设施超一个月，Cargill律师称政府"抛弃"了公司</li>
+        <li><span class="gold-bullet">◆</span>STF允许Cinta Larga族在1%领土内开展矿业活动（需社区同意和环评）</li>
+        <li><span class="gold-bullet">◆</span>政府启动"亚马逊3万农业家庭支持项目"，首期投入1.319亿雷亚尔</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-13-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 13.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">能源转型路线图制定遇阻，部际分歧与化石燃料依赖构成双重障碍</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">COP30后Lula下令60天内制定能源转型路线图，但截止日期已过仍未公布，核心原因是矿业能源部与环境部的部际分歧。巴西作为全球第二大生物燃料生产国拥有转型优势，但可再生能源近五分之一产能因储能不足浪费，石油税收对公共财政的支撑作用使转型面临财政风险。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>减排目标：2030年降至12亿吨CO₂当量，2035年较2005年减排59%-67%</li>
+        <li><span class="gold-bullet">◆</span>2027年起将对化石燃料征收更高选择性税，降低生物燃料和绿氢税率</li>
+        <li><span class="gold-bullet">◆</span>114个社会组织联名呼吁建立包容性转型决策机制</li>
+        <li><span class="gold-bullet">◆</span>第三届生态投资拍卖会募集528亿雷亚尔用于绿色产业</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-13-3" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 13.3</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">亚马逊毁林率显著下降但矿区环境问题突出，Brumadinho修复仍在进行</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">2025年8月至2026年1月亚马逊毁林预警面积下降35%、塞拉多下降6%，环境部长称2026年有望降至1988年以来最低。但矿区环境问题严峻：Brumadinho矿坝溃决7年后仅17%尾矿被清理，Poços de Caldas稀土开采申请日需水量相当于40万居民供水，Petrobras在亚马逊河口启动勘探引发环保争议。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Brumadinho修复已投入超200亿雷亚尔，计划到2031年完成376.89亿雷亚尔</li>
+        <li><span class="gold-bullet">◆</span>Vale公司及16名前高管面临过失杀人及环境犯罪指控</li>
+        <li><span class="gold-bullet">◆</span>联邦政府拒绝MG州单独发放稀土开采许可，要求联邦统一协调</li>
+        <li><span class="gold-bullet">◆</span>圣保罗Cantareira水库水位仅32%，接近2014-2015年干旱危机水平</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-13-4" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 13.4</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">废弃物管理与循环经济政策加速落地，塑料污染治理成重点</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">MMA就塑料包装反向物流规训公开征求意见，启动全国反向物流系统创建的公众咨询，2026年回收激励计划开放项目申请。第三届生态投资拍卖会募集528亿雷亚尔用于生物经济、能源转型和循环经济投资。这些举措构建了从监管到市场激励的完整循环经济政策框架。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>塑料包装可回收性指标设定和废弃物管理规则正在制定</li>
+        <li><span class="gold-bullet">◆</span>回收激励计划接收申请截至7月30日</li>
+        <li><span class="gold-bullet">◆</span>延续电子废弃物反向物流目标</li>
+        <li><span class="gold-bullet">◆</span>亚马逊河是全球第二大塑料污染河流</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-13-5" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 13.5</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">Petrobras亚马逊河口勘探引发环保与能源主权的尖锐矛盾</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Petrobras在亚马逊河口启动勘探钻井，经济部门称可拉动阿马帕州GDP增长61.2%、创造5.4万个就业岗位，但MPF要求暂停许可证审批，指出Petrobras隐瞒了额外钻探计划且未提交完整环境基线数据。此案凸显巴西在COP30环保承诺与国内能源扩张之间的深层矛盾。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>环境部长Marina Silva推动在方案中加入更严格的事故预防措施</li>
+        <li><span class="gold-bullet">◆</span>MPF批评以"能源主权"为借口加速审批</li>
+        <li><span class="gold-bullet">◆</span>环保组织和左翼人士担忧高生物多样性海域面临生态风险</li>
+        <li><span class="gold-bullet">◆</span>STJ将于2026年上半年审议水力压裂技术合法性</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 14 ==================== -->
+<section id="section-14" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 14</div>
+    <h2 class="section-heading text-2xl mt-1">十四、选举制度与民主治理</h2>
+  </div>
+
+  <div id="insight-14-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 14.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">TSE通过2026年选举新规则，强化弱势群体政治参与保障</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">TSE通过多项选举新规：政党需按原住民候选人比例分配选举基金（20%候选人对应20%资金），女性候选人30%资金配额使用规则更严格，偏远地区选民运输由选举法院直接负责以防政治拉票。后续将审议AI生成虚假信息管控规则，所有规则3月5日生效。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>批准为遭受威胁的女性候选人提供安保费用</li>
+        <li><span class="gold-bullet">◆</span>继续执行黑人候选人需获得30%选举资源的规定</li>
+        <li><span class="gold-bullet">◆</span>实施"你的投票很重要"计划保障残疾人投票权</li>
+        <li><span class="gold-bullet">◆</span>选民可提前20天申请免费往返投票点的运输服务</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-14-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 14.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">公职人员超标福利问题引发公共资源分配争议</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">STF将公职人员超标福利最终裁决推迟至3月25日，期间要求各部门45天内清理无法律依据的额外福利。调查显示部分退休法官月收入逼近30万雷亚尔，各法院福利名目多达37种且术语不统一，严重缺乏透明度。公务员平均薪资较私营部门高72%的差距加剧了社会不满。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Flávio Dino要求所有公共权力部门审查并暂停无法律依据的额外福利</li>
+        <li><span class="gold-bullet">◆</span>Gilmar Mendes将司法系统整改期限从60天缩减至45天</li>
+        <li><span class="gold-bullet">◆</span>违规将面临纪律和刑事处罚</li>
+        <li><span class="gold-bullet">◆</span>STF将与国会合作制定过渡规则规范福利支付</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 15 ==================== -->
+<section id="section-15" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 15</div>
+    <h2 class="section-heading text-2xl mt-1">十五、税收改革与营商环境</h2>
+  </div>
+
+  <div id="insight-15-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 15.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">多领域税收政策调整引发争议，保护本土产业与财政需求并行</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">政府上调千余种商品进口税以保护本土产业（90%以上涉事商品在巴西有生产），预计新增140亿雷亚尔财政收入，但智能手机等产品关税在争议后回调至16%。数据中心税收优惠遇阻、免税金融工具拟调整等举措显示政府在平衡产业保护、财政收入与市场预期之间的艰难抉择。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>财政部长Haddad称进口税调整不会影响国内价格，可吸引外资赴巴设厂</li>
+        <li><span class="gold-bullet">◆</span>各州州长正针对Shopee等跨境电商征收ICMS保护本土商业</li>
+        <li><span class="gold-bullet">◆</span>政府拟通过法令调整IOF或限制LCI、LCA等免税金融工具</li>
+        <li><span class="gold-bullet">◆</span>Haddad提出将降低工资单税负纳入未来改革议程</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 16 ==================== -->
+<section id="section-16" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 16</div>
+    <h2 class="section-heading text-2xl mt-1">十六、宗教与社会冲突</h2>
+  </div>
+
+  <div id="insight-16-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 16.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">狂欢节成为宗教与政治立场交锋场域，福音派群体政治影响力凸显</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">狂欢节花车主题引发宗教保守势力批评，61.1%受访福音派信徒认为相关花车冒犯宗教自由。福音派是Lula不认可群体的主力（74.2%），其政治动员能力在选举年尤为关键。PT通过联邦众议员Benedita da Silva（60年信仰的福音派信徒）回应，试图打破保守派对宗教话语的垄断。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Acadêmicos de Niterói以Lula为主题的花车被降至狂欢节第二组别</li>
+        <li><span class="gold-bullet">◆</span>福音派议员Marco Feliciano批评"女巫释放"花车"打开邪灵门户"</li>
+        <li><span class="gold-bullet">◆</span>涉及非洲传统宗教的花车也遭攻击</li>
+        <li><span class="gold-bullet">◆</span>该事件被Lula阵营内部视为"竞选灾难"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-16-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 16.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">宗教歧视与暴力事件频发，世俗国家原则面临挑战</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">巴拉那州商场内穆斯林女性遭袭击、皮奥伊州Iemanjá雕像被蓄意破坏，显示宗教不容忍问题在巴西社会持续存在。尽管宪法保障宗教平等、1997年法律对宗教歧视处以1-3年监禁，但执法力度不足。第48届土地朝觐会向瓜拉尼人正式道歉，承认殖民传教中的暴力与文化压迫，标志着宗教界的历史反思。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>袭击穆斯林女性的男子有多次宗教种族主义歧视前科</li>
+        <li><span class="gold-bullet">◆</span>乔治·亚马多作为1946年制宪议员推动通过宗教自由法律</li>
+        <li><span class="gold-bullet">◆</span>第48届土地朝觐会设置四段反思路线，结合宗教信仰与社会正义</li>
+        <li><span class="gold-bullet">◆</span>殖民前当地原住民多达数万，如今仅剩四千余人</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 17 ==================== -->
+<section id="section-17" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 17</div>
+    <h2 class="section-heading text-2xl mt-1">十七、原住民权益与领土争议</h2>
+  </div>
+
+  <div id="insight-17-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 17.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">原住民文化政策体系化推进，但领土划界严重滞后</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">文化部推进《原住民文化国家计划》制定，原住民文化点联盟已识别全国超1300个原住民文化举措、覆盖75个族群。但领土权益保障严重滞后：65个Guarani聚居点中仅7个完成官方划界，其余多为临时占地，居民生活在贫困与不安全环境中。PL2903/2023法案拟允许原住民土地上采矿，遭到强烈反对。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>Labic Amazônia项目支持30个原住民项目，涵盖通信、手工艺、森林经济</li>
+        <li><span class="gold-bullet">◆</span>《Pihhy》杂志已发表约200位原住民作者内容，涵盖60个族群</li>
+        <li><span class="gold-bullet">◆</span>非法采矿导致Paiter Suruí部落100%居民头发中检测到汞</li>
+        <li><span class="gold-bullet">◆</span>第六届全国文化点网络大会首次选址原住民领地</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-17-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 17.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">亚马逊土地冲突占全国近半，传统社区面临系统性暴力</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">Oxfam报告显示2023年46.9%的农村土地冲突发生在亚马逊地区，帕拉州和马拉尼昂州是重灾区。冲突与非法占地、毁林、采矿、农牧业扩张密切相关，2021-2022年有25名土地和环境维权者被杀害。种族环境主义是冲突中的关键因素，黑人、原住民和传统社区最易遭受暴力。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>帕拉州2014-2023年记录1999起冲突，马拉尼昂州1926起</li>
+        <li><span class="gold-bullet">◆</span>2024年马拉尼昂州冲突达365起，为近年峰值</li>
+        <li><span class="gold-bullet">◆</span>高冲突地区在医疗、卫生、住房等基本需求上表现极差</li>
+        <li><span class="gold-bullet">◆</span>报告呼吁加强《人权维权者保护计划》，加快传统土地划定</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 18 ==================== -->
+<section id="section-18" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="mb-8 fade-up">
+    <div class="section-label">SECTION 18</div>
+    <h2 class="section-heading text-2xl mt-1">十八、地方治理与区域发展差异</h2>
+  </div>
+
+  <div id="insight-18-1" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 18.1</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">各州经济发展差异显著，地方选举聚焦产业与民生需求</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">巴西地区发展不均衡问题突出：戈亚斯州失业率4%低于全国但州内差距明显（工业区2.8%对首都周边8.9%），塞尔希培州失业率降至7.7%历史新低但非正式就业仍占47.5%。马托格罗索州通过"主动寻找"式社会救助将极端贫困率降低40%成为减贫标杆，南里奥格兰德州则推进国企私有化应对财政危机。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>戈亚斯州经济增速约5%，大豆占出口48.16%，中国为最大市场（38.91%）</li>
+        <li><span class="gold-bullet">◆</span>圣卡塔琳娜州拟新增州庆节日遭企业界反对，认为影响生产效率</li>
+        <li><span class="gold-bullet">◆</span>塞尔希培州教师因薪资问题多次抗议，卫生系统存在显著地区差异</li>
+        <li><span class="gold-bullet">◆</span>南里奥格兰德州将Corsan、Sulgás、CEEE-G等州属企业出售给私营部门</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="insight-18-2" class="insight-card rounded-xl p-6 mb-6 fade-up">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.8rem; color:var(--gold); margin-bottom:6px;">INSIGHT 18.2</div>
+    <h3 class="font-serif-display text-lg font-bold mb-3" style="color:var(--text);">里约BRT系统改革成效显著，公共交通治理模式创新值得关注</h3>
+    <div class="mb-4" style="background:var(--surface); border-radius:8px; padding:14px 16px;">
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:4px; font-family:'IBM Plex Mono',monospace;">关键洞察</div>
+      <p style="font-size:0.92rem; line-height:1.8; color:var(--text-secondary);">里约BRT快速公交系统通过将付费模式从按乘客数量改为按行驶里程、选择小型运营公司、将补贴与服务质量挂钩等改革，实现乘客量增长133%、准点率达98%的显著成效。安装司机疲劳监控摄像头和紧急求助按钮等技术手段进一步提升安全性，该经验可作为全国公交新规参考。</p>
+    </div>
+    <div>
+      <div style="font-size:0.75rem; font-weight:600; color:var(--gold); margin-bottom:8px; font-family:'IBM Plex Mono',monospace;">关键事实</div>
+      <ul class="space-y-2" style="font-size:0.9rem; line-height:1.7; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span>此前仅24%的线路能正常运营</li>
+        <li><span class="gold-bullet">◆</span>车辆空调配备、事故率、故障数等影响补贴发放</li>
+        <li><span class="gold-bullet">◆</span>国会讨论的新规在补贴模式、惩罚措施等方面仍存在不足</li>
+        <li><span class="gold-bullet">◆</span>未将网约车纳入补贴统筹</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FULL SUMMARY ==================== -->
+<section id="full-summary" class="max-w-5xl mx-auto px-6 py-16">
+  <div class="text-center mb-12 fade-up">
+    <div class="section-label">COMPREHENSIVE SUMMARY</div>
+    <h2 class="section-heading text-3xl mt-1">全文总结</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+    <!-- 政治环境概述 -->
+    <div class="summary-card fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-landmark" style="color:var(--gold); font-size:1.3rem;"></i>
+        <h3 class="text-lg font-bold">政治环境概述</h3>
+      </div>
+      <p style="font-size:0.9rem; line-height:1.8; color:var(--text-secondary);">
+        2026年巴西政治格局以大选提前开打为主线，左右阵营在圣保罗州形成决战态势。Lula支持率持续下滑（认可率46.6%），Lulinha涉INSS贪腐案使反腐话语权向右翼转移，而Flávio Bolsonaro获Tarcísio等右翼力量明确支持，支持率差距不断缩小。STF连续操作保护Toffoli引发的司法公信力危机、里约政坛与犯罪组织的深度勾结、以及灾害应对中的政治化倾向，共同加剧了巴西政治极化态势。选举年的政策密集出台（个税减免、燃气补贴、6x1改革等）既是民生改善也是选举工具，政策连续性面临选举结果的重大不确定性。
+      </p>
+    </div>
+
+    <!-- 经济发展概述 -->
+    <div class="summary-card fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-chart-line" style="color:var(--gold); font-size:1.3rem;"></i>
+        <h3 class="text-lg font-bold">经济发展概述</h3>
+      </div>
+      <p style="font-size:0.9rem; line-height:1.8; color:var(--text-secondary);">
+        巴西经济呈现"表面亮眼、底层隐忧"的双重特征。2025年GDP连续三年增长、失业率5.2%历史最低、外资777亿美元创七年新高，但公共债务预计2026年底达83.6%GDP，96%初级支出为强制性支出，财政空间极度有限。Master银行欺诈引发的连锁金融危机（FGC损失超560亿雷亚尔）暴露了监管漏洞，6x1工作制改革的经济影响评估存在巨大分歧（企业界称年增成本超2000亿雷亚尔，Ipea称核心行业成本增幅不足1%）。劳动生产率仅为美国的1/4是结构性瓶颈，选举年的民粹化政策风险与财政纪律的张力将持续考验市场信心。
+      </p>
+    </div>
+
+    <!-- 营商环境洞察 -->
+    <div class="summary-card fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-briefcase" style="color:var(--gold); font-size:1.3rem;"></i>
+        <h3 class="text-lg font-bold">营商环境洞察</h3>
+      </div>
+      <ul class="space-y-3" style="font-size:0.9rem; line-height:1.8; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">贸易开放与保护并存：</strong>Mercosul-欧盟协定推进带来市场准入机遇，但进口税上调、跨境电商ICMS征收等保护主义措施同步加强，外资企业需关注政策的双向性</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">金融监管趋严：</strong>Master银行事件后央行全面修订规则，免税金融工具面临调整，银行合规要求提升，金融领域投资需评估监管变化风险</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">数字经济政策窗口：</strong>数据中心税收激励（Redata）、AI监管法案、TV 3.0推进等构成数字经济政策框架，但立法进程不确定性较高</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">劳工成本可能上升：</strong>6x1改革若通过将增加劳动密集型行业成本，企业需提前评估用工结构调整方案</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">环保合规要求提升：</strong>碳市场法案待细则出台、"污染者付费"税收原则2027年实施、欧盟反毁林条例合规要求，绿色合规成本将持续上升</li>
+      </ul>
+    </div>
+
+    <!-- 中资企业建议 -->
+    <div class="summary-card fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <i class="fas fa-flag" style="color:var(--gold); font-size:1.3rem;"></i>
+        <h3 class="text-lg font-bold">中资企业建议</h3>
+      </div>
+      <ul class="space-y-3" style="font-size:0.88rem; line-height:1.8; color:var(--text-secondary);">
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">基础设施与交通：</strong>未来4年35个公路特许项目（总投资3960亿雷亚尔）、铁路、港口、机场等大规模基建投资为中资工程承包和设备出口提供重大机遇，建议重点关注Sucuriú铁路（24亿雷亚尔）、贝洛奥里藏特地铁扩建（28亿雷亚尔）等项目，通过本地化合作降低准入门槛</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">矿产与新能源：</strong>巴西作为全球第二大矿产储备国正加速关键矿产开发（锂、镍、稀土），明确要求本土加工而非仅出口原材料，中资矿业企业应把握边境七州矿产勘探开放机遇，同时关注稀土开采的联邦统一协调要求和环保审批趋严</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">数字经济与数据中心：</strong>巴西60%个人数据在境外处理，政府目标10年吸引2万亿雷亚尔数据中心投资，中资科技企业可关注Redata税收激励重启进展，利用巴西丰富可再生能源优势布局数据中心业务</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">农业与食品：</strong>巴西牛肉出口创历史新高（345万吨、180亿美元），农业出口市场多元化持续推进，中资企业可深化农业机械、农药、种子等上游供应链合作，关注Mercosul-欧盟协定生效后的贸易规则变化</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">医疗健康：</strong>SUS年手术量超1400万例、癌症防控体系全面升级、Butantan获14亿雷亚尔投资，医疗设备、疫苗、药品需求旺盛，但Mounjaro专利争议提示需关注知识产权保护环境变化</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">合规风险管理：</strong>Master银行事件后金融监管趋严，反帮派法扩大犯罪组织定义，劳工权益保护力度加大（大众汽车判赔1.65亿雷亚尔），中资企业需强化反洗钱、劳工合规、环保合规体系建设，特别关注"pejotização"（将员工转为法人实体）的法律风险</li>
+        <li><span class="gold-bullet">◆</span><strong style="color:var(--text);">政治风险对冲：</strong>2026年大选结果高度不确定，左右翼在经济政策上分歧显著（Lula倾向国家干预与社会支出，Flávio主张减税缩减政府），建议中资企业与两大阵营均保持沟通渠道，投资决策中纳入政策转向情景分析，重点关注Mercosul-欧盟协定落地进程、6x1改革最终方案、以及能源转型路线图对化石燃料行业的影响</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== AUTHOR ==================== -->
+<section class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-up" style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:24px; text-align:center;">
+    <div style="font-family:'IBM Plex Mono',monospace; font-size:0.7rem; color:var(--text-muted); letter-spacing:0.1em; margin-bottom:8px;">REPORT BY</div>
+    <div style="font-family:'Source Serif 4',serif; font-size:1.3rem; font-weight:700; color:var(--text);">Supinfor Ltd.</div>
+    <div style="font-size:0.85rem; color:var(--text-muted); margin-top:4px;">2026年3月28日</div>
+    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:8px; font-style:italic;">本报告所有洞察均基于2026年2月巴西国别资讯月报原始资讯，不含外部数据。</div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer style="background:var(--surface); border-top:1px solid var(--border); padding:24px; text-align:center;">
+  <p style="font-size:0.8rem; color:var(--text-muted);">
+    © 2026 Supinfor Ltd. · 巴西区域国别洞察报告
+  </p>
+</footer>
+
+</div><!-- end main-content -->
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+// ===== Theme Management =====
+(function() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const icon = document.getElementById('themeIcon');
+  const label = document.getElementById('themeLabel');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    const effective = theme === 'system' ? getSystemTheme() : theme;
+    html.classList.toggle('dark', effective === 'dark');
+    html.setAttribute('data-theme', theme);
+    if (icon && label) {
+      if (effective === 'dark') {
+        icon.className = 'fas fa-moon';
+        label.textContent = '深色';
+      } else {
+        icon.className = 'fas fa-sun';
+        label.textContent = '浅色';
+      }
+    }
+  }
+
+  // Init from localStorage or system
+  const saved = localStorage.getItem('brazil-report-theme');
+  applyTheme(saved || 'system');
+
+  // Listen for system changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+    const current = localStorage.getItem('brazil-report-theme');
+    if (!current || current === 'system') applyTheme('system');
+  });
+
+  // Toggle click
+  if (toggle) {
+    toggle.addEventListener('click', function() {
+      const current = html.classList.contains('dark') ? 'dark' : 'light';
+      const next = current === 'dark' ? 'light' : 'dark';
+      localStorage.setItem('brazil-report-theme', next);
+      applyTheme(next);
+    });
+  }
+})();
+
+// ===== TOC Sidebar Toggle (mobile) =====
+(function() {
+  const tocToggle = document.getElementById('tocToggle');
+  const tocSidebar = document.getElementById('tocSidebar');
+  if (tocToggle && tocSidebar) {
+    tocToggle.addEventListener('click', function() {
+      tocSidebar.classList.toggle('open');
+      const isOpen = tocSidebar.classList.contains('open');
+      tocToggle.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    // Close on link click (mobile)
+    tocSidebar.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        if (window.innerWidth <= 1024) {
+          tocSidebar.classList.remove('open');
+          tocToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+    });
+  }
+})();
+
+// ===== Back to Top =====
+(function() {
+  var btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('show', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+// ===== IntersectionObserver for fade-up animations =====
+(function() {
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(function(el) {
+    observer.observe(el);
+  });
+})();
+
+// ===== TOC Active State on Scroll =====
+(function() {
+  var sections = document.querySelectorAll('section[id]');
+  var tocLinks = document.querySelectorAll('.toc-sidebar a[href^="#"]');
+
+  function updateActive() {
+    var scrollPos = window.scrollY + 120;
+    var current = '';
+    sections.forEach(function(section) {
+      if (section.offsetTop <= scrollPos) {
+        current = section.id;
+      }
+    });
+    // Also check insight divs
+    document.querySelectorAll('[id^="insight-"]').forEach(function(el) {
+      if (el.offsetTop <= scrollPos) {
+        current = el.id;
+      }
+    });
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateActive();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+  updateActive();
+})();
+
+// ===== Smooth scroll for TOC links =====
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    e.preventDefault();
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+</body>
+</html>
