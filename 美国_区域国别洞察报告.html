@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美国区域国别洞察报告 | U.S. Country Insight Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50:'#eff6ff',100:'#dbeafe',200:'#bfdbfe',300:'#93c5fd',400:'#60a5fa',500:'#3b82f6',600:'#2563eb',700:'#1d4ed8',800:'#1e40af',900:'#1e3a8a' },
+                        accent: { 50:'#fdf4ff',100:'#fae8ff',200:'#f5d0fe',300:'#f0abfc',400:'#e879f9',500:'#d946ef',600:'#c026d3',700:'#a21caf',800:'#86198f',900:'#701a75' },
+                        surface: { 50:'#f8fafc',100:'#f1f5f9',200:'#e2e8f0',300:'#cbd5e1',400:'#94a3b8',500:'#64748b',600:'#475569',700:'#334155',800:'#1e293b',900:'#0f172a',950:'#020617' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :root { --hero-gradient: linear-gradient(135deg, #0f172a 0%, #1e3a5f 30%, #1a365d 60%, #0c1929 100%); }
+        .dark { --hero-gradient: linear-gradient(135deg, #020617 0%, #0f172a 30%, #1e293b 60%, #020617 100%); }
+        body { font-family: 'Noto Sans SC', 'Inter', sans-serif; scroll-behavior: smooth; }
+        .font-serif-cn { font-family: 'Noto Serif SC', 'Playfair Display', serif; }
+        .font-display { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+        .font-sans-en { font-family: 'Inter', 'Noto Sans SC', sans-serif; }
+
+        /* Hero */
+        .hero-bg { background: var(--hero-gradient); position: relative; overflow: hidden; }
+        .hero-bg::before { content:''; position:absolute; inset:0; background: radial-gradient(ellipse at 20% 50%, rgba(59,130,246,0.15) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(217,70,239,0.1) 0%, transparent 50%); }
+        .hero-bg::after { content:''; position:absolute; inset:0; background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+        @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+        @keyframes slideInLeft { from { opacity:0; transform:translateX(-30px); } to { opacity:1; transform:translateX(0); } }
+        @keyframes pulse-glow { 0%,100% { box-shadow: 0 0 20px rgba(59,130,246,0.2); } 50% { box-shadow: 0 0 40px rgba(59,130,246,0.4); } }
+        .animate-fade-in-up { animation: fadeInUp 0.8s ease-out forwards; }
+        .animate-fade-in { animation: fadeIn 0.6s ease-out forwards; }
+        .animate-slide-left { animation: slideInLeft 0.6s ease-out forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+
+        /* Cards */
+        .insight-card { transition: all 0.3s cubic-bezier(0.4,0,0.2,1); }
+        .insight-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -12px rgba(0,0,0,0.15); }
+        .dark .insight-card:hover { box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5); }
+
+        /* Stat cards */
+        .stat-card { backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); transition: all 0.3s ease; }
+        .stat-card:hover { border-color: rgba(255,255,255,0.25); transform: translateY(-2px); }
+
+        /* Section nav */
+        .section-nav-item { transition: all 0.3s ease; }
+        .section-nav-item:hover { transform: scale(1.05); }
+        .section-nav-item.active { border-color: #3b82f6; background: rgba(59,130,246,0.1); }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 4px; }
+        .dark ::-webkit-scrollbar-thumb { background: #475569; }
+
+        /* Toggle switch */
+        .lang-toggle { position: relative; width: 120px; height: 36px; border-radius: 18px; cursor: pointer; transition: all 0.3s ease; }
+        .lang-toggle .slider { position: absolute; top: 2px; left: 2px; width: 56px; height: 32px; border-radius: 16px; transition: all 0.3s cubic-bezier(0.4,0,0.2,1); display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; }
+
+        /* TOC */
+        .toc-link { transition: all 0.2s ease; border-left: 2px solid transparent; }
+        .toc-link:hover, .toc-link.active { border-left-color: #3b82f6; background: rgba(59,130,246,0.05); }
+        .dark .toc-link:hover, .dark .toc-link.active { background: rgba(59,130,246,0.1); }
+
+        /* Fact list */
+        .fact-item { position: relative; padding-left: 1.5rem; }
+        .fact-item::before { content: ''; position: absolute; left: 0; top: 0.6rem; width: 6px; height: 6px; border-radius: 50%; background: #3b82f6; }
+
+        /* Back to top */
+        .back-to-top { opacity: 0; transform: translateY(20px); transition: all 0.3s ease; pointer-events: none; }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+        /* Print */
+        @media print { .no-print { display: none !important; } .hero-bg { background: #1e3a5f !important; } }
+
+        /* Responsive sidebar */
+        @media (max-width: 1279px) { .sidebar-toc { display: none; } }
+
+        /* Section divider */
+        .section-divider { height: 1px; background: linear-gradient(90deg, transparent, rgba(59,130,246,0.3), transparent); }
+    </style>
+</head>
+<body class="bg-white dark:bg-surface-950 text-surface-800 dark:text-surface-200 transition-colors duration-300">
+
+    <!-- Top Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 no-print" id="navbar">
+        <div class="backdrop-blur-xl bg-white/80 dark:bg-surface-900/80 border-b border-surface-200/50 dark:border-surface-700/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between h-14">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+                            <i class="fas fa-globe-americas text-white text-sm"></i>
+                        </div>
+                        <span class="font-serif-cn font-bold text-sm sm:text-base text-surface-900 dark:text-white" data-zh="美国洞察报告" data-en="U.S. Insight Report">美国洞察报告</span>
+                    </div>
+                    <div class="flex items-center gap-2 sm:gap-3">
+                        <!-- Language Toggle -->
+                        <div class="lang-toggle bg-surface-100 dark:bg-surface-800 border border-surface-200 dark:border-surface-700" id="langToggle" onclick="toggleLanguage()">
+                            <div class="slider bg-primary-500 text-white" id="langSlider">
+                                <span id="langLabel">中文</span>
+                            </div>
+                            <span class="absolute right-3 top-1/2 -translate-y-1/2 text-xs font-medium text-surface-400" id="langAlt">EN</span>
+                        </div>
+                        <!-- Theme Toggle -->
+                        <button onclick="toggleTheme()" class="w-9 h-9 rounded-xl bg-surface-100 dark:bg-surface-800 border border-surface-200 dark:border-surface-700 flex items-center justify-center hover:bg-surface-200 dark:hover:bg-surface-700 transition-all" aria-label="Toggle theme">
+                            <i class="fas fa-sun text-amber-500 dark:hidden text-sm"></i>
+                            <i class="fas fa-moon text-blue-300 hidden dark:block text-sm"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-bg min-h-[90vh] flex items-center relative pt-14" id="hero">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 w-full">
+            <!-- Badge -->
+            <div class="animate-fade-in-up opacity-0 mb-6">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-sm border border-white/10 text-blue-200 text-xs font-medium tracking-wide">
+                    <i class="fas fa-shield-halved"></i>
+                    <span data-zh="咨询级 · 区域国别洞察" data-en="Consulting-Grade · Country Intelligence">咨询级 · 区域国别洞察</span>
+                </span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="animate-fade-in-up opacity-0 delay-100">
+                <span class="block font-serif-cn text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight tracking-tight" data-zh="美国" data-en="United States">美国</span>
+                <span class="block font-serif-cn text-2xl sm:text-3xl md:text-4xl font-bold text-blue-200/80 mt-2" data-zh="区域国别洞察报告" data-en="Country Insight Report">区域国别洞察报告</span>
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="animate-fade-in-up opacity-0 delay-200 mt-6 max-w-3xl text-base sm:text-lg text-blue-100/70 leading-relaxed" data-zh="联邦气候监管体系崩塌叠加AI数据中心能源争夺，54国矿产联盟加速"去中国化"，三大车企EV减值超500亿美元——美国政策全面逆转重塑全球产业格局" data-en="Federal climate regulatory collapse meets AI data center energy scramble. A 54-nation mineral alliance accelerates de-Sinicization while Big Three EV write-downs exceed $50B — sweeping U.S. policy reversals reshape the global industrial landscape">联邦气候监管体系崩塌叠加AI数据中心能源争夺，54国矿产联盟加速"去中国化"，三大车企EV减值超500亿美元——美国政策全面逆转重塑全球产业格局</p>
+
+            <!-- Key Stats Grid -->
+            <div class="animate-fade-in-up opacity-0 delay-300 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 mt-10">
+                <div class="stat-card rounded-2xl bg-white/5 p-4 sm:p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-white font-sans-en">$500B+</div>
+                    <div class="text-xs sm:text-sm text-blue-200/60 mt-1" data-zh="三大车企EV减值" data-en="Big Three EV Write-downs">三大车企EV减值</div>
+                </div>
+                <div class="stat-card rounded-2xl bg-white/5 p-4 sm:p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-white font-sans-en">54</div>
+                    <div class="text-xs sm:text-sm text-blue-200/60 mt-1" data-zh="国矿产联盟成员" data-en="Nations in Mineral Alliance">国矿产联盟成员</div>
+                </div>
+                <div class="stat-card rounded-2xl bg-white/5 p-4 sm:p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-white font-sans-en">315%</div>
+                    <div class="text-xs sm:text-sm text-blue-200/60 mt-1" data-zh="关税收入增长" data-en="Tariff Revenue Surge">关税收入增长</div>
+                </div>
+                <div class="stat-card rounded-2xl bg-white/5 p-4 sm:p-5 text-center">
+                    <div class="text-2xl sm:text-3xl font-bold text-white font-sans-en">$650B</div>
+                    <div class="text-xs sm:text-sm text-blue-200/60 mt-1" data-zh="科技巨头数据中心投资" data-en="Tech Giant DC Investment">科技巨头数据中心投资</div>
+                </div>
+            </div>
+
+            <!-- Meta info -->
+            <div class="animate-fade-in-up opacity-0 delay-400 flex flex-wrap items-center gap-4 sm:gap-6 mt-8 text-xs sm:text-sm text-blue-200/50">
+                <span class="flex items-center gap-1.5"><i class="far fa-calendar"></i> <span data-zh="2026年3月31日" data-en="March 31, 2026">2026年3月31日</span></span>
+                <span class="flex items-center gap-1.5"><i class="far fa-file-alt"></i> <span data-zh="基于2026年2月美国国别月报" data-en="Based on Feb 2026 U.S. Country Monthly">基于2026年2月美国国别月报</span></span>
+                <span class="flex items-center gap-1.5"><i class="fas fa-database"></i> <span data-zh="182条资讯 · 16个关联簇 · 48条洞察" data-en="182 Items · 16 Clusters · 48 Insights">182条资讯 · 16个关联簇 · 48条洞察</span></span>
+            </div>
+
+            <!-- Scroll indicator -->
+            <div class="animate-fade-in opacity-0 delay-500 absolute bottom-8 left-1/2 -translate-x-1/2">
+                <a href="#core-insights" class="flex flex-col items-center gap-2 text-blue-200/40 hover:text-blue-200/70 transition-colors">
+                    <span class="text-xs" data-zh="向下滚动" data-en="Scroll Down">向下滚动</span>
+                    <i class="fas fa-chevron-down animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Core Insights Section -->
+    <section id="core-insights" class="py-16 sm:py-24 bg-surface-50 dark:bg-surface-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-xs font-medium mb-4">
+                    <i class="fas fa-lightbulb"></i>
+                    <span data-zh="核心洞察" data-en="Core Insights">核心洞察</span>
+                </span>
+                <h2 class="font-serif-cn text-2xl sm:text-3xl md:text-4xl font-bold text-surface-900 dark:text-white" data-zh="六大核心洞察" data-en="Six Core Insights">六大核心洞察</h2>
+                <p class="mt-3 text-surface-500 dark:text-surface-400 max-w-2xl mx-auto text-sm sm:text-base" data-zh="从182条原始资讯中提炼的最关键战略信号" data-en="The most critical strategic signals distilled from 182 raw intelligence items">从182条原始资讯中提炼的最关键战略信号</p>
+            </div>
+
+            <div class="grid gap-4 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Insight 1 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-red-50 dark:bg-red-900/30 flex items-center justify-center text-red-500 dark:text-red-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-smog text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-red-500 dark:text-red-400 uppercase tracking-wider" data-zh="气候政策" data-en="Climate Policy">气候政策</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="特朗普政府撤销温室气体"危害认定"，瓦解联邦气候监管体系，引发多方诉讼与产业不确定性，中资企业需重新评估在美清洁能源投资布局" data-en="The Trump administration revoked the GHG 'endangerment finding,' dismantling the federal climate regulatory framework, triggering multi-party litigation and industrial uncertainty. Chinese enterprises must reassess clean energy investment positioning in the U.S.">特朗普政府撤销温室气体"危害认定"，瓦解联邦气候监管体系，引发多方诉讼与产业不确定性，中资企业需重新评估在美清洁能源投资布局</p>
+                </div>
+                <!-- Insight 2 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-violet-50 dark:bg-violet-900/30 flex items-center justify-center text-violet-500 dark:text-violet-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-microchip text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-violet-500 dark:text-violet-400 uppercase tracking-wider" data-zh="AI与能源" data-en="AI & Energy">AI与能源</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="AI数据中心扩张引发能源争夺与社区抵制，白宫要求科技企业自建电厂，催生微型核反应堆、太空数据中心等新赛道" data-en="AI data center expansion triggers energy competition and community resistance. The White House demands tech firms build their own power plants, spawning new tracks like micro nuclear reactors and space-based data centers">AI数据中心扩张引发能源争夺与社区抵制，白宫要求科技企业自建电厂，催生微型核反应堆、太空数据中心等新赛道</p>
+                </div>
+                <!-- Insight 3 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-900/30 flex items-center justify-center text-amber-500 dark:text-amber-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-gem text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-amber-500 dark:text-amber-400 uppercase tracking-wider" data-zh="关键矿产" data-en="Critical Minerals">关键矿产</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国主导关键矿产供应链重构，联合54国构建"去中国化"矿产联盟，中资矿业企业海外布局面临系统性排斥风险" data-en="The U.S. leads critical mineral supply chain restructuring, uniting 54 nations in a 'de-Sinicization' mineral alliance. Chinese mining enterprises face systemic exclusion risks in overseas operations">美国主导关键矿产供应链重构，联合54国构建"去中国化"矿产联盟，中资矿业企业海外布局面临系统性排斥风险</p>
+                </div>
+                <!-- Insight 4 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-rose-50 dark:bg-rose-900/30 flex items-center justify-center text-rose-500 dark:text-rose-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-radiation text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-rose-500 dark:text-rose-400 uppercase tracking-wider" data-zh="核安全" data-en="Nuclear Security">核安全</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="New START条约到期后美国推动多边核军控新架构，公开指责中国核扩张，印太军事威慑持续升级" data-en="Post-New START expiry, the U.S. pushes a multilateral nuclear arms control framework, openly accusing China of nuclear expansion while Indo-Pacific military deterrence escalates">New START条约到期后美国推动多边核军控新架构，公开指责中国核扩张，印太军事威慑持续升级</p>
+                </div>
+                <!-- Insight 5 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center text-blue-500 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-car text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-blue-500 dark:text-blue-400 uppercase tracking-wider" data-zh="汽车产业" data-en="Auto Industry">汽车产业</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国汽车业电动化战略遭重创，三大车企合计减值超500亿美元，但全球市场排放标准未变，中国EV竞争优势进一步扩大" data-en="U.S. auto electrification strategy suffers a major blow — Big Three write-downs exceed $50B. Yet global emission standards remain unchanged, further expanding China's EV competitive advantage">美国汽车业电动化战略遭重创，三大车企合计减值超500亿美元，但全球市场排放标准未变，中国EV竞争优势进一步扩大</p>
+                </div>
+                <!-- Insight 6 -->
+                <div class="insight-card rounded-2xl bg-white dark:bg-surface-800 border border-surface-200 dark:border-surface-700 p-6 group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-500 dark:text-emerald-400 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-cloud-bolt text-lg"></i>
+                        </div>
+                        <span class="text-xs font-bold text-emerald-500 dark:text-emerald-400 uppercase tracking-wider" data-zh="极端天气" data-en="Extreme Weather">极端天气</span>
+                    </div>
+                    <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="极端天气频发叠加环保执法停滞，美国公共健康与基础设施风险加剧，灾后重建与保险体系承压" data-en="Frequent extreme weather events combined with stalled environmental enforcement intensify public health and infrastructure risks, straining disaster recovery and insurance systems">极端天气频发叠加环保执法停滞，美国公共健康与基础设施风险加剧，灾后重建与保险体系承压</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Navigation -->
+    <section class="py-12 bg-white dark:bg-surface-950 border-y border-surface-100 dark:border-surface-800 no-print" id="section-nav">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="报告导航" data-en="Report Navigation">报告导航</h2>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
+                <a href="#section-1" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-fire text-red-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="气候与能源" data-en="Climate & Energy">气候与能源</div>
+                </a>
+                <a href="#section-2" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-server text-violet-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="AI与数据中心" data-en="AI & Data Centers">AI与数据中心</div>
+                </a>
+                <a href="#section-3" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-gem text-amber-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="关键矿产" data-en="Critical Minerals">关键矿产</div>
+                </a>
+                <a href="#section-4" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-shield-halved text-rose-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="核安全与军事" data-en="Nuclear & Military">核安全与军事</div>
+                </a>
+                <a href="#section-5" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-car text-blue-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="汽车产业" data-en="Auto Industry">汽车产业</div>
+                </a>
+                <a href="#section-6" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-chart-line text-green-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="经济与贸易" data-en="Economy & Trade">经济与贸易</div>
+                </a>
+                <a href="#section-7" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-heartbeat text-pink-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="公共健康" data-en="Public Health">公共健康</div>
+                </a>
+                <a href="#section-8" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-cloud-bolt text-teal-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="极端天气" data-en="Extreme Weather">极端天气</div>
+                </a>
+                <a href="#section-9" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-rocket text-indigo-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="科技与航天" data-en="Tech & Space">科技与航天</div>
+                </a>
+                <a href="#section-10" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-passport text-orange-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="移民与安全" data-en="Immigration">移民与安全</div>
+                </a>
+                <a href="#section-11" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-earth-americas text-cyan-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="国际关系" data-en="Intl Relations">国际关系</div>
+                </a>
+                <a href="#section-12" class="section-nav-item rounded-xl border border-surface-200 dark:border-surface-700 p-3 text-center hover:border-primary-400 dark:hover:border-primary-500 transition-all group">
+                    <i class="fas fa-graduation-cap text-purple-500 text-lg mb-2 group-hover:scale-110 transition-transform"></i>
+                    <div class="text-xs font-medium text-surface-700 dark:text-surface-300" data-zh="教育事务" data-en="Education">教育事务</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="py-12 sm:py-16 bg-white dark:bg-surface-950">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- ==================== SECTION 1: Climate & Energy ==================== -->
+            <section id="section-1" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-fire text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-red-500 uppercase tracking-wider" data-zh="第一章" data-en="Chapter I">第一章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="气候与能源政策全面逆转" data-en="Complete Reversal of Climate & Energy Policy">气候与能源政策全面逆转</h2>
+                    </div>
+                </div>
+
+                <!-- 1.1 -->
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4 leading-snug" data-zh="1.1 撤销"危害认定"标志美国联邦气候监管体系崩塌" data-en="1.1 Revoking the 'Endangerment Finding' Marks the Collapse of Federal Climate Regulation">1.1 撤销"危害认定"标志美国联邦气候监管体系崩塌</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border-l-4 border-red-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="特朗普政府撤销2009年温室气体"危害认定"，是美国近20年气候政策最根本性的逆转。此举不仅废除了汽车、电厂等多领域的排放标准，更可能使能源企业失去联邦监管的"法律盾牌"，面临州级和公共妨害诉讼的新风险。各州自行立法将导致监管碎片化，企业合规成本反而可能上升。" data-en="The Trump administration's revocation of the 2009 GHG 'endangerment finding' represents the most fundamental reversal of U.S. climate policy in 20 years. This move not only abolishes emission standards across automotive, power plant, and other sectors, but may also strip energy companies of their federal regulatory 'legal shield,' exposing them to new risks from state-level and public nuisance litigation. States legislating independently will create regulatory fragmentation, potentially increasing corporate compliance costs.">特朗普政府撤销2009年温室气体"危害认定"，是美国近20年气候政策最根本性的逆转。此举不仅废除了汽车、电厂等多领域的排放标准，更可能使能源企业失去联邦监管的"法律盾牌"，面临州级和公共妨害诉讼的新风险。各州自行立法将导致监管碎片化，企业合规成本反而可能上升。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="撤销覆盖汽车、电厂、油气等多行业的温室气体排放监管法律基础" data-en="Revoked the legal basis for GHG emission regulation across automotive, power plant, oil & gas, and other industries">撤销覆盖汽车、电厂、油气等多行业的温室气体排放监管法律基础</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="超过12个环保和健康组织已起诉EPA，加州等州宣布将独立制定排放法规" data-en="Over 12 environmental and health organizations have sued the EPA; California and other states announced independent emission regulations">超过12个环保和健康组织已起诉EPA，加州等州宣布将独立制定排放法规</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="环保组织估计到2055年将额外导致5.8万例早逝、3700万新增哮喘病例" data-en="Environmental groups estimate an additional 58,000 premature deaths and 37 million new asthma cases by 2055">环保组织估计到2055年将额外导致5.8万例早逝、3700万新增哮喘病例</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="未来25年美国人可能因油价上涨和气候灾害损失3100亿美元" data-en="Americans may lose $310 billion over the next 25 years due to rising oil prices and climate disasters">未来25年美国人可能因油价上涨和气候灾害损失3100亿美元</div>
+                    </div>
+                </article>
+
+                <!-- 1.2 -->
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4 leading-snug" data-zh="1.2 化石燃料全面复兴与清洁能源系统性打压并行" data-en="1.2 Fossil Fuel Revival Runs Parallel with Systematic Clean Energy Suppression">1.2 化石燃料全面复兴与清洁能源系统性打压并行</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="特朗普政府同步推进煤炭复兴、油气扩张和清洁能源打压，形成系统性的能源政策逆转。军方被要求采购煤电、老旧煤厂获资金续命、风电太阳能审批被冻结，而美国排放量已逆势上升，与中国排放首次下降形成鲜明对比。" data-en="The Trump administration simultaneously advances coal revival, oil & gas expansion, and clean energy suppression, forming a systematic energy policy reversal. The military is required to purchase coal power, aging coal plants receive life-extending funding, and wind/solar approvals are frozen — while U.S. emissions rise against the trend, contrasting sharply with China's first-ever emission decline.">特朗普政府同步推进煤炭复兴、油气扩张和清洁能源打压，形成系统性的能源政策逆转。军方被要求采购煤电、老旧煤厂获资金续命、风电太阳能审批被冻结，而美国排放量已逆势上升，与中国排放首次下降形成鲜明对比。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="国防部被要求从燃煤电厂采购电力，1.75亿美元用于升级6州煤厂" data-en="DoD required to purchase coal power; $175M allocated to upgrade coal plants in 6 states">国防部被要求从燃煤电厂采购电力，1.75亿美元用于升级6州煤厂</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="99%的煤厂运营成本高于可再生能源，强制续运每年可能让纳税人多支出30亿美元" data-en="99% of coal plants cost more to operate than renewables; forced continuation may cost taxpayers $3B/year extra">99%的煤厂运营成本高于可再生能源，强制续运每年可能让纳税人多支出30亿美元</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="约7.3万兆瓦陆地太阳能项目因政治干预面临风险" data-en="~73,000 MW of onshore solar projects at risk due to political intervention">约7.3万兆瓦陆地太阳能项目因政治干预面临风险</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="超755个县出台限制大型风电太阳能项目的规定" data-en="Over 755 counties enacted restrictions on large-scale wind and solar projects">超755个县出台限制大型风电太阳能项目的规定</div>
+                    </div>
+                </article>
+
+                <!-- 1.3 -->
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4 leading-snug" data-zh="1.3 联邦与加州能源政策对抗升级，地方自主气候行动成为新常态" data-en="1.3 Federal-California Energy Policy Confrontation Escalates; Local Climate Action Becomes the New Normal">1.3 联邦与加州能源政策对抗升级，地方自主气候行动成为新常态</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="加州与联邦政府在能源政策上的对抗已从政策分歧升级为系统性对抗。加州推出2亿美元EV补贴、与英国签署清洁能源协议，而联邦则起诉加州城市燃气禁令、推动近海油气开采。24个州推进居民插电太阳能立法。" data-en="The California-federal energy policy confrontation has escalated from policy divergence to systematic opposition. California launched a $200M EV subsidy and signed clean energy agreements with the UK, while the federal government sued California's city gas bans and pushed offshore drilling. 24 states advance plug-in solar legislation.">加州与联邦政府在能源政策上的对抗已从政策分歧升级为系统性对抗。加州推出2亿美元EV补贴、与英国签署清洁能源协议，而联邦则起诉加州城市燃气禁令、推动近海油气开采。24个州推进居民插电太阳能立法。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="加州推出2亿美元EV即时补贴计划，要求车企等额匹配" data-en="California launched a $200M instant EV subsidy program, requiring automakers to match dollar-for-dollar">加州推出2亿美元EV即时补贴计划，要求车企等额匹配</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="24个州推进居民小型插电太阳能立法，犹他州已率先通过，系统售价约2000美元" data-en="24 states advance residential plug-in solar legislation; Utah passed first, systems priced ~$2,000">24个州推进居民小型插电太阳能立法，犹他州已率先通过，系统售价约2000美元</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="纽约州绿色能源目标因高成本陷入困境，2040年能源系统成本将至少上涨35%" data-en="New York's green energy goals stall due to high costs; energy system costs to rise at least 35% by 2040">纽约州绿色能源目标因高成本陷入困境，2040年能源系统成本将至少上涨35%</div>
+                    </div>
+                </article>
+
+                <!-- 1.4 -->
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4 leading-snug" data-zh="1.4 EPA与MAHA运动合作推进环境健康议程，但企业俘获风险引发质疑" data-en="1.4 EPA-MAHA Collaboration on Environmental Health Agenda Raises Corporate Capture Concerns">1.4 EPA与MAHA运动合作推进环境健康议程，但企业俘获风险引发质疑</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="EPA局长Zeldin与Robert F. Kennedy Jr.领导的MAHA运动从对抗转为合作，共同推进铅管、永久化学物质、塑料污染等环境健康议题。但EPA同时雇佣行业说客负责农药监管、提议扩大除草剂使用，企业俘获风险突出。" data-en="EPA Administrator Zeldin and the MAHA movement led by RFK Jr. shifted from confrontation to collaboration on lead pipes, forever chemicals, and plastic pollution. However, EPA simultaneously hired industry lobbyists for pesticide regulation and proposed expanding herbicide use, highlighting corporate capture risks.">EPA局长Zeldin与Robert F. Kennedy Jr.领导的MAHA运动从对抗转为合作，共同推进铅管、永久化学物质、塑料污染等环境健康议题。但EPA同时雇佣行业说客负责农药监管、提议扩大除草剂使用，企业俘获风险突出。</p>
+                    </div>
+                </article>
+
+                <!-- 1.5 -->
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4 leading-snug" data-zh="1.5 AI生成虚假评论干扰公共政策制定，数字民主面临新型威胁" data-en="1.5 AI-Generated Fake Comments Disrupt Public Policy; Digital Democracy Faces New Threats">1.5 AI生成虚假评论干扰公共政策制定，数字民主面临新型威胁</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="南加州空气质量管理局一项可减少6吨/天氮氧化物排放的提案被否决，背后是AI驱动的超2万条虚假反对评论。这是典型的"数字草皮运动"，对公共决策的真实性构成系统性威胁。" data-en="A Southern California air quality proposal that would have reduced NOx emissions by 6 tons/day was defeated by over 20,000 AI-generated fake opposition comments — a classic 'digital astroturfing' campaign posing systemic threats to public decision-making authenticity.">南加州空气质量管理局一项可减少6吨/天氮氧化物排放的提案被否决，背后是AI驱动的超2万条虚假反对评论。这是典型的"数字草皮运动"，对公共决策的真实性构成系统性威胁。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="CiviClick公司通过AI生成超2万条反对评论，至少3名被核查者表示从未提交" data-en="CiviClick generated 20,000+ AI opposition comments; at least 3 verified individuals said they never submitted them">CiviClick公司通过AI生成超2万条反对评论，至少3名被核查者表示从未提交</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="该提案原可避免近2500例早逝和1万例新增哮喘病例" data-en="The proposal could have prevented ~2,500 premature deaths and 10,000 new asthma cases">该提案原可避免近2500例早逝和1万例新增哮喘病例</div>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 2: AI & Data Centers ==================== -->
+            <section id="section-2" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-violet-500 uppercase tracking-wider" data-zh="第二章" data-en="Chapter II">第二章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="AI与数据中心：能源争夺与产业重构" data-en="AI & Data Centers: Energy Competition & Industrial Restructuring">AI与数据中心：能源争夺与产业重构</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="2.1 AI数据中心能耗激增引发全美社区抵制" data-en="2.1 Surging AI Data Center Energy Demand Triggers Nationwide Community Resistance">2.1 AI数据中心能耗激增引发全美社区抵制</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-violet-50 dark:bg-violet-900/20 border-l-4 border-violet-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="AI数据中心的大规模扩张正遭遇能源供给瓶颈和社区反对的双重制约。白宫联合13州州长要求AI企业"自带电源"，标志着数据中心从"用电大户"向"自主供电"模式转型。" data-en="Massive AI data center expansion faces dual constraints of energy supply bottlenecks and community opposition. The White House, joined by 13 governors, demands AI firms 'bring your own power,' marking a shift from 'power consumer' to 'self-powered' model.">AI数据中心的大规模扩张正遭遇能源供给瓶颈和社区反对的双重制约。白宫联合13州州长要求AI企业"自带电源"，标志着数据中心从"用电大户"向"自主供电"模式转型。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="四大科技公司计划未来一年投入650亿美元建设数据中心" data-en="Four tech giants plan to invest $65B in data center construction over the next year">四大科技公司计划未来一年投入650亿美元建设数据中心</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="典型AI数据中心能耗相当于10万户家庭，新建中心能耗达现有20倍" data-en="A typical AI data center consumes energy equivalent to 100,000 homes; new centers use 20x more">典型AI数据中心能耗相当于10万户家庭，新建中心能耗达现有20倍</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="预计到2030年美国AI数据中心总能耗将相当于日本全国年用电量" data-en="By 2030, total U.S. AI data center energy consumption is projected to equal Japan's annual electricity use">预计到2030年美国AI数据中心总能耗将相当于日本全国年用电量</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="2.2 太空AI数据中心与微型核反应堆开辟能源新赛道" data-en="2.2 Space AI Data Centers & Micro Nuclear Reactors Open New Energy Frontiers">2.2 太空AI数据中心与微型核反应堆开辟能源新赛道</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="SpaceX申请部署100万颗太阳能AI算力卫星、五角大楼首次军事空运微型核反应堆，标志着AI能源供给正从地面向太空和核能两个方向突破。" data-en="SpaceX applied to deploy up to 1 million solar-powered AI compute satellites; the Pentagon conducted its first military airlift of a micro nuclear reactor — signaling AI energy supply is breaking through toward both space and nuclear frontiers.">SpaceX申请部署100万颗太阳能AI算力卫星、五角大楼首次军事空运微型核反应堆，标志着AI能源供给正从地面向太空和核能两个方向突破。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="谷歌明尼苏达数据中心配套1.9GW清洁能源和300MW铁空气长时电池（全球最大）" data-en="Google's Minnesota DC paired with 1.9GW clean energy and 300MW iron-air long-duration battery (world's largest)">谷歌明尼苏达数据中心配套1.9GW清洁能源和300MW铁空气长时电池（全球最大）</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="微软计划重启宾夕法尼亚退役核电厂为数据中心供电" data-en="Microsoft plans to restart a retired Pennsylvania nuclear plant to power data centers">微软计划重启宾夕法尼亚退役核电厂为数据中心供电</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="Valar Atomics计划2028年全面商业化微型核反应堆" data-en="Valar Atomics plans full commercialization of micro nuclear reactors by 2028">Valar Atomics计划2028年全面商业化微型核反应堆</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="2.3 数据中心扩张引发环境正义争议" data-en="2.3 Data Center Expansion Sparks Environmental Justice Controversy">2.3 数据中心扩张引发环境正义争议</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-pink-50 dark:bg-pink-900/20 border-l-4 border-pink-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="xAI在田纳西州孟菲斯黑人社区建设数据中心，使用未获许可的燃气涡轮机，引发NAACP等民权组织起诉。数据中心选址集中于少数族裔社区，加剧环境不平等。" data-en="xAI built data centers in Memphis's historic Black community using unpermitted gas turbines, triggering NAACP lawsuits. Data center siting concentrated in minority communities exacerbates environmental inequality.">xAI在田纳西州孟菲斯黑人社区建设数据中心，使用未获许可的燃气涡轮机，引发NAACP等民权组织起诉。数据中心选址集中于少数族裔社区，加剧环境不平等。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="xAI在孟菲斯历史黑人社区Boxtown使用35台未获许可燃气涡轮机" data-en="xAI operated 35 unpermitted gas turbines in Memphis's historic Black community of Boxtown">xAI在孟菲斯历史黑人社区Boxtown使用35台未获许可燃气涡轮机</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="Meta投资270亿美元在路易斯安那建设数据中心，年用电量是新奥尔良市的三倍" data-en="Meta invested $27B in Louisiana data centers; annual power consumption is 3x that of New Orleans">Meta投资270亿美元在路易斯安那建设数据中心，年用电量是新奥尔良市的三倍</div>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 3: Critical Minerals ==================== -->
+            <section id="section-3" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-yellow-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-gem text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-amber-500 uppercase tracking-wider" data-zh="第三章" data-en="Chapter III">第三章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="关键矿产供应链重构与"去中国化"" data-en="Critical Mineral Supply Chain Restructuring & 'De-Sinicization'">关键矿产供应链重构与"去中国化"</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="3.1 美国主导全球关键矿产联盟，构建系统性排斥中国的供应网络" data-en="3.1 U.S. Leads Global Critical Mineral Alliance to Systematically Exclude China">3.1 美国主导全球关键矿产联盟，构建系统性排斥中国的供应网络</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border-l-4 border-amber-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国举办首届关键矿产部长级会议，联合54国推进供应链多元化，动员超300亿美元政府资金，并提出建立优惠贸易区和价格地板机制。这是迄今为止最系统化的"去中国化"矿产战略。" data-en="The U.S. hosted its first Critical Minerals Ministerial, uniting 54 nations to diversify supply chains, mobilizing $30B+ in government funds, and proposing preferential trade zones and price floor mechanisms — the most systematic 'de-Sinicization' mineral strategy to date.">美国举办首届关键矿产部长级会议，联合54国推进供应链多元化，动员超300亿美元政府资金，并提出建立优惠贸易区和价格地板机制。这是迄今为止最系统化的"去中国化"矿产战略。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="54国及欧盟参会，与11国签署双边关键矿产框架协议" data-en="54 nations and the EU participated; bilateral critical mineral framework agreements signed with 11 countries">54国及欧盟参会，与11国签署双边关键矿产框架协议</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="启动Project Vault计划，进出口银行提供100亿美元建立国内矿产储备" data-en="Launched Project Vault; Ex-Im Bank provides $10B to establish domestic mineral reserves">启动Project Vault计划，进出口银行提供100亿美元建立国内矿产储备</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="30个国家表示希望加入美国主导的关键矿产俱乐部" data-en="30 countries expressed interest in joining the U.S.-led critical minerals club">30个国家表示希望加入美国主导的关键矿产俱乐部</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="3.2 委内瑞拉矿产开发受武装集团阻碍" data-en="3.2 Venezuelan Mineral Development Blocked by Armed Groups">3.2 委内瑞拉矿产开发受武装集团阻碍</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-red-50 dark:bg-red-900/20 border-l-4 border-red-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国推翻马杜罗政权后试图获取委内瑞拉关键矿产，但矿区被武装集团控制、存在严重人权问题，短期内难以实现安全开发。这暴露了"去中国化"战略在资源端的现实困境。" data-en="After toppling the Maduro regime, the U.S. attempted to access Venezuelan critical minerals, but mines are controlled by armed groups with severe human rights issues, making safe development unlikely short-term — exposing the practical dilemma of 'de-Sinicization' at the resource end.">美国推翻马杜罗政权后试图获取委内瑞拉关键矿产，但矿区被武装集团控制、存在严重人权问题，短期内难以实现安全开发。这暴露了"去中国化"战略在资源端的现实困境。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 4: Nuclear & Military ==================== -->
+            <section id="section-4" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-rose-500 to-red-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-shield-halved text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-rose-500 uppercase tracking-wider" data-zh="第四章" data-en="Chapter IV">第四章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="核安全与军事战略" data-en="Nuclear Security & Military Strategy">核安全与军事战略</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="4.1 New START到期后美国推动多边核军控" data-en="4.1 Post-New START: U.S. Pushes Multilateral Nuclear Arms Control">4.1 New START到期后美国推动多边核军控</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-rose-50 dark:bg-rose-900/20 border-l-4 border-rose-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="New START条约到期标志着冷战后核军控体系的终结。美国明确拒绝续约，转而推动涵盖中俄的多边架构，同时加速自身核现代化。" data-en="The expiry of New START marks the end of the post-Cold War nuclear arms control system. The U.S. explicitly refused renewal, instead pushing a multilateral framework covering China and Russia while accelerating its own nuclear modernization.">New START条约到期标志着冷战后核军控体系的终结。美国明确拒绝续约，转而推动涵盖中俄的多边架构，同时加速自身核现代化。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="美国指责中国到2030年核弹头将超1000枚" data-en="U.S. accuses China of exceeding 1,000 nuclear warheads by 2030">美国指责中国到2030年核弹头将超1000枚</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="美国1.7万亿美元核武现代化计划持续推进" data-en="U.S. $1.7 trillion nuclear modernization program continues">美国1.7万亿美元核武现代化计划持续推进</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="4.2 无人机大规模列装与AI军事化加速" data-en="4.2 Mass Drone Deployment & Accelerating AI Militarization">4.2 无人机大规模列装与AI军事化加速</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900/20 border-l-4 border-slate-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国启动无人机主导项目，计划2027年前部署30万架低成本攻击无人机，单价从5000美元降至2300美元。GenAI.mil平台两个月用户超百万。" data-en="The U.S. launched a drone dominance program, planning to deploy 300,000 low-cost attack drones by 2027, with unit costs dropping from $5,000 to $2,300. GenAI.mil surpassed 1 million users in two months.">美国启动无人机主导项目，计划2027年前部署30万架低成本攻击无人机，单价从5000美元降至2300美元。GenAI.mil平台两个月用户超百万。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="2027年前部署约30万架无人机，总投入11亿美元" data-en="~300,000 drones to be deployed by 2027; total investment $1.1B">2027年前部署约30万架无人机，总投入11亿美元</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="GenAI.mil将集成ChatGPT服务300万国防部人员" data-en="GenAI.mil to integrate ChatGPT serving 3 million DoD personnel">GenAI.mil将集成ChatGPT服务300万国防部人员</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="4.3–4.4 装备现代化与北约防务调整" data-en="4.3–4.4 Equipment Modernization & NATO Defense Realignment">4.3–4.4 装备现代化与北约防务调整</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-900/20 border-l-4 border-gray-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="波音获28亿美元韩F-15K升级合同、雷神获3.81亿美元战斧导弹现代化合同。特朗普政府要求欧洲北约成员国将国防开支提升至GDP的5%，美国战略重心转向印太。" data-en="Boeing won a $2.8B Korean F-15K upgrade contract; Raytheon secured $381M for Tomahawk modernization. The Trump administration demands European NATO members raise defense spending to 5% of GDP as the U.S. pivots strategically to the Indo-Pacific.">波音获28亿美元韩F-15K升级合同、雷神获3.81亿美元战斧导弹现代化合同。特朗普政府要求欧洲北约成员国将国防开支提升至GDP的5%，美国战略重心转向印太。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="2025财年国防预算较2021年增加超1000亿美元" data-en="FY2025 defense budget increased by over $100B compared to FY2021">2025财年国防预算较2021年增加超1000亿美元</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="亚马逊AWS获5.81亿美元Cloud One项目合同" data-en="Amazon AWS won a $581M Cloud One project contract">亚马逊AWS获5.81亿美元Cloud One项目合同</div>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 5: Auto Industry ==================== -->
+            <section id="section-5" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-car text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-blue-500 uppercase tracking-wider" data-zh="第五章" data-en="Chapter V">第五章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="汽车产业与电动化转型" data-en="Auto Industry & Electrification Transition">汽车产业与电动化转型</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="5.1 联邦政策全面打压EV，三大车企减值超500亿美元" data-en="5.1 Federal Policy Crushes EV Strategy; Big Three Write-Downs Exceed $50B">5.1 联邦政策全面打压EV，三大车企减值超500亿美元</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="取消EV税收抵免、撤销排放标准、终止启停技术补贴，美国汽车业电动化遭遇系统性政策打压。三大车企合计减值超500亿美元，EV市场占比预计降至5%。但欧盟、中国等市场排放标准未变，美国车企面临"国内放松、海外收紧"的两难困境。" data-en="Cancellation of EV tax credits, revocation of emission standards, and termination of start-stop technology subsidies deliver a systematic policy blow to U.S. auto electrification. Big Three write-downs exceed $50B; EV market share projected to drop to 5%. Yet EU and China emission standards remain unchanged, trapping U.S. automakers in a 'domestic relaxation, overseas tightening' dilemma.">取消EV税收抵免、撤销排放标准、终止启停技术补贴，美国汽车业电动化遭遇系统性政策打压。三大车企合计减值超500亿美元，EV市场占比预计降至5%。但欧盟、中国等市场排放标准未变，美国车企面临"国内放松、海外收紧"的两难困境。</p>
+                    </div>
+                    <div class="grid sm:grid-cols-3 gap-3 mb-4">
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-4 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-red-500">$26B</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="Stellantis减值" data-en="Stellantis Write-down">Stellantis减值</div>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-4 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-red-500">$19.5B</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="福特减值" data-en="Ford Write-down">福特减值</div>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-4 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-red-500">$7.6B</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="通用减值" data-en="GM Write-down">通用减值</div>
+                        </div>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="燃油经济性标准从拜登时期的50.4英里/加仑降至34.5英里/加仑" data-en="Fuel economy standards cut from Biden-era 50.4 mpg to 34.5 mpg">燃油经济性标准从拜登时期的50.4英里/加仑降至34.5英里/加仑</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="美国2025年EV销量占比仅8%，中国同期已超50%" data-en="U.S. 2025 EV sales share only 8%; China exceeded 50% in the same period">美国2025年EV销量占比仅8%，中国同期已超50%</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="5.2 美国钢铁业在清洁转型与传统工艺间博弈" data-en="5.2 U.S. Steel Industry Caught Between Clean Transition & Traditional Processes">5.2 美国钢铁业在清洁转型与传统工艺间博弈</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-900/20 border-l-4 border-gray-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="日铁收购美钢后投资3.5亿美元翻新加里高炉，延续煤基炼钢而非转向清洁工艺。阿肯色州电炉钢厂可降低75%温室气体排放。" data-en="After Nippon Steel's acquisition, $350M was invested to refurbish Gary blast furnaces, continuing coal-based steelmaking rather than transitioning to clean processes. Arkansas EAF steel plants can reduce GHG emissions by 75%.">日铁收购美钢后投资3.5亿美元翻新加里高炉，延续煤基炼钢而非转向清洁工艺。阿肯色州电炉钢厂可降低75%温室气体排放。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 6: Economy & Trade ==================== -->
+            <section id="section-6" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-chart-line text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-green-500 uppercase tracking-wider" data-zh="第六章" data-en="Chapter VI">第六章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="经济与贸易" data-en="Economy & Trade">经济与贸易</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="6.1 关税成为核心经济工具" data-en="6.1 Tariffs Become the Core Economic Instrument">6.1 关税成为核心经济工具</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-green-50 dark:bg-green-900/20 border-l-4 border-green-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="特朗普政府将关税作为核心政策工具，15%临时进口关税推动关税收入增长315%至710亿美元，但也推高商品价格。与16家全球药企达成"最惠国"协议以关税豁免换降价。" data-en="The Trump administration uses tariffs as its core policy tool. A 15% temporary import tariff drove tariff revenue up 315% to $71B, but also pushed up commodity prices. 'Most favored nation' agreements with 16 global pharma companies trade tariff exemptions for price cuts.">特朗普政府将关税作为核心政策工具，15%临时进口关税推动关税收入增长315%至710亿美元，但也推高商品价格。与16家全球药企达成"最惠国"协议以关税豁免换降价。</p>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="6.2 宏观经济保持增长但结构性风险积累" data-en="6.2 Macro Economy Grows but Structural Risks Accumulate">6.2 宏观经济保持增长但结构性风险积累</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="GDP增长强劲（Q3达4.4%），就业市场稳定，但核心PCE仍高于美联储目标（2.8% vs 2%），2027-28财年可能面临1.1万亿美元资金缺口。" data-en="GDP growth remains strong (Q3 at 4.4%), labor market stable, but core PCE stays above the Fed's target (2.8% vs 2%), with a potential $1.1 trillion funding gap in FY2027-28.">GDP增长强劲（Q3达4.4%），就业市场稳定，但核心PCE仍高于美联储目标（2.8% vs 2%），2027-28财年可能面临1.1万亿美元资金缺口。</p>
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3">
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-3 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-green-500">4.4%</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="Q3 GDP增长" data-en="Q3 GDP Growth">Q3 GDP增长</div>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-3 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-amber-500">2.8%</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="核心PCE" data-en="Core PCE">核心PCE</div>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-3 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-blue-500">83.8%</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="劳动参与率" data-en="Labor Participation">劳动参与率</div>
+                        </div>
+                        <div class="rounded-xl bg-white dark:bg-surface-700 p-3 text-center border border-surface-200 dark:border-surface-600">
+                            <div class="text-lg font-bold text-red-500">$1.1T</div>
+                            <div class="text-xs text-surface-500 mt-1" data-zh="潜在资金缺口" data-en="Potential Gap">潜在资金缺口</div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 7: Public Health ==================== -->
+            <section id="section-7" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-heartbeat text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-pink-500 uppercase tracking-wider" data-zh="第七章" data-en="Chapter VII">第七章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="公共健康与社会民生" data-en="Public Health & Social Welfare">公共健康与社会民生</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="7.1 环保松绑与公共健康承诺相悖" data-en="7.1 Environmental Deregulation Contradicts Public Health Promises">7.1 环保松绑与公共健康承诺相悖</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-pink-50 dark:bg-pink-900/20 border-l-4 border-pink-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh=""让美国再次健康"议程承诺消除儿童慢性病，但EPA同步拆除数十项环保法规，允许170家污染设施申请排放豁免，超56.5万儿童居住在豁免设施3英里范围内。" data-en="The 'Make America Healthy Again' agenda promises to eliminate childhood chronic diseases, yet EPA simultaneously dismantles dozens of environmental regulations, allowing 170 polluting facilities to apply for emission waivers — with over 565,000 children living within 3 miles of waived facilities.">让美国再次健康"议程承诺消除儿童慢性病，但EPA同步拆除数十项环保法规，允许170家污染设施申请排放豁免，超56.5万儿童居住在豁免设施3英里范围内。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="拉丁裔儿童哮喘死亡率比白人高40%" data-en="Latino children's asthma mortality rate is 40% higher than white children">拉丁裔儿童哮喘死亡率比白人高40%</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="执法部门人员缩减30%，司法部环境律师减少50%" data-en="Enforcement staff cut by 30%; DOJ environmental lawyers reduced by 50%">执法部门人员缩减30%，司法部环境律师减少50%</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="路易斯安那"癌症巷"居民多数成年人每月参加2-3场葬礼" data-en="In Louisiana's 'Cancer Alley,' most adults attend 2-3 funerals per month">路易斯安那"癌症巷"居民多数成年人每月参加2-3场葬礼</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="7.2 药物滥用危机严峻，HHS投入1.1亿美元" data-en="7.2 Severe Substance Abuse Crisis; HHS Invests $110M">7.2 药物滥用危机严峻，HHS投入1.1亿美元</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-rose-50 dark:bg-rose-900/20 border-l-4 border-rose-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="2019至2024年物质使用障碍患病率从7.4%升至16.8%，近8成患者未接受治疗。HHS投入1亿美元启动STREETS计划、1000万美元AOT项目。" data-en="Substance use disorder prevalence rose from 7.4% to 16.8% between 2019-2024; nearly 80% of patients received no treatment. HHS invested $100M in the STREETS program and $10M in the AOT project.">2019至2024年物质使用障碍患病率从7.4%升至16.8%，近8成患者未接受治疗。HHS投入1亿美元启动STREETS计划、1000万美元AOT项目。</p>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="7.3–7.5 草甘膦争议、部落健康与照护者AI" data-en="7.3–7.5 Glyphosate Controversy, Tribal Health & Caregiver AI">7.3–7.5 草甘膦争议、部落健康与照护者AI</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="草甘膦暴露使非霍奇金淋巴瘤风险提升41%。IHS宣布2027年全面停用含汞牙科合金。ACL启动250万美元照护者AI竞赛，推动AI在养老照护领域的应用。" data-en="Glyphosate exposure increases non-Hodgkin lymphoma risk by 41%. IHS announced full phase-out of mercury dental amalgam by 2027. ACL launched a $2.5M Caregiver AI competition to advance AI in elder care.">草甘膦暴露使非霍奇金淋巴瘤风险提升41%。IHS宣布2027年全面停用含汞牙科合金。ACL启动250万美元照护者AI竞赛，推动AI在养老照护领域的应用。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 8: Extreme Weather ==================== -->
+            <section id="section-8" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-cloud-bolt text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-teal-500 uppercase tracking-wider" data-zh="第八章" data-en="Chapter VIII">第八章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="极端天气与环境保护" data-en="Extreme Weather & Environmental Protection">极端天气与环境保护</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="8.1 极端天气频发叠加基础设施老化" data-en="8.1 Frequent Extreme Weather Compounds Aging Infrastructure">8.1 极端天气频发叠加基础设施老化</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-teal-50 dark:bg-teal-900/20 border-l-4 border-teal-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="东部极端寒潮致超110人死亡，西部创纪录雪旱威胁科罗拉多河供水，野火过火面积超30万英亩。洛杉矶火灾后七成居民仍无法返家。" data-en="Eastern extreme cold killed 110+; western record snow drought threatens Colorado River supply; wildfire burn area exceeds 300,000 acres. 70% of LA fire victims still unable to return home.">东部极端寒潮致超110人死亡，西部创纪录雪旱威胁科罗拉多河供水，野火过火面积超30万英亩。洛杉矶火灾后七成居民仍无法返家。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="洛杉矶火灾摧毁超16000栋建筑" data-en="LA fires destroyed over 16,000 buildings">洛杉矶火灾摧毁超16000栋建筑</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="科罗拉多州积雪量仅为常年57%，创1987年以来最低" data-en="Colorado snowpack at only 57% of normal — lowest since 1987">科罗拉多州积雪量仅为常年57%，创1987年以来最低</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="房地产投资者已购入近四成受灾地块" data-en="Real estate investors have purchased nearly 40% of disaster-affected parcels">房地产投资者已购入近四成受灾地块</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="8.2 科罗拉多河水资源危机面临联邦干预" data-en="8.2 Colorado River Water Crisis Faces Federal Intervention">8.2 科罗拉多河水资源危机面临联邦干预</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-cyan-50 dark:bg-cyan-900/20 border-l-4 border-cyan-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="依赖科罗拉多河的七个西部州未能在最后期限前达成水资源分配协议，鲍威尔湖和米德湖水位持续下降，2026年底可能降至无法发电的临界水平。" data-en="Seven western states dependent on the Colorado River failed to reach a water allocation agreement by deadline. Lake Powell and Lake Mead levels continue declining, potentially reaching power generation critical levels by end of 2026.">依赖科罗拉多河的七个西部州未能在最后期限前达成水资源分配协议，鲍威尔湖和米德湖水位持续下降，2026年底可能降至无法发电的临界水平。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="科罗拉多河为约4000万人和550万英亩农田供水" data-en="The Colorado River supplies ~40 million people and 5.5 million acres of farmland">科罗拉多河为约4000万人和550万英亩农田供水</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="2026年流入鲍威尔湖水量仅为平均值的52%" data-en="2026 inflow to Lake Powell at only 52% of average">2026年流入鲍威尔湖水量仅为平均值的52%</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="8.3–8.6 环境执法骤降、奥运重建与生态修复" data-en="8.3–8.6 Enforcement Collapse, Olympic Rebuilding & Ecological Restoration">8.3–8.6 环境执法骤降、奥运重建与生态修复</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-emerald-50 dark:bg-emerald-900/20 border-l-4 border-emerald-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="EPA环保执法近乎停滞：《清洁空气法》同意令仅1项（此前26项）。洛杉矶为迎接2028年奥运会加速重建，暂停环境审查。加州近7000个废弃非法大麻种植点仅587个得到部分清理。" data-en="EPA enforcement nearly halted: only 1 Clean Air Act consent decree (vs. 26 previously). LA accelerates rebuilding for the 2028 Olympics, suspending environmental review. Only 587 of ~7,000 abandoned illegal cannabis sites in California have been partially cleaned.">EPA环保执法近乎停滞：《清洁空气法》同意令仅1项（此前26项）。洛杉矶为迎接2028年奥运会加速重建，暂停环境审查。加州近7000个废弃非法大麻种植点仅587个得到部分清理。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 9: Tech & Space ==================== -->
+            <section id="section-9" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-rocket text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-indigo-500 uppercase tracking-wider" data-zh="第九章" data-en="Chapter IX">第九章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="科技与航天" data-en="Technology & Space">科技与航天</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="9.1 拟拆解气候科研机构，威胁全球气候模型研发" data-en="9.1 Plans to Dismantle Climate Research Institutions Threaten Global Climate Modeling">9.1 拟拆解气候科研机构，威胁全球气候模型研发</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-indigo-50 dark:bg-indigo-900/20 border-l-4 border-indigo-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="计划拆解NCAR将使全球气候模型研发失去核心算力支撑，影响IPCC下一次评估报告。NASA科研项目因预算调整被取消。" data-en="Plans to dismantle NCAR would strip global climate modeling of core computing support, impacting the next IPCC assessment report. NASA research projects cancelled due to budget adjustments.">计划拆解NCAR将使全球气候模型研发失去核心算力支撑，影响IPCC下一次评估报告。NASA科研项目因预算调整被取消。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="NCAR超级计算机Derecho具备每秒近20千万亿次计算能力" data-en="NCAR's Derecho supercomputer delivers nearly 20 petaflops per second">NCAR超级计算机Derecho具备每秒近20千万亿次计算能力</div>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="9.2 Artemis计划与商业航天持续推进" data-en="9.2 Artemis Program & Commercial Space Continue Advancing">9.2 Artemis计划与商业航天持续推进</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="Artemis II完成湿彩排、SpaceX Crew-12任务就绪、NASA热盾技术成功转化商业应用，美国在载人航天和商业航天领域保持领先。" data-en="Artemis II completed wet dress rehearsal; SpaceX Crew-12 mission ready; NASA heat shield technology successfully transferred to commercial applications — the U.S. maintains its lead in crewed and commercial spaceflight.">Artemis II完成湿彩排、SpaceX Crew-12任务就绪、NASA热盾技术成功转化商业应用，美国在载人航天和商业航天领域保持领先。</p>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="9.3 能源部启动Genesis任务联盟" data-en="9.3 DOE Launches Genesis Mission Alliance">9.3 能源部启动Genesis任务联盟</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-violet-50 dark:bg-violet-900/20 border-l-4 border-violet-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="能源部基于两项行政令启动Genesis任务联盟，整合国家实验室、企业和学术机构，聚焦AI模型开发、数据整合、高性能计算和机器人自动化四大方向。" data-en="DOE launched the Genesis Mission Alliance based on two executive orders, integrating national labs, enterprises, and academia, focusing on AI model development, data integration, HPC, and robotic automation.">能源部基于两项行政令启动Genesis任务联盟，整合国家实验室、企业和学术机构，聚焦AI模型开发、数据整合、高性能计算和机器人自动化四大方向。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 10: Immigration ==================== -->
+            <section id="section-10" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-passport text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-orange-500 uppercase tracking-wider" data-zh="第十章" data-en="Chapter X">第十章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="移民与社会安全" data-en="Immigration & Social Security">移民与社会安全</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="10.1 强硬移民政策引发执法冲突与民意分化" data-en="10.1 Hardline Immigration Policy Triggers Enforcement Conflicts & Public Division">10.1 强硬移民政策引发执法冲突与民意分化</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-orange-50 dark:bg-orange-900/20 border-l-4 border-orange-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="明尼苏达"Metro Surge行动"导致2名美国公民死亡，49%成年人强烈反对特朗普移民政策。但73%美国人认为非法入境属违法，61%支持驱逐非法移民。" data-en="Minnesota's 'Metro Surge' operation resulted in 2 U.S. citizen deaths; 49% of adults strongly oppose Trump's immigration policy. Yet 73% of Americans consider illegal entry a crime, and 61% support deportation of illegal immigrants.">明尼苏达"Metro Surge行动"导致2名美国公民死亡，49%成年人强烈反对特朗普移民政策。但73%美国人认为非法入境属违法，61%支持驱逐非法移民。</p>
+                    </div>
+                    <div class="space-y-2.5">
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="超4000名犯罪非法移民被捕" data-en="Over 4,000 criminal illegal immigrants arrested">超4000名犯罪非法移民被捕</div>
+                        <div class="fact-item text-sm text-surface-600 dark:text-surface-400" data-zh="墨西哥第三次向美国引渡逃犯，规模最大达37人" data-en="Mexico's third extradition to the U.S., largest at 37 fugitives">墨西哥第三次向美国引渡逃犯，规模最大达37人</div>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 11: International Relations ==================== -->
+            <section id="section-11" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-earth-americas text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-cyan-500 uppercase tracking-wider" data-zh="第十一章" data-en="Chapter XI">第十一章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="国际关系与地缘博弈" data-en="International Relations & Geopolitical Competition">国际关系与地缘博弈</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="11.1 美印能源贸易重塑全球石油格局" data-en="11.1 U.S.-India Energy Trade Reshapes Global Oil Landscape">11.1 美印能源贸易重塑全球石油格局</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-cyan-50 dark:bg-cyan-900/20 border-l-4 border-cyan-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美印能源协议要求印度停购俄油转购美油，将重塑印度能源进口结构。与印尼达成150亿美元化石燃料协议。" data-en="The U.S.-India energy agreement requires India to stop purchasing Russian oil and switch to American crude, reshaping India's energy import structure. A $15B fossil fuel agreement was reached with Indonesia.">美印能源协议要求印度停购俄油转购美油，将重塑印度能源进口结构。与印尼达成150亿美元化石燃料协议。</p>
+                    </div>
+                </article>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="11.2–11.3 制裁伊朗影子舰队与美以安全合作" data-en="11.2–11.3 Iran Shadow Fleet Sanctions & U.S.-Israel Security Cooperation">11.2–11.3 制裁伊朗影子舰队与美以安全合作</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-400">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="美国制裁15个实体、14艘影子舰队船只，切断伊朗非法石油贸易资金渠道。副国务卿迪南诺访问以色列，深化国家安全合作。" data-en="The U.S. sanctioned 15 entities and 14 shadow fleet vessels, cutting Iran's illegal oil trade funding channels. Deputy Secretary DiNanno visited Israel, deepening national security cooperation.">美国制裁15个实体、14艘影子舰队船只，切断伊朗非法石油贸易资金渠道。副国务卿迪南诺访问以色列，深化国家安全合作。</p>
+                    </div>
+                </article>
+            </section>
+            <div class="section-divider mb-16"></div>
+
+            <!-- ==================== SECTION 12: Education ==================== -->
+            <section id="section-12" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-500 to-violet-600 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-purple-500 uppercase tracking-wider" data-zh="第十二章" data-en="Chapter XII">第十二章</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="教育事务" data-en="Education Affairs">教育事务</h2>
+                    </div>
+                </div>
+
+                <article class="mb-10 insight-card rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-base sm:text-lg font-bold text-surface-900 dark:text-white mb-4" data-zh="12.1 公立学校宗教祈祷新指导意见" data-en="12.1 New Guidance on Religious Prayer in Public Schools">12.1 公立学校宗教祈祷新指导意见</h3>
+                    <div class="mb-4 p-4 rounded-xl bg-purple-50 dark:bg-purple-900/20 border-l-4 border-purple-500">
+                        <p class="text-sm leading-relaxed text-surface-700 dark:text-surface-300" data-zh="教育部更新公立学校宗教祈祷与表达指导意见，明确师生可作为个体在校内祈祷但学校不得发起。宗教自由已成为特朗普政府教育和社会政策的核心议题。" data-en="The Department of Education updated guidance on religious prayer and expression in public schools, clarifying that teachers and students may pray individually but schools may not initiate prayer. Religious freedom has become a core issue in Trump administration education and social policy.">教育部更新公立学校宗教祈祷与表达指导意见，明确师生可作为个体在校内祈祷但学校不得发起。宗教自由已成为特朗普政府教育和社会政策的核心议题。</p>
+                    </div>
+                </article>
+            </section>
+
+            <!-- ==================== FULL SUMMARY ==================== -->
+            <section id="summary" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-surface-700 to-surface-900 dark:from-surface-400 dark:to-surface-600 flex items-center justify-center text-white dark:text-surface-900 shadow-lg">
+                        <i class="fas fa-file-lines text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-surface-500 uppercase tracking-wider" data-zh="全文总结" data-en="Executive Summary">全文总结</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="全文总结" data-en="Executive Summary">全文总结</h2>
+                    </div>
+                </div>
+
+                <!-- Political Environment -->
+                <div class="mb-8 rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-lg font-bold text-surface-900 dark:text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-landmark text-primary-500"></i>
+                        <span data-zh="政治环境概述" data-en="Political Environment Overview">政治环境概述</span>
+                    </h3>
+                    <p class="text-sm leading-relaxed text-surface-600 dark:text-surface-400" data-zh="特朗普政府第二任期以气候政策全面逆转为标志性动作，撤销"危害认定"瓦解了联邦气候监管体系，化石燃料复兴与清洁能源打压并行。MAHA运动与EPA从对抗转为合作，但企业俘获风险突出。两党在气候、移民、能源政策上的对立持续加深，AI生成虚假评论干扰公共政策制定成为新型威胁。中期选举前政策操作的政治色彩浓厚，联邦与加州等民主党州的政策对抗已成常态，24个州自主推进清洁能源立法。" data-en="The Trump administration's second term is marked by a complete climate policy reversal — revoking the 'endangerment finding' dismantled the federal climate regulatory system, with fossil fuel revival and clean energy suppression running in parallel. The MAHA movement and EPA shifted from confrontation to collaboration, but corporate capture risks remain prominent. Bipartisan polarization on climate, immigration, and energy policy continues to deepen. AI-generated fake comments disrupting public policy represent a new threat. Pre-midterm policy actions carry heavy political overtones, with federal-California policy confrontation becoming the norm and 24 states independently advancing clean energy legislation.">特朗普政府第二任期以气候政策全面逆转为标志性动作，撤销"危害认定"瓦解了联邦气候监管体系，化石燃料复兴与清洁能源打压并行。MAHA运动与EPA从对抗转为合作，但企业俘获风险突出。两党在气候、移民、能源政策上的对立持续加深，AI生成虚假评论干扰公共政策制定成为新型威胁。中期选举前政策操作的政治色彩浓厚，联邦与加州等民主党州的政策对抗已成常态，24个州自主推进清洁能源立法。</p>
+                </div>
+
+                <!-- Economic Overview -->
+                <div class="mb-8 rounded-2xl bg-surface-50 dark:bg-surface-800/50 border border-surface-100 dark:border-surface-700/50 p-6 sm:p-8">
+                    <h3 class="font-serif-cn text-lg font-bold text-surface-900 dark:text-white mb-4 flex items-center gap-2">
+                        <i class="fas fa-chart-pie text-green-500"></i>
+                        <span data-zh="经济发展概述" data-en="Economic Development Overview">经济发展概述</span>
+                    </h3>
+                    <p class="text-sm leading-relaxed text-surface-600 dark:text-surface-400" data-zh="美国经济保持增长（Q3 GDP 4.4%），就业市场稳定（prime-age劳动参与率83.8%），但结构性风险积累：关税推高商品价格（关税收入增长315%）、核心通胀高于目标（PCE 2.8%）、财政赤字扩大（2027-28财年可能面临1.1万亿美元资金缺口）。AI产业成为投资核心驱动力，数据中心建设支出同比增长22%，但面临能源、社区和监管三重制约。" data-en="The U.S. economy maintains growth (Q3 GDP 4.4%), with a stable labor market (prime-age participation rate 83.8%), but structural risks accumulate: tariffs push up commodity prices (tariff revenue up 315%), core inflation exceeds target (PCE 2.8%), and fiscal deficits widen (potential $1.1T funding gap in FY2027-28). AI has become the core investment driver, with data center construction spending up 22% YoY, but faces triple constraints of energy, community opposition, and regulation.">美国经济保持增长（Q3 GDP 4.4%），就业市场稳定（prime-age劳动参与率83.8%），但结构性风险积累：关税推高商品价格（关税收入增长315%）、核心通胀高于目标（PCE 2.8%）、财政赤字扩大（2027-28财年可能面临1.1万亿美元资金缺口）。AI产业成为投资核心驱动力，数据中心建设支出同比增长22%，但面临能源、社区和监管三重制约。</p>
+                </div>
+            </section>
+
+            <!-- ==================== Chinese Enterprise Recommendations ==================== -->
+            <section id="recommendations" class="mb-16 scroll-mt-20">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-600 to-red-800 flex items-center justify-center text-white shadow-lg">
+                        <i class="fas fa-bullseye text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs font-bold text-red-600 uppercase tracking-wider" data-zh="战略建议" data-en="Strategic Recommendations">战略建议</span>
+                        <h2 class="font-serif-cn text-xl sm:text-2xl font-bold text-surface-900 dark:text-white" data-zh="中资企业建议" data-en="Recommendations for Chinese Enterprises">中资企业建议</h2>
+                    </div>
+                </div>
+
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div class="insight-card rounded-2xl bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 border border-green-200 dark:border-green-800/50 p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-bolt text-green-500"></i>
+                            <span class="text-sm font-bold text-green-700 dark:text-green-400" data-zh="清洁能源与EV" data-en="Clean Energy & EV">清洁能源与EV</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-surface-600 dark:text-surface-400" data-zh="联邦EV政策全面收缩，但加州等州仍维持补贴力度。中国EV占比已超50%形成技术代差优势。建议关注州级市场机会，24个州推进插电太阳能立法值得关注。" data-en="Federal EV policy contracts fully, but California and other states maintain subsidies. China's EV share exceeds 50%, creating a technological generation gap advantage. Focus on state-level market opportunities; 24 states advancing plug-in solar legislation merit attention.">联邦EV政策全面收缩，但加州等州仍维持补贴力度。中国EV占比已超50%形成技术代差优势。建议关注州级市场机会，24个州推进插电太阳能立法值得关注。</p>
+                    </div>
+
+                    <div class="insight-card rounded-2xl bg-gradient-to-br from-amber-50 to-yellow-50 dark:from-amber-900/20 dark:to-yellow-900/20 border border-amber-200 dark:border-amber-800/50 p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-gem text-amber-500"></i>
+                            <span class="text-sm font-bold text-amber-700 dark:text-amber-400" data-zh="关键矿产与供应链" data-en="Critical Minerals & Supply Chain">关键矿产与供应链</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-surface-600 dark:text-surface-400" data-zh="54国联盟构建"去中国化"矿产网络，设立价格地板机制。建议加速与非联盟国家的矿产合作，提升国内矿产加工能力，降低对单一供应链的依赖。" data-en="A 54-nation alliance builds a 'de-Sinicization' mineral network with price floor mechanisms. Accelerate mineral cooperation with non-alliance nations, enhance domestic mineral processing capacity, and reduce single supply chain dependency.">54国联盟构建"去中国化"矿产网络，设立价格地板机制。建议加速与非联盟国家的矿产合作，提升国内矿产加工能力，降低对单一供应链的依赖。</p>
+                    </div>
+
+                    <div class="insight-card rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 dark:from-violet-900/20 dark:to-purple-900/20 border border-violet-200 dark:border-violet-800/50 p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-microchip text-violet-500"></i>
+                            <span class="text-sm font-bold text-violet-700 dark:text-violet-400" data-zh="AI与数据中心" data-en="AI & Data Centers">AI与数据中心</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-surface-600 dark:text-surface-400" data-zh="数据中心扩张催生微型核反应堆、长时储能等新赛道。中国企业在铁空气电池、太阳能组件等领域具备成本优势。关注"自带电源"需求带来的设备出口机会。" data-en="Data center expansion spawns new tracks like micro nuclear reactors and long-duration storage. Chinese firms have cost advantages in iron-air batteries and solar components. Monitor equipment export opportunities from 'bring your own power' demand.">数据中心扩张催生微型核反应堆、长时储能等新赛道。中国企业在铁空气电池、太阳能组件等领域具备成本优势。关注"自带电源"需求带来的设备出口机会。</p>
+                    </div>
+
+                    <div class="insight-card rounded-2xl bg-gradient-to-br from-blue-50 to-cyan-50 dark:from-blue-900/20 dark:to-cyan-900/20 border border-blue-200 dark:border-blue-800/50 p-5">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-shield-halved text-blue-500"></i>
+                            <span class="text-sm font-bold text-blue-700 dark:text-blue-400" data-zh="合规风险管理" data-en="Compliance Risk Management">合规风险管理</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-surface-600 dark:text-surface-400" data-zh="联邦环保执法近乎停滞但州级诉讼活跃，需同时关注联邦和州两个层面的合规要求。关税政策频繁调整，建议建立动态关税成本监测机制。" data-en="Federal environmental enforcement nearly halted but state-level litigation remains active — monitor compliance requirements at both federal and state levels. With frequent tariff policy changes, establish dynamic tariff cost monitoring mechanisms.">联邦环保执法近乎停滞但州级诉讼活跃，需同时关注联邦和州两个层面的合规要求。关税政策频繁调整，建议建立动态关税成本监测机制。</p>
+                    </div>
+
+                    <div class="insight-card rounded-2xl bg-gradient-to-br from-rose-50 to-red-50 dark:from-rose-900/20 dark:to-red-900/20 border border-rose-200 dark:border-rose-800/50 p-5 sm:col-span-2">
+                        <div class="flex items-center gap-2 mb-3">
+                            <i class="fas fa-chess text-rose-500"></i>
+                            <span class="text-sm font-bold text-rose-700 dark:text-rose-400" data-zh="政治风险对冲" data-en="Political Risk Hedging">政治风险对冲</span>
+                        </div>
+                        <p class="text-xs leading-relaxed text-surface-600 dark:text-surface-400" data-zh="中期选举前政策波动加大，气候和能源政策可能因选举结果再次调整。建议在美投资采取灵活架构，避免过度依赖单一政策方向。关注美国对华核军控施压和印太军事部署升级带来的地缘风险，做好供应链备份和市场多元化布局。" data-en="Pre-midterm policy volatility increases; climate and energy policies may shift again with election results. Adopt flexible investment structures in the U.S., avoiding over-reliance on any single policy direction. Monitor geopolitical risks from U.S. nuclear arms control pressure on China and Indo-Pacific military deployment escalation; prepare supply chain backups and market diversification.">中期选举前政策波动加大，气候和能源政策可能因选举结果再次调整。建议在美投资采取灵活架构，避免过度依赖单一政策方向。关注美国对华核军控施压和印太军事部署升级带来的地缘风险，做好供应链备份和市场多元化布局。</p>
+                    </div>
+                </div>
+            </section>
+
+        </div><!-- end max-w-4xl -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-surface-900 dark:bg-surface-950 border-t border-surface-800 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center">
+                        <i class="fas fa-globe-americas text-white text-sm"></i>
+                    </div>
+                    <div>
+                        <div class="text-sm font-bold text-white">Supinfor Ltd.</div>
+                        <div class="text-xs text-surface-400" data-zh="智慧星光 · 区域国别洞察" data-en="Supinfor · Country Intelligence">智慧星光 · 区域国别洞察</div>
+                    </div>
+                </div>
+                <div class="text-xs text-surface-500 text-center sm:text-right">
+                    <div>&copy; 2026 Supinfor Ltd. All rights reserved.</div>
+                    <div class="mt-1" data-zh="本报告仅供内部参考，不构成投资建议" data-en="This report is for internal reference only and does not constitute investment advice">本报告仅供内部参考，不构成投资建议</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-primary-500 hover:bg-primary-600 text-white shadow-lg flex items-center justify-center transition-all no-print" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+    // ===== Theme Management =====
+    (function initTheme() {
+        const saved = localStorage.getItem('theme');
+        if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    })();
+
+    function toggleTheme() {
+        const isDark = document.documentElement.classList.toggle('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    }
+
+    // ===== Language Management =====
+    let currentLang = localStorage.getItem('lang') || 'zh';
+
+    function applyLanguage(lang) {
+        currentLang = lang;
+        localStorage.setItem('lang', lang);
+        const slider = document.getElementById('langSlider');
+        const label = document.getElementById('langLabel');
+        const alt = document.getElementById('langAlt');
+
+        if (lang === 'en') {
+            slider.style.left = 'auto';
+            slider.style.right = '2px';
+            slider.style.left = '';
+            label.textContent = 'EN';
+            alt.textContent = '中';
+            alt.style.left = '12px';
+            alt.style.right = 'auto';
+        } else {
+            slider.style.right = 'auto';
+            slider.style.left = '2px';
+            label.textContent = '中文';
+            alt.textContent = 'EN';
+            alt.style.right = '12px';
+            alt.style.left = 'auto';
+        }
+
+        document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+            const text = lang === 'en' ? el.getAttribute('data-en') : el.getAttribute('data-zh');
+            if (text) el.textContent = text;
+        });
+
+        document.documentElement.lang = lang === 'en' ? 'en' : 'zh-CN';
+    }
+
+    function toggleLanguage() {
+        applyLanguage(currentLang === 'zh' ? 'en' : 'zh');
+    }
+
+    // Initialize language on load
+    document.addEventListener('DOMContentLoaded', () => {
+        applyLanguage(currentLang);
+    });
+
+    // ===== Back to Top =====
+    const backToTopBtn = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 600) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    }, { passive: true });
+
+    // ===== Scroll Animations =====
+    const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.insight-card, article').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(card);
+        });
+    });
+
+    // ===== Smooth scroll for anchor links =====
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+
+    // ===== Navbar background on scroll =====
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow-sm');
+        } else {
+            navbar.classList.remove('shadow-sm');
+        }
+    }, { passive: true });
+    </script>
+</body>
+</html>
