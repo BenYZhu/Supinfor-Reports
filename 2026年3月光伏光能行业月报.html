@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026年3月 光伏光能行业情报月报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Fira+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --primary: #1E40AF;
+  --secondary: #3B82F6;
+  --accent: #D97706;
+  --bg: #F8FAFC;
+  --fg: #1E3A8A;
+  --muted: #E9EEF6;
+  --border: #DBEAFE;
+  --destructive: #DC2626;
+  --success: #16A34A;
+  --white: #FFFFFF;
+  --sidebar-w: 280px;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Fira Sans', system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* ── Sidebar ── */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: linear-gradient(180deg, #0F2557 0%, var(--primary) 100%);
+  color: #fff;
+  overflow-y: auto;
+  z-index: 100;
+  padding: 24px 0;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,.2) transparent;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(255,255,255,.2); border-radius: 2px; }
+
+.sidebar-logo {
+  padding: 0 20px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  margin-bottom: 16px;
+}
+.sidebar-logo .brand {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,.7);
+  text-transform: uppercase;
+}
+.sidebar-logo .report-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 8px;
+  line-height: 1.5;
+}
+
+.nav-section { padding: 0 12px; }
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: rgba(255,255,255,.7);
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .2s;
+  margin-bottom: 2px;
+}
+.nav-item:hover { background: rgba(255,255,255,.08); color: #fff; }
+.nav-item.active { background: rgba(255,255,255,.15); color: #fff; }
+.nav-icon {
+  width: 28px; height: 28px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  background: rgba(255,255,255,.1);
+}
+.nav-item.active .nav-icon { background: var(--accent); color: #fff; }
+
+/* ── Main ── */
+.main { margin-left: var(--sidebar-w); padding: 0; }
+
+/* ── Hero ── */
+.hero {
+  background: linear-gradient(135deg, #0F2557 0%, var(--primary) 50%, #1E3A8A 100%);
+  color: #fff;
+  padding: 80px 60px 60px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -20%;
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(217,119,6,.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -30%; left: -10%;
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(59,130,246,.1) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-content { position: relative; z-index: 1; max-width: 900px; }
+.hero-badge {
+  display: inline-block;
+  background: rgba(217,119,6,.2);
+  border: 1px solid rgba(217,119,6,.4);
+  color: #FCD34D;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 14px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+.hero h1 {
+  font-family: 'Fira Code', monospace;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 12px;
+}
+.hero .subtitle {
+  font-size: 18px;
+  font-weight: 300;
+  color: rgba(255,255,255,.8);
+  margin-bottom: 32px;
+}
+.hero .author {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  color: rgba(255,255,255,.5);
+  letter-spacing: 1px;
+}
+
+/* ── Content Area ── */
+.content-area { max-width: 1000px; margin: 0 auto; padding: 40px 60px 80px; }
+
+/* ── Section Header ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 56px 0 28px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid var(--border);
+}
+.section-header:first-child { margin-top: 0; }
+.section-num {
+  width: 48px; height: 48px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.section-header h2 {
+  font-family: 'Fira Code', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* ── Page Card ── */
+.page-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  transition: box-shadow .2s;
+}
+.page-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,.08); }
+
+.page-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--secondary);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.page-card h3 {
+  font-family: 'Fira Code', monospace;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fg);
+  line-height: 1.5;
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.insight-list { list-style: none; margin-bottom: 20px; }
+.insight-list li {
+  position: relative;
+  padding: 8px 0 8px 24px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.insight-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 16px;
+  width: 8px; height: 8px;
+  background: var(--secondary);
+  border-radius: 50%;
+}
+
+.key-data {
+  background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+  border-left: 4px solid var(--accent);
+  border-radius: 0 8px 8px 0;
+  padding: 14px 20px;
+  margin: 16px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #92400E;
+}
+.key-data::before {
+  content: 'KEY DATA';
+  display: block;
+  font-family: 'Fira Code', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.insight-extend {
+  background: var(--muted);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-style: italic;
+  color: #475569;
+  border-left: 3px solid var(--secondary);
+}
+
+/* ── Deep Insight Card ── */
+.deep-insight {
+  background: linear-gradient(135deg, #0F2557 0%, var(--primary) 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 36px;
+  margin-bottom: 24px;
+}
+.deep-insight-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.deep-insight-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.deep-insight-item {
+  background: rgba(255,255,255,.08);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+.deep-insight-item .di-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: flex; align-items: center; gap: 8px;
+}
+.di-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.di-dot.trend { background: var(--accent); }
+.di-dot.signal { background: var(--destructive); }
+.di-dot.future { background: var(--success); }
+.deep-insight-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,.85);
+}
+
+/* ── Executive Summary ── */
+.exec-summary { margin-bottom: 20px; }
+.exec-card {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.exec-card:nth-child(1) { border-left: 5px solid var(--primary); }
+.exec-card:nth-child(2) { border-left: 5px solid var(--accent); }
+.exec-card:nth-child(3) { border-left: 5px solid var(--destructive); }
+.exec-card:nth-child(4) { border-left: 5px solid var(--primary); }
+.exec-card:nth-child(5) { border-left: 5px solid var(--accent); }
+.exec-num {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  flex-shrink: 0;
+}
+.exec-card:nth-child(1) .exec-num { background: var(--primary); }
+.exec-card:nth-child(2) .exec-num { background: var(--accent); }
+.exec-card:nth-child(3) .exec-num { background: var(--destructive); }
+.exec-card:nth-child(4) .exec-num { background: var(--primary); }
+.exec-card:nth-child(5) .exec-num { background: var(--accent); }
+.exec-card p {
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 500;
+}
+
+/* ── Strategy Section ── */
+.strategy-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.strategy-num {
+  width: 52px; height: 52px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.strategy-content { flex: 1; }
+.strategy-badge {
+  display: inline-block;
+  background: var(--muted);
+  color: var(--primary);
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 12px;
+  border-radius: 20px;
+  margin-bottom: 10px;
+  letter-spacing: .5px;
+}
+.strategy-content p {
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* ── Footer ── */
+.footer {
+  background: linear-gradient(135deg, #0F2557 0%, var(--primary) 100%);
+  color: rgba(255,255,255,.6);
+  text-align: center;
+  padding: 40px 60px;
+  font-size: 13px;
+}
+.footer .footer-brand {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,.9);
+  margin-bottom: 8px;
+}
+.footer .footer-note {
+  font-size: 12px;
+  margin-top: 12px;
+  color: rgba(255,255,255,.4);
+}
+
+/* ── KPI Dashboard ── */
+.kpi-dashboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.kpi-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+  transition: transform .2s, box-shadow .2s;
+  position: relative;
+  overflow: hidden;
+}
+.kpi-card:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(0,0,0,.1); }
+.kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+}
+.kpi-card:nth-child(1)::before { background: var(--primary); }
+.kpi-card:nth-child(2)::before { background: var(--destructive); }
+.kpi-card:nth-child(3)::before { background: var(--success); }
+.kpi-card:nth-child(4)::before { background: var(--accent); }
+.kpi-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 22px;
+}
+.kpi-card:nth-child(1) .kpi-icon { background: rgba(30,64,175,.1); color: var(--primary); }
+.kpi-card:nth-child(2) .kpi-icon { background: rgba(220,38,38,.1); color: var(--destructive); }
+.kpi-card:nth-child(3) .kpi-icon { background: rgba(22,163,74,.1); color: var(--success); }
+.kpi-card:nth-child(4) .kpi-icon { background: rgba(217,119,6,.1); color: var(--accent); }
+.kpi-value {
+  font-family: 'Fira Code', monospace;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.kpi-card:nth-child(1) .kpi-value { color: var(--primary); }
+.kpi-card:nth-child(2) .kpi-value { color: var(--destructive); }
+.kpi-card:nth-child(3) .kpi-value { color: var(--success); }
+.kpi-card:nth-child(4) .kpi-value { color: var(--accent); }
+.kpi-label {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+.kpi-sub {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  color: #94A3B8;
+  margin-top: 6px;
+}
+
+/* ── Data Tables ── */
+.viz-table-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.viz-table-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.viz-table-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+.viz-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.viz-table thead th {
+  background: linear-gradient(135deg, #0F2557, var(--primary));
+  color: #fff;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 16px;
+  text-align: left;
+  letter-spacing: .5px;
+}
+.viz-table thead th:first-child { border-radius: 8px 0 0 0; }
+.viz-table thead th:last-child { border-radius: 0 8px 0 0; }
+.viz-table tbody td {
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.viz-table tbody tr:nth-child(even) { background: #F8FAFC; }
+.viz-table tbody tr:hover { background: #EFF6FF; }
+.viz-table .num { font-family: 'Fira Code', monospace; font-weight: 600; }
+.viz-table .highlight { color: var(--destructive); font-weight: 600; }
+.viz-table .positive { color: var(--success); font-weight: 600; }
+
+/* ── CSS Bar Chart (Horizontal) ── */
+.bar-chart-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.bar-chart-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.bar-chart-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.bar-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+  gap: 12px;
+}
+.bar-label {
+  width: 100px;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--fg);
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 28px;
+  background: var(--muted);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: width .8s ease;
+  position: relative;
+}
+.bar-fill-primary { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.bar-fill-accent { background: linear-gradient(90deg, var(--accent), #F59E0B); }
+.bar-fill-success { background: linear-gradient(90deg, var(--success), #22C55E); }
+.bar-fill-destructive { background: linear-gradient(90deg, var(--destructive), #EF4444); }
+.bar-fill-purple { background: linear-gradient(90deg, #7C3AED, #A78BFA); }
+.bar-val {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  white-space: nowrap;
+}
+.bar-val-outside {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-left: 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── CSS Column Chart ── */
+.col-chart-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.col-chart-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.col-chart-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--destructive);
+  border-radius: 2px;
+}
+.col-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 48px;
+  height: 240px;
+  padding: 0 40px;
+  border-bottom: 2px solid var(--border);
+  margin-bottom: 16px;
+  position: relative;
+}
+.col-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.col-bar {
+  width: 80px;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding-top: 10px;
+  transition: height .8s ease;
+  position: relative;
+}
+.col-bar-2024 { background: linear-gradient(180deg, var(--secondary), var(--primary)); }
+.col-bar-2025 { background: linear-gradient(180deg, #EF4444, var(--destructive)); }
+.col-bar-val {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+}
+.col-bar-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--fg);
+  margin-top: 8px;
+}
+.col-chart-badge {
+  display: inline-block;
+  background: rgba(220,38,38,.1);
+  color: var(--destructive);
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* ── Timeline ── */
+.timeline-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.timeline-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.timeline-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--secondary);
+  border-radius: 2px;
+}
+.timeline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 20px 0;
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 40px; right: 40px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--destructive));
+  transform: translateY(-50%);
+  border-radius: 2px;
+}
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  flex: 1;
+}
+.timeline-dot {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 3px var(--primary);
+  margin-bottom: 12px;
+}
+.timeline-node:nth-child(1) .timeline-dot { background: var(--primary); box-shadow: 0 0 0 3px var(--primary); }
+.timeline-node:nth-child(2) .timeline-dot { background: var(--accent); box-shadow: 0 0 0 3px var(--accent); }
+.timeline-node:nth-child(3) .timeline-dot { background: var(--destructive); box-shadow: 0 0 0 3px var(--destructive); }
+.timeline-val {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.timeline-node:nth-child(1) .timeline-val { color: var(--primary); }
+.timeline-node:nth-child(2) .timeline-val { color: var(--accent); }
+.timeline-node:nth-child(3) .timeline-val { color: var(--destructive); }
+.timeline-desc {
+  font-size: 12px;
+  color: #64748B;
+  text-align: center;
+  max-width: 120px;
+}
+.timeline-arrow {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  color: #94A3B8;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  margin: 0 -8px;
+  margin-bottom: 28px;
+}
+
+/* ── Progress Bars ── */
+.progress-chart-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.progress-chart-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.progress-chart-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--success);
+  border-radius: 2px;
+}
+.progress-item {
+  margin-bottom: 16px;
+}
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+.progress-name {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--fg);
+}
+.progress-val {
+  font-family: 'Fira Code', monospace;
+  font-size: 13px;
+  font-weight: 700;
+}
+.progress-track {
+  height: 22px;
+  background: var(--muted);
+  border-radius: 11px;
+  overflow: hidden;
+  position: relative;
+}
+.progress-fill {
+  height: 100%;
+  border-radius: 11px;
+  transition: width .8s ease;
+  position: relative;
+}
+.progress-fill::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,.2) 50%, transparent 100%);
+  border-radius: 11px;
+}
+.pf-blue { background: linear-gradient(90deg, var(--primary), var(--secondary)); }
+.pf-teal { background: linear-gradient(90deg, #0D9488, #14B8A6); }
+.pf-green { background: linear-gradient(90deg, var(--success), #22C55E); }
+.pf-amber { background: linear-gradient(90deg, var(--accent), #F59E0B); }
+.pf-red { background: linear-gradient(90deg, var(--destructive), #EF4444); }
+
+/* ── Flow Chart ── */
+.flow-chart-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.flow-chart-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.flow-chart-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--destructive);
+  border-radius: 2px;
+}
+.flow-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.flow-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 16px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border-radius: 12px;
+  min-width: 130px;
+  position: relative;
+}
+.flow-step-num {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(255,255,255,.2);
+  padding: 2px 10px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.flow-step-text {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.flow-arrow {
+  font-family: 'Fira Code', monospace;
+  font-size: 24px;
+  color: var(--secondary);
+  padding: 0 8px;
+  flex-shrink: 0;
+}
+
+/* ── Quadrant Chart ── */
+.quadrant-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.quadrant-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.quadrant-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+.quadrant-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3px;
+  background: var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+.quadrant-cell {
+  background: var(--white);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.quadrant-cell:nth-child(1) { border-left: 4px solid var(--primary); }
+.quadrant-cell:nth-child(2) { border-left: 4px solid var(--accent); }
+.quadrant-cell:nth-child(3) { border-left: 4px solid var(--success); }
+.quadrant-cell:nth-child(4) { border-left: 4px solid var(--destructive); }
+.quadrant-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+.quadrant-cell:nth-child(1) .quadrant-label { color: var(--primary); }
+.quadrant-cell:nth-child(2) .quadrant-label { color: var(--accent); }
+.quadrant-cell:nth-child(3) .quadrant-label { color: var(--success); }
+.quadrant-cell:nth-child(4) .quadrant-label { color: var(--destructive); }
+.quadrant-text {
+  font-size: 13px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* ── Value Chain Comparison ── */
+.chain-compare-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.chain-compare-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.chain-compare-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--success);
+  border-radius: 2px;
+}
+.chain-row {
+  margin-bottom: 16px;
+}
+.chain-label {
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.chain-label-old { background: var(--muted); color: #64748B; }
+.chain-label-new { background: rgba(22,163,74,.1); color: var(--success); }
+.chain-nodes {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.chain-node {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.chain-node-old { background: var(--muted); color: #64748B; border: 1px solid var(--border); }
+.chain-node-new { background: linear-gradient(135deg, var(--primary), var(--secondary)); color: #fff; }
+.chain-arrow-sm {
+  font-family: 'Fira Code', monospace;
+  font-size: 16px;
+  color: #94A3B8;
+  padding: 0 4px;
+}
+
+/* ── Stacked Bar (Tariff) ── */
+.tariff-chart-wrap {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.tariff-chart-title {
+  font-family: 'Fira Code', monospace;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.tariff-chart-title::before {
+  content: '';
+  width: 4px; height: 18px;
+  background: var(--destructive);
+  border-radius: 2px;
+}
+.tariff-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+.tariff-country {
+  width: 130px;
+  font-family: 'Fira Code', monospace;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--fg);
+  text-align: right;
+  flex-shrink: 0;
+}
+.tariff-bar-track {
+  flex: 1;
+  height: 32px;
+  background: var(--muted);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.tariff-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 10px;
+  transition: width .8s ease;
+}
+.tariff-rate {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+}
+.tariff-status {
+  font-family: 'Fira Code', monospace;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+.tariff-status-high { background: rgba(220,38,38,.1); color: var(--destructive); }
+.tariff-status-mid { background: rgba(217,119,6,.1); color: var(--accent); }
+.tariff-status-exist { background: rgba(30,64,175,.1); color: var(--primary); }
+
+/* ── Responsive additions ── */
+@media (max-width: 768px) {
+  .kpi-dashboard { grid-template-columns: repeat(2, 1fr); }
+  .timeline { flex-direction: column; gap: 16px; }
+  .timeline::before { display: none; }
+  .timeline-arrow { transform: rotate(90deg); }
+  .flow-steps { flex-direction: column; }
+  .flow-arrow { transform: rotate(90deg); }
+  .quadrant-grid { grid-template-columns: 1fr; }
+  .col-chart { gap: 24px; height: 180px; }
+  .col-bar { width: 60px; }
+  .chain-nodes { flex-wrap: wrap; }
+}
+
+/* ── Responsive ── */
+@media (max-width: 1024px) {
+  .sidebar { width: 240px; }
+  :root { --sidebar-w: 240px; }
+  .hero { padding: 60px 40px 48px; }
+  .content-area { padding: 32px 40px 60px; }
+}
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .main { margin-left: 0; }
+  .hero { padding: 48px 24px 36px; }
+  .hero h1 { font-size: 24px; }
+  .content-area { padding: 24px 20px 48px; }
+  .deep-insight-grid { grid-template-columns: 1fr; }
+  .exec-card, .strategy-card { flex-direction: column; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ Sidebar ═══ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <div class="brand">SUPINFOR LTD</div>
+    <div class="report-title">2026年3月<br>光伏光能行业情报月报</div>
+  </div>
+  <div class="nav-section">
+    <a href="#hero" class="nav-item active"><span class="nav-icon">S</span>执行摘要</a>
+    <a href="#ch1" class="nav-item"><span class="nav-icon">01</span>资本布局与资源整合</a>
+    <a href="#ch2" class="nav-item"><span class="nav-icon">02</span>企业经营与战略调整</a>
+    <a href="#ch3" class="nav-item"><span class="nav-icon">03</span>行业监管与合规环境</a>
+    <a href="#ch4" class="nav-item"><span class="nav-icon">04</span>技术突破与技术路线</a>
+    <a href="#ch5" class="nav-item"><span class="nav-icon">05</span>产业链与供应链变化</a>
+    <a href="#ch6" class="nav-item"><span class="nav-icon">06</span>政策与监管环境</a>
+    <a href="#ch7" class="nav-item"><span class="nav-icon">07</span>投资与产业合作</a>
+    <a href="#ch8" class="nav-item"><span class="nav-icon">08</span>行业风险警示</a>
+    <a href="#trends" class="nav-item"><span class="nav-icon">T</span>行业未来趋势</a>
+    <a href="#strategy" class="nav-item"><span class="nav-icon">R</span>战略建议</a>
+  </div>
+</nav>
+
+<!-- ═══ Main Content ═══ -->
+<div class="main">
+
+<!-- ── Hero ── -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <div class="hero-badge">MONTHLY INTELLIGENCE REPORT</div>
+    <h1>2026年3月 光伏光能行业情报月报</h1>
+    <div class="subtitle">咨询级洞察摘要</div>
+    <div class="author">SUPINFOR LTD</div>
+  </div>
+</section>
+
+<div class="content-area">
+
+<!-- ═══ Executive Summary ═══ -->
+<div class="section-header" id="exec-summary">
+  <div class="section-num">ES</div>
+  <h2>Executive Summary 执行摘要</h2>
+</div>
+
+<div class="exec-summary">
+  <div class="exec-card">
+    <div class="exec-num">1</div>
+    <p><strong>全球光伏贸易壁垒全面升级，美国对东南亚三国加征最高143%反补贴税并启动TOPCon 337调查</strong>：中国取消光伏出口退税叠加美国关税围堵，全球光伏供应链正加速区域化重构。</p>
+  </div>
+  <div class="exec-card">
+    <div class="exec-num">2</div>
+    <p><strong>中国七大光伏面板企业2025财年全部预亏，行业产能过剩进入深度出清阶段</strong>：亏损总额最高达392亿元，组件价格跌至每瓦9美分，监管层出手规范"内卷式"无序竞争。</p>
+  </div>
+  <div class="exec-card">
+    <div class="exec-num">3</div>
+    <p><strong>头部企业加速美国本土制造布局，First Solar、Canadian Solar、Qcells竞逐北美产能高地</strong>：美国本土光伏制造投资超百亿美元，从组件到电池的全产业链本地化成为核心战略。</p>
+  </div>
+  <div class="exec-card">
+    <div class="exec-num">4</div>
+    <p><strong>TOPCon技术占据全球出货量95%，叠层电池国际标准竞争加剧</strong>：天合光能实现32.6%效率叠层组件量产，中欧韩在IEC标准制定方向上出现分歧。</p>
+  </div>
+  <div class="exec-card">
+    <div class="exec-num">5</div>
+    <p><strong>西班牙大停电暴露光伏逆变器安全隐患，欧盟呼吁加强中国产逆变器监管</strong>：70%逆变器来自中国厂商，200GW装机面临远程操控安全风险审查。</p>
+  </div>
+</div>
+
+<!-- ═══ KPI Dashboard ═══ -->
+<div class="kpi-dashboard">
+  <div class="kpi-card">
+    <div class="kpi-icon">📦</div>
+    <div class="kpi-value">536 GW</div>
+    <div class="kpi-label">全球光伏组件出货</div>
+    <div class="kpi-sub">2025年全年</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">📉</div>
+    <div class="kpi-value">392 亿</div>
+    <div class="kpi-label">中国七大企业亏损</div>
+    <div class="kpi-sub">2025财年预亏总额</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">🏭</div>
+    <div class="kpi-value">>100 亿</div>
+    <div class="kpi-label">美国本土制造投资</div>
+    <div class="kpi-sub">美元 · 全产业链</div>
+  </div>
+  <div class="kpi-card">
+    <div class="kpi-icon">⚡</div>
+    <div class="kpi-value">95%</div>
+    <div class="kpi-label">TOPCon 出货占比</div>
+    <div class="kpi-sub">头部供应商</div>
+  </div>
+</div>
+
+<!-- ═══ 第一章：资本布局与资源整合 ═══ -->
+<div class="section-header" id="ch1">
+  <div class="section-num">01</div>
+  <h2>资本布局与资源整合</h2>
+</div>
+
+<!-- 第1页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 01</div>
+  <h3>道达尔能源设定十年10GW光伏装机目标，传统油气巨头加速清洁能源转型</h3>
+  <ul class="insight-list">
+    <li>道达尔设定10年10GW光伏装机目标，计划每年实现5GW装机</li>
+    <li>美国分布式光伏市占率达15%，超过特斯拉，年安装500MW</li>
+    <li>与Eren成立合资公司推进2.7GW光伏+BESS绿氢项目</li>
+    <li>与安联达成5亿欧元德国储能合作，出售789MW/1628MWh在建BESS项目50%股权</li>
+  </ul>
+  <div class="key-data">道达尔2011年成为SunPower大股东，2015年建成加州750MW全球最大光伏电站</div>
+  <div class="insight-extend">传统油气巨头正将光伏与储能作为能源转型的核心赛道，其资本实力与全球化运营能力将加速改变光伏行业竞争格局。</div>
+</div>
+
+<!-- 第2页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 02</div>
+  <h3>中国光伏企业密集斩获海外大额订单，出海战略从产品输出转向生态输出</h3>
+  <ul class="insight-list">
+    <li>隆基签署600MWh储能+100MW组件+500MW BC组件多笔订单</li>
+    <li>晶科签署澳大利亚2GW组件订单，交付雅典123.8MWh储能项目</li>
+    <li>通威与欧洲合作伙伴签署共500MW组件协议，拓展欧洲市场</li>
+    <li>JA Solar与印尼Triputra签署采购、合资及人才培养全方位合作</li>
+  </ul>
+  <div class="key-data">Aiko Solar斩获中东非300MW ABC组件订单，新技术路线加速海外渗透</div>
+  <div class="insight-extend">中国光伏企业的海外布局正从单一产品出口升级为"组件+储能+合资+人才"的生态化输出模式，深度绑定海外市场。</div>
+</div>
+
+<!-- 第3页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 03</div>
+  <h3>全球光伏制造产能加速扩张，美国本土化与东南亚布局双线并进</h3>
+  <ul class="insight-list">
+    <li>First Solar路易斯安那投建11亿美元AI光伏工厂，南卡新厂年产能2.4GW</li>
+    <li>Canadian Solar印第安纳州HJT电池一期2.1GW，二期扩至6.3GW，德州组件扩至10GW</li>
+    <li>Qcells乔治亚州两厂年产能达8.4GW，总投资25亿美元构建美国全产业链</li>
+    <li>阳光电源投资2.3亿欧元在波兰建厂，年产能20GW逆变器+12.5GWh储能</li>
+  </ul>
+  <div class="key-data">通威拟收购青海丽豪清能100%股权，完善高纯晶硅产能布局</div>
+  <div class="insight-extend">光伏制造正从"中国集中生产+全球出口"转向"多区域本地化制造"新范式，贸易壁垒与政策激励共同驱动产能全球化再配置。</div>
+</div>
+
+<!-- ═══ VIZ: 全球主要光伏企业美国本土产能布局对比 ═══ -->
+<div class="viz-table-wrap">
+  <div class="viz-table-title">全球主要光伏企业美国/欧洲本土产能布局对比</div>
+  <table class="viz-table">
+    <thead>
+      <tr><th>企业</th><th>工厂位置</th><th>产能 (GW)</th><th>投资额</th><th>产品类型</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>First Solar</td><td>路易斯安那 + 南卡</td><td class="num">2.4+</td><td class="num">$11亿</td><td>薄膜组件</td></tr>
+      <tr><td>Canadian Solar</td><td>印第安纳 + 德州</td><td class="num">6.3 + 10</td><td class="num">—</td><td>HJT电池 + 组件</td></tr>
+      <tr><td>Qcells</td><td>乔治亚州</td><td class="num">8.4</td><td class="num">$25亿</td><td>全产业链</td></tr>
+      <tr><td>阳光电源</td><td>波兰</td><td class="num">20GW 逆变器</td><td class="num">€2.3亿</td><td>逆变器 + 储能</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ═══ VIZ: 中国光伏企业3月海外订单规模 ═══ -->
+<div class="bar-chart-wrap">
+  <div class="bar-chart-title">中国光伏企业 2026年3月 海外订单规模</div>
+  <div class="bar-item">
+    <div class="bar-label">晶科</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-primary" style="width: 88%;">
+        <span class="bar-val">2GW组件 + 123.8MWh储能</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">隆基</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-accent" style="width: 75%;">
+        <span class="bar-val">600MWh储能 + 600MW组件</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">通威</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-success" style="width: 40%;">
+        <span class="bar-val">500MW 组件</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">Aiko</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-purple" style="width: 28%;">
+        <span class="bar-val">300MW ABC组件</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">JA Solar</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-destructive" style="width: 20%;"></div>
+    </div>
+    <div class="bar-val-outside">合资合作</div>
+  </div>
+</div>
+
+<!-- 第4页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 04</div>
+  <h3>光伏行业并购整合加速，技术资产争夺与流动性压力并存</h3>
+  <ul class="insight-list">
+    <li>Swift Solar收购破产Meyer Burger德国工厂设备与知识产权，整合异质结技术用于叠层电池</li>
+    <li>GameChange Energy收购Terrasmart，拓展光伏BOS一站式解决方案</li>
+    <li>欧洲本土光伏制造遭遇挑战，Meyer Burger破产资产被海外企业收购</li>
+    <li>协鑫集团拟发行不超5亿美元三年期美元债缓解流动性压力</li>
+  </ul>
+  <div class="key-data">Meyer Burger破产标志欧洲本土光伏制造的阶段性失败</div>
+  <div class="insight-extend">行业下行周期中，技术资产的价值重估与并购整合正在加速，拥有核心技术IP的破产企业成为头部玩家的收购标的。</div>
+</div>
+
+<!-- 第5页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第一章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏资本布局呈现"美国本土化+全球多点制造+技术并购"三大主线</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>传统能源巨头入场与中国企业出海正在重塑全球光伏竞争版图</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>拥有本土制造能力与核心技术IP的企业将在贸易壁垒时代获得结构性优势</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第二章：企业经营与战略调整 ═══ -->
+<div class="section-header" id="ch2">
+  <div class="section-num">02</div>
+  <h2>企业经营与战略调整</h2>
+</div>
+
+<!-- 第6页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 06</div>
+  <h3>Canadian Solar全年营收56亿美元但Q4亏损，战略重心从出货量转向利润率与储能</h3>
+  <ul class="insight-list">
+    <li>Q4营收12.2亿美元同比降20%，净亏损8633万美元，不及市场预期</li>
+    <li>全年组件出货24.3GW，美国市场8.1GW创纪录，储能出货7.8GWh</li>
+    <li>储能在手订单达36亿美元，成为利润增长新引擎</li>
+    <li>印第安纳州HJT电池工厂一期预计2026年4月试产</li>
+  </ul>
+  <div class="key-data">Q1营收指引9-11亿美元，毛利率13%-15%，财报后股价最大跌幅超28%</div>
+  <div class="insight-extend">光伏组件利润率持续承压背景下，储能业务正成为头部企业维持盈利能力的关键支撑。</div>
+</div>
+
+<!-- ═══ VIZ: Canadian Solar 关键财务数据 ═══ -->
+<div class="viz-table-wrap">
+  <div class="viz-table-title">Canadian Solar 关键财务数据</div>
+  <table class="viz-table">
+    <thead>
+      <tr><th>指标</th><th>Q4 2025</th><th>同比变化</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>营收</td><td class="num">$12.2亿</td><td class="highlight">-20%</td></tr>
+      <tr><td>净利润</td><td class="num">-$8633万</td><td class="highlight">转亏</td></tr>
+      <tr><td>全年组件出货</td><td class="num">24.3 GW</td><td class="num">—</td></tr>
+      <tr><td>美国市场出货</td><td class="num">8.1 GW</td><td class="positive">创纪录</td></tr>
+      <tr><td>储能出货</td><td class="num">7.8 GWh</td><td class="num">—</td></tr>
+      <tr><td>储能在手订单</td><td class="num">$36亿</td><td class="positive">增长引擎</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 第7页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 07</div>
+  <h3>中国七大光伏企业2025财年全部预亏，产能过剩导致行业进入深度出清期</h3>
+  <ul class="insight-list">
+    <li>7家主要企业亏损总额最高达392亿元，较2024年270亿元进一步扩大</li>
+    <li>2025年底光伏面板价格约每瓦9美分，全年基本无变化</li>
+    <li>2025年1-10月中国光伏面板产量达514GW，同比增长13.5%</li>
+    <li>协鑫新能源净亏损约11亿元，信义光能计提减值23.2亿元</li>
+  </ul>
+  <div class="key-data">工信部2025年7月已表态治理低价无序竞争，但未扭转行业颓势</div>
+  <div class="insight-extend">中国光伏行业正经历史上最严峻的产能过剩周期，行业出清速度将取决于政策干预力度与企业自身的现金流韧性。</div>
+</div>
+
+<!-- ═══ VIZ: 中国七大光伏企业亏损对比 ═══ -->
+<div class="col-chart-wrap">
+  <div class="col-chart-title">中国七大光伏企业 2024 vs 2025 年亏损对比</div>
+  <div class="col-chart">
+    <div class="col-group">
+      <div class="col-bar col-bar-2024" style="height: 155px;">
+        <span class="col-bar-val">270亿</span>
+      </div>
+      <div class="col-bar-label">2024年</div>
+    </div>
+    <div class="col-group">
+      <div class="col-bar col-bar-2025" style="height: 220px;">
+        <span class="col-bar-val">392亿</span>
+      </div>
+      <div class="col-bar-label">2025年</div>
+    </div>
+  </div>
+  <div style="text-align: center;">
+    <span class="col-chart-badge">↑ 增幅 45% · 亏损持续扩大</span>
+  </div>
+</div>
+
+<!-- 第8页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 08</div>
+  <h3>First Solar营收增长但EPS不及预期，高管减持与法律风险引发市场担忧</h3>
+  <ul class="insight-list">
+    <li>Q4营收16.8亿美元同比增11.1%，但EPS 4.84美元不及预期5.22美元</li>
+    <li>路易斯安那AI赋能工厂已投产，南卡新厂预计2026年下半年运营</li>
+    <li>多名高管进行减持操作，机构持仓占比达92.08%</li>
+    <li>Pomerantz LLP发起投资者调查，带来潜在法律风险</li>
+  </ul>
+  <div class="key-data">分析师共识目标价约249.65美元，近一个月股价下跌超12%</div>
+  <div class="insight-extend">即便是美国本土光伏龙头也面临业绩兑现压力，政策不确定性与法律风险正在侵蚀市场信心。</div>
+</div>
+
+<!-- 第9页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 09</div>
+  <h3>SolarEdge连续三季超预期但CFO短期离任，管理层稳定性成市场关注焦点</h3>
+  <ul class="insight-list">
+    <li>2025年营收同比增长31.4%，毛利率回升至16.6%，Bank of America上调评级</li>
+    <li>CFO Asaf Alperovitz任职仅一年即将离任，为近两年第二位短期离任CFO</li>
+    <li>公司重申Q1营收指引2.9-3.2亿美元，毛利率20%-24%</li>
+    <li>聚焦Nexis平台、储能、EV充电、电网服务等新增长引擎</li>
+  </ul>
+  <div class="key-data">市场预计2028年营收将达16亿美元，净利润1180万美元</div>
+  <div class="insight-extend">光伏逆变器企业正从单一硬件销售转向平台化能源服务，但管理层频繁变动将影响战略执行的连续性。</div>
+</div>
+
+<!-- 第10页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第二章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏企业盈利模式正从"组件出货量驱动"转向"储能+服务+本土制造"多元驱动</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>中国企业深度亏损与美国企业业绩承压并存，行业进入全球性盈利困境</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>储能业务占比与本土制造能力将成为区分企业长期竞争力的关键指标</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第三章：行业监管与合规环境 ═══ -->
+<div class="section-header" id="ch3">
+  <div class="section-num">03</div>
+  <h2>行业监管与合规环境</h2>
+</div>
+
+<!-- 第11页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 11</div>
+  <h3>美国对东南亚三国光伏产品加征最高143%反补贴税，全球贸易壁垒全面升级</h3>
+  <ul class="insight-list">
+    <li>对印度、印尼、老挝光伏产品征收临时反补贴税，税率最高达143.3%</li>
+    <li>此前已对马来西亚、越南等国光伏产品征收高额关税</li>
+    <li>涉及三国2025年45亿美元光伏产品进口额</li>
+    <li>最终裁决预计2026年7月出炉，后续还将调查低价倾销行为</li>
+  </ul>
+  <div class="key-data">2024年印度对美出口2.29GW太阳能组件，价值约7.93亿美元</div>
+  <div class="insight-extend">美国正构建全方位的光伏进口关税壁垒，东南亚作为中国光伏产能"中转站"的模式面临根本性挑战。</div>
+</div>
+
+<!-- ═══ VIZ: 美国光伏关税壁垒覆盖范围 ═══ -->
+<div class="tariff-chart-wrap">
+  <div class="tariff-chart-title">美国光伏关税壁垒覆盖范围 — 各国/地区税率</div>
+  <div class="tariff-item">
+    <div class="tariff-country">印度/印尼/老挝</div>
+    <div class="tariff-bar-track">
+      <div class="tariff-bar-fill" style="width: 95%; background: linear-gradient(90deg, var(--destructive), #EF4444);">
+        <span class="tariff-rate">最高 143%</span>
+      </div>
+    </div>
+    <span class="tariff-status tariff-status-high">新征</span>
+  </div>
+  <div class="tariff-item">
+    <div class="tariff-country">马来西亚</div>
+    <div class="tariff-bar-track">
+      <div class="tariff-bar-fill" style="width: 65%; background: linear-gradient(90deg, var(--accent), #F59E0B);">
+        <span class="tariff-rate">高额关税</span>
+      </div>
+    </div>
+    <span class="tariff-status tariff-status-mid">已征</span>
+  </div>
+  <div class="tariff-item">
+    <div class="tariff-country">越南</div>
+    <div class="tariff-bar-track">
+      <div class="tariff-bar-fill" style="width: 60%; background: linear-gradient(90deg, var(--accent), #F59E0B);">
+        <span class="tariff-rate">高额关税</span>
+      </div>
+    </div>
+    <span class="tariff-status tariff-status-mid">已征</span>
+  </div>
+  <div class="tariff-item">
+    <div class="tariff-country">中国（直接）</div>
+    <div class="tariff-bar-track">
+      <div class="tariff-bar-fill" style="width: 50%; background: linear-gradient(90deg, var(--primary), var(--secondary));">
+        <span class="tariff-rate">已有关税</span>
+      </div>
+    </div>
+    <span class="tariff-status tariff-status-exist">长期</span>
+  </div>
+</div>
+
+<!-- 第12页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 12</div>
+  <h3>美国ITC启动TOPCon 337调查，中国主流光伏技术路线面临知识产权围堵</h3>
+  <ul class="insight-list">
+    <li>First Solar等企业投诉晶科、天合、Canadian Solar等厂商TOPCon产品侵权</li>
+    <li>ITC公开征求公众意见，若认定侵权将发布排除令禁止产品入美</li>
+    <li>美国贸易法院同期驳回天合光能关税规避诉讼，强化执法力度</li>
+    <li>该调查将对全球TOPCon光伏产品贸易格局产生重要影响</li>
+  </ul>
+  <div class="key-data">TOPCon技术占全球头部供应商出货量近95%</div>
+  <div class="insight-extend">知识产权正成为光伏贸易战的新武器，337调查若成立将对中国光伏企业的美国市场准入构成系统性威胁。</div>
+</div>
+
+<!-- 第13页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 13</div>
+  <h3>中国取消光伏出口退税，倒逼企业加速海外产能布局与供应链全球化</h3>
+  <ul class="insight-list">
+    <li>自2026年4月1日起取消光伏产品增值税出口退税，此前已从13%下调至9%</li>
+    <li>行业协会认为有助于推动海外市场价格回归理性、降低贸易摩擦风险</li>
+    <li>政策倒逼企业告别政策依赖，加快海外产能布局</li>
+    <li>政策生效初期行业出口整体保持平稳，硅料价格持续下跌</li>
+  </ul>
+  <div class="key-data">市场监管总局同步发文规范光伏行业"内卷式"无序竞争</div>
+  <div class="insight-extend">出口退税取消与反内卷政策双管齐下，标志着中国光伏产业政策从"规模扩张"转向"高质量发展"。</div>
+</div>
+
+<!-- ═══ VIZ: 中国光伏出口退税政策调整时间线 ═══ -->
+<div class="timeline-wrap">
+  <div class="timeline-title">中国光伏出口退税政策调整时间线</div>
+  <div class="timeline">
+    <div class="timeline-node">
+      <div class="timeline-dot"></div>
+      <div class="timeline-val">13%</div>
+      <div class="timeline-desc">原始退税率<br>长期执行</div>
+    </div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-node">
+      <div class="timeline-dot"></div>
+      <div class="timeline-val">9%</div>
+      <div class="timeline-desc">下调退税率<br>2025年调整</div>
+    </div>
+    <div class="timeline-arrow">→</div>
+    <div class="timeline-node">
+      <div class="timeline-dot"></div>
+      <div class="timeline-val">0%</div>
+      <div class="timeline-desc">完全取消<br>2026年4月起</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第14页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 14</div>
+  <h3>西班牙大停电暴露光伏逆变器安全隐患，欧盟加速推进能源基础设施安全审查</h3>
+  <ul class="insight-list">
+    <li>2025年4月西班牙与葡萄牙发生欧洲近20年最严重大停电</li>
+    <li>直接诱因为光伏、风电逆变器引发的converter-induced振荡</li>
+    <li>西班牙70%光伏逆变器来自中国厂商，欧盟200GW装机使用中国产逆变器</li>
+    <li>欧洲光伏行业协会警告存在远程操控安全风险，呼吁加强监管</li>
+  </ul>
+  <div class="key-data">事故导致2500MW可再生能源机组脱网，引发全国大范围断电</div>
+  <div class="insight-extend">光伏逆变器的网络安全与电网稳定性问题正从技术议题上升为地缘政治议题，中国逆变器厂商面临欧洲市场准入收紧风险。</div>
+</div>
+
+<!-- 第15页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 15</div>
+  <h3>多国密集调整光伏政策，补贴退坡与贸易保护成全球主旋律</h3>
+  <ul class="insight-list">
+    <li>德国拟取消私人光伏上网电价补贴，短期反而推动抢装潮</li>
+    <li>意大利推出多项光伏激励政策，欧盟产组件可获最高150%加速折旧</li>
+    <li>印度建议延长马来西亚太阳能玻璃反补贴税五年</li>
+    <li>泰国推出光伏系统税收减免，商业主体最高可获150%投资成本扣除</li>
+  </ul>
+  <div class="key-data">法国光伏并网申请积压3000MW，仅220MW完成并网</div>
+  <div class="insight-extend">全球光伏政策正呈现"补贴退坡+本土保护+合规门槛提升"的三重趋势，企业需建立多市场政策跟踪与合规能力。</div>
+</div>
+
+<!-- 第16页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第三章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏贸易壁垒从关税扩展至知识产权、安全审查、出口退税等多维度</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>美国337调查与欧盟逆变器安全审查构成对中国光伏企业的"双线围堵"</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>合规能力与本土化制造将成为光伏企业全球化运营的基本门槛</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第四章：技术突破与技术路线 ═══ -->
+<div class="section-header" id="ch4">
+  <div class="section-num">04</div>
+  <h2>技术突破与技术路线</h2>
+</div>
+
+<!-- 第17页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 17</div>
+  <h3>TOPCon技术占据全球出货95%，叠层电池国际标准竞争进入关键博弈期</h3>
+  <ul class="insight-list">
+    <li>2025年全球光伏组件出货536GW，TOPCon占头部供应商出货量近95%</li>
+    <li>天合光能实现32.6%效率叠层组件量产，与牛津PV合作取得重大突破</li>
+    <li>IEC TC82将于2026年4月讨论叠层电池寿命测试、效率认证等标准</li>
+    <li>中国企业侧重效率标准，欧美韩企业侧重商用面积与可靠性标准</li>
+  </ul>
+  <div class="key-data">PVD工艺可规避LPCVD/PECVD有毒气体问题，且可升级至叠层电池生产</div>
+  <div class="insight-extend">下一代光伏技术的竞争已从实验室效率转向国际标准话语权争夺，标准制定方向将决定未来十年的技术路线与市场格局。</div>
+</div>
+
+<!-- ═══ VIZ: 光伏电池技术效率对比 ═══ -->
+<div class="progress-chart-wrap">
+  <div class="progress-chart-title">光伏电池技术效率对比</div>
+  <div class="progress-item">
+    <div class="progress-header">
+      <span class="progress-name">TOPCon</span>
+      <span class="progress-val" style="color: var(--primary);">~26%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill pf-blue" style="width: 55%;"></div>
+    </div>
+  </div>
+  <div class="progress-item">
+    <div class="progress-header">
+      <span class="progress-name">HJT（异质结）</span>
+      <span class="progress-val" style="color: #0D9488;">~27%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill pf-teal" style="width: 57%;"></div>
+    </div>
+  </div>
+  <div class="progress-item">
+    <div class="progress-header">
+      <span class="progress-name">叠层电池（天合光能）</span>
+      <span class="progress-val" style="color: var(--success);">32.6%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill pf-green" style="width: 69%;"></div>
+    </div>
+  </div>
+  <div class="progress-item">
+    <div class="progress-header">
+      <span class="progress-name">钙钛矿（实验室）</span>
+      <span class="progress-val" style="color: var(--accent);">33%+</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill pf-amber" style="width: 70%;"></div>
+    </div>
+  </div>
+  <div class="progress-item">
+    <div class="progress-header">
+      <span class="progress-name">理论极限</span>
+      <span class="progress-val" style="color: var(--destructive);">~47%</span>
+    </div>
+    <div class="progress-track">
+      <div class="progress-fill pf-red" style="width: 100%;"></div>
+    </div>
+  </div>
+</div>
+
+<!-- 第18页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 18</div>
+  <h3>分布式光伏从参数比拼转向场景化精耕，安全与细分场景成新竞争维度</h3>
+  <ul class="insight-list">
+    <li>隆基推出德国莱茵TüV Class A级防火认证特种防火组件</li>
+    <li>固德威发布轻质屋面光伏"五维安全体系"</li>
+    <li>中国人保宣布采用特定防火组件的电站保险费率直降5%</li>
+    <li>协鑫集成推出零门槛阳台光伏方案，海尔发布"纳晖"能源互联网平台</li>
+  </ul>
+  <div class="key-data">行业正从参数比拼进入以安全、场景、价值为核心的新周期</div>
+  <div class="insight-extend">分布式光伏的竞争焦点正从"效率与价格"转向"安全认证+场景适配+保险联动"的综合价值体系。</div>
+</div>
+
+<!-- 第19页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 19</div>
+  <h3>钙钛矿电池市场预计以35.8%年复合增长率扩张，新兴应用场景打开增量空间</h3>
+  <ul class="insight-list">
+    <li>全球光伏面板市场预计2032年达3304亿美元，CAGR 8.1%</li>
+    <li>钙钛矿太阳能电池市场预计2035年达75.8亿美元，CAGR 35.8%</li>
+    <li>钙钛矿在建筑光伏、可穿戴设备等场景具备广阔应用前景</li>
+    <li>2026年美国计划新增43.4GW光伏装机，储能与光伏一体化成重要方向</li>
+  </ul>
+  <div class="key-data">莫斯科钢与合金学院开发全本土材料钙钛矿面板，效率达12.65%</div>
+  <div class="insight-extend">钙钛矿技术的商业化进程将决定光伏行业下一轮技术革命的时间窗口，先发企业有望获得显著的技术溢价。</div>
+</div>
+
+<!-- ═══ VIZ: 钙钛矿 vs 传统硅基电池市场预测 ═══ -->
+<div class="viz-table-wrap">
+  <div class="viz-table-title">钙钛矿 vs 传统硅基电池市场预测</div>
+  <table class="viz-table">
+    <thead>
+      <tr><th>指标</th><th>光伏面板市场</th><th>钙钛矿市场</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>2032年规模</td><td class="num">$3304亿</td><td class="num">—</td></tr>
+      <tr><td>2035年规模</td><td class="num">—</td><td class="num">$75.8亿</td></tr>
+      <tr><td>年复合增长率 (CAGR)</td><td class="num positive">8.1%</td><td class="num positive">35.8%</td></tr>
+      <tr><td>核心应用</td><td>地面电站 · 分布式</td><td>建筑光伏 · 可穿戴</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 第20页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第四章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏技术竞争从单一效率提升转向"效率+安全+场景+标准"多维竞争</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>叠层电池国际标准博弈与分布式场景化创新同步加速</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>掌握下一代电池技术与国际标准话语权的企业将主导行业未来十年格局</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第五章：产业链与供应链变化 ═══ -->
+<div class="section-header" id="ch5">
+  <div class="section-num">05</div>
+  <h2>产业链与供应链变化</h2>
+</div>
+
+<!-- 第21页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 21</div>
+  <h3>全球光伏项目加速落地，南非、东南亚、欧洲成区域增长极</h3>
+  <ul class="insight-list">
+    <li>英美合资Envusa南非240MW光伏项目商业化运营，为矿业提供清洁能源</li>
+    <li>Solarvest与Press Metal开发马来西亚100MW光伏电站，投资3.8亿林吉特</li>
+    <li>EDF EN法国朗德36MW光伏电站投产，总规模74MW，投资2.5亿欧元</li>
+    <li>英国光伏市场超4GW在建项目，超40个在建光伏农场易手</li>
+  </ul>
+  <div class="key-data">巴西皮奥伊州拥有拉美最大光伏complex，依托高辐照条件推动转型</div>
+  <div class="insight-extend">光伏项目的全球化落地正从"中国+欧美"双中心向"多区域分散化"格局演进，新兴市场的项目开发机会持续释放。</div>
+</div>
+
+<!-- 第22页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 22</div>
+  <h3>Qcells因UFLPA供应链合规问题暂停生产后恢复，贸易监管重塑光伏供应链</h3>
+  <ul class="insight-list">
+    <li>Qcells韩国产太阳能电池被美国海关依据UFLPA扣留</li>
+    <li>2025年11月暂停生产并临时休假1000名员工，2026年3月恢复生产</li>
+    <li>计划2026年底实现美国本土从锭片到组件的全产业链生产</li>
+    <li>总投资25亿美元构建美国供应链，规避贸易合规风险</li>
+  </ul>
+  <div class="key-data">该事件凸显光伏企业应对跨境贸易监管合规的系统性压力</div>
+  <div class="insight-extend">UFLPA正成为影响全球光伏供应链的关键合规变量，企业需建立从原材料到成品的全链条溯源能力。</div>
+</div>
+
+<!-- ═══ VIZ: UFLPA 合规影响链 ═══ -->
+<div class="flow-chart-wrap">
+  <div class="flow-chart-title">UFLPA 合规影响链</div>
+  <div class="flow-steps">
+    <div class="flow-step">
+      <div class="flow-step-num">STEP 1</div>
+      <div class="flow-step-text">原材料溯源<br>受质疑</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background: linear-gradient(135deg, var(--accent), #F59E0B);">
+      <div class="flow-step-num">STEP 2</div>
+      <div class="flow-step-text">海关扣留<br>产品滞港</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background: linear-gradient(135deg, var(--destructive), #EF4444);">
+      <div class="flow-step-num">STEP 3</div>
+      <div class="flow-step-text">生产暂停<br>员工休假</div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step" style="background: linear-gradient(135deg, var(--success), #22C55E);">
+      <div class="flow-step-num">STEP 4</div>
+      <div class="flow-step-text">本土化转型<br>全链自主</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第23页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第五章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏供应链正从"成本最优"逻辑转向"合规+安全+本土化"多目标平衡</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>UFLPA、关税壁垒、逆变器安全审查构成供应链三重合规挑战</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>具备全链条溯源能力与多区域制造布局的企业将在合规时代胜出</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第六章：政策与监管环境 ═══ -->
+<div class="section-header" id="ch6">
+  <div class="section-num">06</div>
+  <h2>政策与监管环境</h2>
+</div>
+
+<!-- 第24页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 24</div>
+  <h3>多家律所针对Enphase与First Solar发起证券集体诉讼，光伏企业法律风险集中爆发</h3>
+  <ul class="insight-list">
+    <li>Enphase被指控在2025年4-10月间做出虚假陈述，夸大渠道库存管理能力</li>
+    <li>2025年10月28日财报披露后Enphase股价当日下跌15.15%</li>
+    <li>First Solar因业绩大幅不及预期被多家律所启动证券欺诈调查</li>
+    <li>First Solar财报后股价下跌13.61%，Baird下调评级至"中性"</li>
+  </ul>
+  <div class="key-data">Enphase投资者需在2026年4月20日前申请担任首席原告</div>
+  <div class="insight-extend">光伏行业进入业绩兑现压力期，信息披露合规与投资者关系管理的重要性显著提升。</div>
+</div>
+
+<!-- 第25页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 25</div>
+  <h3>印度拟放宽可再生能源电网供应处罚规则，政策平衡投资信心与电网稳定</h3>
+  <ul class="insight-list">
+    <li>印度监管机构计划对未达标电网供应承诺的光伏项目征收高额罚款</li>
+    <li>行业开发商强烈反对，称将导致项目收入损失并减缓投资进度</li>
+    <li>印度电力部已要求监管机构重新审查处罚规则</li>
+    <li>印度目标2030年非化石能源发电容量翻倍至500GW</li>
+  </ul>
+  <div class="key-data">印度高院维持SECI 2.33GW太阳能容量重新分配决定，强化执行机构管理权限</div>
+  <div class="insight-extend">新兴市场的光伏监管政策正在经历从"鼓励扩张"到"规范运营"的转型，政策稳定性将成为吸引投资的关键因素。</div>
+</div>
+
+<!-- 第26页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第六章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>全球光伏监管环境正从"补贴驱动"转向"合规+市场化+安全"多维监管</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>证券诉讼风险与贸易合规压力正在重塑光伏企业的治理标准</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>信息披露透明度、供应链合规能力与政策适应性将成为企业核心竞争力</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第七章：投资与产业合作 ═══ -->
+<div class="section-header" id="ch7">
+  <div class="section-num">07</div>
+  <h2>投资与产业合作</h2>
+</div>
+
+<!-- 第27页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 27</div>
+  <h3>光伏细分领域合作深化，快速关断、虚拟电厂、AI智能家居成新增长点</h3>
+  <ul class="insight-list">
+    <li>Tigo Energy与CELTEC合作将快速关断产品推广至中美洲及加勒比地区</li>
+    <li>Enphase与Ensol在法国通过订阅模式推广家用储能，组建虚拟电厂</li>
+    <li>泰国TrueOnline与Altervim推出AI智能光伏智能家居方案，提供30年性能保障</li>
+    <li>Enphase累计出货8640万台微型逆变器，2026年1月启动IQ9商用微逆出货</li>
+  </ul>
+  <div class="key-data">特斯拉拟向迈为股份、捷佳伟创采购29亿美元光伏制造设备</div>
+  <div class="insight-extend">光伏产业的价值链正从"发电设备"向"能源服务+智能家居+虚拟电厂"延伸，商业模式创新成为差异化竞争的新战场。</div>
+</div>
+
+<!-- 第28页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 28</div>
+  <h3>隆基提出"光储氢"协同零碳能源体系，光伏企业从设备商转型能源系统集成商</h3>
+  <ul class="insight-list">
+    <li>隆基副总裁佘海峰提出构建以"光储氢"为核心的协同零碳能源体系</li>
+    <li>光伏成本过去十年下降超90%，但单一发电不足以构建稳定零碳系统</li>
+    <li>需通过储能抚平波动、氢能解决非电领域脱碳，实现全链条协同</li>
+    <li>LONGi在意大利推进光储氢一体化项目，实现全系统整合</li>
+  </ul>
+  <div class="key-data">隆基已布局氢能与储能领域，通过HPBC技术持续提升电池转换效率</div>
+  <div class="insight-extend">光伏企业的战略定位正从"组件制造商"升级为"零碳能源系统集成商"，光储氢协同将成为行业终局形态。</div>
+</div>
+
+<!-- ═══ VIZ: 光伏产业价值链延伸方向 ═══ -->
+<div class="chain-compare-wrap">
+  <div class="chain-compare-title">光伏产业价值链延伸方向</div>
+  <div class="chain-row">
+    <div class="chain-label chain-label-old">传统模式</div>
+    <div class="chain-nodes">
+      <div class="chain-node chain-node-old">组件制造</div>
+      <span class="chain-arrow-sm">→</span>
+      <div class="chain-node chain-node-old">项目开发</div>
+    </div>
+  </div>
+  <div class="chain-row">
+    <div class="chain-label chain-label-new">新兴模式</div>
+    <div class="chain-nodes">
+      <div class="chain-node chain-node-new">组件</div>
+      <span class="chain-arrow-sm">→</span>
+      <div class="chain-node chain-node-new">储能</div>
+      <span class="chain-arrow-sm">→</span>
+      <div class="chain-node chain-node-new">虚拟电厂</div>
+      <span class="chain-arrow-sm">→</span>
+      <div class="chain-node chain-node-new">AI智能家居</div>
+      <span class="chain-arrow-sm">→</span>
+      <div class="chain-node chain-node-new">氢能</div>
+    </div>
+  </div>
+</div>
+
+<!-- 第29页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第七章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏产业正从单一发电设备制造向综合能源服务与系统集成演进</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>虚拟电厂、AI智能家居、光储氢一体化成为新的投资热点</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>具备"光伏+储能+氢能"全链条能力的企业将在零碳时代占据制高点</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 第八章：行业风险警示 ═══ -->
+<div class="section-header" id="ch8">
+  <div class="section-num">08</div>
+  <h2>行业风险警示</h2>
+</div>
+
+<!-- 第30页 -->
+<div class="page-card">
+  <div class="page-label">PAGE 30</div>
+  <h3>极端天气与安全事故频发，光伏基础设施脆弱性与运维风险不容忽视</h3>
+  <ul class="insight-list">
+    <li>美国印第安纳州700MW光伏农场遭龙卷风损毁，修复成本预估超1.4亿美元</li>
+    <li>加拿大埃洛拉光伏农场遭雷击引发逆变器起火</li>
+    <li>西班牙安达卢西亚光伏项目与橄榄种植产业爆发土地冲突</li>
+    <li>美国Purelight Power破产，处置超700万美元光伏库存</li>
+  </ul>
+  <div class="key-data">西班牙光伏项目占用土地3.1万公顷，较2016年增长166%</div>
+  <div class="insight-extend">光伏行业的风险管理需从"建设期"延伸至"全生命周期"，极端天气保险、土地使用合规与运维标准将成为行业健康发展的基础保障。</div>
+</div>
+
+<!-- ═══ VIZ: 2026年3月全球光伏安全事故汇总 ═══ -->
+<div class="viz-table-wrap">
+  <div class="viz-table-title">2026年3月 全球光伏安全事故汇总</div>
+  <table class="viz-table">
+    <thead>
+      <tr><th>事件</th><th>地点</th><th>损失</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>龙卷风损毁 700MW 光伏农场</td><td>美国印第安纳</td><td class="highlight num">>$1.4亿</td></tr>
+      <tr><td>雷击引发逆变器起火</td><td>加拿大埃洛拉</td><td class="highlight">逆变器损毁</td></tr>
+      <tr><td>光伏项目土地冲突</td><td>西班牙安达卢西亚</td><td class="highlight">项目受阻</td></tr>
+      <tr><td>Purelight Power 企业破产</td><td>美国</td><td class="highlight num">>$700万库存</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 第31页 Deep Insight -->
+<div class="deep-insight">
+  <div class="deep-insight-label">Deep Insight — 第八章总结</div>
+  <div class="deep-insight-grid">
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot trend"></span>核心趋势</div>
+      <p>光伏基础设施面临极端天气、网络安全、土地冲突三重风险</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot signal"></span>竞争信号</div>
+      <p>保险费率、运维标准、环境清理保证金等风险管理工具需求上升</p>
+    </div>
+    <div class="deep-insight-item">
+      <div class="di-label"><span class="di-dot future"></span>未来方向</div>
+      <p>参数化保险、场地加固标准、全生命周期运维将成为行业标配</p>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 行业未来趋势 ═══ -->
+<div class="section-header" id="trends">
+  <div class="section-num">T</div>
+  <h2>行业未来趋势</h2>
+</div>
+
+<!-- 第32页 -->
+<div class="page-card" style="border-left: 4px solid var(--accent);">
+  <div class="page-label">PAGE 32 — 趋势总览</div>
+  <h3>全球光伏行业正经历"四重重构"——供应链重构、技术迭代、政策转型、商业模式升级同步推进</h3>
+  <ul class="insight-list">
+    <li><strong>供应链重构：</strong>贸易壁垒+UFLPA+出口退税取消推动多区域本地化制造</li>
+    <li><strong>技术迭代：</strong>TOPCon主导当下，叠层电池与钙钛矿争夺未来十年技术制高点</li>
+    <li><strong>政策转型：</strong>全球从"补贴驱动"转向"市场化+合规+安全"多维监管</li>
+    <li><strong>商业模式升级：</strong>从设备销售转向"光储氢+虚拟电厂+能源服务"综合解决方案</li>
+    <li><strong>地缘政治：</strong>冲突加速能源转型，光伏成为各国能源安全战略核心</li>
+  </ul>
+  <div class="key-data">2026年中国新增光伏装机预计1.8-2.4亿千瓦，美国计划新增43.4GW</div>
+  <div class="insight-extend">光伏行业的竞争逻辑正从"规模+成本"转向"技术+合规+供应链韧性+商业模式创新"的综合竞争。</div>
+</div>
+
+<!-- ═══ VIZ: 光伏行业四重重构 ═══ -->
+<div class="quadrant-wrap">
+  <div class="quadrant-title">光伏行业四重重构全景</div>
+  <div class="quadrant-grid">
+    <div class="quadrant-cell">
+      <div class="quadrant-label">供应链重构</div>
+      <div class="quadrant-text">贸易壁垒 + UFLPA + 出口退税取消，推动多区域本地化制造，从"成本最优"转向"合规+安全+本土化"</div>
+    </div>
+    <div class="quadrant-cell">
+      <div class="quadrant-label">技术迭代</div>
+      <div class="quadrant-text">TOPCon 主导当下（95%），叠层电池 32.6% 效率量产，钙钛矿 CAGR 35.8% 争夺未来十年制高点</div>
+    </div>
+    <div class="quadrant-cell">
+      <div class="quadrant-label">政策转型</div>
+      <div class="quadrant-text">全球从"补贴驱动"转向"市场化+合规+安全"多维监管，337调查与逆变器安全审查构成双线围堵</div>
+    </div>
+    <div class="quadrant-cell">
+      <div class="quadrant-label">商业模式升级</div>
+      <div class="quadrant-text">从设备销售转向"光储氢+虚拟电厂+能源服务"综合解决方案，AI智能家居成新增长点</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ 战略建议 ═══ -->
+<div class="section-header" id="strategy">
+  <div class="section-num">R</div>
+  <h2>战略建议</h2>
+</div>
+
+<!-- ═══ VIZ: 2026年全球主要市场新增光伏装机预测 ═══ -->
+<div class="bar-chart-wrap">
+  <div class="bar-chart-title">2026年全球主要市场新增光伏装机预测</div>
+  <div class="bar-item">
+    <div class="bar-label">中国</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-primary" style="width: 92%;">
+        <span class="bar-val">180-240 GW</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">欧洲</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-accent" style="width: 22%;">
+        <span class="bar-val">~50 GW</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">美国</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-success" style="width: 19%;">
+        <span class="bar-val">43.4 GW</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar-item">
+    <div class="bar-label">印度</div>
+    <div class="bar-track">
+      <div class="bar-fill bar-fill-purple" style="width: 13%;"></div>
+    </div>
+    <div class="bar-val-outside">~30 GW（目标2030年500GW）</div>
+  </div>
+</div>
+
+<div class="strategy-card">
+  <div class="strategy-num">1</div>
+  <div class="strategy-content">
+    <span class="strategy-badge">技术维度</span>
+    <p>加大叠层电池与钙钛矿技术研发投入，积极参与IEC国际标准制定，抢占下一代光伏技术话语权</p>
+  </div>
+</div>
+
+<div class="strategy-card">
+  <div class="strategy-num">2</div>
+  <div class="strategy-content">
+    <span class="strategy-badge">供应链维度</span>
+    <p>建立多区域制造布局与全链条原材料溯源体系，应对UFLPA、关税壁垒与逆变器安全审查等多重合规挑战</p>
+  </div>
+</div>
+
+<div class="strategy-card">
+  <div class="strategy-num">3</div>
+  <div class="strategy-content">
+    <span class="strategy-badge">市场维度</span>
+    <p>从单一组件出口转向"组件+储能+服务"生态化出海模式，深度绑定海外市场本地合作伙伴</p>
+  </div>
+</div>
+
+<div class="strategy-card">
+  <div class="strategy-num">4</div>
+  <div class="strategy-content">
+    <span class="strategy-badge">产品维度</span>
+    <p>聚焦分布式光伏场景化创新，围绕安全认证、阳台光伏、工商业光储充等细分场景构建差异化竞争力</p>
+  </div>
+</div>
+
+<!-- ── Disclaimer ── -->
+<div style="margin-top: 40px; padding: 16px 20px; background: var(--muted); border-radius: 8px; font-size: 12px; color: #64748B; text-align: center; font-style: italic;">
+  注：本报告基于2026年3月公开行业信息整理，观点不代表报告提供者立场。
+</div>
+
+</div><!-- /content-area -->
+
+<!-- ═══ Footer ═══ -->
+<footer class="footer">
+  <div class="footer-brand">SUPINFOR LTD</div>
+  <div>数据来源：2026年3月光伏光能行业月报</div>
+  <div class="footer-note">2026年4月15日</div>
+</footer>
+
+</div><!-- /main -->
+
+<!-- ═══ Scroll Spy JS ═══ -->
+<script>
+(function() {
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = [];
+
+  navItems.forEach(item => {
+    const href = item.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const el = document.getElementById(href.slice(1));
+      if (el) sections.push({ el, nav: item });
+    }
+  });
+
+  function onScroll() {
+    const scrollY = window.scrollY + 120;
+    let current = sections[0];
+
+    for (let i = 0; i < sections.length; i++) {
+      if (sections[i].el.offsetTop <= scrollY) {
+        current = sections[i];
+      }
+    }
+
+    navItems.forEach(n => n.classList.remove('active'));
+    if (current) current.nav.classList.add('active');
+  }
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+})();
+</script>
+
+</body>
+</html>
