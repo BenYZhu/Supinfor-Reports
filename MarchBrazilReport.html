@@ -1,0 +1,2073 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴西区域国别洞察报告 · 2026年3月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        navy: { 900: '#0a1628', 800: '#111d35', 700: '#1e293b', 600: '#334155' },
+        amber: { gold: '#d4a843', dark: '#b8860b' },
+        brazil: { green: '#009739', yellow: '#FEDD00' },
+        warm: { white: '#f8f6f1', card: '#ffffff' }
+      },
+      fontFamily: {
+        display: ['Playfair Display', 'Noto Serif SC', 'serif'],
+        body: ['Noto Serif SC', 'serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  :root { --gold: #d4a843; --gold-dark: #b8860b; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Noto Serif SC', serif; }
+  .font-display { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  .dark ::-webkit-scrollbar-track { background: #0a1628; }
+  .dark ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+  ::-webkit-scrollbar-track { background: #f8f6f1; }
+  ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 3px; }
+
+  /* Sidebar */
+  .sidebar-link { transition: all 0.2s ease; border-left: 3px solid transparent; }
+  .sidebar-link:hover { border-left-color: var(--gold); }
+  .sidebar-link.active { border-left-color: var(--gold); font-weight: 600; }
+  .dark .sidebar-link.active { color: #d4a843; background: rgba(212,168,67,0.08); }
+  .sidebar-link.active { color: #b8860b; background: rgba(184,134,11,0.06); }
+
+  /* Card hover */
+  .insight-card { transition: transform 0.25s ease, box-shadow 0.25s ease; }
+  .insight-card:hover { transform: translateY(-3px); }
+  .dark .insight-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+  .insight-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+
+  /* Scroll animation */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Bar chart */
+  .bar-fill { transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); width: 0; }
+  .bar-fill.animated { width: var(--bar-width); }
+
+  /* Stat card pulse */
+  @keyframes pulse-gold { 0%, 100% { box-shadow: 0 0 0 0 rgba(212,168,67,0.15); } 50% { box-shadow: 0 0 0 8px rgba(212,168,67,0); } }
+  .stat-card { animation: pulse-gold 3s infinite; }
+
+  /* Mobile menu */
+  .mobile-menu-overlay { transition: opacity 0.3s ease; }
+  .mobile-sidebar { transition: transform 0.3s ease; }
+
+  /* Gold highlight bar */
+  .insight-highlight { border-left: 4px solid var(--gold); }
+  .dark .insight-highlight { background: rgba(212,168,67,0.06); }
+  .insight-highlight { background: rgba(184,134,11,0.04); }
+</style>
+</head>
+<body class="bg-warm-white dark:bg-navy-900 text-slate-800 dark:text-slate-200 font-body transition-colors duration-300">
+
+<!-- Mobile Menu Overlay -->
+<div id="mobileOverlay" class="mobile-menu-overlay fixed inset-0 bg-black/50 z-40 hidden opacity-0" onclick="toggleMobileMenu()"></div>
+
+<!-- Sidebar Navigation (Desktop) -->
+<aside id="sidebar" class="hidden lg:block fixed left-0 top-0 h-full w-64 bg-white/80 dark:bg-navy-800/90 backdrop-blur-md border-r border-slate-200 dark:border-slate-700/50 z-30 overflow-y-auto pt-20 pb-8">
+  <div class="px-4 mb-6">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="w-2 h-2 rounded-full bg-brazil-green"></span>
+      <span class="w-2 h-2 rounded-full bg-brazil-yellow"></span>
+    </div>
+    <h2 class="font-display text-sm font-bold text-slate-900 dark:text-white tracking-wide uppercase">目录导航</h2>
+  </div>
+  <nav id="sidebarNav" class="space-y-0.5 px-2">
+    <a href="#section-1" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">一、选举政治与权力重组</a>
+    <a href="#section-2" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">二、司法系统与制度变革</a>
+    <a href="#section-3" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">三、外交博弈与主权争端</a>
+    <a href="#section-4" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">四、能源危机与燃油市场</a>
+    <a href="#section-5" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">五、财政金融与货币政策</a>
+    <a href="#section-6" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">六、产业政策与关键矿产</a>
+    <a href="#section-7" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">七、劳工改革与平台经济</a>
+    <a href="#section-8" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">八、国防与安全</a>
+    <a href="#section-9" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">九、科技与数字监管</a>
+    <a href="#section-10" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">十、环保与气候治理</a>
+    <a href="#section-11" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">十一、医疗与公共卫生</a>
+    <a href="#section-12" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">十二、教育与人力资本</a>
+    <a href="#section-13" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white">十三、人文与社会思潮</a>
+  </nav>
+</aside>
+
+<!-- Mobile Sidebar -->
+<aside id="mobileSidebar" class="mobile-sidebar fixed left-0 top-0 h-full w-72 bg-white dark:bg-navy-800 z-50 overflow-y-auto pt-16 pb-8 -translate-x-full lg:hidden">
+  <button onclick="toggleMobileMenu()" class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full bg-slate-100 dark:bg-navy-700 text-slate-600 dark:text-slate-300">
+    <i class="fas fa-times text-sm"></i>
+  </button>
+  <div class="px-4 mb-6">
+    <h2 class="font-display text-sm font-bold text-slate-900 dark:text-white tracking-wide uppercase">目录导航</h2>
+  </div>
+  <nav class="space-y-0.5 px-2" id="mobileNav">
+    <a href="#section-1" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">一、选举政治与权力重组</a>
+    <a href="#section-2" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">二、司法系统与制度变革</a>
+    <a href="#section-3" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">三、外交博弈与主权争端</a>
+    <a href="#section-4" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">四、能源危机与燃油市场</a>
+    <a href="#section-5" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">五、财政金融与货币政策</a>
+    <a href="#section-6" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">六、产业政策与关键矿产</a>
+    <a href="#section-7" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">七、劳工改革与平台经济</a>
+    <a href="#section-8" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">八、国防与安全</a>
+    <a href="#section-9" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">九、科技与数字监管</a>
+    <a href="#section-10" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">十、环保与气候治理</a>
+    <a href="#section-11" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">十一、医疗与公共卫生</a>
+    <a href="#section-12" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">十二、教育与人力资本</a>
+    <a href="#section-13" onclick="toggleMobileMenu()" class="sidebar-link block px-3 py-2 text-xs rounded-r-md text-slate-600 dark:text-slate-400">十三、人文与社会思潮</a>
+  </nav>
+</aside>
+
+<!-- Top Bar -->
+<header class="fixed top-0 left-0 right-0 h-14 bg-white/80 dark:bg-navy-900/90 backdrop-blur-md border-b border-slate-200/60 dark:border-slate-700/40 z-30 flex items-center justify-between px-4 lg:px-8">
+  <!-- Mobile hamburger -->
+  <button onclick="toggleMobileMenu()" class="lg:hidden w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-navy-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-navy-600 transition-colors">
+    <i class="fas fa-bars text-sm"></i>
+  </button>
+  <div class="flex items-center gap-2">
+    <span class="hidden sm:inline text-xs font-medium text-slate-500 dark:text-slate-400 tracking-wider uppercase">Geo-Intel Dashboard</span>
+    <span class="hidden sm:inline text-slate-300 dark:text-slate-600">|</span>
+    <span class="text-xs text-amber-gold dark:text-amber-gold font-semibold">巴西 · Brasil</span>
+  </div>
+  <!-- Theme toggle -->
+  <button id="themeToggle" onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-lg bg-slate-100 dark:bg-navy-700 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-navy-600 transition-colors" aria-label="切换深色/浅色模式">
+    <i class="fas fa-moon text-sm dark:hidden"></i>
+    <i class="fas fa-sun text-sm hidden dark:inline"></i>
+  </button>
+</header>
+
+<!-- Main Content -->
+<main class="lg:ml-64 pt-14">
+
+<!-- Hero Section -->
+<section class="relative overflow-hidden">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-5 dark:opacity-10" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2260%22 height=%2260%22><path d=%22M30 0L60 30L30 60L0 30Z%22 fill=%22none%22 stroke=%22%23d4a843%22 stroke-width=%220.5%22/></svg>'); background-size: 60px 60px;"></div>
+  <!-- Brazil flag accent line -->
+  <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brazil-green via-brazil-yellow to-brazil-green"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+    <!-- Badge -->
+    <div class="flex items-center gap-2 mb-6 reveal">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-amber-gold/10 text-amber-gold dark:bg-amber-gold/15 dark:text-amber-gold border border-amber-gold/20">
+        <i class="fas fa-satellite-dish text-[10px]"></i>
+        地缘情报仪表盘
+      </span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-brazil-green/10 text-brazil-green border border-brazil-green/20">
+        <i class="fas fa-flag text-[10px]"></i>
+        BRASIL
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-4 reveal" style="line-height:1.15">
+      巴西区域国别<br class="sm:hidden"><span class="text-amber-gold dark:text-amber-gold">洞察报告</span>
+    </h1>
+    <p class="text-base sm:text-lg text-slate-500 dark:text-slate-400 mb-10 reveal">
+      2026年3月 · 基于 <span class="text-amber-dark dark:text-amber-gold font-semibold">221</span> 条资讯 · <span class="text-amber-dark dark:text-amber-gold font-semibold">42</span> 条洞察
+    </p>
+
+    <!-- Stat Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 reveal">
+      <!-- Card 1 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-2xl sm:text-3xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">221</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">原始资讯</div>
+      </div>
+      <!-- Card 2 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-2xl sm:text-3xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">42</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">洞察提炼</div>
+      </div>
+      <!-- Card 3 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-2xl sm:text-3xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">13</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">主题覆盖</div>
+      </div>
+      <!-- Card 4 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-2xl sm:text-3xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">520亿</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">Master银行欺诈<br><span class="text-[10px]">（雷亚尔）</span></div>
+      </div>
+      <!-- Card 5 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-2xl sm:text-3xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">14.75%</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">Selic基准利率</div>
+      </div>
+      <!-- Card 6 -->
+      <div class="stat-card bg-white dark:bg-navy-700 rounded-xl p-4 border border-slate-200/60 dark:border-slate-600/30 text-center">
+        <div class="text-xl sm:text-2xl font-display font-bold text-amber-dark dark:text-amber-gold mb-1">46%<span class="text-sm mx-1 text-slate-400">vs</span>46%</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400">卢拉 vs 弗拉维奥<br><span class="text-[10px]">（二轮）</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Core Insights Summary -->
+<section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-6">
+      <div class="w-10 h-10 rounded-lg bg-amber-gold/10 dark:bg-amber-gold/15 flex items-center justify-center">
+        <i class="fas fa-bolt text-amber-gold text-sm"></i>
+      </div>
+      <h2 class="font-display text-2xl font-bold text-slate-900 dark:text-white">核心洞察摘要</h2>
+    </div>
+    <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-red-500">
+        <div class="text-xs font-semibold text-red-500 mb-2 uppercase tracking-wider"><i class="fas fa-landmark mr-1"></i>政治</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">2026 大选全面启动，18 名部长离任引发政策真空风险，卢拉与弗拉维奥支持率胶着，巴西进入高度政治不确定期</p>
+      </div>
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-orange-500">
+        <div class="text-xs font-semibold text-orange-500 mb-2 uppercase tracking-wider"><i class="fas fa-gas-pump mr-1"></i>能源</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">中东冲突推高油价至 100 美元/桶以上，巴西柴油价格飙升引发卡车司机罢工威胁，燃油危机成为卢拉连任最大经济变量</p>
+      </div>
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-blue-500">
+        <div class="text-xs font-semibold text-blue-500 mb-2 uppercase tracking-wider"><i class="fas fa-handshake mr-1"></i>外贸</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">南方共同市场与欧盟自贸协定正式获批，覆盖 7.18 亿人口，巴西外贸格局面临历史性重塑，中资企业需重新评估对巴出口竞争力</p>
+      </div>
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-emerald-500">
+        <div class="text-xs font-semibold text-emerald-500 mb-2 uppercase tracking-wider"><i class="fas fa-gem mr-1"></i>矿产</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">巴西稀土战略博弈升温，联邦政府拟设国有矿业公司，戈亚斯州与美国签署合作备忘录，关键矿产成为中美巴三角博弈焦点</p>
+      </div>
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-purple-500">
+        <div class="text-xs font-semibold text-purple-500 mb-2 uppercase tracking-wider"><i class="fas fa-building-columns mr-1"></i>金融</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">Master 银行 520 亿雷亚尔欺诈案波及三权分支，BRB 银行面临 88 亿坏账，金融系统性风险与政治腐败深度交织</p>
+      </div>
+      <div class="bg-white dark:bg-navy-700 rounded-xl p-5 border border-slate-200/60 dark:border-slate-600/30 border-l-4 border-l-cyan-500">
+        <div class="text-xs font-semibold text-cyan-500 mb-2 uppercase tracking-wider"><i class="fas fa-shield-halved mr-1"></i>监管</div>
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">巴西数字监管加速推进，ECA Digital 未成年人保护法生效、数字市场竞争法案紧急审议，平台经济合规门槛全面提升</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div>
+</div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 1: 选举政治与权力重组 -->
+<!-- ============================================ -->
+<section id="section-1" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-red-500/10 dark:bg-red-500/15 flex items-center justify-center">
+      <i class="fas fa-landmark text-red-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">一、选举政治与权力重组</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Election Politics & Power Restructuring</p>
+    </div>
+  </div>
+
+  <!-- 1.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">1.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">卢拉政府 18 名部长集体离任，巴西历史最大规模内阁改组标志大选全面启动</h3>
+      </div>
+      <!-- Key Insight -->
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>2026 年 3 月底卢拉宣布至少 18 名内阁部长离任参选，打破 2022 年博索纳罗时期 10 人离任纪录。新任部长被要求"不推新计划、专注完成现有项目"，政策执行力将在选举季显著下降，形成 <strong>6-8 个月的政策真空窗口</strong>。
+        </p>
+      </div>
+      <!-- Key Facts -->
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">副总统阿尔克明离任发展部长但保留副总统候选人身份，财长阿达德参选圣保罗州长，总统府秘书长鲁伊·科斯塔参选参议员</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">多数继任者为各部门执行秘书，旨在保证政策延续性</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">卢拉要求强化政绩宣传，对比卢拉政府与博索纳罗政府执政数据</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 1.2 with Bar Chart Visualization -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">1.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">卢拉与弗拉维奥支持率技术平局，极化格局下第三方路线彻底失败</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>BTG/Nexus 民调显示卢拉 41% 对弗拉维奥 38%（首轮），第二轮各获 46% 完全持平。PSD 放弃中间派路线选择右翼凯亚多，莱蒂的中间派民主路线被否决，<strong>巴西政治极化已无缓冲空间</strong>，大选结果高度不确定。
+        </p>
+      </div>
+
+      <!-- DATA VIZ: Election Poll Bar Chart -->
+      <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-5 sm:p-6 mb-5 border border-slate-200/40 dark:border-slate-600/20">
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fas fa-chart-bar text-amber-gold text-sm"></i>
+          <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">BTG/Nexus 民调数据</span>
+        </div>
+        <!-- Round 1 -->
+        <div class="mb-5">
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-wider">首轮投票</div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold text-red-600 dark:text-red-400">卢拉 (PT)</span>
+                <span class="text-sm font-bold text-red-600 dark:text-red-400">41%</span>
+              </div>
+              <div class="w-full h-7 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+                <div class="bar-fill h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full flex items-center justify-end pr-2" style="--bar-width: 41%">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">弗拉维奥 (PL)</span>
+                <span class="text-sm font-bold text-blue-600 dark:text-blue-400">38%</span>
+              </div>
+              <div class="w-full h-7 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+                <div class="bar-fill h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full" style="--bar-width: 38%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Round 2 -->
+        <div>
+          <div class="text-xs font-semibold text-slate-500 dark:text-slate-400 mb-3 uppercase tracking-wider">二轮投票（决选）</div>
+          <div class="space-y-3">
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold text-red-600 dark:text-red-400">卢拉 (PT)</span>
+                <span class="text-sm font-bold text-red-600 dark:text-red-400">46%</span>
+              </div>
+              <div class="w-full h-7 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+                <div class="bar-fill h-full bg-gradient-to-r from-red-500 to-red-600 rounded-full" style="--bar-width: 46%">
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-sm font-semibold text-blue-600 dark:text-blue-400">弗拉维奥 (PL)</span>
+                <span class="text-sm font-bold text-blue-600 dark:text-blue-400">46%</span>
+              </div>
+              <div class="w-full h-7 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+                <div class="bar-fill h-full bg-gradient-to-r from-blue-500 to-blue-600 rounded-full" style="--bar-width: 46%">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 text-center">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-amber-gold/10 text-amber-dark dark:text-amber-gold border border-amber-gold/20">
+            <i class="fas fa-triangle-exclamation text-[10px]"></i>
+            二轮完全持平 · 高度不确定
+          </span>
+        </div>
+      </div>
+
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">53.3% 受访者认为卢拉不配连任，南部反对率高达 66.1%，仅东北部过半支持</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">凯亚多支持率仅约 4%，承诺对 1 月 8 日事件参与者实施全面特赦以争取极右翼选民</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">44% 受访者对卢拉政府持负面评价，51% 不认可其施政表现</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 1.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">1.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">博索纳罗家族司法困境与国际活动并行，右翼阵营内部权力竞争加剧</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>前总统博索纳罗因肺炎获 90 天居家监禁，其子弗拉维奥在美国 CPAC 自称"博索纳罗 2.0"，爱德华多因胁迫罪被 STF 定于 4 月 14 日质询。博索纳罗家族同时面临司法追诉和选举动员的双线压力，其盟友巴塞拉尔因向犯罪组织泄密被捕，可能引发家族政治危机。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">博索纳罗佩戴电子脚环居家监禁，禁止使用社交网络</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">爱德华多被指在美国通过威胁关税、签证和马格尼茨基法施压巴西司法</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">前助手菲利佩·马丁斯因参与政变未遂被判 21 年监禁</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 1.4 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">1.4</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">里约州双职位空缺引发宪法危机，直选与间接选举之争成为大选风向标</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>里约州长与副州长同时空缺，STF 内部就直选还是间接选举产生严重分裂（多数支持间接选举，4 名大法官主张直选），4 月 8 日开庭审理。该案件的裁决方式将直接影响 2026 年全国选举的政治预期和各党派布局。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">前州长卡斯特罗在被判 8 年禁赛前一天辞职，被指操纵选举类型</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PL 党候选人 Douglas Ruas、PSD 的 Eduardo Paes、PT 的 André Ceciliano 形成三方竞争</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">里约州选举法院重新计票 2022 年选举，约 9.7 万张选票被取消</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 2: 司法系统与制度变革 -->
+<!-- ============================================ -->
+<section id="section-2" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-purple-500/10 dark:bg-purple-500/15 flex items-center justify-center">
+      <i class="fas fa-scale-balanced text-purple-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">二、司法系统与制度变革</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Judicial System & Institutional Reform</p>
+    </div>
+  </div>
+
+  <!-- 2.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">2.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">联邦最高法院信任危机加深，仅 34% 民众信任 STF，司法权威面临系统性挑战</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>Master 银行丑闻波及 STF 多名官员，47% 受访者认为 STF 与该丑闻存在牵连。STF 邀请政治分析师提供危机公关建议，反映司法机构已意识到公信力危机的严重性。<strong>司法政治化趋势与极化选举叠加，可能动摇巴西民主制度的稳定基础。</strong>
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">仅大法官安德烈·门东萨的支持率超过反对率</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">前圣保罗州法院院长要求 STF 遵守 2008 年司法伦理法典</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">前总统特梅尔指出政治阶层是最常挑衅 STF 的群体</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">2.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">STF 限制司法官员额外津贴，预计年省 73 亿雷亚尔，司法薪酬改革迈出关键一步</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>STF 裁定司法官和检察院人员的额外津贴总额不得超过宪法薪酬上限的 35%，明确禁止未经授权的津贴支出。该决定直接触动司法系统内部利益，部分法官以退休威胁抗议，但改革方向不可逆转。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">允许的津贴包括职业年限津贴、差旅费、搬迁补助等特定类型</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">CNJ 与 CNMP 将联合制定执行细则与透明化标准</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">部分法官威胁退休被评论为"虚张声势"</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">2.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">Coaf 金融情报报告使用受限，反腐调查工具被收紧</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>莫拉斯大法官严格限制 Coaf 报告的使用范围，禁止"证据捕捞"式查询，要求必须有正式调查作为前提。该决定虽保护公民隐私，但可能削弱反腐调查的效率，尤其影响议会调查委员会的取证能力。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">四项核心要求：正式调查依据、明确被调查对象、内容与主题相关、禁止无针对性查询</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">此前曾发生泄露 STF 官员个人数据的事件</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">法律界担忧加剧司法不稳定性</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 2.4 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">2.4</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">参议院通过厌女症入刑法案，性别权益立法引发左右阵营激烈交锋</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>参议院全票通过将厌女症等同于种族主义的法案，最高可判 5 年监禁，但在众议院遭极右翼议员散布虚假信息阻挠。该法案成为 2026 年选举中文化战争的标志性议题。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">法案定为不可保释、不可追诉时效的犯罪</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">极右翼议员费雷拉称法案会"禁止日常问候"，被法律专家驳斥</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">跨性别议员希尔顿当选众议院妇女权利委员会主席引发右翼攻击</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 3: 外交博弈与主权争端 -->
+<!-- ============================================ -->
+<section id="section-3" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-blue-500/10 dark:bg-blue-500/15 flex items-center justify-center">
+      <i class="fas fa-globe-americas text-blue-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">三、外交博弈与主权争端</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Diplomatic Games & Sovereignty Disputes</p>
+    </div>
+  </div>
+
+  <!-- 3.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">3.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">美国拟将 PCC 和 CV 列为恐怖组织，巴西面临主权侵蚀与军事干预风险</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>特朗普政府考虑将巴西两大犯罪组织列为恐怖组织，巴西法律明确区分有组织犯罪与恐怖主义，认为此举可能为美国军事干预提供借口。巴西已联合墨西哥、哥伦比亚协调拉美共同立场，同时通过国内立法（国家恐怖组织名单法案）回应美方压力。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西外长与美国务卿鲁比奥就合作打击犯罪进行沟通，反对分类提议</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">弗拉维奥·博索纳罗向美国政府提交相关卷宗推动分类</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西情报局评估显示该分类将导致金融机构面临制裁风险</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">3.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">达伦·比蒂签证事件暴露巴美关系深层裂痕，外交对等原则被激活</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>美国特朗普政府顾问比蒂以参加矿产论坛为由申请签证，实际目的是探访狱中博索纳罗并接触选举机构，巴西以隐瞒真实目的为由撤销签证。该事件标志着巴美关系从贸易摩擦升级为政治干预层面的对抗，<strong>外交对等原则的激活意味着双边关系进入新的紧张周期</strong>。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">比蒂曾公开攻击巴西联邦最高法院，参与过白人至上主义活动</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西援引对等原则回应美方此前对巴西卫生部长的签证限制</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">美国后续撤销了对 STF 大法官莫拉斯的马格尼茨基制裁</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">3.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">弗拉维奥在 CPAC 呼吁用巴西稀土换取美国支持，"出卖主权"争议成为选举核心议题</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>弗拉维奥在美国 CPAC 上宣称巴西可成为美国稀土替代供应方，并呼吁国际监督巴西选举，被执政党指责为"叛国"。外交主权议题已被深度嵌入 2026 年大选叙事，卢拉阵营将"反美国干预"作为核心竞选策略。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PT 主席指责弗拉维奥"将国家变为美国殖民地"</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">弗拉维奥还要求美国对巴西选举施加外交压力</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">戈亚斯州与美国签署稀土合作备忘录引发联邦政府担忧</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3.4 with FTA Economic Impact Bar Chart -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">3.4</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">南方共同市场与欧盟自贸协定获批，27 年谈判落地重塑巴西外贸格局</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>巴西国会正式批准该协定，覆盖 7.18 亿人口、GDP 总量 22.4 万亿美元。协定将在 15 年内取消 91% 的欧盟进口关税，预计为巴西带来 <strong>0.34% 的 GDP 增长（约 370 亿雷亚尔）</strong>。该协定可能在 2026 年 5 月临时生效。
+        </p>
+      </div>
+
+      <!-- DATA VIZ: FTA Economic Impact -->
+      <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-5 sm:p-6 mb-5 border border-slate-200/40 dark:border-slate-600/20">
+        <div class="flex items-center gap-2 mb-4">
+          <i class="fas fa-chart-line text-amber-gold text-sm"></i>
+          <span class="text-xs font-semibold text-slate-500 dark:text-slate-400 uppercase tracking-wider">协定经济影响预测</span>
+        </div>
+        <div class="space-y-4">
+          <!-- GDP -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-sm font-medium text-slate-700 dark:text-slate-300"><i class="fas fa-arrow-trend-up text-emerald-500 mr-1.5 text-xs"></i>GDP 增长</span>
+              <span class="text-sm font-bold text-emerald-600 dark:text-emerald-400">+0.34%</span>
+            </div>
+            <div class="w-full h-6 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+              <div class="bar-fill h-full bg-gradient-to-r from-emerald-400 to-emerald-600 rounded-full" style="--bar-width: 12.8%"></div>
+            </div>
+          </div>
+          <!-- Export -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-sm font-medium text-slate-700 dark:text-slate-300"><i class="fas fa-ship text-blue-500 mr-1.5 text-xs"></i>出口增长</span>
+              <span class="text-sm font-bold text-blue-600 dark:text-blue-400">+2.65%</span>
+            </div>
+            <div class="w-full h-6 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+              <div class="bar-fill h-full bg-gradient-to-r from-blue-400 to-blue-600 rounded-full" style="--bar-width: 100%"></div>
+            </div>
+          </div>
+          <!-- Investment -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-sm font-medium text-slate-700 dark:text-slate-300"><i class="fas fa-building text-violet-500 mr-1.5 text-xs"></i>投资增长</span>
+              <span class="text-sm font-bold text-violet-600 dark:text-violet-400">+0.76%</span>
+            </div>
+            <div class="w-full h-6 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+              <div class="bar-fill h-full bg-gradient-to-r from-violet-400 to-violet-600 rounded-full" style="--bar-width: 28.7%"></div>
+            </div>
+          </div>
+          <!-- Wages -->
+          <div>
+            <div class="flex justify-between items-center mb-1.5">
+              <span class="text-sm font-medium text-slate-700 dark:text-slate-300"><i class="fas fa-wallet text-amber-500 mr-1.5 text-xs"></i>实际工资增长</span>
+              <span class="text-sm font-bold text-amber-600 dark:text-amber-400">+0.42%</span>
+            </div>
+            <div class="w-full h-6 bg-slate-200 dark:bg-navy-900/60 rounded-full overflow-hidden">
+              <div class="bar-fill h-full bg-gradient-to-r from-amber-400 to-amber-600 rounded-full" style="--bar-width: 15.8%"></div>
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-slate-400 dark:text-slate-500 mt-3 text-center">覆盖 7.18 亿人口 · GDP 总量 22.4 万亿美元 · 15 年内取消 91% 关税</p>
+      </div>
+
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">出口增长 2.65%、投资增长 0.76%、实际工资增长 0.42%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西已出台贸易保障措施法令保护国内敏感产业</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">乌拉圭、阿根廷已完成国内审批，巴拉圭即将投票</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 3.5 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">3.5</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">卢拉取消出席智利总统就职典礼，拉美右翼崛起加剧区域外交分化</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>卢拉因弗拉维奥确认出席而取消智利行程，反映拉美左右阵营在国际场合的直接对抗已常态化。智利新任极右翼总统卡斯托与博索纳罗家族关系密切，拉美政治版图的右移趋势对巴西外交空间构成压缩。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">弗拉维奥在智利期间与阿根廷总统米莱会面</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">双方原计划讨论生物海洋航线等合作项目被搁置</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西政府称取消行程因日程冲突，外界普遍认为是政治考量</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 4: 能源危机与燃油市场 -->
+<!-- ============================================ -->
+<section id="section-4" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-orange-500/10 dark:bg-orange-500/15 flex items-center justify-center">
+      <i class="fas fa-gas-pump text-orange-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">四、能源危机与燃油市场</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Energy Crisis & Fuel Market</p>
+    </div>
+  </div>
+
+  <!-- 4.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">4.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">中东冲突推高油价至 100 美元以上，巴西柴油价格飙升引发系统性民生冲击</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>美伊冲突导致布伦特原油突破 100 美元/桶、最高触及 120 美元/桶，巴西国内柴油价格涨幅近 20%。柴油作为物流和农业核心燃料，涨价迅速传导至食品价格和运输成本，加剧通胀压力，<strong>成为卢拉连任的最大经济威胁</strong>。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">联邦政府推出总额 300 亿雷亚尔的燃油补贴计划</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">取消柴油 PIS/Cofins 税，每升补贴 0.32 雷亚尔</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">对石油出口征收 12% 临时税弥补财政损失</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">4.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">卡车司机罢工威胁再现，政府以强化运费监管换取暂停，但结构性矛盾未解</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>柴油涨价引发卡车司机酝酿全国罢工，政府发布临时措施强化最低运费监管（违规罚款最高 1000 万雷亚尔），司机暂停罢工计划。但各州拒绝降低 ICMS 税费、Petrobras 涨价抵消部分补贴效果，<strong>结构性矛盾仍在积累，2018 年罢工瘫痪全国的风险并未消除</strong>。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">圣卡塔琳娜州法院提前禁止封锁公路，违者每日罚款 1-10 万雷亚尔</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">交通部长点名 MBRF、Raízen、Cargill 等企业未遵守最低运费</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西约 20%-30% 柴油需求依赖进口</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 4.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">4.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">BR Distribuidora 再国有化运动升温，81 名议员支持成立议会阵线</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>博索纳罗时期私有化 BR Distribuidora（现 Vibra Energia）导致政府失去燃油终端定价权，油价上涨时私人分销商快速转嫁成本。PT 发起再国有化运动已获 81 名议员支持，提出直接回购、创建新国企、市场收购三条路径，但面临 2029 年非竞争条款的法律障碍。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Vibra Energia 宣布航空煤油价格上调 54.63%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">石油工会 FUP 联合议会推动再国有化</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">政府讨论创建新国有燃油分销企业绕过非竞争条款</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 5: 财政金融与货币政策 -->
+<!-- ============================================ -->
+<section id="section-5" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/15 flex items-center justify-center">
+      <i class="fas fa-coins text-emerald-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">五、财政金融与货币政策</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Fiscal Finance & Monetary Policy</p>
+    </div>
+  </div>
+
+  <!-- 5.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">5.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">财长哈达德离任参选，杜里甘接任面临财政整固与选举年民粹压力的双重考验</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>哈达德任期内推动了 30 年未完成的消费税改革和个税改革，但公共债务占 GDP 比例从 71.4% 升至 78.7%。继任者杜里甘被视为政策延续者，但 2026 年财政盈余目标（GDP 的 0.25%）在选举年面临巨大执行压力。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">哈达德将个税豁免额提至月收入 5000 雷亚尔，惠及约 1000 万纳税人</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">2026 年第一季度已冻结 16 亿雷亚尔预算</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">新增 24000 多个公职岗位，2026 年预算影响达 53 亿雷亚尔</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">5.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">Master 银行 520 亿雷亚尔欺诈案持续发酵，BRB 银行面临 88 亿坏账，金融系统性风险显现</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>Master 银行欺诈案涉及至少 520 亿雷亚尔损失，波及联邦区前州长、里约前州长、STF 官员等三权分支多名人士。BRB 银行因收购 Master 不良资产面临 88 亿雷亚尔拨备压力，联邦区政府计划以公共物业注资 66 亿雷亚尔，<strong>该案件已成为 2026 年选举的重大政治变量</strong>。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">CPI 批准解除涉案人员泽特尔的银行和税务保密权</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">BRB 申请延长财报提交期限至 6 月底</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">反对党试图将丑闻与卢拉政府绑定，政府指出违规发生在博索纳罗时期</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 5.3 with Interest Rate Visualization -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">5.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">央行仅降息 0.25 个百分点至 14.75%，高利率持续压制消费与投资</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>受油价推高通胀预期影响，央行采取极为谨慎的降息节奏，未明确后续降息计划。Selic 利率维持在 14.75% 的高位，信用卡循环利率高达 <strong>438%/月</strong>，家庭债务问题严重，高利率环境持续压制私人投资和消费复苏。
+        </p>
+      </div>
+
+      <!-- DATA VIZ: Key Financial Metrics -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-5 border border-slate-200/40 dark:border-slate-600/20 text-center">
+          <div class="w-10 h-10 rounded-full bg-red-500/10 flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-percent text-red-500 text-sm"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-display font-bold text-red-600 dark:text-red-400 mb-1">14.75%</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">Selic 基准利率</div>
+          <div class="text-[10px] text-slate-400 dark:text-slate-500 mt-1">2024年5月以来首次降息</div>
+        </div>
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-5 border border-slate-200/40 dark:border-slate-600/20 text-center">
+          <div class="w-10 h-10 rounded-full bg-orange-500/10 flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-credit-card text-orange-500 text-sm"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-display font-bold text-orange-600 dark:text-orange-400 mb-1">438%</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">信用卡循环利率/月</div>
+          <div class="text-[10px] text-slate-400 dark:text-slate-500 mt-1">家庭债务问题严重</div>
+        </div>
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-5 border border-slate-200/40 dark:border-slate-600/20 text-center">
+          <div class="w-10 h-10 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
+            <i class="fas fa-industry text-blue-500 text-sm"></i>
+          </div>
+          <div class="text-3xl sm:text-4xl font-display font-bold text-blue-600 dark:text-blue-400 mb-1">17%</div>
+          <div class="text-xs text-slate-500 dark:text-slate-400 font-medium">固定投资占 GDP</div>
+          <div class="text-[10px] text-slate-400 dark:text-slate-500 mt-1">低于国际平均水平</div>
+        </div>
+      </div>
+
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">为 2024 年 5 月以来首次降息</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">PT 批评降息幅度过小，要求加快降息</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">固定资本形成总额占 GDP 比例仅约 17%，低于国际平均水平</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 6: 产业政策与关键矿产 -->
+<!-- ============================================ -->
+<section id="section-6" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-teal-500/10 dark:bg-teal-500/15 flex items-center justify-center">
+      <i class="fas fa-industry text-teal-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">六、产业政策与关键矿产</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Industrial Policy & Critical Minerals</p>
+    </div>
+  </div>
+
+  <!-- 6.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">6.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">巴西稀土战略博弈升温，联邦拟设国有矿业公司 Terrabras，关键矿产成为中美巴三角焦点</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>巴西拥有全球第二大稀土储量，联邦政府计划成立国家关键矿产委员会和国有矿业公司 Terrabras，卢拉明确要求外企在巴完成深加工后再出口。戈亚斯州率先与美国签署合作备忘录引发联邦"平行外交"担忧，<strong>稀土已成为巴西内政、外交和产业政策的交汇点</strong>。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">戈亚斯州拥有巴西唯一商业化稀土矿企 Serra Verde，由美国机构融资</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">戈亚斯州 2025 年通过法案设立关键矿产管理局</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">卢拉强调"不重蹈铁矿石贸易覆辙"</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">6.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">新工业巴西计划累计投入 3000 亿雷亚尔，制造业增加值增长 3.8%，但投资率仍远低于国际水平</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>NIB 计划带动 2024 年制造业增加值增长 3.8%，成为 GDP 增长主要拉动力。但巴西固定资产投资占 GDP 仅约 17%，远低于国际平均水平，高利率使短期投资回报率接近长期投资，扭曲了资本配置结构。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">2023-2026 年基础设施公私总投资规模将达 1 万亿雷亚尔</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">BNDES 提供约 30% 的融资支持</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">2025 年公共债务付息支出达 1 万亿雷亚尔，占 GDP 的 8.0%</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">6.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">数据中心产业税收优惠法案搁浅，但巴西仍是拉美最具吸引力市场</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>Redata 税收优惠计划在参议院搁置失效，大型企业暂停新投资公告。但穆迪预计未来四年该领域投资规模达 <strong>600-1000 亿雷亚尔</strong>，巴西可再生能源占比高、无战乱风险的地缘优势仍具吸引力。政策不确定性是当前最大障碍。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Equinix 已累计投资 2.62 亿美元，计划五年内翻倍</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">矿能部长强调可通过核电项目为 AI 数据中心提供能源保障</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">南里奥格兰德州 Scala AI City 项目投资约 30 亿雷亚尔但引发环保争议</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 6.4 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">6.4</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">巴欧自贸协定将重塑产业竞争格局，国内敏感产业面临进口冲击</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>协定生效后欧盟产品将逐步零关税进入巴西市场，国内农业和制造业将面临直接竞争压力。巴西已出台贸易保障措施法令，过渡期最长 30 年，但中资企业通过巴西向欧盟出口的通道也将打开。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">预计带来 421 亿雷亚尔进口增长和 521 亿雷亚尔出口增长</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西政府为保护本土产业设置了多项保障条款</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">协定可能面临欧洲法院司法审查</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 7: 劳工改革与平台经济 -->
+<!-- ============================================ -->
+<section id="section-7" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/15 flex items-center justify-center">
+      <i class="fas fa-users-gear text-indigo-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">七、劳工改革与平台经济</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Labor Reform & Platform Economy</p>
+    </div>
+  </div>
+
+  <!-- 7.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">7.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">废除 6x1 工作制改革加速推进，5 月提交国会表决，企业用工成本面临上调</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>众议院主席宣布 5 月将两项修宪提案提交全院表决，目标将周工时从 44 小时缩至 40 小时。71% 民众支持该改革，66.8% 正式劳动者已实行 5x2 工作制，但商业团体强烈反对，认为将增加企业成本。若国会拖延，政府将提交紧急法案。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">6x1 模式主要集中在小微企、农业、住宿餐饮、零售行业</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">航空运输、住宿服务行业 6x1 占比超 50%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">政府明确改革不降低劳动者薪资</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 7.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">7.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">平台劳动者监管法案陷入僵局，最低报酬标准成核心分歧</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>政府主张每单最低 10 雷亚尔，报告人提议 8.5 雷亚尔，平台企业坚决反对任何最低标准。法案将创建"平台劳动者"独立法律类别，限制平台佣金上限 30%。该法案预计 4 月底前提交全院表决，对在巴运营的平台企业影响重大。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">近 29% 客运订单低于 8.5 雷亚尔标准</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">索罗卡巴法院禁止 iFood 干预配送员罢工</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">劳工部长批评平台劳动为"劳动奴役"</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- ============================================ -->
+<!-- CHAPTER 8: 国防与安全 -->
+<!-- ============================================ -->
+<section id="section-8" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-rose-500/10 dark:bg-rose-500/15 flex items-center justify-center">
+      <i class="fas fa-shield-halved text-rose-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">八、国防与安全</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Defense & Security</p>
+    </div>
+  </div>
+
+  <!-- 8.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">8.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">巴西军费占 GDP 不足 1%，国防部长呼吁提至 2%，军事现代化计划启动</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>全球军费平均占 GDP 2.4%，巴西不足 1% 且 85% 用于人员开支。卢拉政府推出数十亿雷亚尔军事现代化计划，至 2031 年从财政框架中撤出 300 亿雷亚尔，核心项目包括国产潜艇、Gripen 战机本土生产、陆军升级。该计划兼具国防和拉拢军方的政治目的。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">首架完全本土生产的 F-39E Gripen 超音速战机亮相，项目总投资 285 亿雷亚尔</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西军队首次有女性晋升准将</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">前空军司令呼吁效仿美国 1986 年改革建立联合司令部</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 8.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">8.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">美国在南美 11 座军事基地紧邻巴西，巴拉圭批准美军建基地加剧地缘压力</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>美国在南美的军事存在持续扩大，巴拉圭参议院批准美国在靠近伊泰普水电站和瓜拉尼含水层的区域建立基地。巴西面临的地缘军事压力不仅来自恐怖组织分类争议，更来自美国在南美的战略布局对巴西资源主权的潜在威胁。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">美国借"巴西庇护中国基地"的不实指控开展混合战争</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西作为金砖国家主张建立绕过美元的结算体系</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">陆军司令呼吁左右阵营就国防议题展开超党派对话</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 9: 科技与数字监管 -->
+<!-- ============================================ -->
+<section id="section-9" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 dark:bg-cyan-500/15 flex items-center justify-center">
+      <i class="fas fa-microchip text-cyan-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">九、科技与数字监管</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Technology & Digital Regulation</p>
+    </div>
+  </div>
+
+  <!-- 9.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">9.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">ECA Digital 未成年人保护法生效，全球科技平台面临巴西合规新门槛</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>该法规禁止向未成年人提供无限滚动、自动播放等成瘾性设计，要求可靠年龄验证机制，违规最高罚款 <strong>5000 万雷亚尔</strong>。谷歌、WhatsApp 已宣布适配措施。该法规对在巴运营的所有数字平台构成直接合规要求。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">设立隶属联邦警察的国家儿童青少年数字保护中心</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">科技部通过 Finep 投入 1 亿雷亚尔开发 AI 安全解决方案</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">网红 Felca 的揭露视频播放量达 5200 万次加速法案通过</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 9.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">9.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">数字市场竞争监管法案紧急审议，大型科技平台将面临"系统重要性"认定</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>法案将全球年营收超 500 亿雷亚尔、巴西年营收超 50 亿雷亚尔的平台认定为"系统重要性平台"，扩大 Cade 监管权力。谷歌、Meta、亚马逊、TikTok 均反对该法案。法案跳过专项委员会直接进入全会审议，通过概率较高。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">设立专门的数字市场超级监管部门</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">可直接启动反垄断调查、规范数字市场行为</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">企业称法案会增加合规成本、减少技术投资</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 10: 环保与气候治理 -->
+<!-- ============================================ -->
+<section id="section-10" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-green-500/10 dark:bg-green-500/15 flex items-center justify-center">
+      <i class="fas fa-leaf text-green-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">十、环保与气候治理</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Environmental Protection & Climate Governance</p>
+    </div>
+  </div>
+
+  <!-- 10.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">10.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">巴西发布 2035 气候计划，承诺减排 59%-67%，COP30 东道国效应推动政策加速</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>卢拉政府正式发布国家气候变化计划，2035 年减排 59%-67%，2050 年实现气候中和。2026 年气候基金预算 275 亿雷亚尔，自 2023 年累计拨付 524 亿雷亚尔。作为 COP30 东道国，巴西在气候治理领域的政策力度和国际承诺均显著提升。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">亚马逊合法区域森林砍伐量下降 50%，塞拉多下降 32.3%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">Yanomami 原住民领地非法开采下降 98.77%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">STF 主席将气候保护提升至强制国际法规范</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 10.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">10.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">众议院法案试图限制卫星遥感执法，环保机构警告将削弱反毁林能力</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>议员提出法案限制以卫星数据为唯一依据的环保扣押措施，要求提前通知并给予解释时间。环保机构批评该法案将严重削弱亚马逊等难以实地核查区域的执法能力，与 STF 此前认可卫星数据作为执法依据的判决冲突。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">法案通过紧急程序加速审议</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">远程传感是快速识别和制止毁林的核心工具</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">STF 大法官 Dino 已禁止议会修正案资助环境破坏项目</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 10.3 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">10.3</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">政府拟采购煤电与气候承诺矛盾，环保组织强烈批评</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>卢拉政府计划采购煤电，源于去年国会通过的条款，与 COP30 减碳表态和环境部长立场直接冲突。该矛盾反映巴西能源转型中短期供应安全与长期减碳目标之间的结构性张力。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">环境部长玛丽娜·席尔瓦公开反对</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">合同细则正处于公众咨询阶段</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西同时加入全球核能产能倍增协议，计划 2050 年核电量增至三倍</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 11: 医疗与公共卫生 -->
+<!-- ============================================ -->
+<section id="section-11" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-pink-500/10 dark:bg-pink-500/15 flex items-center justify-center">
+      <i class="fas fa-heart-pulse text-pink-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">十一、医疗与公共卫生</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Healthcare & Public Health</p>
+    </div>
+  </div>
+
+  <!-- 11.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">11.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">里约率先在 SUS 提供 Ozempic，肥胖治疗药物专利到期将重塑市场格局</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>里约成为巴西首个通过 SUS 提供司美格鲁肽的城市，该药物专利 3 月 20 日在巴西到期，本土仿制药即将上市。巴西 31% 人口患有肥胖症，该药物市场潜力巨大，但黑市盗抢和假药泛滥问题突出，Anvisa 已加强监管。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">2025 年此类药物销量同比增长 88%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">圣保罗州仅盗抢相关损失接近 6900 万雷亚尔</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">圣卡塔琳娜州议员提出为 III 度肥胖患者免费提供替尔泊肽</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 11.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">11.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">中东冲突可能推高药品价格，巴西推动本土医药全产业链生产</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>卫生部长警告中东冲突将通过影响原料药进口和物流航线推高药品价格。巴西超 90% 活性原料药依赖进口，Brainfarma 制药厂将启动 Buscopan 活性成分本土生产，成为拉美首个能本土生产该原料药的国家，获 BNDES 超 2.5 亿雷亚尔融资。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">部分药品原料依赖印度进口，物流途经中东</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">本土医药生产属于"新工业巴西"政策框架</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">卢拉称 SUS 为"拯救生命的导弹"</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 12: 教育与人力资本 -->
+<!-- ============================================ -->
+<section id="section-12" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-yellow-500/10 dark:bg-yellow-500/15 flex items-center justify-center">
+      <i class="fas fa-graduation-cap text-yellow-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">十二、教育与人力资本</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Education & Human Capital</p>
+    </div>
+  </div>
+
+  <!-- 12.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">12.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">联邦教育体系大规模扩编，新增 16300 个教育岗位，职业教育成为政策重点</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>卢拉签署法案新增 16300 个教育部岗位（含 9587 名职业教育教师），同时设立帕托斯联邦理工学院，2026 年预算影响 53 亿雷亚尔。职业技术教育的扩张反映政府试图通过人力资本投资应对产业升级需求。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">99000 所公立学校完成网络连通，覆盖率达 71.7%</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">同步启动 107 项教育基建项目</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">联邦高校技术行政人员因薪资协议未落实发起全国罢工</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- CHAPTER 13: 人文与社会思潮 -->
+<!-- ============================================ -->
+<section id="section-13" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-slate-500/10 dark:bg-slate-500/15 flex items-center justify-center">
+      <i class="fas fa-people-group text-slate-500 text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">十三、人文与社会思潮</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Humanities & Social Trends</p>
+    </div>
+  </div>
+
+  <!-- 13.1 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">13.1</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">左翼七党青年联合成立"进步青年论坛"，对抗极右翼文化攻势</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>PT、PSOL 等七个左翼政党青年组织联合成立论坛，提出终结 6x1 工作制、零票价公交、应对气候变化等议题，计划 4 月 15 日组织全国游行。该运动反映左翼阵营试图通过青年动员和文化战争回应极右翼的社会影响力扩张。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">南里奥格兰德州工会联合会举办第一届国际反法西斯大会</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">吸引阿根廷、乌拉圭、墨西哥等多国工会代表参与</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">论坛计划 4 月参与巴西中学生联盟大会</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 13.2 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-6 rounded-md bg-amber-gold/15 text-amber-gold text-xs font-bold">13.2</span>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">圣卡塔琳娜州排外情绪抬头，"白人至上"言论与移民管控政策引发社会撕裂</h3>
+      </div>
+      <div class="insight-highlight rounded-lg p-4 mb-5">
+        <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+          <span class="text-amber-dark dark:text-amber-gold font-semibold">关键洞察：</span>该州历史上的欧洲移民聚居传统催生了"德国式工作优越"的社会优越感，近年出现边境拦截移民、组建志愿巡逻队、宣扬"如何生德国宝宝"等极端现象。保守派政治人物借移民和本土文化议题造势，族群融合问题成为地方政治的敏感议题。
+        </p>
+      </div>
+      <div class="space-y-2.5">
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">弗洛里亚诺波利斯市实施边境拦截政策</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">有网红发布鼓吹白皙皮肤婴儿的视频</p>
+        </div>
+        <div class="flex items-start gap-2.5">
+          <i class="fas fa-circle-check text-brazil-green text-xs mt-1.5 shrink-0"></i>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">左翼人士指出该州极端主义思潮正在抬头</p>
+        </div>
+      </div>
+    </div>
+  </article>
+</section>
+
+<!-- Divider -->
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"><div class="h-px bg-gradient-to-r from-transparent via-slate-300 dark:via-slate-600 to-transparent"></div></div>
+
+<!-- ============================================ -->
+<!-- FULL SUMMARY -->
+<!-- ============================================ -->
+<section id="summary" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="flex items-center gap-3 mb-10 reveal">
+    <div class="w-12 h-12 rounded-xl bg-amber-gold/10 dark:bg-amber-gold/15 flex items-center justify-center">
+      <i class="fas fa-flag-checkered text-amber-gold text-lg"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">全文总结</h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-1">Executive Summary</p>
+    </div>
+  </div>
+
+  <!-- 政治环境概述 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-red-500/10 dark:bg-red-500/15 flex items-center justify-center">
+          <i class="fas fa-landmark text-red-500 text-sm"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">政治环境概述</h3>
+      </div>
+      <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+        2026 年 3 月巴西全面进入大选模式，18 名部长集体离任创历史纪录，政策执行力将在未来 6-8 个月显著下降。卢拉与弗拉维奥支持率胶着，PSD 放弃中间派路线转向右翼，政治极化已无缓冲空间。Master 银行丑闻波及三权分支，STF 公信力降至 34%，司法系统面临系统性信任危机。博索纳罗家族虽受司法追诉但政治动员能力未减，右翼阵营通过美国 CPAC 等国际平台持续施压，2026 年大选结果高度不确定。
+      </p>
+    </div>
+  </article>
+
+  <!-- 经济发展概述 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/15 flex items-center justify-center">
+          <i class="fas fa-chart-line text-emerald-500 text-sm"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">经济发展概述</h3>
+      </div>
+      <p class="text-sm text-slate-700 dark:text-slate-300 leading-relaxed">
+        中东冲突推高油价成为最大外部冲击，柴油价格飙升引发卡车司机罢工威胁和通胀压力，联邦政府推出 300 亿雷亚尔燃油补贴但各州拒绝配合减税。央行仅降息 0.25 个百分点至 14.75%，高利率持续压制消费和投资。财长换人后财政整固面临选举年民粹压力，公共债务占 GDP 已达 78.7%。积极面包括：南方共同市场与欧盟自贸协定获批将带来 0.34% 的 GDP 增长，新工业巴西计划累计投入 3000 亿雷亚尔带动制造业增长 3.8%，失业率降至历史低位 5.6%。
+      </p>
+    </div>
+  </article>
+
+  <!-- 营商环境洞察 -->
+  <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-6 reveal">
+    <div class="p-6 sm:p-8">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-8 h-8 rounded-lg bg-blue-500/10 dark:bg-blue-500/15 flex items-center justify-center">
+          <i class="fas fa-briefcase text-blue-500 text-sm"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-slate-900 dark:text-white leading-snug">营商环境洞察</h3>
+      </div>
+      <div class="space-y-4">
+        <!-- 法规变化 -->
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-4 border border-slate-200/40 dark:border-slate-600/20">
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-gavel text-violet-500 text-xs"></i>
+            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">法规变化</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">数字市场竞争法案将对大型科技平台施加"系统重要性"认定和专项监管；ECA Digital 对未成年人保护提出严格合规要求；平台劳动者监管法案将设立最低报酬标准和佣金上限</p>
+        </div>
+        <!-- 税收调整 -->
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-4 border border-slate-200/40 dark:border-slate-600/20">
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-receipt text-orange-500 text-xs"></i>
+            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">税收调整</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">消费税改革已通过，个税豁免额提至月收入 5000 雷亚尔；MEI 年营收上限拟从 8.1 万提至 13 万雷亚尔；石油出口临时征收 12% 监管税</p>
+        </div>
+        <!-- 市场准入 -->
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-4 border border-slate-200/40 dark:border-slate-600/20">
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-door-open text-teal-500 text-xs"></i>
+            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">市场准入</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴欧自贸协定将在 15 年内逐步取消 91% 关税，为通过巴西进入欧盟市场创造新通道；关键矿产领域外企被要求在巴完成深加工；数据中心税收优惠法案搁浅增加政策不确定性</p>
+        </div>
+        <!-- 基础设施 -->
+        <div class="bg-slate-50 dark:bg-navy-800/50 rounded-xl p-4 border border-slate-200/40 dark:border-slate-600/20">
+          <div class="flex items-center gap-2 mb-2">
+            <i class="fas fa-road text-amber-500 text-xs"></i>
+            <span class="text-sm font-semibold text-slate-800 dark:text-slate-200">基础设施</span>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">2023-2026 年基础设施总投资预计达 1 万亿雷亚尔；BR-319 公路修复招标启动（6.78 亿雷亚尔）；桑托斯港巨型码头拍卖推进中</p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- 中资企业建议 -->
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-6 mt-10">
+      <div class="w-8 h-8 rounded-lg bg-brazil-green/10 dark:bg-brazil-green/15 flex items-center justify-center">
+        <i class="fas fa-compass text-brazil-green text-sm"></i>
+      </div>
+      <h3 class="font-display text-xl font-bold text-slate-900 dark:text-white">中资企业建议</h3>
+    </div>
+
+    <!-- 1. 关键矿产与资源领域 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-emerald-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-gem text-emerald-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">关键矿产与资源领域</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西拟设国有矿业公司 Terrabras 并要求外企在巴完成深加工，中资矿业企业应提前布局本土加工产能，避免仅作为原料采购方。戈亚斯州与美国的稀土合作备忘录表明美方正加速锁定巴西资源，中资企业需加快与联邦政府层面的战略对接，关注国家关键矿产委员会的政策走向</p>
+      </div>
+    </article>
+
+    <!-- 2. 基建与制造业 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-blue-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-industry text-blue-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">基建与制造业</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">新工业巴西计划 3000 亿雷亚尔投入和 1 万亿基础设施投资创造了大量合作机会，尤其是轨道交通设备（圣保罗 56 亿雷亚尔融资）、炼油厂升级（90 亿雷亚尔）、校车等交通装备领域。曹达与长安汽车的合作模式（柔性燃料车 + 电动车）可作为中资车企进入巴西市场的参考路径</p>
+      </div>
+    </article>
+
+    <!-- 3. 数字经济与数据中心 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-cyan-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-server text-cyan-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">数字经济与数据中心</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西数据中心市场未来四年投资规模 600-1000 亿雷亚尔，但 Redata 税收优惠搁浅增加不确定性。中资科技企业应关注政策重启窗口，同时注意 ECA Digital 和数字市场竞争法案带来的合规要求，提前适配年龄验证、数据保护等技术方案</p>
+      </div>
+    </article>
+
+    <!-- 4. 医药与健康产业 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-pink-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-pills text-pink-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">医药与健康产业</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西超 90% 活性原料药依赖进口，政府正大力推动本土医药全产业链生产，BNDES 提供超 2.5 亿雷亚尔融资支持。Ozempic 专利到期后仿制药市场即将打开，中资药企可关注原料药供应和仿制药合作机会，尤其是通过"新工业巴西"政策框架获取融资支持</p>
+      </div>
+    </article>
+
+    <!-- 5. 绿色产业与能源转型 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-green-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-solar-panel text-green-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">绿色产业与能源转型</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴西 2035 年减排 59%-67% 的承诺、275 亿雷亚尔气候基金、核电扩容计划和生物柴油混合比例提升（15%→20%）均创造了绿色投资机会。绿氢协会提议用石油特许权使用费资助低碳氢项目，中资新能源企业可关注该领域的政策性融资通道</p>
+      </div>
+    </article>
+
+    <!-- 6. 合规风险管理 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-amber-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-shield-halved text-amber-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">合规风险管理</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">选举年政策波动加大，需密切关注：</p>
+        <div class="space-y-2">
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-amber-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">巴欧自贸协定生效后的关税调整时间表和保障措施触发条件</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-amber-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">平台劳动者法案对用工模式的影响</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-amber-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">数字监管法案对数据处理和算法透明度的要求</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-amber-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">环保执法力度变化（卫星遥感执法限制法案走向）</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-amber-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">反腐调查扩大化对商业合作伙伴的尽调要求</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7. 政治风险对冲 -->
+    <article class="insight-card bg-white dark:bg-navy-700 rounded-2xl border border-slate-200/60 dark:border-slate-600/30 overflow-hidden mb-4 reveal border-l-4 border-l-red-500">
+      <div class="p-6 sm:p-8">
+        <div class="flex items-center gap-3 mb-3">
+          <i class="fas fa-chess text-red-500 text-sm"></i>
+          <h4 class="font-display text-base font-bold text-slate-900 dark:text-white">政治风险对冲</h4>
+        </div>
+        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-3">2026 年大选结果高度不确定，卢拉与弗拉维奥支持率胶着，两种政策路径差异巨大（卢拉延续国家资本主义 vs 弗拉维奥新自由主义私有化）。建议中资企业：</p>
+        <div class="space-y-2">
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-red-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">避免与任何一方政治阵营过度绑定</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-red-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">重点维护与联邦技术官僚层（而非政治任命层）的关系</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-red-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">对涉及 Master 银行丑闻的商业伙伴进行紧急尽调</p>
+          </div>
+          <div class="flex items-start gap-2.5">
+            <i class="fas fa-circle-check text-red-500 text-xs mt-1.5 shrink-0"></i>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">关注美国将 PCC/CV 列为恐怖组织的进展，评估可能的金融制裁对供应链和银行合作的连锁影响</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="border-t border-slate-200/60 dark:border-slate-700/40 mt-8">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="text-center sm:text-left">
+        <div class="flex items-center gap-2 justify-center sm:justify-start mb-2">
+          <span class="w-2 h-2 rounded-full bg-brazil-green"></span>
+          <span class="w-2 h-2 rounded-full bg-brazil-yellow"></span>
+          <span class="text-sm font-display font-semibold text-slate-700 dark:text-slate-300">Supinfor Ltd.</span>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400">2026年4月15日 · 巴西区域国别洞察报告</p>
+      </div>
+      <div class="text-center sm:text-right">
+        <p class="text-xs text-slate-400 dark:text-slate-500 leading-relaxed">数据来源：2026年3月巴西国别资讯月报<br>基于 221 条原始资讯 · 38 个关联簇 · 42 条洞察提炼</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 w-11 h-11 rounded-full bg-amber-gold/90 hover:bg-amber-gold text-white shadow-lg flex items-center justify-center transition-all duration-300 opacity-0 translate-y-4 pointer-events-none z-40" aria-label="返回顶部">
+  <i class="fas fa-chevron-up text-sm"></i>
+</button>
+
+</main>
+
+<script>
+// ========== Theme Management ==========
+function getThemePreference() {
+  const stored = localStorage.getItem('theme');
+  if (stored) return stored;
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.classList.toggle('dark', theme === 'dark');
+  localStorage.setItem('theme', theme);
+}
+
+function toggleTheme() {
+  const current = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+  applyTheme(current === 'dark' ? 'light' : 'dark');
+}
+
+// Apply theme immediately
+applyTheme(getThemePreference());
+
+// Listen for system theme changes
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  if (!localStorage.getItem('theme')) {
+    applyTheme(e.matches ? 'dark' : 'light');
+  }
+});
+
+// ========== Mobile Menu ==========
+function toggleMobileMenu() {
+  const sidebar = document.getElementById('mobileSidebar');
+  const overlay = document.getElementById('mobileOverlay');
+  const isOpen = !sidebar.classList.contains('-translate-x-full');
+  
+  if (isOpen) {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('opacity-0');
+    setTimeout(() => overlay.classList.add('hidden'), 300);
+  } else {
+    overlay.classList.remove('hidden');
+    requestAnimationFrame(() => {
+      overlay.classList.remove('opacity-0');
+      sidebar.classList.remove('-translate-x-full');
+    });
+  }
+}
+
+// ========== Scroll Animations ==========
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      // Animate bar fills
+      entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+        setTimeout(() => bar.classList.add('animated'), 200);
+      });
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ========== Active Sidebar Link ==========
+const sections = document.querySelectorAll('section[id^="section-"]');
+const sidebarLinks = document.querySelectorAll('#sidebarNav .sidebar-link');
+const mobileLinks = document.querySelectorAll('#mobileNav .sidebar-link');
+
+function updateActiveLink() {
+  let current = '';
+  sections.forEach(section => {
+    const rect = section.getBoundingClientRect();
+    if (rect.top <= 120) current = section.id;
+  });
+  
+  [sidebarLinks, mobileLinks].forEach(links => {
+    links.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  });
+}
+
+window.addEventListener('scroll', updateActiveLink, { passive: true });
+
+// ========== Back to Top Button ==========
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    backToTop.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+    backToTop.classList.add('opacity-100', 'translate-y-0');
+  } else {
+    backToTop.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+    backToTop.classList.remove('opacity-100', 'translate-y-0');
+  }
+}, { passive: true });
+
+// ========== Initial State ==========
+document.addEventListener('DOMContentLoaded', () => {
+  updateActiveLink();
+  // Trigger reveal for elements already in viewport
+  document.querySelectorAll('.reveal').forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      el.classList.add('visible');
+      el.querySelectorAll('.bar-fill').forEach(bar => {
+        setTimeout(() => bar.classList.add('animated'), 500);
+      });
+    }
+  });
+});
+</script>
+</body>
+</html>
