@@ -1,0 +1,1737 @@
+/**
+ * Report data — builds PRODUCTS from embedded report metadata.
+ *
+ * The JSON is embedded inline so the page works both via HTTP and file:// protocol.
+ *
+ *   PRODUCTS.rr  → Regional Intel   (categoryId: "regional-intel")
+ *   PRODUCTS.ii  → Industry Intel   (categoryId: "industry-intel")
+ */
+
+var REPORT_META = null;
+var PRODUCTS = { rr: null, ii: null };
+
+var CAT_TO_PRODUCT = {
+  'regional-intel': 'rr',
+  'industry-intel': 'ii'
+};
+
+var TYPE_I18N_MAP = {
+  'country-insight':       { nameKey: 'nav_country_insight_monthly', descKey: 'insights_rr_country_monthly_desc' },
+  'sector-briefing':       { nameKey: 'nav_key_sector_briefing',     descKey: 'insights_rr_sector_briefing_desc' },
+  'bilateral-briefing':    { nameKey: 'nav_bilateral_dynamics',      descKey: 'insights_rr_bilateral_desc' },
+  'industry-briefing':     { nameKey: 'nav_industry_dynamics',       descKey: 'insights_rr_industry_dynamics_desc' },
+  'business-env':          { nameKey: 'nav_biz_env_dynamics',        descKey: 'insights_rr_biz_dynamics_desc' },
+  'industry-research':     { nameKey: 'nav_industry_research_report',descKey: 'insights_ii_research_desc' },
+  'industry-insight':      { nameKey: 'nav_industry_insight_monthly',descKey: 'insights_ii_monthly_desc' },
+  'trends-alerts':         { nameKey: 'nav_trends_alerts',           descKey: 'insights_ii_trends_alerts_desc' },
+  'corporate-intel':       { nameKey: 'nav_corp_intel',              descKey: 'insights_ii_corp_intel_desc' },
+  'brand-reputation':      { nameKey: 'nav_brand_reputation',        descKey: 'insights_ii_brand_rep_desc' }
+};
+
+function buildProducts(json) {
+  REPORT_META = json;
+  var lang = (window.Lang && Lang.getLang()) || 'en';
+
+  function label(obj) {
+    if (!obj) return '';
+    return obj[lang] || obj['en'] || '';
+  }
+
+  function tagLabels(tagIds) {
+    return tagIds.map(function(tid) {
+      var tagDef = json.tags[tid];
+      return tagDef ? label(tagDef) : tid;
+    }).join(' \u00b7 ');
+  }
+
+  var typesByCategory = {};
+  Object.keys(json.types).forEach(function(typeId) {
+    var typeDef = json.types[typeId];
+    var catId = typeDef.categoryId;
+    if (!typesByCategory[catId]) typesByCategory[catId] = [];
+    typesByCategory[catId].push({ typeId: typeId, def: typeDef });
+  });
+
+  var reportsByType = {};
+  json.reports.forEach(function(r) {
+    if (!reportsByType[r.typeId]) reportsByType[r.typeId] = [];
+    reportsByType[r.typeId].push(r);
+  });
+
+  Object.keys(reportsByType).forEach(function(typeId) {
+    reportsByType[typeId].sort(function(a, b) {
+      var da = a.date.replace(/\//g, '');
+      var db = b.date.replace(/\//g, '');
+      while (da.length < 8) da += '99';
+      while (db.length < 8) db += '99';
+      return db.localeCompare(da);
+    });
+  });
+
+  Object.keys(CAT_TO_PRODUCT).forEach(function(catId) {
+    var productId = CAT_TO_PRODUCT[catId];
+    var types = typesByCategory[catId] || [];
+
+    var typeArr = types.map(function(t) {
+      var i18nMap = TYPE_I18N_MAP[t.typeId];
+      var reports = (reportsByType[t.typeId] || []).map(function(r) {
+        var ri18n = r.i18n || {};
+        var rLang = ri18n[lang] || ri18n['en'] || {};
+        return {
+          id: r.id,
+          title: rLang.title || r.id,
+          tags: tagLabels(r.tags || []),
+          date: r.date,
+          cover: r.cover ? ('industry_reports/covers/' + r.cover.file) : '',
+          coverCredit: r.cover ? r.cover.credit : '',
+          file: r.file ? ('industry_reports/reports/' + r.file) : '#'
+        };
+      });
+
+      return {
+        typeId: t.typeId,
+        nameKey: i18nMap ? i18nMap.nameKey : ('nav_' + t.typeId.replace(/-/g, '_')),
+        descKey: i18nMap ? i18nMap.descKey : ('insights_' + productId + '_' + t.typeId.replace(/-/g, '_') + '_desc'),
+        name_zh: t.def.zh,
+        name_en: t.def.en,
+        reports: reports
+      };
+    });
+
+    PRODUCTS[productId] = {
+      id: productId,
+      nameKey: 'insights_product_' + productId + '_name',
+      labelKey: 'insights_product_' + productId + '_label',
+      descKey: 'insights_product_' + productId + '_desc',
+      types: typeArr
+    };
+  });
+}
+
+function rebuildProducts() {
+  if (REPORT_META) buildProducts(REPORT_META);
+}
+
+/* ── Embedded report metadata ── */
+var REPORT_JSON = {
+  "$schema": "report-metadata-v1",
+  "generatedAt": "2026-04-30",
+  "categories": {
+    "regional-intel": {
+      "zh": "区域国别洞察",
+      "en": "Regional Intel"
+    },
+    "industry-intel": {
+      "zh": "全球商情速递",
+      "en": "Industry Intelligence"
+    }
+  },
+  "types": {
+    "country-insight": {
+      "categoryId": "regional-intel",
+      "zh": "国别洞察月报",
+      "en": "Country Insight Monthly"
+    },
+    "sector-briefing": {
+      "categoryId": "regional-intel",
+      "zh": "重点领域速览",
+      "en": "Key Sector Briefing"
+    },
+    "bilateral-briefing": {
+      "categoryId": "regional-intel",
+      "zh": "双边动态速览",
+      "en": "Bilateral Dynamics Briefing"
+    },
+    "industry-briefing": {
+      "categoryId": "regional-intel",
+      "zh": "行业动态速览",
+      "en": "Industry Dynamics Briefing"
+    },
+    "business-env": {
+      "categoryId": "regional-intel",
+      "zh": "营商环境动态速览",
+      "en": "Business Environment Dynamics"
+    },
+    "industry-research": {
+      "categoryId": "industry-intel",
+      "zh": "行业研究报告",
+      "en": "Industry Research Report"
+    },
+    "industry-insight": {
+      "categoryId": "industry-intel",
+      "zh": "行业洞察月报",
+      "en": "Industry Insight Monthly"
+    },
+    "trends-alerts": {
+      "categoryId": "industry-intel",
+      "zh": "行业趋势与警示速览",
+      "en": "Trends & Alerts Briefing"
+    },
+    "corporate-intel": {
+      "categoryId": "industry-intel",
+      "zh": "企业商业情报分析",
+      "en": "Corporate Intelligence Briefing"
+    },
+    "brand-reputation": {
+      "categoryId": "industry-intel",
+      "zh": "企业品牌声誉分析",
+      "en": "Brand Reputation Analysis"
+    }
+  },
+  "tags": {
+    "brazil": {
+      "zh": "巴西",
+      "en": "Brazil"
+    },
+    "russia": {
+      "zh": "俄罗斯",
+      "en": "Russia"
+    },
+    "india": {
+      "zh": "印度",
+      "en": "India"
+    },
+    "indonesia": {
+      "zh": "印度尼西亚",
+      "en": "Indonesia"
+    },
+    "germany": {
+      "zh": "德国",
+      "en": "Germany"
+    },
+    "japan": {
+      "zh": "日本",
+      "en": "Japan"
+    },
+    "usa": {
+      "zh": "美国",
+      "en": "USA"
+    },
+    "thailand": {
+      "zh": "泰国",
+      "en": "Thailand"
+    },
+    "malaysia": {
+      "zh": "马来西亚",
+      "en": "Malaysia"
+    },
+    "ukraine": {
+      "zh": "乌克兰",
+      "en": "Ukraine"
+    },
+    "pakistan": {
+      "zh": "巴基斯坦",
+      "en": "Pakistan"
+    },
+    "saudi-arabia": {
+      "zh": "沙特阿拉伯",
+      "en": "Saudi Arabia"
+    },
+    "israel": {
+      "zh": "以色列",
+      "en": "Israel"
+    },
+    "iran": {
+      "zh": "伊朗",
+      "en": "Iran"
+    },
+    "china": {
+      "zh": "中国",
+      "en": "China"
+    },
+    "ai": {
+      "zh": "人工智能",
+      "en": "AI"
+    },
+    "semiconductor": {
+      "zh": "半导体",
+      "en": "Semiconductor"
+    },
+    "battery": {
+      "zh": "动力电池",
+      "en": "Power Battery"
+    },
+    "solar": {
+      "zh": "光伏",
+      "en": "Solar / PV"
+    },
+    "automotive": {
+      "zh": "汽车制造",
+      "en": "Automotive"
+    },
+    "robotics": {
+      "zh": "机器人",
+      "en": "Robotics"
+    },
+    "engineering": {
+      "zh": "工程承包",
+      "en": "Engineering & Construction"
+    },
+    "construction-machinery": {
+      "zh": "工程机械",
+      "en": "Construction Machinery"
+    },
+    "defense": {
+      "zh": "国防科工",
+      "en": "Defense & Aerospace"
+    },
+    "power-equipment": {
+      "zh": "电力设备",
+      "en": "Power Equipment"
+    },
+    "energy": {
+      "zh": "能源矿业",
+      "en": "Energy & Mining"
+    },
+    "finance": {
+      "zh": "金融服务",
+      "en": "Financial Services"
+    },
+    "consumer-electronics": {
+      "zh": "消费电子",
+      "en": "Consumer Electronics"
+    },
+    "agriculture": {
+      "zh": "农业",
+      "en": "Agriculture"
+    },
+    "education": {
+      "zh": "教育",
+      "en": "Education"
+    },
+    "environment": {
+      "zh": "环保",
+      "en": "Environment"
+    },
+    "technology": {
+      "zh": "科技",
+      "en": "Technology"
+    },
+    "politics": {
+      "zh": "政治",
+      "en": "Politics"
+    },
+    "diplomacy": {
+      "zh": "外交",
+      "en": "Diplomacy"
+    },
+    "livelihood": {
+      "zh": "民生",
+      "en": "Livelihood"
+    },
+    "economy": {
+      "zh": "经济",
+      "en": "Economy"
+    },
+    "industry": {
+      "zh": "产业",
+      "en": "Industry"
+    },
+    "southeast-asia": {
+      "zh": "东南亚",
+      "en": "Southeast Asia"
+    },
+    "dyson": {
+      "zh": "Dyson（戴森）",
+      "en": "Dyson"
+    },
+    "palantir": {
+      "zh": "Palantir",
+      "en": "Palantir"
+    },
+    "vinfast": {
+      "zh": "VinFast",
+      "en": "VinFast"
+    },
+    "dji": {
+      "zh": "大疆创新（DJI）",
+      "en": "DJI"
+    },
+    "hd-hyundai": {
+      "zh": "HD现代重工",
+      "en": "HD Hyundai"
+    },
+    "roborock": {
+      "zh": "石头科技（Roborock）",
+      "en": "Roborock"
+    }
+  },
+  "reports": [
+    {
+      "id": "202603-brazil-country-insight",
+      "file": "202603-brazil-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "brazil"
+      ],
+      "cover": {
+        "file": "202603-brazil-country-insight.jpg",
+        "credit": "Agustin Diaz Gargiulo / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "巴西国别洞察月报"
+        },
+        "en": {
+          "title": "Brazil Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202604-dyson-brand-reputation",
+      "file": "202604-dyson-brand-reputation.html",
+      "typeId": "brand-reputation",
+      "date": "2026/04",
+      "tags": [
+        "dyson"
+      ],
+      "cover": {
+        "file": "202604-dyson-brand-reputation.jpg",
+        "credit": "Loewe Technology / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "Dyson品牌声誉分析报告"
+        },
+        "en": {
+          "title": "Dyson Brand Reputation Analysis"
+        }
+      }
+    },
+    {
+      "id": "202604-palantir-brand-reputation",
+      "file": "202604-palantir-brand-reputation.html",
+      "typeId": "brand-reputation",
+      "date": "2026/04",
+      "tags": [
+        "palantir"
+      ],
+      "cover": {
+        "file": "202604-palantir-brand-reputation.jpg",
+        "credit": "Luke Chesser / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "Palantir品牌声誉分析报告"
+        },
+        "en": {
+          "title": "Palantir Brand Reputation Analysis"
+        }
+      }
+    },
+    {
+      "id": "202604-vinfast-corporate-intel",
+      "file": "202604-vinfast-corporate-intel.html",
+      "typeId": "corporate-intel",
+      "date": "2026/04",
+      "tags": [
+        "vinfast"
+      ],
+      "cover": {
+        "file": "202604-vinfast-corporate-intel.jpg",
+        "credit": "CHUTTERSNAP / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "VinFast商业情报分析报告"
+        },
+        "en": {
+          "title": "VinFast Corporate Intelligence Briefing"
+        }
+      }
+    },
+    {
+      "id": "202602-ai-industry-insight",
+      "file": "202602-ai-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "ai"
+      ],
+      "cover": {
+        "file": "202602-ai-industry-insight.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "人工智能行业洞察月报"
+        },
+        "en": {
+          "title": "AI Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202603-russia-country-insight",
+      "file": "202603-russia-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "russia"
+      ],
+      "cover": {
+        "file": "202603-russia-country-insight.jpg",
+        "credit": "Michael Parulava / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "俄罗斯国别洞察月报"
+        },
+        "en": {
+          "title": "Russia Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260405-russia-ukraine-bilateral-briefing",
+      "file": "20260405-russia-ukraine-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "russia",
+        "ukraine"
+      ],
+      "cover": {
+        "file": "20260405-russia-ukraine-bilateral-briefing.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "俄罗斯与乌克兰双边动态速览"
+        },
+        "en": {
+          "title": "Russia–Ukraine Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-russia-defense-sector-briefing",
+      "file": "20260412-russia-defense-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "russia",
+        "defense"
+      ],
+      "cover": {
+        "file": "20260412-russia-defense-sector-briefing.jpg",
+        "credit": "Michael Parulava / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "俄罗斯国防科工领域动态速览"
+        },
+        "en": {
+          "title": "Russia Defense Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260329-russia-energy-industry-briefing",
+      "file": "20260329-russia-energy-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "russia",
+        "energy"
+      ],
+      "cover": {
+        "file": "20260329-russia-energy-industry-briefing.jpg",
+        "credit": "Michael Parulava / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "俄罗斯能源矿业行业动态速览"
+        },
+        "en": {
+          "title": "Russia Energy & Mining Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-russia-business-env",
+      "file": "20260419-russia-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "russia"
+      ],
+      "cover": {
+        "file": "20260419-russia-business-env.jpg",
+        "credit": "Michael Parulava / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "俄罗斯营商环境动态速览"
+        },
+        "en": {
+          "title": "Russia Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202603-solar-trends-alerts",
+      "file": "202603-solar-trends-alerts.html",
+      "typeId": "trends-alerts",
+      "date": "2026/03",
+      "tags": [
+        "solar"
+      ],
+      "cover": {
+        "file": "202603-solar-trends-alerts.jpg",
+        "credit": "American Public Power Association / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "光伏行业趋势与风险速览"
+        },
+        "en": {
+          "title": "Solar Industry Trends & Alerts Briefing"
+        }
+      }
+    },
+    {
+      "id": "202603-battery-industry-insight",
+      "file": "202603-battery-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/03",
+      "tags": [
+        "battery"
+      ],
+      "cover": {
+        "file": "202603-battery-industry-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "动力电池行业洞察月报"
+        },
+        "en": {
+          "title": "Power Battery Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202603-semiconductor-industry-insight",
+      "file": "202603-semiconductor-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/03",
+      "tags": [
+        "semiconductor"
+      ],
+      "cover": {
+        "file": "202603-semiconductor-industry-insight.jpg",
+        "credit": "Alexandre Debiève / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "半导体行业洞察月报"
+        },
+        "en": {
+          "title": "Semiconductor Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202603-india-country-insight",
+      "file": "202603-india-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "india"
+      ],
+      "cover": {
+        "file": "202603-india-country-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度国别洞察月报"
+        },
+        "en": {
+          "title": "India Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260405-pakistan-india-bilateral-briefing",
+      "file": "20260405-pakistan-india-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "india",
+        "pakistan"
+      ],
+      "cover": {
+        "file": "20260405-pakistan-india-bilateral-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度与巴基斯坦双边动态速览"
+        },
+        "en": {
+          "title": "India–Pakistan Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-india-industry-sector-briefing",
+      "file": "20260412-india-industry-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "india",
+        "industry"
+      ],
+      "cover": {
+        "file": "20260412-india-industry-sector-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度产业领域动态速览"
+        },
+        "en": {
+          "title": "India Industry Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260329-indonesia-auto-industry-briefing",
+      "file": "20260329-indonesia-auto-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "indonesia",
+        "automotive"
+      ],
+      "cover": {
+        "file": "20260329-indonesia-auto-industry-briefing.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚汽车制造行业动态速览"
+        },
+        "en": {
+          "title": "Indonesia Automotive Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "202603-indonesia-country-insight",
+      "file": "202603-indonesia-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "indonesia"
+      ],
+      "cover": {
+        "file": "202603-indonesia-country-insight.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚国别洞察月报"
+        },
+        "en": {
+          "title": "Indonesia Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260405-indonesia-saudi-bilateral-briefing",
+      "file": "20260405-indonesia-saudi-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "indonesia",
+        "saudi-arabia"
+      ],
+      "cover": {
+        "file": "20260405-indonesia-saudi-bilateral-briefing.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚与沙特双边动态速览"
+        },
+        "en": {
+          "title": "Indonesia–Saudi Arabia Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-indonesia-livelihood-sector-briefing",
+      "file": "20260412-indonesia-livelihood-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "indonesia",
+        "livelihood"
+      ],
+      "cover": {
+        "file": "20260412-indonesia-livelihood-sector-briefing.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚民生领域动态速览"
+        },
+        "en": {
+          "title": "Indonesia Livelihood Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-indonesia-business-env",
+      "file": "20260419-indonesia-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "indonesia"
+      ],
+      "cover": {
+        "file": "20260419-indonesia-business-env.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚营商环境动态速览"
+        },
+        "en": {
+          "title": "Indonesia Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "20260329-india-auto-industry-briefing",
+      "file": "20260329-india-auto-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "india",
+        "automotive"
+      ],
+      "cover": {
+        "file": "20260329-india-auto-industry-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度汽车制造行业动态速览"
+        },
+        "en": {
+          "title": "India Automotive Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-india-business-env",
+      "file": "20260419-india-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "india"
+      ],
+      "cover": {
+        "file": "20260419-india-business-env.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度营商环境动态速览"
+        },
+        "en": {
+          "title": "India Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202602-defense-industry-insight",
+      "file": "202602-defense-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "defense"
+      ],
+      "cover": {
+        "file": "202602-defense-industry-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "国防科工行业洞察月报"
+        },
+        "en": {
+          "title": "Defense & Aerospace Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202604-dji-brand-reputation",
+      "file": "202604-dji-brand-reputation.html",
+      "typeId": "brand-reputation",
+      "date": "2026/04",
+      "tags": [
+        "dji"
+      ],
+      "cover": {
+        "file": "202604-dji-brand-reputation.jpg",
+        "credit": "David Henrichs / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "DJI品牌声誉分析报告"
+        },
+        "en": {
+          "title": "DJI Brand Reputation Analysis"
+        }
+      }
+    },
+    {
+      "id": "202602-engineering-industry-insight",
+      "file": "202602-engineering-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "engineering"
+      ],
+      "cover": {
+        "file": "202602-engineering-industry-insight.jpg",
+        "credit": "Scott Blake / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "工程承包行业洞察月报"
+        },
+        "en": {
+          "title": "Engineering & Construction Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202602-construction-machinery-industry-insight",
+      "file": "202602-construction-machinery-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "construction-machinery"
+      ],
+      "cover": {
+        "file": "202602-construction-machinery-industry-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "工程机械行业洞察月报"
+        },
+        "en": {
+          "title": "Construction Machinery Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260329-brazil-finance-industry-briefing",
+      "file": "20260329-brazil-finance-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "brazil",
+        "finance"
+      ],
+      "cover": {
+        "file": "20260329-brazil-finance-industry-briefing.jpg",
+        "credit": "Agustin Diaz Gargiulo / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "巴西金融服务行业动态速览"
+        },
+        "en": {
+          "title": "Brazil Financial Services Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260405-brazil-usa-bilateral-briefing",
+      "file": "20260405-brazil-usa-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "brazil",
+        "usa"
+      ],
+      "cover": {
+        "file": "20260405-brazil-usa-bilateral-briefing.jpg",
+        "credit": "Agustin Diaz Gargiulo / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "巴西与美国双边动态速览"
+        },
+        "en": {
+          "title": "Brazil–USA Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-brazil-politics-sector-briefing",
+      "file": "20260412-brazil-politics-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "brazil",
+        "politics"
+      ],
+      "cover": {
+        "file": "20260412-brazil-politics-sector-briefing.jpg",
+        "credit": "Agustin Diaz Gargiulo / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "巴西政治领域动态速览"
+        },
+        "en": {
+          "title": "Brazil Politics Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-brazil-business-env",
+      "file": "20260419-brazil-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "brazil"
+      ],
+      "cover": {
+        "file": "20260419-brazil-business-env.jpg",
+        "credit": "Agustin Diaz Gargiulo / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "巴西营商环境动态速览"
+        },
+        "en": {
+          "title": "Brazil Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "20260329-germany-energy-industry-briefing",
+      "file": "20260329-germany-energy-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "germany",
+        "energy"
+      ],
+      "cover": {
+        "file": "20260329-germany-energy-industry-briefing.jpg",
+        "credit": "American Public Power Association / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "德国能源矿业行业动态速览"
+        },
+        "en": {
+          "title": "Germany Energy & Mining Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-germany-business-env",
+      "file": "20260419-germany-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "germany"
+      ],
+      "cover": {
+        "file": "20260419-germany-business-env.jpg",
+        "credit": "Claudio Schwarz / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "德国营商环境动态速览"
+        },
+        "en": {
+          "title": "Germany Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202603-germany-country-insight",
+      "file": "202603-germany-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "germany"
+      ],
+      "cover": {
+        "file": "202603-germany-country-insight.jpg",
+        "credit": "Claudio Schwarz / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "德国国别洞察月报"
+        },
+        "en": {
+          "title": "Germany Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260412-germany-iran-bilateral-briefing",
+      "file": "20260412-germany-iran-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "germany",
+        "iran"
+      ],
+      "cover": {
+        "file": "20260412-germany-iran-bilateral-briefing.jpg",
+        "credit": "Claudio Schwarz / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "德国与伊朗双边动态速览"
+        },
+        "en": {
+          "title": "Germany–Iran Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-germany-environment-sector-briefing",
+      "file": "20260412-germany-environment-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "germany",
+        "environment"
+      ],
+      "cover": {
+        "file": "20260412-germany-environment-sector-briefing.jpg",
+        "credit": "Claudio Schwarz / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "德国环保领域动态速览"
+        },
+        "en": {
+          "title": "Germany Environment Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "202604-japan-china-bilateral-briefing",
+      "file": "202604-japan-china-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04",
+      "tags": [
+        "japan",
+        "china"
+      ],
+      "cover": {
+        "file": "202604-japan-china-bilateral-briefing.jpg",
+        "credit": "Jezael Melgoza / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "日本与中国双边动态速览"
+        },
+        "en": {
+          "title": "Japan–China Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "202604-japan-country-insight",
+      "file": "202604-japan-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/04",
+      "tags": [
+        "japan"
+      ],
+      "cover": {
+        "file": "202604-japan-country-insight.jpg",
+        "credit": "Jezael Melgoza / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "日本国别洞察月报"
+        },
+        "en": {
+          "title": "Japan Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202604-japan-education-sector-briefing",
+      "file": "202604-japan-education-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04",
+      "tags": [
+        "japan",
+        "education"
+      ],
+      "cover": {
+        "file": "202604-japan-education-sector-briefing.jpg",
+        "credit": "Jezael Melgoza / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "日本教育领域动态速览"
+        },
+        "en": {
+          "title": "Japan Education Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "202603-japan-consumer-electronics-industry-briefing",
+      "file": "202603-japan-consumer-electronics-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03",
+      "tags": [
+        "japan",
+        "consumer-electronics"
+      ],
+      "cover": {
+        "file": "202603-japan-consumer-electronics-industry-briefing.jpg",
+        "credit": "Jezael Melgoza / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "日本消费电子行业动态速览"
+        },
+        "en": {
+          "title": "Japan Consumer Electronics Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "202604-japan-business-env",
+      "file": "202604-japan-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04",
+      "tags": [
+        "japan"
+      ],
+      "cover": {
+        "file": "202604-japan-business-env.jpg",
+        "credit": "Jezael Melgoza / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "日本营商环境动态速览"
+        },
+        "en": {
+          "title": "Japan Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202603-robotics-industry-insight",
+      "file": "202603-robotics-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/03",
+      "tags": [
+        "robotics"
+      ],
+      "cover": {
+        "file": "202603-robotics-industry-insight.jpg",
+        "credit": "Alex Knight / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "机器人行业洞察月报"
+        },
+        "en": {
+          "title": "Robotics Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202603-auto-trends-alerts",
+      "file": "202603-auto-trends-alerts.html",
+      "typeId": "trends-alerts",
+      "date": "2026/03",
+      "tags": [
+        "automotive"
+      ],
+      "cover": {
+        "file": "202603-auto-trends-alerts.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "汽车制造行业趋势与风险速览"
+        },
+        "en": {
+          "title": "Automotive Industry Trends & Alerts Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260409-auto-southeast-asia-industry-research",
+      "file": "20260409-auto-southeast-asia-industry-research.html",
+      "typeId": "industry-research",
+      "date": "2026/04/09",
+      "tags": [
+        "automotive",
+        "southeast-asia"
+      ],
+      "cover": {
+        "file": "20260409-auto-southeast-asia-industry-research.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "汽车行业概览：东南亚市场"
+        },
+        "en": {
+          "title": "Automotive Industry Overview: Southeast Asia"
+        }
+      }
+    },
+    {
+      "id": "202602-auto-industry-insight",
+      "file": "202602-auto-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "automotive"
+      ],
+      "cover": {
+        "file": "202602-auto-industry-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "汽车制造行业洞察月报"
+        },
+        "en": {
+          "title": "Automotive Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260329-thailand-agriculture-industry-briefing",
+      "file": "20260329-thailand-agriculture-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "thailand",
+        "agriculture"
+      ],
+      "cover": {
+        "file": "20260329-thailand-agriculture-industry-briefing.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "泰国农业行业动态速览"
+        },
+        "en": {
+          "title": "Thailand Agriculture Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "202604-thailand-country-insight",
+      "file": "202604-thailand-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/04",
+      "tags": [
+        "thailand"
+      ],
+      "cover": {
+        "file": "202604-thailand-country-insight.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "泰国国别洞察月报"
+        },
+        "en": {
+          "title": "Thailand Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260405-thailand-china-bilateral-briefing",
+      "file": "20260405-thailand-china-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "thailand",
+        "china"
+      ],
+      "cover": {
+        "file": "20260405-thailand-china-bilateral-briefing.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "泰国与中国双边动态速览"
+        },
+        "en": {
+          "title": "Thailand–China Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-thailand-diplomacy-sector-briefing",
+      "file": "20260412-thailand-diplomacy-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "thailand",
+        "diplomacy"
+      ],
+      "cover": {
+        "file": "20260412-thailand-diplomacy-sector-briefing.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "泰国外交领域动态速览"
+        },
+        "en": {
+          "title": "Thailand Diplomacy Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-thailand-business-env",
+      "file": "20260419-thailand-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "thailand"
+      ],
+      "cover": {
+        "file": "20260419-thailand-business-env.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "泰国营商环境动态速览"
+        },
+        "en": {
+          "title": "Thailand Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202604-hd-hyundai-corporate-intel",
+      "file": "202604-hd-hyundai-corporate-intel.html",
+      "typeId": "corporate-intel",
+      "date": "2026/04",
+      "tags": [
+        "hd-hyundai"
+      ],
+      "cover": {
+        "file": "202604-hd-hyundai-corporate-intel.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "HD Hyundai商业情报分析报告"
+        },
+        "en": {
+          "title": "HD Hyundai Corporate Intelligence Briefing"
+        }
+      }
+    },
+    {
+      "id": "202602-power-equipment-industry-insight",
+      "file": "202602-power-equipment-industry-insight.html",
+      "typeId": "industry-insight",
+      "date": "2026/02",
+      "tags": [
+        "power-equipment"
+      ],
+      "cover": {
+        "file": "202602-power-equipment-industry-insight.jpg",
+        "credit": "American Public Power Association / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "电力设备行业洞察月报"
+        },
+        "en": {
+          "title": "Power Equipment Industry Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "202604-roborock-corporate-intel",
+      "file": "202604-roborock-corporate-intel.html",
+      "typeId": "corporate-intel",
+      "date": "2026/04",
+      "tags": [
+        "roborock"
+      ],
+      "cover": {
+        "file": "202604-roborock-corporate-intel.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "Roborock商业情报分析报告"
+        },
+        "en": {
+          "title": "Roborock Corporate Intelligence Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260329-usa-ai-industry-briefing",
+      "file": "20260329-usa-ai-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "usa",
+        "ai"
+      ],
+      "cover": {
+        "file": "20260329-usa-ai-industry-briefing.jpg",
+        "credit": "Steve Johnson / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "美国人工智能行业动态速览"
+        },
+        "en": {
+          "title": "USA AI Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-usa-business-env",
+      "file": "20260419-usa-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "usa"
+      ],
+      "cover": {
+        "file": "20260419-usa-business-env.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "美国营商环境动态速览"
+        },
+        "en": {
+          "title": "USA Business Environment Dynamics"
+        }
+      }
+    },
+    {
+      "id": "202603-usa-country-insight",
+      "file": "202603-usa-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/03",
+      "tags": [
+        "usa"
+      ],
+      "cover": {
+        "file": "202603-usa-country-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "美国国别洞察月报"
+        },
+        "en": {
+          "title": "USA Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260412-usa-israel-bilateral-briefing",
+      "file": "20260412-usa-israel-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "usa",
+        "israel"
+      ],
+      "cover": {
+        "file": "20260412-usa-israel-bilateral-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "美国与以色列双边动态速览"
+        },
+        "en": {
+          "title": "USA–Israel Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260412-usa-tech-sector-briefing",
+      "file": "20260412-usa-tech-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/12",
+      "tags": [
+        "usa",
+        "technology"
+      ],
+      "cover": {
+        "file": "20260412-usa-tech-sector-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "美国科技领域动态速览"
+        },
+        "en": {
+          "title": "USA Technology Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "202604-malaysia-country-insight",
+      "file": "202604-malaysia-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/04",
+      "tags": [
+        "malaysia"
+      ],
+      "cover": {
+        "file": "202604-malaysia-country-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "马来西亚国别洞察月报"
+        },
+        "en": {
+          "title": "Malaysia Country Insight Monthly"
+        }
+      }
+    },
+    {
+      "id": "20260405-indonesia-malaysia-bilateral-briefing",
+      "file": "20260405-indonesia-malaysia-bilateral-briefing.html",
+      "typeId": "bilateral-briefing",
+      "date": "2026/04/05",
+      "tags": [
+        "indonesia",
+        "malaysia"
+      ],
+      "cover": {
+        "file": "20260405-indonesia-malaysia-bilateral-briefing.jpg",
+        "credit": "Afif Ramdhasuma / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "印度尼西亚与马来西亚双边动态速览"
+        },
+        "en": {
+          "title": "Indonesia–Malaysia Bilateral Dynamics Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260409-malaysia-country-insight",
+      "file": "20260409-malaysia-country-insight.html",
+      "typeId": "country-insight",
+      "date": "2026/04/09",
+      "tags": [
+        "malaysia"
+      ],
+      "cover": {
+        "file": "20260409-malaysia-country-insight.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "马来西亚国别概览"
+        },
+        "en": {
+          "title": "Malaysia Country Overview"
+        }
+      }
+    },
+    {
+      "id": "20260329-malaysia-engineering-industry-briefing",
+      "file": "20260329-malaysia-engineering-industry-briefing.html",
+      "typeId": "industry-briefing",
+      "date": "2026/03/29",
+      "tags": [
+        "malaysia",
+        "engineering"
+      ],
+      "cover": {
+        "file": "20260329-malaysia-engineering-industry-briefing.jpg",
+        "credit": "Scott Blake / Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "马来西亚工程承包行业动态速览"
+        },
+        "en": {
+          "title": "Malaysia Engineering & Construction Industry Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-malaysia-economy-sector-briefing",
+      "file": "20260419-malaysia-economy-sector-briefing.html",
+      "typeId": "sector-briefing",
+      "date": "2026/04/19",
+      "tags": [
+        "malaysia",
+        "economy"
+      ],
+      "cover": {
+        "file": "20260419-malaysia-economy-sector-briefing.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "马来西亚经济领域动态速览"
+        },
+        "en": {
+          "title": "Malaysia Economy Sector Briefing"
+        }
+      }
+    },
+    {
+      "id": "20260419-malaysia-business-env",
+      "file": "20260419-malaysia-business-env.html",
+      "typeId": "business-env",
+      "date": "2026/04/19",
+      "tags": [
+        "malaysia"
+      ],
+      "cover": {
+        "file": "20260419-malaysia-business-env.jpg",
+        "credit": "Unsplash"
+      },
+      "i18n": {
+        "zh": {
+          "title": "马来西亚营商环境动态速览"
+        },
+        "en": {
+          "title": "Malaysia Business Environment Dynamics"
+        }
+      }
+    }
+  ]
+}
+;
+
+/* ── Build PRODUCTS synchronously on load ── */
+buildProducts(REPORT_JSON);
