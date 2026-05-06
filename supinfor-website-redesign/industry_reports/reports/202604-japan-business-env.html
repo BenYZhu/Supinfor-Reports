@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本营商环境动态速览 | 2026年4月</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['Noto Serif SC', 'serif'],
+        sans: ['Inter', 'system-ui', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+      },
+      colors: {
+        emerald: {
+          50: '#ecfdf5', 100: '#d1fae5', 200: '#a7f3d0', 300: '#6ee7b7',
+          400: '#34d399', 500: '#10b981', 600: '#059669', 700: '#047857',
+          800: '#065f46', 900: '#064e3b', 950: '#022c22'
+        }
+      }
+    }
+  }
+}
+</script>
+<style>
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .bar-animate { animation: barGrow 1s ease forwards; }
+  @keyframes barGrow { from { width: 0; } }
+  .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+  .dark .card-hover:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+  .nav-link { position: relative; }
+  .nav-link::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 0; height: 2px; background: #10b981; transition: width 0.3s ease; }
+  .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+  .hero-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(16,185,129,0.15) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(5,150,105,0.1) 0%, transparent 50%), radial-gradient(circle at 50% 80%, rgba(4,120,87,0.08) 0%, transparent 50%); }
+  .dark .hero-pattern { background-image: radial-gradient(circle at 20% 50%, rgba(16,185,129,0.08) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(5,150,105,0.06) 0%, transparent 50%); }
+  .timeline-line { position: relative; }
+  .timeline-line::before { content: ''; position: absolute; left: 24px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #10b981, #059669); }
+  @media (max-width: 768px) { .timeline-line::before { left: 16px; } }
+  .risk-red { border-left: 4px solid #ef4444; }
+  .risk-yellow { border-left: 4px solid #f59e0b; }
+  .risk-green { border-left: 4px solid #10b981; }
+  .dark .risk-red { border-left-color: #f87171; }
+  .dark .risk-yellow { border-left-color: #fbbf24; }
+  .dark .risk-green { border-left-color: #34d399; }
+  [data-lang="zh"] [data-en] { display: none; }
+  [data-lang="en"] [data-zh] { display: none; }
+</style>
+</head>
+<body class="bg-gray-50 dark:bg-gray-950 text-gray-800 dark:text-gray-200 font-sans transition-colors duration-300">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-2">
+        <i class="fa-solid fa-chart-line text-emerald-600 dark:text-emerald-400 text-lg"></i>
+        <span class="font-serif font-bold text-gray-900 dark:text-white text-sm sm:text-base"><span data-zh>营商环境洞察</span><span data-en>Business Environment Insights</span></span>
+      </div>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#summary" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>执行摘要</span><span data-en>Executive Summary</span></a>
+        <a href="#data" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>数据概览</span><span data-en>Data Overview</span></a>
+        <a href="#events" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>重点事件</span><span data-en>Key Events</span></a>
+        <a href="#trends" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></a>
+        <a href="#risks" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+        <a href="#actions" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>行动建议</span><span data-en>Action Items</span></a>
+        <a href="#appendix" class="nav-link px-3 py-2 text-xs font-medium text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"><span data-zh>附录</span><span data-en>Appendix</span></a>
+      </div>
+      <div class="flex items-center gap-3">
+        <button id="langToggle" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Switch Language" style="font-size:12px;font-weight:700;">EN</button>
+        <button id="themeToggle" class="p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="切换主题">
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </button>
+        <button id="mobileMenuBtn" class="lg:hidden p-2 rounded-lg text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden lg:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 pb-4">
+    <a href="#summary" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>一、执行摘要</span><span data-en>I. Executive Summary</span></a>
+    <a href="#data" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>二、数据概览</span><span data-en>II. Data Overview</span></a>
+    <a href="#events" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>三、重点事件</span><span data-en>III. Key Events</span></a>
+    <a href="#trends" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>四、趋势研判</span><span data-en>IV. Trend Analysis</span></a>
+    <a href="#risks" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>五、风险警示</span><span data-en>V. Risk Alerts</span></a>
+    <a href="#actions" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>六、行动建议</span><span data-en>VI. Action Items</span></a>
+    <a href="#appendix" class="block px-6 py-2 text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600"><span data-zh>七、附录</span><span data-en>VII. Appendix</span></a>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="relative pt-16 overflow-hidden">
+  <div class="hero-pattern bg-gradient-to-br from-gray-900 via-gray-800 to-emerald-950 dark:from-gray-950 dark:via-gray-900 dark:to-emerald-950 py-20 sm:py-28 lg:py-36">
+    <div class="absolute inset-0 opacity-10" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%2310b981&quot; fill-opacity=&quot;0.15&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="text-center">
+        <div class="reveal inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/20 border border-emerald-500/30 text-emerald-300 text-sm mb-6">
+          <i class="fa-solid fa-flag"></i>
+          <span><span data-zh>2026年4月13日 — 4月19日</span><span data-en>April 13 – April 19, 2026</span></span>
+        </div>
+        <h1 class="reveal reveal-delay-1 font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+          <span data-zh>日本营商环境<br class="sm:hidden">动态速览</span><span data-en>Japan Business Environment<br class="sm:hidden">Weekly Briefing</span>
+        </h1>
+        <p class="reveal reveal-delay-2 text-emerald-200/80 text-lg sm:text-xl mb-4"><span data-zh>Supinfor 区域国别实时监测系统</span><span data-en>Supinfor Regional Real-Time Monitoring System</span></p>
+        <p class="reveal reveal-delay-3 text-emerald-300/60 text-sm sm:text-base mb-12"><span data-zh>3,678条资讯 · 2,519条去重 · 24个营商标签全覆盖</span><span data-en>3,678 articles · 2,519 deduplicated · 24 business tags fully covered</span></p>
+        <div class="reveal reveal-delay-4 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl font-bold text-emerald-400 font-sans mb-1">8</div>
+            <div class="text-sm text-gray-300"><span data-zh>重点事件解读</span><span data-en>Key Events Analyzed</span></div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl font-bold text-emerald-400 font-sans mb-1">5</div>
+            <div class="text-sm text-gray-300"><span data-zh>趋势研判</span><span data-en>Trend Assessments</span></div>
+          </div>
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/10">
+            <div class="text-4xl font-bold text-emerald-400 font-sans mb-1">9</div>
+            <div class="text-sm text-gray-300"><span data-zh>风险与机遇信号</span><span data-en>Risk &amp; Opportunity Signals</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chapter 1: 执行摘要 -->
+<section id="summary" class="py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-8">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">一</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>执行摘要</span><span data-en>Executive Summary</span></h2>
+    </div>
+    <div class="reveal reveal-delay-1 bg-white dark:bg-gray-900 rounded-2xl p-6 sm:p-8 border-l-4 border-emerald-500 shadow-lg dark:shadow-gray-900/50">
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg"><span data-zh>本周日本营商环境呈现"多线并行、内外交织"的复杂格局。<strong class="text-gray-900 dark:text-white">税制层面</strong>，食品消费税零税率政策从选战口号走向立法博弈，地方自治体年减近2万亿日元财源的警告信号已经发出，财政可持续性成为核心争议焦点。<strong class="text-gray-900 dark:text-white">劳动规制层面</strong>，自民党提言要求放宽加班上限管控，厚劳省同步启动裁量劳动制实态调查，劳动市场"松绑"与"保护"的政策张力正在加剧。<strong class="text-gray-900 dark:text-white">能源与供应链层面</strong>，中东局势持续传导至日本实体经济，原油衍生品供应缺口已波及汽车维修、住宅建设和医疗物资领域，柏崎刈羽核电站6号机转入营业运转则为能源安全提供了对冲选项。<strong class="text-gray-900 dark:text-white">产业政策层面</strong>，政府发布34类产品技术官民投资路线图，标志着日本从"防守型"产业政策转向"进攻型"全球份额争夺。<strong class="text-gray-900 dark:text-white">数据治理层面</strong>，LINE雅虎完成与韩国Naver的系统分离，AI肖像权立法检讨会启动，数据主权与AI治理进入制度化快车道。</span><span data-en>This week, Japan's business environment presents a complex landscape of "multiple parallel tracks with intertwined domestic and international factors." <strong class="text-gray-900 dark:text-white">On taxation</strong>, the zero-rate consumption tax policy on food has moved from campaign rhetoric to legislative negotiations, with local governments issuing warnings about an annual revenue loss of nearly ¥2 trillion, making fiscal sustainability the central point of contention. <strong class="text-gray-900 dark:text-white">On labor regulation</strong>, the Liberal Democratic Party (LDP) has proposed relaxing overtime caps, while the Ministry of Health, Labour and Welfare (MHLW) has simultaneously launched a survey on the discretionary work system, intensifying the policy tension between "deregulation" and "protection." <strong class="text-gray-900 dark:text-white">On energy and supply chains</strong>, Middle East tensions continue to transmit to Japan's real economy, with crude oil derivative supply gaps now affecting auto repair, residential construction, and medical supplies, while the Kashiwazaki-Kariwa Nuclear Power Plant Unit 6 entering commercial operation provides a hedging option for energy security. <strong class="text-gray-900 dark:text-white">On industrial policy</strong>, the government released a public-private investment roadmap covering 34 product and technology categories, signaling Japan's shift from "defensive" industrial policy to "offensive" global market share competition. <strong class="text-gray-900 dark:text-white">On data governance</strong>, LINE Yahoo completed its system separation from South Korea's Naver, and a review committee on AI portrait rights legislation was launched, putting data sovereignty and AI governance on an institutional fast track.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Chapter 2: 数据概览 -->
+<section id="data" class="py-16 sm:py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">二</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>数据概览</span><span data-en>Data Overview</span></h2>
+    </div>
+
+    <!-- 2.1 栏目分布 -->
+    <div class="reveal mb-12">
+      <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-chart-bar text-emerald-600 dark:text-emerald-400"></i> <span data-zh>2.1 栏目分布</span><span data-en>2.1 Category Distribution</span>
+      </h3>
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg dark:shadow-gray-900/50 space-y-3">
+        <!-- Bar items -->
+        <div class="flex items-center gap-3 group">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>产业</span><span data-en>Industry</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-end pr-3" style="width:100%">
+              <span class="text-xs font-bold text-white">1,927 (52.4%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>经济</span><span data-en>Economy</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-end pr-3" style="width:80.7%">
+              <span class="text-xs font-bold text-white">1,556 (42.3%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>民生</span><span data-en>Livelihood</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full flex items-center justify-end pr-3" style="width:77%">
+              <span class="text-xs font-bold text-white">1,484 (40.3%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>科技</span><span data-en>Tech</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full flex items-center justify-end pr-3" style="width:28.2%">
+              <span class="text-xs font-bold text-white">544 (14.8%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>环保</span><span data-en>Environ.</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-400 to-emerald-500 rounded-full flex items-center justify-end pr-3" style="width:20%">
+              <span class="text-xs font-bold text-white">386 (10.5%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>政治</span><span data-en>Politics</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-300 to-emerald-400 rounded-full flex items-center justify-end pr-3" style="width:13.5%">
+              <span class="text-xs font-bold text-white">261 (7.1%)</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>人文</span><span data-en>Culture</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-300 to-emerald-400 rounded-full flex items-center pr-3" style="width:11.3%">
+              <span class="text-xs font-bold text-white">217</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>教育</span><span data-en>Education</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-300 to-emerald-400 rounded-full flex items-center pr-3" style="width:10.7%">
+              <span class="text-xs font-bold text-white">206</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>医疗</span><span data-en>Medical</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-full flex items-center pr-3" style="width:7.2%">
+              <span class="text-xs font-bold text-emerald-800">138</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>外交</span><span data-en>Diplomacy</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-full flex items-center pr-3" style="width:4.3%">
+              <span class="text-xs font-bold text-emerald-800">82</span>
+            </div>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0"><span data-zh>国防</span><span data-en>Defense</span></span>
+          <div class="flex-1 bg-gray-100 dark:bg-gray-700 rounded-full h-7 overflow-hidden">
+            <div class="bar-animate h-full bg-gradient-to-r from-emerald-200 to-emerald-300 rounded-full flex items-center pr-3" style="width:2.3%">
+              <span class="text-xs font-bold text-emerald-800">44</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 bg-white dark:bg-gray-800 rounded-xl p-5 shadow text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+        <i class="fa-solid fa-lightbulb text-emerald-500 mr-1"></i> <strong class="text-gray-800 dark:text-gray-200"><span data-zh>栏目分布特征</span><span data-en>Category Distribution Characteristics</span></strong><span data-zh>：产业、经济、民生三大栏目形成"铁三角"，合计覆盖率超过130%（单条资讯可归属多栏目），表明本周政策议题高度交叉——消费税改革同时触及经济、民生和政治，能源供应链问题横跨产业、环保和外交。科技栏目占比14.8%，较往期明显上升，主要受AI治理立法和数据主权事件驱动。</span><span data-en>: Industry, Economy, and Livelihood form an "iron triangle," with a combined coverage rate exceeding 130% (a single article can be tagged under multiple categories), indicating highly cross-cutting policy issues this week — consumption tax reform touches Economy, Livelihood, and Politics simultaneously, while energy supply chain issues span Industry, Environment, and Diplomacy. The Technology category accounts for 14.8%, a notable increase from previous periods, primarily driven by AI governance legislation and data sovereignty events.</span>
+      </div>
+    </div>
+
+    <!-- 2.2 营商标签分布 -->
+    <div class="reveal mb-12">
+      <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-tags text-emerald-600 dark:text-emerald-400"></i> <span data-zh>2.2 营商标签分布</span><span data-en>2.2 Business Tag Distribution</span>
+      </h3>
+      <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 shadow-lg dark:shadow-gray-900/50">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>营商文化氛围</span><span data-en>Business Culture</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-500 rounded-full" style="width:100%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">616</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>引进外商投资企业</span><span data-en>Foreign Investment Attraction</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:15.3%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">94</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>知识产权保护</span><span data-en>IP Protection</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-500 rounded-full" style="width:42.9%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">264</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>环保政策调整</span><span data-en>Environmental Policy</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:15.3%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">94</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>政府公共服务</span><span data-en>Government Services</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-500 rounded-full" style="width:41.7%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">257</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>人力成本变动</span><span data-en>Labor Cost Changes</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:14.4%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">89</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>产业政策调整</span><span data-en>Industrial Policy</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-500 rounded-full" style="width:31.8%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">196</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>劳动力供给</span><span data-en>Labor Supply</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:14.1%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">87</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>供应链稳定</span><span data-en>Supply Chain Stability</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:21.1%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">130</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>税收法规调整</span><span data-en>Tax Regulation</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:13%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">80</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>金融服务能力</span><span data-en>Financial Services</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:20.5%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">126</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>生产资料成本</span><span data-en>Production Costs</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:12.3%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">76</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>交通物流建设</span><span data-en>Transport &amp; Logistics</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:18.8%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">116</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>国际贸易合作</span><span data-en>International Trade</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-300 rounded-full" style="width:9.7%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">60</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>能源供应平衡</span><span data-en>Energy Supply Balance</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-400 rounded-full" style="width:18.5%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">114</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>处罚外商投资企业</span><span data-en>Penalties on Foreign Firms</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-red-400 rounded-full" style="width:3.7%"></div></div><span class="text-xs font-bold text-red-500 w-10 text-right">23</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>调查外商投资企业</span><span data-en>Investigations on Foreign Firms</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-red-400 rounded-full" style="width:3.6%"></div></div><span class="text-xs font-bold text-red-500 w-10 text-right">22</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>企业破产清算</span><span data-en>Corporate Bankruptcy</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-300 rounded-full" style="width:3.6%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">22</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>生活配套环境</span><span data-en>Living Environment</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-200 rounded-full" style="width:3.1%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">19</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>官僚体制改革</span><span data-en>Bureaucratic Reform</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-200 rounded-full" style="width:2.3%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">14</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>社会治安状况</span><span data-en>Public Safety</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-200 rounded-full" style="width:2.1%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">13</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>产业规划论证</span><span data-en>Industrial Planning</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-200 rounded-full" style="width:0.8%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">5</span></div>
+          </div>
+          <div class="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+            <span class="text-sm text-gray-700 dark:text-gray-300"><span data-zh>政府重大合同</span><span data-en>Government Contracts</span></span>
+            <div class="flex items-center gap-2"><div class="w-24 bg-gray-100 dark:bg-gray-700 rounded-full h-3"><div class="h-full bg-emerald-200 rounded-full" style="width:0.3%"></div></div><span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 w-10 text-right">2</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4 bg-white dark:bg-gray-800 rounded-xl p-5 shadow text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+        <i class="fa-solid fa-lightbulb text-emerald-500 mr-1"></i> <strong class="text-gray-800 dark:text-gray-200"><span data-zh>标签分布特征</span><span data-en>Tag Distribution Characteristics</span></strong><span data-zh>："营商文化氛围"以616条高居榜首，反映日本社会对营商环境的广泛讨论热度。"知识产权保护"（264条）和"政府公共服务"（257条）分列二三位，与AI肖像权立法、公司法修订等事件直接相关。值得关注的是，"处罚外商投资企业"（23条）、"调查外商投资企业"（22条）两个标签虽然绝对数量不大，但对外资企业的信号意义重大，需持续跟踪。</span><span data-en>: "Business Culture" tops the list with 616 articles, reflecting the breadth of public discourse on Japan's business environment. "IP Protection" (264) and "Government Services" (257) rank second and third, directly linked to AI portrait rights legislation and corporate law amendments. Notably, "Penalties on Foreign Firms" (23) and "Investigations on Foreign Firms" (22) — while small in absolute numbers — carry significant signaling value for foreign enterprises and warrant continuous monitoring.</span>
+      </div>
+    </div>
+
+    <!-- 2.3 信源语言分布 -->
+    <div class="reveal">
+      <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-language text-emerald-600 dark:text-emerald-400"></i> <span data-zh>2.3 信源语言分布</span><span data-en>2.3 Source Language Distribution</span>
+      </h3>
+      <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg dark:shadow-gray-900/50">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-emerald-50 dark:bg-emerald-900/30">
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>语言</span><span data-en>Language</span></th>
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>占比（估算）</span><span data-en>Share (Est.)</span></th>
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>说明</span><span data-en>Description</span></th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b border-gray-100 dark:border-gray-700"><td class="px-6 py-3 font-medium"><span data-zh>日语</span><span data-en>Japanese</span></td><td class="px-6 py-3">~85%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>日本国内主流媒体、政府公报、行业协会</span><span data-en>Major Japanese domestic media, government bulletins, industry associations</span></td></tr>
+            <tr class="border-b border-gray-100 dark:border-gray-700"><td class="px-6 py-3 font-medium"><span data-zh>英语</span><span data-en>English</span></td><td class="px-6 py-3">~12%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>路透社、彭博社、日经英文版等国际媒体</span><span data-en>Reuters, Bloomberg, Nikkei English edition, and other international media</span></td></tr>
+            <tr><td class="px-6 py-3 font-medium"><span data-zh>其他</span><span data-en>Other</span></td><td class="px-6 py-3">~3%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>韩语、中文等区域媒体</span><span data-en>Korean, Chinese, and other regional media</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Chapter 3: 重点事件解读 -->
+<section id="events" class="py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">三</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">重点事件解读</h2>
+    </div>
+    <div class="space-y-8">
+
+      <!-- Event 1 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">1</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>食品消费税零税率政策引发地方财政警戒</span><span data-en>Zero-Rate Food Consumption Tax Policy Triggers Local Fiscal Alarm</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>首相高市早苗推动食品消费税零税率政策，从选战承诺进入实质立法阶段。超党派"社会保障国民会议"已听取全国知事会等地方3团体意见，地方自治体明确警告：该政策将导致地方财源年减近2万亿日元，医疗、介护等社会保障支出面临严重缺口。自民党此前承诺的"2年限时零税率"方案与维新会"缺乏财源难以推行恒久零税率"的立场形成对峙。叠加此前汽油税暂定税率和汽车相关地方税已被废除的先例，地方政府对中央"场当たり的"（临时应付式）税制政策的不信任正在加深。</span><span data-en>Prime Minister Takaichi Sanae is advancing a zero-rate consumption tax policy on food, moving from campaign promises to substantive legislative negotiations. The cross-party "Social Security National Conference" has heard opinions from three local government groups including the National Governors' Association. Local governments have explicitly warned that this policy would reduce local revenue by nearly ¥2 trillion annually, creating severe shortfalls in healthcare and nursing care spending. The LDP's "2-year limited zero-rate" plan stands in opposition to the Japan Innovation Party's position that "permanent zero-rate is unfeasible without funding sources." Combined with precedents of abolished provisional gasoline tax rates and automobile-related local taxes, local governments' distrust of the central government's ad hoc tax policies is deepening.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>首相官邸</span><span data-en>Prime Minister's Office</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>自民党</span><span data-en>LDP</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>维新会</span><span data-en>Japan Innovation Party</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>全国知事会</span><span data-en>National Governors' Association</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>地方自治体</span><span data-en>Local Governments</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>社会保障国民会议</span><span data-en>Social Security National Conference</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>消费税是日本地方财政的重要支柱之一。零税率若落地，地方政府可能被迫压缩公共服务支出或寻求替代财源（如提高地方税、削减补贴）。对在日外资企业而言，地方政府的财政紧缩可能影响产业补贴发放节奏、基础设施维护投入以及行政服务效率。同时，食品零税率将直接降低食品流通环节的税负，对食品加工、零售行业构成短期利好。</span><span data-en>The consumption tax is a key pillar of local government finance in Japan. If the zero-rate policy is implemented, local governments may be forced to cut public service spending or seek alternative revenue sources (such as raising local taxes or reducing subsidies). For foreign enterprises operating in Japan, local fiscal austerity could affect the pace of industrial subsidy disbursements, infrastructure maintenance investment, and administrative service efficiency. Meanwhile, the zero-rate on food would directly reduce tax burdens in the food distribution chain, providing a short-term boost to food processing and retail industries.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>食品相关企业应密切关注政策落地时间表和适用范围，提前评估对定价策略和利润结构的影响；依赖地方政府补贴的制造业企业应建立财源替代预案；所有在日企业应关注地方税制的连锁调整风险。</span><span data-en>Food-related enterprises should closely monitor the policy implementation timeline and scope, and proactively assess impacts on pricing strategies and profit structures. Manufacturing firms reliant on local government subsidies should develop contingency plans for alternative funding. All enterprises in Japan should monitor cascading adjustment risks in local tax systems.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">2</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>劳动时间规制缓和——自民党提言与厚劳省调查</span><span data-en>Labor Hour Deregulation — LDP Proposal and MHLW Survey</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>前首相岸田文雄向高市早苗提交政策提言，核心诉求是调整劳动基准监督署统一指导企业削减加班的做法，支持企业签订月45小时加班的36协定及超上限特别条款。与此同时，厚生劳动省宣布将启动裁量劳动制运行实态调查（上次调查在2019年），但劳动者方面对调查的必要性和中立性提出质疑。专家警告，劳动时间规制的放宽可能助长长时间劳动风险，与近年来"工作方式改革"的政策方向形成矛盾。</span><span data-en>Former Prime Minister Kishida Fumio submitted a policy proposal to Takaichi Sanae, with the core demand being to adjust the Labor Standards Inspection Office's uniform guidance on reducing corporate overtime, and to support companies in signing Article 36 agreements allowing 45 hours of monthly overtime with special excess clauses. Simultaneously, the Ministry of Health, Labour and Welfare (MHLW) announced it would launch a survey on the actual operation of the discretionary work system (the last survey was in 2019), though labor representatives have questioned the necessity and neutrality of the survey. Experts warn that relaxing working hour regulations could encourage long working hours, contradicting the recent "Work Style Reform" policy direction.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>自民党</span><span data-en>LDP</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>厚生劳动省</span><span data-en>MHLW</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>劳动基准监督署</span><span data-en>Labor Standards Inspection Office</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>企业经营者团体</span><span data-en>Business Associations</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>劳动组合</span><span data-en>Labor Unions</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>这是日本劳动规制自2019年"工作方式改革关联法"实施以来最明确的松绑信号。对制造业、IT、建设等长期面临人手不足的行业而言，加班上限的实质性放宽将缓解用工弹性不足的痛点。但同时，裁量劳动制调查的启动意味着政府在"松绑"的同时也在为未来的制度设计收集数据，政策走向仍存在不确定性。</span><span data-en>This is the clearest deregulation signal in Japan's labor regulations since the implementation of the "Work Style Reform Act" in 2019. For industries chronically facing labor shortages — manufacturing, IT, construction — a substantive relaxation of overtime caps would alleviate the pain point of insufficient workforce flexibility. However, the launch of the discretionary work system survey indicates the government is simultaneously collecting data for future institutional design, leaving policy direction uncertain.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在日外资企业应重新审视现行劳动时间管理制度，评估36协定的签订策略；人力资源部门应关注厚劳省调查的进展和结论，为可能的制度变化做好合规准备；同时注意，即便规制放宽，过度加班仍可能引发劳动诉讼和声誉风险，建议维持内部的健康经营标准。</span><span data-en>Foreign enterprises in Japan should review their current working hour management systems and evaluate Article 36 agreement strategies. HR departments should monitor the MHLW survey's progress and conclusions to prepare for potential regulatory changes. Note that even with deregulation, excessive overtime may still trigger labor lawsuits and reputational risks — maintaining internal healthy management standards is recommended.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">3</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>中东局势冲击日本能源与供应链</span><span data-en>Middle East Tensions Impact Japan's Energy and Supply Chains</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>中东地缘紧张局势持续向日本实体经济传导。自民党政调会长小林鹏之计划月内汇总能源价格高企应对提言；官房长官木原稔虽强调"当前非石油危机"，但原油衍生品供应已出现实质性缺口——涂料、稀释剂短缺影响汽车维修与住宅建设，医疗手套供应滞缓。首相高市早苗宣布5月起投放5千万枚国储医疗手套以应急。地方层面，群马县率先设立跨部门国际情势联络会议。国际层面，AZEC（亚洲零排放共同体）会议宣布100亿美元东南亚原油采购金融支援计划，显示日本正在构建多元化能源采购网络。</span><span data-en>Middle East geopolitical tensions continue to transmit to Japan's real economy. LDP Policy Research Council Chair Kobayashi plans to compile energy price response proposals within the month. While Chief Cabinet Secretary Kihara emphasized "this is not an oil crisis," crude oil derivative supplies have experienced substantive shortages — paint and thinner shortages are affecting auto repair and residential construction, and medical glove supplies are delayed. PM Takaichi announced the release of 50 million national reserve medical gloves starting May. At the local level, Gunma Prefecture pioneered a cross-departmental international affairs liaison conference. Internationally, the AZEC (Asia Zero Emission Community) meeting announced a $10 billion Southeast Asian crude oil procurement financial support plan, indicating Japan is building a diversified energy procurement network.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>首相官邸</span><span data-en>Prime Minister's Office</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>自民党政调会</span><span data-en>LDP Policy Research Council</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>经济产业省</span><span data-en>METI</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>群马县</span><span data-en>Gunma Prefecture</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>汽车维修行业</span><span data-en>Auto Repair Industry</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>住宅建设行业</span><span data-en>Residential Construction</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>医疗物资供应链</span><span data-en>Medical Supply Chain</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>AZEC成员国</span><span data-en>AZEC Member States</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>中东局势对日本的影响已从"油价上涨"升级为"衍生品供应断裂"，波及面远超能源行业本身。涂料、稀释剂等石化衍生品的短缺直接影响制造业和建设业的生产节奏。国储医疗手套的投放虽是应急之举，但也暴露了日本在关键物资储备方面的脆弱性。AZEC的100亿美元金融支援则标志着日本能源外交从双边转向多边框架。</span><span data-en>The impact of Middle East tensions on Japan has escalated from "rising oil prices" to "derivative supply disruption," with repercussions far beyond the energy sector. Shortages of petrochemical derivatives such as paint and thinner are directly affecting manufacturing and construction production schedules. While the release of national reserve medical gloves is an emergency measure, it also exposes Japan's vulnerability in critical material stockpiling. AZEC's $10 billion financial support marks Japan's energy diplomacy shifting from bilateral to multilateral frameworks.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>制造业企业应立即盘点石化衍生品库存，建立替代供应商清单；建设和汽车维修行业应与客户沟通可能的工期延迟；医疗相关企业应关注国储物资投放的申请渠道；所有企业应将"中东局势长期化"纳入供应链风险管理的基准情景。</span><span data-en>Manufacturing firms should immediately audit petrochemical derivative inventories and establish alternative supplier lists. Construction and auto repair industries should communicate potential schedule delays to clients. Medical-related enterprises should monitor application channels for national reserve material releases. All enterprises should incorporate "prolonged Middle East tensions" into their baseline supply chain risk management scenarios.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 4 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">4</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>日本成长战略——34类产品技术官民投资路线图</span><span data-en>Japan Growth Strategy — Public-Private Investment Roadmap for 34 Product Categories</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>日本政府发布34类产品技术官民投资路线图素案，涵盖自动驾驶、海底电缆、动漫、海上风电、机器人等战略领域。路线图设定了雄心勃勃的全球份额目标：2030年代自动驾驶车辆全球份额达25%，海底电缆全球份额从20%提升至35%。与此同时，跨党派"机器人议连"正式成立，目标2040年获取全球超3成市场份额。这是日本近年来最全面的产业政策文件之一，标志着从"防守型"（保护国内市场）向"进攻型"（争夺全球份额）的战略转向。</span><span data-en>The Japanese government released a draft public-private investment roadmap covering 34 product and technology categories, spanning autonomous driving, submarine cables, anime, offshore wind power, robotics, and other strategic fields. The roadmap sets ambitious global market share targets: 25% for autonomous vehicles by the 2030s, and submarine cables rising from 20% to 35%. Concurrently, a cross-party "Robotics Parliamentary League" was formally established, targeting over 30% global market share by 2040. This is one of Japan's most comprehensive industrial policy documents in recent years, marking a strategic shift from "defensive" (protecting domestic markets) to "offensive" (competing for global share).</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>内阁府</span><span data-en>Cabinet Office</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>经济产业省</span><span data-en>METI</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>国土交通省</span><span data-en>MLIT</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>文化厅</span><span data-en>Agency for Cultural Affairs</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>机器人议连</span><span data-en>Robotics Parliamentary League</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>汽车产业</span><span data-en>Automotive Industry</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>通信基础设施产业</span><span data-en>Telecom Infrastructure</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>内容产业</span><span data-en>Content Industry</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>34类产品技术路线图意味着日本将在未来5-10年内向这些领域注入大规模官民协同投资。对外资企业而言，这既是合作机遇（联合研发、供应链嵌入），也是竞争压力（日本本土企业将获得政策性资源倾斜）。特别值得关注的是，动漫被纳入国家投资战略，显示日本正在将文化软实力转化为产业硬实力。</span><span data-en>The 34-category roadmap means Japan will inject massive public-private co-investment into these fields over the next 5-10 years. For foreign enterprises, this represents both collaboration opportunities (joint R&amp;D, supply chain integration) and competitive pressure (Japanese domestic firms will receive policy-driven resource advantages). Notably, anime's inclusion in the national investment strategy shows Japan is converting cultural soft power into industrial hard power.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>技术型外资企业应主动对接路线图中的合作窗口，特别是自动驾驶、海底电缆、海上风电等领域的官民合作项目；内容产业企业应关注动漫IP的跨境合作机会；机器人和自动化领域的企业应评估日本市场的中长期增长潜力，考虑提前布局。</span><span data-en>Technology-focused foreign enterprises should proactively engage with collaboration windows in the roadmap, particularly public-private projects in autonomous driving, submarine cables, and offshore wind. Content industry firms should explore cross-border anime IP collaboration opportunities. Robotics and automation companies should assess Japan's medium-to-long-term market growth potential and consider early positioning.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 5 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">5</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>LINE雅虎完成与韩国Naver系统分离</span><span data-en>LINE Yahoo Completes System Separation from South Korea's Naver</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>LINE雅虎（LY Corporation）宣布完成含子公司在内的与韩国Naver的系统分离，同时解除服务开发委托关系。这是针对2023年LINE用户信息泄露事件（约44万用户数据外泄）的核心整改措施。总务相林芳正对此予以肯定，认为这标志着日本在数据主权保护方面迈出重要一步。系统分离意味着日本用户数据将完全在日本境内处理和存储，不再依赖韩国Naver的技术基础设施。</span><span data-en>LINE Yahoo (LY Corporation) announced the completion of system separation from South Korea's Naver, including subsidiaries, while also terminating service development outsourcing arrangements. This is the core remediation measure following the 2023 LINE user data breach (approximately 440,000 users' data leaked). Minister of Internal Affairs Hayashi Yoshimasa affirmed this as a significant step in Japan's data sovereignty protection. The system separation means Japanese user data will be processed and stored entirely within Japan, no longer relying on Naver's technical infrastructure.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>LINE雅虎（LY Corporation）</span><span data-en>LINE Yahoo (LY Corporation)</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>软银集团</span><span data-en>SoftBank Group</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>韩国Naver</span><span data-en>South Korea's Naver</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>总务省</span><span data-en>MIC</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>个人信息保护委员会</span><span data-en>Personal Information Protection Commission</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>LINE雅虎事件是日本数据主权意识觉醒的标志性案例。系统分离的完成将为日本政府制定更严格的数据本地化要求提供实践先例。对在日运营的外资科技企业而言，这释放了一个明确信号：日本正在收紧跨境数据流动的监管尺度，未来可能出台更具约束力的数据本地化法规。</span><span data-en>The LINE Yahoo case is a landmark event in Japan's awakening data sovereignty awareness. The completion of system separation will provide a practical precedent for the Japanese government to establish stricter data localization requirements. For foreign tech companies operating in Japan, this sends a clear signal: Japan is tightening cross-border data flow regulations, and more binding data localization laws may be enacted in the future.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在日运营的科技企业应审视自身的数据架构，评估跨境数据传输的合规风险；云服务和SaaS企业应考虑在日本境内部署数据处理节点；所有处理日本用户数据的企业应关注个人信息保护委员会的后续政策动向。</span><span data-en>Tech companies operating in Japan should review their data architecture and assess cross-border data transfer compliance risks. Cloud and SaaS providers should consider deploying data processing nodes within Japan. All enterprises handling Japanese user data should monitor subsequent policy developments from the Personal Information Protection Commission.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 6 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">6</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>外国人在留手续费大幅上调引发争议</span><span data-en>Sharp Increase in Foreign Resident Permit Fees Sparks Controversy</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>日本政府拟大幅上调外国人在留手续费——在留资格变更更新费从1万日元提至10万日元（10倍），永住许可从1万日元提至30万日元（30倍）。批评者指出，仅让外国人承担入管行政成本违背"受益者负担原则"（日本社会同样受益于外国劳动力），可能加剧本已严峻的人手不足问题，并损害日本的国际信任度。减免规定尚未明确，存在行政恣意裁量的风险。</span><span data-en>The Japanese government plans to sharply increase foreign resident permit fees — residence status change/renewal fees from ¥10,000 to ¥100,000 (10x), and permanent residency permits from ¥10,000 to ¥300,000 (30x). Critics argue that placing immigration administrative costs solely on foreigners violates the "beneficiary burden principle" (Japanese society equally benefits from foreign labor), could exacerbate the already severe labor shortage, and damage Japan's international credibility. Exemption provisions remain unclear, creating risks of arbitrary administrative discretion.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>出入国在留管理厅</span><span data-en>Immigration Services Agency</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>法务省</span><span data-en>MOJ</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>外国人劳动者</span><span data-en>Foreign Workers</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>在日外资企业</span><span data-en>Foreign Enterprises in Japan</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>人材派遣行业</span><span data-en>Staffing Industry</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在留手续费的大幅上调与日本"扩大接收外国人才"的政策方向形成矛盾。对依赖外国员工的企业而言，这将直接增加人才获取和保留的成本。永住许可费30倍的涨幅尤其值得关注——这可能降低高技能外国人才在日本长期定居的意愿，影响企业的中长期人才战略。</span><span data-en>The sharp increase in residence permit fees contradicts Japan's policy direction of "expanding acceptance of foreign talent." For enterprises reliant on foreign employees, this will directly increase talent acquisition and retention costs. The 30x increase in permanent residency fees is particularly noteworthy — it could reduce highly skilled foreign talent's willingness to settle long-term in Japan, affecting companies' medium-to-long-term talent strategies.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在日外资企业应重新测算外国员工的在留手续成本，评估是否需要调整企业负担政策（部分或全额承担手续费）；人力资源部门应关注减免规定的细则出台时间；依赖技能实习生和特定技能签证的企业应评估费用上调对招聘竞争力的影响。</span><span data-en>Foreign enterprises in Japan should recalculate foreign employee residence permit costs and assess whether to adjust corporate burden policies (partial or full fee coverage). HR departments should monitor the timeline for exemption provision details. Companies relying on technical intern trainees and specified skilled worker visas should evaluate the impact of fee increases on recruitment competitiveness.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 7 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">7</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>轻油贩售价格卡特尔——5家石油公司被起诉</span><span data-en>Light Oil Price Cartel — 5 Oil Companies Prosecuted</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>东京地检特搜部起诉5家石油销售公司违反独占禁止法（反垄断法），公正取引委员会（公取委）此前已进行刑事告发。该案的特殊性在于：价格卡特尔行为发生在政府向石油行业投入大额燃油补助金期间，意味着企业在享受公共补贴的同时操纵市场价格，性质恶劣。这是近年来日本反垄断执法力度最强的案件之一。</span><span data-en>The Tokyo District Public Prosecutors Office Special Investigation Division prosecuted 5 oil sales companies for violating the Antimonopoly Act. The Japan Fair Trade Commission (JFTC) had previously filed criminal charges. The case is notable because the price cartel occurred while the government was providing substantial fuel subsidies to the oil industry, meaning companies were manipulating market prices while receiving public subsidies — an egregious violation. This is one of the strongest antitrust enforcement actions in Japan in recent years.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>东京地检特搜部</span><span data-en>Tokyo Prosecutors Special Investigation</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>公正取引委员会</span><span data-en>JFTC</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>5家石油销售公司</span><span data-en>5 Oil Sales Companies</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>经济产业省（补助金主管）</span><span data-en>METI (Subsidy Administrator)</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>该案释放了日本反垄断执法趋严的强烈信号，特别是在涉及公共补贴的领域。对在日外资企业而言，这意味着合规风险的权重需要上调——日本监管机构正在加强对"补贴+市场行为"交叉领域的审查力度。公取委的刑事告发（而非仅行政处分）表明执法态度的升级。</span><span data-en>This case sends a strong signal of tightening antitrust enforcement in Japan, particularly in areas involving public subsidies. For foreign enterprises in Japan, this means compliance risk weighting needs to be elevated — Japanese regulators are intensifying scrutiny of the intersection between "subsidies and market behavior." The JFTC's criminal referral (rather than mere administrative sanctions) indicates an escalation in enforcement posture.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>所有在日企业应审查自身的定价行为是否存在与竞争对手的协调嫌疑；享受政府补贴的企业应特别注意补贴使用的合规性和透明度；建议强化内部反垄断合规培训，特别是针对销售和采购部门。</span><span data-en>All enterprises in Japan should review whether their pricing practices involve any coordination with competitors. Companies receiving government subsidies should pay particular attention to subsidy usage compliance and transparency. Strengthening internal antitrust compliance training is recommended, especially for sales and procurement departments.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 8 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="bg-emerald-600 dark:bg-emerald-700 px-6 py-4 flex items-center gap-3">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white font-bold text-sm">8</span>
+          <h3 class="font-serif text-lg font-bold text-white"><span data-zh>柏崎刈羽原发6号机转入营业运转</span><span data-en>Kashiwazaki-Kariwa Nuclear Plant Unit 6 Enters Commercial Operation</span></h3>
+        </div>
+        <div class="p-6 sm:p-8 space-y-5">
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-file-lines mr-1"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></h4>
+            <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-sm"><span data-zh>东京电力柏崎刈羽核电站6号机组在1月再启动后，于4月16日正式转入营业运转。该机组的运转预计每年可节省相当于霍尔木兹海峡进口LNG 30%的能源进口量，对缓解当前中东局势引发的能源供应压力具有直接意义。新潟县知事在表示支持的同时，要求东京电力确保安全运营并监督避难道路的整备工作。</span><span data-en>TEPCO's Kashiwazaki-Kariwa Nuclear Power Plant Unit 6, which was restarted in January, officially entered commercial operation on April 16. The unit's operation is expected to save the equivalent of 30% of LNG imports through the Strait of Hormuz annually, directly alleviating energy supply pressures caused by the current Middle East situation. The Niigata Prefecture Governor expressed support while requiring TEPCO to ensure safe operations and oversee evacuation road development.</span></p>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 uppercase tracking-wider mb-2"><i class="fa-solid fa-users mr-1"></i> <span data-zh>涉及方</span><span data-en>Stakeholders</span></h4>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>东京电力</span><span data-en>TEPCO</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>原子力规制委员会</span><span data-en>Nuclear Regulation Authority</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>新潟县</span><span data-en>Niigata Prefecture</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>经济产业省</span><span data-en>METI</span></span>
+              <span class="px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium"><span data-zh>电力用户</span><span data-en>Electricity Consumers</span></span>
+            </div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-amber-50 dark:bg-amber-900/20 rounded-xl p-5 border border-amber-200 dark:border-amber-800/50">
+              <h4 class="text-sm font-bold text-amber-700 dark:text-amber-400 mb-2"><i class="fa-solid fa-triangle-exclamation mr-1"></i> <span data-zh>这意味着什么</span><span data-en>What This Means</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>柏崎刈羽6号机的营业运转是日本核电重启进程中的重要里程碑。在中东局势推高LNG进口成本的背景下，核电的回归为日本电力供应提供了重要的成本对冲和供应安全保障。对电力密集型产业（半导体、数据中心、化工等）而言，这是一个积极信号——中长期电力成本有望得到抑制。</span><span data-en>Unit 6's commercial operation is a significant milestone in Japan's nuclear restart process. Against the backdrop of Middle East tensions driving up LNG import costs, nuclear power's return provides important cost hedging and supply security for Japan's electricity supply. For power-intensive industries (semiconductors, data centers, chemicals, etc.), this is a positive signal — medium-to-long-term electricity costs are expected to be contained.</span></p>
+            </div>
+            <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+              <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-clipboard-check mr-1"></i> <span data-zh>企业应该怎么做</span><span data-en>What Businesses Should Do</span></h4>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>电力密集型企业应关注核电重启对电力批发价格的影响，评估长期电力采购合同的调整时机；在新潟县及周边地区运营的企业应关注避难道路整备等安全基础设施的进展；能源相关企业应将核电重启纳入日本能源结构中长期预测模型。</span><span data-en>Power-intensive enterprises should monitor the impact of nuclear restarts on wholesale electricity prices and evaluate timing for adjusting long-term power procurement contracts. Companies operating in Niigata Prefecture and surrounding areas should monitor progress on safety infrastructure such as evacuation roads. Energy-related companies should incorporate nuclear restarts into their medium-to-long-term Japan energy mix forecasting models.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end events space -->
+  </div>
+</section>
+
+<!-- Chapter 4: 趋势研判 -->
+<section id="trends" class="py-16 sm:py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">四</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></h2>
+    </div>
+    <div class="space-y-8">
+
+      <!-- Trend 1 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-xl shrink-0">01</span>
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white pt-2"><span data-zh>税制改革进入深水区，地方财政承压加剧</span><span data-en>Tax Reform Enters Deep Waters as Local Fiscal Pressure Intensifies</span></h3>
+        </div>
+        <div class="ml-0 sm:ml-16 space-y-4">
+          <div>
+            <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2"><span data-zh>趋势描述</span><span data-en>Trend Description</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>食品消费税零税率、汽油税暂定税率废除、汽车相关地方税取消——多项减税政策叠加，日本地方自治体的财源正在系统性收缩。全国知事会等地方团体已公开表达对中央"场当たり的"税制政策的不信任，地方与中央的财政博弈正在升温。</span><span data-en>Zero-rate food consumption tax, abolition of provisional gasoline tax rates, elimination of automobile-related local taxes — multiple tax reduction policies are stacking up, systematically shrinking local government revenue sources. Local groups including the National Governors' Association have publicly expressed distrust of the central government's ad hoc tax policies, and the fiscal tug-of-war between local and central governments is heating up.</span></p>
+          </div>
+          <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i> <span data-zh>研判</span><span data-en>Assessment</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>消费税零税率政策的推进节奏将取决于参议院选举（2025年7月）后的政治格局。短期内，"2年限时"方案落地的概率较高，但恒久化的可能性较低。然而，即便是限时方案，地方财政的缺口也需要通过中央转移支付或新税源来填补。对企业而言，需要关注的不是消费税本身的变化，而是地方政府为弥补财源缺口可能采取的"隐性增负"措施——如提高地方使用费、收紧补贴审批、延迟基础设施投资等。</span><span data-en>The pace of the zero-rate consumption tax policy will depend on the political landscape after the House of Councillors election (July 2025). In the short term, the "2-year limited" plan has a higher probability of implementation, but permanent adoption is unlikely. However, even a time-limited plan requires filling local fiscal gaps through central transfer payments or new revenue sources. For businesses, the focus should not be on consumption tax changes themselves, but on "hidden cost increases" local governments may adopt to fill revenue gaps — such as raising local user fees, tightening subsidy approvals, and delaying infrastructure investment.</span></p>
+            <p class="text-xs text-emerald-600 dark:text-emerald-500 mt-3 font-medium"><i class="fa-solid fa-link mr-1"></i> 交叉印证：<span data-zh>事件1（消费税零税率）+ 事件6（地方金融机构再编）+ 标签数据（税收法规调整80条）</span><span data-en>Event 1 (Zero-rate consumption tax) + Event 6 (Local financial institution restructuring) + Tag data (Tax regulation: 80 articles)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 2 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-xl shrink-0">02</span>
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white pt-2"><span data-zh>劳动市场规制松绑与人力短缺形成政策张力</span><span data-en>Labor Market Deregulation Creates Policy Tension with Workforce Shortages</span></h3>
+        </div>
+        <div class="ml-0 sm:ml-16 space-y-4">
+          <div>
+            <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2"><span data-zh>趋势描述</span><span data-en>Trend Description</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>自民党提言要求放宽加班管控，厚劳省启动裁量劳动制调查，外国人在留手续费大幅上调——三条看似独立的政策线索指向同一个结构性矛盾：日本既需要更灵活的劳动力使用方式来应对人手不足，又在事实上提高了外国劳动力的进入门槛。</span><span data-en>The LDP's proposal to relax overtime controls, the MHLW's launch of a discretionary work system survey, and the sharp increase in foreign resident permit fees — three seemingly independent policy threads point to the same structural contradiction: Japan needs more flexible labor utilization to address workforce shortages while simultaneously raising barriers to foreign labor entry.</span></p>
+          </div>
+          <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i> <span data-zh>研判</span><span data-en>Assessment</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>劳动规制的松绑方向已基本确立，但"松到什么程度"仍是博弈焦点。厚劳省调查的结论（预计2026年底至2027年初出炉）将成为下一轮制度设计的关键依据。在留手续费上调则可能在国际舆论压力下出台减免细则。对企业而言，"用好现有员工"比"等待政策松绑"更务实——投资自动化、优化排班制度、提升员工留存率是当前最优策略。</span><span data-en>The direction of labor deregulation is largely established, but "how far to deregulate" remains the focal point of negotiation. The MHLW survey conclusions (expected late 2026 to early 2027) will be the key basis for the next round of institutional design. Residence permit fee increases may see exemption provisions under international public pressure. For businesses, "maximizing existing employees" is more pragmatic than "waiting for policy relaxation" — investing in automation, optimizing shift scheduling, and improving employee retention are the optimal current strategies.</span></p>
+            <p class="text-xs text-emerald-600 dark:text-emerald-500 mt-3 font-medium"><i class="fa-solid fa-link mr-1"></i> 交叉印证：<span data-zh>事件2（劳动规制缓和）+ 事件7（在留手续费上调）+ 标签数据（人力成本变动89条 + 劳动力供给87条）</span><span data-en>Event 2 (Labor deregulation) + Event 7 (Residence fee increase) + Tag data (Labor costs: 89 + Labor supply: 87 articles)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 3 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-xl shrink-0">03</span>
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white pt-2"><span data-zh>能源安全从"脱碳"转向"脱中东依赖"双轨并行</span><span data-en>Energy Security Shifts to Dual-Track: Decarbonization and Reducing Middle East Dependence</span></h3>
+        </div>
+        <div class="ml-0 sm:ml-16 space-y-4">
+          <div>
+            <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2"><span data-zh>趋势描述</span><span data-en>Trend Description</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>中东局势冲击下，日本能源政策的优先级正在发生微妙调整。柏崎刈羽核电站6号机转入营业运转、AZEC 100亿美元东南亚原油采购支援、国储医疗手套投放——这些举措共同指向一个方向：在维持脱碳目标的同时，加速构建"脱中东依赖"的能源供应多元化体系。</span><span data-en>Under the impact of Middle East tensions, Japan's energy policy priorities are undergoing subtle adjustments. Kashiwazaki-Kariwa Unit 6 entering commercial operation, AZEC's $10 billion Southeast Asian crude oil procurement support, and national reserve medical glove releases — these measures collectively point in one direction: accelerating the construction of a diversified energy supply system to "reduce Middle East dependence" while maintaining decarbonization targets.</span></p>
+          </div>
+          <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i> <span data-zh>研判</span><span data-en>Assessment</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>核电重启将成为日本能源政策的"压舱石"。柏崎刈羽6号机年节省30%霍尔木兹海峡LNG进口量的数据，为后续核电机组重启提供了强有力的经济论据。AZEC框架下的多边能源合作则标志着日本正在将能源安全从"国内问题"升级为"区域战略"。对企业而言，能源成本的中长期走势将呈现"波动中下行"的格局——短期受中东局势影响仍有上行压力，但核电重启和供应多元化将逐步释放成本红利。</span><span data-en>Nuclear restarts will become the "ballast" of Japan's energy policy. The data showing Unit 6 saves 30% of Strait of Hormuz LNG imports annually provides powerful economic arguments for subsequent reactor restarts. Multilateral energy cooperation under the AZEC framework marks Japan's elevation of energy security from a "domestic issue" to a "regional strategy." For businesses, medium-to-long-term energy costs will follow a "declining amid volatility" pattern — short-term upward pressure from Middle East tensions persists, but nuclear restarts and supply diversification will gradually release cost dividends.</span></p>
+            <p class="text-xs text-emerald-600 dark:text-emerald-500 mt-3 font-medium"><i class="fa-solid fa-link mr-1"></i> 交叉印证：<span data-zh>事件3（中东局势冲击）+ 事件10（核电重启）+ 标签数据（能源供应平衡114条 + 供应链稳定130条）</span><span data-en>Event 3 (Middle East impact) + Event 10 (Nuclear restart) + Tag data (Energy supply: 114 + Supply chain: 130 articles)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 4 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-xl shrink-0">04</span>
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white pt-2"><span data-zh>产业政策从"防守"转向"进攻"，官民协同投资加速</span><span data-en>Industrial Policy Shifts from "Defense" to "Offense" with Accelerating Public-Private Investment</span></h3>
+        </div>
+        <div class="ml-0 sm:ml-16 space-y-4">
+          <div>
+            <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2"><span data-zh>趋势描述</span><span data-en>Trend Description</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>34类产品技术官民投资路线图的发布，叠加机器人议连的成立和动漫产业纳入国家战略，标志着日本产业政策的范式转换——从保护国内市场的"防守型"转向争夺全球份额的"进攻型"。自动驾驶25%、海底电缆35%、机器人30%的全球份额目标，展现了前所未有的战略雄心。</span><span data-en>The release of the 34-category public-private investment roadmap, combined with the establishment of the Robotics Parliamentary League and anime's inclusion in national strategy, marks a paradigm shift in Japan's industrial policy — from "defensive" domestic market protection to "offensive" global market share competition. Global share targets of 25% for autonomous driving, 35% for submarine cables, and 30% for robotics demonstrate unprecedented strategic ambition.</span></p>
+          </div>
+          <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i> <span data-zh>研判</span><span data-en>Assessment</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>日本的"进攻型"产业政策将在未来3-5年内释放大量官民协同投资机会。但需要注意的是，路线图目前仍处于"素案"阶段，从素案到预算落地通常需要1-2个财年。对外资企业而言，现在是"卡位"的最佳窗口期——在路线图正式确定前建立合作关系，将在后续的项目招标和补贴申请中占据先发优势。</span><span data-en>Japan's "offensive" industrial policy will release substantial public-private co-investment opportunities over the next 3-5 years. However, the roadmap is still at the "draft" stage, and the transition from draft to budget allocation typically takes 1-2 fiscal years. For foreign enterprises, now is the optimal window for "positioning" — establishing partnerships before the roadmap is finalized will provide first-mover advantages in subsequent project tenders and subsidy applications.</span></p>
+            <p class="text-xs text-emerald-600 dark:text-emerald-500 mt-3 font-medium"><i class="fa-solid fa-link mr-1"></i> 交叉印证：<span data-zh>事件4（成长战略路线图）+ 事件5（数据主权保护）+ 标签数据（产业政策调整196条 + 产业规划论证5条）</span><span data-en>Event 4 (Growth strategy roadmap) + Event 5 (Data sovereignty) + Tag data (Industrial policy: 196 + Industrial planning: 5 articles)</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 5 -->
+      <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <div class="flex items-start gap-4 mb-4">
+          <span class="flex items-center justify-center w-12 h-12 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-xl shrink-0">05</span>
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white pt-2"><span data-zh>数据主权与AI治理立法进入快车道</span><span data-en>Data Sovereignty and AI Governance Legislation Enter the Fast Lane</span></h3>
+        </div>
+        <div class="ml-0 sm:ml-16 space-y-4">
+          <div>
+            <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2"><span data-zh>趋势描述</span><span data-en>Trend Description</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>LINE雅虎完成与Naver的系统分离、AI肖像权保护检讨会启动、公司法修订中的受益股东识别条款、国家情报局创设法案——多条立法线索共同指向日本正在加速构建"数字时代的国家治理框架"。数据本地化、AI权利保护、企业透明度、情报安全四个维度同步推进。</span><span data-en>LINE Yahoo's system separation from Naver, the launch of the AI portrait rights review committee, beneficial shareholder identification provisions in corporate law amendments, and the national intelligence agency establishment bill — multiple legislative threads collectively indicate Japan is accelerating the construction of a "digital-age national governance framework." Data localization, AI rights protection, corporate transparency, and intelligence security are advancing simultaneously across four dimensions.</span></p>
+          </div>
+          <div class="bg-emerald-50 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-200 dark:border-emerald-800/50">
+            <h4 class="text-sm font-bold text-emerald-700 dark:text-emerald-400 mb-2"><i class="fa-solid fa-magnifying-glass-chart mr-1"></i> <span data-zh>研判</span><span data-en>Assessment</span></h4>
+            <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>日本的数据治理立法将在2026-2027年进入密集出台期。LINE雅虎事件提供了"数据本地化"的实践模板，AI肖像权检讨会则可能催生亚洲首部AI生成内容民事责任法。对科技企业和数据密集型企业而言，合规成本将显著上升，但同时也意味着"合规即竞争力"——率先满足日本数据治理要求的企业将在市场竞争中获得信任优势。</span><span data-en>Japan's data governance legislation will enter a period of intensive enactment in 2026-2027. The LINE Yahoo case provides a practical template for "data localization," while the AI portrait rights review committee may give rise to Asia's first civil liability law for AI-generated content. For tech and data-intensive enterprises, compliance costs will rise significantly, but this also means "compliance equals competitiveness" — companies that first meet Japan's data governance requirements will gain trust advantages in market competition.</span></p>
+            <p class="text-xs text-emerald-600 dark:text-emerald-500 mt-3 font-medium"><i class="fa-solid fa-link mr-1"></i> 交叉印证：<span data-zh>事件5（LINE雅虎系统分离）+ 事件9（AI肖像权）+ 事件11（公司法修订）+ 事件12（国家情报局）+ 标签数据（知识产权保护264条）</span><span data-en>Event 5 (LINE Yahoo separation) + Event 9 (AI portrait rights) + Event 11 (Corporate law amendment) + Event 12 (National intelligence agency) + Tag data (IP protection: 264 articles)</span></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Chapter 5: 风险警示 -->
+<section id="risks" class="py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">五</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+    </div>
+
+    <!-- 高风险 -->
+    <div class="mb-10">
+      <div class="reveal flex items-center gap-2 mb-6">
+        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+        <h3 class="font-serif text-xl font-bold text-red-600 dark:text-red-400"><span data-zh>高风险</span><span data-en>High Risk</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover risk-red bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold">1</span>
+            中东局势长期化导致供应链断裂风险
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-red-600 dark:text-red-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>原油衍生品（涂料、稀释剂、医疗手套原料）供应缺口已从"价格上涨"升级为"物理性短缺"，影响汽车维修、住宅建设、医疗物资三大领域。若中东局势在未来3-6个月内无法缓和，短缺范围可能扩大至塑料制品、合成纤维等更广泛的石化产业链。</span><span data-en>Crude oil derivative (paint, thinner, medical glove raw materials) supply gaps have escalated from "price increases" to "physical shortages," affecting auto repair, residential construction, and medical supplies. If Middle East tensions do not ease within the next 3-6 months, shortages could expand to plastics, synthetic fibers, and the broader petrochemical supply chain.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>立即盘点石化衍生品库存水位，建立至少90天的安全库存；启动替代供应商评估（东南亚、北美产能）；与客户提前沟通可能的交期调整。</span><span data-en>Immediately audit petrochemical derivative inventory levels and establish at least 90-day safety stock. Initiate alternative supplier assessments (Southeast Asian and North American capacity). Proactively communicate potential delivery schedule adjustments with clients.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-red bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold">2</span>
+            消费税改革引发的财政不确定性
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-red-600 dark:text-red-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>食品消费税零税率若落地，地方自治体年减近2万亿日元财源。地方政府可能通过压缩产业补贴、延迟基础设施投资、提高行政手续费等方式转嫁财政压力。对依赖地方政府补贴和公共项目的企业影响尤为直接。</span><span data-en>If the zero-rate food consumption tax is implemented, local governments would lose nearly ¥2 trillion in annual revenue. Local governments may pass on fiscal pressure by cutting industrial subsidies, delaying infrastructure investment, and raising administrative fees. The impact is particularly direct for enterprises reliant on local government subsidies and public projects.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>梳理企业当前享受的地方政府补贴清单，评估补贴延续性风险；对在建或计划中的公共项目合同，关注地方政府的支付能力变化；建立与地方政府的定期沟通机制。</span><span data-en>Review the list of local government subsidies currently received and assess subsidy continuity risks. For ongoing or planned public project contracts, monitor changes in local government payment capacity. Establish regular communication mechanisms with local governments.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-red bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold">3</span>
+            反垄断执法升级风险
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-red-600 dark:text-red-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>轻油价格卡特尔案中，公取委采取了刑事告发（而非行政处分）的最高级别执法手段，且案件发生在政府补贴期间，性质认定极为严厉。这预示着日本反垄断执法将进入新阶段，特别是在涉及公共资金的领域。</span><span data-en>In the light oil price cartel case, the JFTC employed criminal referral (rather than administrative sanctions) — the highest level of enforcement — and the case occurred during a government subsidy period, making the characterization extremely severe. This signals that Japan's antitrust enforcement is entering a new phase, particularly in areas involving public funds.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>全面审查企业定价行为的合规性，特别是与竞争对手的任何价格信息交换；享受政府补贴的企业应确保补贴使用的完全透明；强化反垄断合规培训，建立内部举报机制。</span><span data-en>Comprehensively review pricing behavior compliance, particularly any price information exchanges with competitors. Companies receiving government subsidies should ensure complete transparency in subsidy usage. Strengthen antitrust compliance training and establish internal whistleblowing mechanisms.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 中风险 -->
+    <div class="mb-10">
+      <div class="reveal flex items-center gap-2 mb-6">
+        <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+        <h3 class="font-serif text-xl font-bold text-amber-600 dark:text-amber-400"><span data-zh>中风险</span><span data-en>Medium Risk</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover risk-yellow bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold">1</span>
+            劳动规制变化的合规过渡风险
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-amber-600 dark:text-amber-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>劳动时间规制的松绑方向已明确，但具体细则尚未落地。企业若提前放宽内部加班管理，可能面临"政策未到、执法先行"的合规风险。厚劳省裁量劳动制调查的结论也可能带来新的合规要求。</span><span data-en>The direction of working hour deregulation is clear, but specific details have not yet been finalized. Companies that prematurely relax internal overtime management may face compliance risks of "enforcement before policy." The MHLW discretionary work system survey conclusions may also introduce new compliance requirements.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在政策正式落地前，维持现行劳动时间管理标准不变；密切跟踪厚劳省调查进展；提前准备多套劳动时间管理方案，以便政策明确后快速切换。</span><span data-en>Maintain current working hour management standards until policy is officially finalized. Closely track MHLW survey progress. Prepare multiple working hour management plans in advance for rapid switching once policy is clarified.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-yellow bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold">2</span>
+            外国人才获取成本上升风险
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-amber-600 dark:text-amber-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在留手续费10-30倍的涨幅将直接增加外国员工的雇用成本。在日本人手不足持续加剧的背景下，费用上调可能降低日本对高技能外国人才的吸引力，影响企业的中长期人才战略。减免规定的不明确性增加了行政成本的不可预测性。</span><span data-en>The 10-30x increase in residence permit fees will directly raise foreign employee hiring costs. Against the backdrop of worsening labor shortages in Japan, fee increases could reduce Japan's attractiveness to highly skilled foreign talent, affecting companies' medium-to-long-term talent strategies. The lack of clarity on exemption provisions adds unpredictability to administrative costs.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>重新测算外国员工全生命周期成本（含手续费、住房补贴、语言培训等）；评估是否需要调整企业对手续费的负担政策；关注减免细则的出台时间，提前准备申请材料。</span><span data-en>Recalculate the full lifecycle cost of foreign employees (including permit fees, housing subsidies, language training, etc.). Assess whether to adjust corporate fee burden policies. Monitor the timeline for exemption provision details and prepare application materials in advance.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-yellow bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold">3</span>
+            数据本地化合规成本上升风险
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-amber-600 dark:text-amber-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>LINE雅虎系统分离的完成为日本政府推行更严格的数据本地化要求提供了先例。AI肖像权立法检讨会的启动则可能催生新的数据处理合规义务。对跨境运营的科技企业和数据密集型企业而言，合规架构调整的成本可能显著上升。</span><span data-en>The completion of LINE Yahoo's system separation provides a precedent for the Japanese government to implement stricter data localization requirements. The launch of the AI portrait rights legislative review may generate new data processing compliance obligations. For cross-border tech and data-intensive enterprises, compliance architecture adjustment costs could rise significantly.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>建议应对</span><span data-en>Recommended Response</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>审计现有数据架构中的跨境数据流动环节；评估在日本境内部署数据处理节点的技术和成本可行性；关注个人信息保护委员会和法务省的政策动向。</span><span data-en>Audit cross-border data flow components in existing data architecture. Evaluate the technical and cost feasibility of deploying data processing nodes within Japan. Monitor policy developments from the Personal Information Protection Commission and the Ministry of Justice.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 低风险/机遇 -->
+    <div>
+      <div class="reveal flex items-center gap-2 mb-6">
+        <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+        <h3 class="font-serif text-xl font-bold text-emerald-600 dark:text-emerald-400"><span data-zh>低风险 / 机遇信号</span><span data-en>Low Risk / Opportunity Signals</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover risk-green bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">1</span>
+            成长战略路线图带来的投资合作机遇
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>34类产品技术路线图覆盖自动驾驶、海底电缆、机器人、动漫、海上风电等领域，官民协同投资规模预计达数万亿日元级别。路线图目前处于"素案"阶段，正式确定前是建立合作关系的最佳窗口期。</span><span data-en>The 34-category roadmap covers autonomous driving, submarine cables, robotics, anime, offshore wind, and other fields, with public-private co-investment expected to reach trillions of yen. The roadmap is currently at the "draft" stage — the optimal window for establishing partnerships is before finalization.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-rocket mr-1"></i> <span data-zh>建议行动</span><span data-en>Recommended Action</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>主动对接经济产业省和相关行业协会，了解路线图细化进程和合作窗口；评估自身技术能力与路线图目标的匹配度；考虑与日本企业建立联合研发或合资关系。</span><span data-en>Proactively engage with METI and relevant industry associations to understand the roadmap refinement process and collaboration windows. Assess alignment between your technological capabilities and roadmap targets. Consider establishing joint R&amp;D or joint venture relationships with Japanese companies.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-green bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">2</span>
+            核电重启带来的能源成本改善机遇
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>柏崎刈羽6号机年节省30%霍尔木兹海峡LNG进口量，后续更多机组重启将进一步压低电力成本。对电力密集型产业（半导体、数据中心、化工、金属加工等）而言，中长期电力成本有望显著改善。</span><span data-en>Unit 6 saves 30% of Strait of Hormuz LNG imports annually, and subsequent reactor restarts will further reduce electricity costs. For power-intensive industries (semiconductors, data centers, chemicals, metal processing, etc.), medium-to-long-term electricity costs are expected to improve significantly.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-rocket mr-1"></i> <span data-zh>建议行动</span><span data-en>Recommended Action</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>关注电力批发市场价格走势，评估长期电力采购合同的重新谈判时机；电力密集型企业可将核电重启纳入日本投资扩产的决策因素。</span><span data-en>Monitor wholesale electricity market price trends and evaluate timing for renegotiating long-term power procurement contracts. Power-intensive enterprises can incorporate nuclear restarts as a decision factor for Japan investment expansion.</span></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal card-hover risk-green bg-white dark:bg-gray-900 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <span class="flex items-center justify-center w-7 h-7 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">3</span>
+            访日游客创新高带来的消费市场机遇
+          </h4>
+          <div class="space-y-3">
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-crosshairs mr-1"></i> <span data-zh>具体关注点</span><span data-en>Key Concerns</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>2025年度访日外国游客达4,282万人创历史新高，部分观光企业稼动率近100%。虽然中国游客量因渡航自粛同比腰斩，但其他市场（东南亚、欧美、中东）的增长强劲。消费市场的结构性变化为企业提供了新的客群定位机会。</span><span data-en>Inbound foreign tourists reached a record 42.82 million in FY2025, with some tourism businesses operating near 100% capacity. While Chinese tourist numbers halved year-on-year due to travel restraint, other markets (Southeast Asia, Europe/Americas, Middle East) showed strong growth. Structural changes in the consumer market provide new customer segment positioning opportunities.</span></p>
+            </div>
+            <div>
+              <h5 class="text-sm font-bold text-emerald-600 dark:text-emerald-400 mb-1"><i class="fa-solid fa-rocket mr-1"></i> <span data-zh>建议行动</span><span data-en>Recommended Action</span></h5>
+              <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>面向消费者的企业应调整客群策略，加大对东南亚和欧美游客的营销投入；观光和零售行业应评估产能扩张的可行性；关注中国游客回流的时间节点和规模预期。</span><span data-en>Consumer-facing enterprises should adjust customer segment strategies and increase marketing investment targeting Southeast Asian and Western tourists. Tourism and retail industries should evaluate the feasibility of capacity expansion. Monitor the timeline and scale expectations for Chinese tourist return.</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Chapter 6: 行动建议 -->
+<section id="actions" class="py-16 sm:py-20 bg-gray-100 dark:bg-gray-900">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">六</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>行动建议</span><span data-en>Action Items</span></h2>
+    </div>
+
+    <!-- 6.1 已在日本投资的企业 -->
+    <div class="mb-12">
+      <div class="reveal flex items-center gap-3 mb-6">
+        <i class="fa-solid fa-building text-emerald-600 dark:text-emerald-400 text-xl"></i>
+        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white"><span data-zh>6.1 已在日本投资的企业</span><span data-en>6.1 Enterprises Already Invested in Japan</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>1. 供应链韧性强化</span><span data-en>1. Supply Chain Resilience Enhancement</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold"><span data-zh>紧迫度：高</span><span data-en>Urgency: High</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>立即启动石化衍生品供应链的压力测试，重点评估涂料、稀释剂、医疗耗材等中东依赖度高的品类。建立替代供应商短名单（优先考虑东南亚和北美产能），将安全库存水位从常规的30天提升至90天。同时关注AZEC框架下的多边采购机会，评估是否可通过日本政府的金融支援渠道降低采购成本。</span><span data-en>Immediately launch stress tests on petrochemical derivative supply chains, focusing on categories with high Middle East dependency such as paint, thinner, and medical consumables. Establish a shortlist of alternative suppliers (prioritizing Southeast Asian and North American capacity) and raise safety stock levels from the standard 30 days to 90 days. Also monitor multilateral procurement opportunities under the AZEC framework and assess whether procurement costs can be reduced through Japanese government financial support channels.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>2. 劳动合规与用工策略调整</span><span data-en>2. Labor Compliance and Workforce Strategy Adjustment</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold"><span data-zh>紧迫度：中高</span><span data-en>Urgency: Medium-High</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在劳动规制松绑政策正式落地前，维持现行劳动时间管理标准不变，避免"抢跑"带来的合规风险。同时，利用政策窗口期重新设计用工弹性方案：评估裁量劳动制的适用岗位范围、优化36协定的签订策略、加大自动化和数字化投入以减少对加班的依赖。对外国员工，重新测算在留手续费上调后的全生命周期成本，必要时调整企业负担政策以维持人才竞争力。</span><span data-en>Maintain current working hour management standards until labor deregulation policies are officially finalized, avoiding compliance risks from "jumping the gun." Meanwhile, use the policy window to redesign workforce flexibility plans: evaluate the scope of positions eligible for the discretionary work system, optimize Article 36 agreement strategies, and increase automation and digitalization investment to reduce overtime dependency. For foreign employees, recalculate full lifecycle costs after residence permit fee increases and adjust corporate burden policies as needed to maintain talent competitiveness.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>3. 税制变化的财务影响评估</span><span data-en>3. Financial Impact Assessment of Tax Changes</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold"><span data-zh>紧迫度：中</span><span data-en>Urgency: Medium</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>组织财务和法务团队评估食品消费税零税率对企业成本结构的影响（食品相关企业直接受益，其他企业关注地方财政紧缩的间接影响）。梳理当前享受的地方政府补贴和优惠政策清单，评估补贴延续性风险。建立与地方政府的定期沟通机制，提前获取财政政策调整的信号。</span><span data-en>Organize finance and legal teams to assess the impact of zero-rate food consumption tax on corporate cost structures (food-related enterprises benefit directly; others should focus on indirect impacts of local fiscal austerity). Review the list of current local government subsidies and preferential policies, and assess subsidy continuity risks. Establish regular communication mechanisms with local governments to obtain early signals of fiscal policy adjustments.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>4. 反垄断合规升级</span><span data-en>4. Antitrust Compliance Upgrade</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold"><span data-zh>紧迫度：中</span><span data-en>Urgency: Medium</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>以轻油价格卡特尔案为警示，全面审查企业定价行为的合规性。重点关注：与竞争对手的任何价格信息交换渠道是否存在、政府补贴使用的透明度是否充分、内部反垄断合规培训是否覆盖销售和采购一线人员。建议聘请外部法律顾问进行一次全面的反垄断合规审计。</span><span data-en>Using the light oil price cartel case as a warning, comprehensively review pricing behavior compliance. Key focus areas: whether any price information exchange channels with competitors exist, whether government subsidy usage transparency is sufficient, and whether internal antitrust compliance training covers frontline sales and procurement staff. Engaging external legal counsel for a comprehensive antitrust compliance audit is recommended.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6.2 计划进入日本市场的企业 -->
+    <div class="mb-12">
+      <div class="reveal flex items-center gap-3 mb-6">
+        <i class="fa-solid fa-plane-arrival text-emerald-600 dark:text-emerald-400 text-xl"></i>
+        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white"><span data-zh>6.2 计划进入日本市场的企业</span><span data-en>6.2 Enterprises Planning to Enter the Japanese Market</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>1. 对接成长战略路线图的合作窗口</span><span data-en>1. Engaging with Growth Strategy Roadmap Collaboration Windows</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold"><span data-zh>优先度：高</span><span data-en>Priority: High</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>34类产品技术官民投资路线图目前处于"素案"阶段，正式确定前是建立合作关系的最佳窗口期。建议：（1）梳理自身技术能力与路线图34个领域的匹配度，锁定2-3个最具合作潜力的方向；（2）通过JETRO（日本贸易振兴机构）或行业协会渠道，主动对接经济产业省的路线图推进部门；（3）考虑与日本企业建立联合研发或技术许可关系，以"技术合作伙伴"而非"市场竞争者"的身份进入。</span><span data-en>The 34-category public-private investment roadmap is currently at the "draft" stage — the optimal window for establishing partnerships is before finalization. Recommendations: (1) Map your technological capabilities against the 34 roadmap areas and target 2-3 directions with the highest collaboration potential; (2) Proactively engage METI's roadmap promotion departments through JETRO or industry association channels; (3) Consider establishing joint R&amp;D or technology licensing relationships with Japanese companies, entering as a "technology partner" rather than a "market competitor."</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>2. 数据合规架构的前置设计</span><span data-en>2. Front-Loading Data Compliance Architecture Design</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 text-xs font-bold"><span data-zh>优先度：高</span><span data-en>Priority: High</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>LINE雅虎系统分离事件表明，日本对数据本地化的要求正在从"建议"走向"强制"。计划进入日本市场的科技企业和数据密集型企业，应在市场进入方案中前置数据合规架构设计：（1）评估是否需要在日本境内部署独立的数据处理和存储节点；（2）梳理产品/服务中涉及的跨境数据流动环节，确保符合日本个人信息保护法的要求；（3）关注AI肖像权立法的进展，评估对AI相关产品/服务的潜在影响。</span><span data-en>The LINE Yahoo system separation demonstrates that Japan's data localization requirements are shifting from "recommended" to "mandatory." Tech and data-intensive enterprises planning to enter the Japanese market should front-load data compliance architecture design in their market entry plans: (1) Assess whether independent data processing and storage nodes need to be deployed within Japan; (2) Map cross-border data flow components in products/services to ensure compliance with Japan's Act on the Protection of Personal Information; (3) Monitor AI portrait rights legislation progress and assess potential impacts on AI-related products/services.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>3. 人才获取策略的成本重估</span><span data-en>3. Cost Reassessment of Talent Acquisition Strategies</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold"><span data-zh>优先度：中</span><span data-en>Priority: Medium</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>在留手续费的大幅上调将增加外国员工的雇用成本。计划向日本派遣员工的企业应：（1）将手续费上调纳入市场进入成本测算；（2）评估是否优先使用"高度专门职"等可能享受减免的签证类别；（3）考虑与日本本地人才派遣公司合作，降低初期的人才获取成本和行政负担。</span><span data-en>The sharp increase in residence permit fees will raise foreign employee hiring costs. Enterprises planning to dispatch employees to Japan should: (1) Incorporate fee increases into market entry cost calculations; (2) Evaluate whether to prioritize visa categories that may qualify for exemptions, such as "Highly Skilled Professional"; (3) Consider partnering with local Japanese staffing agencies to reduce initial talent acquisition costs and administrative burden.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <div class="flex items-center gap-3 mb-3">
+            <h4 class="font-serif font-bold text-gray-900 dark:text-white"><span data-zh>4. 能源成本的中长期评估</span><span data-en>4. Medium-to-Long-Term Energy Cost Assessment</span></h4>
+            <span class="px-2.5 py-0.5 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 text-xs font-bold"><span data-zh>优先度：中</span><span data-en>Priority: Medium</span></span>
+          </div>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>核电重启和能源供应多元化将在中长期改善日本的电力成本结构。电力密集型产业（半导体、数据中心、化工等）在评估日本投资可行性时，应将核电重启因素纳入电力成本预测模型，而非仅基于当前（受中东局势影响的）高电价进行决策。</span><span data-en>Nuclear restarts and energy supply diversification will improve Japan's electricity cost structure in the medium-to-long term. Power-intensive industries (semiconductors, data centers, chemicals, etc.) should incorporate nuclear restart factors into electricity cost forecasting models when evaluating Japan investment feasibility, rather than making decisions based solely on current high electricity prices (influenced by Middle East tensions).</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6.3 研究机构 -->
+    <div>
+      <div class="reveal flex items-center gap-3 mb-6">
+        <i class="fa-solid fa-flask text-emerald-600 dark:text-emerald-400 text-xl"></i>
+        <h3 class="font-serif text-xl font-bold text-gray-900 dark:text-white"><span data-zh>6.3 研究机构</span><span data-en>6.3 Research Institutions</span></h3>
+      </div>
+      <div class="space-y-5">
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-microscope text-emerald-500"></i>
+            <span data-zh>1. 日本财政可持续性的系统性研究</span><span data-en>1. Systematic Research on Japan's Fiscal Sustainability</span>
+          </h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>消费税零税率、汽油税废除、地方税收缩——多项减税政策叠加下，日本地方财政的可持续性正面临结构性挑战。建议开展：（1）地方自治体财源缺口的量化评估（分区域、分税种）；（2）中央转移支付制度调整的政策模拟；（3）地方财政紧缩对产业集聚和企业投资行为的影响分析。</span><span data-en>Zero-rate consumption tax, gasoline tax abolition, local tax contraction — under stacking tax reduction policies, the sustainability of Japan's local government finances faces structural challenges. Recommended research: (1) Quantitative assessment of local government revenue gaps (by region and tax type); (2) Policy simulation of central transfer payment system adjustments; (3) Analysis of local fiscal austerity's impact on industrial agglomeration and corporate investment behavior.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-microscope text-emerald-500"></i>
+            <span data-zh>2. 劳动市场结构性变化的跟踪研究</span><span data-en>2. Tracking Research on Structural Labor Market Changes</span>
+          </h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>劳动规制松绑、外国人才政策收紧、自动化加速——三股力量正在重塑日本劳动市场的供需结构。建议关注：（1）厚劳省裁量劳动制调查的方法论和初步发现；（2）在留手续费上调对外国人才流入量的实际影响（可通过入管统计数据跟踪）；（3）不同行业自动化替代率与劳动力需求弹性的对比分析。</span><span data-en>Labor deregulation, tightening foreign talent policies, and accelerating automation — three forces are reshaping Japan's labor market supply-demand structure. Recommended focus: (1) MHLW discretionary work system survey methodology and preliminary findings; (2) Actual impact of residence permit fee increases on foreign talent inflows (trackable through immigration statistics); (3) Comparative analysis of automation substitution rates and labor demand elasticity across industries.</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-microscope text-emerald-500"></i>
+            <span data-zh>3. 日本能源转型路径的重新评估</span><span data-en>3. Reassessment of Japan's Energy Transition Pathway</span>
+          </h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>中东局势冲击下，日本能源政策的优先级排序正在发生调整。建议研究：（1）核电重启对日本碳排放路径和电力成本结构的量化影响；（2）AZEC框架下多边能源合作的制度设计和实施效果；（3）"脱碳"与"脱中东依赖"双重目标下的最优能源组合模型。</span><span data-en>Under the impact of Middle East tensions, Japan's energy policy priority ranking is being adjusted. Recommended research: (1) Quantitative impact of nuclear restarts on Japan's carbon emission pathway and electricity cost structure; (2) Institutional design and implementation effectiveness of multilateral energy cooperation under the AZEC framework; (3) Optimal energy mix models under the dual objectives of "decarbonization" and "reducing Middle East dependence."</span></p>
+        </div>
+        <div class="reveal card-hover bg-white dark:bg-gray-800 rounded-xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+          <h4 class="font-serif font-bold text-gray-900 dark:text-white mb-3 flex items-center gap-2">
+            <i class="fa-solid fa-microscope text-emerald-500"></i>
+            <span data-zh>4. 日本数字治理立法的比较研究</span><span data-en>4. Comparative Research on Japan's Digital Governance Legislation</span>
+          </h4>
+          <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>LINE雅虎系统分离、AI肖像权立法、公司法受益股东识别——日本正在加速构建数字时代的治理框架。建议开展：（1）日本数据本地化要求与欧盟GDPR、中国数据安全法的比较分析；（2）AI生成内容民事责任的国际立法趋势对比；（3）日本公司治理改革对外资股东行为的影响评估。</span><span data-en>LINE Yahoo system separation, AI portrait rights legislation, corporate law beneficial shareholder identification — Japan is accelerating the construction of a digital-age governance framework. Recommended research: (1) Comparative analysis of Japan's data localization requirements with EU GDPR and China's Data Security Law; (2) International legislative trend comparison on civil liability for AI-generated content; (3) Assessment of Japan's corporate governance reform impact on foreign shareholder behavior.</span></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Chapter 7: 附录 -->
+<section id="appendix" class="py-16 sm:py-20">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-400 font-serif font-bold text-lg">七</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white"><span data-zh>附录：数据来源说明</span><span data-en>Appendix: Data Source Notes</span></h2>
+    </div>
+
+    <div class="space-y-8">
+      <!-- 数据采集 -->
+      <div class="reveal bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-database text-emerald-500"></i> <span data-zh>数据采集</span><span data-en>Data Collection</span>
+        </h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><span data-zh>本报告基于 Supinfor 区域国别实时监测系统的自动化数据采集管线。监测周期为2026年4月13日至4月19日，覆盖日本相关的全球多语种媒体、政府公报、行业协会发布、智库报告等信源。</span><span data-en>This report is based on the automated data collection pipeline of the Supinfor Regional Real-Time Monitoring System. The monitoring period is April 13-19, 2026, covering global multilingual media, government bulletins, industry association publications, and think tank reports related to Japan.</span></p>
+      </div>
+
+      <!-- 数据处理 -->
+      <div class="reveal bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-gears text-emerald-500"></i> <span data-zh>数据处理</span><span data-en>Data Processing</span>
+        </h3>
+        <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i><span><strong><span data-zh>原始数据</span><span data-en>Raw Data</span></strong><span data-zh>：3,678 条资讯</span><span data-en>: 3,678 articles</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i><span><strong><span data-zh>URL去重后</span><span data-en>After URL Deduplication</span></strong><span data-zh>：2,519 条（去重率 31.5%）</span><span data-en>: 2,519 articles (31.5% dedup rate)</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i><span><strong><span data-zh>栏目覆盖</span><span data-en>Category Coverage</span></strong><span data-zh>：11个栏目（产业、经济、民生、科技、环保、政治、人文、教育、医疗、外交、国防）</span><span data-en>: 11 categories (Industry, Economy, Livelihood, Technology, Environment, Politics, Culture, Education, Medical, Diplomacy, Defense)</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle-check text-emerald-500 mt-0.5 shrink-0"></i><span><strong><span data-zh>营商标签</span><span data-en>Business Tags</span></strong><span data-zh>：全部24个营商环境标签（实际命中23个，"土地使用政策"本周无命中）</span><span data-en>: All 24 business environment tags (23 actually triggered; "Land Use Policy" had no hits this week)</span></span></li>
+        </ul>
+      </div>
+
+      <!-- 精选规则 -->
+      <div class="reveal bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-filter text-emerald-500"></i> <span data-zh>精选规则</span><span data-en>Selection Criteria</span>
+        </h3>
+        <p class="text-sm text-gray-700 dark:text-gray-300 mb-4"><span data-zh>本报告的深度分析基于从2,519条去重资讯中精选的约250条高价值资讯。精选规则如下：</span><span data-en>The in-depth analysis in this report is based on approximately 250 high-value articles selected from 2,519 deduplicated articles. Selection criteria are as follows:</span></p>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400 text-xs font-bold shrink-0 mt-0.5">1</span>
+            <div>
+              <h4 class="text-sm font-bold text-gray-900 dark:text-white"><span data-zh>高优先级保留</span><span data-en>High Priority Retention</span></h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>外资政策（引进/处罚/调查外商投资企业）、产业政策调整、税收法规调整、能源供应平衡、劳动规制变化相关资讯全量保留</span><span data-en>Full retention of articles related to foreign investment policy (attraction/penalties/investigations), industrial policy adjustments, tax regulation changes, energy supply balance, and labor regulation changes</span></p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/30 text-amber-600 dark:text-amber-400 text-xs font-bold shrink-0 mt-0.5">2</span>
+            <div>
+              <h4 class="text-sm font-bold text-gray-900 dark:text-white"><span data-zh>中优先级筛选</span><span data-en>Medium Priority Screening</span></h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>供应链稳定、金融服务能力、知识产权保护、国际贸易合作相关资讯按影响力排序保留前50%</span><span data-en>Top 50% retention by impact ranking for articles related to supply chain stability, financial services, IP protection, and international trade cooperation</span></p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold shrink-0 mt-0.5">3</span>
+            <div>
+              <h4 class="text-sm font-bold text-gray-900 dark:text-white"><span data-zh>低优先级抽样</span><span data-en>Low Priority Sampling</span></h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>营商文化氛围、生活配套环境、社会治安状况等标签按代表性抽样保留</span><span data-en>Representative sampling retention for tags such as business culture, living environment, and public safety</span></p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span class="flex items-center justify-center w-6 h-6 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 text-xs font-bold shrink-0 mt-0.5">4</span>
+            <div>
+              <h4 class="text-sm font-bold text-gray-900 dark:text-white"><span data-zh>去噪处理</span><span data-en>Noise Removal</span></h4>
+              <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>剔除重复报道（同一事件的不同媒体转载）、纯评论性内容（无新增事实信息）、与营商环境无直接关联的社会新闻</span><span data-en>Removal of duplicate coverage (different media reprints of the same event), purely editorial content (no new factual information), and social news not directly related to the business environment</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 分析方法 -->
+      <div class="reveal bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 p-6 sm:p-8">
+        <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <i class="fa-solid fa-chart-pie text-emerald-500"></i> <span data-zh>分析方法</span><span data-en>Analytical Methods</span>
+        </h3>
+        <ul class="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-emerald-400 text-[6px] mt-2 shrink-0"></i><span><strong><span data-zh>事件聚类</span><span data-en>Event Clustering</span></strong><span data-zh>：基于关键词共现和时间窗口，将相关资讯聚合为13个核心事件簇</span><span data-en>: Aggregating related articles into 13 core event clusters based on keyword co-occurrence and time windows</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-emerald-400 text-[6px] mt-2 shrink-0"></i><span><strong><span data-zh>重要性排序</span><span data-en>Importance Ranking</span></strong><span data-zh>：综合考量政策影响范围、企业影响深度、时间紧迫性三个维度</span><span data-en>: Comprehensive evaluation across three dimensions — policy impact scope, depth of corporate impact, and time urgency</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-emerald-400 text-[6px] mt-2 shrink-0"></i><span><strong><span data-zh>趋势识别</span><span data-en>Trend Identification</span></strong><span data-zh>：要求每条趋势至少有3条以上独立资讯交叉印证</span><span data-en>: Each trend requires cross-verification from at least 3 independent articles</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-circle text-emerald-400 text-[6px] mt-2 shrink-0"></i><span><strong><span data-zh>风险分级</span><span data-en>Risk Classification</span></strong><span data-zh>：基于发生概率 × 影响程度的矩阵评估，分为红（高）、黄（中）、绿（低/机遇）三级</span><span data-en>: Matrix assessment based on probability × impact, classified into red (high), yellow (medium), and green (low/opportunity) levels</span></span></li>
+        </ul>
+      </div>
+
+      <!-- 信源语言分布 -->
+      <div class="reveal bg-white dark:bg-gray-900 rounded-2xl shadow-lg dark:shadow-gray-900/50 overflow-hidden">
+        <div class="p-6 sm:p-8 pb-4">
+          <h3 class="font-serif text-lg font-bold text-gray-900 dark:text-white flex items-center gap-2">
+            <i class="fa-solid fa-earth-asia text-emerald-500"></i> <span data-zh>信源语言分布（估算）</span><span data-en>Source Language Distribution (Estimated)</span>
+          </h3>
+        </div>
+        <table class="w-full text-sm">
+          <thead><tr class="bg-emerald-50 dark:bg-emerald-900/30">
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>语言</span><span data-en>Language</span></th>
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>占比</span><span data-en>Share</span></th>
+            <th class="px-6 py-3 text-left font-semibold text-emerald-800 dark:text-emerald-300"><span data-zh>主要信源类型</span><span data-en>Primary Source Types</span></th>
+          </tr></thead>
+          <tbody>
+            <tr class="border-b border-gray-100 dark:border-gray-700"><td class="px-6 py-3 font-medium"><span data-zh>日语</span><span data-en>Japanese</span></td><td class="px-6 py-3">~85%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>日本国内主流媒体（日经、朝日、读卖、NHK）、政府公报、行业协会</span><span data-en>Major Japanese domestic media (Nikkei, Asahi, Yomiuri, NHK), government bulletins, industry associations</span></td></tr>
+            <tr class="border-b border-gray-100 dark:border-gray-700"><td class="px-6 py-3 font-medium"><span data-zh>英语</span><span data-en>English</span></td><td class="px-6 py-3">~12%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>国际通讯社（Reuters、Bloomberg）、日经英文版、外国驻日媒体</span><span data-en>International wire services (Reuters, Bloomberg), Nikkei English edition, foreign media in Japan</span></td></tr>
+            <tr><td class="px-6 py-3 font-medium"><span data-zh>其他</span><span data-en>Other</span></td><td class="px-6 py-3">~3%</td><td class="px-6 py-3 text-gray-600 dark:text-gray-400"><span data-zh>韩语（韩联社）、中文（港台媒体）等</span><span data-en>Korean (Yonhap), Chinese (Hong Kong/Taiwan media), etc.</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div class="reveal mt-8 text-center text-sm text-gray-500 dark:text-gray-500 italic">
+      <p><span data-zh>本报告基于 Supinfor 区域国别实时监测系统编制，仅供参考，不构成投资建议。</span><span data-en>This report is compiled based on the Supinfor Regional Real-Time Monitoring System. For reference only; does not constitute investment advice.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 dark:bg-gray-950 py-10 border-t border-gray-800">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="flex items-center justify-center gap-2 mb-3">
+      <i class="fa-solid fa-chart-line text-emerald-500"></i>
+      <span class="font-serif font-bold text-white">Supinfor</span>
+    </div>
+    <p class="text-sm text-gray-400 mb-1"><span data-zh>日本营商环境动态速览</span><span data-en>Japan Business Environment Weekly Briefing</span></p>
+    <p class="text-xs text-gray-500">2026年4月19日</p>
+    <p class="text-xs text-gray-600 mt-4">© 2026 Supinfor Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg transition-all duration-300 opacity-0 translate-y-4 pointer-events-none flex items-center justify-center" aria-label="返回顶部 / Back to Top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+// Dark mode
+(function() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const stored = localStorage.getItem('theme');
+  if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+  }
+  toggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  });
+})();
+
+// Mobile menu
+(function() {
+  const btn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+})();
+
+// Scroll reveal with IntersectionObserver
+(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+})();
+
+// Active nav link on scroll
+(function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+  sections.forEach(s => observer.observe(s));
+})();
+
+// Back to top
+(function() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      btn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      btn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      btn.classList.remove('opacity-100', 'translate-y-0');
+    }
+  });
+  btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+})();
+
+// Language Toggle
+(function() {
+  const html = document.documentElement;
+  const btn = document.getElementById('langToggle');
+  const stored = localStorage.getItem('lang');
+  if (stored) {
+    html.setAttribute('data-lang', stored);
+    html.setAttribute('lang', stored === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = stored === 'en' ? '中' : 'EN';
+  }
+  btn.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang') || 'zh';
+    const next = current === 'zh' ? 'en' : 'zh';
+    html.setAttribute('data-lang', next);
+    html.setAttribute('lang', next === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = next === 'en' ? '中' : 'EN';
+    localStorage.setItem('lang', next);
+  });
+})();
+</script>
+</body>
+</html>

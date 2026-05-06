@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>电力设备行业洞察月报 2026-02 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #059669; --c-primary-light: #10b981; --c-primary-dark: #047857;
+  --c-accent: #d97706; --c-accent-light: #f59e0b;
+  --c-bg: #f0fdf4; --c-surface: #ffffff; --c-surface-alt: #f8faf9;
+  --c-border: #d1d5db; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #0c1a12; --c-surface: #162b1e; --c-surface-alt: #1a3324;
+  --c-border: #2d5a3e; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #0c1a12; --c-surface: #162b1e; --c-surface-alt: #1a3324;
+    --c-border: #2d5a3e; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#059669 0%,#047857 40%,#065f46 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.donut-container{display:flex;align-items:center;justify-content:center;gap:2rem;margin:1.5rem 0;flex-wrap:wrap}
+.donut-chart{position:relative;width:140px;height:140px}
+.donut-chart svg{transform:rotate(-90deg)}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-value{font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--c-primary)}
+.donut-label{font-size:.65rem;color:var(--c-text-muted)}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-bolt"></i>
+      <span data-zh>电力设备行业洞察月报</span>
+      <span data-en>Power Equipment Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年2月刊 · Supinfor Ltd.</span>
+      <span data-en>February 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>电力设备行业<br>洞察月报</span>
+      <span data-en>Power Equipment<br>Industry Insight</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>AI数据中心驱动电力需求爆发 · 欧洲电网投资大扩张 · 中国储能企业成本优势碾压全球</span>
+      <span data-en>AI Data Centers Drive Power Demand Surge · European Grid Investment Boom · Chinese Energy Storage Cost Dominance</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">87</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">17</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">3</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、AI数据中心驱动电力需求</span><span data-en>I. AI Data Center Power Demand</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、欧洲电网投资大扩张</span><span data-en>II. European Grid Expansion</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、中国储能布局全球</span><span data-en>III. China Energy Storage Global</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、风电盈利拐点</span><span data-en>IV. Wind Power Profitability</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、光伏与氢能</span><span data-en>V. Solar & Hydrogen</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、贸易壁垒与监管</span><span data-en>VI. Trade Barriers</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>AI数据中心成为全球电力需求增长的核心驱动力，燃气轮机订单爆发</span><span data-en>AI Data Centers Become Core Driver of Global Power Demand, Gas Turbine Orders Surge</span></h3>
+      <p><span data-zh>GE Vernova订单量增长65%、Baker Hughes获1.3GW发电机订单、西门子能源燃气轮机订单增长30-34%，AI算力需求正在重塑全球电力设备市场格局。</span><span data-en>GE Vernova orders grew 65%, Baker Hughes secured 1.3GW generator orders, Siemens Energy gas turbine orders grew 30-34%. AI computing demand is reshaping the global power equipment market.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>欧洲能源巨头集体加码电网投资，电网饱和成为能源转型最大瓶颈</span><span data-en>European Energy Giants Collectively Increase Grid Investment; Grid Saturation Becomes Biggest Bottleneck</span></h3>
+      <p><span data-zh>Enel拟投530亿欧元（半数投向电网）、Endesa电网投资增长40%、Iberdrola 62%投资投向电网，电网扩容已超越可再生能源装机成为欧洲能源转型的首要任务。</span><span data-en>Enel plans €53B (half for grid), Endesa grid investment up 40%, Iberdrola directs 62% to grid. Grid expansion has surpassed renewable capacity as Europe's top energy transition priority.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>中国企业强势布局巴西储能市场，成本优势碾压欧美竞品</span><span data-en>Chinese Companies Dominate Brazil Energy Storage Market with Crushing Cost Advantage</span></h3>
+      <p><span data-zh>Sungrow、华为、CATL、BYD等中企BESS成本仅73美元/kWh，远低于欧美的177-219美元/kWh，巴西2GW储能招标成为中企出海的标志性战场。</span><span data-en>Chinese BESS cost at $73/kWh, far below European ($177) and American ($219) competitors. Brazil's 2GW storage tender becomes a landmark battleground for Chinese companies going global.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>风电行业盈利能力显著改善，Nordex利润率突破8%创历史新高</span><span data-en>Wind Power Profitability Significantly Improves; Nordex Margin Breaks 8% Record</span></h3>
+      <p><span data-zh>Nordex 2025年EBITDA利润率达8.4%、自由现金流8.63亿欧元创纪录，风电设备商正从"亏损换份额"转向"盈利性增长"。</span><span data-en>Nordex 2025 EBITDA margin reached 8.4%, free cash flow hit €863M record. Wind equipment makers are shifting from "loss for market share" to "profitable growth".</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>美国对中资清洁能源企业多维度施压，贸易壁垒持续升级</span><span data-en>US Applies Multi-Dimensional Pressure on Chinese Clean Energy Companies</span></h3>
+      <p><span data-zh>反倾销税最高102.72%、FEOC限制税收抵免、海上风电项目暂停，中资企业在美市场空间被系统性压缩。</span><span data-en>Anti-dumping duties up to 102.72%, FEOC restricts tax credits, offshore wind projects suspended. Chinese companies' US market space is being systematically compressed.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">$150B</div>
+      <div class="lbl"><span data-zh>GE Vernova 订单储备</span><span data-en>GE Vernova Order Backlog</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#b45309)">
+      <div class="val">€53B</div>
+      <div class="lbl"><span data-zh>Enel 2026-28投资计划</span><span data-en>Enel 2026-28 Investment</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">$73</div>
+      <div class="lbl"><span data-zh>中企BESS成本 /kWh</span><span data-en>Chinese BESS Cost /kWh</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+      <div class="val">8.4%</div>
+      <div class="lbl"><span data-zh>Nordex EBITDA利润率</span><span data-en>Nordex EBITDA Margin</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: AI Data Center ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-server"></i>
+    <h2><span data-zh>一、AI数据中心驱动电力需求爆发</span><span data-en>I. AI Data Centers Drive Power Demand Surge</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>GE Vernova和西门子能源成为AI算力基建的核心受益者</span><span data-en>GE Vernova and Siemens Energy Become Core Beneficiaries of AI Infrastructure</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>AI数据中心的爆发式电力需求正在催生燃气轮机的超级订单周期。GE Vernova订单储备达1500亿美元、西门子能源燃气轮机订单增长30-34%，两家企业已成为AI算力基础设施的"电力供应商"，其战略地位堪比NVIDIA在芯片领域的角色。</span><span data-en><strong>Key Insight:</strong> The explosive power demand from AI data centers is creating a super-cycle for gas turbine orders. GE Vernova's order backlog reached $150B, Siemens Energy gas turbine orders grew 30-34%. Both companies have become the "power suppliers" of AI computing infrastructure, with strategic importance comparable to NVIDIA in chips.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>GE Vernova订单量增长65%，订单储备规模达1500亿美元，季度分红翻倍至每股0.5美元</span><span data-en>GE Vernova orders grew 65%, backlog reached $150B, quarterly dividend doubled to $0.50/share</span></li>
+      <li><span data-zh>西门子能源燃气轮机订单增长30-34%，主要客户为AI数据中心运营商，股价创历史新高170.6欧元</span><span data-en>Siemens Energy gas turbine orders grew 30-34%, mainly from AI data center operators, stock hit all-time high of €170.6</span></li>
+      <li><span data-zh>Baker Hughes为Boom Supersonic供应31台发电机，总装机1.3GW，服务AI数据中心</span><span data-en>Baker Hughes supplies 31 generators to Boom Supersonic, total 1.3GW capacity, serving AI data centers</span></li>
+      <li><span data-zh>NRG Energy等大型电力企业的60亿美元燃气轮机订单进一步推高设备需求</span><span data-en>NRG Energy's $6B gas turbine orders further boost equipment demand</span></li>
+      <li><span data-zh>美国PJM Interconnection警告2027年可能出现电力供应缺口</span><span data-en>US PJM Interconnection warns of potential power supply gap by 2027</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Gas Turbine Order Growth -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化</span><span data-en>Data Visualization</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>燃气轮机订单增长对比</span><span data-en>Gas Turbine Order Growth Comparison</span></h3>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">GE Vernova</div><div class="bar-track"><div class="bar-fill" style="width:65%">+65%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>西门子能源</span><span data-en>Siemens Energy</span></div><div class="bar-track"><div class="bar-fill" style="width:34%">+34%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Baker Hughes</div><div class="bar-track"><div class="bar-fill" style="width:45%">1.3GW</div></div></div>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>航空引擎技术跨界布局数据中心发电，分布式电力模式兴起</span><span data-en>Aviation Engine Tech Crosses into Data Center Power; Distributed Power Model Emerges</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Boom Supersonic将超音速飞行引擎核心技术转化为42MW的"Superpower"天然气涡轮机，搭配Baker Hughes发电机为AI数据中心提供现场发电，标志着航空引擎技术正在跨界进入分布式电力市场。</span><span data-en><strong>Key Insight:</strong> Boom Supersonic converted supersonic flight engine core tech into a 42MW "Superpower" gas turbine, paired with Baker Hughes generators for on-site AI data center power, marking aviation engine tech's crossover into distributed power markets.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Boom Supersonic的42MW"Superpower"天然气涡轮机搭配Baker Hughes DAX7发电机</span><span data-en>Boom Supersonic's 42MW "Superpower" gas turbine paired with Baker Hughes DAX7 generators</span></li>
+      <li><span data-zh>设备预计2026年年中至2028年陆续交付，服务Crusoe的AI数据中心</span><span data-en>Equipment delivery expected mid-2026 to 2028, serving Crusoe's AI data centers</span></li>
+      <li><span data-zh>全球数据中心支撑基础设施市场2024年达278亿美元，预计2035年增至450亿美元</span><span data-en>Global data center infrastructure market reached $27.8B in 2024, projected to reach $45B by 2035</span></li>
+      <li><span data-zh>超2500GW的项目因并网排队受阻，约五分之一的数据中心建设面临延误</span><span data-en>Over 2,500GW of projects stuck in grid connection queues; ~20% of data center construction faces delays</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: European Grid ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-plug-circle-bolt"></i>
+    <h2><span data-zh>二、欧洲电网投资大扩张</span><span data-en>II. European Grid Investment Expansion</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>Enel、Endesa、Iberdrola集体将投资重心从可再生能源转向电网</span><span data-en>Enel, Endesa, Iberdrola Collectively Shift Investment Focus from Renewables to Grid</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>欧洲三大能源巨头同步将投资重心从可再生能源装机转向电网基础设施——Enel半数投资投向电网、Endesa电网投资增长40%同时缩减可再生能源投资20%、Iberdrola 62%投资投向电网。电网饱和已超越装机不足，成为欧洲能源转型的首要瓶颈。</span><span data-en><strong>Key Insight:</strong> Europe's three energy giants simultaneously shifted investment focus from renewable capacity to grid infrastructure — Enel directs half to grid, Endesa grid investment up 40% while cutting renewables 20%, Iberdrola directs 62% to grid. Grid saturation has surpassed capacity shortage as Europe's top energy transition bottleneck.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Enel 2026-2028年拟投530亿欧元，超260亿欧元投向电网，目标RAB从470亿提升至580亿欧元</span><span data-en>Enel plans €53B for 2026-2028, over €26B for grid, targeting RAB increase from €47B to €58B</span></li>
+      <li><span data-zh>Endesa电网投资55亿欧元（+40%），可再生能源投资缩减至30亿欧元（-20%），当前电网接入申请仅获批18%</span><span data-en>Endesa grid investment €5.5B (+40%), renewables cut to €3B (-20%), only 18% of grid connection applications approved</span></li>
+      <li><span data-zh>Iberdrola 2025年投资144.6亿欧元，62%投向电网业务，电网EBITDA同比增长21%</span><span data-en>Iberdrola invested €14.46B in 2025, 62% to grid, grid EBITDA grew 21% YoY</span></li>
+      <li><span data-zh>西班牙电网运营商REE与电力公司就电网饱和问题激烈争议</span><span data-en>Spanish grid operator REE and power companies in heated dispute over grid saturation</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: European Grid Investment -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>欧洲电网投资规模对比</span><span data-en>European Grid Investment Comparison</span></span>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">Enel</div><div class="bar-track"><div class="bar-fill" style="width:85%">€26B+</div></div></div>
+      <div class="bar-row"><div class="bar-label">Iberdrola</div><div class="bar-track"><div class="bar-fill" style="width:60%">€9B</div></div></div>
+      <div class="bar-row"><div class="bar-label">Endesa</div><div class="bar-track"><div class="bar-fill" style="width:35%">€5.5B</div></div></div>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>西班牙2025年大停电暴露电网管理深层矛盾</span><span data-en>Spain's 2025 Blackout Exposes Deep Grid Management Contradictions</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2025年4月西班牙全国性大停电后，Endesa、Iberdrola与电网运营商REE就责任归属激烈对峙。这场争议暴露了可再生能源高渗透率下电网管理的深层矛盾。</span><span data-en><strong>Key Insight:</strong> After Spain's nationwide blackout in April 2025, Endesa, Iberdrola and grid operator REE engaged in fierce confrontation over responsibility. This dispute exposed deep contradictions in grid management under high renewable energy penetration.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Endesa CEO称团队在停电前一小时检测到电网频率不稳定并发出预警</span><span data-en>Endesa CEO said team detected grid frequency instability one hour before blackout and issued warning</span></li>
+      <li><span data-zh>Iberdrola CEO披露2024年3月测试数据，其光伏电站产生0.8Hz振荡但未引发停电</span><span data-en>Iberdrola CEO disclosed March 2024 test data showing 0.8Hz oscillation from its solar plant without causing blackout</span></li>
+      <li><span data-zh>REE发布声明称所有决策基于技术限制而非主观疏忽</span><span data-en>REE stated all decisions were based on technical constraints, not subjective negligence</span></li>
+      <li><span data-zh>Iberdrola指出REE在事故当天未提前调度联合循环电站稳定电网</span><span data-en>Iberdrola pointed out REE failed to dispatch combined-cycle plants in advance to stabilize the grid</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: China Energy Storage ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-battery-full"></i>
+    <h2><span data-zh>三、中国企业强势布局全球储能市场</span><span data-en>III. Chinese Companies Dominate Global Energy Storage</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>巴西2GW储能招标成为中企出海标志性战场，成本优势碾压欧美</span><span data-en>Brazil's 2GW Storage Tender Becomes Landmark Battleground; Chinese Cost Advantage Crushes Competitors</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>巴西联邦政府2GW储能招标吸引Sungrow、华为、CATL、BYD等中企集中参与，中企BESS成本仅73美元/kWh，不到欧美企业177-219美元/kWh的一半。中国储能企业正在以压倒性的成本优势重塑全球储能市场竞争格局。</span><span data-en><strong>Key Insight:</strong> Brazil's 2GW federal storage tender attracted Sungrow, Huawei, CATL, BYD and other Chinese companies. Chinese BESS cost at $73/kWh is less than half of European ($177) and American ($219) competitors. Chinese energy storage companies are reshaping global competition with overwhelming cost advantages.</span></p>
+    </div>
+
+    <!-- Data Viz: BESS Cost Comparison -->
+    <div style="margin:1.25rem 0">
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label"><span data-zh>中国企业</span><span data-en>Chinese</span></div><div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,var(--c-primary),var(--c-primary-light))">$73</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>欧洲企业</span><span data-en>European</span></div><div class="bar-track"><div class="bar-fill" style="width:81%;background:linear-gradient(90deg,#6366f1,#818cf8)">$177</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>美国企业</span><span data-en>American</span></div><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#ef4444,#f87171)">$219</div></div></div>
+      </div>
+      <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>BESS成本对比（美元/kWh）· 数据来源：BNEF</span><span data-en>BESS Cost Comparison ($/kWh) · Source: BNEF</span></p>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>巴西储能招标需求2GW/4小时，2028年8月交付，预计带动139亿雷亚尔投资</span><span data-en>Brazil storage tender: 2GW/4hr, delivery Aug 2028, expected to drive R$13.9B investment</span></li>
+      <li><span data-zh>Sungrow已对接37家潜在客户，华为对接30家，TBEA联系80家</span><span data-en>Sungrow engaged 37 potential clients, Huawei 30, TBEA contacted 80</span></li>
+      <li><span data-zh>华为已在巴西销售400MWh储能（100MWh已安装）</span><span data-en>Huawei has sold 400MWh storage in Brazil (100MWh installed)</span></li>
+      <li><span data-zh>巴西储能市场预计到2030年吸引450亿雷亚尔投资，2034年达770亿雷亚尔</span><span data-en>Brazil storage market expected to attract R$45B by 2030, R$77B by 2034</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>印度BPE进军中东，储能与数据中心能源市场成为新增长极</span><span data-en>India's BPE Enters Middle East; Storage & Data Center Energy Become New Growth Poles</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>印度BPE在迪拜设立全资子公司，聚焦中东储能和数据中心能源市场。中东地区因AI数据中心扩张和阿联酋2050能源战略，对智能电力基础设施需求激增。</span><span data-en><strong>Key Insight:</strong> India's BPE established a wholly-owned subsidiary in Dubai, focusing on Middle East storage and data center energy markets. The region's demand for smart power infrastructure is surging due to AI data center expansion and UAE's 2050 Energy Strategy.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>BPE在迪拜成立BPE Power Management Consultancy FZCO</span><span data-en>BPE established BPE Power Management Consultancy FZCO in Dubai</span></li>
+      <li><span data-zh>阿联酋2050能源战略目标清洁能源占比达50%</span><span data-en>UAE 2050 Energy Strategy targets 50% clean energy share</span></li>
+      <li><span data-zh>阿根廷Aluar投资2000万美元建设30MW/150MWh储能项目</span><span data-en>Argentina's Aluar invests $20M in 30MW/150MWh storage project</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: Wind Power ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-wind"></i>
+    <h2><span data-zh>四、风电行业盈利拐点确认</span><span data-en>IV. Wind Power Profitability Turning Point Confirmed</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>Nordex 2025年业绩超预期，风电设备商盈利能力显著改善</span><span data-en>Nordex 2025 Results Beat Expectations; Wind Equipment Profitability Significantly Improves</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Nordex 2025年EBITDA利润率达8.4%、自由现金流8.63亿欧元均创历史纪录，全年新订单量10.2GW创新高，中期利润率目标上调至10%-12%。风电设备商正从"亏损换份额"的恶性竞争转向"盈利性增长"的良性循环。</span><span data-en><strong>Key Insight:</strong> Nordex 2025 EBITDA margin reached 8.4%, free cash flow hit €863M — both all-time records. Annual new orders of 10.2GW set a new high, mid-term margin target raised to 10%-12%. Wind equipment makers are shifting from destructive "loss for share" competition to a virtuous "profitable growth" cycle.</span></p>
+    </div>
+
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>指标</span><span data-en>Metric</span></th>
+        <th>2025</th>
+        <th><span data-zh>同比</span><span data-en>YoY</span></th>
+        <th><span data-zh>2026指引</span><span data-en>2026 Guidance</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span data-zh>营收</span><span data-en>Revenue</span></td><td>€75.54B</td><td>+3.5%</td><td>€82-90B</td></tr>
+        <tr><td>EBITDA</td><td>€631M</td><td><span data-zh>大幅增长</span><span data-en>Significant growth</span></td><td>8%-11%</td></tr>
+        <tr><td><span data-zh>自由现金流</span><span data-en>Free Cash Flow</span></td><td>€863M</td><td><span data-zh>创纪录</span><span data-en>Record</span></td><td>—</td></tr>
+        <tr><td><span data-zh>新订单量</span><span data-en>New Orders</span></td><td>10.2GW</td><td><span data-zh>创新高</span><span data-en>New high</span></td><td>—</td></tr>
+        <tr><td><span data-zh>订单储备</span><span data-en>Order Backlog</span></td><td>€16.1B</td><td>—</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>美国Sunrise海上风电启动涡轮安装，HVDC技术首次应用</span><span data-en>US Sunrise Offshore Wind Starts Turbine Installation; HVDC Technology Applied for First Time</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Ørsted旗下924MW的Sunrise Wind项目即将启动首台涡轮安装，这是美国首个采用高压直流（HVDC）输电系统的海上风电项目，HVDC技术的应用将提升长距离输电效率。</span><span data-en><strong>Key Insight:</strong> Ørsted's 924MW Sunrise Wind project is about to install its first turbine — the first US offshore wind project using HVDC transmission, which will improve long-distance power transmission efficiency.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Sunrise Wind项目容量924MW，配备84台Siemens Gamesa 11MW风机</span><span data-en>Sunrise Wind: 924MW capacity, 84 Siemens Gamesa 11MW turbines</span></li>
+      <li><span data-zh>计划2026年底并网，HVDC系统由Siemens Energy与Aker Solutions提供</span><span data-en>Grid connection planned for end of 2026; HVDC system by Siemens Energy and Aker Solutions</span></li>
+      <li><span data-zh>项目此前因法院暂停施工，2026年2月恢复，完成度约45%</span><span data-en>Project previously halted by court, resumed Feb 2026, ~45% complete</span></li>
+      <li><span data-zh>Nordex在加拿大拿下508MW风电订单，首次部署N175/6.X新型风机</span><span data-en>Nordex secured 508MW order in Canada, first deployment of N175/6.X turbines</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Solar & Hydrogen ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-solar-panel"></i>
+    <h2><span data-zh>五、光伏与氢能：产业整合加速</span><span data-en>V. Solar & Hydrogen: Industry Consolidation Accelerates</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>通威拟收购青海锂豪清能，多晶硅行业整合进入深水区</span><span data-en>Tongwei Plans to Acquire Qinghai Lihao; Polysilicon Consolidation Enters Deep Waters</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>全球最大多晶硅生产商通威拟收购青海锂豪清能。当前中国至少需关停65%的多晶硅产能才能实现供需再平衡，通威作为广和前程（控制中国约75%多晶硅产能）的最大股东，其收购行动可能引发市场对行业垄断的担忧。</span><span data-en><strong>Key Insight:</strong> World's largest polysilicon producer Tongwei plans to acquire Qinghai Lihao. China needs to shut down at least 65% of polysilicon capacity for supply-demand rebalancing. As the largest shareholder of Guanghe Qiancheng (controlling ~75% of China's solar-grade polysilicon), Tongwei's acquisition may raise monopoly concerns.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>通威预计2025年净亏损扩大至90-100亿元人民币</span><span data-en>Tongwei expects 2025 net loss to widen to ¥9-10B</span></li>
+      <li><span data-zh>BloombergNEF分析中国至少需关停65%的多晶硅产能</span><span data-en>BNEF analysis: China needs to shut down at least 65% of polysilicon capacity</span></li>
+      <li><span data-zh>First Solar与Oxford PV签署钙钛矿专利许可协议</span><span data-en>First Solar signed perovskite patent license agreement with Oxford PV</span></li>
+      <li><span data-zh>First Solar预计2027年美国年产能达18GW，运营6座工厂</span><span data-en>First Solar expects US annual capacity of 18GW by 2027, operating 6 factories</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>Nel聚焦电解槽业务，绿氢产业链关键环节加速成熟</span><span data-en>Nel Focuses on Electrolyzer Business; Green Hydrogen Supply Chain Matures</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Nel拆分氢能加气站业务后专注电解槽，产能提升至1.5GW/年，与通用汽车合作开发下一代PEM电解槽，获美国能源部补贴资格。电解槽作为绿氢产业链的核心设备，正在从实验室走向规模化生产。</span><span data-en><strong>Key Insight:</strong> After spinning off hydrogen refueling, Nel focuses on electrolyzers with capacity reaching 1.5GW/year, partnering with GM on next-gen PEM electrolyzers and qualifying for US DOE subsidies. Electrolyzers are moving from lab to scale production.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Nel碱性电解槽产能提升至1.5GW/年（挪威1GW+美国500MW）</span><span data-en>Nel alkaline electrolyzer capacity reached 1.5GW/year (Norway 1GW + US 500MW)</span></li>
+      <li><span data-zh>与通用汽车合作研发下一代PEM电解槽</span><span data-en>Partnering with GM on next-gen PEM electrolyzer development</span></li>
+      <li><span data-zh>成为Hy Stor Energy密西西比清洁氢能枢纽独家电解槽供应商，预留超1GW产能</span><span data-en>Exclusive electrolyzer supplier for Hy Stor Energy Mississippi clean hydrogen hub, reserving 1GW+ capacity</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: Trade Barriers ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-gavel"></i>
+    <h2><span data-zh>六、贸易壁垒与监管</span><span data-en>VI. Trade Barriers & Regulation</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>美国对中资清洁能源企业实施多维度限制</span><span data-en>US Implements Multi-Dimensional Restrictions on Chinese Clean Energy Companies</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美国从关税（加征10%-15%）、反倾销（正极材料最高102.72%）、税收抵免限制（FEOC规则）、项目暂停（海上风电）四个维度同步施压中资清洁能源企业。</span><span data-en><strong>Key Insight:</strong> The US is simultaneously pressuring Chinese clean energy companies across four dimensions: tariffs (10-15%), anti-dumping (cathode materials up to 102.72%), tax credit restrictions (FEOC rules), and project suspensions (offshore wind).</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>美国商务部裁定中国产正极材料存在倾销，征收最高102.72%反倾销税</span><span data-en>US Commerce Dept. ruled Chinese cathode materials dumped, imposing up to 102.72% anti-dumping duties</span></li>
+      <li><span data-zh>Trina Solar、JA Solar已出售美国产能，Canadian Solar调整股权结构规避限制</span><span data-en>Trina Solar, JA Solar sold US capacity; Canadian Solar restructured equity to circumvent restrictions</span></li>
+      <li><span data-zh>美国政府暂停多个海上风电项目，包括Iberdrola的Vineyard Wind 1</span><span data-en>US government suspended multiple offshore wind projects including Iberdrola's Vineyard Wind 1</span></li>
+      <li><span data-zh>取消75亿美元可再生能源项目补贴，引发司法诉讼</span><span data-en>Cancelled $7.5B renewable energy subsidies, triggering lawsuits</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>欧盟首次以外国补贴规则调查中资风电企业</span><span data-en>EU Launches First FSR Investigation into Chinese Wind Company</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>欧盟对金风科技启动外国补贴规则（FSR）调查，这是首次以此规则调查中资风电企业。此前隆基绿能、上海电气、中车四方等已因FSR调查退出欧洲项目，FSR正在成为欧盟限制中资企业的系统性工具。</span><span data-en><strong>Key Insight:</strong> The EU launched an FSR investigation into Goldwind — the first such probe into a Chinese wind company. Previously, LONGi, Shanghai Electric, and CRRC Sifang withdrew from European projects due to FSR investigations. FSR is becoming a systematic tool for the EU to restrict Chinese companies.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2026年2月3日欧盟对金风科技启动FSR正式调查</span><span data-en>EU launched formal FSR investigation into Goldwind on Feb 3, 2026</span></li>
+      <li><span data-zh>2024年隆基绿能和上海电气因无法满足FSR证据要求，放弃约30亿元合同投标</span><span data-en>In 2024, LONGi and Shanghai Electric abandoned ~¥3B contract bids due to FSR evidence requirements</span></li>
+      <li><span data-zh>中国外交部批评欧盟采取歧视性限制措施</span><span data-en>China's Foreign Ministry criticized EU's discriminatory restrictive measures</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>德国在建风电场发生致命事故，风电施工安全风险不容忽视</span><span data-en>Fatal Accident at German Wind Farm Under Construction; Safety Risks Cannot Be Ignored</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>2026年2月25日德国黑森州一处在建风电场发生工人坠落事故，两名32岁安装工人当场死亡。该风电场计划安装至少9台Vestas V172型7.2MW风机，原计划2026年底运营。</span><span data-en>On Feb 25, 2026, two 32-year-old workers died in a fall at a wind farm under construction in Hesse, Germany. The farm planned to install at least 9 Vestas V172 7.2MW turbines, originally scheduled for operation by end of 2026.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>德国及欧洲风电施工安全标准修订进展、Vestas V172型风机安全审查结果、保险费率变化</span><span data-en>Progress on German/European wind construction safety standard revisions, Vestas V172 safety review results, insurance rate changes</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>台湾离岸风电行业曝移民工人权益严重侵害</span><span data-en>Taiwan Offshore Wind Industry Exposes Severe Migrant Worker Rights Violations</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>涉及Ørsted、CIP、Vestas、Siemens Gamesa等行业巨头的供应商，越南、泰国移民工人支付高额招聘费陷入债务束缚，护照被扣押，遭驱逐威胁。</span><span data-en>Suppliers of industry giants including Ørsted, CIP, Vestas, and Siemens Gamesa are involved. Vietnamese and Thai migrant workers paid high recruitment fees leading to debt bondage, had passports confiscated, and faced deportation threats.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>国际投资者ESG审查力度、台湾离岸风电供应链劳工权益审计结果</span><span data-en>International investor ESG scrutiny intensity, Taiwan offshore wind supply chain labor rights audit results</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>西班牙电网饱和问题短期难解，可能拖累可再生能源并网进度</span><span data-en>Spain's Grid Saturation Unlikely to Be Resolved Short-Term; May Delay Renewable Grid Connection</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>Endesa电网接入申请仅获批18%，总申请量达26000MW，REE与电力公司就投资责任激烈争议，CNMC推迟输电网络容量地图发布。</span><span data-en>Only 18% of Endesa's grid connection applications approved, total applications reached 26,000MW. REE and power companies in heated dispute over investment responsibility. CNMC delayed publication of transmission capacity map.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>西班牙政府电网投资皇家法令审批进度、CNMC输电容量地图发布时间</span><span data-en>Spain government grid investment royal decree approval progress, CNMC transmission capacity map publication timeline</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q2</div>
+      <div class="timeline-text"><span data-zh>巴西联邦政府储能招标结果公布，关注中企中标份额及本地化合作模式</span><span data-en>Brazil federal storage tender results announced; watch Chinese companies' winning share and localization models</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年底</span><span data-en>End of 2026</span></div>
+      <div class="timeline-text"><span data-zh>美国Sunrise Wind海上风电项目并网，关注HVDC技术实际运行效果</span><span data-en>US Sunrise Wind offshore project grid connection; watch HVDC technology actual performance</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 H2</div>
+      <div class="timeline-text"><span data-zh>First Solar路易斯安那工厂产能爬坡及南卡罗来纳新工厂建设进展</span><span data-en>First Solar Louisiana factory ramp-up and South Carolina new factory construction progress</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026-2027</div>
+      <div class="timeline-text"><span data-zh>德国《地热加速法案》实施效果，Daldrup订单转化及地热需求增长验证</span><span data-en>Germany Geothermal Acceleration Act implementation; Daldrup order conversion and geothermal demand growth validation</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2027年1月</span><span data-en>Jan 2027</span></div>
+      <div class="timeline-text"><span data-zh>greenwind Freudenberg风场Nord2项目并网，Vestas V150-5.6MW风机运行表现</span><span data-en>greenwind Freudenberg Nord2 project grid connection; Vestas V150-5.6MW turbine performance</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年2月的电力设备行业呈现"两极分化"格局：一端是AI数据中心驱动的燃气轮机和分布式发电需求爆发，GE Vernova、西门子能源等企业订单激增；另一端是欧洲能源巨头集体将投资重心从可再生能源装机转向电网基础设施，电网饱和已成为能源转型的最大瓶颈。中国储能企业凭借73美元/kWh的成本优势在巴西等新兴市场攻城略地，但在美欧市场面临反倾销税、FSR调查等系统性贸易壁垒。</span><span data-en>The Feb 2026 power equipment industry shows a "bipolar" pattern: on one end, AI data centers drive explosive demand for gas turbines and distributed power (GE Vernova, Siemens Energy orders surging); on the other, European energy giants collectively shift investment from renewables to grid infrastructure, with grid saturation becoming the biggest energy transition bottleneck. Chinese storage companies leverage $73/kWh cost advantage in emerging markets like Brazil, but face anti-dumping duties and FSR investigations in US/EU markets.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>GE Vernova和西门子能源凭借燃气轮机技术成为AI算力基建的核心受益者</span><span data-en>GE Vernova and Siemens Energy become core beneficiaries of AI infrastructure via gas turbine tech</span></li>
+        <li><span data-zh>中国储能企业成本优势碾压欧美竞品（73 vs 177-219美元/kWh）</span><span data-en>Chinese storage cost advantage crushes competitors ($73 vs $177-219/kWh)</span></li>
+        <li><span data-zh>Schneider Electric数据中心业务Q4实现三位数增长</span><span data-en>Schneider Electric data center business achieved triple-digit Q4 growth</span></li>
+        <li><span data-zh>风电设备商盈利拐点确认，Nordex中期利润率目标上调至10%-12%</span><span data-en>Wind equipment profitability turning point confirmed; Nordex mid-term margin target raised to 10-12%</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>First Solar 2026年营收指引远低于市场预期（49-52亿 vs 61.2亿美元）</span><span data-en>First Solar 2026 revenue guidance far below expectations ($4.9-5.2B vs $6.12B)</span></li>
+        <li><span data-zh>永冠-KY因台湾离岸风电政策松绑陷入公司债违约困境</span><span data-en>Yongkwan-KY faces bond default due to Taiwan offshore wind policy relaxation</span></li>
+        <li><span data-zh>通威预计2025年净亏损扩大至90-100亿元</span><span data-en>Tongwei expects 2025 net loss to widen to ¥9-10B</span></li>
+        <li><span data-zh>美国AI数据中心电力需求激增导致燃气轮机交付延迟至2020年代后期</span><span data-en>US AI data center power demand surge delays gas turbine delivery to late 2020s</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>AI数据中心电力：</span><span data-en>AI DC Power: </span></strong><span data-zh>电力设备企业应在2026年内建立AI数据中心专属产品线，聚焦模块化分布式发电和高效UPS系统</span><span data-en>Power equipment companies should establish AI data center product lines in 2026, focusing on modular distributed generation and efficient UPS systems</span></li>
+        <li><strong><span data-zh>储能出海：</span><span data-en>Storage Export: </span></strong><span data-zh>中国储能企业应加速巴西、中东等市场的本地化服务团队建设</span><span data-en>Chinese storage companies should accelerate local service team building in Brazil, Middle East markets</span></li>
+        <li><strong><span data-zh>电网设备：</span><span data-en>Grid Equipment: </span></strong><span data-zh>鉴于欧洲电网投资大扩张，电网设备供应商应在2026年Q3前完成欧洲市场产品认证</span><span data-en>Given European grid investment expansion, grid equipment suppliers should complete European market certification by Q3 2026</span></li>
+        <li><strong><span data-zh>风电服务：</span><span data-en>Wind Services: </span></strong><span data-zh>参考Nordex服务订单储备60亿欧元的模式，将设备销售转化为长期recurring revenue</span><span data-en>Following Nordex's €6B service backlog model, convert equipment sales into long-term recurring revenue</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月28日</span><span data-en>Published: April 28, 2026</span><br>
+    <span data-zh>本报告基于电力设备行业资讯月报2026-02编制，仅供参考，不构成投资建议。</span><span data-en>Based on Power Equipment Industry Monthly Report 2026-02. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

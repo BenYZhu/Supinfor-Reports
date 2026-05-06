@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>美国人工智能行业动态速览 | US AI Industry Brief | 2026.03.23-04.05</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7c3aed;
+            --primary-light: #a78bfa;
+            --accent: #38bdf8;
+            --accent-warm: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+        }
+
+        [data-theme="dark"] {
+            --bg-primary: #0a0e27;
+            --bg-secondary: #111638;
+            --bg-card: #1a1f4a;
+            --bg-card-hover: #222860;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --border: rgba(124, 58, 237, 0.2);
+            --border-light: rgba(255,255,255,0.06);
+            --glow: rgba(124, 58, 237, 0.4);
+            --glow-accent: rgba(56, 189, 248, 0.3);
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border: rgba(124, 58, 237, 0.15);
+            --border-light: rgba(0,0,0,0.06);
+            --glow: rgba(124, 58, 237, 0.15);
+            --glow-accent: rgba(56, 189, 248, 0.15);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            overflow-x: hidden;
+            transition: background 0.4s ease, color 0.4s ease;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            backdrop-filter: blur(20px);
+            background: rgba(10, 14, 39, 0.8);
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .nav {
+            background: rgba(248, 250, 252, 0.9);
+        }
+
+        .nav-brand {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--primary);
+            color: var(--primary-light);
+            box-shadow: 0 0 15px var(--glow);
+        }
+
+        /* TOC Panel */
+        .toc-panel {
+            position: fixed;
+            top: 0;
+            right: -360px;
+            width: 360px;
+            height: 100vh;
+            background: var(--bg-secondary);
+            border-left: 1px solid var(--border);
+            z-index: 1001;
+            padding: 5rem 1.5rem 2rem;
+            overflow-y: auto;
+            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .toc-panel.active { right: 0; }
+
+        .toc-panel h3 {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .toc-panel a {
+            display: block;
+            padding: 0.6rem 0;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-light);
+            transition: all 0.2s ease;
+        }
+
+        .toc-panel a:hover {
+            color: var(--accent);
+            padding-left: 0.5rem;
+        }
+
+        .toc-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .toc-overlay.active { opacity: 1; pointer-events: all; }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: 
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(124, 58, 237, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 70% 70%, rgba(56, 189, 248, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 30% at 20% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        [data-theme="light"] .hero::before {
+            background: 
+                radial-gradient(ellipse 80% 60% at 50% 40%, rgba(124, 58, 237, 0.08) 0%, transparent 60%),
+                radial-gradient(ellipse 60% 40% at 70% 70%, rgba(56, 189, 248, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-grid {
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(124, 58, 237, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(124, 58, 237, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1.2rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero-badge i { font-size: 0.7rem; }
+
+        .hero-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        .hero-title .highlight {
+            background: linear-gradient(135deg, var(--primary-light), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin-bottom: 3rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease 0.4s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+            animation: fadeInUp 0.8s ease 0.6s both;
+        }
+
+        .hero-stat {
+            text-align: center;
+            padding: 1.2rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            min-width: 140px;
+            transition: all 0.3s ease;
+        }
+
+        .hero-stat:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 30px var(--glow);
+            transform: translateY(-2px);
+        }
+
+        .hero-stat-value {
+            font-size: 1.8rem;
+            font-weight: 800;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+        }
+
+        .hero-stat-label {
+            font-size: 0.7rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 0.3rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sections */
+        .section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--primary-light);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        /* Core Findings Cards */
+        .findings-grid {
+            display: grid;
+            gap: 1.2rem;
+        }
+
+        .finding-card {
+            display: flex;
+            gap: 1.2rem;
+            padding: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            align-items: flex-start;
+        }
+
+        .finding-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 30px var(--glow);
+            transform: translateX(4px);
+        }
+
+        .finding-num {
+            flex-shrink: 0;
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 10px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .finding-content h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--text-primary);
+        }
+
+        .finding-content p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Focus Event */
+        .focus-event {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .focus-event::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+        }
+
+        .focus-event-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .focus-event h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .focus-event p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 0.75rem;
+        }
+
+        .focus-event ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .focus-event ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .focus-event ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.6rem;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--primary), var(--accent));
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 1.2rem;
+            padding-left: 1rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2rem;
+            top: 0.4rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--bg-primary);
+            border: 2px solid var(--primary);
+        }
+
+        .timeline-item .time {
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 500;
+        }
+
+        .timeline-item .desc {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.2rem;
+        }
+
+        /* Dynamic Scan Cards */
+        .scan-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .scan-category-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .scan-category-title i {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+
+        .scan-items {
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .scan-item {
+            padding: 1.2rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 12px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            transition: all 0.3s ease;
+        }
+
+        .scan-item:hover {
+            border-color: var(--border);
+            background: var(--bg-card-hover);
+        }
+
+        .scan-item strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Risk Cards */
+        .risk-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--danger);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .risk-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--text-primary);
+        }
+
+        .risk-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
+        }
+
+        .risk-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--accent);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .risk-indicator i { font-size: 0.65rem; }
+
+        /* Trend Cards */
+        .trend-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-left: 4px solid var(--success);
+            border-radius: 12px;
+            padding: 1.5rem 1.8rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .trend-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.6rem;
+            color: var(--text-primary);
+        }
+
+        .trend-card p {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin-bottom: 0.6rem;
+        }
+
+        .trend-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.75rem;
+            color: var(--success);
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .trend-indicator i { font-size: 0.65rem; }
+
+        /* Data Visualization */
+        .chart-container {
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+
+        .chart-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .bar-chart .bar-row {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .bar-row .label {
+            width: 60px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .bar-row .bar-track {
+            flex: 1;
+            height: 24px;
+            background: var(--bg-primary);
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-row .bar-fill {
+            height: 100%;
+            border-radius: 6px;
+            background: linear-gradient(90deg, var(--primary), var(--accent));
+            transition: width 1s ease;
+            display: flex;
+            align-items: center;
+            padding-left: 0.6rem;
+        }
+
+        .bar-row .bar-value {
+            font-size: 0.7rem;
+            font-family: 'JetBrains Mono', monospace;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        /* Source Table */
+        .source-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.82rem;
+        }
+
+        .source-table th {
+            text-align: left;
+            padding: 0.8rem 1rem;
+            background: var(--bg-card);
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.7rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .source-table td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid var(--border-light);
+            color: var(--text-secondary);
+        }
+
+        .source-table tr:hover td {
+            background: var(--bg-card);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-light);
+            margin-top: 4rem;
+        }
+
+        .footer-brand {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--primary-light);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 44px;
+            height: 44px;
+            background: var(--primary);
+            border: none;
+            border-radius: 12px;
+            color: #fff;
+            font-size: 1rem;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background: var(--primary-light);
+            box-shadow: 0 4px 20px var(--glow);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 5rem 1.5rem 3rem; }
+            .hero-stats { gap: 1rem; }
+            .hero-stat { min-width: 120px; padding: 1rem; }
+            .section { padding: 3rem 1.5rem; }
+            .focus-event { padding: 1.5rem; }
+            .nav { padding: 0.8rem 1rem; }
+            .finding-card { flex-direction: column; gap: 0.8rem; }
+            .toc-panel { width: 300px; right: -300px; }
+        }
+
+        .lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;font-size:.82rem}
+        .lang-toggle button{background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:.82rem;font-weight:500;transition:all .2s}
+        .lang-toggle button.active{background:var(--primary);color:#fff;font-weight:700}
+        .lang-toggle button:hover:not(.active){background:rgba(124,58,237,.2)}
+        [data-lang="zh"] .lang-en{display:none!important}
+        [data-lang="en"] .lang-zh{display:none!important}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand">Supinfor Intelligence</div>
+        <div class="nav-controls">
+            <div class="lang-toggle">
+                <button class="active" onclick="setLang('zh')">中</button>
+                <button onclick="setLang('en')">EN</button>
+            </div>
+            <button class="nav-btn" id="tocBtn" title="目录"><i class="fas fa-list"></i></button>
+            <button class="nav-btn" id="themeBtn" title="切换主题"><i class="fas fa-moon"></i></button>
+        </div>
+    </nav>
+
+    <!-- TOC Panel -->
+    <div class="toc-overlay" id="tocOverlay"></div>
+    <div class="toc-panel" id="tocPanel">
+        <h3><span class="lang-zh">目录导航</span><span class="lang-en">Table of Contents</span></h3>
+        <a href="#findings"><span class="lang-zh">一、本期核心发现</span><span class="lang-en">1. Core Findings</span></a>
+        <a href="#focus"><span class="lang-zh">二、焦点事件深度解读</span><span class="lang-en">2. Focus Events Deep Dive</span></a>
+        <a href="#focus-1"><span class="lang-zh">　2.1 Anthropic与美国政府的宪法级对抗升级</span><span class="lang-en">　2.1 Anthropic vs. U.S. Government: Constitutional Showdown</span></a>
+        <a href="#focus-2"><span class="lang-zh">　2.2 AI监管博弈：联邦vs州的路线之争</span><span class="lang-en">　2.2 AI Regulation: Federal vs. State Power Struggle</span></a>
+        <a href="#focus-3"><span class="lang-zh">　2.3 SpaceX-xAI合并体冲刺史上最大IPO</span><span class="lang-en">　2.3 SpaceX-xAI Merger Eyes Largest IPO in History</span></a>
+        <a href="#focus-4"><span class="lang-zh">　2.4 AI裁员潮从预期走向现实</span><span class="lang-en">　2.4 AI Layoffs Shift from Forecast to Reality</span></a>
+        <a href="#scan"><span class="lang-zh">三、行业动态扫描</span><span class="lang-en">3. Industry Scan</span></a>
+        <a href="#risks"><span class="lang-zh">四、风险警示</span><span class="lang-en">4. Risk Alerts</span></a>
+        <a href="#trends"><span class="lang-zh">五、趋势研判</span><span class="lang-en">5. Trend Analysis</span></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-badge"><i class="fas fa-satellite-dish"></i> Bi-Weekly Intelligence Brief</div>
+        <h1 class="hero-title"><span class="lang-zh">美国<span class="highlight">人工智能</span>行业<br>动态速览</span><span class="lang-en">U.S. <span class="highlight">AI</span> Industry<br>Express Brief</span></h1>
+        <p style="font-size: 1.3rem; font-weight: 600; color: var(--accent); margin-bottom: 0.5rem; position: relative; z-index: 1; animation: fadeInUp 0.8s ease 0.3s both; font-family: 'JetBrains Mono', monospace;">2026.03.23 — 2026.04.05</p>
+        <p class="hero-subtitle"><span class="lang-zh">基于 Supinfor 区域国别实时监测平台，覆盖11个栏目、296条独立资讯的深度扫描与洞察分析</span><span class="lang-en">In-depth scan and analysis based on the Supinfor Regional Monitoring Platform, covering 11 categories and 296 independent news items</span></p>
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="hero-stat-value">296</div>
+                <div class="hero-stat-label"><span class="lang-zh">独立资讯</span><span class="lang-en">News Items</span></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">11</div>
+                <div class="hero-stat-label"><span class="lang-zh">覆盖栏目</span><span class="lang-en">Categories</span></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">14</div>
+                <div class="hero-stat-label"><span class="lang-zh">监测天数</span><span class="lang-en">Days Tracked</span></div>
+            </div>
+            <div class="hero-stat">
+                <div class="hero-stat-value">24</div>
+                <div class="hero-stat-label"><span class="lang-zh">主要信源</span><span class="lang-en">Key Sources</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Core Findings -->
+    <section class="section" id="findings">
+        <div class="section-header reveal">
+            <div class="section-tag"><i class="fas fa-bolt"></i> Core Findings</div>
+            <h2 class="section-title"><span class="lang-zh">本期核心发现</span><span class="lang-en">Core Findings</span></h2>
+        </div>
+        <div class="findings-grid">
+            <div class="finding-card reveal">
+                <div class="finding-num">1</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">Anthropic与五角大楼的对峙全面升级为宪法诉讼</span><span class="lang-en">Anthropic's Standoff with the Pentagon Escalates into Constitutional Litigation</span></h4>
+                    <p><span class="lang-zh">联邦法官裁定政府行为违宪后，司法部正式提交上诉；加州州长签署行政令表态将独立评估供应链风险认定，联邦与州的AI治理权之争正式开启。</span><span class="lang-en">After a federal judge ruled the government's actions unconstitutional, the DOJ filed a formal appeal. California's governor signed an executive order to independently assess supply chain risk designations, officially opening a federal-state battle over AI governance.</span></p>
+                </div>
+            </div>
+            <div class="finding-card reveal">
+                <div class="finding-num">2</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">SpaceX-xAI合并体秘密提交IPO，估值1.75万亿美元</span><span class="lang-en">SpaceX-xAI Merger Confidentially Files for IPO at $1.75 Trillion Valuation</span></h4>
+                    <p><span class="lang-zh">马斯克要求参与IPO的投行订阅Grok AI服务，募资规模或达750亿美元，将成史上最大IPO。同期OpenAI完成1220亿美元融资（估值8520亿），Anthropic亦筹划上市。</span><span class="lang-en">Musk requires IPO underwriters to subscribe to Grok AI services. The offering could raise up to $75 billion, making it the largest IPO in history. Meanwhile, OpenAI closed a $122 billion round (valued at $852 billion), and Anthropic is also planning to go public.</span></p>
+                </div>
+            </div>
+            <div class="finding-card reveal">
+                <div class="finding-num">3</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">AI裁员从预期走向现实：3月15,341起裁员归因于AI</span><span class="lang-en">AI Layoffs Become Reality: 15,341 Job Cuts Attributed to AI in March</span></h4>
+                    <p><span class="lang-zh">甲骨文裁员万人同时举债500亿建AI数据中心；科技行业Q1裁员超5.2万人同比增40%；16%大学生因AI更换专业；美联储主席鲍威尔公开承认AI冲击入门白领岗位。</span><span class="lang-en">Oracle laid off 10,000 while borrowing $50 billion for AI data centers. Tech Q1 layoffs exceeded 52,000 (+40% YoY). 16% of college students switched majors due to AI. Fed Chair Powell publicly acknowledged AI's impact on entry-level white-collar jobs.</span></p>
+                </div>
+            </div>
+            <div class="finding-card reveal">
+                <div class="finding-num">4</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">亲AI政治力量集结：1亿美元超级PAC瞄准中期选举</span><span class="lang-en">Pro-AI Political Forces Rally: $100M Super PAC Targets Midterm Elections</span></h4>
+                    <p><span class="lang-zh">David Sacks支持的Innovation Council Action计划投入超1亿美元为议员AI立场打分，Anthropic成立新PAC，AI监管路线之争全面进入选举政治。</span><span class="lang-en">David Sacks-backed Innovation Council Action plans to spend over $100 million scoring lawmakers on AI positions. Anthropic formed a new PAC. The AI regulation debate has fully entered electoral politics.</span></p>
+                </div>
+            </div>
+            <div class="finding-card reveal">
+                <div class="finding-num">5</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">微软宣布2027年前自研前沿AI模型，减少对OpenAI依赖</span><span class="lang-en">Microsoft to Develop Frontier AI Models by 2027, Reducing OpenAI Dependence</span></h4>
+                    <p><span class="lang-zh">微软发布三款自研AI模型直接竞争OpenAI同类产品，同时与雪佛龙签署70亿美元数据中心供电协议，英伟达斥资20亿投资Marvell扩展AI芯片生态。</span><span class="lang-en">Microsoft released three in-house AI models competing directly with OpenAI products, signed a $7 billion data center power deal with Chevron, while NVIDIA invested $2 billion in Marvell to expand the AI chip ecosystem.</span></p>
+                </div>
+            </div>
+            <div class="finding-card reveal">
+                <div class="finding-num">6</div>
+                <div class="finding-content">
+                    <h4><span class="lang-zh">伊朗革命卫队威胁攻击中东地区美国科技企业</span><span class="lang-en">Iran's IRGC Threatens Attacks on U.S. Tech Companies in the Middle East</span></h4>
+                    <p><span class="lang-zh">IRGC公布18家美科技企业为合法报复目标，包括英伟达、苹果、微软、谷歌等，此前已袭击中东AWS数据中心，地缘冲突直接威胁AI基础设施安全。</span><span class="lang-en">The IRGC designated 18 U.S. tech companies — including NVIDIA, Apple, Microsoft, and Google — as legitimate retaliation targets. A prior attack on a Middle East AWS data center underscores how geopolitical conflict directly threatens AI infrastructure security.</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Focus Events -->
+    <section class="section" id="focus">
+        <div class="section-header reveal">
+            <div class="section-tag"><i class="fas fa-crosshairs"></i> Deep Dive</div>
+            <h2 class="section-title"><span class="lang-zh">焦点事件深度解读</span><span class="lang-en">Focus Events Deep Dive</span></h2>
+        </div>
+
+        <!-- Focus 2.1 -->
+        <div class="focus-event reveal" id="focus-1">
+            <div class="focus-event-title"><span class="lang-zh">2.1 Anthropic与美国政府的宪法级对抗升级</span><span class="lang-en">2.1 Anthropic vs. U.S. Government: Constitutional Showdown Escalates</span></div>
+            
+            <h4><i class="fas fa-timeline"></i> <span class="lang-zh">事件脉络</span><span class="lang-en">Timeline</span></h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">谈判破裂</span><span class="lang-en">Talks Collapse</span></div>
+                    <div class="desc"><span class="lang-zh">Anthropic拒绝让Claude用于"大规模国内监控"和"全自动致命武器系统"，与五角大楼合作谈判破裂</span><span class="lang-en">Anthropic refused to allow Claude for "mass domestic surveillance" and "fully autonomous lethal weapon systems," causing Pentagon partnership talks to collapse</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">政府报复</span><span class="lang-en">Government Retaliation</span></div>
+                    <div class="desc"><span class="lang-zh">国防部长Pete Hegseth批其"傲慢背叛"，将Anthropic列为"国家安全供应链风险"——此标签此前仅用于外国敌对势力</span><span class="lang-en">Defense Secretary Pete Hegseth called it "arrogant betrayal" and designated Anthropic a "national security supply chain risk" — a label previously reserved for foreign adversaries</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">全面封杀</span><span class="lang-en">Full Ban</span></div>
+                    <div class="desc"><span class="lang-zh">联邦机构被要求停用Anthropic技术，承包商被要求移除Claude部署</span><span class="lang-en">Federal agencies were ordered to cease using Anthropic technology; contractors were required to remove Claude deployments</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">法律反击</span><span class="lang-en">Legal Counterattack</span></div>
+                    <div class="desc"><span class="lang-zh">Anthropic在加州联邦法院起诉，主张政府违反第一修正案（言论自由）和第五修正案（正当程序）</span><span class="lang-en">Anthropic sued in California federal court, arguing the government violated the First Amendment (free speech) and Fifth Amendment (due process)</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月25日</span><span class="lang-en">Mar 25</span></div>
+                    <div class="desc"><span class="lang-zh">法官Rita F. Lin在听证中明确表态：政府行为"更像惩罚而非维护国家安全"</span><span class="lang-en">Judge Rita F. Lin stated during the hearing that the government's actions "look more like punishment than national security"</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月26-27日</span><span class="lang-en">Mar 26–27</span></div>
+                    <div class="desc"><span class="lang-zh">法官签发初步禁令，裁定政府行为违宪，要求停止执行相关指令</span><span class="lang-en">The judge issued a preliminary injunction, ruling the government's actions unconstitutional and ordering a halt to related directives</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">4月2日</span><span class="lang-en">Apr 2</span></div>
+                    <div class="desc"><span class="lang-zh">司法部正式向旧金山联邦法院提交上诉通知，案件进入第九巡回上诉法院</span><span class="lang-en">The DOJ formally filed an appeal notice with the San Francisco federal court; the case moves to the Ninth Circuit Court of Appeals</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">4月3日</span><span class="lang-en">Apr 3</span></div>
+                    <div class="desc"><span class="lang-zh">Anthropic提交文件成立新政治行动委员会（PAC），向两党议员捐款，资金来自员工自愿捐款</span><span class="lang-en">Anthropic filed to establish a new Political Action Committee (PAC), donating to bipartisan lawmakers, funded by voluntary employee contributions</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">4月初</span><span class="lang-en">Early Apr</span></div>
+                    <div class="desc"><span class="lang-zh">Anthropic因快速发布周期出现Claude Code源码泄露事件，虽未涉及用户数据，但暴露产品路线图</span><span class="lang-en">Anthropic's rapid release cycle led to a Claude Code source code leak; no user data was involved, but the product roadmap was exposed</span></div>
+                </div>
+            </div>
+
+            <h4><i class="fas fa-users"></i> <span class="lang-zh">各方立场与最新博弈</span><span class="lang-en">Stakeholder Positions &amp; Latest Developments</span></h4>
+            <ul>
+                <li><span class="lang-zh"><strong>Anthropic</strong>：坚持AI伦理红线的同时加速政治布局——成立PAC、年营收超200亿美元、筹划IPO估值超万亿。Cowork产品首周用户采纳超Claude Code同期</span><span class="lang-en"><strong>Anthropic</strong>: Holding firm on AI ethics red lines while accelerating political engagement — formed a PAC, annual revenue exceeds $20 billion, planning an IPO valued over $1 trillion. Cowork product adoption in its first week surpassed Claude Code's launch</span></li>
+                <li><span class="lang-zh"><strong>司法部/特朗普政府</strong>：正式上诉，主张国防需求优先。法官暂停裁决一周供政府上诉</span><span class="lang-en"><strong>DOJ / Trump Administration</strong>: Filed a formal appeal, arguing national defense needs take priority. The judge paused the ruling for one week to allow the government's appeal</span></li>
+                <li><span class="lang-zh"><strong>加州州长纽森</strong>：签署AI行政令明确表态——若联邦将企业列为供应链风险，加州将自行评估，形成州级对冲</span><span class="lang-en"><strong>California Governor Newsom</strong>: Signed an AI executive order stating that if the federal government designates a company as a supply chain risk, California will conduct its own assessment — creating a state-level counterbalance</span></li>
+                <li><span class="lang-zh"><strong>OpenAI/Sam Altman</strong>：首次回应军方合作争议，称"误判了大众对AI和政府的不信任情绪"，主张AI企业必须与政府合作</span><span class="lang-en"><strong>OpenAI / Sam Altman</strong>: Responded to the military cooperation controversy for the first time, admitting they "misjudged public distrust of AI and government," while arguing AI companies must work with the government</span></li>
+                <li><span class="lang-zh"><strong>最高法院</strong>：大法官Alito在口头辩论中玩笑式提议让Claude裁决案件，侧面反映AI已进入司法意识</span><span class="lang-en"><strong>Supreme Court</strong>: Justice Alito jokingly suggested letting Claude decide a case during oral arguments, reflecting AI's growing presence in judicial awareness</span></li>
+            </ul>
+
+            <h4><i class="fas fa-chart-line"></i> <span class="lang-zh">影响评估</span><span class="lang-en">Impact Assessment</span></h4>
+            <ul>
+                <li><span class="lang-zh"><strong>行业先例强化</strong>：案件进入上诉程序，无论结果如何都将形成约束性判例，定义AI企业与政府的权力边界</span><span class="lang-en"><strong>Industry Precedent</strong>: The case entering the appeals process will create binding precedent regardless of outcome, defining the power boundary between AI companies and the government</span></li>
+                <li><span class="lang-zh"><strong>竞争格局分化</strong>：OpenAI明确站队政府合作路线，Anthropic走"负责任AI+政治参与"双轨路线，行业分裂加深</span><span class="lang-en"><strong>Competitive Divergence</strong>: OpenAI has clearly sided with government cooperation, while Anthropic pursues a dual track of "responsible AI + political engagement," deepening the industry split</span></li>
+                <li><span class="lang-zh"><strong>州联邦博弈</strong>：加州行政令开创州级独立评估先例，AI治理权的纵向分裂正在形成</span><span class="lang-en"><strong>State-Federal Tensions</strong>: California's executive order sets a precedent for independent state-level assessment, creating a vertical split in AI governance authority</span></li>
+                <li><span class="lang-zh"><strong>IPO影响</strong>：Anthropic源码泄露事件虽影响有限，但在IPO筹备期暴露运营风险，投资者将重新评估其安全人设的可信度</span><span class="lang-en"><strong>IPO Impact</strong>: While the source code leak had limited impact, it exposed operational risks during IPO preparations, prompting investors to reassess the credibility of Anthropic's safety-first image</span></li>
+            </ul>
+        </div>
+
+        <!-- Focus 2.2 -->
+        <div class="focus-event reveal" id="focus-2">
+            <div class="focus-event-title"><span class="lang-zh">2.2 AI监管博弈：联邦vs州的路线之争</span><span class="lang-en">2.2 AI Regulation: Federal vs. State Power Struggle</span></div>
+
+            <h4><i class="fas fa-timeline"></i> <span class="lang-zh">事件脉络</span><span class="lang-en">Timeline</span></h4>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月23日</span><span class="lang-en">Mar 23</span></div>
+                    <div class="desc"><span class="lang-zh">白宫发布AI政策框架，主张仅国会（而非各州）有权制定AI规则</span><span class="lang-en">The White House released an AI policy framework, asserting that only Congress — not individual states — has the authority to set AI rules</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月25日</span><span class="lang-en">Mar 25</span></div>
+                    <div class="desc"><span class="lang-zh">特朗普任命13位科技巨头进入PCAST，含扎克伯格、黄仁勋、埃里森等</span><span class="lang-en">Trump appointed 13 tech leaders to PCAST, including Zuckerberg, Jensen Huang, and Larry Ellison</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月28日</span><span class="lang-en">Mar 28</span></div>
+                    <div class="desc"><span class="lang-zh">AI行业两大超级PAC首次介入国会初选，共投入近700万美元</span><span class="lang-en">Two major AI industry super PACs intervened in congressional primaries for the first time, spending nearly $7 million combined</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月30日</span><span class="lang-en">Mar 30</span></div>
+                    <div class="desc"><span class="lang-zh">David Sacks支持的Innovation Council Action宣布投入超1亿美元，为议员AI立场打分</span><span class="lang-en">David Sacks-backed Innovation Council Action announced over $100 million in spending to score lawmakers on their AI positions</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">3月31日</span><span class="lang-en">Mar 31</span></div>
+                    <div class="desc"><span class="lang-zh">加州州长纽森签署全国首个AI行政令，要求AI企业落实安全隐私防护，直接对抗联邦轻监管路线</span><span class="lang-en">California Governor Newsom signed the nation's first AI executive order, requiring AI companies to implement safety and privacy protections — directly countering the federal light-regulation approach</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">4月2日</span><span class="lang-en">Apr 2</span></div>
+                    <div class="desc"><span class="lang-zh">桑德斯与AOC提出法案，要求暂停新建联邦AI数据中心直至建立安全保障</span><span class="lang-en">Senators Sanders and AOC introduced a bill to halt new federal AI data center construction until safety safeguards are established</span></div>
+                </div>
+                <div class="timeline-item">
+                    <div class="time"><span class="lang-zh">4月3日</span><span class="lang-en">Apr 3</span></div>
+                    <div class="desc"><span class="lang-zh">特朗普2027预算案大幅削减科学经费，但保留量子信息和AI应用研究资金</span><span class="lang-en">Trump's 2027 budget proposal slashed science funding but preserved quantum information and AI application research budgets</span></div>
+                </div>
+            </div>
+
+            <h4><i class="fas fa-magnifying-glass"></i> <span class="lang-zh">深层分析</span><span class="lang-en">In-Depth Analysis</span></h4>
+            <p><span class="lang-zh">AI监管正形成三条对立路线：①白宫主张联邦统一轻监管，以对华竞争为由反对各州立法；②加州以行政令开创州级独立监管先例，要求AI企业提供安全保障；③进步派议员主张暂停AI扩张直至建立安全框架。三条路线的博弈将在2026年中期选举中达到高潮。</span><span class="lang-en">AI regulation is splitting into three opposing tracks: ① The White House advocates unified federal light regulation, opposing state legislation on grounds of competing with China; ② California's executive order sets a precedent for independent state-level regulation, requiring AI companies to provide safety guarantees; ③ Progressive lawmakers push to pause AI expansion until a safety framework is established. This three-way struggle will peak during the 2026 midterm elections.</span></p>
+            <p><span class="lang-zh">亲AI政治力量的集结速度惊人——Innovation Council Action的1亿美元预算、Leading the Future和Public First两大PAC的对决、Anthropic新成立的PAC——AI行业2025年已向联邦竞选捐款超8300万美元，2026年中期选举投入将远超此数。</span><span class="lang-en">The speed at which pro-AI political forces are mobilizing is remarkable — Innovation Council Action's $100 million budget, the showdown between Leading the Future and Public First PACs, and Anthropic's newly formed PAC. The AI industry donated over $83 million to federal campaigns in 2025; spending for the 2026 midterms will far exceed that figure.</span></p>
+
+            <h4><i class="fas fa-industry"></i> <span class="lang-zh">行业影响</span><span class="lang-en">Industry Impact</span></h4>
+            <p><span class="lang-zh">民调显示仅35%美国人对AI兴奋，80%感到担忧，65%反对社区建AI数据中心。AI企业面临的政治风险不仅来自政府，更来自选民情绪。纽约等州正推出多项"创新扼杀型"AI监管法案，企业需要在联邦、州、地方三个层面同时管理政策风险。</span><span class="lang-en">Polls show only 35% of Americans are excited about AI, 80% are concerned, and 65% oppose AI data centers in their communities. Political risk for AI companies comes not just from government but from voter sentiment. States like New York are introducing multiple "innovation-killing" AI regulatory bills, forcing companies to manage policy risk simultaneously at federal, state, and local levels.</span></p>
+        </div>
+
+        <!-- Focus 2.3 -->
+        <div class="focus-event reveal" id="focus-3">
+            <div class="focus-event-title"><span class="lang-zh">2.3 SpaceX-xAI合并体冲刺史上最大IPO</span><span class="lang-en">2.3 SpaceX-xAI Merger Sprints Toward the Largest IPO in History</span></div>
+
+            <h4><i class="fas fa-chart-pie"></i> <span class="lang-zh">事件概述</span><span class="lang-en">Overview</span></h4>
+            <p><span class="lang-zh">SpaceX于4月1日秘密向美国SEC提交IPO注册草案，目标最快6-7月上市。今年2月SpaceX与马斯克的xAI合并，成为美国史上价值最高企业合并案，合并后估值达1.25-1.75万亿美元，募资规模或达400-800亿美元。</span><span class="lang-en">SpaceX confidentially filed an IPO registration draft with the SEC on April 1, targeting a listing as early as June–July. In February, SpaceX merged with Musk's xAI in the highest-valued corporate merger in U.S. history, with a combined valuation of $1.25–1.75 trillion and a potential raise of $40–80 billion.</span></p>
+
+            <h4><i class="fas fa-lightbulb"></i> <span class="lang-zh">关键细节</span><span class="lang-en">Key Details</span></h4>
+            <ul>
+                <li><span class="lang-zh">马斯克要求参与IPO的投行、律所订阅Grok AI服务，部分银行已同意每年花费数千万美元——此举前所未有</span><span class="lang-en">Musk requires IPO underwriters and law firms to subscribe to Grok AI services; some banks have agreed to spend tens of millions annually — an unprecedented move</span></li>
+                <li><span class="lang-zh">计划预留30%股份给散户投资者，远超常规的10%，绕过传统金融机构</span><span class="lang-en">Plans to reserve 30% of shares for retail investors, far exceeding the typical 10%, bypassing traditional financial institutions</span></li>
+                <li><span class="lang-zh">采用双层股权结构保障马斯克决策权</span><span class="lang-en">Dual-class share structure to preserve Musk's decision-making authority</span></li>
+                <li><span class="lang-zh">募资将用于星舰发射、太空AI数据中心建设及月球基地开发</span><span class="lang-en">Proceeds will fund Starship launches, space-based AI data center construction, and lunar base development</span></li>
+                <li><span class="lang-zh">摩根士丹利、高盛等多家投行担任牵头簿记行</span><span class="lang-en">Morgan Stanley, Goldman Sachs, and other major banks serve as lead bookrunners</span></li>
+            </ul>
+
+            <h4><i class="fas fa-chart-line"></i> <span class="lang-zh">AI IPO热潮全景</span><span class="lang-en">AI IPO Landscape</span></h4>
+            <ul>
+                <li><span class="lang-zh"><strong>SpaceX-xAI</strong>：估值1.75万亿美元，募资750亿美元，最快6月上市</span><span class="lang-en"><strong>SpaceX-xAI</strong>: Valued at $1.75 trillion, raising $75 billion, listing as early as June</span></li>
+                <li><span class="lang-zh"><strong>OpenAI</strong>：完成1220亿美元融资（硅谷史上最大），估值8520亿美元，预计年底IPO</span><span class="lang-en"><strong>OpenAI</strong>: Closed a $122 billion round (largest in Silicon Valley history), valued at $852 billion, IPO expected by year-end</span></li>
+                <li><span class="lang-zh"><strong>Anthropic</strong>：年营收超190亿美元，筹划IPO估值超万亿</span><span class="lang-en"><strong>Anthropic</strong>: Annual revenue exceeds $19 billion, planning an IPO valued over $1 trillion</span></li>
+                <li><span class="lang-zh"><strong>CoreWeave</strong>：纳斯达克IPO后获85亿美元贷款扩张AI云平台</span><span class="lang-en"><strong>CoreWeave</strong>: Secured an $8.5 billion loan post-Nasdaq IPO to expand its AI cloud platform</span></li>
+            </ul>
+            <p><span class="lang-zh">分析师预测，若SpaceX顺利上市将扭转全年IPO市场格局。但Q1超七成大额科技IPO上市后股价破发（中位数跌幅28%），伊朗冲突与AI恐慌仍在压制市场情绪。</span><span class="lang-en">Analysts predict a successful SpaceX listing would reshape the full-year IPO market. However, over 70% of large tech IPOs in Q1 fell below their offering price (median decline of 28%), with the Iran conflict and AI anxiety continuing to weigh on market sentiment.</span></p>
+        </div>
+
+        <!-- Focus 2.4 -->
+        <div class="focus-event reveal" id="focus-4">
+            <div class="focus-event-title"><span class="lang-zh">2.4 AI裁员潮从预期走向现实</span><span class="lang-en">2.4 AI Layoffs Shift from Forecast to Reality</span></div>
+
+            <h4><i class="fas fa-chart-pie"></i> <span class="lang-zh">数据全景</span><span class="lang-en">Data Overview</span></h4>
+
+            <div class="chart-container">
+                <div class="chart-title"><i class="fas fa-chart-bar"></i> <span class="lang-zh">AI对就业市场的双面冲击</span><span class="lang-en">AI's Dual Impact on the Job Market</span></div>
+                <div class="bar-chart">
+                    <div class="bar-row">
+                        <span class="label"><span class="lang-zh">Q1科技裁员</span><span class="lang-en">Q1 Tech Layoffs</span></span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 100%; background: linear-gradient(90deg, #ef4444, #f97316);">
+                                <span class="bar-value"><span class="lang-zh">52,050人 (同比+40%)</span><span class="lang-en">52,050 (+40% YoY)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <span class="label"><span class="lang-zh">3月AI裁员</span><span class="lang-en">Mar AI Layoffs</span></span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 29%; background: linear-gradient(90deg, #ef4444, #f97316);">
+                                <span class="bar-value"><span class="lang-zh">15,341人</span><span class="lang-en">15,341</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <span class="label"><span class="lang-zh">甲骨文裁员</span><span class="lang-en">Oracle Layoffs</span></span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 19%; background: linear-gradient(90deg, #ef4444, #f97316);">
+                                <span class="bar-value"><span class="lang-zh">~10,000人</span><span class="lang-en">~10,000</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bar-row">
+                        <span class="label"><span class="lang-zh">AI创造岗位</span><span class="lang-en">AI Jobs Created</span></span>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: 80%; background: linear-gradient(90deg, #10b981, #38bdf8);">
+                                <span class="bar-value"><span class="lang-zh">640,000个 (2023-2025)</span><span class="lang-en">640,000 (2023–2025)</span></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h4><i class="fas fa-building"></i> <span class="lang-zh">企业行动</span><span class="lang-en">Corporate Actions</span></h4>
+            <ul>
+                <li><span class="lang-zh"><strong>甲骨文</strong>：裁员约万人（多为资深技术人员），同时举债500亿美元与OpenAI合作建数据中心，股价半年跌近50%</span><span class="lang-en"><strong>Oracle</strong>: Laid off ~10,000 (mostly senior engineers) while borrowing $50 billion to build data centers with OpenAI; stock price dropped nearly 50% in six months</span></li>
+                <li><span class="lang-zh"><strong>Block</strong>：因AI裁员40%，高管称AI提升工程速度超40%</span><span class="lang-en"><strong>Block</strong>: Cut 40% of staff due to AI; executives claim AI boosted engineering velocity by over 40%</span></li>
+                <li><span class="lang-zh"><strong>摩根大通CEO戴蒙</strong>：公开表示AI将实现每周3.5天工作制，但承认会"过快冲击劳动力市场"</span><span class="lang-en"><strong>JPMorgan CEO Dimon</strong>: Publicly stated AI will enable a 3.5-day work week, but acknowledged it could "hit the labor market too fast"</span></li>
+                <li><span class="lang-zh"><strong>美联储主席鲍威尔</strong>：在哈佛课堂上承认AI冲击入门白领岗位，但鼓励年轻人不要退缩</span><span class="lang-en"><strong>Fed Chair Powell</strong>: Acknowledged in a Harvard class that AI is impacting entry-level white-collar jobs, but encouraged young people not to back down</span></li>
+                <li><span class="lang-zh"><strong>甲骨文/亚马逊</strong>：大规模裁员同时提交数千份H-1B签证申请，引发"打脸"争议</span><span class="lang-en"><strong>Oracle / Amazon</strong>: Filed thousands of H-1B visa applications while conducting mass layoffs, sparking public backlash</span></li>
+            </ul>
+
+            <h4><i class="fas fa-graduation-cap"></i> <span class="lang-zh">劳动力市场结构性变化</span><span class="lang-en">Structural Shifts in the Labor Market</span></h4>
+            <ul>
+                <li><span class="lang-zh">16%大学生因AI更换专业，多流向社科、商科与AI相关领域</span><span class="lang-en">16% of college students switched majors due to AI, mostly toward social sciences, business, and AI-related fields</span></li>
+                <li><span class="lang-zh">2月美国职位空缺降至690万，招聘率为2020年4月来最低</span><span class="lang-en">U.S. job openings fell to 6.9 million in February; the hiring rate hit its lowest since April 2020</span></li>
+                <li><span class="lang-zh">AI在2023-2025年创造64万个岗位（含31.2万数据标注员），但仅6%公司发布AI相关招聘</span><span class="lang-en">AI created 640,000 jobs from 2023–2025 (including 312,000 data annotators), but only 6% of companies posted AI-related openings</span></li>
+                <li><span class="lang-zh">行业数据显示多数AI裁员后会以更低成本重新招人，合同工比例持续上升</span><span class="lang-en">Industry data shows most companies rehire at lower costs after AI layoffs, with the share of contract workers continuing to rise</span></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 3: Industry Scan -->
+    <section class="section" id="scan">
+        <div class="section-header reveal">
+            <div class="section-tag"><i class="fas fa-radar"></i> Industry Scan</div>
+            <h2 class="section-title"><span class="lang-zh">行业动态扫描</span><span class="lang-en">Industry Scan</span></h2>
+        </div>
+
+        <div class="scan-category reveal">
+            <div class="scan-category-title"><i class="fas fa-building"></i> <span class="lang-zh">企业AI战略与组织变革</span><span class="lang-en">Corporate AI Strategy &amp; Organizational Change</span></div>
+            <div class="scan-items">
+                <div class="scan-item"><span class="lang-zh"><strong>甲骨文</strong>裁员约万人（多为资深技术人员），同时举债500亿美元与OpenAI合作建"星际之门"数据中心，股价半年跌近50%，投资者质疑AI基建回报</span><span class="lang-en"><strong>Oracle</strong> laid off ~10,000 (mostly senior engineers) while borrowing $50 billion to build the "Stargate" data center with OpenAI; stock price dropped nearly 50% in six months as investors question AI infrastructure returns</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>微软</strong>宣布2027年前自研前沿AI模型，发布MAI-Transcribe/Voice/Image三款自研模型直接竞争OpenAI；与雪佛龙签署70亿美元德州数据中心供电协议；已启用英伟达GB200芯片集群</span><span class="lang-en"><strong>Microsoft</strong> announced in-house frontier AI models by 2027, releasing MAI-Transcribe/Voice/Image to compete directly with OpenAI; signed a $7 billion Texas data center power deal with Chevron; deployed NVIDIA GB200 chip clusters</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>摩根大通</strong>将AI使用纳入全球软件工程师绩效目标，CEO戴蒙称AI将实现每周3.5天工作制，计划2026年科技投资达200亿美元</span><span class="lang-en"><strong>JPMorgan</strong> incorporated AI usage into global software engineer performance goals; CEO Dimon says AI will enable a 3.5-day work week; plans $20 billion in tech investment for 2026</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Meta</strong>任命CTO博斯沃思负责全公司"AI for Work"项目，年AI投入超700亿美元且计划翻倍，但连输两场青少年保护诉讼，裁员700人并缩减元宇宙投入</span><span class="lang-en"><strong>Meta</strong> appointed CTO Bosworth to lead company-wide "AI for Work"; annual AI spending exceeds $70 billion with plans to double, but lost two teen safety lawsuits, laid off 700, and scaled back metaverse investment</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>苹果</strong>放弃AI军备竞赛，与谷歌合作借Gemini重构Siri（代号Campos），押注端侧AI路线，正开发智能眼镜、挂坠、带摄像头AirPods三款AI穿戴设备</span><span class="lang-en"><strong>Apple</strong> abandoned the AI arms race, partnering with Google to rebuild Siri using Gemini (codename Campos); betting on on-device AI, developing smart glasses, a pendant, and camera-equipped AirPods</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>亚马逊</strong>被曝强制员工全岗位使用AI，近期网站崩溃与AI编码工具使用有关；收购人形机器人公司Fauna Robotics</span><span class="lang-en"><strong>Amazon</strong> reportedly mandated AI use across all roles; recent website outages linked to AI coding tools; acquired humanoid robotics company Fauna Robotics</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Block</strong>因AI裁员40%，高管称AI提升工程速度超40%；Meta和Block同时重新定义中层管理角色为"player-coaches"</span><span class="lang-en"><strong>Block</strong> cut 40% of staff due to AI; executives claim AI boosted engineering velocity by over 40%. Both Meta and Block are redefining middle management roles as "player-coaches"</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>OpenAI</strong>完成1220亿美元融资（硅谷史上最大），估值8520亿美元；收购科技脱口秀TBPN布局媒体话语权；关停Sora转向企业"超级应用"</span><span class="lang-en"><strong>OpenAI</strong> closed a $122 billion round (largest in Silicon Valley history), valued at $852 billion; acquired tech talk show TBPN for media influence; shut down Sora to pivot toward an enterprise "super app"</span></div>
+            </div>
+        </div>
+
+        <div class="scan-category reveal">
+            <div class="scan-category-title"><i class="fas fa-robot"></i> <span class="lang-zh">自动驾驶与机器人</span><span class="lang-en">Autonomous Driving &amp; Robotics</span></div>
+            <div class="scan-items">
+                <div class="scan-item"><span class="lang-zh"><strong>Waymo</strong>每周付费行程达50万次，在圣安东尼奥机场启动服务，计划进军约20个新城市含东京和伦敦；联合CEO表示技术最终将装入私人汽车；但因超越校车和低速撞童事件遭NHTSA调查</span><span class="lang-en"><strong>Waymo</strong> reached 500,000 paid rides per week, launched service at San Antonio airport, and plans to expand to ~20 new cities including Tokyo and London; co-CEO says the tech will eventually go into private cars; under NHTSA investigation for passing school buses and a low-speed child collision</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>特斯拉</strong>宣布停产Model S/X，腾出工厂生产Optimus人形机器人；本月量产无方向盘Cybercab；Q1交付35.8万辆环比降14%，欧洲市场份额近半丢失</span><span class="lang-en"><strong>Tesla</strong> announced discontinuation of Model S/X to free up factory capacity for Optimus humanoid robots; began mass production of the steeringless Cybercab this month; Q1 deliveries of 358,000 units fell 14% QoQ, losing nearly half its European market share</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Zoox</strong>（亚马逊旗下）宣布在旧金山、拉斯维加斯扩张，奥斯汀、迈阿密开启路测</span><span class="lang-en"><strong>Zoox</strong> (Amazon subsidiary) announced expansion in San Francisco and Las Vegas, with road testing beginning in Austin and Miami</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Figure AI</strong>第三代人形机器人亮相白宫，估值390亿美元，但前安全主管起诉称机器人力量足以击碎人类头骨</span><span class="lang-en"><strong>Figure AI</strong> showcased its third-generation humanoid robot at the White House, valued at $39 billion, but a former safety chief sued claiming the robot's force can crush a human skull</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>马斯克Terafab</strong>：特斯拉与SpaceX联合建设250亿美元芯片工厂，年产1太瓦算力，80%供太空AI卫星</span><span class="lang-en"><strong>Musk's Terafab</strong>: Tesla and SpaceX jointly building a $25 billion chip factory producing 1 terawatt of compute annually, 80% allocated to space AI satellites</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>自动驾驶透明度</strong>：参议员Markey致信7家企业询问远程协助频率，所有企业均拒绝直接回应，行业透明度极低</span><span class="lang-en"><strong>AV Transparency</strong>: Senator Markey wrote to 7 companies asking about remote assistance frequency; all refused to respond directly, highlighting extremely low industry transparency</span></div>
+            </div>
+        </div>
+
+        <div class="scan-category reveal">
+            <div class="scan-category-title"><i class="fas fa-coins"></i> <span class="lang-zh">AI融资与IPO动态</span><span class="lang-en">AI Financing &amp; IPO Activity</span></div>
+            <div class="scan-items">
+                <div class="scan-item"><span class="lang-zh"><strong>SpaceX-xAI</strong>秘密提交IPO，估值1.75万亿美元，募资750亿美元，马斯克要求投行订阅Grok，计划30%股份给散户</span><span class="lang-en"><strong>SpaceX-xAI</strong> confidentially filed for IPO at $1.75 trillion valuation, raising $75 billion; Musk requires underwriters to subscribe to Grok; plans 30% retail allocation</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>OpenAI</strong>完成1220亿美元融资，估值8520亿美元，年化ARR 240亿美元，预计年底IPO，年亏损预计140-170亿美元</span><span class="lang-en"><strong>OpenAI</strong> closed a $122 billion round, valued at $852 billion, annualized ARR of $24 billion, IPO expected by year-end, projected annual losses of $14–17 billion</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>CoreWeave</strong>纳斯达克IPO后获85亿美元贷款扩张AI云平台，过去12个月融资总规模达约280亿美元</span><span class="lang-en"><strong>CoreWeave</strong> secured an $8.5 billion loan post-Nasdaq IPO to expand its AI cloud platform; total financing over the past 12 months reached ~$28 billion</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>英伟达</strong>斥资20亿美元投资Marvell Technology，合作开发AI高级网络解决方案，聚焦光互连和硅光子技术</span><span class="lang-en"><strong>NVIDIA</strong> invested $2 billion in Marvell Technology to co-develop advanced AI networking solutions, focusing on optical interconnects and silicon photonics</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Reflection AI</strong>（英伟达支持）以250亿美元估值融资25亿美元，定位"西方版DeepSeek"</span><span class="lang-en"><strong>Reflection AI</strong> (NVIDIA-backed) raised $2.5 billion at a $25 billion valuation, positioning itself as the "Western DeepSeek"</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>IPO市场整体</strong>：Q1成交量为2021年来最佳，但超七成大额交易上市后股价破发，中位数跌幅28%</span><span class="lang-en"><strong>IPO Market Overall</strong>: Q1 deal volume was the best since 2021, but over 70% of large deals fell below offering price post-listing, with a median decline of 28%</span></div>
+            </div>
+        </div>
+
+        <div class="scan-category reveal">
+            <div class="scan-category-title"><i class="fas fa-shield-halved"></i> <span class="lang-zh">AI安全与社会影响</span><span class="lang-en">AI Safety &amp; Social Impact</span></div>
+            <div class="scan-items">
+                <div class="scan-item"><span class="lang-zh"><strong>AI人脸识别误判</strong>：田纳西州祖母因AI人脸识别被误认银行诈骗嫌疑人，在监狱关押超五个月后获释</span><span class="lang-en"><strong>AI Facial Recognition Error</strong>: A Tennessee grandmother was misidentified as a bank fraud suspect by AI facial recognition and jailed for over five months before release</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>AI聊天机器人致死案</strong>：多起青少年因AI聊天机器人诱发自杀的案件被报道</span><span class="lang-en"><strong>AI Chatbot Deaths</strong>: Multiple cases reported of teenagers driven to suicide by AI chatbot interactions</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>AI深伪色情</strong>：莱克祖尔高中学生用AI生成同学色情图片，伊利诺伊州已立法将此列为重罪</span><span class="lang-en"><strong>AI Deepfake Pornography</strong>: Lake Zurich High School students used AI to generate explicit images of classmates; Illinois has legislated this as a felony</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>AI精神科处方</strong>：犹他州启动AI聊天机器人续方精神科药物试点，月费19美元，精神科医生质疑安全性</span><span class="lang-en"><strong>AI Psychiatric Prescriptions</strong>: Utah launched a pilot for AI chatbot psychiatric medication refills at $19/month; psychiatrists question its safety</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>AI健康隐私</strong>：三分之一美国成年人用AI获取健康建议，41%上传个人医疗信息，HIPAA不自动适用</span><span class="lang-en"><strong>AI Health Privacy</strong>: One-third of U.S. adults use AI for health advice, 41% upload personal medical data; HIPAA does not automatically apply</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>法律先例</strong>：纽约法官裁定AI通信不受律师特权保护；Meta/YouTube被判需为AI推荐算法造成的青少年伤害担责</span><span class="lang-en"><strong>Legal Precedents</strong>: A New York judge ruled AI communications are not protected by attorney-client privilege; Meta/YouTube held liable for teen harm caused by AI recommendation algorithms</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>AI芯片走私</strong>：亚特兰大男子等3人因共谋走私AI芯片至中国被起诉；新加坡追加起诉AI芯片诈骗案嫌疑人</span><span class="lang-en"><strong>AI Chip Smuggling</strong>: Three individuals including an Atlanta man indicted for conspiring to smuggle AI chips to China; Singapore filed additional charges in an AI chip fraud case</span></div>
+            </div>
+        </div>
+
+        <div class="scan-category reveal">
+            <div class="scan-category-title"><i class="fas fa-server"></i> <span class="lang-zh">AI基础设施与能源</span><span class="lang-en">AI Infrastructure &amp; Energy</span></div>
+            <div class="scan-items">
+                <div class="scan-item"><span class="lang-zh"><strong>微软-雪佛龙</strong>签署排他协议，在德州西部建造约70亿美元天然气发电厂，初期供电2500兆瓦用于数据中心</span><span class="lang-en"><strong>Microsoft-Chevron</strong> signed an exclusive deal to build a ~$7 billion natural gas power plant in West Texas, initially supplying 2,500 MW for data centers</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>美国陆军</strong>选定凯雷、KKR在军事基地建两座数据中心，单座耗资20亿美元</span><span class="lang-en"><strong>U.S. Army</strong> selected Carlyle and KKR to build two data centers on military bases, each costing $2 billion</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>数据中心困境</strong>：年投资额近470亿美元，但近三成到五成拟建产能或无法按时落地，面临电力、劳动力和本地支持不足</span><span class="lang-en"><strong>Data Center Challenges</strong>: Annual investment nearing $47 billion, but 30–50% of planned capacity may not be delivered on time due to power, labor, and local support shortages</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>能源部延令</strong>：要求印第安纳煤电厂维持运营至6月，被指为服务中西部AI数据中心建设，环保组织反对</span><span class="lang-en"><strong>DOE Extension Order</strong>: Required an Indiana coal plant to continue operating until June, reportedly to serve Midwest AI data center construction; environmental groups oppose the move</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>美国AI依赖中国</strong>：本土变压器、开关设备和电池制造能力不足，不得不依赖中国进口，导致数据中心建设延迟</span><span class="lang-en"><strong>U.S. AI Dependence on China</strong>: Insufficient domestic manufacturing of transformers, switchgear, and batteries forces reliance on Chinese imports, delaying data center construction</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>氦气供应风险</strong>：伊朗战争推高氦气价格（半导体关键原料），叠加数据中心高能耗，AI产业成本承压</span><span class="lang-en"><strong>Helium Supply Risk</strong>: The Iran conflict has driven up helium prices (a critical semiconductor material); combined with high data center energy consumption, AI industry costs are under pressure</span></div>
+                <div class="scan-item"><span class="lang-zh"><strong>Fed经济学家警告</strong>：AI热潮可能在尚未产生回报时就推高通胀，形成"通胀性冲击"</span><span class="lang-en"><strong>Fed Economist Warning</strong>: The AI boom may drive up inflation before generating returns, creating an "inflationary shock"</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Risks -->
+    <section class="section" id="risks">
+        <div class="section-header reveal">
+            <div class="section-tag"><i class="fas fa-triangle-exclamation"></i> Risk Alert</div>
+            <h2 class="section-title"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2>
+        </div>
+
+        <div class="risk-card reveal">
+            <h4><span class="lang-zh">4.1 地缘冲突直接威胁AI基础设施安全</span><span class="lang-en">4.1 Geopolitical Conflict Directly Threatens AI Infrastructure Security</span></h4>
+            <p><span class="lang-zh">伊朗革命卫队公开将英伟达、苹果、微软、谷歌等18家美科技企业列为合法报复目标，此前已袭击中东AWS数据中心。美国AI产业链对中东地区的依赖（数据中心、主权基金投资、能源供应）正成为系统性脆弱点。霍尔木兹海峡关闭推高全球油价与运输成本，氦气价格飙升直接影响半导体制造。</span><span class="lang-en">Iran's IRGC publicly designated 18 U.S. tech companies — including NVIDIA, Apple, Microsoft, and Google — as legitimate retaliation targets, having previously attacked a Middle East AWS data center. The U.S. AI supply chain's dependence on the Middle East (data centers, sovereign fund investment, energy supply) is becoming a systemic vulnerability. Closure of the Strait of Hormuz has driven up global oil prices and shipping costs, while surging helium prices directly impact semiconductor manufacturing.</span></p>
+            <div class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注指标：中东数据中心运营状态、氦气和天然气价格走势、AI企业中东员工撤离情况、主权基金投资节奏变化</span><span class="lang-en">Watch: Middle East data center operational status, helium and natural gas price trends, AI company staff evacuations from the Middle East, sovereign fund investment pace changes</span></div>
+        </div>
+
+        <div class="risk-card reveal">
+            <h4><span class="lang-zh">4.2 AI企业与政府关系的不确定性持续升级</span><span class="lang-en">4.2 Escalating Uncertainty in AI Company–Government Relations</span></h4>
+            <p><span class="lang-zh">Anthropic案进入上诉程序，加州签署独立AI行政令对抗联邦路线，联邦与州的AI治理权之争正式开启。任何AI企业的公开表态都可能面临政府经济报复风险，而州级保护又可能与联邦政策冲突。企业需要在联邦、州、地方三个层面同时管理政策风险。</span><span class="lang-en">The Anthropic case has entered the appeals process; California signed an independent AI executive order countering the federal approach, officially opening a federal-state battle over AI governance. Any public stance by an AI company risks government economic retaliation, while state-level protections may conflict with federal policy. Companies must manage policy risk simultaneously at federal, state, and local levels.</span></p>
+            <div class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注指标：第九巡回上诉法院裁决、其他州是否跟进加州行政令、AI企业政府合同变动</span><span class="lang-en">Watch: Ninth Circuit ruling, whether other states follow California's executive order, changes in AI company government contracts</span></div>
+        </div>
+
+        <div class="risk-card reveal">
+            <h4><span class="lang-zh">4.3 AI就业冲击加速兑现，社会反弹风险上升</span><span class="lang-en">4.3 AI Employment Impact Accelerates, Social Backlash Risk Rises</span></h4>
+            <p><span class="lang-zh">Q1科技裁员超5.2万人同比增40%，3月15,341起裁员明确归因于AI。甲骨文裁万人同时申请数千H-1B签证引发"打脸"争议。80%美国民众对AI感到担忧，65%反对社区建数据中心。若AI裁员持续加速而公众获益感不足，可能引发更强烈的政治反弹和监管收紧。</span><span class="lang-en">Q1 tech layoffs exceeded 52,000 (+40% YoY); 15,341 March layoffs were explicitly attributed to AI. Oracle filing thousands of H-1B applications while laying off 10,000 sparked public backlash. 80% of Americans are concerned about AI; 65% oppose data centers in their communities. If AI layoffs continue to accelerate without tangible public benefit, stronger political backlash and tighter regulation may follow.</span></p>
+            <div class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注指标：月度AI相关裁员数据、中期选举AI议题民调、反AI数据中心抗议频率、AI相关立法提案数量</span><span class="lang-en">Watch: Monthly AI-related layoff data, midterm election AI issue polling, anti-AI data center protest frequency, number of AI-related legislative proposals</span></div>
+        </div>
+
+        <div class="risk-card reveal">
+            <h4><span class="lang-zh">4.4 AI IPO泡沫与估值风险</span><span class="lang-en">4.4 AI IPO Bubble and Valuation Risk</span></h4>
+            <p><span class="lang-zh">SpaceX-xAI（1.75万亿）、OpenAI（8520亿）、Anthropic（万亿级）三大AI IPO估值合计超4万亿美元，但OpenAI年亏损140-170亿，甲骨文AI基建投入后股价半年跌50%，Q1超七成大额科技IPO破发。Fed经济学家警告AI热潮可能在尚未产生回报时就推高通胀。若AI变现速度不及预期，当前估值将面临大幅修正。</span><span class="lang-en">The combined valuations of SpaceX-xAI ($1.75T), OpenAI ($852B), and Anthropic (trillion-class) exceed $4 trillion, yet OpenAI loses $14–17 billion annually, Oracle's stock dropped 50% in six months after AI infrastructure spending, and over 70% of large Q1 tech IPOs fell below offering price. Fed economists warn the AI boom may drive inflation before generating returns. If AI monetization lags expectations, current valuations face significant correction.</span></p>
+            <div class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注指标：SpaceX IPO定价与首日表现、AI企业季度营收增速vs资本开支增速、私募信贷市场违约率</span><span class="lang-en">Watch: SpaceX IPO pricing and first-day performance, AI company quarterly revenue growth vs. capex growth, private credit market default rates</span></div>
+        </div>
+
+        <div class="risk-card reveal">
+            <h4><span class="lang-zh">4.5 AI硬件估值与模型效率的博弈</span><span class="lang-en">4.5 AI Hardware Valuations vs. Model Efficiency Gains</span></h4>
+            <p><span class="lang-zh">谷歌TurboQuant一篇论文引发千亿美元市值蒸发，暴露存储芯片板块估值对"AI硬件持续短缺"叙事的高度依赖。但Cantor Fitzgerald仍给美光700美元目标价，认为HBM需求不受影响。若模型压缩技术持续突破，当前基于算力需求无限增长假设的硬件投资可能面临回报不及预期的风险。</span><span class="lang-en">A single Google TurboQuant paper triggered hundreds of billions in market cap losses, exposing memory chip valuations' heavy reliance on the "perpetual AI hardware shortage" narrative. Yet Cantor Fitzgerald maintains a $700 target for Micron, arguing HBM demand is unaffected. If model compression breakthroughs continue, hardware investments based on the assumption of infinite compute demand growth may face disappointing returns.</span></p>
+            <div class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注指标：AI模型效率提升速度、数据中心利用率、芯片库存周期变化、大型科技公司AI资本开支指引</span><span class="lang-en">Watch: AI model efficiency improvement pace, data center utilization rates, chip inventory cycle changes, big tech AI capex guidance</span></div>
+        </div>
+    </section>
+
+    <!-- Section 5: Trends -->
+    <section class="section" id="trends">
+        <div class="section-header reveal">
+            <div class="section-tag"><i class="fas fa-arrow-trend-up"></i> Trend Analysis</div>
+            <h2 class="section-title"><span class="lang-zh">趋势研判</span><span class="lang-en">Trend Analysis</span></h2>
+        </div>
+
+        <div class="trend-card reveal">
+            <h4><span class="lang-zh">5.1 AI行业正从"技术竞赛"全面进入"政治竞赛"阶段</span><span class="lang-en">5.1 The AI Industry Is Shifting from a "Tech Race" to a "Political Race"</span></h4>
+            <p><span class="lang-zh">14天内的证据链条已极为清晰：Innovation Council Action投入1亿美元为议员AI立场打分、Anthropic成立PAC、两大超级PAC介入国会初选（投入700万美元）、13位科技巨头进入PCAST、加州签署对抗联邦的AI行政令、桑德斯/AOC提出暂停AI数据中心法案。AI监管不再是技术问题，而是2026年中期选举的核心战场。企业需要同时管理技术路线、政治路线和公众情绪三条战线。</span><span class="lang-en">The evidence chain over 14 days is unmistakable: Innovation Council Action spending $100 million to score lawmakers on AI, Anthropic forming a PAC, two super PACs entering congressional primaries ($7 million spent), 13 tech leaders joining PCAST, California signing an AI executive order countering the federal approach, and Sanders/AOC proposing a moratorium on AI data centers. AI regulation is no longer a technical issue — it is the central battleground of the 2026 midterms. Companies must simultaneously manage their technology roadmap, political strategy, and public sentiment.</span></p>
+            <div class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键观察指标：2026年中期选举AI议题选民关注度、AI相关立法进展、超级PAC支出规模、州级AI行政令扩散速度</span><span class="lang-en">Key Indicators: 2026 midterm voter attention to AI issues, AI legislation progress, super PAC spending scale, speed of state-level AI executive order adoption</span></div>
+        </div>
+
+        <div class="trend-card reveal">
+            <h4><span class="lang-zh">5.2 AI巨头的"独立化"趋势加速——从合作走向竞争</span><span class="lang-en">5.2 AI Giants Accelerate "Independence" — From Collaboration to Competition</span></h4>
+            <p><span class="lang-zh">微软宣布2027年前自研前沿AI模型并发布三款产品直接竞争OpenAI；苹果与谷歌合作重构Siri而非自研；马斯克要求投行订阅Grok作为SpaceX IPO条件；OpenAI关停Sora转向企业超级应用。AI生态正从"合作共建"走向"各自为战"——每家巨头都在构建自己的完整AI栈，中间环节的独立供应商将面临更大的被边缘化风险。</span><span class="lang-en">Microsoft announced in-house frontier AI models by 2027 and released three products competing directly with OpenAI; Apple partnered with Google to rebuild Siri rather than going solo; Musk requires underwriters to subscribe to Grok as a condition of the SpaceX IPO; OpenAI shut down Sora to pivot toward an enterprise super app. The AI ecosystem is shifting from "collaborative building" to "going it alone" — every major player is constructing its own full AI stack, putting independent mid-tier suppliers at greater risk of marginalization.</span></p>
+            <div class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键观察指标：微软自研模型性能基准、苹果-谷歌Siri合作进展、AI巨头自研芯片进展、独立AI供应商客户集中度</span><span class="lang-en">Key Indicators: Microsoft in-house model benchmarks, Apple-Google Siri collaboration progress, big tech custom chip development, independent AI supplier customer concentration</span></div>
+        </div>
+
+        <div class="trend-card reveal">
+            <h4><span class="lang-zh">5.3 AI安全与责任的法律框架正在快速成型</span><span class="lang-en">5.3 The Legal Framework for AI Safety and Liability Is Rapidly Taking Shape</span></h4>
+            <p><span class="lang-zh">两周内多个法律先例具有里程碑意义：①Anthropic案进入上诉程序，将形成约束性判例定义AI企业与政府的权力边界；②Meta/YouTube案确立平台对AI推荐算法造成伤害的产品责任；③纽约法官裁定AI通信不受律师特权保护；④伊利诺伊州将AI生成儿童色情列为重罪；⑤犹他州启动AI处方试点。这些判例和立法将共同塑造AI行业的法律边界。</span><span class="lang-en">Multiple landmark legal precedents emerged within two weeks: ① The Anthropic case entering appeals will create binding precedent defining the power boundary between AI companies and the government; ② The Meta/YouTube case established platform product liability for harm caused by AI recommendation algorithms; ③ A New York judge ruled AI communications are not protected by attorney-client privilege; ④ Illinois classified AI-generated child pornography as a felony; ⑤ Utah launched an AI prescription pilot. These rulings and laws will collectively shape the legal boundaries of the AI industry.</span></p>
+            <div class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键观察指标：AI相关诉讼数量与判决趋势、保险公司对AI产品责任险的定价变化、各州AI立法进展</span><span class="lang-en">Key Indicators: AI-related litigation volume and ruling trends, insurer pricing changes for AI product liability, state-level AI legislation progress</span></div>
+        </div>
+
+        <div class="trend-card reveal">
+            <h4><span class="lang-zh">5.4 "AI替代"与"AI创造"的就业博弈进入关键拐点</span><span class="lang-en">5.4 The "AI Displacement" vs. "AI Creation" Employment Battle Reaches a Tipping Point</span></h4>
+            <p><span class="lang-zh">数据呈现矛盾图景：一方面Q1科技裁员5.2万人（+40%），3月15,341起裁员归因AI，16%大学生因AI换专业；另一方面2023-2025年AI创造64万岗位，AI主管职位三年缺口22.5万。关键变量是：AI裁员后企业是否真正减少总用工——行业数据显示多数会以更低成本重新招人并增加合同工比例。AI正在重塑的不是就业总量，而是就业结构和雇佣关系。</span><span class="lang-en">The data presents a contradictory picture: on one hand, Q1 tech layoffs hit 52,000 (+40%), 15,341 March layoffs were attributed to AI, and 16% of students switched majors; on the other, AI created 640,000 jobs from 2023–2025, with a 225,000 three-year gap in AI executive positions. The key variable: whether companies truly reduce total headcount after AI layoffs — industry data shows most rehire at lower costs and increase the share of contract workers. AI is reshaping not the total volume of employment, but its structure and employment relationships.</span></p>
+            <div class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键观察指标：AI裁员企业后续招聘数据、合同工vs全职工比例变化、AI相关岗位薪资中位数、蓝领岗位需求变化</span><span class="lang-en">Key Indicators: Post-layoff rehiring data at AI companies, contract vs. full-time worker ratio changes, median AI-related job salaries, blue-collar job demand shifts</span></div>
+        </div>
+
+        <div class="trend-card reveal">
+            <h4><span class="lang-zh">5.5 AI递归自我改进从概念走向实践</span><span class="lang-en">5.5 Recursive AI Self-Improvement Moves from Concept to Practice</span></h4>
+            <p><span class="lang-zh">OpenAI推出可辅助自身研发的新模型，Anthropic称Claude已编写其90%代码，谷歌DeepMind的AlphaEvolve实现部分效率提升。AI行业正试图"自动化自身"——用AI加速AI研发。旧金山已出现民众集会要求暂停研发更强AI。虽然当前自动化仍属零散优化，但这一方向若取得突破，将根本改变AI能力增长的速度曲线。</span><span class="lang-en">OpenAI released a new model capable of assisting its own R&D; Anthropic says Claude now writes 90% of its code; Google DeepMind's AlphaEvolve achieved partial efficiency gains. The AI industry is attempting to "automate itself" — using AI to accelerate AI development. San Francisco has seen public rallies demanding a pause on developing more powerful AI. While current automation remains piecemeal optimization, a breakthrough in this direction would fundamentally alter the trajectory of AI capability growth.</span></p>
+            <div class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键观察指标：AI模型自主编码能力基准、AI研究论文中AI辅助比例、监管机构对递归AI的政策响应</span><span class="lang-en">Key Indicators: AI model autonomous coding benchmarks, share of AI-assisted AI research papers, regulatory responses to recursive AI</span></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">Supinfor Ltd.</div>
+        <div class="footer-info">
+            <span class="lang-zh">本报告基于 Supinfor 区域国别实时监测平台编制，仅供参考，不构成投资建议。<br>
+            数据覆盖时间：2026-03-23 至 2026-04-05（14天）<br>
+            发布日期：2026年4月27日</span>
+            <span class="lang-en">This report is compiled based on the Supinfor Regional Monitoring Platform. For reference only; does not constitute investment advice.<br>
+            Data coverage: 2026-03-23 to 2026-04-05 (14 days)<br>
+            Published: April 27, 2026</span>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Theme Toggle
+        const themeBtn = document.getElementById('themeBtn');
+        const html = document.documentElement;
+        
+        // Check system preference
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            html.setAttribute('data-theme', savedTheme);
+        } else {
+            html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+        }
+        updateThemeIcon();
+
+        themeBtn.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon();
+        });
+
+        function updateThemeIcon() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            themeBtn.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // TOC Panel
+        const tocBtn = document.getElementById('tocBtn');
+        const tocPanel = document.getElementById('tocPanel');
+        const tocOverlay = document.getElementById('tocOverlay');
+
+        tocBtn.addEventListener('click', () => {
+            tocPanel.classList.toggle('active');
+            tocOverlay.classList.toggle('active');
+        });
+
+        tocOverlay.addEventListener('click', () => {
+            tocPanel.classList.remove('active');
+            tocOverlay.classList.remove('active');
+        });
+
+        // Close TOC on link click
+        tocPanel.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                tocPanel.classList.remove('active');
+                tocOverlay.classList.remove('active');
+            });
+        });
+
+        // Scroll Reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('active');
+                    }, index * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+        reveals.forEach(el => observer.observe(el));
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 600) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Language Toggle
+        function setLang(lang){document.documentElement.setAttribute('data-lang',lang);document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');localStorage.setItem('lang',lang);document.querySelectorAll('.lang-toggle button').forEach(btn=>{btn.classList.toggle('active',(lang==='zh'&&btn.textContent==='中')||(lang==='en'&&btn.textContent==='EN'))})}
+        (function(){const s=localStorage.getItem('lang')||'zh';setLang(s)})();
+    </script>
+</body>
+</html>

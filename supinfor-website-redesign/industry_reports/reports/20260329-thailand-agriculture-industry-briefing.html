@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰国农业相关行业深度洞察报告 — 2026.03.23–03.29</title>
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;line-height:1.7;transition:background .15s ease,color .15s ease}
+
+/* ===== Dark Mode (default) ===== */
+:root{
+  --bg:#0a0f1e;--surface:#1a2e50;--surface-2:#233a60;--surface-3:#2c4670;
+  --border:rgba(255,255,255,0.08);
+  --text:#e4e8f1;--text-secondary:#8b95ad;--text-muted:#5a6580;
+  --accent:#3b82f6;--accent-dim:rgba(59,130,246,0.12);
+  --red:#ef4444;--red-dim:rgba(239,68,68,0.12);
+  --orange:#f59e0b;--orange-dim:rgba(245,158,11,0.12);
+  --green:#22c55e;--green-dim:rgba(34,197,94,0.12);
+  --yellow:#eab308;--yellow-dim:rgba(234,179,8,0.12);
+  --purple:#8b5cf6;--purple-dim:rgba(139,92,246,0.12);
+  --teal:#14b8a6;--teal-dim:rgba(20,184,166,0.12);
+  --header-bg:rgba(10,15,30,0.82);
+  --sidebar-bg:rgba(10,15,30,0.92);
+}
+
+/* ===== Light Mode ===== */
+body.light{
+  --bg:#f0f4f8;--surface:#ffffff;--surface-2:#f1f5f9;--surface-3:#e2e8f0;
+  --border:rgba(0,0,0,0.08);
+  --text:#1e293b;--text-secondary:#475569;--text-muted:#94a3b8;
+  --accent:#2563eb;--accent-dim:rgba(37,99,235,0.10);
+  --red:#dc2626;--red-dim:rgba(220,38,38,0.10);
+  --orange:#d97706;--orange-dim:rgba(217,119,6,0.10);
+  --green:#16a34a;--green-dim:rgba(22,163,74,0.10);
+  --yellow:#ca8a04;--yellow-dim:rgba(202,138,4,0.10);
+  --purple:#7c3aed;--purple-dim:rgba(124,58,237,0.10);
+  --teal:#0d9488;--teal-dim:rgba(13,148,136,0.10);
+  --header-bg:rgba(240,244,248,0.82);
+  --sidebar-bg:rgba(240,244,248,0.92);
+}
+
+body{background:var(--bg);color:var(--text)}
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:var(--header-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.header-left{display:flex;align-items:center;gap:14px}
+.header-logo{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.5px}
+.header-logo span{color:var(--text-muted);font-weight:400;margin-left:4px;font-size:13px}
+.header-actions{display:flex;align-items:center;gap:6px}
+.header-btn{background:none;border:1px solid var(--border);color:var(--text-secondary);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:5px;transition:all .15s ease}
+.header-btn:hover{border-color:rgba(59,130,246,0.25);color:var(--text);background:var(--accent-dim)}
+.header-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none}
+
+/* ===== Layout ===== */
+.layout{display:flex;min-height:calc(100vh - 60px)}
+.sidebar{width:280px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;padding:24px 0;background:var(--sidebar-bg);border-right:1px solid var(--border);flex-shrink:0;scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:4px}
+.sidebar-group{margin-bottom:20px}
+.sidebar-group-title{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);padding:0 24px;margin-bottom:8px;font-weight:600}
+.sidebar-link{display:block;padding:7px 24px 7px 28px;font-size:13px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all .15s ease;cursor:pointer}
+.sidebar-link:hover{color:var(--text);background:var(--accent-dim)}
+.sidebar-link.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim)}
+.main{flex:1;min-width:0;max-width:1280px;padding:32px 40px}
+
+/* ===== Hero ===== */
+.hero{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px}
+.hero-bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--teal),var(--green),var(--accent))}
+.hero-inner{padding:36px 40px 32px}
+.hero-title{font-size:26px;font-weight:700;line-height:1.35;margin-bottom:6px}
+.hero-subtitle{font-size:15px;color:var(--text-secondary);margin-bottom:18px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
+.hero-pill{font-size:12px;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-secondary);background:var(--surface-2);white-space:nowrap}
+.hero-pill b{color:var(--text);font-weight:600}
+.hero-pill.red{border-color:var(--red-dim);color:var(--red)}
+.hero-pill.green{border-color:var(--green-dim);color:var(--green)}
+.hero-pill.accent{border-color:var(--accent-dim);color:var(--accent)}
+.hero-pill.orange{border-color:var(--orange-dim);color:var(--orange)}
+</style>
+
+<style>
+/* ===== Stat Cards ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;border-left:3px solid var(--accent);transition:all .15s ease}
+.stat-card:hover{border-color:rgba(59,130,246,0.25);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.stat-card.red{border-left-color:var(--red)}
+.stat-card.orange{border-left-color:var(--orange)}
+.stat-card.green{border-left-color:var(--green)}
+.stat-card.accent{border-left-color:var(--accent)}
+.stat-card.teal{border-left-color:var(--teal)}
+.stat-card.purple{border-left-color:var(--purple)}
+.stat-label{font-size:12px;color:var(--text-muted);margin-bottom:6px;font-weight:500}
+.stat-value{font-size:22px;font-weight:700;margin-bottom:4px}
+.stat-value .c-red{color:var(--red)}.stat-value .c-green{color:var(--green)}.stat-value .c-orange{color:var(--orange)}.stat-value .c-accent{color:var(--accent)}.stat-value .c-teal{color:var(--teal)}.stat-value .c-purple{color:var(--purple)}
+.stat-sub{font-size:12px;color:var(--text-secondary);line-height:1.5}
+
+/* ===== Viz Dashboard ===== */
+.viz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px}
+.viz-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;overflow:hidden}
+.viz-card.full{grid-column:1/-1}
+.viz-title{font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.viz-title .badge{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
+canvas{display:block}
+
+/* ===== Section Header ===== */
+.section-header{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;border-left:3px solid var(--accent)}
+.section-icon{width:40px;height:40px;border-radius:8px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.section-title{font-size:18px;font-weight:700;flex:1}
+.section-badge{font-size:12px;padding:3px 10px;border-radius:20px;background:var(--accent-dim);color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* ===== Insight Card ===== */
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease}
+.insight-card:hover{border-color:rgba(59,130,246,0.25)}
+.insight-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.insight-num{width:28px;height:28px;border-radius:6px;background:var(--accent-dim);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.insight-title-text{flex:1;font-size:15px;font-weight:600}
+.insight-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.insight-card.open .insight-toggle{transform:rotate(180deg)}
+.insight-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.insight-card.open .insight-body{max-height:4000px}
+.insight-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.insight-content p{margin-bottom:12px}
+.insight-content p:last-child{margin-bottom:0}
+.insight-tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-weight:600}
+.insight-tag.key{background:var(--accent-dim);color:var(--accent)}
+.insight-tag.fact{background:var(--teal-dim);color:var(--teal)}
+.insight-tag.advice{background:var(--green-dim);color:var(--green)}
+.insight-tag.warn{background:var(--orange-dim);color:var(--orange)}
+
+/* ===== Risk Card ===== */
+.risk-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;border-left:3px solid var(--red);overflow:hidden;transition:all .15s ease}
+.risk-card:hover{border-color:rgba(239,68,68,0.25)}
+.risk-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.risk-level{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600}
+.risk-level.high{background:var(--red-dim);color:var(--red)}
+.risk-level.medium-high{background:var(--orange-dim);color:var(--orange)}
+.risk-level.medium{background:var(--yellow-dim);color:var(--yellow)}
+.risk-title-text{flex:1;font-size:15px;font-weight:600}
+.risk-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.risk-card.open .risk-body{max-height:2000px}
+.risk-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.risk-content p{margin-bottom:12px}
+.risk-indicators{background:var(--red-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.risk-indicators-title{font-size:12px;font-weight:700;color:var(--red);margin-bottom:8px}
+.risk-indicators ul{list-style:none;padding:0}
+.risk-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.risk-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+
+/* ===== Trend Card ===== */
+.trend-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease;border-left:3px solid var(--teal)}
+.trend-card:hover{border-color:rgba(20,184,166,0.25)}
+.trend-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.trend-num{width:28px;height:28px;border-radius:6px;background:var(--teal-dim);color:var(--teal);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trend-title-text{flex:1;font-size:15px;font-weight:600}
+.trend-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.trend-card.open .trend-body{max-height:3000px}
+.trend-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.trend-content p{margin-bottom:12px}
+.trend-indicators{background:var(--teal-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.trend-indicators-title{font-size:12px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.trend-indicators ul{list-style:none;padding:0}
+.trend-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.trend-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:28px;margin-bottom:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:20px}
+.timeline-dot{position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px}
+.timeline-date{font-size:12px;color:var(--text-muted);margin-bottom:4px}
+.timeline-text{font-size:14px;color:var(--text-secondary);line-height:1.7}
+.timeline-text b{color:var(--text);font-weight:600}
+
+/* ===== Data Table ===== */
+.data-table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:28px}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{background:var(--surface-2);padding:10px 16px;text-align:left;font-weight:600;color:var(--text-secondary);font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border)}
+.data-table td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-secondary)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--accent-dim)}
+
+/* ===== Heatmap ===== */
+.heatmap{display:grid;grid-template-columns:140px 1fr 1fr;gap:2px;margin-bottom:16px}
+.heatmap-header{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;padding:8px 12px;background:var(--surface-2);border-radius:6px}
+.heatmap-label{font-size:13px;color:var(--text-secondary);padding:8px 12px;background:var(--surface);border-radius:6px;display:flex;align-items:center}
+.heatmap-cell{padding:8px 12px;border-radius:6px;font-size:13px;font-weight:600;text-align:center;transition:transform .15s ease}
+.heatmap-cell:hover{transform:scale(1.05)}
+
+/* ===== Flow Diagram ===== */
+.flow-diagram{background:var(--surface-2);border-radius:8px;padding:20px 24px;font-size:13px;color:var(--text-secondary);line-height:2;font-family:'Consolas','Courier New',monospace;white-space:pre;overflow-x:auto}
+
+/* ===== Sources ===== */
+.sources-list{list-style:none;padding:0}
+.sources-list li{font-size:13px;color:var(--text-secondary);padding:6px 0;padding-left:18px;position:relative}
+.sources-list li::before{content:'';position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ===== Footer ===== */
+.footer{text-align:center;padding:32px 0;font-size:12px;color:var(--text-muted);border-top:1px solid var(--border);margin-top:40px}
+
+/* ===== Back to Top ===== */
+.back-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text-secondary);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .15s ease;z-index:90}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.back-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Search Overlay ===== */
+.search-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.5);display:none;align-items:flex-start;justify-content:center;padding-top:120px}
+.search-overlay.show{display:flex}
+.search-box{width:560px;max-width:90vw;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.search-input-wrap{display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--border)}
+.search-input-wrap svg{width:18px;height:18px;stroke:var(--text-muted);fill:none;stroke-width:2;flex-shrink:0}
+.search-input{flex:1;border:none;background:none;padding:14px 12px;font-size:15px;color:var(--text);outline:none;font-family:inherit}
+.search-input::placeholder{color:var(--text-muted)}
+.search-results{max-height:320px;overflow-y:auto;padding:8px}
+.search-result-item{padding:10px 14px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--text-secondary);transition:background .1s ease}
+.search-result-item:hover{background:var(--accent-dim);color:var(--text)}
+.search-result-item .sr-title{font-weight:600;color:var(--text);margin-bottom:2px}
+.search-result-item .sr-snippet{font-size:12px;color:var(--text-muted)}
+.search-empty{padding:20px;text-align:center;color:var(--text-muted);font-size:13px}
+.search-hint{padding:8px 16px;font-size:11px;color:var(--text-muted);border-top:1px solid var(--border);text-align:center}
+
+/* ===== Mobile Sidebar Overlay ===== */
+.sidebar-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(0,0,0,0.5)}
+.sidebar-overlay.show{display:block}
+
+/* ===== Responsive ===== */
+@media(max-width:1024px){
+  .sidebar{display:none}
+  .sidebar.mobile-open{display:block;position:fixed;top:60px;left:0;z-index:160;height:calc(100vh - 60px);background:var(--bg)}
+  .menu-btn{display:flex}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .viz-grid{grid-template-columns:1fr}
+  .main{padding:24px 20px}
+}
+@media(max-width:640px){
+  .stats-grid{grid-template-columns:1fr}
+  .hero-inner{padding:24px 20px 20px}
+  .hero-title{font-size:20px}
+  .heatmap{grid-template-columns:100px 1fr 1fr}
+}
+
+/* ===== Print ===== */
+@media print{
+  .header,.sidebar,.back-top,.header-actions,.search-overlay,.sidebar-overlay,.menu-btn{display:none!important}
+  .layout{display:block}
+  .main{max-width:100%;padding:0}
+  .insight-body,.risk-body,.trend-body{max-height:none!important}
+  body{background:#fff;color:#1e293b}
+  .hero,.stat-card,.insight-card,.risk-card,.trend-card,.viz-card,.section-header,.timeline-card,.data-table-wrap{border-color:#ddd;box-shadow:none}
+}
+
+.mb-28{margin-bottom:28px}
+.section-spacer{height:8px}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <button class="header-btn menu-btn" onclick="toggleMobileSidebar()" aria-label="菜单">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="header-logo">SUPINFOR<span>行业洞察</span></div>
+  </div>
+  <div class="header-actions">
+    <button class="header-btn" onclick="openSearch()" title="搜索 (Ctrl+K)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>搜索</span>
+    </button>
+    <button class="header-btn" onclick="toggleAllCards()" title="展开/折叠全部" id="toggleAllBtn">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      <span>展开全部</span>
+    </button>
+    <button class="header-btn" onclick="toggleTheme()" id="themeBtn" title="切换亮/暗模式">
+      <svg viewBox="0 0 24 24" id="themeIcon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="header-btn" onclick="window.print()" title="打印">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR OVERLAY (mobile) ===== -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
+
+<!-- ===== LAYOUT ===== -->
+<div class="layout">
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">概览</div>
+      <a class="sidebar-link" data-target="hero">报告摘要</a>
+      <a class="sidebar-link" data-target="stats">核心数据</a>
+      <a class="sidebar-link" data-target="viz">数据仪表盘</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">深度分析</div>
+      <a class="sidebar-link" data-target="sec-core">本周核心发现</a>
+      <a class="sidebar-link" data-target="sec-focus">焦点事件解读</a>
+      <a class="sidebar-link" data-target="sec-scan">行业动态扫描</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">风险与趋势</div>
+      <a class="sidebar-link" data-target="sec-risk">风险警示</a>
+      <a class="sidebar-link" data-target="sec-trend">趋势研判</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">附录</div>
+      <a class="sidebar-link" data-target="sec-timeline">关键时间线</a>
+      <a class="sidebar-link" data-target="sec-data">数据速查</a>
+      <a class="sidebar-link" data-target="sec-sources">信息来源</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-inner">
+        <div class="hero-title">泰国农业相关行业深度洞察报告</div>
+        <div class="hero-subtitle">2026年3月23日 – 3月29日 · 农业 · 泰国</div>
+        <div class="hero-pills">
+          <span class="hero-pill"><b>Supinfor Ltd.</b> 出品</span>
+          <span class="hero-pill red">尿素价格飙升 <b>+37.5%</b> 至1,100泰铢/袋</span>
+          <span class="hero-pill orange">柴油一夜暴涨 <b>6泰铢/升</b> 至38.94泰铢</span>
+          <span class="hero-pill red">猪肉月涨幅 <b>11.86%</b> · 工资仅涨2.9%</span>
+          <span class="hero-pill accent">7项特别内阁措施 · 1,000亿泰铢软贷款</span>
+          <span class="hero-pill">4项核心风险 · 4大趋势研判</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STAT CARDS ===== -->
+    <section id="stats" class="stats-grid">
+      <div class="stat-card red">
+        <div class="stat-label">尿素价格飙升</div>
+        <div class="stat-value"><span class="c-red">1,100泰铢/袋</span></div>
+        <div class="stat-sub">从800泰铢暴涨37.5% · 化肥库存仅够维持至4月</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">柴油价格暴涨</div>
+        <div class="stat-value"><span class="c-orange">38.94泰铢/升</span></div>
+        <div class="stat-sub">3月26日一夜暴涨6泰铢 · 农业全链条成本骤增</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">福利卡覆盖人群</div>
+        <div class="stat-value"><span class="c-green">1,330万人</span></div>
+        <div class="stat-sub">额度提升至400泰铢/月 · 7项特别内阁措施之一</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="stat-label">中小企业软贷款</div>
+        <div class="stat-value"><span class="c-accent">1,000亿泰铢</span></div>
+        <div class="stat-sub">特别内阁紧急措施 · 缓解企业资金链压力</div>
+      </div>
+      <div class="stat-card teal">
+        <div class="stat-label">棕榈油月出口配额</div>
+        <div class="stat-value"><span class="c-teal">20万吨</span></div>
+        <div class="stat-sub">鲜果月产量约224万吨 · 生产商呼吁价格放开</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">食品出口同比降幅</div>
+        <div class="stat-value"><span class="c-purple">-10.5%</span></div>
+        <div class="stat-sub">2026年1–2月 · 对华大米出口延迟 · 多元化加速</div>
+      </div>
+    </section>
+
+    <!-- ===== VIZ DASHBOARD ===== -->
+    <section id="viz" class="viz-grid">
+      <!-- Cost Impact Bar Chart -->
+      <div class="viz-card">
+        <div class="viz-title">
+          农业成本冲击指标
+          <span class="badge" style="background:var(--red-dim);color:var(--red)">涨幅</span>
+        </div>
+        <canvas id="chartCostBar" height="220"></canvas>
+      </div>
+      <!-- Food Price Gauge -->
+      <div class="viz-card">
+        <div class="viz-title">
+          猪肉价格偏离度
+          <span class="badge" style="background:var(--orange-dim);color:var(--orange)">泰铢/公斤</span>
+        </div>
+        <canvas id="chartPorkGauge" height="220"></canvas>
+      </div>
+      <!-- Policy Response Bar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          政府应对措施力度
+          <span class="badge" style="background:var(--accent-dim);color:var(--accent)">规模</span>
+        </div>
+        <canvas id="chartPolicyBar" height="180"></canvas>
+      </div>
+      <!-- Risk Radar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          风险维度雷达
+          <span class="badge" style="background:var(--red-dim);color:var(--red)">评估</span>
+        </div>
+        <canvas id="chartRadar" height="220"></canvas>
+      </div>
+      <!-- Heatmap -->
+      <div class="viz-card full">
+        <div class="viz-title">
+          农业子行业机遇-风险热力图
+          <span class="badge" style="background:var(--purple-dim);color:var(--purple)">评估</span>
+        </div>
+        <div class="heatmap">
+          <div class="heatmap-header">领域</div>
+          <div class="heatmap-header">机遇度</div>
+          <div class="heatmap-header">风险度</div>
+          <div class="heatmap-label">水稻出口</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.5);color:#fff">中高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中</div>
+          <div class="heatmap-label">棕榈油/生物能源</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.7);color:#fff">高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中</div>
+          <div class="heatmap-label">畜牧养殖</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">渔业</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">榴莲/特色水果</div>
+          <div class="heatmap-cell" style="background:var(--green);color:#fff">极高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.3);color:var(--red)">低</div>
+          <div class="heatmap-label">大麻产业</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.2);color:var(--green)">低</div>
+          <div class="heatmap-cell" style="background:var(--red);color:#fff">极高</div>
+          <div class="heatmap-label">农业能源转型</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.7);color:#fff">高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.3);color:var(--red)">低</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: 核心发现 ===== -->
+    <section id="sec-core">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="section-title">本周核心发现</div>
+        <div class="section-badge">5 项发现</div>
+      </div>
+
+      <div class="insight-card open" data-search="化肥 油价 双重夹击 尿素 柴油 春播 成本">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">1</div>
+          <div class="insight-title-text">化肥危机与油价暴涨形成"双重夹击"，农业成本急剧攀升</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>尿素价格从800泰铢/袋飙升至1,100泰铢/袋（涨幅37.5%），叠加3月26日柴油价格一夜暴涨6泰铢/升至38.94泰铢/升，农业全链条成本压力骤增，春播季节面临严峻考验。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>政府化肥库存数据前后矛盾——先称可维持至8月，后承认仅够至4月。"绿旗Plus"补贴计划投放100万袋补贴化肥，协调26家供应商提供1,000万袋。正与俄罗斯就化肥进口展开谈判。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="食品价格 通胀 猪肉 鸡肉 鸡蛋 工资 消费">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">2</div>
+          <div class="insight-title-text">食品价格通胀加速，猪肉月涨幅达11.86%，农民与消费者"两头受压"</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>猪肉批发价连续5周上涨至72泰铢/公斤，零售价170–180泰铢/公斤远超理论价144泰铢/公斤；鸡肉与鸡蛋月涨幅3%–12%。居民平均工资涨幅仅2.9%，远低于食品通胀水平。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>乳业合作社面临资金链断裂风险，需60亿泰铢紧急救助基金。豆粕价格持续上涨推高饲料成本，猪价上涨具有刚性。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="内阁 措施 燃油税 福利卡 软贷款 限价 泰人帮泰人">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3</div>
+          <div class="insight-title-text">政府紧急出台7项特别内阁措施，政策协调性面临检验</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>措施涵盖燃油税减免、福利卡提额至400泰铢/月（覆盖1,330万人）、1,000亿泰铢中小企业软贷款、66项商品限价等。"泰人帮泰人"计划推出1,000余种商品25%–50%折扣。</p>
+            <span class="insight-tag warn">执行挑战</span>
+            <p>多项措施同步推出，政策协调性与执行力面临市场检验。化肥补贴"绿旗Plus"计划的实际落地进度、限价商品的执行效果均存在不确定性。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="棕榈油 出口配额 生物柴油 甲醇 B100 B20">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">4</div>
+          <div class="insight-title-text">棕榈油产业面临出口配额与生物柴油原料短缺双重约束</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>月出口配额设定为20万吨，生产商呼吁价格放开；B100生物柴油生产因甲醇短缺受阻，鲜果月产量约224万吨。棕榈油产业在出口创汇与国内能源安全之间的政策平衡难度加大。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>B20推广计划面临原料供应瓶颈。政府推广B20生物柴油用于渔船，但甲醇短缺制约推广进度。产能稳定但价格机制受限。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="大麻 政策真空 执照 价格崩塌 进口冲击 问责">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">5</div>
+          <div class="insight-title-text">大麻产业政策真空持续两年以上，从业者面临三重困境</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>大麻产业法律真空已持续两年以上，从业者面临执照续期冻结、产品价格崩塌、进口大麻低价冲击三重困境。若政策持续不明朗，产业投资将加速外流。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>已投入的农业种植户面临血本无归风险，政治问责压力上升。大麻相关立法进程停滞，执照续期政策动向不明。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 焦点事件 ===== -->
+    <section id="sec-focus">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="section-title">焦点事件深度解读</div>
+        <div class="section-badge">3 个焦点</div>
+      </div>
+
+      <div class="insight-card" data-search="化肥 供应危机 春播 粮食安全 绿旗Plus 俄罗斯 库存 反对党">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">1</div>
+          <div class="insight-title-text">化肥供应危机：春播季的"粮食安全之问"</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">事件概述</span>
+            <p>本周泰国化肥市场持续紧张，尿素价格从800泰铢/袋飙升至1,100泰铢/袋，涨幅达37.5%。政府在库存信息上前后矛盾——先称储备可维持至8月，随后承认仅够支撑至4月，引发反对党强烈质疑并要求信息透明。</p>
+            <span class="insight-tag key">政策应对</span>
+            <p>政府推出"绿旗Plus"化肥补贴计划：基础补贴200泰铢/袋 + 额外补贴400泰铢/袋，单袋最高折扣1,400泰铢，计划投放100万袋补贴化肥，同时协调26家供应商以出厂价提供1,000万袋化肥。此外，泰国正与俄罗斯就化肥进口展开谈判，寻求多元化供应渠道。</p>
+            <span class="insight-tag fact">深层影响</span>
+            <p>春播生产：化肥短缺直接威胁水稻、木薯等主粮作物播种进度，若4月前供应未恢复，全年产量将受显著影响。农民收入：投入品成本飙升叠加终端价格管控，利润空间被严重压缩。政治信任：政府库存数据前后矛盾严重损害公信力。国际供应链：对俄罗斯化肥的进口谈判反映泰国在全球化肥供应链中的脆弱性。</p>
+            <span class="insight-tag advice">关键观察点</span>
+            <p>4月化肥到货量、"绿旗Plus"计划实际执行进度、俄罗斯谈判结果。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="油价 暴涨 柴油 农机 运输 渔船 阿努廷 燃油基金 B20 电动农机">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">2</div>
+          <div class="insight-title-text">油价暴涨6泰铢：农业全链条的成本海啸</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">事件概述</span>
+            <p>3月26日，泰国燃油价格一夜暴涨6泰铢/升，柴油价格升至38.94泰铢/升，引发公众强烈不满。总理阿努廷就此前对冲突持续时间的误判公开道歉。政府取消油价管控机制，转向市场化定价，燃油基金补贴同步缩减。</p>
+            <span class="insight-tag key">多维冲击</span>
+            <p>油价暴涨通过四条路径冲击农业：农机作业成本上升→耕种成本上升→粮食生产成本上升；运输物流成本上升→农产品流通成本上升→终端食品价格上升；渔船燃料成本上升→部分渔船停航→水产品供应下降；化肥运输成本上升→化肥到岸价上升→化肥危机加剧。</p>
+            <span class="insight-tag advice">政府对冲措施</span>
+            <p>燃油税减免（特别内阁7项措施之一）、推广B20生物柴油替代（面临甲醇短缺瓶颈）、渔业/农业/运输业专项补贴、提议发展电动农机与太阳能灌溉系统（中长期方案）。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="食品价格 螺旋上涨 猪肉 饲料 豆粕 乳业 限价 福利卡">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3</div>
+          <div class="insight-title-text">食品价格螺旋上涨：从农场到餐桌的全链条通胀</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">事件概述</span>
+            <p>猪肉价格月涨幅达11.86%，批发价连续5周攀升至72泰铢/公斤，零售端170–180泰铢/公斤的实际售价远超商务部测算的144泰铢/公斤理论价格。鸡肉与鸡蛋月涨幅在3%–12%区间。</p>
+            <span class="insight-tag key">结构性矛盾</span>
+            <p>饲料成本：豆粕价格持续上涨推高养殖成本，猪价上涨具有刚性。能源成本：油价暴涨推高冷链物流与加工环节成本。工资-物价剪刀差：居民平均工资涨幅仅2.9%，食品通胀远超此水平，实际购买力下降。乳业危机：合作社面临资金链断裂风险，需60亿泰铢紧急救助基金。</p>
+            <span class="insight-tag advice">政府限价措施</span>
+            <p>对66项商品实施价格管控，"泰人帮泰人"计划推出1,000余种商品25%–50%折扣，福利卡额度提升至400泰铢/月覆盖1,330万人。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 行业动态扫描 ===== -->
+    <section id="sec-scan">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <div class="section-title">行业动态扫描</div>
+        <div class="section-badge">5 个维度</div>
+      </div>
+
+      <div class="insight-card" data-search="种植业 水稻 出口 榴莲 木薯 咖啡 皇家项目 非洲 拉美">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.1</div>
+          <div class="insight-title-text">种植业：成本危机下的多线承压</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>水稻出口：对华大米出口出现延迟，政府积极开拓非洲、拉美新市场。2026年1–2月食品出口同比下降10.5%，出口多元化战略紧迫性上升。</p>
+            <p>榴莲产业：春蓬府榴莲种植户面临燃油短缺与塑料绳价格暴涨80%的双重打击，生产成本急剧攀升。</p>
+            <p>木薯产业：受化肥与燃油价格上涨影响，种植成本上升，产业链利润承压。</p>
+            <p>咖啡产业：中东冲突持续引发咖啡种植户对出口前景的担忧，市场不确定性增加。</p>
+            <p>皇家项目基金会：高地农业研究55年以上，累计创造经济价值超1,250亿泰铢，量子精准农业方案被提出。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="畜牧 渔业 生猪 豆粕 乳业 柴油 停航 B20">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.2</div>
+          <div class="insight-title-text">畜牧与渔业：饲料与燃油的双重绞杀</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>生猪养殖：豆粕价格上涨推动饲料成本攀升，猪价连续5周上涨至72泰铢/公斤，养殖户利润因投入品涨价被部分抵消。</p>
+            <p>乳业：合作社资金链紧张，行业呼吁60亿泰铢紧急救助基金，结构性产能过剩与成本上升并存。</p>
+            <p>渔业：柴油价格暴涨导致部分渔船停航，水产品供应面临短期收缩风险。政府推广B20生物柴油用于渔船，但甲醇短缺制约推广进度。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="棕榈油 生物能源 出口配额 B100 甲醇 B20">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.3</div>
+          <div class="insight-title-text">棕榈油与生物能源：政策博弈与产业链瓶颈</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>月出口配额设定为20万吨，生产商持续呼吁价格放开管控。鲜果棕榈月产量约224万吨，产能稳定但价格机制受限。</p>
+            <p>B100生物柴油生产因甲醇短缺受阻，B20推广计划面临原料供应瓶颈。棕榈油产业在出口创汇与国内能源安全之间的政策平衡难度加大。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="贸易 市场拓展 非洲 拉美 南非 多元化 出口">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.4</div>
+          <div class="insight-title-text">贸易与市场拓展：从依赖传统市场到多元化突围</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>商务部积极推动非洲、拉美市场开拓，泰国-南非联合贸易委员会升级至部长级，双边贸易额超40亿美元。</p>
+            <p>对华大米出口延迟促使出口多元化加速。2026年1–2月食品出口同比下降10.5%，外部需求疲软与内部成本上升形成双重压力。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="环境 跨境 雾霾 PM2.5 缅甸 老挝 焚烧 东盟">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.5</div>
+          <div class="insight-title-text">环境与跨境治理：雾霾对农业的隐性冲击</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>缅甸、老挝焚烧产生的PM2.5持续影响泰国北部地区，对农业生产与农业旅游构成威胁。政府通过东盟机制协调邻国应对跨境雾霾，但短期内效果有限。</p>
+            <p>北部农业区空气质量恶化可能影响作物品质与劳动力健康。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 风险警示 ===== -->
+    <section id="sec-risk">
+      <div class="section-header" style="border-left-color:var(--red)">
+        <div class="section-icon" style="background:var(--red-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="section-title">风险警示</div>
+        <div class="section-badge" style="background:var(--red-dim);color:var(--red)">4 项风险</div>
+      </div>
+
+      <div class="risk-card" data-search="化肥断供 春播 粮食安全 绿旗Plus 俄罗斯 播种面积">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">高</span>
+          <div class="risk-title-text">化肥断供引发春播季粮食安全风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>政府承认化肥库存仅够维持至4月，而春播季节正值用肥高峰。若俄罗斯进口谈判未能在4月前取得实质进展，且"绿旗Plus"计划执行不力，水稻等主粮作物播种面积和产量将受到直接冲击，进而威胁全年粮食安全。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>月度化肥进口量</li>
+                <li>"绿旗Plus"补贴发放进度</li>
+                <li>俄罗斯谈判时间表</li>
+                <li>主要作物播种面积同比变化</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card" data-search="油价 食品价格 螺旋上涨 柴油 CPI 消费者信心 社会不满">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">高</span>
+          <div class="risk-title-text">油价-食品价格螺旋上涨风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>柴油价格暴涨6泰铢/升的冲击尚未完全传导至终端食品价格。考虑到农机作业、冷链物流、加工环节的成本传导周期（通常2–4周），4月中旬前后可能出现新一轮食品价格上涨。居民工资涨幅（2.9%）远低于食品通胀，社会不满情绪存在升级风险。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>周度柴油零售价</li>
+                <li>CPI食品分项月度数据</li>
+                <li>猪肉/鸡蛋批发价周度走势</li>
+                <li>消费者信心指数</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card" data-search="大麻 政策真空 执照 价格崩塌 进口冲击 立法 问责">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium-high">中高</span>
+          <div class="risk-title-text">大麻产业政策真空引发系统性风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>大麻产业法律真空已持续两年以上，从业者面临执照续期冻结、产品价格崩塌、进口大麻低价冲击三重困境。若政策持续不明朗，产业投资将加速外流，已投入的农业种植户面临血本无归风险，政治问责压力也在上升。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>大麻相关立法进程</li>
+                <li>执照续期政策动向</li>
+                <li>国内大麻价格走势</li>
+                <li>总理相关表态</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card" data-search="出口 市场萎缩 贸易多元化 大米 中东 非洲 拉美">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium-high">中</span>
+          <div class="risk-title-text">出口市场萎缩与贸易多元化转型阵痛</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>2026年1–2月食品出口同比下降10.5%，对华大米出口延迟，传统市场需求疲软。非洲、拉美新市场开拓需要时间，短期内难以弥补传统市场缺口。中东冲突持续增加贸易航线不确定性，咖啡等特色农产品出口面临额外风险。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>月度农产品出口额及目的地结构</li>
+                <li>对华大米出口恢复进度</li>
+                <li>非洲/拉美市场订单量</li>
+                <li>中东局势演变</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 趋势研判 ===== -->
+    <section id="sec-trend">
+      <div class="section-header" style="border-left-color:var(--teal)">
+        <div class="section-icon" style="background:var(--teal-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="section-title">趋势研判</div>
+        <div class="section-badge" style="background:var(--teal-dim);color:var(--teal)">4 大趋势</div>
+      </div>
+
+      <div class="trend-card" data-search="成本结构 小农户 退出 规模化 集约化">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">1</div>
+          <div class="trend-title-text">农业生产成本结构性上移，小农户加速退出</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>化肥与燃油价格的同步飙升正在重塑泰国农业成本结构。短期内政府补贴可部分缓解压力，但中长期来看，全球能源与化肥价格中枢上移趋势明确。资金实力薄弱的小农户将面临更大的经营压力，农业生产向规模化、集约化方向演进的趋势将加速。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>农业贷款违约率</li>
+                <li>小农户退出耕作面积统计</li>
+                <li>农业合作社整合动态</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trend-card" data-search="能源转型 电动农机 太阳能 灌溉 B20 生物柴油">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">2</div>
+          <div class="trend-title-text">农业能源转型从概念走向政策议程</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>油价暴涨催化了农业能源转型讨论。电动农机、太阳能灌溉、B20生物柴油等替代方案已进入政策视野。虽然短期内受制于基础设施与技术成熟度，但能源成本的持续高企将推动政策资源向农业能源转型倾斜，相关产业链存在中长期投资机会。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>农业能源转型相关政策文件出台节奏</li>
+                <li>电动农机补贴政策</li>
+                <li>B20推广覆盖率</li>
+                <li>太阳能灌溉项目立项数量</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trend-card" data-search="食品供应链 安全 国家战略 化肥储备 价格稳定">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">3</div>
+          <div class="trend-title-text">食品供应链安全上升为国家战略优先级</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>化肥断供风险、油价冲击、食品通胀三重压力下，泰国政府正被迫将食品供应链安全提升至更高的战略优先级。从化肥进口多元化、粮食出口市场多元化到国内价格稳定机制重构，一系列政策调整正在酝酿。这一趋势将深刻影响未来泰国农业产业政策走向。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>国家粮食安全战略文件更新</li>
+                <li>化肥战略储备制度建设</li>
+                <li>食品价格稳定基金规模变化</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trend-card" data-search="贸易多元化 非洲 拉美 AfCFTA 南非 出口">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">4</div>
+          <div class="trend-title-text">贸易多元化加速，非洲与拉美市场战略地位上升</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>对华出口延迟与传统市场需求疲软正在倒逼泰国加速贸易多元化。泰国-南非联合贸易委员会升级至部长级是一个标志性信号。非洲大陆自贸区（AfCFTA）与拉美新兴市场将成为泰国农产品出口的重要增长极，但市场准入、物流成本与支付体系等障碍仍需逐步克服。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>泰国与非洲/拉美国家贸易协定谈判进展</li>
+                <li>农产品出口目的地多元化指数</li>
+                <li>新市场订单转化率</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 关键时间线 ===== -->
+    <section id="sec-timeline">
+      <div class="section-header" style="border-left-color:var(--purple)">
+        <div class="section-icon" style="background:var(--purple-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--purple)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="section-title">本周关键时间线</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--red)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月23–29日</div>
+            <div class="timeline-text">泰国化肥市场持续紧张，<b>尿素价格飙升至1,100泰铢/袋</b>（涨幅37.5%），政府承认库存仅够维持至4月</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--orange)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月26日</div>
+            <div class="timeline-text">泰国燃油价格<b>一夜暴涨6泰铢/升</b>，柴油升至38.94泰铢/升，总理阿努廷公开道歉</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text">政府紧急出台<b>7项特别内阁措施</b>：燃油税减免、福利卡提额、1,000亿泰铢软贷款、66项商品限价</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--green)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text">"<b>绿旗Plus</b>"化肥补贴计划推出：单袋最高折扣1,400泰铢，协调26家供应商提供1,000万袋化肥</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--red)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text">猪肉批发价连续5周上涨至<b>72泰铢/公斤</b>，零售价170–180泰铢远超理论价144泰铢</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--teal)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text">泰国-南非联合贸易委员会<b>升级至部长级</b>，双边贸易额超40亿美元，出口多元化加速</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--purple)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text">"<b>泰人帮泰人</b>"计划推出1,000余种商品25%–50%折扣，福利卡额度提升至400泰铢/月覆盖1,330万人</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 数据速查 ===== -->
+    <section id="sec-data">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <div class="section-title">关键数据速查</div>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>指标</th><th>数值</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>尿素价格</td><td style="color:var(--red);font-weight:600">1,100泰铢/袋</td><td>从800泰铢飙升，涨幅37.5%</td></tr>
+            <tr><td>柴油价格</td><td style="color:var(--orange);font-weight:600">38.94泰铢/升</td><td>3月26日一夜暴涨6泰铢</td></tr>
+            <tr><td>猪肉批发价</td><td style="color:var(--red);font-weight:600">72泰铢/公斤</td><td>连续5周上涨，月涨幅11.86%</td></tr>
+            <tr><td>猪肉零售价</td><td style="font-weight:600">170–180泰铢/公斤</td><td>远超理论价144泰铢</td></tr>
+            <tr><td>鸡肉/鸡蛋月涨幅</td><td style="color:var(--orange);font-weight:600">3%–12%</td><td>—</td></tr>
+            <tr><td>居民工资涨幅</td><td style="font-weight:600">2.9%</td><td>远低于食品通胀</td></tr>
+            <tr><td>福利卡覆盖人群</td><td style="color:var(--green);font-weight:600">1,330万人</td><td>额度提升至400泰铢/月</td></tr>
+            <tr><td>中小企业软贷款</td><td style="color:var(--accent);font-weight:600">1,000亿泰铢</td><td>特别内阁措施</td></tr>
+            <tr><td>限价商品数量</td><td style="font-weight:600">66项</td><td>—</td></tr>
+            <tr><td>"绿旗Plus"补贴化肥</td><td style="color:var(--green);font-weight:600">100万袋</td><td>单袋最高折扣1,400泰铢</td></tr>
+            <tr><td>供应商协调化肥</td><td style="font-weight:600">1,000万袋</td><td>26家供应商以出厂价提供</td></tr>
+            <tr><td>棕榈油月出口配额</td><td style="color:var(--teal);font-weight:600">20万吨</td><td>—</td></tr>
+            <tr><td>鲜果棕榈月产量</td><td style="font-weight:600">约224万吨</td><td>—</td></tr>
+            <tr><td>食品出口同比变化</td><td style="color:var(--purple);font-weight:600">-10.5%</td><td>2026年1–2月</td></tr>
+            <tr><td>泰-南非双边贸易额</td><td style="color:var(--teal);font-weight:600">超40亿美元</td><td>联合贸易委员会升级至部长级</td></tr>
+            <tr><td>乳业救助基金需求</td><td style="color:var(--orange);font-weight:600">60亿泰铢</td><td>合作社资金链紧张</td></tr>
+            <tr><td>塑料绳价格涨幅</td><td style="color:var(--red);font-weight:600">+80%</td><td>春蓬府榴莲种植户</td></tr>
+            <tr><td>皇家项目累计经济价值</td><td style="color:var(--accent);font-weight:600">超1,250亿泰铢</td><td>高地农业研究55年以上</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 信息来源 ===== -->
+    <section id="sec-sources">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="section-title">主要信息来源</div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:28px">
+        <ul class="sources-list">
+          <li>泰国政府公报及特别内阁决议</li>
+          <li>泰国商务部公告及价格管控数据</li>
+          <li>泰国农业与合作社部数据</li>
+          <li>泰国主流新闻媒体报道</li>
+          <li>行业协会与商会信息</li>
+          <li>国际农业组织报告</li>
+          <li>Supinfor区域国别资讯平台系统采集与结构化处理</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>本报告由 Supinfor Ltd. 基于公开信息整理分析，仅供参考，不构成投资建议。</p>
+      <p>报告期：2026年3月23日 – 3月29日 · 发布日期：2026年3月29日</p>
+      <p style="margin-top:8px">© 2026 Supinfor Ltd. All rights reserved.</p>
+    </footer>
+  </main>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== SEARCH OVERLAY ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="搜索洞察、风险、趋势..." autocomplete="off">
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">输入关键词开始搜索</div>
+    </div>
+    <div class="search-hint">ESC 关闭 · 点击结果跳转</div>
+  </div>
+</div>
+
+<script>
+/* ===== Theme Toggle ===== */
+function isDark(){return !document.body.classList.contains('light')}
+function modeColor(dark,light){return isDark()?dark:light}
+
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('supinfor-theme',isDark()?'dark':'light');
+  updateThemeIcon();
+  redrawCharts();
+}
+function updateThemeIcon(){
+  const icon=document.getElementById('themeIcon');
+  if(isDark()){
+    icon.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  }else{
+    icon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+  }
+}
+(function(){
+  const saved=localStorage.getItem('supinfor-theme');
+  if(saved==='light')document.body.classList.add('light');
+  updateThemeIcon();
+})();
+
+/* ===== Card Toggle ===== */
+function toggleCard(header){
+  const card=header.closest('.insight-card,.risk-card,.trend-card');
+  card.classList.toggle('open');
+}
+let allExpanded=false;
+function toggleAllCards(){
+  allExpanded=!allExpanded;
+  document.querySelectorAll('.insight-card,.risk-card,.trend-card').forEach(c=>{
+    if(allExpanded)c.classList.add('open');else c.classList.remove('open');
+  });
+  document.getElementById('toggleAllBtn').querySelector('span').textContent=allExpanded?'折叠全部':'展开全部';
+}
+
+/* ===== Mobile Sidebar ===== */
+function toggleMobileSidebar(){
+  document.getElementById('sidebar').classList.toggle('mobile-open');
+  document.getElementById('sidebarOverlay').classList.toggle('show');
+}
+
+/* ===== Sidebar Navigation ===== */
+document.querySelectorAll('.sidebar-link').forEach(link=>{
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    const target=document.getElementById(this.dataset.target);
+    if(target){
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      document.getElementById('sidebar').classList.remove('mobile-open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+    }
+  });
+});
+
+const sections=document.querySelectorAll('section[id]');
+const sidebarLinks=document.querySelectorAll('.sidebar-link');
+window.addEventListener('scroll',function(){
+  let current='';
+  sections.forEach(s=>{
+    const top=s.offsetTop-120;
+    if(pageYOffset>=top)current=s.id;
+  });
+  sidebarLinks.forEach(l=>{
+    l.classList.remove('active');
+    if(l.dataset.target===current)l.classList.add('active');
+  });
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+});
+
+/* ===== Search ===== */
+function openSearch(){
+  document.getElementById('searchOverlay').classList.add('show');
+  document.getElementById('searchInput').value='';
+  document.getElementById('searchInput').focus();
+  document.getElementById('searchResults').innerHTML='<div class="search-empty">输入关键词开始搜索</div>';
+}
+function closeSearch(){document.getElementById('searchOverlay').classList.remove('show')}
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();openSearch()}
+  if(e.key==='Escape')closeSearch();
+});
+document.getElementById('searchOverlay').addEventListener('click',function(e){
+  if(e.target===this)closeSearch();
+});
+document.getElementById('searchInput').addEventListener('input',function(){
+  const q=this.value.trim().toLowerCase();
+  const results=document.getElementById('searchResults');
+  if(!q){results.innerHTML='<div class="search-empty">输入关键词开始搜索</div>';return}
+  const cards=document.querySelectorAll('[data-search]');
+  let html='';
+  cards.forEach(card=>{
+    const searchText=(card.dataset.search+' '+card.querySelector('.insight-title-text,.risk-title-text,.trend-title-text')?.textContent).toLowerCase();
+    if(searchText.includes(q)){
+      const title=card.querySelector('.insight-title-text,.risk-title-text,.trend-title-text')?.textContent||'';
+      const snippet=card.querySelector('.insight-content,.risk-content,.trend-content')?.textContent?.substring(0,80)||'';
+      html+=`<div class="search-result-item" onclick="jumpToCard(this)" data-card-id="${card.closest('section')?.id||''}"><div class="sr-title">${title}</div><div class="sr-snippet">${snippet}...</div></div>`;
+    }
+  });
+  results.innerHTML=html||'<div class="search-empty">未找到匹配结果</div>';
+});
+function jumpToCard(item){
+  closeSearch();
+  const secId=item.dataset.cardId;
+  if(secId){
+    const sec=document.getElementById(secId);
+    if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+/* ===== Canvas Charts ===== */
+function setupCanvas(id){
+  const canvas=document.getElementById(id);
+  if(!canvas)return null;
+  const dpr=window.devicePixelRatio||1;
+  const rect=canvas.getBoundingClientRect();
+  canvas.width=rect.width*dpr;
+  canvas.height=rect.height*dpr;
+  const ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+  canvas.style.width=rect.width+'px';
+  canvas.style.height=rect.height+'px';
+  return{ctx,w:rect.width,h:rect.height};
+}
+
+/* Cost Impact Bar Chart */
+function drawCostBar(){
+  const c=setupCanvas('chartCostBar');if(!c)return;
+  const{ctx,w,h}=c;
+  const data=[
+    {name:'尿素价格',value:37.5,color:modeColor('#ef4444','#dc2626'),suffix:'%'},
+    {name:'柴油价格',value:18.2,color:modeColor('#f59e0b','#d97706'),suffix:'%'},
+    {name:'猪肉批发价',value:11.86,color:modeColor('#ef4444','#dc2626'),suffix:'%'},
+    {name:'塑料绳价格',value:80,color:modeColor('#8b5cf6','#7c3aed'),suffix:'%'},
+    {name:'鸡蛋价格',value:12,color:modeColor('#f59e0b','#d97706'),suffix:'%'},
+    {name:'鸡肉价格',value:3,color:modeColor('#eab308','#ca8a04'),suffix:'%'}
+  ];
+  const max=80;
+  const barH=24;const gap=8;const labelW=80;const valW=50;
+  const startY=(h-data.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  data.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-valW-20)*(d.value/max);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.name,labelW-8,y+barH/2);
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-valW-20,barH,6);ctx.fill();
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,6);ctx.fill();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='600 12px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText('+'+d.value+d.suffix,labelW+barW+8,y+barH/2);
+  });
+}
+
+/* Pork Price Gauge */
+function drawPorkGauge(){
+  const c=setupCanvas('chartPorkGauge');if(!c)return;
+  const{ctx,w,h}=c;
+  const cx=w/2;const cy=h*0.55;const r=Math.min(w,h)*0.38;
+  const startAngle=Math.PI*0.8;const endAngle=Math.PI*2.2;
+  const totalAngle=endAngle-startAngle;
+  // theoretical: 144, actual: 175 (midpoint), max: 200
+  const valTheory=144/200;const valActual=175/200;
+  // bg arc
+  ctx.lineWidth=18;ctx.lineCap='round';
+  ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,endAngle);ctx.stroke();
+  // theoretical arc
+  ctx.strokeStyle=modeColor('rgba(34,197,94,0.4)','rgba(22,163,74,0.4)');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,startAngle+totalAngle*valTheory);ctx.stroke();
+  // actual arc
+  ctx.lineWidth=18;
+  ctx.strokeStyle=modeColor('#ef4444','#dc2626');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,startAngle+totalAngle*valActual);ctx.stroke();
+  // center text
+  ctx.fillStyle=modeColor('#ef4444','#dc2626');
+  ctx.font='700 26px "Segoe UI",sans-serif';
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText('170–180',cx,cy-8);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+  ctx.fillText('泰铢/公斤 (零售实际价)',cx,cy+16);
+  // legend
+  ctx.font='11px "Segoe UI","PingFang SC",sans-serif';
+  ctx.textAlign='left';
+  ctx.fillStyle=modeColor('rgba(34,197,94,0.6)','rgba(22,163,74,0.6)');
+  ctx.fillRect(w*0.15,h-28,10,10);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.fillText('理论价: 144',w*0.15+14,h-19);
+  ctx.fillStyle=modeColor('#ef4444','#dc2626');
+  ctx.fillRect(w*0.5,h-28,10,10);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.fillText('实际零售: 170–180',w*0.5+14,h-19);
+}
+
+/* Policy Response Bar */
+function drawPolicyBar(){
+  const c=setupCanvas('chartPolicyBar');if(!c)return;
+  const{ctx,w,h}=c;
+  const items=[
+    {label:'软贷款规模',value:1000,max:1200,color:modeColor('#3b82f6','#2563eb'),display:'1,000亿泰铢'},
+    {label:'福利卡覆盖',value:1330,max:1500,color:modeColor('#22c55e','#16a34a'),display:'1,330万人'},
+    {label:'限价商品',value:66,max:100,color:modeColor('#f59e0b','#d97706'),display:'66项'}
+  ];
+  const barH=32;const gap=20;const labelW=100;const startY=(h-items.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  items.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-120)*(d.value/d.max);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.label,labelW-10,y+barH/2);
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-120,barH,6);ctx.fill();
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,6);ctx.fill();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='700 13px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText(d.display,labelW+barW+10,y+barH/2);
+  });
+}
+
+/* Risk Radar */
+function drawRadar(){
+  const c=setupCanvas('chartRadar');if(!c)return;
+  const{ctx,w,h}=c;
+  const cx=w/2;const cy=h/2+5;const r=Math.min(w,h)*0.34;
+  const labels=['化肥断供','油价传导','食品通胀','大麻政策','出口萎缩'];
+  const values=[0.9,0.85,0.8,0.65,0.55];
+  const n=labels.length;
+  const angleStep=Math.PI*2/n;
+  const startAngle=-Math.PI/2;
+  // grid
+  for(let ring=1;ring<=4;ring++){
+    const rr=r*ring/4;
+    ctx.beginPath();
+    for(let i=0;i<=n;i++){
+      const a=startAngle+i*angleStep;
+      const x=cx+Math.cos(a)*rr;const y=cy+Math.sin(a)*rr;
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.lineWidth=1;ctx.stroke();
+  }
+  // axes
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.stroke();
+  }
+  // data polygon
+  ctx.beginPath();
+  for(let i=0;i<=n;i++){
+    const idx=i%n;
+    const a=startAngle+idx*angleStep;
+    const x=cx+Math.cos(a)*r*values[idx];
+    const y=cy+Math.sin(a)*r*values[idx];
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.fillStyle=modeColor('rgba(239,68,68,0.12)','rgba(220,38,38,0.12)');
+  ctx.fill();
+  ctx.strokeStyle=modeColor('#ef4444','#dc2626');
+  ctx.lineWidth=2;ctx.stroke();
+  // dots + labels
+  ctx.font='11px "Segoe UI","PingFang SC",sans-serif';
+  ctx.textBaseline='middle';
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    const dx=cx+Math.cos(a)*r*values[i];
+    const dy=cy+Math.sin(a)*r*values[i];
+    ctx.beginPath();ctx.arc(dx,dy,3,0,Math.PI*2);
+    ctx.fillStyle=modeColor('#ef4444','#dc2626');ctx.fill();
+    const lx=cx+Math.cos(a)*(r+18);
+    const ly=cy+Math.sin(a)*(r+18);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.textAlign=Math.cos(a)<-0.1?'right':Math.cos(a)>0.1?'left':'center';
+    ctx.fillText(labels[i],lx,ly);
+  }
+}
+
+function redrawCharts(){
+  drawCostBar();drawPorkGauge();drawPolicyBar();drawRadar();
+}
+
+window.addEventListener('DOMContentLoaded',function(){
+  setTimeout(redrawCharts,100);
+});
+window.addEventListener('resize',redrawCharts);
+</script>
+</body>
+</html>

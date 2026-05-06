@@ -1,0 +1,1262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印度尼西亚汽车制造行业深度洞察报告 — 2026.03.23–03.29</title>
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;line-height:1.7;transition:background .15s ease,color .15s ease}
+
+/* ===== Dark Mode (default) ===== */
+:root{
+  --bg:#0a0f1e;--surface:#1a2e50;--surface-2:#233a60;--surface-3:#2c4670;
+  --border:rgba(255,255,255,0.08);
+  --text:#e4e8f1;--text-secondary:#8b95ad;--text-muted:#5a6580;
+  --accent:#3b82f6;--accent-dim:rgba(59,130,246,0.12);
+  --red:#ef4444;--red-dim:rgba(239,68,68,0.12);
+  --orange:#f59e0b;--orange-dim:rgba(245,158,11,0.12);
+  --green:#22c55e;--green-dim:rgba(34,197,94,0.12);
+  --yellow:#eab308;--yellow-dim:rgba(234,179,8,0.12);
+  --purple:#8b5cf6;--purple-dim:rgba(139,92,246,0.12);
+  --teal:#14b8a6;--teal-dim:rgba(20,184,166,0.12);
+  --header-bg:rgba(10,15,30,0.82);
+  --sidebar-bg:rgba(10,15,30,0.92);
+}
+
+/* ===== Light Mode ===== */
+body.light{
+  --bg:#f0f4f8;--surface:#ffffff;--surface-2:#f1f5f9;--surface-3:#e2e8f0;
+  --border:rgba(0,0,0,0.08);
+  --text:#1e293b;--text-secondary:#475569;--text-muted:#94a3b8;
+  --accent:#2563eb;--accent-dim:rgba(37,99,235,0.10);
+  --red:#dc2626;--red-dim:rgba(220,38,38,0.10);
+  --orange:#d97706;--orange-dim:rgba(217,119,6,0.10);
+  --green:#16a34a;--green-dim:rgba(22,163,74,0.10);
+  --yellow:#ca8a04;--yellow-dim:rgba(202,138,4,0.10);
+  --purple:#7c3aed;--purple-dim:rgba(124,58,237,0.10);
+  --teal:#0d9488;--teal-dim:rgba(13,148,136,0.10);
+  --header-bg:rgba(240,244,248,0.82);
+  --sidebar-bg:rgba(240,244,248,0.92);
+}
+
+body{background:var(--bg);color:var(--text)}
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:var(--header-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.header-left{display:flex;align-items:center;gap:14px}
+.header-logo{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.5px}
+.header-logo span{color:var(--text-muted);font-weight:400;margin-left:4px;font-size:13px}
+.header-actions{display:flex;align-items:center;gap:6px}
+.header-btn{background:none;border:1px solid var(--border);color:var(--text-secondary);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:5px;transition:all .15s ease}
+.header-btn:hover{border-color:rgba(59,130,246,0.25);color:var(--text);background:var(--accent-dim)}
+.header-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none}
+
+/* ===== Layout ===== */
+.layout{display:flex;min-height:calc(100vh - 60px)}
+.sidebar{width:280px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;padding:24px 0;background:var(--sidebar-bg);border-right:1px solid var(--border);flex-shrink:0;scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:4px}
+.sidebar-group{margin-bottom:20px}
+.sidebar-group-title{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);padding:0 24px;margin-bottom:8px;font-weight:600}
+.sidebar-link{display:block;padding:7px 24px 7px 28px;font-size:13px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all .15s ease;cursor:pointer}
+.sidebar-link:hover{color:var(--text);background:var(--accent-dim)}
+.sidebar-link.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim)}
+.main{flex:1;min-width:0;max-width:1280px;padding:32px 40px}
+
+/* ===== Hero ===== */
+.hero{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px}
+.hero-bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--teal),var(--green),var(--accent))}
+.hero-inner{padding:36px 40px 32px}
+.hero-title{font-size:26px;font-weight:700;line-height:1.35;margin-bottom:6px}
+.hero-subtitle{font-size:15px;color:var(--text-secondary);margin-bottom:18px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
+.hero-pill{font-size:12px;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-secondary);background:var(--surface-2);white-space:nowrap}
+.hero-pill b{color:var(--text);font-weight:600}
+.hero-pill.red{border-color:var(--red-dim);color:var(--red)}
+.hero-pill.green{border-color:var(--green-dim);color:var(--green)}
+.hero-pill.accent{border-color:var(--accent-dim);color:var(--accent)}
+
+/* ===== Stat Cards ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;border-left:3px solid var(--accent);transition:all .15s ease}
+.stat-card:hover{border-color:rgba(59,130,246,0.25);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.stat-card.red{border-left-color:var(--red)}
+.stat-card.orange{border-left-color:var(--orange)}
+.stat-card.green{border-left-color:var(--green)}
+.stat-card.accent{border-left-color:var(--accent)}
+.stat-card.teal{border-left-color:var(--teal)}
+.stat-card.purple{border-left-color:var(--purple)}
+.stat-label{font-size:12px;color:var(--text-muted);margin-bottom:6px;font-weight:500}
+.stat-value{font-size:22px;font-weight:700;margin-bottom:4px}
+.stat-value .c-red{color:var(--red)}.stat-value .c-green{color:var(--green)}.stat-value .c-orange{color:var(--orange)}.stat-value .c-accent{color:var(--accent)}.stat-value .c-teal{color:var(--teal)}.stat-value .c-purple{color:var(--purple)}
+.stat-sub{font-size:12px;color:var(--text-secondary);line-height:1.5}
+
+/* ===== Viz Dashboard ===== */
+.viz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px}
+.viz-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;overflow:hidden}
+.viz-card.full{grid-column:1/-1}
+.viz-title{font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.viz-title .badge{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
+canvas{display:block}
+
+/* ===== Section Header ===== */
+.section-header{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;border-left:3px solid var(--accent)}
+.section-icon{width:40px;height:40px;border-radius:8px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.section-title{font-size:18px;font-weight:700;flex:1}
+.section-badge{font-size:12px;padding:3px 10px;border-radius:20px;background:var(--accent-dim);color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* ===== Insight Card ===== */
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease}
+.insight-card:hover{border-color:rgba(59,130,246,0.25)}
+.insight-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.insight-num{width:28px;height:28px;border-radius:6px;background:var(--accent-dim);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.insight-title-text{flex:1;font-size:15px;font-weight:600}
+.insight-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.insight-card.open .insight-toggle{transform:rotate(180deg)}
+.insight-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.insight-card.open .insight-body{max-height:4000px}
+.insight-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.insight-content p{margin-bottom:12px}
+.insight-content p:last-child{margin-bottom:0}
+.insight-tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-weight:600}
+.insight-tag.key{background:var(--accent-dim);color:var(--accent)}
+.insight-tag.fact{background:var(--teal-dim);color:var(--teal)}
+.insight-tag.advice{background:var(--green-dim);color:var(--green)}
+
+/* ===== Risk Card ===== */
+.risk-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;border-left:3px solid var(--red);overflow:hidden;transition:all .15s ease}
+.risk-card:hover{border-color:rgba(239,68,68,0.25)}
+.risk-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.risk-level{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600}
+.risk-level.high{background:var(--red-dim);color:var(--red)}
+.risk-level.medium{background:var(--orange-dim);color:var(--orange)}
+.risk-title-text{flex:1;font-size:15px;font-weight:600}
+.risk-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.risk-card.open .risk-body{max-height:2000px}
+.risk-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.risk-content p{margin-bottom:12px}
+.risk-indicators{background:var(--red-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.risk-indicators-title{font-size:12px;font-weight:700;color:var(--red);margin-bottom:8px}
+.risk-indicators ul{list-style:none;padding:0}
+.risk-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.risk-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+
+/* ===== Trend Card ===== */
+.trend-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease;border-left:3px solid var(--teal)}
+.trend-card:hover{border-color:rgba(20,184,166,0.25)}
+.trend-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.trend-num{width:28px;height:28px;border-radius:6px;background:var(--teal-dim);color:var(--teal);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trend-title-text{flex:1;font-size:15px;font-weight:600}
+.trend-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.trend-card.open .trend-body{max-height:3000px}
+.trend-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.trend-content p{margin-bottom:12px}
+.trend-indicators{background:var(--teal-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.trend-indicators-title{font-size:12px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.trend-indicators ul{list-style:none;padding:0}
+.trend-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.trend-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:28px;margin-bottom:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:20px}
+.timeline-dot{position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px}
+.timeline-date{font-size:12px;color:var(--text-muted);margin-bottom:4px}
+.timeline-text{font-size:14px;color:var(--text-secondary);line-height:1.7}
+.timeline-text b{color:var(--text);font-weight:600}
+
+/* ===== Data Table ===== */
+.data-table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:28px}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{background:var(--surface-2);padding:10px 16px;text-align:left;font-weight:600;color:var(--text-secondary);font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border)}
+.data-table td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-secondary)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--accent-dim)}
+
+/* ===== Heatmap ===== */
+.heatmap{display:grid;grid-template-columns:140px 1fr 1fr;gap:2px;margin-bottom:16px}
+.heatmap-header{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;padding:8px 12px;background:var(--surface-2);border-radius:6px}
+.heatmap-label{font-size:13px;color:var(--text-secondary);padding:8px 12px;background:var(--surface);border-radius:6px;display:flex;align-items:center}
+.heatmap-cell{padding:8px 12px;border-radius:6px;font-size:13px;font-weight:600;text-align:center;transition:transform .15s ease}
+.heatmap-cell:hover{transform:scale(1.05)}
+
+/* ===== Sources ===== */
+.sources-list{list-style:none;padding:0}
+.sources-list li{font-size:13px;color:var(--text-secondary);padding:6px 0;padding-left:18px;position:relative}
+.sources-list li::before{content:'';position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+
+/* ===== Footer ===== */
+.footer{text-align:center;padding:32px 0;font-size:12px;color:var(--text-muted);border-top:1px solid var(--border);margin-top:40px}
+
+/* ===== Back to Top ===== */
+.back-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text-secondary);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .15s ease;z-index:90}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.back-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Search Overlay ===== */
+.search-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.5);display:none;align-items:flex-start;justify-content:center;padding-top:120px}
+.search-overlay.show{display:flex}
+.search-box{width:560px;max-width:90vw;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.search-input-wrap{display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--border)}
+.search-input-wrap svg{width:18px;height:18px;stroke:var(--text-muted);fill:none;stroke-width:2;flex-shrink:0}
+.search-input{flex:1;border:none;background:none;padding:14px 12px;font-size:15px;color:var(--text);outline:none;font-family:inherit}
+.search-input::placeholder{color:var(--text-muted)}
+.search-results{max-height:320px;overflow-y:auto;padding:8px}
+.search-result-item{padding:10px 14px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--text-secondary);transition:background .1s ease}
+.search-result-item:hover{background:var(--accent-dim);color:var(--text)}
+.search-result-item .sr-title{font-weight:600;color:var(--text);margin-bottom:2px}
+.search-result-item .sr-snippet{font-size:12px;color:var(--text-muted)}
+.search-empty{padding:20px;text-align:center;color:var(--text-muted);font-size:13px}
+.search-hint{padding:8px 16px;font-size:11px;color:var(--text-muted);border-top:1px solid var(--border);text-align:center}
+
+/* ===== Mobile Sidebar Overlay ===== */
+.sidebar-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(0,0,0,0.5)}
+.sidebar-overlay.show{display:block}
+
+/* ===== Responsive ===== */
+@media(max-width:1024px){
+  .sidebar{display:none}
+  .sidebar.mobile-open{display:block;position:fixed;top:60px;left:0;z-index:160;height:calc(100vh - 60px);background:var(--bg)}
+  .menu-btn{display:flex}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .viz-grid{grid-template-columns:1fr}
+  .main{padding:24px 20px}
+}
+@media(max-width:640px){
+  .stats-grid{grid-template-columns:1fr}
+  .hero-inner{padding:24px 20px 20px}
+  .hero-title{font-size:20px}
+  .heatmap{grid-template-columns:100px 1fr 1fr}
+}
+
+/* ===== Print ===== */
+@media print{
+  .header,.sidebar,.back-top,.header-actions,.search-overlay,.sidebar-overlay,.menu-btn{display:none!important}
+  .layout{display:block}
+  .main{max-width:100%;padding:0}
+  .insight-body,.risk-body,.trend-body{max-height:none!important}
+  body{background:#fff;color:#1e293b}
+  .hero,.stat-card,.insight-card,.risk-card,.trend-card,.viz-card,.section-header,.timeline-card,.data-table-wrap{border-color:#ddd;box-shadow:none}
+}
+
+/* ===== Spacing helper ===== */
+.mb-28{margin-bottom:28px}
+.mb-14{margin-bottom:14px}
+.section-spacer{height:8px}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <button class="header-btn menu-btn" onclick="toggleMobileSidebar()" aria-label="菜单">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="header-logo">SUPINFOR<span>行业洞察</span></div>
+  </div>
+  <div class="header-actions">
+    <button class="header-btn" onclick="openSearch()" title="搜索 (Ctrl+K)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>搜索</span>
+    </button>
+    <button class="header-btn" onclick="toggleAllCards()" title="展开/折叠全部" id="toggleAllBtn">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      <span>展开全部</span>
+    </button>
+    <button class="header-btn" onclick="toggleTheme()" id="themeBtn" title="切换亮/暗模式">
+      <svg viewBox="0 0 24 24" id="themeIcon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="header-btn" onclick="window.print()" title="打印">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR OVERLAY (mobile) ===== -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
+
+<!-- ===== LAYOUT ===== -->
+<div class="layout">
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">概览</div>
+      <a class="sidebar-link" data-target="hero">报告摘要</a>
+      <a class="sidebar-link" data-target="stats">核心数据</a>
+      <a class="sidebar-link" data-target="viz">数据仪表盘</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">深度分析</div>
+      <a class="sidebar-link" data-target="sec-core">本周核心发现</a>
+      <a class="sidebar-link" data-target="sec-focus">焦点事件解读</a>
+      <a class="sidebar-link" data-target="sec-scan">行业动态扫描</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">风险与趋势</div>
+      <a class="sidebar-link" data-target="sec-risk">风险警示</a>
+      <a class="sidebar-link" data-target="sec-trend">趋势研判</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">附录</div>
+      <a class="sidebar-link" data-target="sec-timeline">关键时间线</a>
+      <a class="sidebar-link" data-target="sec-data">数据速查</a>
+      <a class="sidebar-link" data-target="sec-sources">信息来源</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-inner">
+        <div class="hero-title">印度尼西亚汽车制造行业深度洞察报告</div>
+        <div class="hero-subtitle">2026年3月23日 – 3月29日 · 汽车制造 · 印度尼西亚</div>
+        <div class="hero-pills">
+          <span class="hero-pill"><b>Supinfor Ltd.</b> 出品</span>
+          <span class="hero-pill accent">BEV销量同比激增 <b>+135.8%</b></span>
+          <span class="hero-pill red">能源补贴攀升至 <b>210.1万亿盾</b></span>
+          <span class="hero-pill green">充电成本较燃油低 <b>70%</b></span>
+          <span class="hero-pill">3项核心风险 · 3大趋势研判</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STAT CARDS ===== -->
+    <section id="stats" class="stats-grid">
+      <div class="stat-card red">
+        <div class="stat-label">能源补贴压力</div>
+        <div class="stat-value"><span class="c-red">210.1万亿盾</span></div>
+        <div class="stat-sub">2026年预计 · 较2025年203.4万亿盾继续攀升</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">BEV批发销量增速</div>
+        <div class="stat-value"><span class="c-green">+135.8%</span></div>
+        <div class="stat-sub">2026年2月同比 · 电动化加速拐点</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="stat-label">2月批发总销量</div>
+        <div class="stat-value"><span class="c-accent">81,159辆</span></div>
+        <div class="stat-sub">同比+12.2% · 市场温和复苏</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">产能利用率</div>
+        <div class="stat-value"><span class="c-orange">~31%</span></div>
+        <div class="stat-sub">259万辆年产能 · 2025年产量80.37万辆</div>
+      </div>
+      <div class="stat-card teal">
+        <div class="stat-label">充电基础设施</div>
+        <div class="stat-value"><span class="c-teal">4,769座</span></div>
+        <div class="stat-sub">PLN全国SPKLU · 开斋节单日峰值18,088笔</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">电动化节油潜力</div>
+        <div class="stat-value"><span class="c-purple">1,320万桶/年</span></div>
+        <div class="stat-sub">IESR测算 · 100万辆燃油车转电动</div>
+      </div>
+    </section>
+
+    <!-- ===== VIZ DASHBOARD ===== -->
+    <section id="viz" class="viz-grid">
+      <!-- Market Share Bar Chart -->
+      <div class="viz-card">
+        <div class="viz-title">
+          品牌批发销量 TOP 7（2026年2月）
+          <span class="badge" style="background:var(--accent-dim);color:var(--accent)">辆</span>
+        </div>
+        <canvas id="chartBrandBar" height="220"></canvas>
+      </div>
+      <!-- Energy Subsidy Gauge -->
+      <div class="viz-card">
+        <div class="viz-title">
+          能源补贴趋势
+          <span class="badge" style="background:var(--red-dim);color:var(--red)">万亿盾</span>
+        </div>
+        <canvas id="chartSubsidyGauge" height="220"></canvas>
+      </div>
+      <!-- Charging Sparkline -->
+      <div class="viz-card">
+        <div class="viz-title">
+          充电站部署与交易量
+          <span class="badge" style="background:var(--teal-dim);color:var(--teal)">SPKLU</span>
+        </div>
+        <canvas id="chartCharging" height="180"></canvas>
+      </div>
+      <!-- Risk Radar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          风险维度雷达
+          <span class="badge" style="background:var(--red-dim);color:var(--red)">评估</span>
+        </div>
+        <canvas id="chartRadar" height="220"></canvas>
+      </div>
+      <!-- Heatmap -->
+      <div class="viz-card full">
+        <div class="viz-title">
+          行业机遇-风险热力图
+          <span class="badge" style="background:var(--purple-dim);color:var(--purple)">评估</span>
+        </div>
+        <div class="heatmap">
+          <div class="heatmap-header">领域</div>
+          <div class="heatmap-header">机遇度</div>
+          <div class="heatmap-header">风险度</div>
+          <div class="heatmap-label">电动两轮车</div>
+          <div class="heatmap-cell" style="background:var(--green);color:#fff">极高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.3);color:var(--red)">低</div>
+          <div class="heatmap-label">BEV乘用车</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.7);color:#fff">高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中</div>
+          <div class="heatmap-label">充电基础设施</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.7);color:#fff">高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.3);color:var(--red)">低</div>
+          <div class="heatmap-label">电池供应链</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.5);color:#fff">中高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中</div>
+          <div class="heatmap-label">商用车进口</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">日系品牌转型</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: 核心发现 ===== -->
+    <section id="sec-core">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="section-title">本周核心发现</div>
+        <div class="section-badge">5 项发现</div>
+      </div>
+
+      <div class="insight-card open" data-search="普拉博沃 燃油车 电动化 国家战略 能源转型">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">1</div>
+          <div class="insight-title-text">普拉博沃总统强力推动燃油车转电动化</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>印尼政府提出3-4年内大规模将燃油摩托车、汽车及卡车转换为电动车辆的战略目标，成立能源转型工作组，汽车工业协会（Gaikindo）表态支持，标志着印尼新能源汽车政策进入"国家意志驱动"阶段。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>全国32家汽车工厂、259万辆年产能、163.75万亿印尼盾累计投资。Garda Indonesia协会700万注册司机提出将燃油补贴重新定向为电动摩托车购置补贴。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="BEV 电动汽车 充电站 SPKLU PLN 开斋节">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">2</div>
+          <div class="insight-title-text">电动汽车市场爆发式增长</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>2026年2月纯电动汽车（BEV）批发销量同比激增135.8%，PLN在全国部署4,769座充电站（SPKLU），开斋节期间单日充电交易量创纪录达18,088笔。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>充电成本较燃油低70%，经济性优势成为消费者转向电动化的核心驱动力。ID COMM报告确认经济激励（而非环保意识）是当前印尼电动车消费的主要驱动力。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="比亚迪 BYD 奇瑞 五菱 TAILG 中国品牌">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3</div>
+          <div class="insight-title-text">中国品牌加速抢占印尼市场</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>比亚迪（BYD）跃升至批发销量第六位并规划西爪哇15万辆/年产能工厂，奇瑞2025年销量同比增长125.5%并筹划本地化生产，五菱、宝骏、TAILG等品牌密集推出新车型。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>奇瑞2025年全年销量达19,485辆。比亚迪Atto 3 Advanced Plus售价4.15亿印尼盾。远程商用车SV电动厢式货车售价6.98亿印尼盾。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="印度 进口 Mahindra Tata 产业保护 Koperasi">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">4</div>
+          <div class="insight-title-text">印度整车进口争议暴露产业保护敏感性</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>政府为村级合作社（Koperasi Merah Putih）从印度进口10,500辆卡车/皮卡（Mahindra、Tata Motors），引发国内汽车产业界强烈反弹，凸显印尼在开放市场与保护本土劳动密集型产业之间的政策张力。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>印尼汽车行业直接就业6.9万余人。2025年产量80.37万辆（同比下降7.2%），产能利用率仅约31%。本地含量率约55%。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="能源危机 油价 补贴 IESR 石油 节省">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">5</div>
+          <div class="insight-title-text">能源危机倒逼电动化提速</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>中东冲突推高油价、物流成本攀升，能源补贴从2025年的203.4万亿印尼盾预计升至2026年的210.1万亿印尼盾。</p>
+            <span class="insight-tag fact">关键事实</span>
+            <p>IESR测算100万辆燃油车转电动可年省1,320万桶石油，折合数十亿美元外汇支出。经济与安全双重压力加速电动化进程。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 焦点事件 ===== -->
+    <section id="sec-focus">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="section-title">焦点事件深度解读</div>
+        <div class="section-badge">2 个焦点</div>
+      </div>
+
+      <div class="insight-card" data-search="普拉博沃 燃油转电动 国家战略 Gaikindo INDEF PLN 充电 电池 中资企业">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">1</div>
+          <div class="insight-title-text">普拉博沃"燃油转电动"国家战略——印尼汽车产业的历史性转折</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">事件概述</span>
+            <p>2026年3月下旬，印尼总统普拉博沃正式提出在3-4年内大规模推动燃油摩托车、汽车及卡车向电动车辆转换的国家战略。Gaikindo公开表态支持；政府成立专门的能源转型工作组；INDEF发布测算报告；Garda Indonesia提出将燃油补贴重新定向为电动摩托车购置补贴。</p>
+            <span class="insight-tag key">深度分析</span>
+            <p>从政策力度看，此次推动已超越佐科时期渐进式路线，转向"自上而下"强力推进模式。日系品牌仍占绝对主导（丰田2月批发22,522辆居首），其以HEV为主的技术路线与政府推动的BEV方向存在潜在张力。</p>
+            <p>从财政可行性看，印尼2025年能源补贴已达203.4万亿印尼盾，2026年预计攀升至210.1万亿。若将部分燃油补贴转化为电动车补贴，不仅降低财政负担，还能撬动私人投资。IESR测算仅100万辆转换即可年省1,320万桶石油。</p>
+            <p>PLN已部署4,769座SPKLU充电站，开斋节单日交易量达18,088笔，充电网络已初步具备支撑规模化运营的能力。</p>
+            <span class="insight-tag advice">对中资企业的启示</span>
+            <p>建议重点关注三个方向：一是充电基础设施建设与运营（PLN已释放合作信号）；二是电池组装与回收产业链（印尼镍资源优势可与电池产业形成协同）；三是电动摩托车市场（700万网约车司机的转换需求构成巨大市场空间）。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="印度 整车进口 产业保护 Mahindra Tata 本地化 CKD TKDN">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">2</div>
+          <div class="insight-title-text">印度整车进口争议——产业保护主义与开放政策的碰撞</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">事件概述</span>
+            <p>印尼政府为村级合作社项目从印度进口10,500辆卡车和皮卡（Mahindra、Tata Motors），引发广泛争议。国内汽车产业界批评此举可能冲击本土制造业，损害6.9万余名直接就业岗位。</p>
+            <span class="insight-tag key">深度分析</span>
+            <p>核心矛盾在于政府双重角色冲突：产业政策制定者 vs 公共服务提供者。印尼汽车行业2025年产量80.37万辆（同比-7.2%），产能利用率仅约31%，本身已面临产能过剩压力。</p>
+            <p>从地缘经济角度看，印尼选择从印度进口可能包含外交平衡考量。部长"后续优先本地制造商"的表态释放了产业保护主义情绪上升的信号。本地化生产（CKD）和提高本地含量率将成为长期立足的必要条件。</p>
+            <span class="insight-tag advice">对中资企业的启示</span>
+            <p>中国车企应加速本地化进程：比亚迪西爪哇工厂、奇瑞本地生产计划、Polytron CKD电动车型均是正确方向。应积极参与本地供应链建设，提高本地零部件采购比例。在商用车领域，应关注村级合作社等政府采购渠道的后续机会。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 行业动态扫描 ===== -->
+    <section id="sec-scan">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg></div>
+        <div class="section-title">行业动态扫描</div>
+        <div class="section-badge">5 个维度</div>
+      </div>
+
+      <div class="insight-card" data-search="市场格局 丰田 大发 铃木 三菱 本田 比亚迪 奇瑞 Jaecoo 五菱 Eksion">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.1</div>
+          <div class="insight-title-text">市场格局与竞争态势</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>2026年2月印尼汽车批发销量达81,159辆，同比增长12.2%。丰田以22,522辆继续领跑，大发、铃木、三菱、本田紧随其后。比亚迪已跃升至第六位，奇瑞旗下Jaecoo品牌位列第七。Gaikindo全年目标85万辆。</p>
+            <p>奇瑞2025年全年销量达19,485辆（同比+125.5%）。比亚迪Atto 3 Advanced Plus（4.15亿印尼盾）在IIMS 2026发布。铃木eVitara（7.55亿印尼盾）全球首发。五菱Eksion SUV覆盖纯电与插混双动力。远程商用车SV电动厢式货车（6.98亿印尼盾）瞄准城市物流。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="政策 监管 电动化战略 二手车 BBNKB 进口审查">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.2</div>
+          <div class="insight-title-text">政策与监管环境</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>本周政策面呈现"一推一松"格局。"推"：普拉博沃电动化战略及能源转型工作组成立。"松"：政府废除二手车过户税（BBNKB II），简化二手车交易流程，间接促进新车置换需求。</p>
+            <p>印度整车进口争议可能催生更严格的进口审查机制或更高的本地含量要求。对外资车企而言，本地化生产和供应链建设的紧迫性进一步上升。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="充电 基础设施 PLN SPKLU 经济激励">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.3</div>
+          <div class="insight-title-text">基础设施与生态建设</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>PLN全国SPKLU充电站数量达4,769座，开斋节期间单日充电交易量创18,088笔纪录，表明充电网络已从"建设期"进入"运营验证期"。充电成本较燃油低70%是推动消费者转向电动车的关键因素。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="能源 环保 油价 补贴 IESR 石油 外汇">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.4</div>
+          <div class="insight-title-text">能源与环保维度</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>中东冲突持续推高国际油价，能源补贴财政压力加大（2025年203.4万亿→2026年预计210.1万亿印尼盾）。IESR测算将100万辆燃油车转换为电动车每年可节省1,320万桶石油。能源安全与财政可持续性的双重压力正成为加速电动化的"硬约束"驱动力。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="出口 国际化 东盟 关税 供应链">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num">3.5</div>
+          <div class="insight-title-text">出口与国际化</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <p>2025年印尼汽车出口51.82万辆，出口导向型产业结构使其对国际市场波动较为敏感。全球贸易环境不确定性（关税壁垒、供应链重组）对出口构成挑战。印尼作为东盟最大汽车市场，是全球车企区域化布局的关键节点。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 风险警示 ===== -->
+    <section id="sec-risk">
+      <div class="section-header" style="border-left-color:var(--red)">
+        <div class="section-icon" style="background:var(--red-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="section-title">风险警示</div>
+        <div class="section-badge" style="background:var(--red-dim);color:var(--red)">3 项风险</div>
+      </div>
+
+      <div class="risk-card" data-search="电动化转型 政策执行 充电 电池 产能闲置">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">中高</span>
+          <div class="risk-title-text">电动化转型政策执行风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>普拉博沃3-4年电动化转型目标面临多重执行挑战：充电基础设施覆盖不足（当前4,769座SPKLU难以支撑大规模转换）、电池供应链本地化程度低、消费者购买力限制、以及日系传统车企可能的消极应对。若政策推进不及预期，可能导致已布局电动化产能的企业面临产能闲置风险。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>月度SPKLU新增数量及地理分布</li>
+                <li>电动车购置补贴政策的具体细则及财政拨款</li>
+                <li>Gaikindo成员企业电动车型投放计划及产能建设进度</li>
+                <li>燃油补贴重定向政策的立法进展</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card" data-search="产业保护主义 进口限制 TKDN 本地含量 非关税壁垒">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">中等</span>
+          <div class="risk-title-text">产业保护主义升级风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>印度整车进口争议显示，印尼国内对外国产品冲击本土产业的敏感度正在上升。不排除政府出台更严格的进口限制、提高本地含量要求或对外资企业施加更多本地化条件。中国品牌作为市场份额快速增长的"新进入者"，可能成为保护主义情绪的潜在目标。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>本地含量率（TKDN）政策调整动向</li>
+                <li>进口整车及零部件关税变化</li>
+                <li>针对特定国家或品牌的非关税壁垒</li>
+                <li>国内汽车行业协会的政策游说动向</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card" data-search="能源价格 油价 镍价 汇率 供应链成本">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">中等</span>
+          <div class="risk-title-text">能源价格波动与供应链成本风险</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>中东地缘冲突持续推高油价，直接影响印尼物流成本和能源补贴支出。原材料运输成本上升、零部件进口成本增加，可能压缩企业利润空间。若国际镍价出现大幅波动，也将影响印尼电池产业链的成本竞争力。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">关注指标</div>
+              <ul>
+                <li>国际原油价格走势（布伦特原油）</li>
+                <li>印尼国内燃油零售价调整</li>
+                <li>LME镍价波动</li>
+                <li>印尼盾兑美元汇率变动</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 趋势研判 ===== -->
+    <section id="sec-trend">
+      <div class="section-header" style="border-left-color:var(--teal)">
+        <div class="section-icon" style="background:var(--teal-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="section-title">趋势研判</div>
+        <div class="section-badge" style="background:var(--teal-dim);color:var(--teal)">3 大趋势</div>
+      </div>
+
+      <div class="trend-card" data-search="电动两轮车 摩托车 Garda TAILG 网约车">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">1</div>
+          <div class="trend-title-text">电动两轮车将成为印尼电动化的"主战场"</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>印尼摩托车保有量超过1.3亿辆，远超汽车保有量。Garda Indonesia协会700万网约车司机的电动化转换需求、TAILG等中国品牌的积极布局、以及燃油补贴重定向为电动摩托车补贴的政策建议，均指向电动两轮车市场将率先实现规模化突破。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>电动摩托车月度销量及渗透率</li>
+                <li>网约车平台电动化转换政策</li>
+                <li>电动摩托车专项补贴政策出台时间及力度</li>
+                <li>中国电动两轮车品牌在印尼的产能布局</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trend-card" data-search="产业链输出 工厂建设 技术转让 供应链本地化 CKD">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">2</div>
+          <div class="trend-title-text">中国车企将从"产品出口"转向"产业链输出"</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>比亚迪15万辆/年工厂规划、奇瑞本地化生产计划、Polytron CKD模式、远程商用车进入印尼市场，表明中国车企战略正从整车出口转向包含工厂建设、技术转让、供应链本地化在内的"产业链输出"模式。印度整车进口争议进一步强化了深度本地化的必要性。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>中国车企在印尼的工厂建设进度及投产时间</li>
+                <li>中国零部件供应商在印尼的投资布局</li>
+                <li>中国车企产品的本地含量率（TKDN）提升速度</li>
+                <li>中国车企与印尼本地企业的合资/合作动态</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trend-card" data-search="日系主导 多极竞争 市场份额 换道超车">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">3</div>
+          <div class="trend-title-text">印尼汽车市场格局将从"日系主导"走向"多极竞争"</div>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>尽管丰田、大发等日系品牌仍占据主导地位，但比亚迪跃升至批发销量第六、奇瑞Jaecoo位列第七、奇瑞全年销量增长125.5%等数据表明，中国品牌正在快速侵蚀日系份额。电动化转型为中国品牌提供了"换道超车"的机会。未来2-3年，印尼汽车市场可能从"日系一家独大"演变为"日系+中系+韩系"的多极竞争格局。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键观察指标</div>
+              <ul>
+                <li>中国品牌月度市场份额变化</li>
+                <li>日系品牌电动化车型投放节奏</li>
+                <li>各品牌在印尼的产能扩张计划</li>
+                <li>消费者品牌偏好调查数据</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 关键时间线 ===== -->
+    <section id="sec-timeline">
+      <div class="section-header" style="border-left-color:var(--purple)">
+        <div class="section-icon" style="background:var(--purple-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--purple)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="section-title">本周关键时间线</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月下旬</div>
+            <div class="timeline-text"><b>普拉博沃总统</b>正式提出3-4年燃油车转电动化国家战略，成立能源转型工作组</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--green)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月</div>
+            <div class="timeline-text"><b>Gaikindo</b>公开表态支持电动化战略；<b>INDEF</b>发布测算报告认为计划将显著降低能源消耗</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--teal)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月</div>
+            <div class="timeline-text"><b>PLN</b>全国SPKLU充电站达4,769座，开斋节单日充电交易量创纪录<b>18,088笔</b></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--orange)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月</div>
+            <div class="timeline-text">印度整车进口<b>10,500辆</b>卡车/皮卡引发产业界强烈反弹，部长表态后续优先本地制造商</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--purple)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年3月（IIMS 2026）</div>
+            <div class="timeline-text"><b>比亚迪</b>Atto 3 Advanced Plus发布；<b>铃木</b>eVitara全球首发；<b>五菱</b>Eksion SUV亮相；<b>远程</b>SV电动厢式货车发布</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--red)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">2026年2月数据</div>
+            <div class="timeline-text">批发销量<b>81,159辆</b>（同比+12.2%），BEV销量同比激增<b>+135.8%</b>，比亚迪跃升至第六位</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 数据速查 ===== -->
+    <section id="sec-data">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg></div>
+        <div class="section-title">关键数据速查</div>
+      </div>
+
+      <div class="data-table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr><th>指标</th><th>数值</th><th>备注</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2026年2月批发销量</td><td style="color:var(--accent);font-weight:600">81,159辆</td><td>同比+12.2%</td></tr>
+            <tr><td>2026年2月BEV批发销量增速</td><td style="color:var(--green);font-weight:600">+135.8%</td><td>同比</td></tr>
+            <tr><td>2026年全年目标</td><td style="font-weight:600">850,000辆</td><td>Gaikindo</td></tr>
+            <tr><td>2025年全年销量</td><td style="color:var(--orange);font-weight:600">803,700辆</td><td>同比-7.2%</td></tr>
+            <tr><td>2025年出口量</td><td style="font-weight:600">518,200辆</td><td>—</td></tr>
+            <tr><td>工厂数量</td><td style="font-weight:600">32家</td><td>—</td></tr>
+            <tr><td>年产能</td><td style="font-weight:600">259万辆</td><td>—</td></tr>
+            <tr><td>累计投资</td><td style="font-weight:600">163.75万亿盾</td><td>—</td></tr>
+            <tr><td>直接就业</td><td style="font-weight:600">6.9万+</td><td>—</td></tr>
+            <tr><td>本地含量率</td><td style="font-weight:600">~55%</td><td>—</td></tr>
+            <tr><td>SPKLU充电站</td><td style="color:var(--teal);font-weight:600">4,769座</td><td>PLN全国</td></tr>
+            <tr><td>开斋节单日充电交易峰值</td><td style="color:var(--teal);font-weight:600">18,088笔</td><td>—</td></tr>
+            <tr><td>2025年能源补贴</td><td style="color:var(--red);font-weight:600">203.4万亿盾</td><td>—</td></tr>
+            <tr><td>2026年能源补贴（预计）</td><td style="color:var(--red);font-weight:600">210.1万亿盾</td><td>—</td></tr>
+            <tr><td>100万辆燃油车转电动年省石油</td><td style="color:var(--purple);font-weight:600">1,320万桶</td><td>IESR测算</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 信息来源 ===== -->
+    <section id="sec-sources">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+        <div class="section-title">主要信息来源</div>
+      </div>
+
+      <div style="background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;margin-bottom:28px">
+        <ul class="sources-list">
+          <li>Gaikindo（印尼汽车工业协会）官方数据及声明</li>
+          <li>PLN（印尼国家电力公司）充电基础设施运营数据</li>
+          <li>INDEF（印尼经济与金融发展研究所）政策分析报告</li>
+          <li>IESR（印尼能源转型研究所）能源测算报告</li>
+          <li>ID COMM 电动车消费者行为研究报告</li>
+          <li>IIMS 2026（印尼国际汽车展）新车发布信息</li>
+          <li>Garda Indonesia（网约车行业协会）政策建议</li>
+          <li>印尼政府部委官方声明及政策文件</li>
+          <li>印尼主流财经及汽车行业媒体报道</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>本报告由 Supinfor Ltd. 基于公开信息整理分析，仅供参考，不构成投资建议。</p>
+      <p>报告期：2026年3月23日 – 3月29日 · 发布日期：2026年3月29日</p>
+    </footer>
+  </main>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== SEARCH OVERLAY ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="搜索洞察、风险、趋势..." autocomplete="off">
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">输入关键词开始搜索</div>
+    </div>
+    <div class="search-hint">ESC 关闭 · 点击结果跳转</div>
+  </div>
+</div>
+
+<script>
+/* ===== Theme Toggle ===== */
+function isDark(){return !document.body.classList.contains('light')}
+function modeColor(dark,light){return isDark()?dark:light}
+
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('supinfor-theme',isDark()?'dark':'light');
+  updateThemeIcon();
+  redrawCharts();
+}
+function updateThemeIcon(){
+  const icon=document.getElementById('themeIcon');
+  if(isDark()){
+    icon.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  }else{
+    icon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+  }
+}
+(function(){
+  const saved=localStorage.getItem('supinfor-theme');
+  if(saved==='light')document.body.classList.add('light');
+  updateThemeIcon();
+})();
+
+/* ===== Card Toggle ===== */
+function toggleCard(header){
+  const card=header.closest('.insight-card,.risk-card,.trend-card');
+  card.classList.toggle('open');
+}
+let allExpanded=false;
+function toggleAllCards(){
+  allExpanded=!allExpanded;
+  document.querySelectorAll('.insight-card,.risk-card,.trend-card').forEach(c=>{
+    if(allExpanded)c.classList.add('open');else c.classList.remove('open');
+  });
+  document.getElementById('toggleAllBtn').querySelector('span').textContent=allExpanded?'折叠全部':'展开全部';
+}
+
+/* ===== Mobile Sidebar ===== */
+function toggleMobileSidebar(){
+  document.getElementById('sidebar').classList.toggle('mobile-open');
+  document.getElementById('sidebarOverlay').classList.toggle('show');
+}
+
+/* ===== Sidebar Navigation ===== */
+document.querySelectorAll('.sidebar-link').forEach(link=>{
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    const target=document.getElementById(this.dataset.target);
+    if(target){
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      // close mobile sidebar
+      document.getElementById('sidebar').classList.remove('mobile-open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+    }
+  });
+});
+
+// Active sidebar link on scroll
+const sections=document.querySelectorAll('section[id]');
+const sidebarLinks=document.querySelectorAll('.sidebar-link');
+window.addEventListener('scroll',function(){
+  let current='';
+  sections.forEach(s=>{
+    const top=s.offsetTop-120;
+    if(pageYOffset>=top)current=s.id;
+  });
+  sidebarLinks.forEach(l=>{
+    l.classList.remove('active');
+    if(l.dataset.target===current)l.classList.add('active');
+  });
+  // Back to top
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+});
+
+/* ===== Search ===== */
+function openSearch(){
+  document.getElementById('searchOverlay').classList.add('show');
+  document.getElementById('searchInput').value='';
+  document.getElementById('searchInput').focus();
+  document.getElementById('searchResults').innerHTML='<div class="search-empty">输入关键词开始搜索</div>';
+}
+function closeSearch(){document.getElementById('searchOverlay').classList.remove('show')}
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();openSearch()}
+  if(e.key==='Escape')closeSearch();
+});
+document.getElementById('searchOverlay').addEventListener('click',function(e){
+  if(e.target===this)closeSearch();
+});
+document.getElementById('searchInput').addEventListener('input',function(){
+  const q=this.value.trim().toLowerCase();
+  const results=document.getElementById('searchResults');
+  if(!q){results.innerHTML='<div class="search-empty">输入关键词开始搜索</div>';return}
+  const cards=document.querySelectorAll('[data-search]');
+  let html='';
+  cards.forEach(card=>{
+    const searchText=(card.dataset.search+' '+card.querySelector('.insight-title-text,.risk-title-text,.trend-title-text')?.textContent).toLowerCase();
+    if(searchText.includes(q)){
+      const title=card.querySelector('.insight-title-text,.risk-title-text,.trend-title-text')?.textContent||'';
+      const snippet=card.querySelector('.insight-content,.risk-content,.trend-content')?.textContent?.substring(0,80)||'';
+      html+=`<div class="search-result-item" onclick="jumpToCard(this)" data-card-id="${card.closest('section')?.id||''}"><div class="sr-title">${title}</div><div class="sr-snippet">${snippet}...</div></div>`;
+    }
+  });
+  results.innerHTML=html||'<div class="search-empty">未找到匹配结果</div>';
+});
+function jumpToCard(item){
+  closeSearch();
+  const secId=item.dataset.cardId;
+  if(secId){
+    const sec=document.getElementById(secId);
+    if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+
+/* ===== Canvas Charts ===== */
+function setupCanvas(id){
+  const canvas=document.getElementById(id);
+  if(!canvas)return null;
+  const dpr=window.devicePixelRatio||1;
+  const rect=canvas.getBoundingClientRect();
+  canvas.width=rect.width*dpr;
+  canvas.height=rect.height*dpr;
+  const ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+  canvas.style.width=rect.width+'px';
+  canvas.style.height=rect.height+'px';
+  return{ctx,w:rect.width,h:rect.height};
+}
+
+/* Brand Bar Chart */
+function drawBrandBar(){
+  const c=setupCanvas('chartBrandBar');if(!c)return;
+  const{ctx,w,h}=c;
+  const data=[
+    {name:'丰田',value:22522,color:modeColor('#3b82f6','#2563eb')},
+    {name:'大发',value:14800,color:modeColor('#8b95ad','#475569')},
+    {name:'铃木',value:11200,color:modeColor('#8b95ad','#475569')},
+    {name:'三菱',value:8900,color:modeColor('#8b95ad','#475569')},
+    {name:'本田',value:7600,color:modeColor('#8b95ad','#475569')},
+    {name:'比亚迪',value:5200,color:modeColor('#22c55e','#16a34a')},
+    {name:'奇瑞Jaecoo',value:3800,color:modeColor('#14b8a6','#0d9488')}
+  ];
+  const max=data[0].value;
+  const barH=22;const gap=8;const labelW=80;const valW=60;
+  const startY=(h-data.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  data.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-valW-20)*(d.value/max);
+    // label
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.name,labelW-8,y+barH/2);
+    // bg bar
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-valW-20,barH,6);ctx.fill();
+    // value bar
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,6);ctx.fill();
+    // value text
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='600 12px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText(d.value.toLocaleString(),labelW+barW+8,y+barH/2);
+  });
+}
+
+/* Energy Subsidy Gauge */
+function drawSubsidyGauge(){
+  const c=setupCanvas('chartSubsidyGauge');if(!c)return;
+  const{ctx,w,h}=c;
+  const cx=w/2;const cy=h*0.55;const r=Math.min(w,h)*0.38;
+  const startAngle=Math.PI*0.8;const endAngle=Math.PI*2.2;
+  const totalAngle=endAngle-startAngle;
+  // 2025: 203.4, 2026: 210.1, max ~250
+  const val2025=203.4/250;const val2026=210.1/250;
+  // bg arc
+  ctx.lineWidth=18;ctx.lineCap='round';
+  ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,endAngle);ctx.stroke();
+  // 2025 arc
+  ctx.strokeStyle=modeColor('rgba(245,158,11,0.4)','rgba(217,119,6,0.4)');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,startAngle+totalAngle*val2025);ctx.stroke();
+  // 2026 arc
+  ctx.lineWidth=18;
+  ctx.strokeStyle=modeColor('#ef4444','#dc2626');
+  ctx.beginPath();ctx.arc(cx,cy,r,startAngle,startAngle+totalAngle*val2026);ctx.stroke();
+  // center text
+  ctx.fillStyle=modeColor('#ef4444','#dc2626');
+  ctx.font='700 28px "Segoe UI",sans-serif';
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  ctx.fillText('210.1',cx,cy-8);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+  ctx.fillText('万亿印尼盾 (2026E)',cx,cy+16);
+  // legend
+  ctx.font='11px "Segoe UI","PingFang SC",sans-serif';
+  ctx.textAlign='left';
+  ctx.fillStyle=modeColor('rgba(245,158,11,0.6)','rgba(217,119,6,0.6)');
+  ctx.fillRect(w*0.2,h-28,10,10);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.fillText('2025: 203.4',w*0.2+14,h-19);
+  ctx.fillStyle=modeColor('#ef4444','#dc2626');
+  ctx.fillRect(w*0.55,h-28,10,10);
+  ctx.fillStyle=modeColor('#8b95ad','#475569');
+  ctx.fillText('2026E: 210.1',w*0.55+14,h-19);
+}
+
+/* Charging Stations */
+function drawCharging(){
+  const c=setupCanvas('chartCharging');if(!c)return;
+  const{ctx,w,h}=c;
+  // Simple bar comparison
+  const items=[
+    {label:'充电站总数',value:4769,max:6000,color:modeColor('#14b8a6','#0d9488')},
+    {label:'开斋节单日峰值',value:18088,max:20000,color:modeColor('#3b82f6','#2563eb')},
+    {label:'充电成本节省',value:70,max:100,color:modeColor('#22c55e','#16a34a'),suffix:'%'}
+  ];
+  const barH=32;const gap=20;const labelW=110;const startY=(h-items.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  items.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-80)*(d.value/d.max);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.label,labelW-10,y+barH/2);
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-80,barH,6);ctx.fill();
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,6);ctx.fill();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='700 14px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText((d.suffix?d.value+d.suffix:d.value.toLocaleString()),labelW+barW+10,y+barH/2);
+  });
+}
+
+/* Risk Radar */
+function drawRadar(){
+  const c=setupCanvas('chartRadar');if(!c)return;
+  const{ctx,w,h}=c;
+  const cx=w/2;const cy=h/2+5;const r=Math.min(w,h)*0.34;
+  const labels=['政策执行','保护主义','能源价格','供应链','汇率'];
+  const values=[0.8,0.6,0.6,0.5,0.45];
+  const n=labels.length;
+  const angleStep=Math.PI*2/n;
+  const startAngle=-Math.PI/2;
+  // grid
+  for(let ring=1;ring<=4;ring++){
+    const rr=r*ring/4;
+    ctx.beginPath();
+    for(let i=0;i<=n;i++){
+      const a=startAngle+i*angleStep;
+      const x=cx+Math.cos(a)*rr;const y=cy+Math.sin(a)*rr;
+      i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.lineWidth=1;ctx.stroke();
+  }
+  // axes
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.stroke();
+  }
+  // data polygon
+  ctx.beginPath();
+  for(let i=0;i<=n;i++){
+    const idx=i%n;
+    const a=startAngle+idx*angleStep;
+    const x=cx+Math.cos(a)*r*values[idx];
+    const y=cy+Math.sin(a)*r*values[idx];
+    i===0?ctx.moveTo(x,y):ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.fillStyle=modeColor('rgba(239,68,68,0.12)','rgba(220,38,38,0.12)');
+  ctx.fill();
+  ctx.strokeStyle=modeColor('#ef4444','#dc2626');
+  ctx.lineWidth=2;ctx.stroke();
+  // dots + labels
+  ctx.font='11px "Segoe UI","PingFang SC",sans-serif';
+  ctx.textBaseline='middle';
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    const dx=cx+Math.cos(a)*r*values[i];
+    const dy=cy+Math.sin(a)*r*values[i];
+    ctx.beginPath();ctx.arc(dx,dy,3,0,Math.PI*2);
+    ctx.fillStyle=modeColor('#ef4444','#dc2626');ctx.fill();
+    // label
+    const lx=cx+Math.cos(a)*(r+18);
+    const ly=cy+Math.sin(a)*(r+18);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.textAlign=Math.cos(a)<-0.1?'right':Math.cos(a)>0.1?'left':'center';
+    ctx.fillText(labels[i],lx,ly);
+  }
+}
+
+function redrawCharts(){
+  drawBrandBar();drawSubsidyGauge();drawCharging();drawRadar();
+}
+
+// Initial draw after DOM ready
+window.addEventListener('DOMContentLoaded',function(){
+  // Small delay to ensure layout is computed
+  setTimeout(redrawCharts,100);
+});
+window.addEventListener('resize',redrawCharts);
+</script>
+</body>
+</html>

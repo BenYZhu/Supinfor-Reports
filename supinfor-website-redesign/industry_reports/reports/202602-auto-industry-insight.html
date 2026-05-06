@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汽车行业洞察月报 2026-02 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #dc2626; --c-primary-light: #ef4444; --c-primary-dark: #b91c1c;
+  --c-accent: #0891b2; --c-accent-light: #06b6d4;
+  --c-bg: #fef2f2; --c-surface: #ffffff; --c-surface-alt: #fef7f7;
+  --c-border: #d1d5db; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #1a0c0c; --c-surface: #2b1515; --c-surface-alt: #331a1a;
+  --c-border: #5a2d2d; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #1a0c0c; --c-surface: #2b1515; --c-surface-alt: #331a1a;
+    --c-border: #5a2d2d; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#dc2626 0%,#b91c1c 40%,#991b1b 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-car"></i>
+      <span data-zh>汽车行业洞察月报</span>
+      <span data-en>Automotive Industry Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年2月刊 · Supinfor Ltd.</span>
+      <span data-en>February 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>汽车行业洞察月报<br>2026-02</span>
+      <span data-en>Automotive Industry<br>Insight</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>中国车企集体跻身全球前十 · Stellantis巨亏223亿欧元 · 特斯拉产能利用率跌破四成 · 充电基础设施联盟共建</span>
+      <span data-en>Chinese Automakers Enter Global Top 10 · Stellantis €22.3B Loss · Tesla Utilization Below 40% · Charging Alliance Co-building</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">62</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">12</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">4</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、全球竞争格局重塑</span><span data-en>I. Global Competition Reshaped</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、电动化战略分化</span><span data-en>II. EV Strategy Divergence</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、产业链与基础设施重构</span><span data-en>III. Supply Chain & Infrastructure</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、新兴市场与产能布局</span><span data-en>IV. Emerging Markets & Capacity</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、技术演进与多元化转型</span><span data-en>V. Tech Evolution & Diversification</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>中国车企集体跻身全球前十，全球汽车竞争格局进入"中国时刻"</span><span data-en>Chinese Automakers Collectively Enter Global Top 10, Marking the "China Moment" in Global Auto Competition</span></h3>
+      <p><span data-zh>BYD、SAIC、Geely三家中国车企首次同时进入全球销量前十，BYD海外销量同比暴涨145%，中国新能源产业链成本优势、技术迭代速度和政策支持三重因素叠加的结构性结果。</span><span data-en>BYD, SAIC, and Geely simultaneously entered the global top 10 for the first time. BYD overseas sales surged 145% YoY — a structural result of China's NEV supply chain cost advantage, rapid tech iteration, and policy support.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>Stellantis巨亏223亿欧元暴露激进电动化战略风险，行业电动化节奏面临集体修正</span><span data-en>Stellantis' €22.3B Loss Exposes Aggressive EV Strategy Risk; Industry EV Pace Faces Collective Correction</span></h3>
+      <p><span data-zh>从2024年盈利55亿欧元到2025年亏损223亿欧元的断崖式逆转，核心原因是对电动车市场需求的严重误判，电动化转型的节奏把控比方向选择更为关键。</span><span data-en>A cliff-like reversal from €5.5B profit in 2024 to €22.3B loss in 2025, primarily due to severe misjudgment of EV market demand. Pacing of EV transition matters more than direction.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>特斯拉欧洲工厂产能利用率跌破四成，全球领先地位遭受多维挑战</span><span data-en>Tesla European Factory Utilization Falls Below 40%; Global Leadership Faces Multi-Dimensional Challenges</span></h3>
+      <p><span data-zh>德国工厂产量同比减少29.4%，产能利用率从56.3%骤降至39.7%，叠加高管离职潮、4款车型登上"最不可靠"榜单，特斯拉正面临品牌信任度、产品质量和市场份额的三重危机。</span><span data-en>German factory output dropped 29.4% YoY, utilization plunged from 56.3% to 39.7%. Combined with executive exodus and 4 models on "least reliable" lists, Tesla faces a triple crisis of brand trust, quality, and market share.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>八大车企联建IONNA充电网络，充电基础设施从"各自为战"走向"联盟共建"</span><span data-en>Eight Automakers Co-Build IONNA Charging Network; Infrastructure Shifts from Solo to Alliance Model</span></h3>
+      <p><span data-zh>宝马、通用、本田、现代、起亚、奔驰、Stellantis和丰田联合创立IONNA，传统车企通过联盟方式对抗特斯拉Supercharger的先发优势，充电基础设施正成为继整车制造之后的第二战场。</span><span data-en>BMW, GM, Honda, Hyundai, Kia, Mercedes, Stellantis and Toyota co-founded IONNA, countering Tesla Supercharger's first-mover advantage through alliance. Charging infrastructure becomes the second battleground after vehicle manufacturing.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>电子门把手致命缺陷倒逼中国出台全球首个强制机械拉手法规，智能化安全边界被重新划定</span><span data-en>Fatal E-Door Handle Defect Forces China to Issue World's First Mandatory Mechanical Handle Regulation</span></h3>
+      <p><span data-zh>小米SU7电子门把手致命缺陷、领克Z20语音助手误关大灯撞护栏等事件暴露出电动车智能化功能的安全边界尚未被充分验证，中国已出台全球首个强制机械拉手法规（2027年1月生效）。</span><span data-en>Xiaomi SU7 e-door handle fatal defect and Lynk&Co Z20 voice assistant headlight incident exposed unverified safety boundaries of EV smart features. China issued the world's first mandatory mechanical handle regulation (effective Jan 2027).</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">€223B</div>
+      <div class="lbl"><span data-zh>Stellantis 全年亏损</span><span data-en>Stellantis Annual Loss</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#155e75)">
+      <div class="val">39.7%</div>
+      <div class="lbl"><span data-zh>特斯拉德国工厂产能利用率</span><span data-en>Tesla Germany Utilization</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">145%</div>
+      <div class="lbl"><span data-zh>BYD 海外销量增长</span><span data-en>BYD Overseas Sales Growth</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+      <div class="val">300%</div>
+      <div class="lbl"><span data-zh>PHEV 实际排放超标</span><span data-en>PHEV Actual Emission Excess</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: 全球竞争格局重塑 ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-globe"></i>
+    <h2><span data-zh>一、全球竞争格局重塑</span><span data-en>I. Global Competition Landscape Reshaped</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>中国车企首次集体跻身全球销量前十，标志着全球汽车产业权力中心东移</span><span data-en>Chinese Automakers Collectively Enter Global Top 10 for the First Time, Marking Eastward Shift of Auto Industry Power Center</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2025年全球车企销量排名中，BYD、SAIC、Geely三家中国车企首次同时进入前十，其中Geely首次年销突破400万辆，BYD海外销量同比暴涨145%。这不是偶发事件，而是中国新能源产业链成本优势、技术迭代速度和政策支持三重因素叠加的结构性结果。</span><span data-en><strong>Key Insight:</strong> In the 2025 global automaker sales ranking, BYD, SAIC, and Geely simultaneously entered the top 10 for the first time. Geely's annual sales exceeded 4 million for the first time, and BYD overseas sales surged 145% YoY. This is a structural result of China's NEV supply chain cost advantage, rapid tech iteration, and policy support.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2025年全球销量排名：丰田11.32万辆（第1）、大众8.98万辆（第2）、现代7.27万辆（第3）；BYD 4.6万辆（第6）、SAIC 4.51万辆（第7）、Geely 4.12万辆（第9）</span><span data-en>2025 global sales: Toyota 11.32M (#1), VW 8.98M (#2), Hyundai 7.27M (#3); BYD 4.6M (#6), SAIC 4.51M (#7), Geely 4.12M (#9)</span></li>
+      <li><span data-zh>BYD海外销量达1.05万辆，同比增长145%；SAIC海外销量1.071万辆，同比增长3.1%</span><span data-en>BYD overseas sales reached 105K, +145% YoY; SAIC overseas sales 107.1K, +3.1% YoY</span></li>
+      <li><span data-zh>Geely连续5年实现销量增长，首次年销突破400万辆</span><span data-en>Geely achieved 5 consecutive years of sales growth, first time exceeding 4 million annual sales</span></li>
+      <li><span data-zh>中国"以旧换新"政策带动2025年相关产品销售额超2.6万亿元，新车置换量超115万辆，新能源车占比近60%</span><span data-en>China's "trade-in" policy drove over ¥2.6T in related product sales in 2025, 1.15M vehicle replacements, NEV share nearly 60%</span></li>
+      <li><span data-zh>日产跌出前十，本田以3.52万辆位列第十，同比下滑7.53%</span><span data-en>Nissan fell out of top 10; Honda ranked 10th with 3.52M units, down 7.53% YoY</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: 2025 Global Sales Ranking Bar Chart -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化</span><span data-en>Data Visualization</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>2025年全球车企销量排名（万辆）</span><span data-en>2025 Global Automaker Sales Ranking (10K units)</span></h3>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label"><span data-zh>丰田</span><span data-en>Toyota</span></div><div class="bar-track"><div class="bar-fill" style="width:100%">11.32</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>大众</span><span data-en>VW</span></div><div class="bar-track"><div class="bar-fill" style="width:79%">8.98</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>现代</span><span data-en>Hyundai</span></div><div class="bar-track"><div class="bar-fill" style="width:64%">7.27</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>通用</span><span data-en>GM</span></div><div class="bar-track"><div class="bar-fill" style="width:55%">6.18</div></div></div>
+      <div class="bar-row"><div class="bar-label">Stellantis</div><div class="bar-track"><div class="bar-fill" style="width:48%">5.4+</div></div></div>
+      <div class="bar-row"><div class="bar-label" style="color:var(--c-primary);font-weight:800">BYD 🇨🇳</div><div class="bar-track"><div class="bar-fill" style="width:41%;background:linear-gradient(90deg,var(--c-primary),var(--c-primary-light))">4.60</div></div></div>
+      <div class="bar-row"><div class="bar-label" style="color:var(--c-primary);font-weight:800">SAIC 🇨🇳</div><div class="bar-track"><div class="bar-fill" style="width:40%;background:linear-gradient(90deg,var(--c-primary),var(--c-primary-light))">4.51</div></div></div>
+      <div class="bar-row"><div class="bar-label" style="color:var(--c-primary);font-weight:800">Geely 🇨🇳</div><div class="bar-track"><div class="bar-fill" style="width:36%;background:linear-gradient(90deg,var(--c-primary),var(--c-primary-light))">4.12</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>本田</span><span data-en>Honda</span></div><div class="bar-track"><div class="bar-fill" style="width:31%">3.52</div></div></div>
+    </div>
+    <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>🇨🇳 标记为首次进入前十的中国车企 · 数据来源：行业资讯月报</span><span data-en>🇨🇳 marks Chinese automakers entering top 10 for the first time · Source: Industry Monthly Report</span></p>
+  </div>
+
+  <!-- Styled Table: Global Sales Ranking -->
+  <div class="insight-card reveal">
+    <h3 style="font-size:.95rem"><span data-zh>2025年全球车企销量排名详表</span><span data-en>2025 Global Automaker Sales Ranking Detail</span></h3>
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>排名</span><span data-en>Rank</span></th>
+        <th><span data-zh>车企</span><span data-en>Automaker</span></th>
+        <th><span data-zh>2025年销量</span><span data-en>2025 Sales</span></th>
+        <th><span data-zh>同比变化</span><span data-en>YoY Change</span></th>
+        <th><span data-zh>备注</span><span data-en>Note</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>1</td><td><span data-zh>丰田</span><span data-en>Toyota</span></td><td>11.32<span data-zh>万辆</span><span data-en>M</span></td><td>+4.65%</td><td><span data-zh>SUV和混动车型驱动</span><span data-en>SUV & hybrid driven</span></td></tr>
+        <tr><td>2</td><td><span data-zh>大众</span><span data-en>VW</span></td><td>8.98<span data-zh>万辆</span><span data-en>M</span></td><td>-0.51%</td><td><span data-zh>欧洲燃油车需求疲软</span><span data-en>Weak European ICE demand</span></td></tr>
+        <tr><td>3</td><td><span data-zh>现代</span><span data-en>Hyundai</span></td><td>7.27<span data-zh>万辆</span><span data-en>M</span></td><td>—</td><td>—</td></tr>
+        <tr><td>4</td><td><span data-zh>通用</span><span data-en>GM</span></td><td>6.18<span data-zh>万辆</span><span data-en>M</span></td><td>+3.03%</td><td>—</td></tr>
+        <tr><td>5</td><td>Stellantis</td><td>54<span data-zh>万辆+</span><span data-en>M+</span></td><td><span data-zh>下半年+11%</span><span data-en>H2 +11%</span></td><td>—</td></tr>
+        <tr><td style="color:var(--c-primary);font-weight:700">6</td><td style="color:var(--c-primary);font-weight:700">BYD</td><td>4.6<span data-zh>万辆</span><span data-en>M</span></td><td><span data-zh>海外+145%</span><span data-en>Overseas +145%</span></td><td><span data-zh>首次入前十</span><span data-en>First top 10</span></td></tr>
+        <tr><td style="color:var(--c-primary);font-weight:700">7</td><td style="color:var(--c-primary);font-weight:700">SAIC</td><td>4.51<span data-zh>万辆</span><span data-en>M</span></td><td><span data-zh>海外+3.1%</span><span data-en>Overseas +3.1%</span></td><td><span data-zh>首次入前十</span><span data-en>First top 10</span></td></tr>
+        <tr><td style="color:var(--c-primary);font-weight:700">9</td><td style="color:var(--c-primary);font-weight:700">Geely</td><td>4.12<span data-zh>万辆</span><span data-en>M</span></td><td><span data-zh>连续5年增长</span><span data-en>5yr consecutive growth</span></td><td><span data-zh>首次破400万辆</span><span data-en>First 4M+</span></td></tr>
+        <tr><td>10</td><td><span data-zh>本田</span><span data-en>Honda</span></td><td>3.52<span data-zh>万辆</span><span data-en>M</span></td><td>-7.53%</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>外资车企加速撤离中国市场，合资模式进入系统性瓦解阶段</span><span data-en>Foreign Automakers Accelerate China Exit; JV Model Enters Systemic Collapse</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>中国市场的价格战已不是短期促销行为，而是本土品牌凭借新能源技术优势对合资品牌发起的结构性替代。广汽本田雅阁降价42%、月销仅4558辆的惨淡数据，与广汽埃安月销2.16万辆、同比增长171.63%形成鲜明对比，合资品牌在中国市场的生存空间正被快速压缩。</span><span data-en><strong>Key Insight:</strong> China's price war is not short-term promotion but structural replacement by domestic brands leveraging NEV tech advantages. GAC Honda Accord's 42% price cut with only 4,558 monthly sales contrasts sharply with GAC Aion's 21,600 monthly sales (+171.63% YoY). JV brands' survival space in China is being rapidly compressed.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>广汽本田雅阁e:PHEV限时降价最高10万元（降幅42%），降后售价13.88万元，限量1000辆</span><span data-en>GAC Honda Accord e:PHEV limited-time discount up to ¥100K (42% off), post-discount ¥138.8K, limited to 1,000 units</span></li>
+      <li><span data-zh>广汽本田2026年1月销量仅4558辆，同比暴跌69.86%；2025年全年销量35.19万辆，同比下降25.22%</span><span data-en>GAC Honda Jan 2026 sales only 4,558 units, -69.86% YoY; 2025 full-year 351.9K units, -25.22% YoY</span></li>
+      <li><span data-zh>广汽埃安2026年1月销量2.16万辆，同比增长171.63%</span><span data-en>GAC Aion Jan 2026 sales 21,600 units, +171.63% YoY</span></li>
+      <li><span data-zh>大众关闭与上汽合办的南京工厂，GM关闭辽宁合资工厂，奔驰解散与BYD的合资企业</span><span data-en>VW closed Nanjing JV plant with SAIC, GM closed Liaoning JV plant, Mercedes dissolved BYD JV</span></li>
+      <li><span data-zh>三菱宣布全面退出中国市场，日产计划关闭武汉工厂，本田将广州发动机厂产能减半</span><span data-en>Mitsubishi fully exits China, Nissan plans to close Wuhan plant, Honda halves Guangzhou engine plant capacity</span></li>
+      <li><span data-zh>2026年1月中国汽车消费指数仅31.1，创历史新低</span><span data-en>China auto consumption index hit record low of 31.1 in Jan 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: 电动化战略分化 ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-bolt"></i>
+    <h2><span data-zh>二、电动化战略分化</span><span data-en>II. EV Strategy Divergence</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>Stellantis巨亏223亿欧元后重启燃油车，激进电动化战略遭遇最惨痛的市场教训</span><span data-en>Stellantis Restarts ICE After €22.3B Loss; Aggressive EV Strategy Meets Harshest Market Lesson</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Stellantis从2024年盈利55亿欧元到2025年亏损223亿欧元的断崖式逆转，核心原因是对电动车市场需求的严重误判。这一案例表明，电动化转型的节奏把控比方向选择更为关键——过快的转型速度在消费者尚未准备好的市场中会转化为巨额库存和资产减值。</span><span data-en><strong>Key Insight:</strong> Stellantis' cliff-like reversal from €5.5B profit in 2024 to €22.3B loss in 2025 was primarily caused by severe misjudgment of EV market demand. This case demonstrates that pacing of EV transition is more critical than direction — overly rapid transition in unprepared markets converts into massive inventory and asset impairment.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2025年全年净亏损223亿欧元，2024年盈利55亿欧元，一年内逆转278亿欧元</span><span data-en>2025 full-year net loss €22.3B, 2024 profit €5.5B, €27.8B reversal within one year</span></li>
+      <li><span data-zh>仅2025年下半年亏损201亿欧元，计提254亿欧元特殊支出（电动车项目减值、合同终止成本等）</span><span data-en>H2 2025 alone lost €20.1B, with €25.4B special charges (EV project impairment, contract termination costs, etc.)</span></li>
+      <li><span data-zh>新任CEO Antonio Filosa宣布重启燃油车生产，回归汽油、柴油发动机车型</span><span data-en>New CEO Antonio Filosa announced restart of ICE production, returning to gasoline and diesel models</span></li>
+      <li><span data-zh>北美业务亏损22亿美元，美国UAW工会员工2025年无绩效奖金</span><span data-en>North America business lost $2.2B; US UAW workers received no performance bonus in 2025</span></li>
+      <li><span data-zh>欧洲高管称若无政府补贴，欧洲电动车销量将难以维持</span><span data-en>European executives stated European EV sales would be unsustainable without government subsidies</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>特斯拉欧洲工厂产能利用率跌至39.7%，全球电动车"一超"格局正在瓦解</span><span data-en>Tesla European Factory Utilization Drops to 39.7%; Global EV "One Superpower" Pattern Collapsing</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>特斯拉德国工厂2025年产量同比减少29.4%，产能利用率从56.3%骤降至39.7%，叠加高管离职潮、4款车型登上"最不可靠"榜单、欧洲多国检测不合格率远超行业均值，特斯拉正面临品牌信任度、产品质量和市场份额的三重危机。</span><span data-en><strong>Key Insight:</strong> Tesla's German factory 2025 output dropped 29.4% YoY, utilization plunged from 56.3% to 39.7%. Combined with executive exodus, 4 models on "least reliable" lists, and European inspection failure rates far above industry average, Tesla faces a triple crisis of brand trust, product quality, and market share.</span></p>
+    </div>
+
+    <!-- Data Viz: Tesla Quality Issues -->
+    <div style="margin:1.25rem 0">
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label"><span data-zh>丹麦 Model Y 不合格率</span><span data-en>Denmark Model Y Fail Rate</span></div><div class="bar-track"><div class="bar-fill" style="width:45%;background:linear-gradient(90deg,#ef4444,#f87171)">45%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>丹麦 Model 3 不合格率</span><span data-en>Denmark Model 3 Fail Rate</span></div><div class="bar-track"><div class="bar-fill" style="width:34%;background:linear-gradient(90deg,#ef4444,#f87171)">34%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>行业平均不合格率</span><span data-en>Industry Avg Fail Rate</span></div><div class="bar-track"><div class="bar-fill" style="width:7%;background:linear-gradient(90deg,var(--c-accent),#06b6d4)">7%</div></div></div>
+      </div>
+      <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>丹麦车辆检测不合格率对比 · 数据来源：行业资讯月报</span><span data-en>Denmark Vehicle Inspection Failure Rate Comparison · Source: Industry Monthly Report</span></p>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>德国格林海德工厂2025年仅生产149040辆Model Y，同比减少29.4%，产能利用率39.7%（设计产能37.5万辆）</span><span data-en>Grünheide factory produced only 149,040 Model Y in 2025, -29.4% YoY, 39.7% utilization (375K design capacity)</span></li>
+      <li><span data-zh>2026年1月美国销量下滑17%，欧洲市场被BYD反超</span><span data-en>US sales dropped 17% in Jan 2026; overtaken by BYD in European market</span></li>
+      <li><span data-zh>4款车型进入"最不可靠电动车"榜单：Model 3（影响42.9万辆）、Model S、Model X（召回双位数）、Cybertruck（8次召回）</span><span data-en>4 models on "least reliable EV" list: Model 3 (429K affected), Model S, Model X (double-digit recalls), Cybertruck (8 recalls)</span></li>
+      <li><span data-zh>Cybercab项目主管、软件工程副总裁、Cybertruck项目经理、Optimus机器人副总裁等核心高管相继离职</span><span data-en>Key executives departed: Cybercab lead, VP Software Engineering, Cybertruck PM, VP Optimus Robot</span></li>
+      <li><span data-zh>马斯克威胁若工会选举中IG Metall获胜将停止柏林工厂扩建</span><span data-en>Musk threatened to halt Berlin factory expansion if IG Metall wins union election</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.3</span><span data-en>Insight 2.3</span></span>
+    <h3><span data-zh>插混车型实际碳排放超官方数据300%，欧盟排放规则面临根本性修订</span><span data-en>PHEV Actual Carbon Emissions Exceed Official Data by 300%; EU Emission Rules Face Fundamental Revision</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Fraunhofer研究所对近98.1万辆PHEV的实测数据揭示了一个尴尬现实：多数车主并未按测试假设频繁充电，PHEV实际上成了"更重的燃油车"。这意味着PHEV作为过渡技术的减排效果被严重高估，欧盟排放计算规则的修订将直接影响车企的合规策略和产品规划。</span><span data-en><strong>Key Insight:</strong> Fraunhofer Institute's real-world data from nearly 981,000 PHEVs revealed an awkward reality: most owners don't charge as frequently as test assumptions suggest, making PHEVs effectively "heavier ICE vehicles." PHEV emission reduction as a transition technology has been severely overestimated; EU emission rule revision will directly impact automakers' compliance strategies.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>官方WLTP测试平均油耗约1.57L/100km，实际道路行驶平均油耗达6.12L/100km</span><span data-en>Official WLTP test avg consumption ~1.57L/100km; actual road driving avg 6.12L/100km</span></li>
+      <li><span data-zh>实际碳排放比官方数据高出300%以上</span><span data-en>Actual carbon emissions exceed official data by over 300%</span></li>
+      <li><span data-zh>主因：多数车主未频繁充电，车辆主要以燃油模式行驶，电池增重进一步提升油耗</span><span data-en>Main cause: most owners don't charge frequently, vehicles mainly run on fuel mode, battery weight further increases consumption</span></li>
+      <li><span data-zh>高性能和高端插混车型充电频率更低，部分车辆几乎完全依赖燃油驱动</span><span data-en>High-performance and premium PHEVs charge even less frequently; some vehicles rely almost entirely on fuel</span></li>
+      <li><span data-zh>欧盟计划修订排放计算规则中的"使用因子"，以匹配实际使用情况</span><span data-en>EU plans to revise "utility factor" in emission calculation rules to match actual usage patterns</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: 产业链与基础设施重构 ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-charging-station"></i>
+    <h2><span data-zh>三、产业链与基础设施重构</span><span data-en>III. Supply Chain & Infrastructure Restructuring</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>八大车企联建IONNA充电网络，充电基础设施竞争从"单打独斗"升级为"联盟对抗"</span><span data-en>Eight Automakers Co-Build IONNA Charging Network; Competition Upgrades from Solo to Alliance Model</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>宝马、通用、本田、现代、起亚、奔驰、Stellantis和丰田八家车企联合创立IONNA，标志着充电基础设施竞争进入新阶段。传统车企通过联盟方式对抗特斯拉Supercharger的先发优势，同时BYD也在独立布局全球充电网络，充电基础设施正成为继整车制造之后的第二战场。</span><span data-en><strong>Key Insight:</strong> BMW, GM, Honda, Hyundai, Kia, Mercedes, Stellantis and Toyota co-founded IONNA, marking a new phase in charging infrastructure competition. Traditional automakers counter Tesla Supercharger's first-mover advantage through alliance, while BYD independently builds a global charging network. Charging infrastructure is becoming the second battleground after vehicle manufacturing.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>IONNA由8家全球车企联合创立，聚焦"信心、舒适、便利"三大维度</span><span data-en>IONNA co-founded by 8 global automakers, focusing on "confidence, comfort, convenience"</span></li>
+      <li><span data-zh>2025年美国EV销量达140万辆，同比上升</span><span data-en>2025 US EV sales reached 1.4M units, up YoY</span></li>
+      <li><span data-zh>BYD计划2026年底在欧洲布局3000座超级充电站，同时在中国部署第二代兆瓦级超级快充桩（功率2100千瓦）</span><span data-en>BYD plans 3,000 supercharging stations in Europe by end of 2026, deploying 2nd-gen megawatt-level superchargers (2,100kW) in China</span></li>
+      <li><span data-zh>墨西哥计划在15条核心交通走廊布局充电网络，每75公里设置一座标准化充电站</span><span data-en>Mexico plans charging network across 15 core corridors, one standardized station every 75km</span></li>
+      <li><span data-zh>电池成本从2013年的827美元/kWh降至约100美元/kWh</span><span data-en>Battery cost dropped from $827/kWh in 2013 to ~$100/kWh</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>SKODA投2.05亿欧元建CTP电池工厂，大众集团加速电池供应链自主化</span><span data-en>SKODA Invests €205M in CTP Battery Factory; VW Group Accelerates Battery Supply Chain Autonomy</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>SKODA在Mladá Boleslav扩建的CTP电池系统工厂，年产能33.5万套，采用LFP电池化学体系，可降低约30%生产成本。这是大众集团在电池供应链自主化方面的关键一步，也反映出欧洲车企正在从"依赖亚洲电池供应商"向"自建核心产能"转变。</span><span data-en><strong>Key Insight:</strong> SKODA's expanded CTP battery system factory in Mladá Boleslav has annual capacity of 335K units, using LFP battery chemistry to reduce production costs by ~30%. This is a key step in VW Group's battery supply chain autonomy, reflecting European automakers' shift from "relying on Asian battery suppliers" to "building core capacity in-house."</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>投资2.05亿欧元，成为大众集团内规模最大的电动车电池系统供应商</span><span data-en>€205M investment, becoming VW Group's largest EV battery system supplier</span></li>
+      <li><span data-zh>欧洲首个大规模量产CTP（Cell to Pack）电池系统的工厂</span><span data-en>Europe's first large-scale CTP (Cell to Pack) battery system production factory</span></li>
+      <li><span data-zh>年产能33.5万套，每日产量超1100套，生产节拍60秒/套</span><span data-en>Annual capacity 335K units, daily output 1,100+, 60-second takt time</span></li>
+      <li><span data-zh>工厂占地5.5万平方米，自动化率约84%，配备131台工业机器人</span><span data-en>Factory covers 55,000 sqm, ~84% automation rate, 131 industrial robots</span></li>
+      <li><span data-zh>采用LFP电池化学体系与标准化电芯，可降低约30%生产成本</span><span data-en>Uses LFP battery chemistry with standardized cells, reducing production costs by ~30%</span></li>
+      <li><span data-zh>SKODA 2025年电动车销量翻倍，Elroq车型在欧洲电动车销量榜位居第二</span><span data-en>SKODA 2025 EV sales doubled; Elroq ranked 2nd in European EV sales</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: 新兴市场与产能布局 ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-earth-americas"></i>
+    <h2><span data-zh>四、新兴市场与产能布局</span><span data-en>IV. Emerging Markets & Capacity Layout</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>中国车企全球建厂提速，长城巴西20亿美元工厂标志着"产能出海"进入深水区</span><span data-en>Chinese Automakers Accelerate Global Factory Building; GWM's $2B Brazil Plant Marks "Capacity Going Global" Entering Deep Waters</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>长城汽车在巴西投资20亿美元建设年产能20万辆的全流程工厂，BYD在欧洲注册量同比增长165%，极氪加速进入意大利、法国、英国等市场——中国车企的全球化已从"整车出口"升级为"本地化生产+品牌渗透"的深度布局模式。</span><span data-en><strong>Key Insight:</strong> GWM invested $2B in a 200K annual capacity full-process factory in Brazil, BYD European registrations grew 165% YoY, Zeekr accelerated entry into Italy, France, UK — Chinese automakers' globalization has upgraded from "vehicle export" to "localized production + brand penetration" deep layout model.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>长城汽车巴西Aracruz工厂：总投资20亿美元（至2032年），占地170万平方米，年产能20万辆，涵盖冲压、焊接、涂装、总装全流程</span><span data-en>GWM Brazil Aracruz plant: $2B total investment (through 2032), 1.7M sqm, 200K annual capacity, full stamping-welding-painting-assembly process</span></li>
+      <li><span data-zh>全面运营后可带动10000个直接和间接就业岗位</span><span data-en>Full operation will create 10,000 direct and indirect jobs</span></li>
+      <li><span data-zh>BYD 2026年1月欧洲新车注册量18242辆，同比增长165%，市场份额从0.7%升至1.9%</span><span data-en>BYD Jan 2026 European registrations 18,242 units, +165% YoY, market share from 0.7% to 1.9%</span></li>
+      <li><span data-zh>极氪2026年2月宣布进入意大利市场，年内计划进军法国、英国、西班牙</span><span data-en>Zeekr announced Italy market entry in Feb 2026, plans to enter France, UK, Spain within the year</span></li>
+      <li><span data-zh>MG品牌在泰国2025年销量27007辆，同比增长57%，电动车型占比80%</span><span data-en>MG brand Thailand 2025 sales 27,007 units, +57% YoY, EV models account for 80%</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>印度与东南亚成为全球车企产能争夺的新焦点</span><span data-en>India & Southeast Asia Become New Focus of Global Automaker Capacity Competition</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>铃木计划将Maruti Suzuki在印度的年产能从200万辆提升至400万辆，越南THACO集团宣布2027年推出自主乘用车品牌，泰国MG品牌计划将本地生产车型出口欧洲——新兴市场正从"销售目的地"转变为"全球生产基地"，产业链重心的南移趋势日益明确。</span><span data-en><strong>Key Insight:</strong> Suzuki plans to double Maruti Suzuki's India capacity from 2M to 4M units, Vietnam's THACO Group announces own passenger car brand by 2027, Thailand MG plans to export locally-produced models to Europe — emerging markets are transforming from "sales destinations" to "global production bases," with supply chain gravity clearly shifting south.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>铃木计划将Maruti Suzuki在印度年产能从200万辆提升至400万辆</span><span data-en>Suzuki plans to double Maruti Suzuki India capacity from 2M to 4M units annually</span></li>
+      <li><span data-zh>本田探讨在北方邦设立下一代移动出行研发中心，重启大诺伊达工厂生产EV和混动车型</span><span data-en>Honda exploring next-gen mobility R&D center in Uttar Pradesh, restarting Greater Noida plant for EV and hybrid production</span></li>
+      <li><span data-zh>越南THACO集团2027年推出自主乘用车品牌，目标汽车业务营收72000亿越南盾</span><span data-en>Vietnam's THACO Group to launch own passenger car brand by 2027, targeting VND 72T auto business revenue</span></li>
+      <li><span data-zh>泰国MG品牌2026年目标销量3万辆、市场份额5%，计划将泰国生产车型出口欧洲</span><span data-en>Thailand MG targets 30K sales and 5% market share in 2026, plans to export Thai-produced models to Europe</span></li>
+      <li><span data-zh>越南Tasco Auto计划2026年引入极氪和路特斯品牌</span><span data-en>Vietnam's Tasco Auto plans to introduce Zeekr and Lotus brands in 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: 技术演进与多元化转型 ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-microchip"></i>
+    <h2><span data-zh>五、技术演进与多元化转型</span><span data-en>V. Technology Evolution & Diversification</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>头部车企集体押注AI与自动驾驶，技术竞赛从"电动化"延伸至"智能化"</span><span data-en>Leading Automakers Collectively Bet on AI & Autonomous Driving; Tech Race Extends from "Electrification" to "Intelligence"</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>现代投资9万亿韩元布局AI与氢能产业集群，XPeng转型为多元化AI企业并建设人形机器人量产基地，日产与Wayve合作开发L4级自动驾驶，Waymo在旧金山市场份额已超Lyft——电动化只是上半场，智能化和自动驾驶才是决定下一个十年竞争格局的关键变量。</span><span data-en><strong>Key Insight:</strong> Hyundai invested KRW 9T in AI & hydrogen cluster, XPeng transforms into diversified AI company building humanoid robot mass production base, Nissan partners with Wayve for L4 autonomous driving, Waymo's SF market share exceeds Lyft — electrification is just the first half; intelligence and autonomous driving are the key variables for the next decade's competition.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>现代投资9万亿韩元（约63亿美元）于韩国新万金地区，建设AI数据中心（5万个GPU算力）、机器人工厂、绿氢生产设施，预计带动16万亿韩元经济效益、7万个就业岗位</span><span data-en>Hyundai invested KRW 9T (~$6.3B) in Saemangeum, Korea for AI data center (50K GPU), robot factory, green hydrogen facility; expected KRW 16T economic impact, 70K jobs</span></li>
+      <li><span data-zh>XPeng在广州建设全球首个人形机器人量产基地，目标2026年底量产"IRON"型号</span><span data-en>XPeng building world's first humanoid robot mass production base in Guangzhou, targeting "IRON" model mass production by end of 2026</span></li>
+      <li><span data-zh>XPeng成为大众第二代自主驾驶系统（VLA 2.0）首个外部客户，计划2026年Q1量产</span><span data-en>XPeng becomes VW's first external customer for 2nd-gen autonomous driving system (VLA 2.0), planned Q1 2026 mass production</span></li>
+      <li><span data-zh>日产与Wayve合作开发端到端深度学习自动驾驶方案，预计一年后量产落地</span><span data-en>Nissan partners with Wayve on end-to-end deep learning autonomous driving, expected mass production in one year</span></li>
+      <li><span data-zh>Waymo在旧金山市场份额已超Lyft，2024年营收1.3亿美元，预计2027年增至13亿美元</span><span data-en>Waymo's SF market share exceeds Lyft; 2024 revenue $130M, projected $1.3B by 2027</span></li>
+      <li><span data-zh>现代任命朴珉宇（前特斯拉、英伟达）推进SDV转型，计划年内完成SDV技术验证车开发</span><span data-en>Hyundai appointed Park Min-woo (ex-Tesla, NVIDIA) to lead SDV transformation, plans to complete SDV tech validation vehicle within the year</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>丰田循环工厂与大众小型电动车布局，传统巨头探索差异化生存路径</span><span data-en>Toyota Circular Factory & VW Small EV Layout; Traditional Giants Explore Differentiated Survival Paths</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>丰田在波兰投建年处理2万辆退役汽车的循环工厂，大众计划2026年推出ID.Polo切入小型电动车市场——面对中国车企的成本优势和技术攻势，传统巨头正在通过循环经济、全生命周期服务和细分市场差异化来构建新的竞争壁垒。</span><span data-en><strong>Key Insight:</strong> Toyota builds a circular factory in Poland processing 20K retired vehicles annually; VW plans to launch ID.Polo in 2026 for the small EV market — facing Chinese automakers' cost advantage and tech offensive, traditional giants are building new competitive barriers through circular economy, lifecycle services, and market segment differentiation.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>丰田波兰循环工厂占地2.5万平方米，年处理2万辆退役汽车，提取铜、钢、铝、塑料等原材料用于新车生产</span><span data-en>Toyota Poland circular factory covers 25,000 sqm, processes 20K retired vehicles annually, extracting copper, steel, aluminum, plastics for new vehicle production</span></li>
+      <li><span data-zh>丰田依托全球1.5亿台保有车辆，将业务延伸至维修保养、二手车交易、零件供应等领域</span><span data-en>Toyota leverages 150M global vehicle fleet to extend into maintenance, used car trading, parts supply</span></li>
+      <li><span data-zh>大众电动车累计交付突破200万辆，计划2026年推出ID.Polo切入小型电动车市场</span><span data-en>VW cumulative EV deliveries exceeded 2M; plans to launch ID.Polo in 2026 for small EV segment</span></li>
+      <li><span data-zh>大众ID.4和ID.3贡献了大部分交付量，茨维考工厂已全面转型为电动车专属生产基地</span><span data-en>VW ID.4 and ID.3 contributed most deliveries; Zwickau factory fully converted to EV-exclusive production</span></li>
+      <li><span data-zh>SKODA计划将电动车年产能提升至20万辆，2026年扩充纯电车型阵容（入门款Epiq和旗舰款Peaq）</span><span data-en>SKODA plans to raise EV annual capacity to 200K, expanding BEV lineup in 2026 (entry-level Epiq and flagship Peaq)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险一：电动车安全缺陷频发，品牌信任危机蔓延</span><span data-en>Risk 1: Frequent EV Safety Defects Trigger Spreading Brand Trust Crisis</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>小米SU7电子门把手致命缺陷、领克Z20语音助手误关大灯撞护栏、特斯拉多款车型登不可靠榜单——电动车智能化功能的安全边界尚未被充分验证，任何一起致命事故都可能引发消费者对整个品类的信任危机。中国已出台全球首个强制机械拉手法规（2027年1月生效），预计将引发全球范围的安全标准升级。</span><span data-en>Xiaomi SU7 e-door handle fatal defect, Lynk&Co Z20 voice assistant headlight incident, Tesla models on unreliable lists — EV smart feature safety boundaries remain unverified. Any fatal accident could trigger consumer trust crisis for the entire category. China issued the world's first mandatory mechanical handle regulation (effective Jan 2027), expected to trigger global safety standard upgrades.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>各国电动车安全法规修订进度；小米SU7召回决策（现有37万辆第一代车型仍存隐患）；TPMS隐私漏洞的行业应对方案</span><span data-en>EV safety regulation revision progress in various countries; Xiaomi SU7 recall decision (370K 1st-gen vehicles still at risk); industry response to TPMS privacy vulnerabilities</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险二：全球大规模召回事件密集爆发，供应链质量管控压力陡增</span><span data-en>Risk 2: Global Mass Recalls Intensify; Supply Chain Quality Control Pressure Surges</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>2026年2月单月内，福特召回超490万辆（拖车控制模块故障）、宝马两次召回超93万辆（起火风险）、日产召回超64万辆（引擎及节气门问题）、Stellantis和欧宝因高田气囊发起大规模召回。召回频率和规模的同步上升，反映出在电动化转型加速期，车企在新技术验证和供应链质量管控上面临系统性压力。</span><span data-en>In Feb 2026 alone: Ford recalled 4.9M+ vehicles (trailer control module), BMW recalled 930K+ twice (fire risk), Nissan recalled 640K+ (engine & throttle issues), Stellantis and Opel launched mass Takata airbag recalls. The simultaneous rise in recall frequency and scale reflects systemic pressure on automakers in new tech validation and supply chain quality control during accelerated EV transition.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>福特490万辆召回的OTA修复完成率（目标5月前全部完成）；宝马起火风险召回的实际事故发生情况；高田气囊召回的全球收尾进度</span><span data-en>Ford 4.9M recall OTA fix completion rate (target: all by May); BMW fire risk recall actual incident occurrence; Takata airbag recall global completion progress</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险三：电动化转型节奏失控导致巨额亏损，行业洗牌加速</span><span data-en>Risk 3: Uncontrolled EV Transition Pace Causes Massive Losses; Industry Shakeout Accelerates</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>Stellantis全年亏损223亿欧元、Aston Martin亏损6.66亿美元并裁员20%、日产亏损62亿美元并关闭两座海外工厂、Rivian每辆车亏损3.9万美元——电动化转型中的"中间地带"最为危险，既无法回到燃油车的利润舒适区，又未能在电动车市场建立成本优势的企业，正面临生存威胁。</span><span data-en>Stellantis lost €22.3B, Aston Martin lost $666M with 20% layoffs, Nissan lost $6.2B closing two overseas plants, Rivian lost $39K per vehicle — the "middle ground" in EV transition is most dangerous. Companies that can neither return to ICE profit comfort zones nor establish EV cost advantages face existential threats.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>Stellantis重启燃油车战略后的季度财报表现；日产全球产量削减20%后的产能利用率；Aston Martin首款纯电车推迟至2030年代后的现金流状况</span><span data-en>Stellantis quarterly results after ICE restart strategy; Nissan capacity utilization after 20% global production cut; Aston Martin cash flow after first BEV delayed to 2030s</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险四：德国车企柴油排放卡特尔后续制裁风险</span><span data-en>Risk 4: German Automaker Diesel Emission Cartel Follow-Up Sanction Risk</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>宝马、大众、奥迪、保时捷自2006年起秘密限制柴油净化技术的卡特尔协议被进一步披露，欧盟已罚款近9亿欧元，但最新文件显示协议时间早于此前声称，不排除追加制裁的可能。</span><span data-en>BMW, VW, Audi, Porsche's secret cartel agreement since 2006 to limit diesel emission cleaning technology has been further disclosed. EU has fined nearly €900M, but latest documents show the agreement predates previous claims, with additional sanctions possible.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>欧洲委员会是否参与后续诉讼；伦敦最高法院案件进展；对德国车企品牌声誉和合规成本的长期影响</span><span data-en>Whether European Commission joins follow-up litigation; London Supreme Court case progress; long-term impact on German automaker brand reputation and compliance costs</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q2-Q3</div>
+      <div class="timeline-text"><span data-zh>SKODA Mladá Boleslav CTP电池工厂投产进度，以及大众ID.Polo的正式发布时间——这将检验欧洲车企电池自主化和小型电动车战略的落地能力</span><span data-en>SKODA Mladá Boleslav CTP battery factory production progress and VW ID.Polo official launch — testing European automakers' battery autonomy and small EV strategy execution</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年下半年</span><span data-en>2026 H2</span></div>
+      <div class="timeline-text"><span data-zh>XPeng人形机器人"IRON"量产目标能否达成，以及与大众VLA 2.0自动驾驶系统的量产应用情况——这是中国科技车企多元化转型的关键验证节点</span><span data-en>Whether XPeng humanoid robot "IRON" mass production target is achieved, and VW VLA 2.0 autonomous driving system mass production — key validation point for Chinese tech automaker diversification</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2027年1月</span><span data-en>Jan 2027</span></div>
+      <div class="timeline-text"><span data-zh>中国强制机械车门拉手法规正式生效，届时需关注已获型式批准车型的设计整改进度，以及该法规是否引发欧美市场的跟进立法</span><span data-en>China's mandatory mechanical door handle regulation takes effect; watch design rectification progress for type-approved models and whether EU/US markets follow with similar legislation</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年Q2起</span><span data-en>From Q2 2026</span></div>
+      <div class="timeline-text"><span data-zh>欧盟PHEV排放计算规则修订的具体方案——若"使用因子"大幅调整，将直接影响车企的PHEV产品规划和碳排放合规策略</span><span data-en>EU PHEV emission calculation rule revision specifics — if "utility factor" is significantly adjusted, it will directly impact automakers' PHEV product planning and carbon compliance strategies</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年2月的全球汽车行业呈现出三条清晰的主线：第一，中国车企从"市场参与者"升级为"格局塑造者"，BYD、SAIC、Geely集体进入全球前十，同时通过海外建厂、充电网络布局和品牌渗透实现深度全球化；第二，电动化转型进入"分化期"，Stellantis巨亏后重启燃油车、特斯拉产能利用率跌破四成、PHEV实际排放超标300%，表明行业正在从"全面冲刺电动化"转向"务实评估转型节奏"；第三，竞争维度从"电动化"延伸至"智能化"，现代9万亿韩元押注AI与氢能、XPeng布局机器人与软件授权、Waymo无人出租车市场份额超Lyft，预示着下一阶段的竞争将围绕AI、自动驾驶和多元化业务展开。</span><span data-en>The global auto industry in Feb 2026 shows three clear themes: First, Chinese automakers upgraded from "market participants" to "landscape shapers" — BYD, SAIC, Geely collectively entered the global top 10 while achieving deep globalization through overseas factories, charging networks, and brand penetration. Second, EV transition entered a "divergence period" — Stellantis restarted ICE after massive losses, Tesla utilization fell below 40%, PHEV actual emissions exceeded standards by 300%, indicating the industry is shifting from "all-out EV sprint" to "pragmatic pace assessment." Third, competition extended from "electrification" to "intelligence" — Hyundai's KRW 9T AI & hydrogen bet, XPeng's robot & software licensing, Waymo's robotaxi share exceeding Lyft signal that next-stage competition will center on AI, autonomous driving, and diversified businesses.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>中国车企全球市场份额持续扩大，BYD欧洲注册量同比增长165%，合资品牌在中国市场加速萎缩</span><span data-en>Chinese automakers' global market share continues expanding; BYD European registrations +165% YoY; JV brands accelerating decline in China</span></li>
+        <li><span data-zh>韩国电动车市场价格战打破"进口车昂贵"认知，沃尔沃EX30降价后与国产车同价，电池成本下降为降价提供空间</span><span data-en>Korean EV market price war breaks "expensive imports" perception; Volvo EX30 priced at domestic level after cuts; battery cost decline enables price reductions</span></li>
+        <li><span data-zh>充电基础设施成为新竞争维度，IONNA联盟、BYD独立网络、ChargePoint生态模式三种路径并行</span><span data-en>Charging infrastructure becomes new competitive dimension; three parallel paths: IONNA alliance, BYD independent network, ChargePoint ecosystem model</span></li>
+        <li><span data-zh>传统豪华品牌承压，Aston Martin裁员20%、亏损6.66亿美元，首款纯电车推迟至2030年代</span><span data-en>Traditional luxury brands under pressure; Aston Martin 20% layoffs, $666M loss, first BEV delayed to 2030s</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>电动化转型"中间地带"风险最高：Stellantis亏损223亿欧元、日产亏损62亿美元、Rivian每辆车亏损3.9万美元，转型节奏失控将直接威胁企业生存</span><span data-en>EV transition "middle ground" carries highest risk: Stellantis €22.3B loss, Nissan $6.2B loss, Rivian $39K loss per vehicle; uncontrolled transition pace directly threatens survival</span></li>
+        <li><span data-zh>智能化安全缺陷可能引发系统性品牌危机：电子门把手、语音控制、TPMS隐私漏洞等问题暴露出智能化功能的安全验证不足</span><span data-en>Smart feature safety defects may trigger systemic brand crisis: e-door handles, voice control, TPMS privacy vulnerabilities expose insufficient safety validation</span></li>
+        <li><span data-zh>大规模召回事件密集爆发：2026年2月单月福特490万辆、宝马93万辆、日产64万辆，供应链质量管控压力显著上升</span><span data-en>Mass recalls intensify: Feb 2026 alone — Ford 4.9M, BMW 930K, Nissan 640K; supply chain quality control pressure significantly rising</span></li>
+        <li><span data-zh>PHEV排放规则修订将改变合规策略：实际碳排放超官方300%的数据可能导致欧盟大幅收紧PHEV的排放计算优惠</span><span data-en>PHEV emission rule revision will change compliance strategies: actual emissions exceeding official data by 300% may lead EU to significantly tighten PHEV emission calculation benefits</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>电动化节奏校准：</span><span data-en>EV Pace Calibration: </span></strong><span data-zh>鉴于Stellantis激进电动化导致223亿欧元巨亏的教训，车企应根据目标市场的充电基础设施成熟度和消费者接受度，制定差异化的电动化时间表</span><span data-en>Given Stellantis' €22.3B loss from aggressive EV strategy, automakers should develop differentiated EV timelines based on target market charging infrastructure maturity and consumer acceptance</span></li>
+        <li><strong><span data-zh>新兴市场产能前置：</span><span data-en>Emerging Market Capacity: </span></strong><span data-zh>参考长城巴西20亿美元建厂和铃木印度产能翻倍至400万辆的布局，有全球化意图的车企应在2027年前完成东南亚和南美的本地化产能规划</span><span data-en>Following GWM's $2B Brazil plant and Suzuki's India capacity doubling to 4M, automakers with global ambitions should complete SE Asia and South America localized capacity planning by 2027</span></li>
+        <li><strong><span data-zh>智能化安全合规前置：</span><span data-en>Smart Safety Compliance: </span></strong><span data-zh>中国2027年强制机械拉手法规是全球首例，预计将引发连锁立法效应，车企应立即审查现有车型的智能化功能安全边界</span><span data-en>China's 2027 mandatory mechanical handle regulation is a global first, expected to trigger chain legislation; automakers should immediately review smart feature safety boundaries of existing models</span></li>
+        <li><strong><span data-zh>充电生态布局：</span><span data-en>Charging Ecosystem: </span></strong><span data-zh>BYD计划2026年底在欧洲布局3000座超充站、IONNA八大车企联盟共建网络的趋势表明，充电基础设施已成为电动车竞争的核心要素</span><span data-en>BYD's plan for 3,000 European supercharging stations by end of 2026 and IONNA's 8-automaker alliance show charging infrastructure has become a core element of EV competition</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月</span><span data-en>Published: April 2026</span><br>
+    <span data-zh>本报告基于2026年2月汽车行业资讯月报编制，仅供参考，不构成投资建议。</span><span data-en>Based on Automotive Industry Monthly Report February 2026. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

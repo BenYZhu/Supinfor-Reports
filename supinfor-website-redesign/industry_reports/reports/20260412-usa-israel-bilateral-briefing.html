@@ -1,0 +1,1302 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美国与以色列双边动态速览 | 2026-03-30 — 2026-04-12</title>
+<meta name="description" content="Supinfor 区域国别实时监测平台 — 美国与以色列双边动态速览">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['Noto Serif SC', 'serif'],
+        display: ['Oswald', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0a1628', 800: '#0f1f3a', 700: '#162a4a', 600: '#1e3a5f' },
+        alert: '#ef4444',
+        amber: '#f59e0b',
+        ice: '#38bdf8',
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ===== BASE & THEME VARIABLES ===== */
+:root {
+  --bg-primary: #0a1628;
+  --bg-secondary: #0f1f3a;
+  --bg-card: #162a4a;
+  --bg-card-hover: #1e3a5f;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: rgba(56, 189, 248, 0.15);
+  --border-accent: rgba(56, 189, 248, 0.3);
+  --glow-ice: rgba(56, 189, 248, 0.1);
+  --glow-red: rgba(239, 68, 68, 0.1);
+  --glow-amber: rgba(245, 158, 11, 0.1);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+  --hero-gradient: linear-gradient(135deg, #0a1628 0%, #162a4a 30%, #1e3a5f 50%, #0f1f3a 70%, #0a1628 100%);
+}
+[data-theme="light"] {
+  --bg-primary: #f1f5f9;
+  --bg-secondary: #e2e8f0;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border-color: rgba(15, 23, 42, 0.1);
+  --border-accent: rgba(15, 23, 42, 0.2);
+  --glow-ice: rgba(56, 189, 248, 0.08);
+  --glow-red: rgba(239, 68, 68, 0.08);
+  --glow-amber: rgba(245, 158, 11, 0.08);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.08);
+  --hero-gradient: linear-gradient(135deg, #1e3a5f 0%, #0f4c81 30%, #1a6fb5 50%, #0f4c81 70%, #1e3a5f 100%);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Serif SC', serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: #38bdf8; border-radius: 3px; }
+
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(10, 22, 40, 0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+[data-theme="light"] .site-header {
+  background: rgba(241, 245, 249, 0.9);
+}
+.header-inner {
+  max-width: 1200px; margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.header-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  color: #38bdf8;
+}
+.header-controls { display: flex; gap: 0.5rem; align-items: center; }
+.btn-icon {
+  width: 36px; height: 36px; border-radius: 8px;
+  border: 1px solid var(--border-accent);
+  background: transparent; color: var(--text-primary);
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: all 0.3s ease; font-size: 0.9rem;
+}
+.btn-icon:hover { background: var(--glow-ice); border-color: #38bdf8; color: #38bdf8; }
+
+/* ===== TOC ===== */
+.toc-overlay {
+  position: fixed; inset: 0; z-index: 1100;
+  background: rgba(0,0,0,0.6); opacity: 0;
+  pointer-events: none; transition: opacity 0.3s ease;
+}
+.toc-overlay.active { opacity: 1; pointer-events: all; }
+.toc-panel {
+  position: fixed; top: 0; right: -360px; z-index: 1200;
+  width: 340px; max-width: 90vw; height: 100vh;
+  background: var(--bg-secondary);
+  border-left: 1px solid var(--border-accent);
+  padding: 2rem 1.5rem; overflow-y: auto;
+  transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.toc-panel.active { right: 0; }
+.toc-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem; font-weight: 600;
+  color: #38bdf8; letter-spacing: 2px;
+  margin-bottom: 1.5rem; text-transform: uppercase;
+}
+.toc-link {
+  display: block; padding: 0.5rem 0;
+  color: var(--text-secondary); text-decoration: none;
+  font-size: 0.9rem; border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+.toc-link:hover { color: #38bdf8; padding-left: 0.5rem; }
+.toc-close {
+  position: absolute; top: 1rem; right: 1rem;
+  background: none; border: none; color: var(--text-secondary);
+  cursor: pointer; font-size: 1.2rem;
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: var(--hero-gradient);
+  position: relative; overflow: hidden; padding: 6rem 1.5rem 4rem;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 800px 600px at 20% 50%, rgba(239,68,68,0.08) 0%, transparent 70%),
+    radial-gradient(ellipse 600px 400px at 80% 30%, rgba(56,189,248,0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 400px 300px at 50% 80%, rgba(245,158,11,0.06) 0%, transparent 70%);
+  animation: heroGlow 8s ease-in-out infinite alternate;
+}
+@keyframes heroGlow {
+  0% { opacity: 0.6; }
+  100% { opacity: 1; }
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(56,189,248,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56,189,248,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; }
+.hero-badge {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 3px; text-transform: uppercase;
+  color: #ef4444; border: 1px solid rgba(239,68,68,0.4);
+  padding: 0.35rem 1.2rem; border-radius: 2px;
+  margin-bottom: 1.5rem;
+  animation: badgePulse 2s ease-in-out infinite;
+}
+@keyframes badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.3); }
+  50% { box-shadow: 0 0 20px 4px rgba(239,68,68,0.15); }
+}
+.hero-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700; line-height: 1.2;
+  color: #ffffff; margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+[data-theme="light"] .hero-title { color: #ffffff; }
+.hero-subtitle {
+  font-size: 1.1rem; color: rgba(255,255,255,0.7);
+  margin-bottom: 0.5rem;
+}
+.hero-period {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem; color: #38bdf8;
+  letter-spacing: 2px; margin-bottom: 2rem;
+}
+.hero-meta {
+  font-size: 0.85rem; color: rgba(255,255,255,0.5);
+  line-height: 1.8;
+}
+.hero-divider {
+  width: 60px; height: 2px; background: #38bdf8;
+  margin: 1.5rem auto;
+}
+
+/* ===== STAT CARDS ===== */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem; max-width: 1200px;
+  margin: -3rem auto 3rem; padding: 0 1.5rem;
+  position: relative; z-index: 10;
+}
+@media (max-width: 768px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: -2rem; }
+}
+.stat-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px; padding: 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+.stat-card:hover { transform: translateY(-4px); border-color: var(--border-accent); }
+.stat-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2.5rem; font-weight: 700;
+  color: #38bdf8; line-height: 1;
+}
+.stat-number.red { color: #ef4444; }
+.stat-number.amber { color: #f59e0b; }
+.stat-label {
+  font-size: 0.8rem; color: var(--text-muted);
+  margin-top: 0.5rem; letter-spacing: 1px;
+  font-family: 'Oswald', sans-serif; text-transform: uppercase;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem 4rem; }
+
+/* ===== SECTION ===== */
+.section { margin-bottom: 4rem; }
+.section-header {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 2rem; padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.section-number {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  color: #38bdf8; letter-spacing: 2px;
+  border: 1px solid rgba(56,189,248,0.3);
+  padding: 0.25rem 0.75rem; border-radius: 2px;
+  white-space: nowrap;
+}
+.section-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem; font-weight: 600;
+  color: var(--text-primary); letter-spacing: 1px;
+}
+
+/* ===== OVERVIEW TEXT ===== */
+.overview-text {
+  font-size: 1rem; line-height: 2;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* ===== BAR CHART ===== */
+.bar-chart { margin: 2rem 0; }
+.bar-row {
+  display: flex; align-items: center; gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+.bar-label {
+  width: 50px; text-align: right;
+  font-size: 0.85rem; color: var(--text-secondary);
+  font-weight: 500; flex-shrink: 0;
+}
+.bar-track {
+  flex: 1; height: 28px;
+  background: rgba(56,189,248,0.05);
+  border-radius: 4px; overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%; border-radius: 4px;
+  display: flex; align-items: center;
+  padding-left: 0.75rem;
+  font-size: 0.75rem; font-weight: 600;
+  color: #fff; white-space: nowrap;
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  min-width: fit-content;
+}
+.bar-fill.defense { background: linear-gradient(90deg, #ef4444, #dc2626); }
+.bar-fill.diplomacy { background: linear-gradient(90deg, #f59e0b, #d97706); }
+.bar-fill.politics { background: linear-gradient(90deg, #8b5cf6, #7c3aed); }
+.bar-fill.economy { background: linear-gradient(90deg, #38bdf8, #0ea5e9); }
+.bar-fill.livelihood { background: linear-gradient(90deg, #10b981, #059669); }
+.bar-fill.medical { background: linear-gradient(90deg, #ec4899, #db2777); }
+.bar-fill.industry { background: linear-gradient(90deg, #6366f1, #4f46e5); }
+.bar-fill.tech { background: linear-gradient(90deg, #14b8a6, #0d9488); }
+.bar-fill.education { background: linear-gradient(90deg, #a78bfa, #8b5cf6); }
+.bar-fill.culture { background: linear-gradient(90deg, #fb923c, #f97316); }
+.bar-fill.environment { background: linear-gradient(90deg, #22c55e, #16a34a); }
+.bar-value {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem; color: var(--text-muted);
+  width: 40px; text-align: left; flex-shrink: 0;
+}
+
+/* ===== DATA TABLE ===== */
+.data-table-wrapper {
+  overflow-x: auto; margin: 2rem 0;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+.data-table {
+  width: 100%; border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.data-table thead { background: var(--bg-card); }
+.data-table th {
+  padding: 0.75rem 1rem; text-align: left;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600; font-size: 0.8rem;
+  letter-spacing: 1px; color: #38bdf8;
+  border-bottom: 2px solid var(--border-accent);
+  text-transform: uppercase;
+}
+.data-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+.data-table tbody tr:hover { background: var(--glow-ice); }
+.data-table tbody tr:last-child td { border-bottom: none; }
+
+/* ===== CORE JUDGMENT ===== */
+.core-judgment {
+  background: var(--bg-card);
+  border-left: 4px solid #38bdf8;
+  border-radius: 0 8px 8px 0;
+  padding: 1.5rem 2rem; margin: 2rem 0;
+  box-shadow: var(--shadow-card);
+}
+.core-judgment-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem; font-weight: 600;
+  color: #38bdf8; letter-spacing: 2px;
+  margin-bottom: 0.75rem; text-transform: uppercase;
+}
+.core-judgment p {
+  color: var(--text-secondary); line-height: 2;
+  font-size: 0.95rem;
+}
+
+/* ===== EVENT CARD ===== */
+.event-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px; padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+.event-card:hover { border-color: var(--border-accent); }
+.event-card.severity-red { border-left: 4px solid #ef4444; }
+.event-card.severity-amber { border-left: 4px solid #f59e0b; }
+.event-card.severity-green { border-left: 4px solid #22c55e; }
+.event-badge {
+  display: inline-block;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 0.2rem 0.75rem; border-radius: 2px;
+  margin-bottom: 0.75rem;
+}
+.event-badge.red { background: rgba(239,68,68,0.15); color: #ef4444; border: 1px solid rgba(239,68,68,0.3); }
+.event-badge.amber { background: rgba(245,158,11,0.15); color: #f59e0b; border: 1px solid rgba(245,158,11,0.3); }
+.event-badge.green { background: rgba(34,197,94,0.15); color: #22c55e; border: 1px solid rgba(34,197,94,0.3); }
+.event-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem; font-weight: 600;
+  color: var(--text-primary); margin-bottom: 1rem;
+  line-height: 1.4;
+}
+.event-summary {
+  color: var(--text-secondary); line-height: 2;
+  margin-bottom: 1.25rem; font-size: 0.95rem;
+}
+.event-summary strong { color: var(--text-primary); }
+.event-details {
+  margin-bottom: 1.25rem;
+}
+.event-details-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.8rem; font-weight: 600;
+  color: #f59e0b; letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+.event-details ul {
+  list-style: none; padding: 0;
+}
+.event-details li {
+  position: relative; padding-left: 1.25rem;
+  margin-bottom: 0.5rem; color: var(--text-secondary);
+  font-size: 0.9rem; line-height: 1.8;
+}
+.event-details li::before {
+  content: ''; position: absolute; left: 0; top: 0.7rem;
+  width: 6px; height: 6px; border-radius: 50%;
+  background: #38bdf8;
+}
+.insight-box {
+  background: rgba(56,189,248,0.05);
+  border: 1px solid rgba(56,189,248,0.15);
+  border-radius: 6px; padding: 1.25rem 1.5rem;
+  margin-top: 1rem;
+}
+.insight-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem; font-weight: 600;
+  color: #38bdf8; letter-spacing: 2px;
+  margin-bottom: 0.5rem; text-transform: uppercase;
+}
+.insight-box p {
+  color: var(--text-secondary); font-size: 0.9rem; line-height: 2;
+}
+.lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;font-size:.82rem}
+.lang-toggle button{background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:.82rem;font-weight:500;transition:all .2s}
+.lang-toggle button.active{background:var(--accent,#38bdf8);color:#0A1628;font-weight:700}
+.lang-toggle button:hover:not(.active){background:rgba(56,189,248,.2)}
+[data-lang="zh"] .lang-en{display:none!important}
+[data-lang="en"] .lang-zh{display:none!important}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="header-inner">
+    <div class="header-title"><i class="fas fa-satellite-dish" style="margin-right:6px;"></i> INTELLIGENCE BRIEFING</div>
+    <div class="header-controls">
+      <div class="lang-toggle">
+        <button onclick="setLang('zh')" class="active">中</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+      <button class="btn-icon" id="tocToggle" title="目录导航"><i class="fas fa-bars"></i></button>
+      <button class="btn-icon" id="themeToggle" title="切换主题"><i class="fas fa-moon"></i></button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== TOC OVERLAY ===== -->
+<div class="toc-overlay" id="tocOverlay"></div>
+<nav class="toc-panel" id="tocPanel">
+  <button class="toc-close" id="tocClose"><i class="fas fa-times"></i></button>
+  <div class="toc-title"><i class="fas fa-list"></i> <span class="lang-zh">报告目录</span><span class="lang-en">Table of Contents</span></div>
+  <a class="toc-link" href="#overview"><span class="lang-zh">一、总览：美国与以色列关联度评估</span><span class="lang-en">I. Overview: U.S.-Israel Correlation Assessment</span></a>
+  <a class="toc-link" href="#events"><span class="lang-zh">二、第一周重要事件（3/30-4/5）</span><span class="lang-en">II. Week 1 Key Events (3/30-4/5)</span></a>
+  <a class="toc-link" href="#event1" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件一：美军F-15E战机被击落</span><span class="lang-en">Event 1: U.S. F-15E Shot Down</span></a>
+  <a class="toc-link" href="#event2" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件二：特朗普全国讲话</span><span class="lang-en">Event 2: Trump National Address</span></a>
+  <a class="toc-link" href="#event3" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件三：北约裂痕扩大</span><span class="lang-en">Event 3: NATO Rift Widens</span></a>
+  <a class="toc-link" href="#event4" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件四：霍尔木兹海峡危机</span><span class="lang-en">Event 4: Hormuz Strait Crisis</span></a>
+  <a class="toc-link" href="#event5" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件五：美国国内反战情绪</span><span class="lang-en">Event 5: U.S. Anti-War Sentiment</span></a>
+  <a class="toc-link" href="#event6" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件六：密歇根犹太会堂遭袭</span><span class="lang-en">Event 6: Michigan Synagogue Attack</span></a>
+  <a class="toc-link" href="#events2"><span class="lang-zh">三、第二周重要事件（4/6-4/12）</span><span class="lang-en">III. Week 2 Key Events (4/6-4/12)</span></a>
+  <a class="toc-link" href="#event7" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件七：美伊达成两周停火</span><span class="lang-en">Event 7: U.S.-Iran Two-Week Ceasefire</span></a>
+  <a class="toc-link" href="#event8" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件八：伊斯兰堡和谈破裂</span><span class="lang-en">Event 8: Islamabad Talks Collapse</span></a>
+  <a class="toc-link" href="#event9" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件九：以色列持续空袭黎巴嫩</span><span class="lang-en">Event 9: Israel Continues Lebanon Strikes</span></a>
+  <a class="toc-link" href="#event10" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件十：美国民众对以好感度暴跌</span><span class="lang-en">Event 10: U.S. Favorability Toward Israel Plummets</span></a>
+  <a class="toc-link" href="#event11" style="padding-left:1rem;font-size:0.82rem;"><span class="lang-zh">事件十一：特朗普与MAGA阵营公开决裂</span><span class="lang-en">Event 11: Trump-MAGA Public Split</span></a>
+  <a class="toc-link" href="#trends"><span class="lang-zh">四、趋势观察</span><span class="lang-en">IV. Trend Observations</span></a>
+  <a class="toc-link" href="#risks"><span class="lang-zh">五、风险警示</span><span class="lang-en">V. Risk Alerts</span></a>
+  <a class="toc-link" href="#cooperation"><span class="lang-zh">六、合作亮点</span><span class="lang-en">VI. Cooperation Highlights</span></a>
+  <a class="toc-link" href="#nextweek"><span class="lang-zh">七、下周关注点</span><span class="lang-en">VII. Next Week Watch</span></a>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top">
+  <div class="hero-content reveal">
+    <div class="hero-badge"><i class="fas fa-shield-halved"></i> <span class="lang-zh">战时情报简报 · CLASSIFIED BRIEFING</span><span class="lang-en">WARTIME INTELLIGENCE · CLASSIFIED BRIEFING</span></div>
+    <h1 class="hero-title"><span class="lang-zh">美国与以色列<br>双边动态速览</span><span class="lang-en">U.S.-Israel<br>Bilateral Dynamics Express</span></h1>
+    <div class="hero-divider"></div>
+    <div class="hero-period">2026-03-30 — 2026-04-12</div>
+    <div class="hero-subtitle"><span class="lang-zh">Operation "Epic Fury" 第五至第七周 · 从战时绑定到停火博弈</span><span class="lang-en">Operation "Epic Fury" Weeks 5–7 · From Wartime Binding to Ceasefire Maneuvering</span></div>
+    <div class="hero-meta">
+      <p><span class="lang-zh">数据来源：Supinfor 区域国别实时监测平台</span><span class="lang-en">Source: Supinfor Country Monitoring Platform</span></p>
+      <p><span class="lang-zh">数据规模：原始 1184 条 · URL 去重后 491 条 · 覆盖 11 个栏目</span><span class="lang-en">Data Scale: 1,184 raw · 491 deduplicated · 11 categories</span></p>
+      <p><span class="lang-zh">报告编制：Supinfor Ltd.</span><span class="lang-en">Publisher: Supinfor Ltd.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAT CARDS ===== -->
+<div class="stat-grid">
+  <div class="stat-card reveal">
+    <div class="stat-number">1184</div>
+    <div class="stat-label"><span class="lang-zh">原始数据</span><span class="lang-en">Raw Data</span></div>
+  </div>
+  <div class="stat-card reveal">
+    <div class="stat-number">491</div>
+    <div class="stat-label"><span class="lang-zh">去重后</span><span class="lang-en">Deduplicated</span></div>
+  </div>
+  <div class="stat-card reveal">
+    <div class="stat-number amber">59%</div>
+    <div class="stat-label"><span class="lang-zh">去重率</span><span class="lang-en">Dedup Rate</span></div>
+  </div>
+  <div class="stat-card reveal">
+    <div class="stat-number red">11</div>
+    <div class="stat-label"><span class="lang-zh">覆盖栏目</span><span class="lang-en">Categories</span></div>
+  </div>
+</div>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content">
+
+<!-- ===== SECTION 1: 本周总览 ===== -->
+<section class="section" id="overview">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 01</span>
+    <h2 class="section-title"><span class="lang-zh">总览：美国与以色列关联度评估</span><span class="lang-en">Overview: U.S.-Israel Correlation Assessment</span></h2>
+  </div>
+
+  <div class="overview-text reveal">
+    本报告覆盖两周（3月30日-4月12日），是美以联合对伊朗军事行动"史诗怒火"（Epic Fury）的第五至第七周。第一周（3/30-4/5）美以处于战时最高强度绑定状态，以色列深度参与美军搜救和联合空袭；第二周（4/6-4/12）局势发生戏剧性转折——特朗普在最后通牒到期前宣布两周停火，美伊在巴基斯坦伊斯兰堡举行1979年以来最高级别直接谈判，但21小时马拉松会谈最终破裂，特朗普随即宣布美海军封锁霍尔木兹海峡。以色列在停火期间持续空袭黎巴嫩，成为破坏停火的关键变量。
+  </div>
+
+  <!-- Bar Chart -->
+  <h3 style="font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;color:#38bdf8;letter-spacing:2px;margin-bottom:1rem;text-transform:uppercase;" class="reveal"><i class="fas fa-chart-bar" style="margin-right:6px;"></i> <span class="lang-zh">栏目命中量分布</span><span class="lang-en">CATEGORY HIT DISTRIBUTION</span></h3>
+  <div class="bar-chart reveal">
+    <div class="bar-row"><span class="bar-label">政治</span><div class="bar-track"><div class="bar-fill politics" style="width:100%">272 · 23.0%</div></div></div>
+    <div class="bar-row"><span class="bar-label">外交</span><div class="bar-track"><div class="bar-fill diplomacy" style="width:92.3%">250 · 21.1%</div></div></div>
+    <div class="bar-row"><span class="bar-label">国防</span><div class="bar-track"><div class="bar-fill defense" style="width:64.3%">303 · 25.6%</div></div></div>
+    <div class="bar-row"><span class="bar-label">经济</span><div class="bar-track"><div class="bar-fill economy" style="width:48.9%">133 · 11.2%</div></div></div>
+    <div class="bar-row"><span class="bar-label">民生</span><div class="bar-track"><div class="bar-fill livelihood" style="width:15.1%">41 · 3.5%</div></div></div>
+    <div class="bar-row"><span class="bar-label">科技</span><div class="bar-track"><div class="bar-fill tech" style="width:7.0%">19 · 1.6%</div></div></div>
+    <div class="bar-row"><span class="bar-label">医疗</span><div class="bar-track"><div class="bar-fill medical" style="width:5.1%">14 · 1.2%</div></div></div>
+    <div class="bar-row"><span class="bar-label">产业</span><div class="bar-track"><div class="bar-fill industry" style="width:5.9%">16 · 1.4%</div></div></div>
+    <div class="bar-row"><span class="bar-label">教育</span><div class="bar-track"><div class="bar-fill education" style="width:2.6%">7</div></div></div>
+    <div class="bar-row"><span class="bar-label">人文</span><div class="bar-track"><div class="bar-fill culture" style="width:4.0%">11</div></div></div>
+    <div class="bar-row"><span class="bar-label">环保</span><div class="bar-track"><div class="bar-fill environment" style="width:0.7%">2</div></div></div>
+  </div>
+
+  <!-- Data Table -->
+  <div class="data-table-wrapper reveal">
+    <table class="data-table">
+      <thead>
+        <tr><th><span class="lang-zh">栏目</span><span class="lang-en">Category</span></th><th><span class="lang-zh">命中量</span><span class="lang-en">Hits</span></th><th><span class="lang-zh">占比</span><span class="lang-en">Share</span></th><th><span class="lang-zh">关联特征</span><span class="lang-en">Key Features</span></th></tr>
+      </thead>
+      <tbody>
+        <tr><td>国防</td><td>175</td><td>28.7%</td><td>美以联合军事行动、战机被击落、增兵部署</td></tr>
+        <tr><td>外交</td><td>166</td><td>27.3%</td><td>北约裂痕、多国斡旋、霍尔木兹海峡博弈</td></tr>
+        <tr><td>政治</td><td>130</td><td>21.3%</td><td>特朗普全国讲话、国内反战情绪、MAGA分裂</td></tr>
+        <tr><td>经济</td><td>71</td><td>11.7%</td><td>油价飙升、金融市场动荡、通胀压力</td></tr>
+        <tr><td>民生</td><td>24</td><td>3.9%</td><td>美国犹太社区安全、汽油价格冲击</td></tr>
+        <tr><td>医疗</td><td>13</td><td>2.1%</td><td>伊朗医疗设施遭袭、美国医保争议</td></tr>
+        <tr><td>产业</td><td>11</td><td>1.8%</td><td>航空燃油附加费、能源资产竞购</td></tr>
+        <tr><td>科技</td><td>9</td><td>1.5%</td><td>伊朗威胁美科技企业、AI药物研发合作</td></tr>
+        <tr><td>教育</td><td>5</td><td>0.8%</td><td>美国高校亲巴勒斯坦抗议</td></tr>
+        <tr><td>人文</td><td>3</td><td>0.5%</td><td>犹太逾越节、反犹事件</td></tr>
+        <tr><td>环保</td><td>2</td><td>0.3%</td><td>白磷弹药争议</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Core Judgment -->
+  <div class="core-judgment reveal">
+    <div class="core-judgment-title"><i class="fas fa-crosshairs"></i> <span class="lang-zh">核心判断</span><span class="lang-en">CORE JUDGMENT</span></div>
+    <p>两周内美以关系经历了从"战时深度绑定"到"停火博弈分化"的急剧转变。第一周两国在军事行动上高度协同，第二周则因停火谈判出现裂痕——美国急于脱身寻求外交解决，以色列却拒绝将黎巴嫩纳入停火范围并持续空袭真主党，成为破坏停火的关键变量。伊朗提出的10点和平方案以美方接受为谈判基础，标志着美以联合行动的战略目标（政权更迭、彻底去核）已基本落空。美国国内对以色列好感度暴跌至37%，MAGA阵营公开分裂，美以关系正从"无条件支持"向"有条件合作"转型。</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: 本周重要事件 ===== -->
+<section class="section" id="events">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 02</span>
+    <h2 class="section-title"><span class="lang-zh">第一周重要事件（3/30-4/5）</span><span class="lang-en">Week 1 Key Events (3/30-4/5)</span></h2>
+  </div>
+
+  <!-- Event 1 -->
+  <div class="event-card severity-red reveal" id="event1">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件一：美军F-15E战机在伊朗境内被击落，搜救行动惊心动魄（4月3-5日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>4月3日，美军一架F-15E"攻击鹰"战机在伊朗境内被伊朗防空系统击落，两名机组人员弹射逃生。一人较快获救，另一名武器系统官在伊朗山区躲避追捕超24小时后，由数百名特种部队联合CIA实施搜救成功救出。搜救期间另有一架A-10攻击机在霍尔木兹海峡附近坠毁。伊朗宣称还击落了美军C-130运输机和黑鹰直升机。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>以色列在搜救行动中提供关键情报支持，推迟了原定对伊打击计划以配合美军搜救</li>
+        <li>特朗普称此次行动为"美军史上最大胆搜救行动之一"</li>
+        <li>伊朗宣称使用"新型先进防空系统"击落战机，暴露美军并未完全掌控伊朗空域</li>
+        <li>截至本周末，美军在此次战争中已有13人阵亡、365人受伤</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>这是美以对伊战争的转折性事件。此前特朗普政府一直宣称"掌控伊朗天空"，战机被击落直接打破了这一叙事。伊朗仍保留约半数导弹发射装置和数千架攻击无人机，其不对称战争能力远未被摧毁。以色列在搜救中的深度参与表明，两国的军事协同已超越联合空袭层面，延伸到战场救援和情报实时共享。</p>
+    </div>
+  </div>
+
+  <!-- Event 2 -->
+  <div class="event-card severity-red reveal" id="event2">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件二：特朗普发表全国讲话，威胁将伊朗"打回石器时代"（4月1-2日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>4月1日，特朗普在战争爆发一个月后首次发表全国电视讲话，宣称美军核心战略目标接近完成，将在2-3周内结束军事行动，同时威胁若伊朗不妥协将摧毁其发电厂、桥梁、石油设施等民用基础设施。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>特朗普称美以已摧毁伊朗海军、大幅削弱其空军和导弹能力，摧毁70%钢铁产能</li>
+        <li>演讲未提出清晰的战后计划和退出策略</li>
+        <li>超百名国际法专家联署公开信，指美军打击行为涉嫌战争犯罪</li>
+        <li>演讲后油价飙升至108美元/桶，全球股市下跌</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>这场演讲暴露了美以联合行动的战略困境——战术上取得了显著成果（摧毁伊朗大量军事设施），但战略上陷入僵局（伊朗仍控制霍尔木兹海峡、仍具备区域打击能力、政权未崩溃）。特朗普的"石器时代"威胁如果付诸实施，将构成对平民基础设施的系统性打击，面临严重的国际法风险。</p>
+    </div>
+  </div>
+
+  <!-- Event 3 -->
+  <div class="event-card severity-red reveal" id="event3">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件三：北约裂痕扩大，特朗普威胁退出北约（3月31日-4月2日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>法国拒绝以军使用其空域运输美军援以装备，意大利拒绝美军机经西西里基地中转，西班牙关闭参与对伊袭击的美军机空域。特朗普暴怒，在Truth Social称北约为"纸老虎""懦夫"，公开考虑退出北约。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>法、西、意三国均明确反对美以军事行动，拒绝提供后勤支持</li>
+        <li>美国国务卿鲁比奥称战后需重新审视美与北约关系</li>
+        <li>两党部分议员罕见联合反对退出北约，称此举将助力普京与习近平</li>
+        <li>英国首相斯塔默明确表示不会被拖入战争，但承诺致力于北约</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>美以联合对伊行动正在撕裂冷战以来最重要的西方军事联盟。欧洲盟友的集体拒绝不仅是对这场具体战争的反对，更是对美国单边主义的系统性抵制。以色列在这一裂痕中扮演了催化剂角色——正是因为战争被视为"美以联合行动"而非"北约行动"，欧洲才有了拒绝的正当性。</p>
+    </div>
+  </div>
+
+  <!-- Event 4 -->
+  <div class="event-card severity-amber reveal" id="event4">
+    <span class="event-badge amber"><i class="fas fa-circle"></i> 关注事件</span>
+    <h3 class="event-title">事件四：霍尔木兹海峡危机持续，全球能源市场剧烈动荡（全周）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>伊朗持续控制霍尔木兹海峡，袭击科威特油轮、海湾国家水电设施，布伦特原油价格较战前上涨近60%至108-116美元/桶，美国汽油均价突破4美元/加仑。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>IMF称霍尔木兹海峡实际断航是全球油市史上最大disruption</li>
+        <li>伊朗议会通过海峡通行收费法案，仅允许俄中印等友好国家船只通行</li>
+        <li>35国签署联合声明支持保障海峡航运安全</li>
+        <li>美国金融市场形成固定周度规律：周初涨、周末跌</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>霍尔木兹海峡已成为这场战争的战略杠杆。伊朗虽在军事上处于劣势，但通过控制全球20%石油运输的咽喉要道，成功将战争成本外溢到全球经济。这使得美以的军事优势无法转化为战略胜利——每多打一天，全球经济损失就多一天。</p>
+    </div>
+  </div>
+
+  <!-- Event 5 -->
+  <div class="event-card severity-amber reveal" id="event5">
+    <span class="event-badge amber"><i class="fas fa-circle"></i> 关注事件</span>
+    <h3 class="event-title">事件五：美国国内反战情绪上升，MAGA阵营出现分裂（全周）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>路透益普索民调显示超六成美国人希望尽快结束冲突，仅37%认可对伊行动。保守派播客主播塔克·卡尔森等公开反对战争，MAGA核心支持者出现不满。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>特朗普支持率创新低，美国爆发250年最大规模政治抗议</li>
+        <li>共和党内部出现罕见分歧，部分议员反对退出北约</li>
+        <li>民主党AOC宣布反对所有对以军事援助，包括铁穹防御系统</li>
+        <li>特朗普政府拟削减医保开支以资助2000亿美元国防预算</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>这场战争正在侵蚀特朗普的政治基础。他的核心支持者中有相当比例是反战的孤立主义者，对伊战争直接违背了"不发动新战争"的竞选承诺。以色列因素在这一分裂中尤为敏感——部分MAGA支持者将战争归因于以色列游说的影响，这种叙事正在右翼媒体中扩散。</p>
+    </div>
+  </div>
+
+  <!-- Event 6 -->
+  <div class="event-card severity-green reveal" id="event6">
+    <span class="event-badge green"><i class="fas fa-circle"></i> 一般事件</span>
+    <h3 class="event-title">事件六：密歇根犹太会堂遭受真主党启发的恐怖袭击（3月30-31日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>41岁黎巴嫩裔美籍公民Ayman Ghazali受真主党极端思想驱使，驾车撞击密歇根州Temple Israel会堂后自杀，150余名师生未受伤。FBI认定为受真主党启发的恐怖袭击。
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>美以对伊战争的外溢效应已波及美国本土安全。犹太社区年均安全成本约7.65亿美元，反犹仇恨事件在2024年达到创纪录水平。这一事件表明，美以联合军事行动不仅在中东制造了安全风险，也在美国国内激化了社会矛盾。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: 第二周重要事件 ===== -->
+<section class="section" id="events2">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 03</span>
+    <h2 class="section-title"><span class="lang-zh">第二周重要事件（4/6-4/12）</span><span class="lang-en">Week 2 Key Events (4/6-4/12)</span></h2>
+  </div>
+
+  <!-- Event 7 -->
+  <div class="event-card severity-red reveal" id="event7">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件七：美伊达成两周停火协议，特朗普收回"毁灭文明"威胁（4月7-8日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>4月7日，在特朗普设定的最后通牒到期前两小时，美伊在巴基斯坦斡旋下达成为期两周的停火协议。美以暂停对伊轰炸，伊朗同意恢复霍尔木兹海峡通航。伊朗提出10点和平方案作为谈判基础，包括保留铀浓缩权利、控制霍尔木兹海峡、解除制裁、美军撤出中东等。以色列支持停火但明确声明不适用于黎巴嫩。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>这是1979年伊朗伊斯兰革命以来美伊最高级别直接接触</li>
+        <li>停火前特朗普曾威胁"整个文明将覆灭"，引发战争罪指控和国内两党强烈反弹</li>
+        <li>美伊双方均宣称"胜利"——美方称达成军事目标，伊方称迫使美国退让</li>
+        <li>停火宣布后油价暴跌16%，全球股市上涨，但海峡实际通航量仅恢复至正常水平的10%</li>
+        <li>以色列在停火生效数小时后即对黎巴嫩发动大规模空袭，伊朗随即威胁重新封锁海峡</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>停火协议标志着美以联合行动战略目标的实质性失败——政权更迭未实现、核计划未彻底摧毁、伊朗反而获得了霍尔木兹海峡的事实控制权。以色列拒绝将黎巴嫩纳入停火范围，暴露了美以在战争目标上的根本分歧：美国急于脱身，以色列则试图利用战争窗口扩大对真主党的打击。这种分歧将成为后续美以关系的核心张力。</p>
+    </div>
+  </div>
+
+  <!-- Event 8 -->
+  <div class="event-card severity-red reveal" id="event8">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件八：美伊伊斯兰堡和谈21小时后破裂，特朗普宣布封锁海峡（4月11-12日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>美国副总统万斯率团（含库什纳、维特科夫）赴巴基斯坦伊斯兰堡，与伊朗议长加利巴夫、外长阿拉格奇率领的70人代表团进行21小时马拉松谈判。双方在伊朗核计划问题上无法达成共识——美方要求伊朗明确承诺不研发核武器，伊方坚持和平核能权利。谈判破裂后，特朗普立即宣布美海军将封锁霍尔木兹海峡，拦截向伊朗缴付通行费的船只。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>万斯称已提出"最终最佳方案"，伊方未接受；伊方称美方"未获信任"</li>
+        <li>14天停火协议将于4月22日到期，届时若无新协议，战争可能重启</li>
+        <li>两艘超大型油轮在试图穿越海峡时紧急折返，航运恢复前景黯淡</li>
+        <li>以色列未参与谈判，其持续空袭黎巴嫩被伊朗视为美方违反停火协议</li>
+        <li>伊朗第一副总统称：若美方代表坚持"以色列优先"而非"美国优先"，谈判必然失败</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>和谈破裂的深层原因不仅是美伊分歧，更是美以目标的不可调和。伊朗将以色列空袭黎巴嫩视为美方违约的证据，要求停火覆盖黎巴嫩；美国虽想达成协议但无法约束以色列；以色列则利用停火窗口加大对真主党的打击。这种三角博弈使得任何双边协议都难以持续。特朗普宣布海峡封锁是一步险棋——若伊朗反击，14天停火将提前崩溃。</p>
+    </div>
+  </div>
+
+  <!-- Event 9 -->
+  <div class="event-card severity-red reveal" id="event9">
+    <span class="event-badge red"><i class="fas fa-circle"></i> 高危事件</span>
+    <h3 class="event-title">事件九：以色列在停火期间持续空袭黎巴嫩，成为和平最大障碍（全周）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>尽管美伊达成停火，以色列明确声明停火不适用于黎巴嫩，并在整个停火期间持续对黎巴嫩南部发动大规模空袭，造成超2000人死亡。内塔尼亚胡授权与黎巴嫩开启直接谈判（定于4月14日在华盛顿），但前提条件是黎政府解除真主党武装。欧盟、英国、中国等多方批评以色列行动严重冲击停火。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>以色列要求贝鲁特八个街区民众撤离，随后发动密集空袭</li>
+        <li>伊朗革命卫队警告：若以色列不停止对黎"侵略"，将采取反击行动</li>
+        <li>伊朗因以色列袭击黎巴嫩一度暂停霍尔木兹海峡航运</li>
+        <li>欧盟外交代表称以色列行动"严重冲击停火"，多国要求停火覆盖黎巴嫩</li>
+        <li>Bloomberg报道：内塔尼亚胡与特朗普在停火问题上出现裂痕，以色列反对重启外交</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>以色列正在利用美伊停火的窗口期加速实现自身战略目标——消灭真主党。这一策略虽然短期内扩大了以色列的军事优势，但正在系统性地破坏美国的外交努力。伊朗将以色列行动视为美方默许，使得任何美伊协议都缺乏可信度。以色列从"美国最坚定的盟友"正在变成"美国外交最大的障碍"。</p>
+    </div>
+  </div>
+
+  <!-- Event 10 -->
+  <div class="event-card severity-amber reveal" id="event10">
+    <span class="event-badge amber"><i class="fas fa-circle"></i> 关注事件</span>
+    <h3 class="event-title">事件十：皮尤民调显示美国民众对以色列好感度暴跌至37%（4月9-10日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>皮尤研究中心发布最新民调，60%美国成年人对以色列持负面看法，仅37%持正面看法，较2022年累计下降20个百分点。50岁以下群体负面看法达70%，民主党及倾向民主党的独立人士负面看法达80%。不到30%受访者信任内塔尼亚胡，多数美国人认为他将美国拖入中东冲突。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>NBC民调显示57%民主党人对以色列持负面态度，较2023年10月7日前的35%大幅攀升</li>
+        <li>多数美国人反对美以联合对伊作战，77%认为以巴冲突与自身相关</li>
+        <li>民主党全国委员会会议上，承认巴勒斯坦国、限制对以军事援助的决议引发激烈辩论</li>
+        <li>多位民主党候选人拒绝AIPAC捐款，部分共和党人士也呼吁疏远以色列</li>
+        <li>共和党好感率也出现下滑，宗教群体中仅白人福音派多数仍支持以色列</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>这是美以关系的结构性转折信号。以色列首次在美国对外战争中与美国深度绑定，结果是进一步削弱了美国民众对以好感。长期来看，民意变化将传导为政策变化——未来无论哪个政党执政，对以军事援助的无条件性都将面临越来越大的政治压力。以色列依赖美国军事支持的战略基础正在被侵蚀。</p>
+    </div>
+  </div>
+
+  <!-- Event 11 -->
+  <div class="event-card severity-amber reveal" id="event11">
+    <span class="event-badge amber"><i class="fas fa-circle"></i> 关注事件</span>
+    <h3 class="event-title">事件十一：特朗普与MAGA保守派评论员公开决裂（4月11日）</h3>
+    <div class="event-summary">
+      <strong>事件概要：</strong>特朗普在Truth Social点名攻击塔克·卡尔森、梅根·凯利、亚历克斯·琼斯和坎迪斯·欧文斯四位保守派评论员，称他们是"蠢人"且"不再属于MAGA阵营"。四人此前均支持特朗普，但因反对美以对伊战争而与其决裂。卡尔森指责特朗普受内塔尼亚胡操控，欧文斯称应把特朗普送进养老院。
+    </div>
+    <div class="event-details">
+      <div class="event-details-title"><i class="fas fa-list-ul"></i> 关键细节</div>
+      <ul>
+        <li>卡尔森称特朗普Easter信息恶劣、威胁炸民用设施是战争罪</li>
+        <li>玛乔丽·泰勒·格林指责特朗普"发疯"，称"是特朗普变了，不是我们"</li>
+        <li>四人曾是特朗普2024竞选争取右翼博主和网红的核心助力</li>
+        <li>以色列因素成为分裂焦点——部分MAGA支持者将战争归因于以色列游说</li>
+        <li>白宫因预测市场内幕交易丑闻（停火前15分钟7.6亿美元石油期货交易）发出警告</li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div class="insight-title"><i class="fas fa-lightbulb"></i> 洞察</div>
+      <p>MAGA阵营的公开分裂标志着以色列议题已从美国政治的"共识区"进入"争议区"。传统上，支持以色列是美国两党共识，但这场战争正在同时从左翼（民主党进步派）和右翼（MAGA孤立主义者）两个方向瓦解这一共识。对以色列而言，失去美国右翼民粹主义者的支持可能比失去左翼更为致命——因为右翼是当前执政联盟的基础。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: 趋势观察 ===== -->
+<section class="section" id="trends">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 04</span>
+    <h2 class="section-title"><span class="lang-zh">趋势观察</span><span class="lang-en">Trend Observations</span></h2>
+  </div>
+
+  <!-- Trend 1 -->
+  <div class="event-card reveal" style="border-left:4px solid #38bdf8;">
+    <span class="event-badge" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fas fa-arrow-trend-up"></i> 趋势一</span>
+    <h3 class="event-title">美以军事协同从"联合空袭"深化为"全维度战时同盟"</h3>
+    <div class="event-summary">
+      本周数据显示，美以协同已超越联合空袭层面：以色列提供情报协助美军搜救、推迟自身打击计划配合美方行动、美以中央司令部与以军总参谋长定期会面协调"史诗怒火"行动部署。内塔尼亚胡宣称以军摧毁伊朗70%钢铁产能，以色列在这场战争中的角色已从"配合者"升级为"共同指挥者"。
+    </div>
+    <div class="insight-box" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);">
+      <div class="insight-title" style="color:#f59e0b;"><i class="fas fa-gavel"></i> 趋势判断</div>
+      <p>这种深度绑定在短期内增强了军事效能，但长期来看将使以色列成为美国中东政策的"锚定点"——任何与以色列利益不一致的外交灵活性都将被压缩。</p>
+    </div>
+  </div>
+
+  <!-- Trend 2 -->
+  <div class="event-card reveal" style="border-left:4px solid #38bdf8;">
+    <span class="event-badge" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fas fa-arrow-trend-up"></i> 趋势二</span>
+    <h3 class="event-title">跨大西洋联盟正经历冷战以来最严重的结构性裂痕</h3>
+    <div class="event-summary">
+      法、西、意三国拒绝提供后勤支持，英国明确不参战，特朗普威胁退出北约——这不是一次性的外交摩擦，而是对"美国发动战争、盟友自动跟随"这一冷战范式的系统性否定。欧洲国家的逻辑很清晰：这是美以的战争，不是北约的战争。
+    </div>
+    <div class="insight-box" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);">
+      <div class="insight-title" style="color:#f59e0b;"><i class="fas fa-gavel"></i> 趋势判断</div>
+      <p>即使伊朗战争结束，北约的信任基础已被严重损伤。美国未来发动任何军事行动时，都将面临盟友"是否跟随"的重新评估。这对以色列尤其不利——以色列的安全保障高度依赖美国的联盟体系，联盟弱化意味着以色列的战略纵深收窄。</p>
+    </div>
+  </div>
+
+  <!-- Trend 3 -->
+  <div class="event-card reveal" style="border-left:4px solid #38bdf8;">
+    <span class="event-badge" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fas fa-arrow-trend-up"></i> 趋势三</span>
+    <h3 class="event-title">伊朗的不对称战争策略正在奏效</h3>
+    <div class="event-summary">
+      尽管伊朗在常规军事力量上远逊于美以，但通过封锁霍尔木兹海峡、袭击海湾能源设施、击落美军战机、威胁美国科技企业，伊朗成功将战争成本外溢到全球经济和美国国内政治。布伦特原油涨幅近60%、美国汽油突破4美元、全球股市蒸发8万亿美元——这些数字比任何军事胜利都更有说服力。
+    </div>
+    <div class="insight-box" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);">
+      <div class="insight-title" style="color:#f59e0b;"><i class="fas fa-gavel"></i> 趋势判断</div>
+      <p>伊朗的策略是"以时间换空间"——只要战争持续，全球经济压力就会迫使美国寻求退出。美军战机被击落进一步证明伊朗仍具备有效的防空能力，"速战速决"的幻想已经破灭。</p>
+    </div>
+  </div>
+
+  <!-- Trend 4 -->
+  <div class="event-card reveal" style="border-left:4px solid #38bdf8;">
+    <span class="event-badge" style="background:rgba(56,189,248,0.15);color:#38bdf8;border:1px solid rgba(56,189,248,0.3);"><i class="fas fa-arrow-trend-up"></i> 趋势四</span>
+    <h3 class="event-title">中国在美以伊冲突中的战略定位日益清晰</h3>
+    <div class="event-summary">
+      中国官媒通过AI生成短视频将美描绘为"侵略性衰落霸权"，间接批评伊朗封锁海峡但未明确军事援伊，被怀疑提供北斗导航和情报支持。中巴联合发布五点和平倡议。盖洛普调查显示中国领导层全球认可度反超美国5个百分点。
+    </div>
+    <div class="insight-box" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.05);">
+      <div class="insight-title" style="color:#f59e0b;"><i class="fas fa-gavel"></i> 趋势判断</div>
+      <p>中国正在利用美以伊冲突扩大全球影响力，同时避免直接卷入。这场战争客观上加速了全球权力格局的重组——美国的联盟体系在弱化，中国的"和平调解者"形象在强化。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: 风险警示 ===== -->
+<section class="section" id="risks">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 05</span>
+    <h2 class="section-title"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2>
+  </div>
+
+  <!-- Oil Price Visualization -->
+  <div class="reveal" style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:8px;padding:2rem;margin-bottom:2rem;box-shadow:var(--shadow-card);">
+    <h3 style="font-family:'Oswald',sans-serif;font-size:0.85rem;font-weight:600;color:#ef4444;letter-spacing:2px;margin-bottom:1.5rem;text-transform:uppercase;"><i class="fas fa-gas-pump"></i> <span class="lang-zh">布伦特原油价格走势</span><span class="lang-en">BRENT CRUDE OIL PRICE TREND</span></h3>
+    <div style="display:flex;align-items:flex-end;gap:2rem;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-family:'Oswald',sans-serif;font-size:0.7rem;color:var(--text-muted);letter-spacing:1px;margin-bottom:0.5rem;">战前价格</div>
+        <div style="width:80px;background:linear-gradient(to top,rgba(56,189,248,0.3),rgba(56,189,248,0.1));height:100px;border-radius:4px 4px 0 0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:0.5rem;position:relative;">
+          <span style="font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;color:#38bdf8;">~$72</span>
+        </div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">USD/桶</div>
+      </div>
+      <div style="display:flex;align-items:center;padding-bottom:2rem;">
+        <i class="fas fa-arrow-right" style="font-size:2rem;color:#ef4444;animation:arrowPulse 1.5s ease-in-out infinite;"></i>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-family:'Oswald',sans-serif;font-size:0.7rem;color:var(--text-muted);letter-spacing:1px;margin-bottom:0.5rem;">当前价格</div>
+        <div style="width:80px;background:linear-gradient(to top,rgba(239,68,68,0.4),rgba(239,68,68,0.1));height:160px;border-radius:4px 4px 0 0;display:flex;align-items:flex-end;justify-content:center;padding-bottom:0.5rem;position:relative;">
+          <span style="font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;color:#ef4444;">$94-116</span>
+        </div>
+        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:0.25rem;">USD/桶</div>
+      </div>
+      <div style="padding-bottom:2rem;margin-left:1rem;">
+        <div style="font-family:'Oswald',sans-serif;font-size:3rem;font-weight:700;color:#ef4444;line-height:1;">↑ ~30-60%</div>
+        <div style="font-size:0.85rem;color:var(--text-secondary);margin-top:0.25rem;">涨幅 · 停火后回落至$94但和谈破裂后反弹</div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    @keyframes arrowPulse {
+      0%, 100% { transform: translateX(0); opacity: 0.7; }
+      50% { transform: translateX(8px); opacity: 1; }
+    }
+    @keyframes riskPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.2); }
+      50% { box-shadow: 0 0 20px 4px rgba(239,68,68,0.1); }
+    }
+    .risk-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(239,68,68,0.3);
+      border-left: 4px solid #ef4444;
+      border-radius: 0 8px 8px 0;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+      box-shadow: var(--shadow-card);
+      animation: riskPulse 3s ease-in-out infinite;
+      transition: all 0.3s ease;
+    }
+    .risk-card:hover {
+      border-color: rgba(239,68,68,0.5);
+    }
+    .risk-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: #ef4444; margin-bottom: 0.75rem;
+      line-height: 1.4;
+    }
+    .risk-text {
+      color: var(--text-secondary);
+      font-size: 0.95rem; line-height: 2;
+    }
+  </style>
+
+  <!-- Risk 1 -->
+  <div class="risk-card reveal">
+    <div class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险一：4月22日停火到期，战争重启概率极高</div>
+    <p class="risk-text">伊斯兰堡和谈破裂后，14天停火协议将于4月22日到期，届时若无新协议，美以对伊战争将重启。特朗普已宣布海军封锁霍尔木兹海峡，伊朗可能以此为由提前退出停火。以色列持续空袭黎巴嫩进一步削弱了停火的可信度。全球能源市场面临再次剧烈动荡的风险。</p>
+  </div>
+
+  <!-- Risk 2 -->
+  <div class="risk-card reveal">
+    <div class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险二：伊朗威胁打击美国科技企业，全球供应链面临新风险</div>
+    <p class="risk-text">伊朗革命卫队将苹果、谷歌、微软等18家美国科技企业列为"合法打击目标"，巴林的亚马逊云服务设施已遭袭受损。若伊朗对中东地区的美国科技基础设施发动系统性攻击，将冲击全球云计算和数据服务供应链。</p>
+  </div>
+
+  <!-- Risk 3 -->
+  <div class="risk-card reveal">
+    <div class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险三：美国国内反犹与反穆斯林仇恨事件同步升级</div>
+    <p class="risk-text">密歇根犹太会堂遭袭、巴勒斯坦裔社区领袖被ICE逮捕、高校教授因反战言论被解雇——战争正在美国国内同时激化反犹和反穆斯林情绪，社会撕裂加剧。</p>
+  </div>
+
+  <!-- Risk 4 -->
+  <div class="risk-card reveal">
+    <div class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险四：全球能源危机可能触发粮食危机</div>
+    <p class="risk-text">国际救援委员会指出霍尔木兹海峡封锁致全球30%粮食运输受阻，化肥供应链也受冲击。若海峡长期封锁，能源危机将传导为粮食危机，影响范围远超中东。</p>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: 合作亮点 ===== -->
+<section class="section" id="cooperation">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 06</span>
+    <h2 class="section-title"><span class="lang-zh">合作亮点</span><span class="lang-en">Cooperation Highlights</span></h2>
+  </div>
+
+  <style>
+    .coop-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .coop-table thead { background: var(--bg-card); }
+    .coop-table th {
+      padding: 0.85rem 1.25rem; text-align: left;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 600; font-size: 0.8rem;
+      letter-spacing: 1px; color: #38bdf8;
+      border-bottom: 2px solid rgba(56,189,248,0.3);
+      text-transform: uppercase;
+    }
+    .coop-table td {
+      padding: 0.85rem 1.25rem;
+      border-bottom: 1px solid var(--border-color);
+      color: var(--text-secondary); line-height: 1.7;
+    }
+    .coop-table tbody tr:hover { background: var(--glow-ice); }
+    .coop-table tbody tr:last-child td { border-bottom: none; }
+    .coop-tag {
+      display: inline-block;
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 1px;
+      padding: 0.15rem 0.6rem; border-radius: 2px;
+      background: rgba(56,189,248,0.15); color: #38bdf8;
+      border: 1px solid rgba(56,189,248,0.3);
+    }
+  </style>
+
+  <div class="data-table-wrapper reveal">
+    <table class="coop-table">
+      <thead>
+        <tr><th><span class="lang-zh">领域</span><span class="lang-en">Field</span></th><th><span class="lang-zh">亮点</span><span class="lang-en">Highlight</span></th><th><span class="lang-zh">意义</span><span class="lang-en">Significance</span></th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="coop-tag">军事搜救</span></td>
+          <td>以色列提供情报协助美军在伊朗境内搜救被击落战机飞行员</td>
+          <td>战时情报共享达到前所未有的深度</td>
+        </tr>
+        <tr>
+          <td><span class="coop-tag">联合打击</span></td>
+          <td>美以中央司令部与以军总参谋长定期会面协调行动</td>
+          <td>两国军事指挥体系实现战时融合</td>
+        </tr>
+        <tr>
+          <td><span class="coop-tag">核设施打击</span></td>
+          <td>美以联合打击伊朗布什尔核电站区域（第四次）</td>
+          <td>阻止伊朗核武计划的共同战略目标</td>
+        </tr>
+        <tr>
+          <td><span class="coop-tag">AI药物研发</span></td>
+          <td>Insilico Medicine与Eli Lilly达成27.5亿美元AI药物合作</td>
+          <td>美以科技合作在战时仍在推进</td>
+        </tr>
+        <tr>
+          <td><span class="coop-tag">太阳能技术</span></td>
+          <td>美以合资Stardust Solutions获6000万美元融资</td>
+          <td>双边科技投资不受战争影响</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: 下周关注点 ===== -->
+<section class="section" id="nextweek">
+  <div class="section-header reveal">
+    <span class="section-number">SECTION 07</span>
+    <h2 class="section-title"><span class="lang-zh">下周关注点</span><span class="lang-en">Next Week Watch</span></h2>
+  </div>
+
+  <style>
+    .focus-list { list-style: none; padding: 0; }
+    .focus-item {
+      display: flex; gap: 1rem; align-items: flex-start;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px; padding: 1.25rem 1.5rem;
+      margin-bottom: 1rem;
+      box-shadow: var(--shadow-card);
+      transition: all 0.3s ease;
+    }
+    .focus-item:hover { border-color: var(--border-accent); transform: translateX(4px); }
+    .focus-num {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.5rem; font-weight: 700;
+      color: #38bdf8; line-height: 1;
+      flex-shrink: 0; width: 36px;
+    }
+    .focus-content { flex: 1; }
+    .focus-date {
+      font-family: 'Oswald', sans-serif;
+      font-size: 0.75rem; font-weight: 600;
+      color: #f59e0b; letter-spacing: 1px;
+      margin-bottom: 0.25rem;
+    }
+    .focus-text {
+      color: var(--text-secondary);
+      font-size: 0.9rem; line-height: 1.8;
+    }
+  </style>
+
+  <ul class="focus-list">
+    <li class="focus-item reveal">
+      <span class="focus-num">01</span>
+      <div class="focus-content">
+        <div class="focus-date">4月14日（周二）</div>
+        <div class="focus-text">以色列与黎巴嫩在华盛顿开启直接谈判，以方要求解除真主党武装，黎方要求以方先停火——能否取得突破将决定停火能否延续</div>
+      </div>
+    </li>
+    <li class="focus-item reveal">
+      <span class="focus-num">02</span>
+      <div class="focus-content">
+        <div class="focus-date">4月22日</div>
+        <div class="focus-text">14天停火协议到期日，若届时无新协议达成，美以对伊战争可能重启，全球能源市场将再次剧烈动荡</div>
+      </div>
+    </li>
+    <li class="focus-item reveal">
+      <span class="focus-num">03</span>
+      <div class="focus-content">
+        <div class="focus-date">本周内</div>
+        <div class="focus-text">IMF/世界银行春季会议在华盛顿召开，将发布战争对全球经济影响的最新评估，关注增长预期下调幅度</div>
+      </div>
+    </li>
+    <li class="focus-item reveal">
+      <span class="focus-num">04</span>
+      <div class="focus-content">
+        <div class="focus-date">持续关注</div>
+        <div class="focus-text">美海军封锁霍尔木兹海峡的实际执行情况——若拦截第三国船只，可能引发新的国际法争议和伊朗军事反应</div>
+      </div>
+    </li>
+    <li class="focus-item reveal">
+      <span class="focus-num">05</span>
+      <div class="focus-content">
+        <div class="focus-date">持续关注</div>
+        <div class="focus-text">美国2026中期选举前哨战——佐治亚特别选举已显示选民对战争不满，共和党参议院席位争夺比预期更艰难</div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ===== DISCLAIMER ===== -->
+<div class="reveal" style="max-width:1200px;margin:0 auto 2rem;padding:0 1.5rem;">
+  <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:8px;padding:1.5rem 2rem;font-size:0.82rem;color:var(--text-muted);line-height:1.8;text-align:center;">
+    <p><span class="lang-zh">本报告基于 Supinfor 区域国别实时监测数据编制，仅供参考，不构成投资或决策建议。</span><span class="lang-en">This report is compiled based on Supinfor Country Monitoring data and is for reference only. It does not constitute investment or decision-making advice.</span></p>
+  </div>
+</div>
+
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer style="border-top:1px solid var(--border-color);padding:2.5rem 1.5rem;text-align:center;">
+  <div style="max-width:1200px;margin:0 auto;">
+    <div style="font-family:'Oswald',sans-serif;font-size:0.8rem;font-weight:600;color:#38bdf8;letter-spacing:3px;margin-bottom:0.5rem;text-transform:uppercase;">
+      <i class="fas fa-building"></i> Supinfor Ltd.
+    </div>
+    <div style="font-size:0.8rem;color:var(--text-muted);margin-bottom:0.25rem;"><span class="lang-zh">报告生成时间：2026-04-27</span><span class="lang-en">Report generated: 2026-04-27</span></div>
+    <div style="font-size:0.75rem;color:var(--text-muted);">© Supinfor Ltd. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ===== BACK TO TOP ===== -->
+<button id="backToTop" style="
+  position:fixed;bottom:2rem;right:2rem;z-index:900;
+  width:44px;height:44px;border-radius:50%;
+  background:#38bdf8;color:#0a1628;border:none;
+  cursor:pointer;font-size:1.1rem;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(56,189,248,0.3);
+  transition:all 0.3s ease;
+"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function() {
+  // ===== THEME TOGGLE =====
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const themeIcon = themeBtn.querySelector('i');
+
+  function setTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      themeIcon.className = 'fas fa-sun';
+    } else {
+      html.classList.remove('dark');
+      themeIcon.className = 'fas fa-moon';
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  // Init theme
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    setTheme(saved);
+  } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+
+  themeBtn.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      setTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  // ===== TOC TOGGLE =====
+  const tocToggle = document.getElementById('tocToggle');
+  const tocPanel = document.getElementById('tocPanel');
+  const tocOverlay = document.getElementById('tocOverlay');
+  const tocClose = document.getElementById('tocClose');
+
+  function openToc() { tocPanel.classList.add('active'); tocOverlay.classList.add('active'); }
+  function closeToc() { tocPanel.classList.remove('active'); tocOverlay.classList.remove('active'); }
+
+  tocToggle.addEventListener('click', openToc);
+  tocClose.addEventListener('click', closeToc);
+  tocOverlay.addEventListener('click', closeToc);
+
+  // Close TOC on link click
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', closeToc);
+  });
+
+  // ===== BACK TO TOP =====
+  const backBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backBtn.style.display = 'flex';
+    } else {
+      backBtn.style.display = 'none';
+    }
+  });
+  backBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== INTERSECTION OBSERVER (Staggered Reveals) =====
+  const reveals = document.querySelectorAll('.reveal');
+  reveals.forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  });
+
+  let revealDelay = 0;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const delay = parseFloat(el.dataset.delay || 0);
+        setTimeout(() => {
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, delay);
+        observer.unobserve(el);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  // Assign staggered delays
+  let currentSection = null;
+  let sectionIndex = 0;
+  reveals.forEach(el => {
+    const section = el.closest('section') || el.closest('.stat-grid') || el.closest('.hero');
+    if (section !== currentSection) {
+      currentSection = section;
+      sectionIndex = 0;
+    }
+    el.dataset.delay = sectionIndex * 100;
+    sectionIndex++;
+    observer.observe(el);
+  });
+
+  // ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const headerHeight = document.querySelector('.site-header').offsetHeight;
+        const targetPos = target.getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+        window.scrollTo({ top: targetPos, behavior: 'smooth' });
+      }
+    });
+  });
+})();
+
+function setLang(lang){document.documentElement.setAttribute('data-lang',lang);document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');localStorage.setItem('lang',lang);document.querySelectorAll('.lang-toggle button').forEach(btn=>{btn.classList.toggle('active',(lang==='zh'&&btn.textContent==='中')||(lang==='en'&&btn.textContent==='EN'))})}
+(function(){const s=localStorage.getItem('lang')||'zh';setLang(s)})();
+</script>
+
+</body>
+</html>

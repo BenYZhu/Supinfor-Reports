@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" class="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马来西亚与印度尼西亚双边动态速览 | Bilateral Dynamics Flash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"DM Serif Display"', 'serif'],
+        body: ['Inter', '"Noto Sans SC"', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      }
+    }
+  }
+}
+</script>
+<style>
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.donut-chart {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #059669 0deg 163.8deg,
+    #10b981 163.8deg 271.4deg,
+    #d97706 271.4deg 350.6deg,
+    #1e3a5f 350.6deg 360deg
+  );
+  position: relative;
+}
+.donut-chart::after {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120px; height: 120px;
+  border-radius: 50%;
+  background: white;
+}
+.dark .donut-chart::after {
+  background: #0f172a;
+}
+
+.bar-fill {
+  transition: width 1.2s ease;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+.pulse-dot {
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+.float-anim {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes scroll-indicator {
+  0% { opacity: 0; transform: translateY(-8px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(8px); }
+}
+.scroll-indicator {
+  animation: scroll-indicator 2s ease-in-out infinite;
+}
+
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+}
+.dark .card-hover:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+</style>
+</head>
+<body class="font-body bg-white dark:bg-[#0f172a] text-slate-800 dark:text-slate-200 transition-colors duration-300">
+
+<!-- ============ FIXED NAV ============ -->
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/80 dark:bg-[#0f172a]/80 border-b border-slate-200/60 dark:border-slate-700/60 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="w-9 h-9 rounded-lg bg-[#059669] flex items-center justify-center">
+        <i class="fa-solid fa-chart-line text-white text-sm"></i>
+      </div>
+      <span class="font-display text-lg text-slate-800 dark:text-white">Supinfor</span>
+    </div>
+    <!-- Center Nav Links (hidden mobile) -->
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+      <a href="#overview" class="text-slate-600 dark:text-slate-400 hover:text-[#059669] dark:hover:text-[#059669] transition-colors">
+        <span data-zh>总览</span><span data-en>Overview</span>
+      </a>
+      <a href="#events" class="text-slate-600 dark:text-slate-400 hover:text-[#059669] dark:hover:text-[#059669] transition-colors">
+        <span data-zh>事件</span><span data-en>Events</span>
+      </a>
+      <a href="#trends" class="text-slate-600 dark:text-slate-400 hover:text-[#059669] dark:hover:text-[#059669] transition-colors">
+        <span data-zh>趋势</span><span data-en>Trends</span>
+      </a>
+      <a href="#risks" class="text-slate-600 dark:text-slate-400 hover:text-[#059669] dark:hover:text-[#059669] transition-colors">
+        <span data-zh>风险</span><span data-en>Risks</span>
+      </a>
+      <a href="#cooperation" class="text-slate-600 dark:text-slate-400 hover:text-[#059669] dark:hover:text-[#059669] transition-colors">
+        <span data-zh>合作</span><span data-en>Cooperation</span>
+      </a>
+    </div>
+    <!-- Right Controls -->
+    <div class="flex items-center gap-2">
+      <button id="lang-toggle" class="px-3 py-1.5 rounded-lg text-sm font-medium bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" onclick="toggleLang()">
+        <i class="fa-solid fa-language mr-1"></i><span id="lang-label">EN</span>
+      </button>
+      <button id="theme-toggle" class="w-9 h-9 rounded-lg flex items-center justify-center bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors" onclick="toggleTheme()">
+        <i class="fa-solid fa-sun dark:hidden"></i>
+        <i class="fa-solid fa-moon hidden dark:inline"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+  <!-- Background Orbs -->
+  <div class="absolute top-1/4 left-1/6 w-[500px] h-[500px] rounded-full bg-[#059669]/20 dark:bg-[#059669]/10 blur-[120px] float-anim"></div>
+  <div class="absolute bottom-1/4 right-1/6 w-[400px] h-[400px] rounded-full bg-[#1e3a5f]/20 dark:bg-[#1e3a5f]/15 blur-[100px] float-anim" style="animation-delay: -3s;"></div>
+  <div class="absolute top-1/3 right-1/3 w-[200px] h-[200px] rounded-full bg-[#d97706]/15 dark:bg-[#d97706]/10 blur-[80px] float-anim" style="animation-delay: -1.5s;"></div>
+
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <!-- Pill Badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 border border-[#059669]/20 dark:border-[#059669]/30 mb-6 fade-up">
+      <span class="w-2 h-2 rounded-full bg-[#059669] pulse-dot"></span>
+      <span class="text-sm font-medium text-[#059669]">
+        <span data-zh>双边动态速览 · 2026年3月6日 – 4月5日</span>
+        <span data-en>Bilateral Dynamics Flash · Mar 6 – Apr 5, 2026</span>
+      </span>
+    </div>
+
+    <!-- Small Caps -->
+    <p class="text-xs tracking-[0.3em] uppercase text-slate-500 dark:text-slate-400 mb-4 fade-up" style="transition-delay: 0.1s;">Malaysia · Indonesia</p>
+
+    <!-- Main Title -->
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl text-slate-900 dark:text-white leading-tight mb-6 fade-up" style="transition-delay: 0.2s;">
+      <span data-zh>马来西亚与印度尼西亚<br>双边动态速览</span>
+      <span data-en>Malaysia &amp; Indonesia<br>Bilateral Dynamics Flash</span>
+    </h1>
+
+    <!-- Quote -->
+    <p class="italic text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto mb-10 fade-up" style="transition-delay: 0.3s;">
+      <span data-zh>"本期马印双边关系处于'温热上行'区间。中东危机的外溢效应意外地成为两国加速协调的粘合剂。"</span>
+      <span data-en>"Bilateral relations are in a 'warm upswing' zone this period. The spillover from the Middle East crisis has unexpectedly become the glue accelerating coordination between the two nations."</span>
+    </p>
+
+    <!-- Stat Cards -->
+    <div class="grid grid-cols-3 gap-4 sm:gap-6 max-w-lg mx-auto mb-12 fade-up" style="transition-delay: 0.4s;">
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200/60 dark:border-slate-700/60">
+        <div class="font-mono text-2xl sm:text-3xl font-bold text-[#059669] counter" data-target="314">0</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          <span data-zh>独立资讯</span><span data-en>News Items</span>
+        </div>
+      </div>
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200/60 dark:border-slate-700/60">
+        <div class="font-mono text-2xl sm:text-3xl font-bold text-[#1e3a5f] dark:text-blue-400 counter" data-target="11">0</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          <span data-zh>覆盖栏目</span><span data-en>Channels</span>
+        </div>
+      </div>
+      <div class="bg-white/60 dark:bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-slate-200/60 dark:border-slate-700/60">
+        <div class="font-mono text-2xl sm:text-3xl font-bold text-[#d97706] counter" data-target="31">0</div>
+        <div class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+          <span data-zh>监测天数</span><span data-en>Days Monitored</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator text-slate-400 dark:text-slate-500">
+      <i class="fa-solid fa-chevron-down text-lg"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 一: 本期总览 ============ -->
+<section id="overview" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- Section Header -->
+  <div class="flex items-center gap-3 mb-8 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center">
+      <i class="fa-solid fa-globe text-[#059669]"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>一、本期总览</span><span data-en>I. Period Overview</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>马来西亚与印度尼西亚关联度评估</span><span data-en>Malaysia-Indonesia Relevance Assessment</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Metadata -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8 fade-up">
+    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-3 text-sm">
+      <span class="text-slate-500 dark:text-slate-400"><i class="fa-regular fa-calendar mr-1"></i> <span data-zh>报告周期</span><span data-en>Period</span>：</span>
+      <span class="font-medium">2026-03-06 — 2026-04-05</span>
+    </div>
+    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-3 text-sm">
+      <span class="text-slate-500 dark:text-slate-400"><i class="fa-solid fa-database mr-1"></i> <span data-zh>数据来源</span><span data-en>Source</span>：</span>
+      <span class="font-medium"><span data-zh>Supinfor 区域国别实时监测平台</span><span data-en>Supinfor Regional Real-time Monitoring Platform</span></span>
+    </div>
+    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-3 text-sm">
+      <span class="text-slate-500 dark:text-slate-400"><i class="fa-solid fa-chart-bar mr-1"></i> <span data-zh>数据规模</span><span data-en>Data Scale</span>：</span>
+      <span class="font-medium"><span data-zh>原始 471 条，去重后 314 条</span><span data-en>471 raw, 314 after dedup</span></span>
+    </div>
+    <div class="bg-slate-50 dark:bg-slate-800/50 rounded-lg p-3 text-sm">
+      <span class="text-slate-500 dark:text-slate-400"><i class="fa-solid fa-building mr-1"></i> <span data-zh>报告编制</span><span data-en>Compiled by</span>：</span>
+      <span class="font-medium">Supinfor Ltd.</span>
+    </div>
+  </div>
+
+  <!-- Core Judgment -->
+  <div class="bg-gradient-to-r from-[#059669]/5 to-[#1e3a5f]/5 dark:from-[#059669]/10 dark:to-[#1e3a5f]/10 border-l-4 border-[#059669] rounded-r-xl p-6 mb-12 fade-up">
+    <h3 class="font-display text-lg text-slate-900 dark:text-white mb-3 flex items-center gap-2">
+      <i class="fa-solid fa-bullseye text-[#059669]"></i>
+      <span data-zh>核心判断</span><span data-en>Core Assessment</span>
+    </h3>
+    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+      <span data-zh>本期马印双边关系处于"温热上行"区间。中东危机的外溢效应——从地缘安全到能源价格再到公务员居家办公——意外地成为两国加速协调的粘合剂。安华专访雅加达和新任防长首访印尼两大高层互动，标志着双边关系正从传统的邻国管理模式向战略伙伴协调模式升级。民生栏目的高占比（45.5%）则提醒我们，劳工权益、跨境雾霾等"低政治"议题仍是双边关系的基本盘，需要持续关注和管理。</span>
+      <span data-en>Bilateral relations are in a "warm upswing" zone this period. The spillover effects of the Middle East crisis — from geopolitical security to energy prices to civil servant work-from-home policies — have unexpectedly become the glue accelerating coordination between the two nations. The two major high-level interactions — Anwar's special visit to Jakarta and the new Armed Forces Chief's inaugural visit to Indonesia — signal that bilateral relations are upgrading from a traditional neighborly management model to a strategic partner coordination model. The high share of the Livelihood channel (45.5%) reminds us that "low politics" issues such as labor rights and cross-border haze remain the bedrock of bilateral relations, requiring sustained attention and management.</span>
+    </p>
+  </div>
+
+  <!-- Overview Paragraph -->
+  <div class="mb-12 fade-up">
+    <p class="text-slate-700 dark:text-slate-300 leading-relaxed">
+      <span data-zh>本报告周期内，马来西亚与印度尼西亚双边关系呈现"高层引领、多线并进"的活跃态势。安华首相应普拉博沃总统之邀专访雅加达，中东危机成为双边战略协调的催化剂；新任武装部队总司令马力克首访印尼，提出马印新三边防务合作升级方案；联黎维和部队遇袭事件使两国在国际安全领域的共同关切进一步凸显。与此同时，社交媒体年龄限制政策对标、SIBS 首次出海万隆、沙巴-北加里曼丹蓝色经济合作等议题，展现了双边关系从政治安全向数字治理、经贸平台、边境发展等多维度纵深拓展的趋势。民生栏目高占比反映了两国在劳工流动、跨境雾霾等结构性议题上的持续互动。</span>
+      <span data-en>During this reporting period, Malaysia-Indonesia bilateral relations exhibited an active posture characterized by "high-level leadership driving multi-track progress." Prime Minister Anwar visited Jakarta at President Prabowo's invitation, with the Middle East crisis serving as a catalyst for bilateral strategic coordination. The new Armed Forces Chief Malik made Indonesia his inaugural overseas visit, proposing an upgrade to the Malaysia-Indonesia-Singapore trilateral defense cooperation framework. The UNIFIL peacekeeping attack further highlighted shared concerns in international security. Meanwhile, topics such as social media age restriction policy benchmarking, SIBS's first overseas edition in Bandung, and Sabah-North Kalimantan blue economy cooperation demonstrated the trend of bilateral relations expanding from political security into digital governance, trade platforms, and border development. The high share of the Livelihood channel reflects sustained interaction on structural issues such as labor mobility and cross-border haze.</span>
+    </p>
+  </div>
+
+  <!-- Donut Chart + Bar Chart Row -->
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+    <!-- Donut Chart -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl p-6 border border-slate-200/60 dark:border-slate-700/60 card-hover fade-up">
+      <h3 class="font-display text-lg text-slate-900 dark:text-white mb-6">
+        <span data-zh>栏目分布</span><span data-en>Channel Distribution</span>
+      </h3>
+      <div class="flex flex-col sm:flex-row items-center gap-6">
+        <div class="donut-chart flex-shrink-0" style="background: conic-gradient(#059669 0deg 163.8deg, #10b981 163.8deg 271.4deg, #d97706 271.4deg 350.6deg, #1e3a5f 350.6deg 360deg);"></div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#059669]"></span> <span data-zh>民生 45.5%</span><span data-en>Livelihood 45.5%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#10b981]"></span> <span data-zh>人文 29.9%</span><span data-en>Culture 29.9%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#d97706]"></span> <span data-zh>经济 22.0%</span><span data-en>Economy 22.0%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm bg-[#1e3a5f]"></span> <span data-zh>其他 2.6%</span><span data-en>Others 2.6%</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl p-6 border border-slate-200/60 dark:border-slate-700/60 card-hover fade-up" style="transition-delay: 0.1s;">
+      <h3 class="font-display text-lg text-slate-900 dark:text-white mb-6">
+        <span data-zh>各栏目资讯量</span><span data-en>News Volume by Channel</span>
+      </h3>
+      <div class="space-y-3 text-sm">
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>民生</span><span data-en>Livelihood</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#059669]" style="width: 0%" data-width="100%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~143</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>人文</span><span data-en>Culture</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#10b981]" style="width: 0%" data-width="65.7%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~94</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>经济</span><span data-en>Economy</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#d97706]" style="width: 0%" data-width="48.3%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~69</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>政治</span><span data-en>Politics</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#1e3a5f]" style="width: 0%" data-width="31.5%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~45</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>外交</span><span data-en>Diplomacy</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#059669]/70" style="width: 0%" data-width="25.9%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~37</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>产业</span><span data-en>Industry</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#059669]/60" style="width: 0%" data-width="23.1%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~33</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>环保</span><span data-en>Environ.</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#34d399]" style="width: 0%" data-width="8.4%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~12</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>教育</span><span data-en>Education</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#34d399]" style="width: 0%" data-width="8.4%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~12</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>国防</span><span data-en>Defense</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#6ee7b7]" style="width: 0%" data-width="8.4%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~12</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>医疗</span><span data-en>Medical</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#6ee7b7]" style="width: 0%" data-width="7.0%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~10</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="w-12 text-right text-slate-500 dark:text-slate-400 flex-shrink-0"><span data-zh>科技</span><span data-en>Tech</span></span>
+          <div class="flex-1 bg-slate-100 dark:bg-slate-700 rounded-full h-5 overflow-hidden"><div class="bar-fill h-full rounded-full bg-[#a7f3d0]" style="width: 0%" data-width="2.8%"></div></div>
+          <span class="font-mono text-xs w-8 text-slate-500 dark:text-slate-400">~4</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Full Channel Distribution Table -->
+  <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden fade-up">
+    <div class="p-4 border-b border-slate-200/60 dark:border-slate-700/60">
+      <h3 class="font-display text-lg text-slate-900 dark:text-white">
+        <span data-zh>栏目分布详表</span><span data-en>Channel Distribution Details</span>
+      </h3>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-slate-50 dark:bg-slate-800">
+            <th class="text-left px-4 py-3 font-semibold text-slate-600 dark:text-slate-300"><span data-zh>栏目</span><span data-en>Channel</span></th>
+            <th class="text-center px-4 py-3 font-semibold text-slate-600 dark:text-slate-300"><span data-zh>条数</span><span data-en>Count</span></th>
+            <th class="text-center px-4 py-3 font-semibold text-slate-600 dark:text-slate-300"><span data-zh>占比</span><span data-en>Share</span></th>
+            <th class="text-left px-4 py-3 font-semibold text-slate-600 dark:text-slate-300"><span data-zh>关联度判断</span><span data-en>Relevance Assessment</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>民生</span><span data-en>Livelihood</span></td>
+            <td class="px-4 py-3 text-center font-mono">~143</td>
+            <td class="px-4 py-3 text-center font-mono text-[#059669] font-semibold">45.5%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>劳工流动、跨境雾霾、社会治安等结构性议题持续活跃</span><span data-en>Structural issues such as labor mobility, cross-border haze, and public safety remain active</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-4 py-3 font-medium"><span data-zh>人文</span><span data-en>Culture</span></td>
+            <td class="px-4 py-3 text-center font-mono">~94</td>
+            <td class="px-4 py-3 text-center font-mono text-[#059669] font-semibold">29.9%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>音乐节、电影合作、教育研学等民间交流密集</span><span data-en>Intensive people-to-people exchanges including music festivals, film collaborations, and educational study tours</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>经济</span><span data-en>Economy</span></td>
+            <td class="px-4 py-3 text-center font-mono">~69</td>
+            <td class="px-4 py-3 text-center font-mono text-[#d97706] font-semibold">22.0%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>棕油市场联动、能源危机应对、双边贸易稳健</span><span data-en>Palm oil market linkages, energy crisis response, and steady bilateral trade</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-4 py-3 font-medium"><span data-zh>政治</span><span data-en>Politics</span></td>
+            <td class="px-4 py-3 text-center font-mono">~45</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">14.3%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>安华专访雅加达、社交媒体政策对标等高层互动</span><span data-en>High-level interactions including Anwar's Jakarta visit and social media policy benchmarking</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>外交</span><span data-en>Diplomacy</span></td>
+            <td class="px-4 py-3 text-center font-mono">~37</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">11.8%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>中东危机协调、联黎维和、西亚撤侨等国际议题</span><span data-en>International issues including Middle East crisis coordination, UNIFIL peacekeeping, and West Asia evacuations</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-4 py-3 font-medium"><span data-zh>产业</span><span data-en>Industry</span></td>
+            <td class="px-4 py-3 text-center font-mono">~33</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">10.5%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>SIBS 出海万隆、蓝色经济、碳交易合作</span><span data-en>SIBS overseas debut in Bandung, blue economy, and carbon trading cooperation</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>环保</span><span data-en>Environment</span></td>
+            <td class="px-4 py-3 text-center font-mono">~12</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">3.8%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>加里曼丹跨境雾霾、热点监测</span><span data-en>Kalimantan cross-border haze and hotspot monitoring</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-4 py-3 font-medium"><span data-zh>教育</span><span data-en>Education</span></td>
+            <td class="px-4 py-3 text-center font-mono">~12</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">3.8%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>SPM 优秀生赴雅加达研学、护理学科合作</span><span data-en>SPM top students' Jakarta study tour and nursing discipline cooperation</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>国防</span><span data-en>Defense</span></td>
+            <td class="px-4 py-3 text-center font-mono">~12</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">3.8%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>三边防务合作升级、边境委员会会议</span><span data-en>Trilateral defense cooperation upgrade and border committee meetings</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-4 py-3 font-medium"><span data-zh>医疗</span><span data-en>Medical</span></td>
+            <td class="px-4 py-3 text-center font-mono">~10</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">3.2%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>医疗旅游合作、印尼女佣健康争议</span><span data-en>Medical tourism cooperation and Indonesian maid health disputes</span></td>
+          </tr>
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-4 py-3 font-medium"><span data-zh>科技</span><span data-en>Technology</span></td>
+            <td class="px-4 py-3 text-center font-mono">~4</td>
+            <td class="px-4 py-3 text-center font-mono font-semibold">1.3%</td>
+            <td class="px-4 py-3 text-slate-600 dark:text-slate-400"><span data-zh>核能发展区域比较</span><span data-en>Regional comparison of nuclear energy development</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 二: 本期重要事件 ============ -->
+<section id="events" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- Section Header -->
+  <div class="flex items-center gap-3 mb-10 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#1e3a5f]/10 dark:bg-[#1e3a5f]/20 flex items-center justify-center">
+      <i class="fa-solid fa-bolt text-[#1e3a5f] dark:text-blue-400"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>二、本期重要事件</span><span data-en>II. Key Events</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>6 项重大双边事件追踪</span><span data-en>Tracking 6 major bilateral events</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="relative space-y-8">
+    <!-- Timeline line -->
+    <div class="absolute left-4 sm:left-6 top-0 bottom-0 w-0.5 bg-slate-200 dark:bg-slate-700 hidden sm:block"></div>
+
+    <!-- EVENT 1: 安华专访雅加达 🔴 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-rose-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-rose-500 p-6">
+          <!-- Impact Badge -->
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-semibold">
+              🔴 <span data-zh>高影响</span><span data-en>High Impact</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件一</span><span data-en>Event 1</span></span>
+          </div>
+          <!-- Title -->
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>安华专访雅加达——中东危机催化双边战略协调</span>
+            <span data-en>Anwar's Special Visit to Jakarta — Middle East Crisis Catalyzes Bilateral Strategic Coordination</span>
+          </h3>
+          <!-- Summary -->
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>3月27日，马来西亚首相安华应印尼总统普拉博沃之邀专访雅加达。此次访问由普拉博沃于3月23日致电邀请，议程聚焦中东地缘政治（巴勒斯坦局势、伊朗问题）及双边合作深化，同时为马来西亚主办第14届马印年度磋商做前期准备。</span>
+            <span data-en>On March 27, Malaysian Prime Minister Anwar visited Jakarta at the invitation of Indonesian President Prabowo. The visit was initiated by Prabowo's phone call on March 23, with the agenda focusing on Middle East geopolitics (Palestine situation, Iran issues) and deepening bilateral cooperation, while also preparing for Malaysia's hosting of the 14th Malaysia-Indonesia Annual Consultation.</span>
+          </p>
+          <!-- Key Details -->
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>普拉博沃主动致电邀请，体现印尼方面对双边协调的迫切需求</span><span data-en>Prabowo proactively called to invite, reflecting Indonesia's urgent need for bilateral coordination</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>议题核心为中东局势，特别是巴勒斯坦和伊朗问题的东盟立场协调</span><span data-en>Core agenda focused on the Middle East situation, particularly ASEAN stance coordination on Palestine and Iran issues</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>安华强调东盟团结与集体行动的重要性</span><span data-en>Anwar emphasized the importance of ASEAN unity and collective action</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>双方就第14届马印年度磋商的议程框架进行了初步沟通</span><span data-en>Both sides conducted preliminary communication on the agenda framework for the 14th Malaysia-Indonesia Annual Consultation</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>多家媒体（BERNAMA、NST、Astro Awani、东方日报）密集报道，显示事件受关注度极高</span><span data-en>Intensive coverage by multiple media outlets (BERNAMA, NST, Astro Awani, Oriental Daily), indicating extremely high attention</span></span></li>
+            </ul>
+          </div>
+          <!-- Insight -->
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>此次专访的深层意义在于，中东危机正在重塑东南亚国家间的协调逻辑。马印两国作为东盟最大的穆斯林人口国家，在巴勒斯坦问题上有着天然的立场共鸣，而中东冲突引发的能源价格波动又直接冲击两国经济。安华与普拉博沃选择在年度磋商之前增加一次"非正式但高规格"的面对面沟通，表明双边关系正从制度化的年度磋商框架向更灵活的战略协调模式演进。这一趋势值得持续跟踪。</span>
+              <span data-en>The deeper significance of this visit lies in how the Middle East crisis is reshaping the coordination logic among Southeast Asian nations. As ASEAN's two largest Muslim-majority countries, Malaysia and Indonesia share a natural resonance on the Palestine issue, while energy price volatility triggered by Middle East conflicts directly impacts both economies. Anwar and Prabowo's decision to add an "informal but high-level" face-to-face meeting before the annual consultation indicates that bilateral relations are evolving from an institutionalized annual consultation framework toward a more flexible strategic coordination model. This trend warrants continued tracking.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENT 2: 马印新三边防务合作升级 🔴 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-rose-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-rose-500 p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-rose-50 dark:bg-rose-500/10 text-rose-600 dark:text-rose-400 text-xs font-semibold">
+              🔴 <span data-zh>高影响</span><span data-en>High Impact</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件二</span><span data-en>Event 2</span></span>
+          </div>
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>马印新三边防务合作升级——新任武装部队总司令首访印尼</span>
+            <span data-en>Malaysia-Indonesia-Singapore Trilateral Defense Upgrade — New Armed Forces Chief's Inaugural Visit to Indonesia</span>
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>4月2日，马来西亚新任武装部队总司令马力克·拉扎克·苏莱曼上将首次正式出访即选择印尼，提出加强马来西亚-印度尼西亚-新加坡三边军事合作的倡议。</span>
+            <span data-en>On April 2, Malaysia's new Armed Forces Chief General Malik Razak Sulaiman chose Indonesia for his inaugural official overseas visit, proposing an initiative to strengthen Malaysia-Indonesia-Singapore trilateral military cooperation.</span>
+          </p>
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>马力克上任后首次正式出访选择印尼，具有象征意义</span><span data-en>Malik's choice of Indonesia for his first official visit carries symbolic significance</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>提出将现有的马六甲海峡"空中之眼"（Eyes in the Sky）联合巡逻行动升级为更广泛的三边防务合作框架</span><span data-en>Proposed upgrading the existing Malacca Strait "Eyes in the Sky" joint patrol operations into a broader trilateral defense cooperation framework</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>印尼国防部长斯贾弗里确认将于5月赴马出席边境委员会会议</span><span data-en>Indonesian Defense Minister Sjafrie confirmed he will visit Malaysia in May for the Border Committee meeting</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>马力克就3名印尼维和人员在黎巴嫩殉职表示慰问，展现两军情谊</span><span data-en>Malik expressed condolences for the 3 Indonesian peacekeepers killed in Lebanon, demonstrating military camaraderie</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>双方讨论了边境安全、海上执法、反恐合作等具体议题</span><span data-en>Both sides discussed specific topics including border security, maritime law enforcement, and counter-terrorism cooperation</span></span></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>新任防长首访选择印尼而非传统的"五眼"盟友，释放了明确的战略信号：马来西亚正在重新校准其防务外交的优先序，将东盟近邻置于更核心的位置。从双边"空中之眼"到三边防务框架的升级构想，反映了马六甲海峡安全治理从"各管一段"向"联合管控"的演进方向。5月边境委员会会议将是检验这一构想能否落地的关键节点。</span>
+              <span data-en>The new defense chief's choice of Indonesia over traditional "Five Eyes" allies for his inaugural visit sends a clear strategic signal: Malaysia is recalibrating its defense diplomacy priorities, placing ASEAN neighbors in a more central position. The upgrade vision from bilateral "Eyes in the Sky" to a trilateral defense framework reflects the evolution of Malacca Strait security governance from "each managing their own section" to "joint management." The May Border Committee meeting will be a critical juncture for testing whether this vision can be implemented.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENT 3: 联黎维和部队遇袭 🟡 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-amber-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-amber-500 p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold">
+              🟡 <span data-zh>中影响</span><span data-en>Medium Impact</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件三</span><span data-en>Event 3</span></span>
+          </div>
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>联黎维和部队遇袭——马印共同面对的安全挑战</span>
+            <span data-en>UNIFIL Peacekeeping Force Attacked — A Shared Security Challenge for Malaysia and Indonesia</span>
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>3月29日至4月5日期间，联合国驻黎巴嫩临时部队（UNIFIL）遭受袭击，3名印尼维和人员殉职、3人受伤。马来西亚驻黎维和部队 MALBATT 850-13 随即接到停止行动的命令。</span>
+            <span data-en>Between March 29 and April 5, the United Nations Interim Force in Lebanon (UNIFIL) was attacked, resulting in 3 Indonesian peacekeepers killed and 3 wounded. Malaysia's peacekeeping contingent MALBATT 850-13 in Lebanon was immediately ordered to cease operations.</span>
+          </p>
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>3名印尼维和人员在黎巴嫩南部执行任务时殉职，另有3人受伤</span><span data-en>3 Indonesian peacekeepers were killed while on duty in southern Lebanon, with 3 others wounded</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>马来西亚强烈谴责袭击行为，称其违反国际法</span><span data-en>Malaysia strongly condemned the attack, calling it a violation of international law</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>MALBATT 850-13 被命令暂停行动，保障人员安全</span><span data-en>MALBATT 850-13 was ordered to suspend operations to ensure personnel safety</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>马力克上将在访问印尼期间专门就此事表示慰问</span><span data-en>General Malik specifically expressed condolences on this matter during his visit to Indonesia</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>事件凸显两国在联合国维和行动中的共同承诺与共同风险</span><span data-en>The incident highlights both countries' shared commitment and shared risks in UN peacekeeping operations</span></span></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>维和部队遇袭事件虽发生在中东，却在马印双边关系中产生了独特的"共情效应"。两国同为联合国维和行动的积极贡献者，印尼维和人员的牺牲引发了马来西亚从官方到民间的广泛同情。这种在国际安全领域的"命运共同体"体验，为双边关系注入了超越经贸利益的情感纽带。马力克访印尼期间专门致哀的安排，更将这种共情转化为具体的防务外交行动。</span>
+              <span data-en>Although the peacekeeping attack occurred in the Middle East, it produced a unique "empathy effect" in Malaysia-Indonesia bilateral relations. Both countries are active contributors to UN peacekeeping operations, and the sacrifice of Indonesian peacekeepers triggered widespread sympathy from both official and public circles in Malaysia. This "community of shared destiny" experience in international security has injected an emotional bond into bilateral relations that transcends economic interests. General Malik's specific arrangement to pay tribute during his Indonesia visit further transformed this empathy into concrete defense diplomacy action.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENT 4: 跨境雾霾再起 🟡 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-amber-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-amber-500 p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold">
+              🟡 <span data-zh>中影响</span><span data-en>Medium Impact</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件四</span><span data-en>Event 4</span></span>
+          </div>
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>跨境雾霾再起——加里曼丹热点与砂拉越空气质量恶化</span>
+            <span data-en>Cross-Border Haze Returns — Kalimantan Hotspots and Sarawak Air Quality Deterioration</span>
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>3月28日至29日，砂拉越多地空气质量恶化，17个监测区域达到中等污染水平，主要原因为印尼加里曼丹地区检测到241个热点。</span>
+            <span data-en>From March 28 to 29, air quality deteriorated across multiple areas in Sarawak, with 17 monitoring zones reaching moderate pollution levels, primarily due to 241 hotspots detected in Indonesia's Kalimantan region.</span>
+          </p>
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>印尼加里曼丹检测到241个热点，砂拉越境内18个热点</span><span data-en>241 hotspots detected in Indonesia's Kalimantan, 18 hotspots within Sarawak</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>砂拉越17个区域空气污染指数（API）达到中等水平</span><span data-en>17 areas in Sarawak reached moderate Air Pollution Index (API) levels</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>正值季风过渡期，大气条件不利于污染物扩散</span><span data-en>During the monsoon transition period, atmospheric conditions are unfavorable for pollutant dispersion</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>砂拉越自然资源与环境委员会（NREB）启动雾霾作战室</span><span data-en>Sarawak Natural Resources and Environment Board (NREB) activated the haze operations room</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>砂拉越暂停发放受控焚烧许可证</span><span data-en>Sarawak suspended issuance of controlled burning permits</span></span></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>跨境雾霾是马印双边关系中最具"季节性确定性"的摩擦点。尽管两国已建立多层次的雾霾应对机制，但每年季风过渡期（3-5月及8-10月）的热点激增仍然考验着双边环境治理的有效性。本次事件中砂拉越的快速响应（启动作战室、暂停焚烧许可）表明马方已形成较为成熟的应急机制，但根本解决仍有赖于印尼方面对加里曼丹农业焚烧的源头管控。随着季风过渡期持续至5月，雾霾风险仍需持续监测。</span>
+              <span data-en>Cross-border haze is the most "seasonally predictable" friction point in Malaysia-Indonesia bilateral relations. Despite both countries having established multi-layered haze response mechanisms, the surge in hotspots during each monsoon transition period (March-May and August-October) continues to test the effectiveness of bilateral environmental governance. Sarawak's rapid response in this incident (activating the operations room, suspending burning permits) indicates Malaysia has developed a relatively mature emergency mechanism, but fundamental resolution still depends on Indonesia's source control of agricultural burning in Kalimantan. As the monsoon transition period continues through May, haze risks require continued monitoring.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENT 5: 社交媒体年龄限制 🟡 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-amber-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-amber-500 p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 dark:bg-amber-500/10 text-amber-600 dark:text-amber-400 text-xs font-semibold">
+              🟡 <span data-zh>中影响</span><span data-en>Medium Impact</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件五</span><span data-en>Event 5</span></span>
+          </div>
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>社交媒体年龄限制——马来西亚借鉴印尼经验</span>
+            <span data-en>Social Media Age Restrictions — Malaysia Draws on Indonesia's Experience</span>
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>3月7日，马来西亚通讯部长法赫米·法兹尔宣布计划于2026年下半年实施16岁以下社交媒体使用限制，明确表示参考了印尼的先行经验（印尼相关法规于3月28日生效）。</span>
+            <span data-en>On March 7, Malaysian Communications Minister Fahmi Fadzil announced plans to implement social media usage restrictions for those under 16 in the second half of 2026, explicitly stating reference to Indonesia's pioneering experience (Indonesia's relevant regulations took effect on March 28).</span>
+          </p>
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>马来西亚计划设定16岁为社交媒体使用最低年龄</span><span data-en>Malaysia plans to set 16 as the minimum age for social media use</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>通讯部长法赫米公开赞扬印尼的做法</span><span data-en>Communications Minister Fahmi publicly praised Indonesia's approach</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>副部长张念群表示将学习印尼的分阶段实施方案</span><span data-en>Deputy Minister Teo Nie Ching stated they would learn from Indonesia's phased implementation plan</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>印尼成为东盟地区数字治理的"先行者"</span><span data-en>Indonesia has become the "pioneer" of digital governance in the ASEAN region</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>政策对标体现了两国在非传统安全领域的治理经验共享</span><span data-en>Policy benchmarking reflects governance experience sharing between the two countries in non-traditional security areas</span></span></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>社交媒体年龄限制看似技术性议题，实则折射出马印两国在数字治理领域正在形成一种新型的"政策学习"关系。印尼凭借其2.7亿人口的市场规模率先立法，马来西亚则以"快速跟随者"姿态借鉴调整。这种模式可能在人工智能监管、数据跨境流动等更多数字治理议题上复制，形成东盟内部的"政策扩散"效应。</span>
+              <span data-en>While social media age restrictions may appear to be a technical issue, they actually reflect a new type of "policy learning" relationship forming between Malaysia and Indonesia in the digital governance domain. Indonesia, leveraging its 270-million-strong market, took the lead in legislation, while Malaysia adopted a "fast follower" posture to learn and adapt. This pattern may be replicated across more digital governance topics such as AI regulation and cross-border data flows, creating a "policy diffusion" effect within ASEAN.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EVENT 6: 沙巴-北加蓝色经济 🟢 -->
+    <div class="relative sm:pl-16 fade-up">
+      <div class="hidden sm:flex absolute left-3 sm:left-4 top-6 w-5 h-5 rounded-full bg-emerald-500 border-4 border-white dark:border-[#0f172a] z-10"></div>
+      <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover">
+        <div class="border-l-4 border-emerald-500 p-6">
+          <div class="flex flex-wrap items-center gap-3 mb-3">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-xs font-semibold">
+              🟢 <span data-zh>关注</span><span data-en>Watch</span>
+            </span>
+            <span class="text-xs text-slate-400"><span data-zh>事件六</span><span data-en>Event 6</span></span>
+          </div>
+          <h3 class="font-display text-xl text-slate-900 dark:text-white mb-2">
+            <span data-zh>沙巴-北加里曼丹蓝色经济合作</span>
+            <span data-en>Sabah-North Kalimantan Blue Economy Cooperation</span>
+          </h3>
+          <p class="text-slate-600 dark:text-slate-400 mb-4 text-sm leading-relaxed">
+            <span data-zh>4月5日，沙巴州政府（Sabah Maju）宣布计划访问印尼北加里曼丹省，推进蓝色经济合作项目，包括碳交易等新兴领域。</span>
+            <span data-en>On April 5, the Sabah state government (Sabah Maju) announced plans to visit Indonesia's North Kalimantan province to advance blue economy cooperation projects, including emerging areas such as carbon trading.</span>
+          </p>
+          <div class="mb-4">
+            <h4 class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-list-check text-[#059669]"></i>
+              <span data-zh>关键细节</span><span data-en>Key Details</span>
+            </h4>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400">
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>沙巴州政府主动规划访问北加里曼丹</span><span data-en>Sabah state government proactively planned the visit to North Kalimantan</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>合作领域涵盖蓝色经济、碳交易等前沿议题</span><span data-en>Cooperation areas cover frontier topics including blue economy and carbon trading</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>印尼驻亚庇总领事举办开斋节开放日活动，盛赞马印关系</span><span data-en>Indonesian Consul General in Kota Kinabalu hosted an Eid open house event, praising Malaysia-Indonesia relations</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>边境社区层面的合作意愿强烈</span><span data-en>Strong willingness for cooperation at the border community level</span></span></li>
+              <li class="flex gap-2"><span class="text-[#059669] mt-1">•</span><span><span data-zh>与 Serikin 边境口岸设施升级（预计2027年12月完工）形成呼应</span><span data-en>Echoes the Serikin border crossing facility upgrade (expected completion December 2027)</span></span></li>
+            </ul>
+          </div>
+          <div class="bg-amber-50/80 dark:bg-amber-500/5 border border-amber-200/60 dark:border-amber-500/20 rounded-xl p-4">
+            <h4 class="text-sm font-semibold text-amber-700 dark:text-amber-400 mb-2 flex items-center gap-2">
+              <i class="fa-solid fa-lightbulb"></i>
+              <span data-zh>洞察</span><span data-en>Insight</span>
+            </h4>
+            <p class="text-sm text-amber-900/80 dark:text-amber-200/80 leading-relaxed">
+              <span data-zh>沙巴-北加里曼丹的蓝色经济合作代表了马印双边关系的一个新增长极——"边境驱动型合作"。不同于传统的首都对首都外交，这种由边境州省主导、聚焦海洋经济和碳交易的合作模式，更贴近两国共享的婆罗洲生态系统现实。Serikin 边境设施的升级将为这一合作提供硬件支撑，值得中长期跟踪。</span>
+              <span data-en>The Sabah-North Kalimantan blue economy cooperation represents a new growth pole in Malaysia-Indonesia bilateral relations — "border-driven cooperation." Unlike traditional capital-to-capital diplomacy, this cooperation model led by border states/provinces and focused on marine economy and carbon trading is more aligned with the shared Borneo ecosystem reality. The Serikin border facility upgrade will provide hardware support for this cooperation, warranting medium-to-long-term tracking.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end timeline -->
+</section>
+
+<!-- ============ SECTION 三: 趋势观察 ============ -->
+<section id="trends" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="flex items-center gap-3 mb-10 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center">
+      <i class="fa-solid fa-chart-line text-[#059669]"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>三、趋势观察</span><span data-en>III. Trend Watch</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>4 项关键趋势研判</span><span data-en>4 key trend assessments</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+    <!-- Trend 1 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 p-6 card-hover fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-fire text-[#d97706]"></i>
+        </div>
+        <h3 class="font-display text-lg text-slate-900 dark:text-white">
+          <span data-zh>趋势一：中东危机成为马印双边关系的"加速器"</span>
+          <span data-en>Trend 1: Middle East Crisis as an "Accelerator" for Malaysia-Indonesia Relations</span>
+        </h3>
+      </div>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        <span data-zh>中东冲突的外溢效应正在多个维度催化马印双边协调。政治层面，安华专访雅加达的核心议题即为中东地缘政治；经济层面，两国同步实施公务员居家办公以应对能源危机（印尼限制每日燃油购买量并扩大居家办公范围，马来西亚分阶段推行居家办公并维持 RON95 补贴于 RM1.99）；安全层面，联黎维和部队遇袭使两国在国际维和领域的共同风险暴露无遗。多条资讯交叉印证，中东危机已从一个外部变量转化为马印双边关系深化的内生动力。</span>
+        <span data-en>The spillover effects of the Middle East conflict are catalyzing Malaysia-Indonesia bilateral coordination across multiple dimensions. Politically, the core agenda of Anwar's Jakarta visit was Middle East geopolitics. Economically, both countries simultaneously implemented civil servant work-from-home policies to cope with the energy crisis (Indonesia restricted daily fuel purchases and expanded WFH scope; Malaysia phased in WFH and maintained the RON95 subsidy at RM1.99). On security, the UNIFIL peacekeeping attack fully exposed both countries' shared risks in international peacekeeping. Multiple information sources cross-verify that the Middle East crisis has transformed from an external variable into an endogenous driver for deepening Malaysia-Indonesia bilateral relations.</span>
+      </p>
+      <div class="bg-[#059669]/5 dark:bg-[#059669]/10 border border-[#059669]/20 rounded-lg p-4">
+        <h4 class="text-sm font-semibold text-[#059669] mb-1 flex items-center gap-2">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <span data-zh>趋势判断</span><span data-en>Trend Forecast</span>
+        </h4>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          <span data-zh>若中东局势持续紧张，马印在东盟框架内的政策协调频率将进一步提升，第14届年度磋商的议程深度也将超越往届。</span>
+          <span data-en>If Middle East tensions persist, the frequency of Malaysia-Indonesia policy coordination within the ASEAN framework will further increase, and the agenda depth of the 14th Annual Consultation will surpass previous editions.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Trend 2 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 p-6 card-hover fade-up" style="transition-delay: 0.1s;">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-[#1e3a5f]/10 dark:bg-blue-500/20 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-shield-halved text-[#1e3a5f] dark:text-blue-400"></i>
+        </div>
+        <h3 class="font-display text-lg text-slate-900 dark:text-white">
+          <span data-zh>趋势二：防务合作从双边向三边（马印新）拓展</span>
+          <span data-en>Trend 2: Defense Cooperation Expanding from Bilateral to Trilateral (MY-ID-SG)</span>
+        </h3>
+      </div>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        <span data-zh>马力克上将提出的马印新三边防务合作构想，是对现有马六甲海峡"空中之眼"联合巡逻机制的战略升级。结合印尼防长斯贾弗里确认5月赴马出席边境委员会会议、马力克首访即选择印尼等信号，防务合作正从"例行交流"向"机制化升级"迈进。</span>
+        <span data-en>General Malik's proposed Malaysia-Indonesia-Singapore trilateral defense cooperation vision represents a strategic upgrade of the existing Malacca Strait "Eyes in the Sky" joint patrol mechanism. Combined with signals such as Indonesian Defense Minister Sjafrie confirming his May visit to Malaysia for the Border Committee meeting and Malik choosing Indonesia for his inaugural visit, defense cooperation is advancing from "routine exchanges" to "institutional upgrading."</span>
+      </p>
+      <div class="bg-[#059669]/5 dark:bg-[#059669]/10 border border-[#059669]/20 rounded-lg p-4">
+        <h4 class="text-sm font-semibold text-[#059669] mb-1 flex items-center gap-2">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <span data-zh>趋势判断</span><span data-en>Trend Forecast</span>
+        </h4>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          <span data-zh>三边防务框架若能在2026年内取得实质进展，将成为马六甲海峡安全治理的新里程碑，也可能吸引域外大国的关注与介入。</span>
+          <span data-en>If the trilateral defense framework achieves substantive progress within 2026, it will become a new milestone in Malacca Strait security governance and may also attract attention and involvement from extra-regional powers.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Trend 3 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 p-6 card-hover fade-up">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-handshake text-[#d97706]"></i>
+        </div>
+        <h3 class="font-display text-lg text-slate-900 dark:text-white">
+          <span data-zh>趋势三：经贸合作平台化——SIBS 首次出海印尼</span>
+          <span data-en>Trend 3: Trade Cooperation Platformization — SIBS's First Overseas Edition in Indonesia</span>
+        </h3>
+      </div>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        <span data-zh>雪兰莪国际商业峰会（SIBS）宣布将于2026年7月在万隆举办 SIBS@ASEAN 专场，这是该平台自2015年创办以来首次走出马来西亚。SIBS 累计促成交易额达 RM305.6 亿，重点领域包括医疗旅游和教育。结合2022年马印双边贸易额266亿美元（同比增长5.3%）、印尼游客为马来西亚最大外国游客来源（2022年420万人次）等数据，两国经贸关系正从"自然增长"向"平台驱动"转型。</span>
+        <span data-en>The Selangor International Business Summit (SIBS) announced it will hold a SIBS@ASEAN special edition in Bandung in July 2026, marking the platform's first venture outside Malaysia since its founding in 2015. SIBS has cumulatively facilitated transactions worth RM30.56 billion, with key sectors including medical tourism and education. Combined with data showing bilateral trade of US$26.6 billion in 2022 (up 5.3% YoY) and Indonesian tourists being Malaysia's largest foreign visitor source (4.2 million in 2022), the two countries' economic and trade relations are transitioning from "natural growth" to "platform-driven."</span>
+      </p>
+      <div class="bg-[#059669]/5 dark:bg-[#059669]/10 border border-[#059669]/20 rounded-lg p-4">
+        <h4 class="text-sm font-semibold text-[#059669] mb-1 flex items-center gap-2">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <span data-zh>趋势判断</span><span data-en>Trend Forecast</span>
+        </h4>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          <span data-zh>SIBS 万隆专场的成效将决定马来西亚经贸平台"出海东盟"模式能否复制到其他成员国，值得关注其招商成果和参展规模。</span>
+          <span data-en>The effectiveness of the SIBS Bandung edition will determine whether Malaysia's trade platform "going overseas to ASEAN" model can be replicated in other member states. Its investment attraction results and exhibition scale are worth monitoring.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Trend 4 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 p-6 card-hover fade-up" style="transition-delay: 0.1s;">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+          <i class="fa-solid fa-mobile-screen text-[#059669]"></i>
+        </div>
+        <h3 class="font-display text-lg text-slate-900 dark:text-white">
+          <span data-zh>趋势四：数字治理政策趋同——社交媒体监管对标</span>
+          <span data-en>Trend 4: Digital Governance Policy Convergence — Social Media Regulation Benchmarking</span>
+        </h3>
+      </div>
+      <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+        <span data-zh>马来西亚在社交媒体年龄限制上明确参考印尼经验，通讯部长和副部长先后公开表态，形成了一条清晰的"印尼先行—马来西亚跟进"政策扩散链。这一模式在东盟数字治理领域具有示范意义，可能在数据保护、人工智能监管等更多议题上复现。</span>
+        <span data-en>Malaysia explicitly referenced Indonesia's experience on social media age restrictions, with both the Communications Minister and Deputy Minister making public statements, forming a clear "Indonesia leads — Malaysia follows" policy diffusion chain. This model has demonstrative significance in ASEAN digital governance and may be replicated across more topics such as data protection and AI regulation.</span>
+      </p>
+      <div class="bg-[#059669]/5 dark:bg-[#059669]/10 border border-[#059669]/20 rounded-lg p-4">
+        <h4 class="text-sm font-semibold text-[#059669] mb-1 flex items-center gap-2">
+          <i class="fa-solid fa-arrow-trend-up"></i>
+          <span data-zh>趋势判断</span><span data-en>Trend Forecast</span>
+        </h4>
+        <p class="text-sm text-slate-700 dark:text-slate-300">
+          <span data-zh>两国在数字治理领域的政策趋同将为东盟层面的数字安全框架建设提供双边基础，2026年下半年马来西亚政策落地时的具体方案值得对比分析。</span>
+          <span data-en>Policy convergence between the two countries in digital governance will provide a bilateral foundation for ASEAN-level digital security framework construction. The specific plan when Malaysia's policy lands in the second half of 2026 warrants comparative analysis.</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 四: 风险警示 ============ -->
+<section id="risks" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="flex items-center gap-3 mb-10 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#ef4444]/10 dark:bg-[#ef4444]/20 flex items-center justify-center">
+      <i class="fa-solid fa-triangle-exclamation text-[#ef4444]"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>四、风险警示</span><span data-en>IV. Risk Alerts</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>3 项需关注的风险因素</span><span data-en>3 risk factors requiring attention</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="space-y-6">
+
+    <!-- Risk 1 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover fade-up">
+      <div class="border-l-4 border-[#d97706] p-6">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-full bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <i class="fa-solid fa-smog text-[#d97706]"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-lg text-slate-900 dark:text-white mb-3">
+              <span class="text-[#d97706] mr-2">⚠️</span>
+              <span data-zh>风险一：跨境雾霾季节性风险——季风过渡期持续至5月</span>
+              <span data-en>Risk 1: Seasonal Cross-Border Haze Risk — Monsoon Transition Period Continues Through May</span>
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <span data-zh>加里曼丹241个热点的检测数据表明，2026年旱季的跨境雾霾风险已经显现。季风过渡期（3-5月）大气条件不利于污染物扩散，砂拉越已启动雾霾作战室并暂停焚烧许可。若印尼方面未能有效控制加里曼丹的农业焚烧，4-5月雾霾可能进一步恶化，影响砂拉越和沙巴的空气质量、旅游业和公共健康，并可能引发双边外交摩擦。</span>
+              <span data-en>Detection data of 241 hotspots in Kalimantan indicates that cross-border haze risks for the 2026 dry season have already materialized. During the monsoon transition period (March-May), atmospheric conditions are unfavorable for pollutant dispersion, and Sarawak has activated its haze operations room and suspended burning permits. If Indonesia fails to effectively control agricultural burning in Kalimantan, haze may further worsen in April-May, affecting air quality, tourism, and public health in Sarawak and Sabah, and potentially triggering bilateral diplomatic friction.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk 2 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover fade-up">
+      <div class="border-l-4 border-[#d97706] p-6">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-full bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <i class="fa-solid fa-users text-[#d97706]"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-lg text-slate-900 dark:text-white mb-3">
+              <span class="text-[#d97706] mr-2">⚠️</span>
+              <span data-zh>风险二：非法移民与劳工权益问题——结构性矛盾持续</span>
+              <span data-en>Risk 2: Illegal Immigration and Labor Rights Issues — Structural Contradictions Persist</span>
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <span data-zh>本期多起事件凸显了马印之间劳工流动的结构性矛盾：莎阿南突击检查中发现214名无证件工人（4月4日）、马六甲人口贩运案中有印尼嫌疑人被捕（3月27日）、柔佛州印尼女佣健康争议（3月31日）、沙巴移民执法中5名印尼人被拘留（3月6日）、蒲种电梯事故致印尼工人死亡（3月29日）。这些事件虽属个案，但共同指向一个系统性问题：马来西亚对印尼劳工的高度依赖与劳工权益保障之间的张力。任何一起事件的舆论发酵都可能影响双边关系的民间基础。</span>
+              <span data-en>Multiple incidents this period highlighted structural contradictions in labor mobility between Malaysia and Indonesia: 214 undocumented workers found during a Shah Alam raid (April 4), Indonesian suspects arrested in a Malacca human trafficking case (March 27), a Johor Indonesian maid health dispute (March 31), 5 Indonesians detained in Sabah immigration enforcement (March 6), and an elevator accident in Puchong killing an Indonesian worker (March 29). While these are individual cases, they collectively point to a systemic issue: the tension between Malaysia's high dependence on Indonesian labor and labor rights protection. Public opinion escalation of any single incident could affect the grassroots foundation of bilateral relations.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Risk 3 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden card-hover fade-up">
+      <div class="border-l-4 border-[#d97706] p-6">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 rounded-full bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center flex-shrink-0 mt-1">
+            <i class="fa-solid fa-oil-well text-[#d97706]"></i>
+          </div>
+          <div>
+            <h3 class="font-display text-lg text-slate-900 dark:text-white mb-3">
+              <span class="text-[#d97706] mr-2">⚠️</span>
+              <span data-zh>风险三：中东冲突长期化对双边经济的间接冲击</span>
+              <span data-en>Risk 3: Indirect Economic Impact of Prolonged Middle East Conflict on Bilateral Economy</span>
+            </h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <span data-zh>中东局势持续紧张正通过多条路径影响马印经济互动：国际油价波动直接冲击两国财政（马来西亚维持 RON95 补贴的财政压力增大）；印尼提高毛棕油（CPO）出口关税影响马来西亚种植业公司（如森那美）在印尼的运营成本；马来西亚65%的煤炭进口来自印尼，能源供应链的稳定性面临考验。若中东冲突进一步升级，两国可能在能源补贴政策上出现分歧，影响区域经济协调。</span>
+              <span data-en>Continued Middle East tensions are affecting Malaysia-Indonesia economic interactions through multiple pathways: international oil price volatility directly impacts both countries' fiscal positions (Malaysia faces increasing fiscal pressure to maintain the RON95 subsidy); Indonesia's increase in crude palm oil (CPO) export levies affects the operating costs of Malaysian plantation companies (such as Sime Darby) in Indonesia; 65% of Malaysia's coal imports come from Indonesia, putting energy supply chain stability to the test. If the Middle East conflict further escalates, the two countries may diverge on energy subsidy policies, affecting regional economic coordination.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ SECTION 五: 合作亮点 ============ -->
+<section id="cooperation" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="flex items-center gap-3 mb-10 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#d97706]/10 dark:bg-[#d97706]/20 flex items-center justify-center">
+      <i class="fa-solid fa-star text-[#d97706]"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>五、合作亮点</span><span data-en>V. Cooperation Highlights</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>9 大领域合作成果</span><span data-en>Cooperation achievements across 9 domains</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="bg-white dark:bg-slate-800/50 rounded-2xl border border-slate-200/60 dark:border-slate-700/60 overflow-hidden fade-up">
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-[#059669]/5 dark:bg-[#059669]/10">
+            <th class="text-left px-5 py-4 font-semibold text-[#059669] w-28"><span data-zh>领域</span><span data-en>Domain</span></th>
+            <th class="text-left px-5 py-4 font-semibold text-[#059669]"><span data-zh>亮点</span><span data-en>Highlights</span></th>
+            <th class="text-left px-5 py-4 font-semibold text-[#059669]"><span data-zh>意义</span><span data-en>Significance</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1: 政治外交 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>政治外交</span><span data-en>Political Diplomacy</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>安华专访雅加达，筹备第14届马印年度磋商</span>
+              <span data-en>Anwar's special visit to Jakarta, preparing for the 14th Malaysia-Indonesia Annual Consultation</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>最高层级战略协调，中东危机催化双边对话升级</span>
+              <span data-en>Highest-level strategic coordination; Middle East crisis catalyzes bilateral dialogue upgrade</span>
+            </td>
+          </tr>
+          <!-- Row 2: 国防安全 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>国防安全</span><span data-en>Defense &amp; Security</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>新任防长首访印尼，提出马印新三边防务合作</span>
+              <span data-en>New defense chief's inaugural visit to Indonesia, proposing MY-ID-SG trilateral defense cooperation</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>防务合作从双边向多边拓展，马六甲海峡安全治理升级</span>
+              <span data-en>Defense cooperation expanding from bilateral to multilateral; Malacca Strait security governance upgrade</span>
+            </td>
+          </tr>
+          <!-- Row 3: 经贸投资 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>经贸投资</span><span data-en>Trade &amp; Investment</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>SIBS 首次出海万隆，双边贸易额266亿美元</span>
+              <span data-en>SIBS's first overseas edition in Bandung; bilateral trade at US$26.6 billion</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>经贸平台国际化，合作从自然增长转向机制驱动</span>
+              <span data-en>Internationalization of trade platforms; cooperation shifting from natural growth to mechanism-driven</span>
+            </td>
+          </tr>
+          <!-- Row 4: 数字治理 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>数字治理</span><span data-en>Digital Governance</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>社交媒体年龄限制政策对标，马方公开借鉴印尼经验</span>
+              <span data-en>Social media age restriction policy benchmarking; Malaysia openly draws on Indonesia's experience</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>非传统安全领域的治理经验共享，东盟政策扩散示范</span>
+              <span data-en>Governance experience sharing in non-traditional security; ASEAN policy diffusion demonstration</span>
+            </td>
+          </tr>
+          <!-- Row 5: 能源产业 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>能源产业</span><span data-en>Energy &amp; Industry</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>印尼 B50 生物柴油计划提振棕油期货市场</span>
+              <span data-en>Indonesia's B50 biodiesel plan boosts palm oil futures market</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>棕油产业链深度联动，两国共同受益</span>
+              <span data-en>Deep linkage in palm oil industry chain; both countries benefit</span>
+            </td>
+          </tr>
+          <!-- Row 6: 边境发展 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>边境发展</span><span data-en>Border Development</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>沙巴-北加蓝色经济合作、Serikin 边境设施升级（2027年完工）</span>
+              <span data-en>Sabah-North Kalimantan blue economy cooperation; Serikin border facility upgrade (completion 2027)</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>边境社区共同繁荣，碳交易等新兴领域先行先试</span>
+              <span data-en>Shared prosperity for border communities; pioneering in emerging areas such as carbon trading</span>
+            </td>
+          </tr>
+          <!-- Row 7: 人文交流 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>人文交流</span><span data-en>Cultural Exchange</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>Barasuara 乐队吉隆坡演出、SoundCircus 音乐节50+马印艺人、Remy Ishak 与 Aghniny Haque 电影合作</span>
+              <span data-en>Barasuara band's KL concert; SoundCircus festival with 50+ MY-ID artists; Remy Ishak &amp; Aghniny Haque film collaboration</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>文化产业互通，民间纽带持续加强</span>
+              <span data-en>Cultural industry interconnection; people-to-people bonds continuously strengthening</span>
+            </td>
+          </tr>
+          <!-- Row 8: 教育合作 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50 bg-slate-50/50 dark:bg-slate-800/30">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>教育合作</span><span data-en>Education</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>40名 SPM 优秀生赴雅加达研学、马大护理学科国际合作</span>
+              <span data-en>40 top SPM students on Jakarta study tour; UM nursing discipline international cooperation</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>青年交流培育下一代双边关系基础</span>
+              <span data-en>Youth exchanges cultivating the foundation for next-generation bilateral relations</span>
+            </td>
+          </tr>
+          <!-- Row 9: 人道主义 -->
+          <tr class="border-t border-slate-100 dark:border-slate-700/50">
+            <td class="px-5 py-4 font-medium text-slate-900 dark:text-white align-top">
+              <span data-zh>人道主义</span><span data-en>Humanitarian</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>西亚撤侨行动包含1名印尼公民（共撤离170人）</span>
+              <span data-en>West Asia evacuation operation included 1 Indonesian citizen (170 evacuated in total)</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-400 align-top">
+              <span data-zh>危机中的跨国互助，彰显邻国责任</span>
+              <span data-en>Cross-national mutual aid in crisis, demonstrating neighborly responsibility</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 六: 下期关注点 ============ -->
+<section id="forward" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="flex items-center gap-3 mb-10 fade-up">
+    <div class="w-10 h-10 rounded-lg bg-[#1e3a5f]/10 dark:bg-blue-500/20 flex items-center justify-center">
+      <i class="fa-solid fa-binoculars text-[#1e3a5f] dark:text-blue-400"></i>
+    </div>
+    <div>
+      <h2 class="font-display text-2xl sm:text-3xl text-slate-900 dark:text-white">
+        <span data-zh>六、下期关注点</span><span data-en>VI. Next Period Watch</span>
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400">
+        <span data-zh>5 项前瞻性关注议题</span><span data-en>5 forward-looking topics to watch</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+
+    <!-- Item 1 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 p-5 flex gap-4 card-hover fade-up">
+      <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+        <span class="font-mono font-bold text-[#059669]">1</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 dark:text-white mb-1">
+          <span data-zh>第14届马印年度磋商筹备进展</span>
+          <span data-en>Progress on the 14th Malaysia-Indonesia Annual Consultation Preparation</span>
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span data-zh>安华专访雅加达后，双方将进入议程细化阶段，关注磋商日期确认和核心议题设定</span>
+          <span data-en>Following Anwar's Jakarta visit, both sides will enter the agenda refinement phase; watch for consultation date confirmation and core agenda setting</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 p-5 flex gap-4 card-hover fade-up">
+      <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+        <span class="font-mono font-bold text-[#059669]">2</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 dark:text-white mb-1">
+          <span data-zh>印尼防长5月访马参加边境委员会会议</span>
+          <span data-en>Indonesian Defense Minister's May Visit to Malaysia for Border Committee Meeting</span>
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span data-zh>三边防务合作构想能否转化为具体行动方案的关键节点</span>
+          <span data-en>A critical juncture for whether the trilateral defense cooperation vision can be translated into concrete action plans</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 p-5 flex gap-4 card-hover fade-up">
+      <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+        <span class="font-mono font-bold text-[#059669]">3</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 dark:text-white mb-1">
+          <span data-zh>吉隆坡防务展（DSA）印尼参展情况</span>
+          <span data-en>Indonesia's Participation at the Kuala Lumpur Defence Services Asia (DSA) Exhibition</span>
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span data-zh>印尼是否派出高规格代表团参展，将反映防务合作的实际热度</span>
+          <span data-en>Whether Indonesia sends a high-level delegation will reflect the actual momentum of defense cooperation</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 p-5 flex gap-4 card-hover fade-up">
+      <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+        <span class="font-mono font-bold text-[#059669]">4</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 dark:text-white mb-1">
+          <span data-zh>砂拉越雾霾走势</span>
+          <span data-en>Sarawak Haze Trajectory</span>
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span data-zh>季风过渡期持续至5月，加里曼丹热点数量和砂拉越 API 指数需持续监测</span>
+          <span data-en>The monsoon transition period continues through May; Kalimantan hotspot counts and Sarawak API indices require continued monitoring</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="bg-white dark:bg-slate-800/50 rounded-xl border border-slate-200/60 dark:border-slate-700/60 p-5 flex gap-4 card-hover fade-up">
+      <div class="w-10 h-10 rounded-full bg-[#059669]/10 dark:bg-[#059669]/20 flex items-center justify-center flex-shrink-0">
+        <span class="font-mono font-bold text-[#059669]">5</span>
+      </div>
+      <div>
+        <h3 class="font-semibold text-slate-900 dark:text-white mb-1">
+          <span data-zh>SIBS@ASEAN 万隆专场筹备</span>
+          <span data-en>SIBS@ASEAN Bandung Edition Preparation</span>
+        </h3>
+        <p class="text-sm text-slate-600 dark:text-slate-400">
+          <span data-zh>7月举办，近期将公布参展企业名单和重点合作领域</span>
+          <span data-en>Scheduled for July; exhibitor lists and key cooperation areas to be announced soon</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="border-t border-slate-200/60 dark:border-slate-700/60 bg-slate-50 dark:bg-[#0f172a] py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-[#059669] flex items-center justify-center">
+          <i class="fa-solid fa-chart-line text-white text-sm"></i>
+        </div>
+        <div>
+          <span class="font-display text-lg text-slate-800 dark:text-white">Supinfor</span>
+          <p class="text-xs text-slate-500 dark:text-slate-400">
+            <span data-zh>区域国别实时监测平台</span><span data-en>Regional Real-time Monitoring Platform</span>
+          </p>
+        </div>
+      </div>
+      <div class="text-center text-xs text-slate-500 dark:text-slate-400 max-w-lg">
+        <p class="mb-1">
+          <span data-zh>本报告基于 Supinfor 区域国别实时监测数据编制，仅供参考，不构成投资或决策建议。</span>
+          <span data-en>This report is compiled based on Supinfor regional real-time monitoring data, for reference only, and does not constitute investment or decision-making advice.</span>
+        </p>
+        <p>
+          <span data-zh>报告生成时间：2026-04-05</span><span data-en>Report generated: 2026-04-05</span>
+          <span class="mx-2">·</span>
+          © Supinfor Ltd.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#059669] text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:bg-[#047857] z-50" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+// Theme Toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.classList.toggle('dark');
+  localStorage.setItem('theme', isDark ? 'dark' : 'light');
+}
+
+// Language Toggle
+function toggleLang() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-lang');
+  const next = current === 'zh' ? 'en' : 'zh';
+  html.setAttribute('data-lang', next);
+  html.setAttribute('lang', next === 'zh' ? 'zh-CN' : 'en');
+  document.getElementById('lang-label').textContent = next === 'zh' ? 'EN' : '中';
+  localStorage.setItem('lang', next);
+}
+
+// Init theme from localStorage or system preference
+(function() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+  }
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    document.documentElement.setAttribute('data-lang', savedLang);
+    document.documentElement.setAttribute('lang', savedLang === 'zh' ? 'zh-CN' : 'en');
+    document.getElementById('lang-label').textContent = savedLang === 'zh' ? 'EN' : '中';
+  }
+})();
+
+// Counter Animation
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// IntersectionObserver for scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, index) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, index * 80);
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Counter animation trigger
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateCounters();
+      heroObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+const counterSection = document.querySelector('.counter');
+if (counterSection) heroObserver.observe(counterSection.closest('.grid'));
+
+// Bar chart animation
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.bar-fill').forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width');
+        }, i * 100);
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.bar-fill').forEach(bar => {
+  const parent = bar.closest('.space-y-3');
+  if (parent) barObserver.observe(parent);
+});
+
+// Back to top button
+const backToTop = document.getElementById('back-to-top');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 600) {
+    backToTop.classList.remove('opacity-0', 'pointer-events-none');
+    backToTop.classList.add('opacity-100');
+  } else {
+    backToTop.classList.add('opacity-0', 'pointer-events-none');
+    backToTop.classList.remove('opacity-100');
+  }
+});
+
+// Smooth scroll for nav links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马来西亚营商环境动态速览 | Malaysia Business Climate Flash</title>
+<meta name="description" content="2026年4月13日-19日马来西亚营商环境动态速览 by Supinfor Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['Noto Serif SC', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'PingFang SC', 'Microsoft YaHei', 'sans-serif'],
+      },
+      colors: {
+        indigo: { deep: '#1e3a5f' },
+        emerald: { brand: '#059669' },
+        amber: { brand: '#b45309' },
+        navy: { dark: '#0a1628' },
+        ice: { blue: '#38bdf8' },
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ===== Language Toggle ===== */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* ===== Base ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Light Theme ===== */
+:root {
+  --bg-primary: #faf9f7;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f3f1ee;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #7a7a9a;
+  --border-color: #e5e3df;
+  --accent-indigo: #1e3a5f;
+  --accent-emerald: #059669;
+  --accent-amber: #b45309;
+  --card-shadow: 0 4px 24px rgba(30,58,95,0.08);
+  --hero-gradient: linear-gradient(135deg, #0f2847 0%, #1e3a5f 40%, #1a4a6f 70%, #0d3b66 100%);
+  --kpi-bg: rgba(255,255,255,0.12);
+  --kpi-border: rgba(255,255,255,0.2);
+  --sidebar-bg: #ffffff;
+  --bar-bg: #e5e3df;
+}
+
+/* ===== Dark Theme ===== */
+[data-theme="dark"] {
+  --bg-primary: #0a1628;
+  --bg-secondary: #111d33;
+  --bg-tertiary: #162240;
+  --text-primary: #e8edf5;
+  --text-secondary: #a0b0cc;
+  --text-muted: #6a7fa0;
+  --border-color: #1e3050;
+  --accent-indigo: #38bdf8;
+  --accent-emerald: #34d399;
+  --accent-amber: #fbbf24;
+  --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --hero-gradient: linear-gradient(135deg, #050d1a 0%, #0a1628 40%, #0f1f3d 70%, #081428 100%);
+  --kpi-bg: rgba(56,189,248,0.08);
+  --kpi-border: rgba(56,189,248,0.2);
+  --sidebar-bg: #111d33;
+  --bar-bg: #1e3050;
+}
+
+body { background: var(--bg-primary); color: var(--text-primary); }
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-tertiary); }
+::-webkit-scrollbar-thumb { background: var(--accent-indigo); border-radius: 3px; }
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--hero-gradient);
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 600px 400px at 20% 50%, rgba(5,150,105,0.15), transparent),
+    radial-gradient(ellipse 500px 300px at 80% 30%, rgba(56,189,248,0.1), transparent),
+    radial-gradient(ellipse 400px 400px at 50% 80%, rgba(180,83,9,0.08), transparent);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+/* ===== KPI Cards ===== */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+  margin: 2.5rem auto 0;
+}
+@media (max-width: 768px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+}
+@media (max-width: 480px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+}
+.kpi-card {
+  background: var(--kpi-bg);
+  border: 1px solid var(--kpi-border);
+  border-radius: 12px;
+  padding: 1.25rem;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
+}
+.kpi-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(56,189,248,0.15);
+}
+.kpi-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 0.5rem;
+}
+.kpi-value {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+}
+.kpi-sub {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.5);
+  margin-top: 0.35rem;
+}
+.kpi-card.emerald .kpi-value { color: #34d399; }
+.kpi-card.amber .kpi-value { color: #fbbf24; }
+.kpi-card.ice .kpi-value { color: #38bdf8; }
+.kpi-card.rose .kpi-value { color: #fb7185; }
+
+/* ===== Sidebar / TOC ===== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100vh;
+  background: var(--sidebar-bg);
+  border-right: 1px solid var(--border-color);
+  z-index: 100;
+  overflow-y: auto;
+  padding: 1.5rem 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+.sidebar.open { transform: translateX(0); }
+@media (min-width: 1200px) {
+  .sidebar { transform: translateX(0); }
+  .main-content { margin-left: 280px; }
+}
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 99;
+  display: none;
+}
+.sidebar.open ~ .sidebar-overlay { display: block; }
+@media (min-width: 1200px) {
+  .sidebar-overlay { display: none !important; }
+}
+.toc-link {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s;
+  border-left: 3px solid transparent;
+  margin-bottom: 2px;
+}
+.toc-link:hover, .toc-link.active {
+  background: var(--bg-tertiary);
+  color: var(--accent-indigo);
+  border-left-color: var(--accent-indigo);
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 200;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+@media (min-width: 1200px) { .hamburger { display: none; } }
+
+/* ===== Top Controls ===== */
+.top-controls {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 200;
+  display: flex;
+  gap: 0.5rem;
+}
+.ctrl-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: var(--card-shadow);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+.ctrl-btn:hover { transform: scale(1.05); }
+
+/* ===== Section Styles ===== */
+.section-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 3px solid var(--accent-indigo);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.section-title i { font-size: 1.5rem; }
+
+/* ===== Cards ===== */
+.content-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.content-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(30,58,95,0.12);
+}
+[data-theme="dark"] .content-card:hover {
+  box-shadow: 0 8px 40px rgba(56,189,248,0.08);
+}
+
+/* ===== Tables ===== */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.data-table th {
+  background: var(--accent-indigo);
+  color: #ffffff;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+[data-theme="dark"] .data-table th {
+  background: #1e3050;
+}
+.data-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+.data-table tr:hover td {
+  background: var(--bg-tertiary);
+}
+.data-table .num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+
+/* ===== Bar Charts ===== */
+.bar-chart-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.6rem;
+}
+.bar-label {
+  min-width: 140px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-align: right;
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 24px;
+  background: var(--bar-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  min-width: fit-content;
+}
+.bar-fill.indigo { background: linear-gradient(90deg, #1e3a5f, #2d5a8e); }
+.bar-fill.emerald { background: linear-gradient(90deg, #059669, #34d399); }
+.bar-fill.amber { background: linear-gradient(90deg, #b45309, #f59e0b); }
+.bar-fill.ice { background: linear-gradient(90deg, #0284c7, #38bdf8); }
+.bar-count {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  min-width: 50px;
+  text-align: right;
+}
+
+/* ===== Risk Cards ===== */
+.risk-card {
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 6px solid;
+  background: var(--bg-secondary);
+  box-shadow: var(--card-shadow);
+}
+.risk-card.red { border-left-color: #ef4444; }
+.risk-card.yellow { border-left-color: #f59e0b; }
+.risk-card.green { border-left-color: #10b981; }
+.risk-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.risk-badge.red { background: rgba(239,68,68,0.12); color: #ef4444; }
+.risk-badge.yellow { background: rgba(245,158,11,0.12); color: #f59e0b; }
+.risk-badge.green { background: rgba(16,185,129,0.12); color: #10b981; }
+
+/* ===== Event Cards ===== */
+.event-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  position: relative;
+  overflow: hidden;
+}
+.event-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-indigo), var(--accent-emerald));
+}
+.event-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-right: 0.75rem;
+  flex-shrink: 0;
+}
+.event-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+.event-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.event-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+}
+.event-section-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-indigo);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.heat-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+.heat-dots {
+  display: flex;
+  gap: 3px;
+}
+.heat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+}
+.heat-dot.inactive { opacity: 0.2; }
+
+/* ===== Trend Cards ===== */
+.trend-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+.trend-verdict {
+  background: var(--bg-tertiary);
+  border-left: 4px solid var(--accent-emerald);
+  border-radius: 0 12px 12px 0;
+  padding: 1.25rem 1.5rem;
+  margin-top: 1.25rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ===== Action Cards ===== */
+.action-category {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+.action-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+.action-item:last-child { border-bottom: none; }
+.action-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: var(--bg-tertiary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--accent-indigo);
+  font-size: 0.9rem;
+}
+
+/* ===== Scroll Reveal ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Back to Top ===== */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-indigo);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 90;
+  border: none;
+  font-size: 1.1rem;
+}
+.back-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.back-to-top:hover { transform: translateY(-3px); }
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .section-container { padding: 2.5rem 1rem; }
+  .section-title { font-size: 1.35rem; }
+  .kpi-value { font-size: 1.35rem; }
+  .bar-label { min-width: 100px; font-size: 0.72rem; }
+  .data-table { font-size: 0.8rem; }
+  .data-table th, .data-table td { padding: 0.5rem 0.6rem; }
+  .event-card, .trend-card, .risk-card, .action-category { padding: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== Hamburger Button ===== -->
+<button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- ===== Top Controls ===== -->
+<div class="top-controls">
+  <button class="ctrl-btn" id="themeToggle" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+  </button>
+  <button class="ctrl-btn" id="langToggle" aria-label="Toggle language">
+    EN
+  </button>
+</div>
+
+<!-- ===== Sidebar / TOC ===== -->
+<nav class="sidebar" id="sidebar">
+  <div style="margin-bottom:1.5rem;">
+    <div style="font-family:'Noto Serif SC',serif;font-weight:700;font-size:1rem;color:var(--accent-indigo);margin-bottom:0.25rem;">
+      <span data-zh>目录导航</span><span data-en>Contents</span>
+    </div>
+    <div style="font-size:0.72rem;color:var(--text-muted);">
+      <span data-zh>马来西亚营商环境报告</span><span data-en>Malaysia Business Climate</span>
+    </div>
+  </div>
+  <a href="#hero" class="toc-link"><i class="fas fa-flag" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>报告首页</span><span data-en>Report Home</span></a>
+  <a href="#executive-summary" class="toc-link"><i class="fas fa-file-alt" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>一、执行摘要</span><span data-en>1. Executive Summary</span></a>
+  <a href="#data-overview" class="toc-link"><i class="fas fa-chart-bar" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>二、数据概览</span><span data-en>2. Data Overview</span></a>
+  <a href="#key-events" class="toc-link"><i class="fas fa-bolt" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>三、重点事件解读</span><span data-en>3. Key Events</span></a>
+  <a href="#trends" class="toc-link"><i class="fas fa-chart-line" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>四、趋势研判</span><span data-en>4. Trend Analysis</span></a>
+  <a href="#risk-alerts" class="toc-link"><i class="fas fa-exclamation-triangle" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>五、风险警示</span><span data-en>5. Risk Alerts</span></a>
+  <a href="#recommendations" class="toc-link"><i class="fas fa-tasks" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>六、行动建议</span><span data-en>6. Recommendations</span></a>
+  <a href="#appendix" class="toc-link"><i class="fas fa-paperclip" style="margin-right:6px;font-size:0.7rem;"></i><span data-zh>七、附录</span><span data-en>7. Appendix</span></a>
+</nav>
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+  <div class="main-content" style="position:relative;z-index:2;text-align:center;padding:2rem 1.5rem;width:100%;">
+    <div style="margin-bottom:1.5rem;">
+      <span style="display:inline-block;padding:0.35rem 1rem;border-radius:20px;background:rgba(56,189,248,0.15);color:#38bdf8;font-size:0.75rem;font-weight:600;letter-spacing:0.05em;border:1px solid rgba(56,189,248,0.25);">
+        <i class="fas fa-satellite-dish" style="margin-right:4px;"></i>
+        <span data-zh>SUPINFOR 区域国别实时监测系统</span><span data-en>SUPINFOR Regional Real-time Monitoring System</span>
+      </span>
+    </div>
+    <h1 style="font-family:'Noto Serif SC',serif;font-size:clamp(1.8rem,5vw,3rem);font-weight:700;color:#ffffff;line-height:1.3;margin-bottom:0.75rem;">
+      <span data-zh>马来西亚营商环境<br>动态速览</span>
+      <span data-en>Malaysia Business Climate<br>Flash</span>
+    </h1>
+    <p style="font-size:1rem;color:rgba(255,255,255,0.6);margin-bottom:0.5rem;">
+      <span data-zh>报告周期：2026年4月13日 — 2026年4月19日</span>
+      <span data-en>Reporting Period: April 13 – April 19, 2026</span>
+    </p>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.4);">
+      <span data-zh>数据规模：精选250条 · 去重后4,396条 · 原始8,496条 · 覆盖11个栏目 · 全部24个营商环境标签</span>
+      <span data-en>Data Scale: 250 curated · 4,396 deduplicated · 8,496 raw · 11 channels · All 24 business tags</span>
+    </p>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card emerald">
+        <div class="kpi-label"><span data-zh>Q1 GDP 增长</span><span data-en>Q1 GDP Growth</span></div>
+        <div class="kpi-value">5.3%</div>
+        <div class="kpi-sub"><span data-zh>略低于预期5.5%</span><span data-en>Slightly below expected 5.5%</span></div>
+      </div>
+      <div class="kpi-card rose">
+        <div class="kpi-label"><span data-zh>4月燃油补贴</span><span data-en>April Fuel Subsidy</span></div>
+        <div class="kpi-value">RM 7B</div>
+        <div class="kpi-sub"><span data-zh>冲突前仅7亿令吉</span><span data-en>Pre-conflict: only RM 0.7B</span></div>
+      </div>
+      <div class="kpi-card amber">
+        <div class="kpi-label"><span data-zh>INSAP 通胀预警</span><span data-en>INSAP Inflation Alert</span></div>
+        <div class="kpi-value">6.1-6.6%</div>
+        <div class="kpi-sub"><span data-zh>2008年以来最高</span><span data-en>Highest since 2008</span></div>
+      </div>
+      <div class="kpi-card ice">
+        <div class="kpi-label"><span data-zh>霹雳州投资</span><span data-en>Perak Investment</span></div>
+        <div class="kpi-value">RM 157.6B</div>
+        <div class="kpi-sub"><span data-zh>同比+80% 创历史新高</span><span data-en>YoY +80%, all-time high</span></div>
+      </div>
+      <div class="kpi-card emerald">
+        <div class="kpi-label"><span data-zh>清真产业出口</span><span data-en>Halal Exports</span></div>
+        <div class="kpi-value">RM 68.52B</div>
+        <div class="kpi-sub"><span data-zh>同比+10.9% 创纪录</span><span data-en>YoY +10.9%, record high</span></div>
+      </div>
+      <div class="kpi-card ice">
+        <div class="kpi-label"><span data-zh>外资流入 (YTD)</span><span data-en>Foreign Inflows (YTD)</span></div>
+        <div class="kpi-value">RM 68B</div>
+        <div class="kpi-sub"><span data-zh>马股IPO募资37.2亿</span><span data-en>Bursa IPO raised RM 3.72B</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: Executive Summary ===== -->
+<div class="main-content">
+<section id="executive-summary" class="section-container">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-file-alt"></i>
+      <span data-zh>一、执行摘要</span><span data-en>1. Executive Summary</span>
+    </h2>
+    <div class="content-card" style="line-height:2;font-size:0.95rem;color:var(--text-secondary);">
+      <p data-zh>本周马来西亚营商环境被一场由中东冲突引发的能源危机深度重塑。马来西亚日产原油35万桶、日耗70万桶，38%进口原油经霍尔木兹海峡运输，4月燃油补贴飙升至70亿令吉（冲突前仅7亿令吉），INSAP警告通胀率或升至6.1%-6.6%，为2008年以来最高。与此同时，投资端呈现韧性——霹雳州2025年投资额达157.6亿令吉创历史新高（同比+80%），清真产业出口685.2亿令吉创纪录（同比+10.9%），马股IPO市场活跃。但财政压力急剧上升，GST重启讨论加速，比亚迪设厂争议暴露外资政策协调短板，Q1 GDP初估5.3%略低于预期，均构成中期营商环境的关键变量。</p>
+      <p data-en>This week, Malaysia's business climate was profoundly reshaped by an energy crisis triggered by the Middle East conflict. Malaysia produces 350,000 barrels of crude oil daily but consumes 700,000 barrels, with 38% of imported crude transiting the Strait of Hormuz. April fuel subsidies surged to RM 7 billion (pre-conflict: only RM 0.7 billion), and INSAP warned inflation could reach 6.1%-6.6%, the highest since 2008. Meanwhile, the investment side showed resilience — Perak's 2025 approved investment hit RM 15.76 billion, an all-time high (YoY +80%), halal exports reached a record RM 68.52 billion (YoY +10.9%), and Bursa Malaysia's IPO market remained active. However, fiscal pressure is mounting sharply, GST reinstatement discussions are accelerating, the BYD factory dispute exposed coordination gaps in foreign investment policy, and Q1 GDP at 5.3% came in slightly below expectations — all constituting key variables for the medium-term business environment.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: Data Overview ===== -->
+<section id="data-overview" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-chart-bar"></i>
+      <span data-zh>二、数据概览</span><span data-en>2. Data Overview</span>
+    </h2>
+
+    <!-- 2.1 Monitoring Overview Table -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1.25rem;">
+        <span data-zh>2.1 监测概况</span><span data-en>2.1 Monitoring Overview</span>
+      </h3>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th><span data-zh>指标</span><span data-en>Indicator</span></th>
+            <th><span data-zh>数值</span><span data-en>Value</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span data-zh>监测时间</span><span data-en>Monitoring Period</span></td><td><span data-zh>2026年4月13日 至 2026年4月19日</span><span data-en>April 13 – April 19, 2026</span></td></tr>
+          <tr><td><span data-zh>原始数据量</span><span data-en>Raw Data Volume</span></td><td class="num">8,496</td></tr>
+          <tr><td><span data-zh>URL去重后</span><span data-en>After URL Dedup</span></td><td class="num">4,396</td></tr>
+          <tr><td><span data-zh>精选入库</span><span data-en>Curated Selection</span></td><td class="num">250</td></tr>
+          <tr><td><span data-zh>覆盖栏目</span><span data-en>Channels Covered</span></td><td class="num">11</td></tr>
+          <tr><td><span data-zh>覆盖营商标签</span><span data-en>Business Tags Covered</span></td><td><span data-zh>全部24个</span><span data-en>All 24</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- 2.2 Channel Distribution - Bar Chart -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1.25rem;">
+        <span data-zh>2.2 按栏目分布</span><span data-en>2.2 Distribution by Channel</span>
+      </h3>
+      <div id="channelChart">
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>民生</span><span data-en>Livelihood</span></span><div class="bar-track"><div class="bar-fill indigo" style="width:0%" data-width="100%">30.1%</div></div><span class="bar-count">2,641</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>经济</span><span data-en>Economy</span></span><div class="bar-track"><div class="bar-fill indigo" style="width:0%" data-width="83.9%">25.3%</div></div><span class="bar-count">2,216</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>产业</span><span data-en>Industry</span></span><div class="bar-track"><div class="bar-fill emerald" style="width:0%" data-width="45.7%">13.7%</div></div><span class="bar-count">1,206</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>政治</span><span data-en>Politics</span></span><div class="bar-track"><div class="bar-fill emerald" style="width:0%" data-width="28.8%">8.7%</div></div><span class="bar-count">760</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>环保</span><span data-en>Environment</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="20.3%">6.1%</div></div><span class="bar-count">537</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>科技</span><span data-en>Technology</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="10%">3.0%</div></div><span class="bar-count">264</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>外交</span><span data-en>Diplomacy</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="8.6%">2.6%</div></div><span class="bar-count">226</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>教育</span><span data-en>Education</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="8.5%">2.6%</div></div><span class="bar-count">225</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>医疗</span><span data-en>Healthcare</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="5.1%">1.5%</div></div><span class="bar-count">134</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>人文</span><span data-en>Culture</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="5%">1.5%</div></div><span class="bar-count">132</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>国防</span><span data-en>Defense</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="2.7%">0.8%</div></div><span class="bar-count">71</span></div>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">
+        <span data-zh>注：民生栏目命中量最高，反映能源危机对民众生活的广泛冲击已成为本周舆论焦点。</span>
+        <span data-en>Note: Livelihood channel had the highest hit count, reflecting the energy crisis's broad impact on daily life as this week's dominant narrative.</span>
+      </p>
+    </div>
+
+    <!-- 2.3 Tag Distribution - Full 24 Tags Bar Chart -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1.25rem;">
+        <span data-zh>2.3 按营商环境标签分布（全部24个）</span><span data-en>2.3 Distribution by Business Tag (All 24)</span>
+      </h3>
+      <div id="tagChart">
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>政府公共服务</span><span data-en>Gov. Public Services</span></span><div class="bar-track"><div class="bar-fill indigo" style="width:0%" data-width="100%">17.9%</div></div><span class="bar-count">785</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>能源供应平衡</span><span data-en>Energy Supply Balance</span></span><div class="bar-track"><div class="bar-fill indigo" style="width:0%" data-width="65.1%">11.6%</div></div><span class="bar-count">511</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>交通物流建设</span><span data-en>Transport & Logistics</span></span><div class="bar-track"><div class="bar-fill indigo" style="width:0%" data-width="62.8%">11.2%</div></div><span class="bar-count">493</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>营商文化氛围</span><span data-en>Business Culture</span></span><div class="bar-track"><div class="bar-fill emerald" style="width:0%" data-width="43.7%">7.8%</div></div><span class="bar-count">343</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>产业政策调整</span><span data-en>Industrial Policy</span></span><div class="bar-track"><div class="bar-fill emerald" style="width:0%" data-width="37.1%">6.6%</div></div><span class="bar-count">291</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>供应链稳定</span><span data-en>Supply Chain Stability</span></span><div class="bar-track"><div class="bar-fill emerald" style="width:0%" data-width="27.1%">4.8%</div></div><span class="bar-count">213</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>生产资料成本</span><span data-en>Production Costs</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="26.5%">4.7%</div></div><span class="bar-count">208</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>知识产权保护</span><span data-en>IP Protection</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="25.9%">4.6%</div></div><span class="bar-count">203</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>引进外商投资企业</span><span data-en>FDI Attraction</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="24.5%">4.4%</div></div><span class="bar-count">192</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>社会治安状况</span><span data-en>Public Safety</span></span><div class="bar-track"><div class="bar-fill amber" style="width:0%" data-width="23.3%">4.2%</div></div><span class="bar-count">183</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>国际贸易合作</span><span data-en>Int'l Trade Coop.</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="21%">3.8%</div></div><span class="bar-count">165</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>税收法规调整</span><span data-en>Tax Regulation</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="20.3%">3.6%</div></div><span class="bar-count">159</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>处罚外商投资企业</span><span data-en>FDI Penalties</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="19.5%">3.5%</div></div><span class="bar-count">153</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>环保政策调整</span><span data-en>Env. Policy</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="19.4%">3.5%</div></div><span class="bar-count">152</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>官僚体制改革</span><span data-en>Bureaucratic Reform</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="14%">2.5%</div></div><span class="bar-count">110</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>金融服务能力</span><span data-en>Financial Services</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="13%">2.3%</div></div><span class="bar-count">102</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>劳动力供给</span><span data-en>Labor Supply</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="12.5%">2.2%</div></div><span class="bar-count">98</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>人力成本变动</span><span data-en>Labor Cost Changes</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="5.2%">0.9%</div></div><span class="bar-count">41</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>生活配套环境</span><span data-en>Living Environment</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="4.1%">0.7%</div></div><span class="bar-count">32</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>产业规划论证</span><span data-en>Industrial Planning</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="3.1%">0.5%</div></div><span class="bar-count">24</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>企业破产清算</span><span data-en>Bankruptcy</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="2.7%">0.5%</div></div><span class="bar-count">21</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>调查外商投资企业</span><span data-en>FDI Investigation</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="2.3%">0.4%</div></div><span class="bar-count">18</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>政府重大合同</span><span data-en>Gov. Contracts</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="1.8%">0.3%</div></div><span class="bar-count">14</span></div>
+        <div class="bar-chart-item"><span class="bar-label"><span data-zh>融资成本</span><span data-en>Financing Cost</span></span><div class="bar-track"><div class="bar-fill ice" style="width:0%" data-width="0.5%">0.1%</div></div><span class="bar-count">4</span></div>
+      </div>
+      <p style="font-size:0.78rem;color:var(--text-muted);margin-top:1rem;font-style:italic;">
+        <span data-zh>注：单条资讯可能同时命中多个标签，因此标签分布总数大于去重后数据量。"政府公共服务"与"能源供应平衡"合计占比近30%，反映本周政策应对与能源危机为双主线。</span>
+        <span data-en>Note: A single article may match multiple tags, so the total exceeds the deduplicated count. "Government Public Services" and "Energy Supply Balance" together account for nearly 30%, reflecting policy response and energy crisis as the dual themes this week.</span>
+      </p>
+    </div>
+
+    <!-- 2.4 Source Language Note -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>2.4 信源语言说明</span><span data-en>2.4 Source Language Note</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>本期数据信源涵盖中文（星洲网、中国报、光华网、东方日报、诗华日报等）、英文（The Star、New Straits Times、Malay Mail、Free Malaysia Today、Bloomberg等）、马来文（BERNAMA、Utusan Malaysia、Sinar Harian、Astro Awani、Harian Metro等）三大语种，中文与英文信源占比最高，马来文信源以官方通讯社BERNAMA及主流马来文媒体为主。多语种交叉覆盖确保了信息的全面性与多视角验证。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>This edition's data sources cover three major languages: Chinese (Sin Chew Daily, China Press, Kwong Wah, Oriental Daily, See Hua Daily, etc.), English (The Star, New Straits Times, Malay Mail, Free Malaysia Today, Bloomberg, etc.), and Malay (BERNAMA, Utusan Malaysia, Sinar Harian, Astro Awani, Harian Metro, etc.). Chinese and English sources account for the highest share, while Malay sources are led by the official news agency BERNAMA and mainstream Malay media. Multi-language cross-coverage ensures comprehensive information and multi-perspective verification.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: Key Events ===== -->
+<section id="key-events" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-bolt"></i>
+      <span data-zh>三、重点事件解读</span><span data-en>3. Key Events Analysis</span>
+    </h2>
+
+    <!-- Event 1 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">1</span>
+        <h3 class="event-title">
+          <span data-zh>能源危机与财政补贴压力——马来西亚面临"史上最严重石油供应中断"</span>
+          <span data-en>Energy Crisis &amp; Fiscal Subsidy Pressure — Malaysia Faces "Worst Oil Supply Disruption in History"</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>中东冲突导致霍尔木兹海峡航运受阻，马来西亚日产原油35万桶但日耗70万桶，38%进口原油经该海峡运输。柴油零售价7周内暴涨124.7%，4月燃油补贴飙升至约70亿令吉（其中RON95补贴从3亿升至40亿，柴油补贴从4亿升至30亿），是冲突前（约7亿令吉）的10倍。Petronas派遣Ocean Thunder号从伊拉克运回100万桶原油以稳定供应，确认国内燃油供应可维持至2026年6月底。政府同步上调BUDI柴油援助至每月400令吉、稻农耕作补贴至每公顷300令吉，4月补贴总额含7,500万令吉柴油专项援助。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>The Middle East conflict disrupted shipping through the Strait of Hormuz. Malaysia produces 350,000 barrels of crude daily but consumes 700,000, with 38% of imported crude transiting the strait. Diesel retail prices surged 124.7% in 7 weeks. April fuel subsidies soared to approximately RM 7 billion (RON95 subsidies rose from RM 0.3B to RM 4B, diesel subsidies from RM 0.4B to RM 3B), 10 times the pre-conflict level (approximately RM 0.7B). Petronas dispatched the Ocean Thunder to transport 1 million barrels of crude from Iraq, confirming domestic fuel supply can be maintained until end of June 2026. The government simultaneously raised BUDI diesel assistance to RM 400/month, paddy farming subsidies to RM 300/hectare, with April subsidies including RM 75 million in dedicated diesel assistance.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>财政部、Petronas、国家经济行动理事会、INSAP</span>
+        <span data-en>Ministry of Finance, Petronas, National Economic Action Council, INSAP</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>按当前油价（超100美元/桶），全年补贴或达720亿令吉，远超2026年预算基准（65-70美元/桶），财政赤字可能突破GDP的4%。4个月已耗尽全年84亿令吉补贴预算，补贴成本增收覆盖比仅约27%。对在马运营企业而言，柴油涨价直接推高物流、建筑、农业等领域运营成本，面条粿条等食品已涨价5%-10%，供应链成本传导效应将在Q3-Q4全面显现。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>At current oil prices (above USD 100/barrel), annual subsidies could reach RM 72 billion, far exceeding the 2026 budget baseline (USD 65-70/barrel), with the fiscal deficit potentially breaching 4% of GDP. Four months have already exhausted the full-year RM 8.4 billion subsidy budget, with subsidy cost-to-revenue coverage at only about 27%. For businesses operating in Malaysia, diesel price hikes directly increase operating costs in logistics, construction, and agriculture. Noodle and rice noodle prices have already risen 5%-10%, and supply chain cost pass-through effects will fully materialize in Q3-Q4.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>超60条 · 本周绝对主线</span><span data-en>60+ articles · Week's dominant story</span></span>
+      </div>
+    </div>
+
+    <!-- Event 2 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">2</span>
+        <h3 class="event-title">
+          <span data-zh>霹雳州投资创历史新高——RM157.6亿，外资暴涨超1,700倍</span>
+          <span data-en>Perak Investment Hits All-Time High — RM 15.76B, FDI Surges Over 1,700x</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>霹雳州2025年获批准投资总额达157.6亿令吉，较2024年增长约80%，创历史新高。制造业为核心引擎，外资涨幅超1,700倍，跻身全国制造业投资前五。州政府推动北中南三大工业布局：北部吉辇绿色工业园发展电子电气产业，中部银谷科技园（Silver Valley Tech Park）预计吸资140亿令吉，南部丹绒马林汽车高科技谷携手吉利打造新能源车枢纽。QL Foods与宝腾分别投建清真食品与电动车工厂。州财政收入近14.94亿令吉，连续4年盈余。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Perak's 2025 approved investment totaled RM 15.76 billion, up approximately 80% from 2024, an all-time high. Manufacturing was the core engine, with FDI surging over 1,700 times, placing Perak among the nation's top five for manufacturing investment. The state government is driving a north-central-south industrial layout: the northern Kerian Green Industrial Park for E&amp;E, the central Silver Valley Tech Park expected to attract RM 14 billion, and the southern Tanjung Malim Automotive Hi-Tech Valley partnering with Geely to build an NEV hub. QL Foods and Proton are building halal food and EV factories respectively. State revenue reached nearly RM 1.494 billion, with surpluses for 4 consecutive years.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>霹雳州政府、吉利汽车、QL Foods、宝腾、MIDA</span>
+        <span data-en>Perak State Government, Geely Auto, QL Foods, Proton, MIDA</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>霹雳州的投资爆发为外商提供了新的区域选择，尤其是新能源汽车、电子电气和清真食品三大赛道。但比亚迪设厂争议（见事件三）提示，联邦与州政府在外资政策协调上仍存在摩擦，投资者需关注政策执行的一致性。吉打州同期吸引278亿令吉投资（制造业全国第一），砂拉越未来5年拟吸引1,680亿令吉投资，各州竞争态势加剧。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Perak's investment surge offers foreign investors new regional options, especially in NEV, E&amp;E, and halal food. However, the BYD factory dispute (see Event 3) highlights ongoing friction between federal and state governments on FDI policy coordination — investors should monitor policy execution consistency. Kedah attracted RM 27.8 billion in the same period (top nationally for manufacturing), and Sarawak aims to attract RM 168 billion over 5 years, intensifying inter-state competition.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约25条</span><span data-en>~25 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 3 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">3</span>
+        <h3 class="event-title">
+          <span data-zh>比亚迪设厂争议——外资政策协调短板暴露</span>
+          <span data-en>BYD Factory Dispute — FDI Policy Coordination Gap Exposed</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>比亚迪在霹雳州丹绒马林的新能源车组装厂因贸工部（MITI）新增条款而停工。贸工部要求80%产品外销、20%内销，初期40%零部件本地化率，整装进口车最低售价25万令吉以上、本地组装车15万令吉以上。霹雳州6名议员联合质疑条款过于严苛，州政府指责贸工部政策仓促、缺乏沟通。贸工部副部长沈志勤回应称政策旨在保障国内生态与产业链发展，比亚迪4年在马售3万辆车已获3.6亿令吉奖掖。首相安华表示将与贸工部讨论相关条件。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>BYD's NEV assembly plant in Tanjung Malim, Perak was halted due to new conditions imposed by MITI. MITI required 80% export / 20% domestic sales, initial 40% local content ratio, minimum pricing of RM 250,000 for CBU imports and RM 150,000 for CKD vehicles. Six Perak assemblymen jointly questioned the overly stringent conditions, with the state government accusing MITI of hasty, poorly communicated policy. MITI Deputy Minister Sim Chee Keong responded that the policy aims to protect the domestic ecosystem and supply chain, noting BYD has sold 30,000 vehicles in Malaysia over 4 years and received RM 360 million in incentives. PM Anwar indicated he would discuss the conditions with MITI.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>贸工部（MITI）、霹雳州政府、比亚迪、首相署</span>
+        <span data-en>MITI, Perak State Government, BYD, Prime Minister's Office</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>此事件是本周对外商投资信心冲击最大的单一事件。联邦与州政府在外资条件上的公开分歧，以及"临门变阵"式的政策调整，向国际投资者释放了政策不确定性信号。马华前领导人及多名议员警告，若处理不当将损害国家投资信誉。对计划在马设厂的制造业企业，尤其是新能源汽车领域，需密切关注后续政策走向。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>This was the single most impactful event for foreign investment confidence this week. The open disagreement between federal and state governments on FDI conditions, along with "last-minute" policy changes, sent policy uncertainty signals to international investors. Former MCA leaders and multiple assemblymen warned that mishandling could damage national investment credibility. Manufacturing companies planning to set up in Malaysia, especially in the NEV sector, should closely monitor subsequent policy developments.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约15条</span><span data-en>~15 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 4 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">4</span>
+        <h3 class="event-title">
+          <span data-zh>GST重启讨论加速——INSAP提出12个月公众咨询路线图</span>
+          <span data-en>GST Reinstatement Accelerates — INSAP Proposes 12-Month Public Consultation Roadmap</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>INSAP总监温京才提出系统性财税改革方案：建议先合理化销售与服务税（SST）结构，再启动至少12个月的恢复5% GST公众咨询，预计GST年收约770亿令吉，可产生结构性盈余。同时建议向B40家庭每月发放200令吉、M40家庭150令吉的12个月危机转移援助，覆盖492万户家庭，年耗108亿令吉。此外建议90天内启动战略石油储备可行性研究，公布完整自动定价机制公式。专家指出若布伦特原油均价持续在105-120美元，2026年预算或需调整，财政赤字可能超GDP的4%。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>INSAP Director Wan Jingcai proposed a systematic fiscal reform plan: first rationalize the Sales and Services Tax (SST) structure, then launch at least 12 months of public consultation on reinstating 5% GST, with projected annual GST revenue of approximately RM 77 billion, generating a structural surplus. He also recommended RM 200/month for B40 households and RM 150/month for M40 households as 12-month crisis transfer assistance, covering 4.92 million households at an annual cost of RM 10.8 billion. Additionally, he proposed launching a strategic petroleum reserve feasibility study within 90 days and publishing the complete automatic pricing mechanism formula. Experts noted that if Brent crude averages USD 105-120, the 2026 budget may need adjustment, with the fiscal deficit potentially exceeding 4% of GDP.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>INSAP、财政部、国家经济行动理事会</span>
+        <span data-en>INSAP, Ministry of Finance, National Economic Action Council</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>GST重启将从根本上改变马来西亚的税收结构，对所有在马运营企业产生直接影响。770亿令吉的年收入预期意味着企业需重新评估定价策略和合规成本。12个月咨询期为企业提供了政策准备窗口，但也意味着税制不确定性将持续至2027年。SST结构调整可能先行，企业应提前评估影响。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>GST reinstatement would fundamentally change Malaysia's tax structure, directly impacting all businesses operating in the country. The projected RM 77 billion annual revenue means companies need to reassess pricing strategies and compliance costs. The 12-month consultation period provides a policy preparation window but also means tax uncertainty will persist until 2027. SST structural adjustments may come first — businesses should evaluate impacts proactively.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约20条</span><span data-en>~20 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 5 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">5</span>
+        <h3 class="event-title">
+          <span data-zh>马来西亚-澳大利亚能源安全合作——双边贸易RM786.3亿</span>
+          <span data-en>Malaysia-Australia Energy Security Cooperation — Bilateral Trade RM 78.63B</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>澳大利亚总理阿尔巴尼斯4月15-17日访马，与安华举行四眼会谈，聚焦能源安全合作。双方发布能源供应保障联合声明，签署清真红肉合作谅解备忘录。澳大利亚供应马来西亚96%进口液化天然气，马来西亚向澳供应约17%燃油进口，2025年双边贸易额达786.3亿令吉。安华表示将优先保障国内燃油需求，剩余供应才交给澳方。安华还透露可让Petronas与俄罗斯谈判石油供应，保障能源储备。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Australian PM Albanese visited Malaysia April 15-17, holding a four-eyes meeting with Anwar focused on energy security cooperation. Both sides issued a joint statement on energy supply assurance and signed an MOU on halal red meat cooperation. Australia supplies 96% of Malaysia's imported LNG, while Malaysia supplies about 17% of Australia's fuel imports. 2025 bilateral trade reached RM 78.63 billion. Anwar stated domestic fuel needs would be prioritized, with remaining supply allocated to Australia. Anwar also revealed that Petronas could negotiate oil supply with Russia to secure energy reserves.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>马来西亚首相署、澳大利亚总理府、Petronas、外交部</span>
+        <span data-en>Malaysia PM's Office, Australian PM's Office, Petronas, Ministry of Foreign Affairs</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>马澳能源互依关系在危机中进一步深化，为两国企业在LNG、可再生能源、清洁技术领域创造合作机遇。马来西亚同时寻求俄罗斯石油供应渠道，显示其在能源外交上采取多元化策略。对在马能源相关企业，供应链多元化和能源安全将成为中期战略重点。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>The Malaysia-Australia energy interdependence deepened further during the crisis, creating cooperation opportunities for companies in LNG, renewable energy, and clean technology. Malaysia's simultaneous pursuit of Russian oil supply channels demonstrates a diversified energy diplomacy strategy. For energy-related businesses in Malaysia, supply chain diversification and energy security will become medium-term strategic priorities.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约20条</span><span data-en>~20 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 6 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">6</span>
+        <h3 class="event-title">
+          <span data-zh>INSAP通胀预警——6.1%-6.6%，492万户家庭受冲击</span>
+          <span data-en>INSAP Inflation Warning — 6.1%-6.6%, 4.92 Million Households Impacted</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>INSAP预测马来西亚通胀率将达6.1%-6.6%，为2008年以来最高。生活成本全面影响将在2026年Q3-Q4显现，492万户家庭受冲击。B40低收入家庭每月实际收入损失约165令吉（占中位数收入4.8%），M40中等收入家庭损失242-355令吉。柴油涨价已波及供应链，即便原油价格缓和，供应端成本上涨仍将持续（"第二波通胀"）。国行则维持较温和预期，预计2026年通胀率1.5%-2.5%，认为BUDI95补贴、能源净出口国地位及令吉走强可缓解冲击。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>INSAP forecasts Malaysia's inflation rate will reach 6.1%-6.6%, the highest since 2008. The full cost-of-living impact will materialize in Q3-Q4 2026, affecting 4.92 million households. B40 low-income households face monthly real income losses of approximately RM 165 (4.8% of median income), while M40 middle-income households lose RM 242-355. Diesel price hikes have already rippled through supply chains, and even if crude prices moderate, supply-side cost increases will persist ("second-wave inflation"). Bank Negara maintains a more moderate forecast of 1.5%-2.5% for 2026, citing BUDI95 subsidies, net energy exporter status, and ringgit strengthening as mitigating factors.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>INSAP、国家银行（BNM）、财政部</span>
+        <span data-en>INSAP, Bank Negara Malaysia (BNM), Ministry of Finance</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>INSAP与国行的通胀预期存在显著分歧（6.1%-6.6% vs 1.5%-2.5%），核心差异在于是否计入补贴取消的情景。对企业而言，即便维持补贴，柴油涨价通过供应链传导的"第二波通胀"已不可避免，建筑成本每增10%将使开发商盈利赚幅减3-4%，新产业销售或放缓10-15%。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>There is a significant divergence between INSAP and BNM inflation expectations (6.1%-6.6% vs 1.5%-2.5%), with the core difference being whether subsidy removal scenarios are factored in. For businesses, even with subsidies maintained, "second-wave inflation" from diesel price pass-through via supply chains is inevitable. Every 10% increase in construction costs reduces developer profit margins by 3-4%, and new property sales may slow by 10-15%.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约15条</span><span data-en>~15 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 7 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">7</span>
+        <h3 class="event-title">
+          <span data-zh>Q1 GDP初估5.3%——略低于预期，经济韧性与下行风险并存</span>
+          <span data-en>Q1 GDP Preliminary 5.3% — Slightly Below Expectations, Resilience Meets Downside Risks</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>马来西亚2026年Q1 GDP初估增长5.3%，略低于市场预期的5.5%。穆迪分析此前预计Q1增长6.6%。2025年全年GDP增长5.2%，Q4增长6.3%为三年最强。IMF上调2026年全年预测至4.7%，国行维持4%-5%增长区间。3月CPI为1.7%。CNI等值数据显示制造业增长5.8%、服务业5.4%、采矿业-1.1%。私人消费、投资稳健，AI带动电子电气出口表现良好，旅游业复苏超疫情前水平。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Malaysia's Q1 2026 GDP grew an estimated 5.3%, slightly below the market expectation of 5.5%. Moody's Analytics had previously forecast Q1 growth of 6.6%. Full-year 2025 GDP grew 5.2%, with Q4 at 6.3% — the strongest in three years. IMF raised its 2026 full-year forecast to 4.7%, while BNM maintained a 4%-5% growth range. March CPI was 1.7%. CNI equivalent data showed manufacturing growth of 5.8%, services 5.4%, and mining -1.1%. Private consumption and investment remained robust, AI-driven E&amp;E exports performed well, and tourism recovery exceeded pre-pandemic levels.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>统计局、国家银行、IMF、穆迪分析</span>
+        <span data-en>DOSM, Bank Negara Malaysia, IMF, Moody's Analytics</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>Q1数据反映能源危机冲击尚未完全显现（主要影响将在Q2-Q4体现）。采矿业负增长（-1.1%）已释放能源板块承压信号。若中东冲突持续，全年增长预期面临下修风险。对投资者而言，制造业和服务业仍是增长引擎，但需关注能源成本对利润率的侵蚀。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Q1 data reflects that the energy crisis impact has not yet fully materialized (main effects will show in Q2-Q4). Mining sector contraction (-1.1%) already signals energy sector stress. If the Middle East conflict persists, full-year growth expectations face downward revision risk. For investors, manufacturing and services remain growth engines, but attention should be paid to energy cost erosion of profit margins.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约10条</span><span data-en>~10 articles</span></span>
+      </div>
+    </div>
+
+    <!-- Event 8 -->
+    <div class="event-card reveal">
+      <div style="display:flex;align-items:flex-start;margin-bottom:0.5rem;">
+        <span class="event-num">8</span>
+        <h3 class="event-title">
+          <span data-zh>清真产业出口创纪录——RM685.2亿，棕榈油衍生品增55%</span>
+          <span data-en>Halal Exports Hit Record — RM 68.52B, Palm Oil Derivatives Up 55%</span>
+        </h3>
+      </div>
+      <div class="event-section-label"><i class="fas fa-info-circle"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>2025年马来西亚清真产业出口额达685.2亿令吉，同比增长10.9%，占全国总出口4.3%。食品饮料板块贡献超五成（53.8%），棕榈油及衍生品出口大增55%。前五大出口市场为中国、新加坡、美国、日本、印尼。马六甲清真工业园2.0预计2027年竣工，目标吸引1亿令吉投资。HDC将扶持中小企业、借数字平台拓展出口，依据2030年清真产业总体规划打造动态生态系统。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Malaysia's 2025 halal industry exports reached RM 68.52 billion, up 10.9% YoY, accounting for 4.3% of total national exports. The food &amp; beverage segment contributed over half (53.8%), with palm oil and derivatives exports surging 55%. The top five export markets were China, Singapore, the US, Japan, and Indonesia. Melaka Halal Industrial Park 2.0 is expected to be completed by 2027, targeting RM 100 million in investment. HDC will support SMEs and leverage digital platforms to expand exports, building a dynamic ecosystem based on the Halal Industry Master Plan 2030.</p>
+      <div class="event-section-label"><i class="fas fa-users"></i> <span data-zh>涉及方</span><span data-en>Parties Involved</span></div>
+      <p style="font-size:0.88rem;color:var(--text-secondary);">
+        <span data-zh>HDC（清真发展公司）、MPOB、马六甲州政府</span>
+        <span data-en>HDC (Halal Development Corporation), MPOB, Melaka State Government</span>
+      </p>
+      <div class="event-section-label"><i class="fas fa-exclamation-circle"></i> <span data-zh>潜在影响</span><span data-en>Potential Impact</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>清真产业是马来西亚在全球供应链中的差异化优势。685.2亿令吉的出口规模和10.9%的增速表明该赛道仍处上升期。中国作为最大出口市场的地位持续巩固（连续16年为马最大贸易伙伴，双边贸易超3,060亿令吉）。但需警惕中东地缘变局对供应链的间接冲击。对食品饮料、棕榈油加工等领域的外商，马来西亚清真认证体系和产业园区提供了明确的投资切入点。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>The halal industry is Malaysia's differentiated advantage in global supply chains. The RM 68.52 billion export scale and 10.9% growth rate indicate the sector is still in an upward trajectory. China's position as the largest export market continues to solidify (Malaysia's largest trading partner for 16 consecutive years, bilateral trade exceeding RM 306 billion). However, indirect supply chain impacts from Middle East geopolitical shifts should be monitored. For foreign investors in food &amp; beverage and palm oil processing, Malaysia's halal certification system and industrial parks provide clear investment entry points.</p>
+      <div class="heat-bar">
+        <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>报道热度</span><span data-en>Coverage Heat</span></span>
+        <div class="heat-dots">
+          <span class="heat-dot"></span><span class="heat-dot"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span><span class="heat-dot inactive"></span>
+        </div>
+        <span style="font-size:0.75rem;color:var(--accent-amber);font-weight:600;"><span data-zh>约10条</span><span data-en>~10 articles</span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: Trend Analysis ===== -->
+<section id="trends" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-chart-line"></i>
+      <span data-zh>四、趋势研判</span><span data-en>4. Trend Analysis</span>
+    </h2>
+
+    <!-- Trend 1 -->
+    <div class="trend-card reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span style="color:var(--accent-amber);margin-right:0.5rem;">趋势一</span>
+        <span data-zh>能源补贴财政不可持续，结构性税改窗口正在打开</span>
+        <span data-en>Energy Subsidy Fiscally Unsustainable, Structural Tax Reform Window Opening</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>本周超过60条资讯聚焦能源补贴与财政压力。4月补贴70亿令吉、4个月耗尽全年预算、全年或达720亿令吉——这组数据清晰勾勒出一条不可持续的财政轨迹。INSAP明确提出GST重启路线图（12个月咨询、预计年收770亿令吉），专家指出财政赤字可能突破GDP的4%，PKR基层也在推动柴油补贴配额化改革。副财长表示正以BUDI95机制为模板研究柴油补贴靶向流程。生物柴油混合率从B10提升至B15的政策已获内阁批准，先以B12过渡。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Over 60 articles this week focused on energy subsidies and fiscal pressure. April subsidies of RM 7 billion, four months exhausting the annual budget, potentially RM 72 billion for the full year — these figures clearly outline an unsustainable fiscal trajectory. INSAP explicitly proposed a GST reinstatement roadmap (12-month consultation, projected RM 77 billion annual revenue), experts warned the fiscal deficit could breach 4% of GDP, and PKR grassroots are pushing for diesel subsidy quota reform. The Deputy Finance Minister stated that the BUDI95 mechanism is being used as a template for targeted diesel subsidy processes. The biodiesel blending mandate increase from B10 to B15 has been approved by Cabinet, with B12 as a transition.</p>
+      <div class="trend-verdict">
+        <div style="font-weight:700;color:var(--accent-emerald);margin-bottom:0.5rem;font-size:0.85rem;"><i class="fas fa-gavel" style="margin-right:4px;"></i> <span data-zh>研判</span><span data-en>Assessment</span></div>
+        <p data-zh style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">马来西亚正处于从"普惠补贴"向"靶向补贴+结构性税改"转型的临界点。GST重启已从学术讨论进入政策议程，12个月咨询期意味着最早2027年下半年落地。在此之前，SST结构调整可能先行。企业应在未来6-12个月内完成GST合规准备，评估定价策略调整空间。生物柴油政策为棕榈油产业链企业带来确定性增量需求（年增超30万吨）。</p>
+        <p data-en style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">Malaysia is at a tipping point transitioning from "universal subsidies" to "targeted subsidies + structural tax reform." GST reinstatement has moved from academic discussion to the policy agenda, with the 12-month consultation period meaning earliest implementation in H2 2027. Before that, SST structural adjustments may come first. Businesses should complete GST compliance preparation within the next 6-12 months and assess pricing strategy adjustment room. The biodiesel policy brings definitive incremental demand for palm oil supply chain companies (annual increase exceeding 300,000 tonnes).</p>
+      </div>
+    </div>
+
+    <!-- Trend 2 -->
+    <div class="trend-card reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span style="color:var(--accent-amber);margin-right:0.5rem;">趋势二</span>
+        <span data-zh>各州投资竞争白热化，产业集群差异化格局加速形成</span>
+        <span data-en>Inter-State Investment Competition Intensifies, Differentiated Industrial Clusters Accelerating</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>霹雳州157.6亿令吉（+80%）、吉打州278亿令吉（制造业全国第一，半导体枢纽）、砂拉越未来5年1,680亿令吉目标、柔佛1,100亿令吉外资（数据中心+柔新特区）——各州在招商引资上展开激烈竞争。霹雳州聚焦新能源车+电子电气+清真食品，吉打州锁定半导体（英飞凌250亿令吉碳化硅厂），砂拉越布局氢能+可再生能源+半导体，柔佛主打数据中心+柔新特区。吉打州推出"E10投资准证"（从规划到出口仅10个月），霹雳州6天完成比亚迪审批，各州在行政效率上也在竞争。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Perak RM 15.76 billion (+80%), Kedah RM 27.8 billion (top nationally for manufacturing, semiconductor hub), Sarawak's 5-year RM 168 billion target, Johor RM 110 billion FDI (data centers + JS-SEZ) — states are competing fiercely for investment. Perak focuses on NEV + E&amp;E + halal food, Kedah targets semiconductors (Infineon's RM 25 billion SiC plant), Sarawak positions in hydrogen + renewables + semiconductors, and Johor leads with data centers + JS-SEZ. Kedah launched the "E10 Investment Pass" (planning to export in just 10 months), Perak completed BYD approval in 6 days — states are also competing on administrative efficiency.</p>
+      <div class="trend-verdict">
+        <div style="font-weight:700;color:var(--accent-emerald);margin-bottom:0.5rem;font-size:0.85rem;"><i class="fas fa-gavel" style="margin-right:4px;"></i> <span data-zh>研判</span><span data-en>Assessment</span></div>
+        <p data-zh style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">马来西亚正形成"一州一特色"的产业集群格局，外商投资选址需从"国家层面"细化到"州层面"评估。半导体选吉打/槟城，新能源车选霹雳，数据中心选柔佛/森美兰，清真产业选马六甲/霹雳，能源选砂拉越。但比亚迪事件提示，州政府的招商承诺可能与联邦政策存在落差，投资者需同时获得两级政府的政策确认。</p>
+        <p data-en style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">Malaysia is forming a "one state, one specialty" industrial cluster pattern. Foreign investment site selection needs to be refined from "national level" to "state level" assessment. Semiconductors: Kedah/Penang; NEV: Perak; Data centers: Johor/Negeri Sembilan; Halal: Melaka/Perak; Energy: Sarawak. However, the BYD incident warns that state government investment promises may diverge from federal policy — investors need policy confirmation from both levels of government.</p>
+      </div>
+    </div>
+
+    <!-- Trend 3 -->
+    <div class="trend-card reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span style="color:var(--accent-amber);margin-right:0.5rem;">趋势三</span>
+        <span data-zh>外资流动呈现"短期波动、中期韧性"特征</span>
+        <span data-en>Foreign Capital Flows Show "Short-term Volatility, Medium-term Resilience"</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>外资上周净卖出马股6,369万令吉（前周净买入4.7亿令吉），结束连续三周净买入。但3月外资净流入马债市61亿令吉（10个月最大），马股IPO市场今年已筹集约37.2亿令吉（去年同期12.5亿令吉）。MTT航运物流IPO募资6.5亿令吉（物流领域2013年来最大），SkyeChip半导体、IAQ集团（拟筹10亿令吉）等排队上市。霹雳州外资暴涨超1,700倍，州务大臣确认无重大撤资。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Foreign investors were net sellers of Malaysian equities last week at RM 63.69 million (previous week: net buyers of RM 470 million), ending three consecutive weeks of net buying. However, March saw RM 6.1 billion in net foreign inflows to the bond market (largest in 10 months), and Bursa IPOs have raised approximately RM 3.72 billion this year (vs RM 1.25 billion same period last year). MTT Shipping &amp; Logistics IPO raised RM 650 million (largest in logistics since 2013), with SkyeChip Semiconductor, IAQ Group (targeting RM 1 billion), and others in the pipeline. Perak FDI surged over 1,700 times, with the Menteri Besar confirming no major divestments.</p>
+      <div class="trend-verdict">
+        <div style="font-weight:700;color:var(--accent-emerald);margin-bottom:0.5rem;font-size:0.85rem;"><i class="fas fa-gavel" style="margin-right:4px;"></i> <span data-zh>研判</span><span data-en>Assessment</span></div>
+        <p data-zh style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">短期资本流动受中东局势情绪驱动，但中期投资趋势仍然向好。IPO市场活跃度（同比近3倍）和各州投资数据表明，实体经济层面的外资信心尚未动摇。关键观察指标：若Q2外资连续净卖出马股超过4周，或出现大型FDI项目取消/推迟，则需重新评估。当前阶段，"逢低布局"仍是主流外资策略。</p>
+        <p data-en style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">Short-term capital flows are driven by Middle East sentiment, but medium-term investment trends remain positive. IPO market activity (nearly 3x YoY) and state investment data indicate that real economy-level foreign investor confidence has not been shaken. Key indicators to watch: if Q2 sees consecutive net selling of Malaysian equities for more than 4 weeks, or major FDI project cancellations/delays emerge, reassessment is needed. At the current stage, "buy the dip" remains the mainstream foreign investment strategy.</p>
+      </div>
+    </div>
+
+    <!-- Trend 4 -->
+    <div class="trend-card reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span style="color:var(--accent-amber);margin-right:0.5rem;">趋势四</span>
+        <span data-zh>数据中心热潮持续升温，成为基建投资新引擎</span>
+        <span data-en>Data Center Boom Continues, Becoming New Infrastructure Investment Engine</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>金务大获17.2亿令吉波德申超大规模数据中心合约（美国科技公司），双威建筑等一日释出38亿令吉数据中心合约。柔佛吸引新加坡数字经济投资，MIDA新加坡办事处重点推介数据中心赛道。砂拉越计划建州级绿色数据中心，霹雳州怡保推进5G+AI智慧城市。马来西亚正筛选更适配AI、节能标准的数据中心项目。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Gamuda won a RM 1.72 billion hyperscale data center contract in Port Dickson (US tech company), while Sunway Construction and others released RM 3.8 billion in data center contracts in a single day. Johor is attracting Singapore's digital economy investment, with MIDA's Singapore office actively promoting the data center track. Sarawak plans to build a state-level green data center, and Perak's Ipoh is advancing 5G + AI smart city initiatives. Malaysia is screening data center projects better suited for AI and energy efficiency standards.</p>
+      <div class="trend-verdict">
+        <div style="font-weight:700;color:var(--accent-emerald);margin-bottom:0.5rem;font-size:0.85rem;"><i class="fas fa-gavel" style="margin-right:4px;"></i> <span data-zh>研判</span><span data-en>Assessment</span></div>
+        <p data-zh style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">数据中心已成为马来西亚基建投资的最大增量来源之一，与半导体、新能源车并列为三大外资热点赛道。能源危机短期内可能推高数据中心运营成本（电力占运营成本40%-50%），但马来西亚的电力补贴政策和砂拉越的可再生能源优势（70%可再生能源）提供了成本缓冲。建筑、机电、冷却系统等配套产业链将持续受益。</p>
+        <p data-en style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">Data centers have become one of the largest incremental sources of infrastructure investment in Malaysia, alongside semiconductors and NEVs as the three hottest FDI tracks. The energy crisis may push up data center operating costs short-term (electricity accounts for 40%-50% of operating costs), but Malaysia's electricity subsidy policies and Sarawak's renewable energy advantage (70% renewable) provide cost buffers. Construction, M&amp;E, and cooling system supply chains will continue to benefit.</p>
+      </div>
+    </div>
+
+    <!-- Trend 5 -->
+    <div class="trend-card reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span style="color:var(--accent-amber);margin-right:0.5rem;">趋势五</span>
+        <span data-zh>粮食安全与供应链韧性成为政策新优先级</span>
+        <span data-en>Food Security &amp; Supply Chain Resilience Become New Policy Priority</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>雪兰莪1.3亿令吉韧性配套（含5,000万令吉粮食仓库）、砂拉越8.76亿令吉额外援助、联邦上调农业补贴——各级政府密集出台粮食安全措施。砂拉越食品进口年超76.2亿令吉（同比+30亿），计划2030年从粮食净进口转为出口。饲料价格预计涨8%，化肥进口依赖63%且价格涨15%-20%，柴油等农资占农业投入40%。马来西亚菠萝出口未受中东危机影响，已转向中国等替代市场。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>Selangor's RM 130 million resilience package (including RM 50 million for food warehouses), Sarawak's RM 876 million additional aid, and federal agricultural subsidy increases — governments at all levels are intensively rolling out food security measures. Sarawak's annual food imports exceed RM 7.62 billion (YoY +RM 3 billion), with plans to transition from net food importer to exporter by 2030. Feed prices are expected to rise 8%, fertilizer import dependency is 63% with prices up 15%-20%, and diesel and other agricultural inputs account for 40% of farming costs. Malaysian pineapple exports were unaffected by the Middle East crisis, having pivoted to alternative markets including China.</p>
+      <div class="trend-verdict">
+        <div style="font-weight:700;color:var(--accent-emerald);margin-bottom:0.5rem;font-size:0.85rem;"><i class="fas fa-gavel" style="margin-right:4px;"></i> <span data-zh>研判</span><span data-en>Assessment</span></div>
+        <p data-zh style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">能源危机暴露了马来西亚粮食供应链的脆弱性，政府正从"应急补贴"转向"结构性粮食安全建设"。对农业科技、冷链物流、食品加工等领域的企业，这是一个政策红利窗口。砂拉越的"2030粮食出口国"目标和雪兰莪的粮食仓库计划，为相关投资提供了明确的政策锚点。</p>
+        <p data-en style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;">The energy crisis exposed the fragility of Malaysia's food supply chain, with the government shifting from "emergency subsidies" to "structural food security building." For companies in agritech, cold chain logistics, and food processing, this represents a policy dividend window. Sarawak's "2030 food exporter" goal and Selangor's food warehouse plan provide clear policy anchors for related investments.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Risk Alerts ===== -->
+<section id="risk-alerts" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-exclamation-triangle"></i>
+      <span data-zh>五、风险警示</span><span data-en>5. Risk Alerts</span>
+    </h2>
+
+    <!-- Red Risk 1 -->
+    <div class="risk-card red reveal">
+      <div class="risk-badge red"><i class="fas fa-circle"></i> <span data-zh>高风险</span><span data-en>HIGH RISK</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>能源补贴财政崩溃风险——全年补贴或达RM720亿</span>
+        <span data-en>Energy Subsidy Fiscal Collapse Risk — Annual Subsidies May Reach RM 72B</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-crosshairs"></i> <span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>中东冲突持续、油价维持100美元以上、霍尔木兹海峡航运受阻</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Continued Middle East conflict, oil prices sustained above USD 100, Strait of Hormuz shipping disruption</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>全行业——财政赤字扩大可能触发主权信用评级下调预警，令吉承压，进口成本上升；若被迫取消RON95补贴，通胀将额外飙升6.3个百分点</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>All industries — fiscal deficit expansion may trigger sovereign credit rating downgrade warnings, ringgit under pressure, import costs rising; if forced to remove RON95 subsidies, inflation would surge an additional 6.3 percentage points</p>
+      <div class="event-section-label"><i class="fas fa-thermometer-full"></i> <span data-zh>严重程度</span><span data-en>Severity</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>极高。4月补贴已是冲突前10倍，4个月耗尽全年预算。副财长承认"低油价时代或难再续"，即便冲突结束，油价恢复战前水平需18个月。INSAP警告第二波通胀（供应链成本传导）将在Q3-Q4全面显现</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Extremely high. April subsidies are 10x pre-conflict levels, with four months exhausting the annual budget. The Deputy Finance Minister acknowledged "the era of low oil prices may not return," and even if the conflict ends, oil prices would need 18 months to return to pre-war levels. INSAP warns second-wave inflation (supply chain cost pass-through) will fully materialize in Q3-Q4</p>
+      <div class="event-section-label"><i class="fas fa-eye"></i> <span data-zh>关注指标</span><span data-en>Key Indicators</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>布伦特原油周均价、月度补贴支出、财政赤字率、令吉兑美元汇率</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Brent crude weekly average, monthly subsidy expenditure, fiscal deficit ratio, ringgit/USD exchange rate</p>
+    </div>
+
+    <!-- Red Risk 2 -->
+    <div class="risk-card red reveal">
+      <div class="risk-badge red"><i class="fas fa-circle"></i> <span data-zh>高风险</span><span data-en>HIGH RISK</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>外资政策协调失灵——比亚迪事件的系统性影响</span>
+        <span data-en>FDI Policy Coordination Failure — Systemic Impact of BYD Incident</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-crosshairs"></i> <span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>联邦贸工部与州政府在外资条件上的公开分歧，"临门变阵"式政策调整</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Open disagreement between federal MITI and state governments on FDI conditions, "last-minute" policy changes</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>制造业FDI，尤其是新能源汽车、电子电气等需要大额固定资产投资的领域</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Manufacturing FDI, especially NEV, E&amp;E, and other sectors requiring large fixed asset investments</p>
+      <div class="event-section-label"><i class="fas fa-thermometer-full"></i> <span data-zh>严重程度</span><span data-en>Severity</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>高。霹雳州议员、马华领导人、商界人士均公开批评政策不确定性。若比亚迪最终撤出，将损失约13亿令吉投资和产业链带动效应，更重要的是向其他潜在投资者释放负面信号</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>High. Perak assemblymen, MCA leaders, and business figures have all publicly criticized policy uncertainty. If BYD ultimately withdraws, it would mean losing approximately RM 1.3 billion in investment and supply chain multiplier effects — more importantly, sending negative signals to other potential investors</p>
+      <div class="event-section-label"><i class="fas fa-eye"></i> <span data-zh>关注指标</span><span data-en>Key Indicators</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>首相与贸工部后续表态、比亚迪项目进展、其他大型FDI项目动态</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>PM and MITI subsequent statements, BYD project progress, other major FDI project developments</p>
+    </div>
+
+    <!-- Yellow Risk 1 -->
+    <div class="risk-card yellow reveal">
+      <div class="risk-badge yellow"><i class="fas fa-circle"></i> <span data-zh>中风险</span><span data-en>MEDIUM RISK</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>通胀传导与消费降级——房贷申请已下跌22.5%</span>
+        <span data-en>Inflation Pass-through &amp; Consumer Downgrade — Mortgage Applications Down 22.5%</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-crosshairs"></i> <span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>柴油涨价通过供应链传导至终端消费品，建筑成本上升，可支配收入下降</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Diesel price hikes passing through supply chains to end consumer goods, rising construction costs, declining disposable income</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>房地产、零售、餐饮、建筑等内需驱动型行业</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Real estate, retail, F&amp;B, construction, and other domestic demand-driven industries</p>
+      <div class="event-section-label"><i class="fas fa-thermometer-full"></i> <span data-zh>严重程度</span><span data-en>Severity</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>中高。MBSB预测新产业销售放缓10-15%，2月房贷申请按年大跌22.5%至366亿令吉。面条粿条已涨价5-10%，塑料涨价20-30%。492万户家庭将受通胀冲击，B40家庭月收入实际损失4.8%</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Medium-high. MBSB forecasts new property sales slowing 10-15%, February mortgage applications fell 22.5% YoY to RM 36.6 billion. Noodle prices have risen 5-10%, plastics up 20-30%. 4.92 million households will be impacted by inflation, with B40 households losing 4.8% of monthly real income</p>
+      <div class="event-section-label"><i class="fas fa-eye"></i> <span data-zh>关注指标</span><span data-en>Key Indicators</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>月度CPI、房贷申请量、零售销售指数、消费者信心指数</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Monthly CPI, mortgage application volume, retail sales index, consumer confidence index</p>
+    </div>
+
+    <!-- Yellow Risk 2 -->
+    <div class="risk-card yellow reveal">
+      <div class="risk-badge yellow"><i class="fas fa-circle"></i> <span data-zh>中风险</span><span data-en>MEDIUM RISK</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>美国301调查——半导体、橡胶手套、棕榈油面临关税风险</span>
+        <span data-en>US Section 301 Investigation — Semiconductors, Rubber Gloves, Palm Oil Face Tariff Risk</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-crosshairs"></i> <span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>美国针对产能过剩及强迫劳动产品的301调查</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>US Section 301 investigation targeting overcapacity and forced labor products</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>半导体、橡胶手套、棕榈油等马来西亚核心出口产业</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Semiconductors, rubber gloves, palm oil, and other core Malaysian export industries</p>
+      <div class="event-section-label"><i class="fas fa-thermometer-full"></i> <span data-zh>严重程度</span><span data-en>Severity</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>中。马来西亚出口企业已通过市场多元化、供应链调整等方式避险，但若关税落地，将直接冲击相关产业链。霍尔木兹海峡紧张叠加关税风险，出口前景承压</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Medium. Malaysian exporters have been hedging through market diversification and supply chain adjustments, but if tariffs materialize, they will directly impact related supply chains. Strait of Hormuz tensions combined with tariff risks put export prospects under pressure</p>
+      <div class="event-section-label"><i class="fas fa-eye"></i> <span data-zh>关注指标</span><span data-en>Key Indicators</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>美国301调查进展、相关产品关税税率、出口数据变化</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>US Section 301 investigation progress, related product tariff rates, export data changes</p>
+    </div>
+
+    <!-- Green Risk/Opportunity 1 -->
+    <div class="risk-card green reveal">
+      <div class="risk-badge green"><i class="fas fa-circle"></i> <span data-zh>低风险/机遇</span><span data-en>LOW RISK / OPPORTUNITY</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>清真产业与数据中心——两大确定性增长赛道</span>
+        <span data-en>Halal Industry &amp; Data Centers — Two High-Certainty Growth Tracks</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-seedling"></i> <span data-zh>机遇来源</span><span data-en>Opportunity Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>清真出口685.2亿令吉创纪录（+10.9%），数据中心单日释出38亿令吉合约</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Record halal exports of RM 68.52 billion (+10.9%), data center contracts of RM 3.8 billion released in a single day</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>受益范围</span><span data-en>Beneficiary Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>食品饮料、棕榈油加工、清真认证服务、建筑工程、机电设备、冷却系统</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Food &amp; beverage, palm oil processing, halal certification services, construction engineering, M&amp;E equipment, cooling systems</p>
+      <div class="event-section-label"><i class="fas fa-chart-line"></i> <span data-zh>机遇评估</span><span data-en>Opportunity Assessment</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>清真产业受益于全球穆斯林消费市场扩张和马来西亚的认证体系优势，增长确定性高。数据中心受益于全球AI算力需求爆发和马来西亚的区位+成本优势，金务大、双威建筑等龙头企业订单饱满。两大赛道均有明确的政策支持（2030清真产业总体规划、NETR/NIMP 2030）</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>The halal industry benefits from global Muslim consumer market expansion and Malaysia's certification system advantage, with high growth certainty. Data centers benefit from the global AI computing demand explosion and Malaysia's location + cost advantages, with leading companies like Gamuda and Sunway Construction having full order books. Both tracks have clear policy support (Halal Industry Master Plan 2030, NETR/NIMP 2030)</p>
+    </div>
+
+    <!-- Green Risk/Opportunity 2 -->
+    <div class="risk-card green reveal">
+      <div class="risk-badge green"><i class="fas fa-circle"></i> <span data-zh>低风险/机遇</span><span data-en>LOW RISK / OPPORTUNITY</span></div>
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>马股IPO市场活跃——今年募资已达RM37.2亿</span>
+        <span data-en>Bursa IPO Market Active — RM 3.72B Raised This Year</span>
+      </h3>
+      <div class="event-section-label"><i class="fas fa-seedling"></i> <span data-zh>机遇来源</span><span data-en>Opportunity Source</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>IPO募资同比近3倍增长，SkyeChip半导体、MTT航运、IAQ集团等排队上市</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>IPO fundraising nearly tripled YoY, with SkyeChip Semiconductor, MTT Shipping, IAQ Group, and others in the pipeline</p>
+      <div class="event-section-label"><i class="fas fa-bullseye"></i> <span data-zh>受益范围</span><span data-en>Beneficiary Scope</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>资本市场参与者、拟上市企业、投行及专业服务机构</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>Capital market participants, companies planning to list, investment banks, and professional service firms</p>
+      <div class="event-section-label"><i class="fas fa-chart-line"></i> <span data-zh>机遇评估</span><span data-en>Opportunity Assessment</span></div>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-zh>马股IPO窗口期仍然开放，人民银行18%股息（10年最高）、帝国食品首日溢价72.86%等数据显示市场风险偏好尚可。但需关注中东局势对市场情绪的扰动</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.8;" data-en>The Bursa IPO window remains open, with Bank Rakyat's 18% dividend (10-year high) and Imperial Food's 72.86% first-day premium indicating acceptable market risk appetite. However, Middle East developments' impact on market sentiment should be monitored</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: Recommendations ===== -->
+<section id="recommendations" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-tasks"></i>
+      <span data-zh>六、行动建议</span><span data-en>6. Recommendations</span>
+    </h2>
+
+    <!-- Category 1: Already Invested -->
+    <div class="action-category reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:700;color:var(--accent-indigo);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;">
+        <i class="fas fa-building" style="font-size:1rem;"></i>
+        <span data-zh>已在马来西亚投资的企业</span><span data-en>Companies Already Invested in Malaysia</span>
+      </h3>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-gas-pump"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>能源成本对冲</span><span data-en>Energy Cost Hedging</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>立即评估柴油涨价对运营成本的影响，建筑企业关注合同中的成本缓冲条款（建议预留10-15%），物流企业考虑生物柴油替代方案（B12/B15政策已获批），制造业企业评估自备发电或可再生能源投资的经济性</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Immediately assess diesel price hike impacts on operating costs. Construction firms should review cost buffer clauses in contracts (recommend 10-15% reserves). Logistics companies should consider biodiesel alternatives (B12/B15 policy approved). Manufacturers should evaluate the economics of captive power generation or renewable energy investment</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-link"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>供应链韧性建设</span><span data-en>Supply Chain Resilience Building</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>建立关键原材料（尤其是进口化肥、饲料、塑料）的安全库存，评估供应商多元化方案，关注雪兰莪粮食仓库等政府基础设施投资带来的合作机会</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Establish safety stock for critical raw materials (especially imported fertilizers, feed, plastics), evaluate supplier diversification plans, and monitor cooperation opportunities from government infrastructure investments such as Selangor's food warehouses</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>GST合规准备</span><span data-en>GST Compliance Preparation</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>启动GST合规预评估，梳理现有SST申报流程，评估GST对产品定价和利润率的影响，建议在12个月咨询期内完成系统和流程准备</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Initiate GST compliance pre-assessment, review existing SST filing processes, evaluate GST impact on product pricing and profit margins. Recommend completing system and process preparation within the 12-month consultation period</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-car"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>关注比亚迪事件后续</span><span data-en>Monitor BYD Incident Developments</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>制造业企业（尤其是汽车、电子领域）应密切关注贸工部政策调整方向，确保已获得的投资条件有书面确认，评估联邦与州政府政策一致性风险</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Manufacturing companies (especially automotive and electronics) should closely monitor MITI policy adjustment directions, ensure investment conditions obtained are confirmed in writing, and assess federal-state policy consistency risks</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 2: Planning to Enter -->
+    <div class="action-category reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:700;color:var(--accent-indigo);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;">
+        <i class="fas fa-plane-arrival" style="font-size:1rem;"></i>
+        <span data-zh>计划进入马来西亚市场的企业</span><span data-en>Companies Planning to Enter Malaysia</span>
+      </h3>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>州级投资选址精细化</span><span data-en>State-Level Investment Site Selection</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>根据产业定位选择最优州属——半导体选吉打/槟城（居林高科技园区、E10快速准证），新能源车选霹雳（银谷科技园、丹绒马林），数据中心选柔佛/森美兰（柔新特区、波德申），清真产业选马六甲/霹雳，能源选砂拉越（可再生能源70%）</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Select optimal states based on industry positioning — Semiconductors: Kedah/Penang (Kulim Hi-Tech Park, E10 Express Pass); NEV: Perak (Silver Valley Tech Park, Tanjung Malim); Data centers: Johor/Negeri Sembilan (JS-SEZ, Port Dickson); Halal: Melaka/Perak; Energy: Sarawak (70% renewable energy)</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-shield-alt"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>政策风险评估</span><span data-en>Policy Risk Assessment</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>比亚迪事件提示，需同时获得联邦贸工部和州政府的政策确认，避免"州政府承诺、联邦否决"的风险。建议在投资协议中明确政策变更的补偿条款</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>The BYD incident highlights the need to obtain policy confirmation from both federal MITI and state governments simultaneously, avoiding the risk of "state promises, federal vetoes." Recommend including explicit policy change compensation clauses in investment agreements</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-certificate"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>清真产业切入</span><span data-en>Halal Industry Entry</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>685.2亿令吉出口规模和10.9%增速表明赛道仍处上升期，中国为最大出口市场，食品饮料、棕榈油加工、清真认证服务是三大切入点。马六甲清真工业园2.0（2027年竣工）提供现成的产业园区选择</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>The RM 68.52 billion export scale and 10.9% growth rate indicate the sector is still ascending. China is the largest export market. Food &amp; beverage, palm oil processing, and halal certification services are three key entry points. Melaka Halal Industrial Park 2.0 (completion 2027) offers a ready-made industrial park option</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-bolt"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>能源危机窗口期</span><span data-en>Energy Crisis Window</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>当前能源危机虽增加短期运营成本，但也为能源替代技术（生物柴油、可再生能源）、粮食安全（农业科技、冷链物流）等领域创造了政策红利和市场需求</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>While the current energy crisis increases short-term operating costs, it also creates policy dividends and market demand for energy alternative technologies (biodiesel, renewables) and food security (agritech, cold chain logistics)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Category 3: Research Institutions -->
+    <div class="action-category reveal">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:700;color:var(--accent-indigo);margin-bottom:1.25rem;display:flex;align-items:center;gap:0.5rem;">
+        <i class="fas fa-microscope" style="font-size:1rem;"></i>
+        <span data-zh>研究机构应跟踪的后续指标</span><span data-en>Follow-up Indicators for Research Institutions</span>
+      </h3>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-oil-can"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>能源与财政</span><span data-en>Energy &amp; Fiscal</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>布伦特原油周均价、月度燃油补贴支出、财政赤字率、Petronas供油保障期限（当前至6月底）、生物柴油B12/B15推行进度</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Brent crude weekly average, monthly fuel subsidy expenditure, fiscal deficit ratio, Petronas fuel supply guarantee period (currently through end of June), biodiesel B12/B15 rollout progress</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-receipt"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>税改进程</span><span data-en>Tax Reform Progress</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>GST公众咨询启动时间、SST结构调整方案、INSAP后续政策建议</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>GST public consultation launch timing, SST structural adjustment plans, INSAP subsequent policy recommendations</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-hand-holding-usd"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>外资政策</span><span data-en>FDI Policy</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>比亚迪项目最终方案、贸工部汽车政策修订、各州FDI季度数据、外资净买卖马股/马债趋势</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>BYD project final resolution, MITI automotive policy revision, state-level quarterly FDI data, foreign net buying/selling trends for Malaysian equities/bonds</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-chart-area"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>宏观经济</span><span data-en>Macroeconomics</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>Q2 GDP（能源危机影响将充分体现）、月度CPI（尤其是食品和交通分项）、房贷申请量、制造业PMI</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Q2 GDP (energy crisis impact will be fully reflected), monthly CPI (especially food and transport sub-indices), mortgage application volume, manufacturing PMI</p>
+        </div>
+      </div>
+      <div class="action-item">
+        <div class="action-icon"><i class="fas fa-globe-asia"></i></div>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);margin-bottom:0.35rem;font-size:0.95rem;">
+            <span data-zh>地缘政治</span><span data-en>Geopolitics</span>
+          </div>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-zh>中东冲突走向、霍尔木兹海峡通航状况、美国301调查进展、马澳/马俄能源合作落地情况</p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.8;" data-en>Middle East conflict trajectory, Strait of Hormuz navigation status, US Section 301 investigation progress, Malaysia-Australia/Malaysia-Russia energy cooperation implementation</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: Appendix ===== -->
+<section id="appendix" class="section-container" style="padding-top:0;">
+  <div class="reveal">
+    <h2 class="section-title">
+      <i class="fas fa-paperclip"></i>
+      <span data-zh>七、附录</span><span data-en>7. Appendix</span>
+    </h2>
+
+    <!-- 7.1 Data Source -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>7.1 数据来源说明</span><span data-en>7.1 Data Source Description</span>
+      </h3>
+      <ul style="font-size:0.9rem;color:var(--text-secondary);line-height:2;padding-left:1.25rem;">
+        <li data-zh><strong>数据平台</strong>：Supinfor 区域国别实时监测系统</li>
+        <li data-en><strong>Data Platform</strong>: Supinfor Regional Real-time Monitoring System</li>
+        <li data-zh><strong>监测国家</strong>：马来西亚（my）</li>
+        <li data-en><strong>Monitored Country</strong>: Malaysia (my)</li>
+        <li data-zh><strong>监测周期</strong>：2026年4月13日 至 2026年4月19日（7天）</li>
+        <li data-en><strong>Monitoring Period</strong>: April 13 – April 19, 2026 (7 days)</li>
+        <li data-zh><strong>筛选标签</strong>：全部24个营商环境标签（SPRBC_前缀）</li>
+        <li data-en><strong>Filter Tags</strong>: All 24 business climate tags (SPRBC_ prefix)</li>
+        <li data-zh><strong>数据处理</strong>：原始8,496条 → URL去重后4,396条 → 精选250条高价值资讯</li>
+        <li data-en><strong>Data Processing</strong>: 8,496 raw → 4,396 after URL dedup → 250 curated high-value items</li>
+        <li data-zh><strong>精选规则</strong>：保留外资政策变化、大额投资/处罚、高层表态、系统性监管信号、有具体数据支撑的营商环境变化等高价值内容</li>
+        <li data-en><strong>Curation Rules</strong>: Retained FDI policy changes, large-scale investments/penalties, senior official statements, systemic regulatory signals, and data-backed business environment changes</li>
+        <li data-zh><strong>覆盖栏目</strong>：民生、经济、产业、政治、环保、科技、外交、教育、医疗、人文、国防（共11个）</li>
+        <li data-en><strong>Channels Covered</strong>: Livelihood, Economy, Industry, Politics, Environment, Technology, Diplomacy, Education, Healthcare, Culture, Defense (11 total)</li>
+        <li data-zh><strong>信源语言</strong>：中文、英文、马来文三大语种</li>
+        <li data-en><strong>Source Languages</strong>: Chinese, English, Malay (three major languages)</li>
+      </ul>
+    </div>
+
+    <!-- 7.2 Dedup Rules -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>7.2 去重规则</span><span data-en>7.2 Deduplication Rules</span>
+      </h3>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-zh>同一条资讯可能被多个栏目收录或被多家媒体转载，按URL去重后保留唯一条目。同一事件在不同媒体的报道在分析阶段合并为一个事件簇。</p>
+      <p style="font-size:0.9rem;color:var(--text-secondary);line-height:1.9;" data-en>The same article may be collected by multiple channels or republished by multiple media outlets. After URL deduplication, only unique entries are retained. Reports of the same event across different media are merged into a single event cluster during the analysis phase.</p>
+    </div>
+
+    <!-- 7.3 Limitations -->
+    <div class="content-card">
+      <h3 style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">
+        <span data-zh>7.3 局限性说明</span><span data-en>7.3 Limitations</span>
+      </h3>
+      <ol style="font-size:0.9rem;color:var(--text-secondary);line-height:2;padding-left:1.25rem;">
+        <li>
+          <span data-zh>营商环境标签由系统自动打标，存在少量误标。例如"处罚外商投资企业"标签部分标注在本地执法案件上（如食用油发票造假、柴油走私），本报告已在分析中甄别处理</span>
+          <span data-en>Business climate tags are automatically assigned by the system, with occasional mislabeling. For example, the "FDI Penalties" tag was partially applied to local enforcement cases (e.g., cooking oil invoice fraud, diesel smuggling). This report has identified and addressed these in the analysis</span>
+        </li>
+        <li>
+          <span data-zh>精选250条为高价值资讯子集，部分低热度但可能有长期影响的信号可能未被纳入</span>
+          <span data-en>The curated 250 items represent a high-value subset. Some low-visibility signals with potential long-term impact may not have been included</span>
+        </li>
+        <li>
+          <span data-zh>通胀预测存在分歧（INSAP 6.1%-6.6% vs 国行1.5%-2.5%），本报告同时呈现两方观点，读者需根据补贴政策走向自行判断</span>
+          <span data-en>Inflation forecasts diverge (INSAP 6.1%-6.6% vs BNM 1.5%-2.5%). This report presents both perspectives — readers should form their own judgment based on subsidy policy trajectory</span>
+        </li>
+        <li>
+          <span data-zh>部分数据为媒体引述，可能存在口径差异，关键数据建议交叉验证官方来源</span>
+          <span data-en>Some data are media-cited and may have definitional differences. Key data points should be cross-verified against official sources</span>
+        </li>
+      </ol>
+    </div>
+
+    <!-- Author Info -->
+    <div class="content-card" style="text-align:center;padding:2.5rem;">
+      <p style="font-size:0.85rem;color:var(--text-muted);margin-bottom:0.5rem;font-style:italic;">
+        <span data-zh>本报告基于 Supinfor 区域国别实时监测系统编制，仅供参考，不构成投资建议。</span>
+        <span data-en>This report is compiled based on the Supinfor Regional Real-time Monitoring System. For reference only; does not constitute investment advice.</span>
+      </p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-top:1rem;">
+        <i class="fas fa-building" style="color:var(--accent-indigo);font-size:1.25rem;"></i>
+        <div>
+          <div style="font-weight:700;color:var(--text-primary);font-size:1rem;">Supinfor Ltd.</div>
+          <div style="font-size:0.8rem;color:var(--text-muted);">
+            <span data-zh>发布日期：2026年4月19日</span>
+            <span data-en>Published: April 19, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div><!-- end .main-content -->
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div style="max-width:960px;margin:0 auto;">
+    <p style="margin-bottom:0.5rem;">
+      <span data-zh>© 2026 Supinfor Ltd. 保留所有权利。</span>
+      <span data-en>© 2026 Supinfor Ltd. All rights reserved.</span>
+    </p>
+    <p style="font-size:0.78rem;color:var(--text-muted);">
+      <span data-zh>本报告由 Supinfor 区域国别实时监测系统自动生成，数据覆盖中文、英文、马来文三大语种信源。</span>
+      <span data-en>This report is generated by the Supinfor Regional Real-time Monitoring System, covering Chinese, English, and Malay language sources.</span>
+    </p>
+  </div>
+</footer>
+
+<!-- ===== Back to Top ===== -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Toggle =====
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = themeToggle.querySelector('i');
+
+  function setTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (theme === 'dark') {
+      document.body.classList.add('dark');
+      themeIcon.className = 'fas fa-sun';
+    } else {
+      document.body.classList.remove('dark');
+      themeIcon.className = 'fas fa-moon';
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  // Init theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    setTheme(savedTheme);
+  } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    setTheme('dark');
+  }
+
+  themeToggle.addEventListener('click', function() {
+    const current = html.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      setTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  // ===== Language Toggle =====
+  const langToggle = document.getElementById('langToggle');
+
+  function setLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    langToggle.textContent = lang === 'zh' ? 'EN' : '中';
+    localStorage.setItem('lang', lang);
+  }
+
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    setLang(savedLang);
+  }
+
+  langToggle.addEventListener('click', function() {
+    const current = html.getAttribute('data-lang');
+    setLang(current === 'zh' ? 'en' : 'zh');
+  });
+
+  // ===== Sidebar Toggle =====
+  const sidebar = document.getElementById('sidebar');
+  const hamburgerBtn = document.getElementById('hamburgerBtn');
+  const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+  hamburgerBtn.addEventListener('click', function() {
+    sidebar.classList.toggle('open');
+  });
+
+  sidebarOverlay.addEventListener('click', function() {
+    sidebar.classList.remove('open');
+  });
+
+  // Close sidebar on link click (mobile)
+  sidebar.querySelectorAll('.toc-link').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 1200) {
+        sidebar.classList.remove('open');
+      }
+    });
+  });
+
+  // ===== Active TOC Highlight =====
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  function updateActiveToc() {
+    let current = '';
+    sections.forEach(function(section) {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 150) {
+        current = section.getAttribute('id');
+      }
+    });
+    // Also check hero
+    const heroRect = document.getElementById('hero').getBoundingClientRect();
+    if (heroRect.bottom > 150) current = 'hero';
+
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // ===== Back to Top =====
+  const backToTop = document.getElementById('backToTop');
+
+  function updateBackToTop() {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== Scroll Reveal =====
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ===== Bar Chart Animation =====
+  const barFills = document.querySelectorAll('.bar-fill[data-width]');
+  const barObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const fills = entry.target.querySelectorAll('.bar-fill[data-width]');
+        fills.forEach(function(fill, index) {
+          setTimeout(function() {
+            fill.style.width = fill.getAttribute('data-width');
+          }, index * 50);
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('#channelChart, #tagChart').forEach(function(chart) {
+    barObserver.observe(chart);
+  });
+
+  // ===== Scroll Event Listener =====
+  let ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      window.requestAnimationFrame(function() {
+        updateActiveToc();
+        updateBackToTop();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial calls
+  updateActiveToc();
+  updateBackToTop();
+
+})();
+</script>
+</body>
+</html>

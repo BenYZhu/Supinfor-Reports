@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工程承包行业洞察月报 2026-02 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #4338CA; --c-primary-light: #6366f1; --c-primary-dark: #3730A3;
+  --c-accent: #F43F5E; --c-accent-light: #fb7185;
+  --c-bg: #eef2ff; --c-surface: #ffffff; --c-surface-alt: #e8ecff;
+  --c-border: #c7d2fe; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #0c0f20; --c-surface: #161a35; --c-surface-alt: #1a1f40;
+  --c-border: #2d3560; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #0c0f20; --c-surface: #161a35; --c-surface-alt: #1a1f40;
+    --c-border: #2d3560; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#4338CA 0%,#3730A3 40%,#312e81 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.donut-container{display:flex;align-items:center;justify-content:center;gap:2rem;margin:1.5rem 0;flex-wrap:wrap}
+.donut-chart{position:relative;width:140px;height:140px}
+.donut-chart svg{transform:rotate(-90deg)}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-value{font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--c-primary)}
+.donut-label{font-size:.65rem;color:var(--c-text-muted)}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-helmet-safety"></i>
+      <span data-zh>工程承包行业洞察月报</span>
+      <span data-en>E&amp;C Industry Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年2月刊 · Supinfor Ltd.</span>
+      <span data-en>February 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>工程承包行业<br>洞察月报</span>
+      <span data-en>Engineering &amp; Construction<br>Industry Insight Report</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>数据中心与能源基建驱动增长 · AI数字工程规模化部署 · 全球基建安全事故频发</span>
+      <span data-en>Data Center &amp; Energy Infra Growth · AI Digital Engineering at Scale · Global Construction Safety Concerns</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">101</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">20</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">6</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">4</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、行业格局与资本重构</span><span data-en>I. Industry Landscape & Capital</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、技术创新与数字化转型</span><span data-en>II. Tech Innovation & Digital</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、区域基建投资热点</span><span data-en>III. Regional Infra Hotspots</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、可持续建筑与绿色转型</span><span data-en>IV. Sustainable Construction</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、产能扩张与市场拓展</span><span data-en>V. Capacity & Market Expansion</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、企业治理与人才战略</span><span data-en>VI. Governance & Talent</span></a>
+      <a href="#s7" class="toc-link"><span data-zh>七、合规治理与行业监管</span><span data-en>VII. Compliance & Regulation</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>欧美头部基建企业2025年普遍实现双位数利润增长，数据中心与能源基建成为核心增长引擎</span><span data-en>Western E&C Leaders Achieve Double-Digit Profit Growth in 2025; Data Centers & Energy Infra as Core Engines</span></h3>
+      <p><span data-zh>ACS旗下Turner数据中心订单达170亿欧元，Hochtief营业利润增长26%，WSP以45亿美元收购TRC打造美国电力工程第一平台，行业正从传统基建向高附加值数字与能源基建转型。</span><span data-en>ACS subsidiary Turner's data center orders reached €17B, Hochtief operating profit grew 26%, WSP acquired TRC for $4.5B to become the #1 US power engineering platform. The industry is shifting from traditional to high-value digital & energy infrastructure.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>AI与数字工程从概念验证进入规模化部署阶段，头部企业将其定位为"赋能增长"战略工具</span><span data-en>AI & Digital Engineering Move from PoC to Scale Deployment; Leaders Position It as "Growth Enabler"</span></h3>
+      <p><span data-zh>Bechtel设立EPC转型高级副总裁专职推进AI与机器人整合，AtkinsRéalis明确AI加速行业并购、小企业将处于劣势，Turner与OpenAI建立全面合作，数字化能力正成为新的竞争分水岭。</span><span data-en>Bechtel appointed SVP for EPC Transformation to drive AI & robotics integration, AtkinsRéalis stated AI will accelerate M&A with small firms at disadvantage, Turner partnered with OpenAI. Digital capability is becoming the new competitive divide.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>英国HS2高铁项目进入基建密集落地期，多项创新施工技术实现工程化验证</span><span data-en>UK HS2 Enters Intensive Construction Phase; Multiple Innovative Techniques Validated at Scale</span></h3>
+      <p><span data-zh>悬臂法预制节段高架、全约束滑动法桥梁移位、SPMT旋转定位等技术在HS2项目中首次规模应用，多项工程提前完成并大幅降低对交通与环境的干扰。</span><span data-en>Cantilever precast segmental viaducts, fully restrained sliding bridge moves, and SPMT rotation positioning were applied at scale for the first time on HS2, with multiple works completed ahead of schedule.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>中东与东南亚成为全球基建投资最活跃区域，沙特Jafurah千亿美元页岩气项目启动</span><span data-en>Middle East & Southeast Asia Become Most Active Global Infra Investment Regions</span></h3>
+      <p><span data-zh>沙特阿美已签署260亿美元前两阶段合同，越南航站楼项目由土耳其-越南联合体以超35万亿越盾中标，区域基建市场的规模和复杂度持续升级。</span><span data-en>Saudi Aramco signed ~$26B for first two phases, Vietnam terminal project won by Turkish-Vietnamese JV at over VND 35T. Regional infrastructure scale and complexity continue to escalate.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>韩国城市更新市场爆发，2026年预计规模达80万亿韩元，但投标纠纷与合规风险同步上升</span><span data-en>Korean Urban Renewal Market Explodes to KRW 80T in 2026; Bidding Disputes & Compliance Risks Rise</span></h3>
+      <p><span data-zh>大宇建设、乐天建设两个月内订单均破万亿韩元，但圣水4区重建项目投标纠纷、施工方勾结嫌疑等事件暴露出重建项目管理的系统性漏洞。</span><span data-en>Daewoo E&C and Lotte E&C both exceeded KRW 1T in orders within two months, but bidding disputes and collusion suspicions in Seongsu 4th District exposed systemic management gaps.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">6</span>
+    <div class="core-content">
+      <h3><span data-zh>全球基建安全事故频发，暴露转包链条过长、安全监管执行不力的行业顽疾</span><span data-en>Global Construction Safety Incidents Surge, Exposing Long Subcontracting Chains & Weak Safety Oversight</span></h3>
+      <p><span data-zh>泰国事故致34人死亡，江苏事故致5人死亡且遭瞒报质疑，韩国挡土墙坍塌暴露设计-施工-维护全环节缺陷，安全治理已成为行业可持续发展的底线挑战。</span><span data-en>Thailand accident killed 34, Jiangsu accident killed 5 with cover-up allegations, Korean retaining wall collapse exposed design-construction-maintenance defects. Safety governance is now a baseline challenge for industry sustainability.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">€170B</div>
+      <div class="lbl"><span data-zh>Turner 数据中心订单</span><span data-en>Turner DC Orders</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#be123c)">
+      <div class="val">$100B</div>
+      <div class="lbl"><span data-zh>沙特Jafurah总投资</span><span data-en>Saudi Jafurah Total Investment</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">₩80T</div>
+      <div class="lbl"><span data-zh>韩国城市更新市场</span><span data-en>Korea Urban Renewal Market</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+      <div class="val">$4.5B</div>
+      <div class="lbl"><span data-zh>WSP收购TRC</span><span data-en>WSP Acquires TRC</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== SECTION 1: Industry Landscape & Capital ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-building-columns"></i>
+    <h2><span data-zh>一、行业格局与资本重构</span><span data-en>I. Industry Landscape & Capital Restructuring</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>欧美头部企业利润普增，数据中心与能源基建驱动行业集中度加速提升</span><span data-en>Western Leaders See Broad Profit Growth; Data Centers & Energy Infra Drive Industry Consolidation</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2025年欧美头部基建企业普遍实现营收利润双增长并上调分红，增长动力已从传统基建转向数据中心、新能源和数字基础设施。WSP以45亿美元收购TRC、TopBuild连续多笔收购扩张商业屋面版图，行业并购节奏加快，资本正加速向具备技术整合能力的平台型企业集中。</span><span data-en><strong>Key Insight:</strong> In 2025, Western E&C leaders broadly achieved revenue and profit growth with increased dividends. Growth drivers shifted from traditional infrastructure to data centers, renewables, and digital infrastructure. WSP's $4.5B acquisition of TRC and TopBuild's serial acquisitions accelerated industry consolidation, with capital concentrating toward platform companies with technology integration capabilities.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>ACS集团2025年净利润9.5亿欧元（+14.8%），旗下Turner营收增长34%、税前利润增长62%至9.17亿欧元，数据中心相关订单达170亿欧元</span><span data-en>ACS Group 2025 net profit €950M (+14.8%), Turner revenue +34%, pre-tax profit +62% to €917M, data center orders reached €17B</span></li>
+      <li><span data-zh>Hochtief营业利润增长26%至7.89亿欧元，在手订单达725亿欧元（+32%），加速向AI基础设施和小型核电转型</span><span data-en>Hochtief operating profit +26% to €789M, order backlog €72.5B (+32%), accelerating shift to AI infrastructure and SMR</span></li>
+      <li><span data-zh>WSP完成对TRC Companies的45亿美元全现金收购，成为美国电力领域排名第一的工程公司</span><span data-en>WSP completed $4.5B all-cash acquisition of TRC Companies, becoming #1 US power engineering firm</span></li>
+      <li><span data-zh>Subsea 7调整后EBITDA增长36%至14.8亿美元，自由现金流达12亿美元；Saipem EBITDA增长29.1%至17亿欧元</span><span data-en>Subsea 7 adjusted EBITDA +36% to $1.48B, FCF $1.2B; Saipem EBITDA +29.1% to €1.7B</span></li>
+      <li><span data-zh>TopBuild在2025-2026年初完成Progressive Roofing（年营收4.4亿美元）、SPI、Johnson Roofing等多笔收购，切入750亿美元规模的美国商业屋面市场</span><span data-en>TopBuild completed acquisitions of Progressive Roofing ($440M annual revenue), SPI, Johnson Roofing in 2025-2026, entering the $75B US commercial roofing market</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Top E&C Company Performance -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化</span><span data-en>Data Visualization</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>头部企业利润增长对比</span><span data-en>Top E&C Company Profit Growth Comparison</span></h3>
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>企业</span><span data-en>Company</span></th>
+        <th><span data-zh>2025年营收</span><span data-en>2025 Revenue</span></th>
+        <th><span data-zh>利润增长</span><span data-en>Profit Growth</span></th>
+        <th><span data-zh>核心增长领域</span><span data-en>Core Growth Area</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>ACS/Turner</td><td><span data-zh>498.48亿欧元</span><span data-en>€49.85B</span></td><td><span data-zh>净利润+14.8%</span><span data-en>Net Profit +14.8%</span></td><td><span data-zh>数据中心、医疗</span><span data-en>Data Centers, Healthcare</span></td></tr>
+        <tr><td>Hochtief</td><td><span data-zh>380亿欧元</span><span data-en>€38B</span></td><td><span data-zh>营业利润+26%</span><span data-en>Op. Profit +26%</span></td><td><span data-zh>AI基建、小型核电</span><span data-en>AI Infra, SMR</span></td></tr>
+        <tr><td>Acciona</td><td><span data-zh>202.36亿欧元</span><span data-en>€20.24B</span></td><td><span data-zh>净利润+90.4%</span><span data-en>Net Profit +90.4%</span></td><td><span data-zh>基建+能源资产剥离</span><span data-en>Infra + Energy Divestiture</span></td></tr>
+        <tr><td>Saipem</td><td><span data-zh>155亿欧元</span><span data-en>€15.5B</span></td><td>EBITDA +29.1%</td><td><span data-zh>海上油气工程</span><span data-en>Offshore O&G Engineering</span></td></tr>
+        <tr><td>Subsea 7</td><td><span data-zh>70.86亿美元</span><span data-en>$7.09B</span></td><td>EBITDA +36%</td><td><span data-zh>海底工程</span><span data-en>Subsea Engineering</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>美国基建咨询企业订单爆发，联邦基建投资周期有望延长至2030年代</span><span data-en>US Infrastructure Consulting Orders Surge; Federal Investment Cycle May Extend to 2030s</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>AECOM和WSP Global受益于美国基建投资热潮，订单与业绩指引双双上调。更关键的信号是，国会正在讨论的新地面交通授权金额"显著高于"2021年1.2万亿美元的IIJA，且IIJA仅半数资金实际支出，剩余资金将为市场提供数年稳定性。美国基建投资周期的延长将为全球工程承包企业提供持续的增长确定性。</span><span data-en><strong>Key Insight:</strong> AECOM and WSP Global benefit from the US infrastructure investment boom, with both orders and guidance raised. Critically, Congress is discussing new surface transportation authorization "significantly higher" than the 2021 $1.2T IIJA, and only half of IIJA funds have been disbursed. The extended US infrastructure investment cycle will provide sustained growth certainty for global E&C firms.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>AECOM 2026年一季度营收38.3亿美元，超出市场预期；美国地区项目管线增长20%，早期阶段管线同比增长34%，在手订单增长9%</span><span data-en>AECOM Q1 FY2026 revenue $3.83B, beating expectations; US pipeline +20%, early-stage pipeline +34% YoY, backlog +9%</span></li>
+      <li><span data-zh>WSP Global上调2025年净收入指引至138-140亿加元，市场对其2028年营收预期达163亿加元</span><span data-en>WSP Global raised 2025 net revenue guidance to C$13.8-14.0B; market expects C$16.3B by 2028</span></li>
+      <li><span data-zh>Granite Construction CEO确认国会讨论的新授权金额"显著高于"IIJA的1.2万亿美元</span><span data-en>Granite Construction CEO confirmed Congress discussing new authorization "significantly higher" than IIJA's $1.2T</span></li>
+      <li><span data-zh>截至2025年11月，IIJA仅半数资金实际支出，剩余资金将持续释放</span><span data-en>As of Nov 2025, only half of IIJA funds actually disbursed; remaining funds will continue to flow</span></li>
+      <li><span data-zh>Truist将AECOM目标价上调至132美元，BofA上调至118美元，均维持买入评级</span><span data-en>Truist raised AECOM target to $132, BofA to $118, both maintaining Buy ratings</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.3</span><span data-en>Insight 1.3</span></span>
+    <h3><span data-zh>亚太基建企业业绩分化加剧，海外项目风险管控成为生死线</span><span data-en>Asia-Pacific E&C Performance Diverges Sharply; Overseas Project Risk Management Becomes Critical</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>韩国大宇建设因海外项目额外成本录得8154亿韩元巨额亏损，澳大利亚Lendlease因海外物业减值转为亏损3.18亿澳元，与欧美头部企业的普遍增长形成鲜明对比。亚太企业的海外扩张正面临更严峻的成本控制与风险管理考验，海外项目的盈利能力已成为决定企业命运的关键变量。</span><span data-en><strong>Key Insight:</strong> Korea's Daewoo E&C recorded KRW 815.4B losses due to overseas project cost overruns, Australia's Lendlease swung to A$318M loss from overseas property impairments — in stark contrast to Western leaders' broad growth. Asia-Pacific firms face increasingly severe cost control and risk management challenges overseas.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>大宇建设2024年亏损8154亿韩元，负债率从192.1%飙升至284.4%，信用评级展望下调至"负面"</span><span data-en>Daewoo E&C 2024 loss KRW 815.4B, debt ratio surged from 192.1% to 284.4%, credit outlook downgraded to "Negative"</span></li>
+      <li><span data-zh>亏损主因：伊拉克、新加坡、尼日利亚等海外项目额外成本集中入账，计提5494亿韩元坏账准备金</span><span data-en>Loss driven by cost overruns on Iraq, Singapore, Nigeria projects; KRW 549.4B bad debt provisions booked</span></li>
+      <li><span data-zh>Lendlease上半年税后亏损3.18亿澳元，主要因美国、英国、新加坡投资物业减值1.18亿澳元，股价跌至近40年低点</span><span data-en>Lendlease H1 after-tax loss A$318M, mainly from A$118M impairments on US, UK, Singapore properties; stock at ~40-year low</span></li>
+      <li><span data-zh>对比之下，OHLA扭亏为盈，订单量创历史新高达97.35亿欧元，自2020年以来已偿还5.63亿欧元债务</span><span data-en>In contrast, OHLA turned profitable, orders hit record €9.735B, repaid €563M debt since 2020</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: Tech Innovation & Digital ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-microchip"></i>
+    <h2><span data-zh>二、技术创新与数字化转型</span><span data-en>II. Technology Innovation & Digital Transformation</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>AI与数字工程进入规模化部署，头部企业竞相设立专职高管推进转型</span><span data-en>AI & Digital Engineering Enter Scale Deployment; Leaders Appoint Dedicated Executives</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年2月，工程承包行业对AI的态度已从"是否采用"转向"如何规模化部署"。Bechtel设立EPC转型高级副总裁专职推进AI与机器人整合，KBR建立数字实验室网络服务美军装备现代化，韩国SK生态工厂联合大学培养BIM与数字孪生人才。行业共识正在形成：AI是"赋能者而非颠覆者"，但其规模化部署将加速行业并购，因为大企业更易实现AI投资的规模效应。</span><span data-en><strong>Key Insight:</strong> By Feb 2026, the E&C industry's AI stance shifted from "whether to adopt" to "how to deploy at scale." Bechtel appointed SVP for EPC Transformation, KBR built digital lab networks for US military modernization, Korea's SK ecoplant partnered with universities for BIM & digital twin talent. Industry consensus: AI is an "enabler, not disruptor," but scale deployment will accelerate M&A as large firms better achieve AI investment economies of scale.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Bechtel任命John Platt为高级副总裁，专职负责全企业EPC转型，整合AI、自动化和机器人技术</span><span data-en>Bechtel appointed John Platt as SVP for enterprise-wide EPC Transformation, integrating AI, automation, and robotics</span></li>
+      <li><span data-zh>Bechtel已与英伟达合作优化数据中心施工，同时参与德州Rio Grande LNG项目的数字化交付</span><span data-en>Bechtel partnered with NVIDIA to optimize data center construction, and is digitally delivering the Texas Rio Grande LNG project</span></li>
+      <li><span data-zh>KBR在美国多地建立数字实验室，采用数字孪生、模型基系统工程技术，已完成综合防空反导系统等虚拟原型验证</span><span data-en>KBR established digital labs across the US using digital twins and MBSE, completing virtual prototyping for integrated air & missile defense systems</span></li>
+      <li><span data-zh>AtkinsRéalis CEO明确表示AI将加速行业并购，小企业在AI投资上将逐渐处于劣势</span><span data-en>AtkinsRéalis CEO stated AI will accelerate industry M&A, with small firms increasingly disadvantaged in AI investment</span></li>
+      <li><span data-zh>Turner Construction与OpenAI建立全面合作，Balfour Beatty美国分公司举办AI黑客松</span><span data-en>Turner Construction established comprehensive partnership with OpenAI; Balfour Beatty US held AI hackathon</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>HS2项目验证多项创新施工技术，预制化与模块化成为大型基建降本增效的核心路径</span><span data-en>HS2 Validates Multiple Innovative Construction Techniques; Prefabrication Becomes Core Path for Mega-Project Efficiency</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>英国HS2高铁项目在2026年2月密集达成多项施工里程碑，其中悬臂法预制节段高架（英国首次）、全约束滑动法桥梁移位、SPMT旋转定位等技术均实现工程化验证。这些技术的共同特征是"预制化+精准移位"，通过将施工从现场转移到工厂或预制场地，大幅减少对交通和环境的干扰，同时提升施工效率。这一模式正在成为全球大型基建项目的标准范式。</span><span data-en><strong>Key Insight:</strong> The UK HS2 project achieved multiple construction milestones in Feb 2026, including cantilever precast segmental viaducts (UK first), fully restrained sliding bridge moves, and SPMT rotation positioning. The common thread is "prefabrication + precision relocation," shifting construction from site to factory to dramatically reduce traffic and environmental disruption while improving efficiency. This model is becoming the standard paradigm for global mega-infrastructure projects.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Delta Junction首座预制节段高架完工，采用英国首次引入的悬臂施工法，安装190个预制混凝土段，后续将建造另外8座同类高架（总长6500米）</span><span data-en>Delta Junction first precast segmental viaduct completed using UK-first cantilever method, installing 190 precast concrete segments; 8 more viaducts planned (total 6,500m)</span></li>
+      <li><span data-zh>Lawley Middleway 112米/1631吨钢桥通过SPMT旋转90度后夜间滑移就位，比计划提前4天完成</span><span data-en>Lawley Middleway 112m/1,631-ton steel bridge rotated 90° by SPMT then slid into position overnight, completed 4 days ahead of schedule</span></li>
+      <li><span data-zh>M6高架桥东段230米桥身通过"全约束滑动法"完成移位，比计划提前9.5小时恢复高速通车</span><span data-en>M6 viaduct east section 230m bridge moved via "fully restrained sliding method," highway reopened 9.5 hours ahead of schedule</span></li>
+      <li><span data-zh>Small Dean高架完成HS2史上最重最长的单阶段桥面滑移（4500吨/345米），提前9小时恢复公路通行</span><span data-en>Small Dean viaduct completed HS2's heaviest and longest single-stage deck slide (4,500 tons/345m), road reopened 9 hours early</span></li>
+      <li><span data-zh>Long Itchington Wood隧道完成土建阶段，50万吨挖掘泥土全部用于沿线路堤建设，实现材料零浪费</span><span data-en>Long Itchington Wood tunnel completed civil works; 500,000 tons of excavated soil fully reused for embankments, achieving zero material waste</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== SECTION 3: Regional Infra Hotspots ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-globe"></i>
+    <h2><span data-zh>三、区域基建投资热点</span><span data-en>III. Regional Infrastructure Investment Hotspots</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>沙特Jafurah千亿美元页岩气项目启动，重塑全球天然气供应格局</span><span data-en>Saudi Jafurah $100B Shale Gas Project Launches, Reshaping Global Gas Supply</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>沙特阿美正式启动Jafurah页岩气项目商业化生产，总投资1000亿美元，是美国以外最大的页岩气开发项目。该项目的战略意义不仅在于天然气产量本身，更在于通过替代国内50万桶/日的原油发电需求释放原油出口能力，预计2030年带来120-150亿美元增量运营现金流。叠加沙特阿美的全球LNG布局（目标2000万吨/年），中东正从单一石油出口向油气综合供应商转型，为全球EPC企业创造巨量订单机会。</span><span data-en><strong>Key Insight:</strong> Saudi Aramco officially launched Jafurah shale gas commercial production, with $100B total investment — the largest shale gas project outside the US. Its strategic significance extends beyond gas output: by replacing 500K bbl/day of domestic crude for power generation, it frees crude export capacity, expected to generate $12-15B incremental operating cash flow by 2030. Combined with Aramco's global LNG ambitions (20 MTPA target), the Middle East is transforming from pure oil exporter to integrated O&G supplier, creating massive EPC opportunities.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Jafurah盆地拥有229万亿立方英尺原始天然气储量与750亿桶凝析油</span><span data-en>Jafurah basin holds 229 TCF original gas-in-place and 75B barrels of condensate</span></li>
+      <li><span data-zh>目标2030年实现日产20亿立方英尺天然气、4.2亿立方英尺乙烷和63万桶伴生液</span><span data-en>Target 2030: 2 BCFD gas, 420 MMCFD ethane, 630K bbl/day associated liquids</span></li>
+      <li><span data-zh>已与Halliburton、Sinopec、Samsung Engineering、Saipem等签署约260亿美元前两阶段合同</span><span data-en>Signed ~$26B in first two phase contracts with Halliburton, Sinopec, Samsung Engineering, Saipem</span></li>
+      <li><span data-zh>采用定制化沙漠技术：可移动walking rigs、海水处理去硫酸盐技术、超硬金刚石钻头</span><span data-en>Employs customized desert tech: mobile walking rigs, seawater desulfation treatment, ultra-hard diamond drill bits</span></li>
+      <li><span data-zh>沙特阿美同步布局全球LNG：投资MidOcean，与Commonwealth LNG、NextDecade签订20年供应协议</span><span data-en>Aramco simultaneously building global LNG portfolio: invested in MidOcean, signed 20-year supply deals with Commonwealth LNG and NextDecade</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Regional Investment Scale -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化：区域基建投资规模</span><span data-en>Data Viz: Regional Infra Investment Scale</span></span>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label"><span data-zh>沙特Jafurah</span><span data-en>Saudi Jafurah</span></div><div class="bar-track"><div class="bar-fill" style="width:100%">$100B</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>韩国城市更新</span><span data-en>Korea Urban Renewal</span></div><div class="bar-track"><div class="bar-fill" style="width:56%">₩80T</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>越南Long Thanh</span><span data-en>Vietnam Long Thanh</span></div><div class="bar-track"><div class="bar-fill" style="width:15%;background:linear-gradient(90deg,#6366f1,#818cf8)">$1.5B</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>现代汽车Hub</span><span data-en>Hyundai Motor Hub</span></div><div class="bar-track"><div class="bar-fill" style="width:63%;background:linear-gradient(90deg,#0e7490,#06b6d4)">₩9T</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>黑山高速公路</span><span data-en>Montenegro Highway</span></div><div class="bar-track"><div class="bar-fill" style="width:7%;background:linear-gradient(90deg,#059669,#10b981)">€694M</div></div></div>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>东南亚基建进入大项目密集期，越南与印尼成为区域投资双引擎</span><span data-en>Southeast Asia Enters Mega-Project Intensive Phase; Vietnam & Indonesia as Regional Twin Engines</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>越南Long Thanh机场航站楼由Vietur联合体以超35万亿越盾中标，印尼多家国企通过发债和银团贷款加速高速公路建设，两国正成为东南亚基建投资的双引擎。值得关注的是，越南航站楼项目采用"国际牵头+本土联合"模式（土耳其IC ISTAS+9家越南企业），印尼则以国企主导+多元融资为特征，两种模式为不同类型的国际承包商提供了差异化的市场进入路径。</span><span data-en><strong>Key Insight:</strong> Vietnam's Long Thanh airport terminal was won by the Vietur JV at over VND 35T, while Indonesian SOEs accelerate highway construction through bonds and syndicated loans. Both countries are becoming Southeast Asia's infrastructure investment twin engines. Notably, Vietnam's terminal uses an "international lead + local JV" model (Turkey's IC ISTAS + 9 Vietnamese firms), while Indonesia features SOE-led + diversified financing — offering differentiated market entry paths for international contractors.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>越南Long Thanh机场航站楼项目由Vietur联合体中标，总价值超35万亿越盾（约15亿美元），工期1170天</span><span data-en>Vietnam Long Thanh airport terminal won by Vietur JV, total value over VND 35T (~$1.5B), 1,170-day construction period</span></li>
+      <li><span data-zh>Vietur联合体由土耳其IC ISTAS牵头，联合Ricons、Newtecons等9家越南本土企业</span><span data-en>Vietur JV led by Turkey's IC ISTAS, with Ricons, Newtecons and 9 Vietnamese local firms</span></li>
+      <li><span data-zh>印尼Hutama Karya获13.645万亿印尼盾银团贷款，用于Trans Sumatera高速Betung-Tempino-Jambi段（170.73公里）</span><span data-en>Indonesia's Hutama Karya secured IDR 13.645T syndicated loan for Trans Sumatera highway Betung-Tempino-Jambi section (170.73 km)</span></li>
+      <li><span data-zh>印尼Jasa Marga发行2.06万亿印尼盾可持续债券，推进雅加达-芝坎佩克南段和日惹-巴温高速项目</span><span data-en>Indonesia's Jasa Marga issued IDR 2.06T sustainable bonds for Jakarta-Cikampek South and Yogyakarta-Bawen highway projects</span></li>
+      <li><span data-zh>印尼PTPP截至2026年1月新合同达2.76万亿印尼盾，同比增长120.8%，政府项目占比73.31%</span><span data-en>Indonesia's PTPP new contracts reached IDR 2.76T by Jan 2026, +120.8% YoY, government projects 73.31%</span></li>
+      <li><span data-zh>越南广治I号火电站完工率达97.69%，首次应用超超临界（USC）技术，净发电效率达47.5%</span><span data-en>Vietnam Quang Tri I thermal plant 97.69% complete, first USC technology application, net generation efficiency 47.5%</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.3</span><span data-en>Insight 3.3</span></span>
+    <h3><span data-zh>韩国城市更新市场爆发至80万亿韩元，现代汽车63亿美元绿色数字hub开辟新赛道</span><span data-en>Korean Urban Renewal Explodes to KRW 80T; Hyundai Motor's $6.3B Green Digital Hub Opens New Track</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年韩国城市更新市场预计达80万亿韩元，各大建筑企业纷纷上调年度目标（现代建设12万亿、GS建设8万亿、三星物产7.7万亿韩元）。与此同时，现代汽车集团宣布在新万金投资9万亿韩元建设AI数据中心+机器人制造+氢能设施的综合科技hub，标志着韩国基建需求正从传统住宅更新向"数字+绿色"新基建双轨并行演进。</span><span data-en><strong>Key Insight:</strong> Korea's 2026 urban renewal market is projected at KRW 80T, with major builders raising annual targets (Hyundai E&C KRW 12T, GS E&C KRW 8T, Samsung C&T KRW 7.7T). Meanwhile, Hyundai Motor Group announced KRW 9T investment in Saemangeum for an AI data center + robotics manufacturing + hydrogen facility tech hub, signaling Korea's infrastructure demand is evolving from traditional residential renewal to a "digital + green" dual-track new infrastructure paradigm.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2026年前两个月，大宇建设（1.3215万亿韩元）和乐天建设（1.1082万亿韩元）城市更新订单均破万亿</span><span data-en>In first two months of 2026, Daewoo E&C (KRW 1.3215T) and Lotte E&C (KRW 1.1082T) urban renewal orders both exceeded KRW 1T</span></li>
+      <li><span data-zh>4月起狎鸥亭、汝矣岛、木洞等大型项目施工方将陆续确定，仅狎鸥亭3区工程款达5.056万亿韩元</span><span data-en>From April, contractors for Apgujeong, Yeouido, Mokdong mega-projects to be selected; Apgujeong 3rd District alone worth KRW 5.056T</span></li>
+      <li><span data-zh>现代汽车集团投资9万亿韩元（约62.8亿美元）建设新万金科技hub：5.8万亿韩元AI数据中心（5万个GPU）、1万亿韩元200MW制氢工厂、1.3万亿韩元千兆瓦级太阳能电站</span><span data-en>Hyundai Motor Group investing KRW 9T (~$6.28B) in Saemangeum tech hub: KRW 5.8T AI data center (50K GPUs), KRW 1T 200MW hydrogen plant, KRW 1.3T GW-scale solar farm</span></li>
+      <li><span data-zh>三星物产2026年总订单目标23.5万亿韩元（+3.9万亿），通过AI合同管理、机器人配送强化竞争力</span><span data-en>Samsung C&T 2026 total order target KRW 23.5T (+3.9T), enhancing competitiveness through AI contract management and robotic delivery</span></li>
+      <li><span data-zh>首尔圣水4区重建项目规划64层/1439套住宅，总工程费1.3628万亿韩元</span><span data-en>Seoul Seongsu 4th District redevelopment: 64 floors/1,439 units, total construction cost KRW 1.3628T</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.4</span><span data-en>Insight 3.4</span></span>
+    <h3><span data-zh>黑山与中国财团签署6.94亿欧元高速公路合同，欧盟资金撬动西巴尔干基建市场</span><span data-en>Montenegro Signs €694M Highway Contract with Chinese Consortium; EU Funds Leverage Western Balkans Infra</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>黑山Monteput与中国Power China-Stecol-PCCD财团签署Bar-Boljare高速公路Mateševo-Andrijevica段合同，资金结构中欧盟赠款1.5亿欧元+EBRD贷款2亿欧元占比过半，体现了欧盟通过多边开发资金引导西巴尔干基建投资的战略意图。该项目延续了中国企业在该走廊的施工经验（第一阶段由中国路桥承建），但招标遵循EBRD规则，意味着中国企业需在国际规则框架下竞争。</span><span data-en><strong>Key Insight:</strong> Montenegro's Monteput signed the Bar-Boljare highway Mateševo-Andrijevica section contract with China's Power China-Stecol-PCCD consortium. The funding structure — EU grant €150M + EBRD loan €200M comprising over half — reflects the EU's strategic intent to guide Western Balkans infrastructure investment through multilateral development funds. The project continues Chinese firms' experience on this corridor (Phase 1 built by CRBC), but tendering follows EBRD rules, meaning Chinese firms must compete within international frameworks.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>合同价值6.94亿欧元，路段全长约23公里，涉及大量隧道、桥梁和复杂地质条件</span><span data-en>Contract value €694M, section ~23 km long, involving extensive tunnels, bridges, and complex geology</span></li>
+      <li><span data-zh>资金来源：黑山国家预算+EBRD 2亿欧元贷款+欧盟1.5亿欧元赠款</span><span data-en>Funding: Montenegro national budget + EBRD €200M loan + EU €150M grant</span></li>
+      <li><span data-zh>Bar-Boljare高速全长约165公里，第一阶段Smokovac-Mateševo段（41公里）于2022年7月通车，由中国路桥承建</span><span data-en>Bar-Boljare highway total ~165 km; Phase 1 Smokovac-Mateševo (41 km) opened July 2022, built by CRBC</span></li>
+      <li><span data-zh>预计2026年4月底至5月初正式开工</span><span data-en>Construction expected to formally begin late April to early May 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== SECTION 4: Sustainable Construction ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-leaf"></i>
+    <h2><span data-zh>四、可持续建筑与绿色转型</span><span data-en>IV. Sustainable Construction & Green Transition</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>建筑脱碳从试点走向标准化，新加坡混凝土碳基准和HS2替代燃料测试标志行业进入系统性减碳阶段</span><span data-en>Construction Decarbonization Moves from Pilots to Standards; Singapore Concrete Carbon Benchmark & HS2 Alt-Fuel Tests Mark Systemic Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>新加坡推出首个全市场混凝土碳基准，覆盖68%的预拌混凝土市场，为开发商、供应商和监管机构提供统一参考框架；HS2联合帝国理工开展替代燃料测试，验证生物燃料和多项脱碳技术的实际效果。这两个事件的共同意义在于：建筑行业的脱碳正从零散的低碳试点项目向系统性、可量化、可复制的标准化阶段转型。</span><span data-en><strong>Key Insight:</strong> Singapore launched the first market-wide concrete carbon benchmark covering 68% of ready-mix concrete market, providing a unified reference framework for developers, suppliers, and regulators. HS2 partnered with Imperial College for alternative fuel testing, validating biofuels and multiple decarbonization technologies. Both events signal construction decarbonization is transitioning from scattered low-carbon pilots to a systematic, quantifiable, and replicable standardization phase.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>新加坡混凝土碳基准覆盖6种常见强度等级，数据覆盖约68%的预拌混凝土市场</span><span data-en>Singapore concrete carbon benchmark covers 6 common strength grades, data covering ~68% of ready-mix concrete market</span></li>
+      <li><span data-zh>HS2替代燃料测试：生物燃料空气质量改善有限，但通过可持续原料供应具备显著碳减排潜力</span><span data-en>HS2 alt-fuel test: biofuels showed limited air quality improvement but significant carbon reduction potential through sustainable feedstock</span></li>
+      <li><span data-zh>HS2已验证的脱碳技术：Clean Air Gas Engine（超低排放生物-LPG发动机）、EcoNet系统（关键设备电力需求降低30%）</span><span data-en>HS2 validated decarbonization tech: Clean Air Gas Engine (ultra-low emission bio-LPG engine), EcoNet system (30% reduction in critical equipment power demand)</span></li>
+      <li><span data-zh>Skanska旗下Spark C办公楼完成中东欧首例WELL续期认证，Port7获布拉格首个WELL铂金级认证</span><span data-en>Skanska's Spark C office completed CEE's first WELL recertification; Port7 achieved Prague's first WELL Platinum certification</span></li>
+      <li><span data-zh>华沙Varso Tower（310米，欧盟最高建筑）获BREEAM Outstanding顶级环保认证</span><span data-en>Warsaw Varso Tower (310m, EU's tallest building) achieved BREEAM Outstanding top environmental certification</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>绿色能源基建成为并购与投资热点，中东欧市场韧性凸显</span><span data-en>Green Energy Infra Becomes M&A & Investment Hotspot; CEE Market Resilience Stands Out</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>CMS报告显示中东欧2023年并购交易1187笔、总价值324.8亿欧元，可再生能源交易显著增加。韩英深化清洁能源合作，LS Electric在英建成50MW/114MWh BESS电站，Doosan Fuel Cell获英Ceres Power技术授权建成全球首个50MW SOFC工厂。绿色能源基建正成为跨境投资和技术合作的核心载体，为工程承包企业开辟了传统油气之外的第二增长曲线。</span><span data-en><strong>Key Insight:</strong> CMS report shows CEE 2023 M&A at 1,187 deals totaling €32.48B, with renewable energy deals significantly increasing. Korea-UK deepened clean energy cooperation: LS Electric built 50MW/114MWh BESS in UK, Doosan Fuel Cell licensed Ceres Power tech to build world's first 50MW SOFC factory. Green energy infrastructure is becoming the core vehicle for cross-border investment and technology cooperation, opening a second growth curve beyond traditional O&G for E&C firms.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>中东欧2023年并购1187笔，交易总价值324.8亿欧元，跨境交易达308亿欧元</span><span data-en>CEE 2023 M&A: 1,187 deals, total value €32.48B, cross-border deals €30.8B</span></li>
+      <li><span data-zh>罗马尼亚并购交易价值增长91%，乌克兰并购达89笔（9.5亿欧元），反映重建信心提升</span><span data-en>Romania M&A value +91%, Ukraine M&A reached 89 deals (€950M), reflecting rising reconstruction confidence</span></li>
+      <li><span data-zh>韩国LS Electric在英国建成50MW/114MWh BESS电站，负责20年运维</span><span data-en>Korea's LS Electric built 50MW/114MWh BESS in UK, responsible for 20-year O&M</span></li>
+      <li><span data-zh>Doosan Fuel Cell获英Ceres Power技术授权，在群山建成全球首个50MW规模SOFC专属生产厂</span><span data-en>Doosan Fuel Cell licensed UK Ceres Power tech, built world's first 50MW-scale dedicated SOFC factory in Gunsan</span></li>
+      <li><span data-zh>英国CfD AR7招标促成8.4GW海上风电项目，为韩国供应链带来新机会</span><span data-en>UK CfD AR7 auction secured 8.4GW offshore wind projects, creating new opportunities for Korean supply chain</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Capacity & Market Expansion ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chart-line"></i>
+    <h2><span data-zh>五、产能扩张与市场拓展</span><span data-en>V. Capacity Expansion & Market Development</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>Nordex巩固欧洲风电龙头地位，新机型平台加速渗透增长市场</span><span data-en>Nordex Consolidates European Wind Leadership; New Turbine Platforms Accelerate Growth Market Penetration</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Nordex 2025年连续两年居德国陆上风电市场首位（31.5%份额），2026年1月斩获英国、土耳其、立陶宛共约220MW订单，所有订单均附带多年期服务合同。Nordex的竞争策略清晰：通过N163/6.X和N175/6.X新机型平台覆盖不同气候条件市场（包括寒带防冰系统），同时以长期服务合同锁定高利润率的售后收入，实现"设备+服务"双轮驱动。</span><span data-en><strong>Key Insight:</strong> Nordex held #1 position in German onshore wind for two consecutive years (31.5% share in 2025), winning ~220MW orders across UK, Turkey, and Lithuania in Jan 2026 — all with multi-year service contracts. Nordex's strategy is clear: N163/6.X and N175/6.X platforms cover diverse climate markets (including cold-climate anti-icing), while long-term service contracts lock in high-margin aftermarket revenue, achieving "equipment + services" dual-engine growth.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2025年德国陆上风电新并网容量占比31.5%，交付1647MW/285台风机</span><span data-en>2025 German onshore wind new grid-connected capacity share 31.5%, delivered 1,647MW/285 turbines</span></li>
+      <li><span data-zh>英国90MW订单（14台N163/6.X），2028年投产</span><span data-en>UK 90MW order (14 N163/6.X turbines), operational 2028</span></li>
+      <li><span data-zh>土耳其78MW订单，首次在当地部署N175/6.X风机</span><span data-en>Turkey 78MW order, first local deployment of N175/6.X turbines</span></li>
+      <li><span data-zh>立陶宛47.6MW寒带风场，搭配先进防冰系统（AIS），2028年完工</span><span data-en>Lithuania 47.6MW cold-climate wind farm with Advanced Icing System (AIS), completion 2028</span></li>
+      <li><span data-zh>2025年EBITDA利润率预期上调至7.5-8.5%（此前5-7%），三季度EBITDA达1.36亿欧元（利润率8%）</span><span data-en>2025 EBITDA margin guidance raised to 7.5-8.5% (from 5-7%), Q3 EBITDA €136M (8% margin)</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>Technip Energies牵头莫桑比克72亿美元FLNG项目，海上LNG工程进入新一轮扩张周期</span><span data-en>Technip Energies Leads Mozambique $7.2B FLNG Project; Offshore LNG Engineering Enters New Expansion Cycle</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Technip Energies与JGC、三星重工组成财团获得莫桑比克Coral Norte FLNG项目合同，总投资72亿美元，计划2028年投产。该项目是Coral气田二期开发，采用与2022年投产的Coral Sul FLNG相似概念，标志着浮式LNG技术从验证期进入复制扩张期。叠加沙特Jafurah项目的LNG布局和Saipem准备重返委内瑞拉市场，全球海上油气工程正进入新一轮扩张周期。</span><span data-en><strong>Key Insight:</strong> Technip Energies, JGC, and Samsung Heavy Industries consortium won the Mozambique Coral Norte FLNG contract, $7.2B total investment, targeting 2028 production. This Phase 2 Coral field development uses a similar concept to the 2022-commissioned Coral Sul FLNG, marking floating LNG technology's transition from validation to replication-expansion. Combined with Saudi Jafurah's LNG ambitions and Saipem's planned return to Venezuela, global offshore O&G engineering is entering a new expansion cycle.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Coral Norte FLNG项目总投资72亿美元，年产能355万吨LNG，计划2028年投产</span><span data-en>Coral Norte FLNG: $7.2B total investment, 3.55 MTPA LNG capacity, targeting 2028 production</span></li>
+      <li><span data-zh>FLNG船体已在韩国现代重工旗下Geoje船厂启动建造</span><span data-en>FLNG hull construction started at Hyundai Heavy Industries' Geoje shipyard in Korea</span></li>
+      <li><span data-zh>Saipem准备在美国制裁放松后重返委内瑞拉市场，同时推进莫桑比克200亿美元LNG项目重启</span><span data-en>Saipem preparing to re-enter Venezuela after US sanctions easing, while advancing Mozambique $20B LNG project restart</span></li>
+      <li><span data-zh>Saipem仍计划2026年下半年与挪威Subsea 7合并</span><span data-en>Saipem still plans H2 2026 merger with Norway's Subsea 7</span></li>
+      <li><span data-zh>Fluor出售NuScale Power股份套现13.5亿美元，转向核电基建服务</span><span data-en>Fluor sold NuScale Power stake for $1.35B, pivoting to nuclear infrastructure services</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.3</span><span data-en>Insight 5.3</span></span>
+    <h3><span data-zh>阿联酋Etihad Rail开通客运服务，中东铁路网建设进入运营验证阶段</span><span data-en>UAE Etihad Rail Launches Passenger Service; Middle East Rail Network Enters Operational Validation Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Etihad Rail完成阿布扎比至Al Dhannah首次客运服务，标志着阿联酋国家铁路网从货运向客货并行转型。该项目将连接11个城市，已与中国中车签订7列动车组合同（时速200英里），铁路网的建成将重塑阿联酋国内物流格局。结合香港出台铁路标准打破垄断、英国呼吁稳定铁路投资等动态，全球铁路基建正处于标准重构与投资扩张的关键窗口期。</span><span data-en><strong>Key Insight:</strong> Etihad Rail completed its first passenger service from Abu Dhabi to Al Dhannah, marking the UAE national railway's transition from freight to dual freight-passenger operations. The network will connect 11 cities, with 7 EMU trainsets ordered from CRRC (200 mph). Combined with Hong Kong's new railway standards breaking monopolies and UK calls for stable rail investment, global rail infrastructure is at a critical window of standards restructuring and investment expansion.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Etihad Rail第一阶段（Al Sila至Ruwais，264公里）已完成，2023年2月货运全面运营</span><span data-en>Etihad Rail Phase 1 (Al Sila to Ruwais, 264 km) completed, full freight operations since Feb 2023</span></li>
+      <li><span data-zh>已与中国中车签订合同，采购7列动车组（时速200英里）</span><span data-en>Contracted with CRRC for 7 EMU trainsets (200 mph)</span></li>
+      <li><span data-zh>香港出台《香港铁路标准》，北环线引入国家铁路施工标准后支线可提早2-4年完成，成本降低2-3成</span><span data-en>Hong Kong issued "Hong Kong Railway Standards"; Northern Link adoption of national rail construction standards could complete branches 2-4 years earlier, costs reduced 20-30%</span></li>
+      <li><span data-zh>英国运输委员会报告指出铁路投资"繁荣-萧条"周期严重阻碍行业发展，呼吁制定至少30年长期铁路战略</span><span data-en>UK Transport Committee report noted rail investment "boom-bust" cycles severely hinder industry, calling for at least 30-year long-term rail strategy</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== SECTION 6: Governance & Talent ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-users-gear"></i>
+    <h2><span data-zh>六、企业治理与人才战略</span><span data-en>VI. Corporate Governance & Talent Strategy</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>头部企业密集调整高管团队，数字化转型与区域扩张成为人事布局核心逻辑</span><span data-en>Leaders Intensively Reshuffle Executive Teams; Digital Transformation & Regional Expansion Drive HR Strategy</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年2月，全球工程承包企业出现密集的高管人事调整潮。调整方向呈现两条主线：一是数字化转型（Bechtel设立EPC转型副总裁、Mott MacDonald任命ITS项目总监），二是区域业务强化（DPR任命西北太平洋业务负责人、Skanska多区域人事调整、北美多家企业CEO交接）。人事布局折射出行业战略重心的迁移——从单纯的项目交付能力向"数字化+区域深耕"的复合能力转型。</span><span data-en><strong>Key Insight:</strong> In Feb 2026, global E&C firms saw an intensive wave of executive reshuffles along two main themes: digital transformation (Bechtel's EPC Transformation SVP, Mott MacDonald's ITS Project Director) and regional business strengthening (DPR's Pacific Northwest lead, Skanska's multi-regional adjustments, North American CEO transitions). These HR moves reflect the industry's strategic shift from pure project delivery capability to "digital + regional depth" compound competency.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Bechtel任命John Platt为EPC转型高级副总裁，拥有25年Bechtel经验</span><span data-en>Bechtel appointed John Platt as EPC Transformation SVP, with 25 years of Bechtel experience</span></li>
+      <li><span data-zh>中国铁建提名裴岷山为执行董事并聘任为总裁，推动公司治理结构更新</span><span data-en>CRCC nominated Pei Minshan as Executive Director and President, advancing corporate governance reform</span></li>
+      <li><span data-zh>Mott MacDonald任命Catherine Whitfield为ITS项目总监（25年ITS经验），续聘Glenn Lyons为未来mobility主席至2027年底</span><span data-en>Mott MacDonald appointed Catherine Whitfield as ITS Project Director (25 years ITS experience), extended Glenn Lyons as Future Mobility Chair to end-2027</span></li>
+      <li><span data-zh>北美多家企业完成CEO交接：Adolfson & Peterson（Brad Hendrickson接任）、Fortis Construction（Andrea Weisheimer任总裁）</span><span data-en>Multiple North American firms completed CEO transitions: Adolfson & Peterson (Brad Hendrickson), Fortis Construction (Andrea Weisheimer as President)</span></li>
+      <li><span data-zh>韩国Jungheung Group创始人郑昌善逝世（享年84岁），其2022年收购大宇建设使集团进入韩国企业资产排名前20</span><span data-en>Korea's Jungheung Group founder Jung Chang-sun passed away (age 84); his 2022 acquisition of Daewoo E&C brought the group into Korea's top 20 corporate assets</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>大宇建设重启海外OJT折射行业人才困境，全球化人才储备成为竞争新维度</span><span data-en>Daewoo E&C Restarts Overseas OJT Reflecting Industry Talent Crisis; Global Talent Becomes New Competitive Dimension</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>大宇建设时隔10年重启海外OJT项目，将42名新员工派往伊拉克、新加坡、尼日利亚等8个海外项目实战培训。这一举措的背景是公司因海外项目巨额亏损后的战略反思——海外项目失败的根源之一是缺乏具备全球实操能力的人才。韩国SK生态工厂联合大学培养半导体与AI基建人才的做法也印证了同一趋势：工程承包行业的人才竞争正从"数量"转向"全球化+数字化"的复合能力。</span><span data-en><strong>Key Insight:</strong> Daewoo E&C restarted its overseas OJT program after 10 years, sending 42 new employees to 8 overseas projects in Iraq, Singapore, Nigeria for hands-on training. This reflects strategic soul-searching after massive overseas losses — a root cause being the lack of globally capable talent. Korea's SK ecoplant partnering with universities for semiconductor & AI infrastructure talent confirms the same trend: E&C talent competition is shifting from "quantity" to "globalization + digitalization" compound capability.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>大宇建设42名新员工将派往国内外15个建筑项目和8个海外项目，开展3个月实战培训</span><span data-en>Daewoo E&C sending 42 new employees to 15 domestic and 8 overseas projects for 3-month hands-on training</span></li>
+      <li><span data-zh>培训涵盖土建、工厂、安全等多个领域，项目包括伊拉克新港口、新加坡地铁、尼日利亚化肥厂</span><span data-en>Training covers civil, plant, safety across multiple domains; projects include Iraq new port, Singapore metro, Nigeria fertilizer plant</span></li>
+      <li><span data-zh>韩国SK生态工厂联合成均馆大学开设"高科技解决方案学科"硕士项目，已培养3期毕业生</span><span data-en>Korea's SK ecoplant partnered with Sungkyunkwan University for "High-Tech Solutions" master's program, 3 cohorts graduated</span></li>
+      <li><span data-zh>英国铁路行业因投资波动导致电气化团队约180人被裁，专业技能持续流失</span><span data-en>UK rail industry lost ~180 electrification team members due to investment volatility, with ongoing professional skills drain</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: Compliance & Regulation ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-gavel"></i>
+    <h2><span data-zh>七、合规治理与行业监管</span><span data-en>VII. Compliance Governance & Industry Regulation</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.1</span><span data-en>Insight 7.1</span></span>
+    <h3><span data-zh>多国工程腐败案件集中曝光，公共采购公平性面临系统性挑战</span><span data-en>Multi-Country Construction Corruption Cases Exposed; Public Procurement Fairness Faces Systemic Challenge</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>西班牙Santos Cerdán涉嫌协调将总价值6.37亿欧元的交通部合同定向授予Acciona，加拿大多伦多医院改建项目CEO与医院高管串通投标被判刑，印度、印尼、南非、秘鲁均曝出工程腐败案件。这些案件跨越多个大洲，涉及从投标操纵到合同膨胀的多种腐败形式，表明公共工程采购的公平性是一个全球性的系统性挑战，而非个别国家的特殊问题。</span><span data-en><strong>Key Insight:</strong> Spain's Santos Cerdán allegedly coordinated directing €637M in transport ministry contracts to Acciona; a Canadian Toronto hospital renovation CEO and hospital executive were sentenced for bid-rigging; India, Indonesia, South Africa, and Peru all exposed construction corruption cases. These cases span multiple continents and involve bid manipulation to contract inflation, demonstrating that public works procurement fairness is a global systemic challenge, not a country-specific issue.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>西班牙：Cerdán被指协调至少13份、总价值6.37亿欧元的交通部合同定向授予Acciona</span><span data-en>Spain: Cerdán allegedly coordinated at least 13 transport ministry contracts worth €637M directed to Acciona</span></li>
+      <li><span data-zh>加拿大：Bondfield Construction CEO与医院前首席行政官串通投标，分别获7年和5年监禁</span><span data-en>Canada: Bondfield Construction CEO and former hospital CAO sentenced to 7 and 5 years for bid-rigging</span></li>
+      <li><span data-zh>印度：BSCPL因向公职人员行贿被禁止参与政府合同5年</span><span data-en>India: BSCPL banned from government contracts for 5 years for bribing public officials</span></li>
+      <li><span data-zh>印尼：南苏拉威西水泥分销项目违规造成国家损失743亿印尼盾</span><span data-en>Indonesia: South Sulawesi cement distribution project irregularities caused IDR 74.3B state losses</span></li>
+      <li><span data-zh>欧盟法院取消意大利公共特许项目"试价权"，影响总投资约100亿欧元的A22 Brennero高速项目招标</span><span data-en>EU court annulled Italy's public concession "price testing right," affecting the ~€10B A22 Brennero highway project tender</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.2</span><span data-en>Insight 7.2</span></span>
+    <h3><span data-zh>韩国重建项目投标纠纷频发，行业自律机制亟待完善</span><span data-en>Korean Redevelopment Bidding Disputes Surge; Industry Self-Regulation Urgently Needs Improvement</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>首尔圣水4区重建项目中，大宇建设因未提交关键图纸导致首轮投标无效，又被指散布竞争对手与组合勾结的谣言；圣水1区曝出施工方勾结嫌疑遭警方搜查；圣水2区因组合长涉不当关系辞职导致施工方选拔停滞。在80万亿韩元的城市更新市场爆发期，投标纠纷的集中爆发暴露出韩国重建项目管理的制度性缺陷，行业自律机制远未跟上市场扩张的速度。</span><span data-en><strong>Key Insight:</strong> In Seoul's Seongsu 4th District redevelopment, Daewoo E&C's failure to submit key drawings invalidated the first bid round, and it was accused of spreading rumors about competitor-consortium collusion. Seongsu 1st District was raided by police over contractor collusion suspicions. Seongsu 2nd District's contractor selection stalled after the consortium leader resigned over improper relationships. During the KRW 80T urban renewal boom, the concentrated eruption of bidding disputes exposes institutional defects in Korean redevelopment project management, with self-regulation far behind market expansion.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>圣水4区项目总工程费1.3628万亿韩元，大宇建设和乐天建设参与投标</span><span data-en>Seongsu 4th District: total construction cost KRW 1.3628T, Daewoo E&C and Lotte E&C bidding</span></li>
+      <li><span data-zh>大宇建设因未提交图纸导致首轮投标无效，被指散布不当言论，已提交道歉信</span><span data-en>Daewoo E&C's failure to submit drawings invalidated first bid round; accused of spreading improper remarks, submitted apology letter</span></li>
+      <li><span data-zh>圣水1区组合办公室遭警方搜查，涉施工方勾结嫌疑</span><span data-en>Seongsu 1st District consortium office raided by police over contractor collusion suspicions</span></li>
+      <li><span data-zh>圣水2区因组合长涉不当关系辞职，施工方选拔陷入停滞</span><span data-en>Seongsu 2nd District contractor selection stalled after consortium leader resigned over improper relationships</span></li>
+      <li><span data-zh>韩国公平交易委员会对现代建设展开调查，指其要求转包商承担1.9亿韩元建设费用</span><span data-en>Korea Fair Trade Commission investigating Hyundai E&C for allegedly requiring subcontractors to bear KRW 190M construction costs</span></li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>全球基建安全事故频发，转包链条过长与监管执行不力成为致命隐患</span><span data-en>Global Construction Safety Incidents Surge; Long Subcontracting Chains & Weak Oversight Become Fatal Hazards</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>泰国高铁起重机倒塌致34人死亡、江苏月港大桥坍塌致5人死亡（网民质疑实际伤亡18-22人）、韩国Osan挡土墙坍塌致1人死亡、西班牙高铁事故致46人死亡、英国Hinkley Point C核电厂发现严重火灾隐患——2026年初全球基建安全事故呈现高发态势。事故根因高度一致：转包链条过长导致质量失控（中铁十二局被指层层转包）、设计-施工-维护全环节缺乏有效监督（韩国Osan案例）、低价中标导致建材质量低劣（泰国案例中使用不合格钢筋）。</span><span data-en>Thailand high-speed rail crane collapse killed 34, Jiangsu Yuegang Bridge collapse killed 5 (netizens allege 18-22 actual casualties), Korea Osan retaining wall collapse killed 1, Spain high-speed rail accident killed 46, UK Hinkley Point C nuclear plant found with serious fire hazards — early 2026 saw a surge in global construction safety incidents. Root causes are highly consistent: excessively long subcontracting chains causing quality loss of control (CRCC 12th Bureau accused of multi-layer subcontracting), lack of effective oversight across design-construction-maintenance (Korea Osan case), and lowest-bid-wins leading to substandard materials (Thailand case using non-compliant rebar).</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>各国建筑安全法规修订动态（韩国计划修订《设施安全法》）、重大项目转包层级限制政策、中国"倒桥塌路"事故统计（近两年已致至少131人死亡）</span><span data-en>National construction safety regulation revisions (Korea plans to revise Facility Safety Act), mega-project subcontracting tier limits, China bridge/road collapse statistics (at least 131 deaths in past two years)</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>海外项目成本超支风险持续发酵，亚太企业财务韧性承压</span><span data-en>Overseas Project Cost Overrun Risks Continue to Ferment; Asia-Pacific Firms' Financial Resilience Under Pressure</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>大宇建设因伊拉克、新加坡、尼日利亚海外项目额外成本录得8154亿韩元亏损，Lendlease因海外物业减值亏损3.18亿澳元，Worley因化学品项目取消净利润下滑35%并裁员3.7%，FCC因海外项目调整导致基建板块盈利大幅下滑。海外项目的成本超支和市场波动正在系统性侵蚀部分企业的财务健康，尤其是缺乏多元化业务对冲能力的中型企业。</span><span data-en>Daewoo E&C recorded KRW 815.4B losses from Iraq, Singapore, Nigeria overseas project cost overruns; Lendlease lost A$318M from overseas property impairments; Worley's net profit fell 35% from chemical project cancellations with 3.7% workforce reduction; FCC's infrastructure segment profitability dropped sharply from overseas project adjustments. Overseas project cost overruns and market volatility are systematically eroding some firms' financial health, especially mid-sized companies lacking diversified business hedging capabilities.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>大宇建设下半年自有项目销售回款及海外大单中标情况、Lendlease IDC部门下半年盈利恢复进度、Worley西欧业务重组完成时间表</span><span data-en>Daewoo E&C H2 proprietary project sales recovery and overseas mega-contract wins, Lendlease IDC segment H2 profitability recovery, Worley Western Europe restructuring completion timeline</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>政治风险阻碍基建项目推进，波黑天然气互联项目成为典型案例</span><span data-en>Political Risks Obstruct Infrastructure Projects; Bosnia Gas Interconnector Becomes Textbook Case</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>波黑南部天然气互联项目因HDZ BiH政党提出三分之二多数票选择特许经营商等政治要求陷入僵局，美国使馆明确警告政治拖延将导致Bechtel等美国企业撤资。该案例揭示了一个普遍性风险：在政治分裂的国家和地区，即使项目经济可行、资金和技术到位，政治博弈仍可能无限期延迟项目推进。类似风险在莫桑比克LNG项目（安全局势）、印尼油气项目（本土成分比例争议）中同样存在。</span><span data-en>Bosnia's southern gas interconnector project stalled due to HDZ BiH party's demand for two-thirds majority vote to select concessionaire. The US Embassy explicitly warned that political delays would cause Bechtel and other US firms to withdraw. This case reveals a universal risk: in politically divided countries, even economically viable projects with funding and technology in place can be indefinitely delayed by political maneuvering. Similar risks exist in Mozambique's LNG project (security situation) and Indonesia's O&G projects (local content ratio disputes).</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>波黑联邦政府与HDZ BiH协商进展、莫桑比克TotalEnergies 200亿美元LNG项目重启时间表、印尼TKDN政策执行力度变化</span><span data-en>Bosnia Federation government and HDZ BiH negotiation progress, Mozambique TotalEnergies $20B LNG project restart timeline, Indonesia TKDN policy enforcement changes</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>劳资纠纷与分包工权益问题升温，可能演变为项目执行风险</span><span data-en>Labor Disputes & Subcontractor Rights Issues Escalate; May Evolve into Project Execution Risks</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>印尼RDMP炼油厂项目数百名分包工被拖欠薪资两个月，韩国Hanwha Ocean分包工指控奖金歧视（外籍分包工仅获韩国同工龄分包工46.8%的绩效奖金）。在全球基建投资扩张期，劳动力需求激增但分包工权益保障滞后，劳资纠纷可能从个案演变为系统性项目执行风险，尤其在依赖大量外籍劳工的中东和东南亚市场。</span><span data-en>Indonesia's RDMP refinery project saw hundreds of subcontract workers unpaid for two months; Korea's Hanwha Ocean subcontract workers alleged bonus discrimination (foreign subcontract workers received only 46.8% of Korean peers' performance bonuses). During the global infrastructure investment expansion, labor demand surges but subcontractor rights protections lag, potentially escalating from individual cases to systemic project execution risks, especially in Middle East and Southeast Asian markets reliant on large foreign workforces.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>印尼RDMP项目欠薪解决进展、韩国造船业分包工奖金对齐政策落实情况、中东大型项目劳工权益投诉趋势</span><span data-en>Indonesia RDMP project wage arrears resolution, Korea shipbuilding subcontractor bonus alignment policy implementation, Middle East mega-project labor rights complaint trends</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年4-5月</span><span data-en>Apr-May 2026</span></div>
+      <div class="timeline-text"><span data-zh>黑山Bar-Boljare高速公路Mateševo-Andrijevica段正式开工，关注中国Power China财团在EBRD规则框架下的项目启动效率，以及欧盟资金对西巴尔干基建的撬动效应。</span><span data-en>Montenegro Bar-Boljare highway Mateševo-Andrijevica section formally starts construction. Watch China's Power China consortium's project launch efficiency under EBRD rules and EU funding leverage on Western Balkans infrastructure.</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年5-10月</span><span data-en>May-Oct 2026</span></div>
+      <div class="timeline-text"><span data-zh>越南广治I号火电站1号机组（5月）和2号机组（10月）计划实现商业运营，这是越南首个超超临界技术火电项目，其运营表现将影响越南后续火电项目的技术路线选择。</span><span data-en>Vietnam Quang Tri I thermal plant Unit 1 (May) and Unit 2 (Oct) planned for commercial operation — Vietnam's first USC technology thermal project. Its performance will influence Vietnam's future thermal technology roadmap.</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年下半年</span><span data-en>H2 2026</span></div>
+      <div class="timeline-text"><span data-zh>韩国狎鸥亭、汝矣岛、木洞等大型城市更新项目施工方陆续确定，仅狎鸥亭3区工程款达5.056万亿韩元，关注投标竞争格局及是否出现类似圣水4区的纠纷事件。</span><span data-en>Korea's Apgujeong, Yeouido, Mokdong mega urban renewal project contractors to be selected. Apgujeong 3rd District alone worth KRW 5.056T. Watch bidding competition dynamics and potential disputes similar to Seongsu 4th District.</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年Q3-Q4</span><span data-en>Q3-Q4 2026</span></div>
+      <div class="timeline-text"><span data-zh>美国IIJA将于9月到期，国会新地面交通授权法案的规模和通过时间将决定未来5-10年美国基建投资的确定性，直接影响AECOM、WSP等企业的长期增长预期。</span><span data-en>US IIJA expires in September. The scale and timing of Congress's new surface transportation authorization will determine US infrastructure investment certainty for the next 5-10 years, directly impacting long-term growth expectations for AECOM, WSP, and others.</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ===== DATA VIZ: Donut Charts ===== -->
+<section class="section reveal">
+  <div class="insight-card" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-pie"></i> <span data-zh>数据可视化：行业增长驱动力分布</span><span data-en>Data Viz: Industry Growth Driver Distribution</span></span>
+    <div class="donut-container">
+      <div class="donut-chart">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-border)" stroke-width="14"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-primary)" stroke-width="14" stroke-dasharray="135.72 203.58" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-value">40%</span>
+          <span class="donut-label"><span data-zh>数据中心</span><span data-en>Data Centers</span></span>
+        </div>
+      </div>
+      <div class="donut-chart">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-border)" stroke-width="14"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-accent)" stroke-width="14" stroke-dasharray="101.79 237.51" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-value" style="color:var(--c-accent)">30%</span>
+          <span class="donut-label"><span data-zh>能源基建</span><span data-en>Energy Infra</span></span>
+        </div>
+      </div>
+      <div class="donut-chart">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-border)" stroke-width="14"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="#0e7490" stroke-width="14" stroke-dasharray="67.86 271.44" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-value" style="color:#0e7490">20%</span>
+          <span class="donut-label"><span data-zh>城市更新</span><span data-en>Urban Renewal</span></span>
+        </div>
+      </div>
+      <div class="donut-chart">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-border)" stroke-width="14"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="#059669" stroke-width="14" stroke-dasharray="33.93 305.37" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <span class="donut-value" style="color:#059669">10%</span>
+          <span class="donut-label"><span data-zh>交通基建</span><span data-en>Transport Infra</span></span>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center"><span data-zh>基于2026年2月头部企业订单结构分析 · Supinfor Ltd.</span><span data-en>Based on Feb 2026 leading firms' order structure analysis · Supinfor Ltd.</span></p>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年2月的工程承包行业呈现"强者愈强、分化加剧"的格局特征。欧美头部企业凭借数据中心、新能源和数字基建的强劲需求实现普遍增长（ACS净利润+14.8%、Hochtief营业利润+26%、Subsea 7 EBITDA+36%），并通过大规模并购（WSP 45亿美元收购TRC）加速行业集中。与此同时，AI与数字工程从概念验证进入规模化部署阶段，Bechtel设立专职高管推进EPC转型，行业共识已从"是否采用AI"转向"如何规模化部署"。区域层面，沙特Jafurah千亿美元页岩气项目、越南Long Thanh机场航站楼、韩国80万亿韩元城市更新市场构成三大投资热点，但安全事故频发、海外项目成本超支、政治风险阻碍项目推进等挑战同步升级，行业的可持续增长需要在扩张速度与风险管控之间找到平衡。</span><span data-en>The Feb 2026 E&C industry shows a "strong get stronger, divergence intensifies" pattern. Western leaders achieved broad growth driven by data centers, renewables, and digital infrastructure (ACS net profit +14.8%, Hochtief op. profit +26%, Subsea 7 EBITDA +36%), accelerating consolidation through mega-M&A (WSP's $4.5B TRC acquisition). Meanwhile, AI & digital engineering moved from PoC to scale deployment, with Bechtel appointing a dedicated executive for EPC transformation. Regionally, Saudi Jafurah's $100B shale gas project, Vietnam's Long Thanh airport terminal, and Korea's KRW 80T urban renewal market form three investment hotspots, but safety incidents, overseas cost overruns, and political risks present escalating challenges requiring balance between expansion speed and risk management.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><strong><span data-zh>数字化能力成为新的竞争分水岭：</span><span data-en>Digital capability as new competitive divide: </span></strong><span data-zh>Bechtel、Turner、KBR等企业已将AI深度整合到EPC流程中，AtkinsRéalis CEO明确表示AI将加速行业并购，小企业在AI投资上将逐渐处于劣势</span><span data-en>Bechtel, Turner, KBR have deeply integrated AI into EPC processes; AtkinsRéalis CEO stated AI will accelerate M&A, with small firms increasingly disadvantaged</span></li>
+        <li><strong><span data-zh>"设备+服务"双轮驱动模式扩散：</span><span data-en>"Equipment + Services" dual-engine model spreading: </span></strong><span data-zh>Nordex所有风电订单均附带多年期服务合同，Technip Energies在FLNG领域从设计到运维全覆盖，服务收入占比提升成为行业利润率改善的关键路径</span><span data-en>All Nordex wind orders include multi-year service contracts; Technip Energies covers design-to-O&M in FLNG. Rising service revenue share is key to industry margin improvement</span></li>
+        <li><strong><span data-zh>"国际牵头+本土联合"成为新兴市场标准进入模式：</span><span data-en>"International lead + local JV" as standard emerging market entry: </span></strong><span data-zh>越南Long Thanh项目（土耳其IC ISTAS+9家越南企业）、黑山高速项目（中国财团+EBRD规则）均采用此模式，纯粹的外资独立承包模式在新兴市场的空间持续收窄</span><span data-en>Vietnam Long Thanh (Turkey IC ISTAS + 9 Vietnamese firms), Montenegro highway (Chinese consortium + EBRD rules) both use this model; pure foreign independent contracting space continues to narrow in emerging markets</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><strong><span data-zh>海外项目成本超支：</span><span data-en>Overseas cost overruns: </span></strong><span data-zh>大宇建设8154亿韩元亏损、Lendlease 3.18亿澳元亏损、Worley利润下滑35%，海外项目的成本管控能力已成为企业生存的关键变量</span><span data-en>Daewoo E&C KRW 815.4B loss, Lendlease A$318M loss, Worley profit -35%. Overseas project cost control has become a survival-critical variable</span></li>
+        <li><strong><span data-zh>安全事故与合规风险：</span><span data-en>Safety & compliance risks: </span></strong><span data-zh>泰国高铁事故（34人死亡）、江苏大桥坍塌（5人死亡）、多国工程腐败案件集中曝光，安全与合规风险可能导致企业面临巨额罚款、市场禁入和声誉损失</span><span data-en>Thailand rail accident (34 deaths), Jiangsu bridge collapse (5 deaths), multi-country corruption cases exposed. Safety & compliance risks may lead to massive fines, market bans, and reputational damage</span></li>
+        <li><strong><span data-zh>政治与政策不确定性：</span><span data-en>Political & policy uncertainty: </span></strong><span data-zh>波黑天然气项目因政治僵局停滞、印尼TKDN政策限制外资参与、美国IIJA到期后新授权法案的不确定性，政策风险对项目管线的影响不容忽视</span><span data-en>Bosnia gas project stalled by political deadlock, Indonesia TKDN policy restricting foreign participation, US IIJA expiry uncertainty. Policy risks' impact on project pipelines cannot be ignored</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>数字化投资加速：</span><span data-en>Accelerate digital investment: </span></strong><span data-zh>中型工程企业应在2026年内完成AI应用的战略规划，优先在设计建模、招标管理和安全检查等高ROI环节部署AI工具，避免在数字化竞争中被边缘化</span><span data-en>Mid-sized E&C firms should complete AI application strategic planning in 2026, prioritizing deployment in design modeling, bid management, and safety inspection for highest ROI</span></li>
+        <li><strong><span data-zh>海外风险管控体系升级：</span><span data-en>Upgrade overseas risk management: </span></strong><span data-zh>建立"项目全生命周期风险预警系统"，在投标阶段即对目标国的政治稳定性、汇率波动、本土成分比例要求等进行量化评估，设定明确的风险敞口上限</span><span data-en>Build "project lifecycle risk early warning systems," quantitatively assessing target country political stability, FX volatility, and local content requirements at bid stage, with clear risk exposure caps</span></li>
+        <li><strong><span data-zh>绿色能源基建布局：</span><span data-en>Green energy infra positioning: </span></strong><span data-zh>工程承包企业应在2026-2027年内建立低碳建材供应链和碳排放核算能力，尤其关注混凝土隐含碳和施工现场柴油替代两个优先领域</span><span data-en>E&C firms should establish low-carbon material supply chains and carbon accounting capabilities by 2026-2027, focusing on concrete embodied carbon and construction site diesel substitution</span></li>
+        <li><strong><span data-zh>新兴市场进入策略优化：</span><span data-en>Optimize emerging market entry: </span></strong><span data-zh>在越南、印尼等高增长市场提前建立本土合作伙伴网络，通过股权合作或长期框架协议锁定合作关系，而非仅在投标阶段临时组建联合体</span><span data-en>Pre-establish local partner networks in high-growth markets like Vietnam and Indonesia through equity partnerships or long-term framework agreements, rather than ad-hoc JVs at bid stage only</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月28日</span><span data-en>Published: April 28, 2026</span><br>
+    <span data-zh>本报告基于工程承包行业资讯月报2026-02编制，仅供参考，不构成投资建议。</span><span data-en>Based on Engineering &amp; Construction Industry Monthly Report 2026-02. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

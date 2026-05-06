@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴西与美国双边关系动态速览 | Brazil-USA Bilateral Relations Flash</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        navy: { DEFAULT: '#1a2744', deep: '#0b1120', light: '#243556' },
+        stripe: { red: '#b91c1c', light: '#ef4444' },
+        brazil: { green: '#15803d', light: '#22c55e' },
+        steel: '#60a5fa',
+        ink: '#0b1120'
+      },
+      fontFamily: {
+        serif: ['Noto Serif SC', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+/* Bilingual toggle */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Staggered children */
+.stagger-children .reveal:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children .reveal:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children .reveal:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children .reveal:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children .reveal:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children .reveal:nth-child(6) { transition-delay: 0.3s; }
+
+/* KPI card hover */
+.kpi-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.kpi-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+
+/* Event card left border */
+.event-high { border-left: 5px solid #b91c1c; }
+.event-mid { border-left: 5px solid #eab308; }
+.event-low { border-left: 5px solid #15803d; }
+
+/* Bar chart animation */
+.bar-fill { transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); width: 0; }
+.bar-fill.animated { /* width set by inline style */ }
+
+/* Sidebar */
+.sidebar { scrollbar-width: thin; scrollbar-color: rgba(96,165,250,0.3) transparent; }
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: rgba(96,165,250,0.3); border-radius: 2px; }
+
+/* Table styling */
+.data-table th { position: sticky; top: 0; z-index: 2; }
+
+/* Back to top */
+#backToTop { transition: opacity 0.3s ease, transform 0.3s ease; }
+
+/* Noise texture overlay */
+.noise-bg::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none; z-index: 0;
+}
+
+/* Dark mode overrides */
+.dark .noise-bg::before { opacity: 0.06; }
+
+/* Mobile hamburger */
+.hamburger-line { transition: transform 0.3s ease, opacity 0.3s ease; }
+.hamburger-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+.hamburger-open .hamburger-line:nth-child(2) { opacity: 0; }
+.hamburger-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+/* Print */
+@media print {
+  .sidebar, #backToTop, .toolbar { display: none !important; }
+  .main-content { margin-left: 0 !important; }
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Impact badge */
+.badge-high { background: #b91c1c; color: white; }
+.badge-mid { background: #eab308; color: #1a2744; }
+.badge-low { background: #15803d; color: white; }
+.dark .badge-mid { background: #facc15; color: #0b1120; }
+
+/* Cooperation table row hover */
+.coop-row { transition: background 0.2s ease; }
+.coop-row:hover { background: rgba(96,165,250,0.08); }
+.dark .coop-row:hover { background: rgba(96,165,250,0.12); }
+
+/* Risk card */
+.risk-card { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.risk-card:hover { transform: translateY(-2px); }
+
+/* TOC active link */
+.toc-link { transition: color 0.2s ease, padding-left 0.2s ease, border-color 0.2s ease; border-left: 3px solid transparent; }
+.toc-link.active { color: #60a5fa; border-left-color: #60a5fa; padding-left: 12px; font-weight: 600; }
+.dark .toc-link.active { color: #60a5fa; }
+</style>
+</head>
+<body class="bg-gray-50 dark:bg-ink text-gray-900 dark:text-gray-100 font-sans transition-colors duration-300">
+
+<!-- ============ SIDEBAR TOC (Desktop) ============ -->
+<aside id="sidebar" class="sidebar fixed left-0 top-0 h-full w-64 bg-white/95 dark:bg-navy-deep/95 backdrop-blur-md border-r border-gray-200 dark:border-gray-800 z-40 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 overflow-y-auto pt-20 pb-8 px-5">
+  <div class="mb-6">
+    <div class="flex items-center gap-2 mb-1">
+      <i class="fa-solid fa-shield-halved text-steel text-sm"></i>
+      <span class="text-xs font-semibold uppercase tracking-widest text-steel">
+        <span data-zh>目录导航</span><span data-en>Contents</span>
+      </span>
+    </div>
+    <div class="h-px bg-gradient-to-r from-steel/50 to-transparent"></div>
+  </div>
+  <nav class="space-y-1 text-sm">
+    <a href="#hero" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>报告概览</span><span data-en>Overview</span>
+    </a>
+    <a href="#section1" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>一、本周总览</span><span data-en>1. Weekly Overview</span>
+    </a>
+    <a href="#section2" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>二、本周重要事件</span><span data-en>2. Key Events</span>
+    </a>
+    <a href="#section3" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>三、趋势观察</span><span data-en>3. Trend Analysis</span>
+    </a>
+    <a href="#section4" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>四、风险警示</span><span data-en>4. Risk Alerts</span>
+    </a>
+    <a href="#section5" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>五、合作亮点</span><span data-en>5. Cooperation Highlights</span>
+    </a>
+    <a href="#section6" class="toc-link block py-1.5 px-2 text-gray-600 dark:text-gray-400 hover:text-navy dark:hover:text-steel rounded">
+      <span data-zh>六、下周关注点</span><span data-en>6. Next Week Focus</span>
+    </a>
+  </nav>
+  <div class="mt-8 pt-4 border-t border-gray-200 dark:border-gray-700">
+    <div class="text-xs text-gray-400 dark:text-gray-500 space-y-1">
+      <div><i class="fa-solid fa-building-columns mr-1"></i> Supinfor Ltd.</div>
+      <div><i class="fa-regular fa-calendar mr-1"></i> April 5, 2026</div>
+    </div>
+  </div>
+</aside>
+
+<!-- ============ TOP TOOLBAR ============ -->
+<header class="toolbar fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-navy-deep/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+  <div class="flex items-center justify-between px-4 lg:px-6 h-14">
+    <!-- Hamburger (mobile) -->
+    <button id="hamburgerBtn" class="lg:hidden flex flex-col gap-1.5 p-2" aria-label="Toggle menu">
+      <span class="hamburger-line block w-5 h-0.5 bg-gray-700 dark:bg-gray-300"></span>
+      <span class="hamburger-line block w-5 h-0.5 bg-gray-700 dark:bg-gray-300"></span>
+      <span class="hamburger-line block w-5 h-0.5 bg-gray-700 dark:bg-gray-300"></span>
+    </button>
+    <!-- Title -->
+    <div class="flex items-center gap-2 lg:ml-64">
+      <i class="fa-solid fa-shield-halved text-steel hidden sm:inline"></i>
+      <span class="font-serif font-bold text-sm sm:text-base text-navy dark:text-gray-100 truncate">
+        <span data-zh>巴西与美国双边关系动态速览</span>
+        <span data-en>Brazil-USA Bilateral Relations Flash</span>
+      </span>
+    </div>
+    <!-- Controls -->
+    <div class="flex items-center gap-2">
+      <!-- Language toggle -->
+      <button id="langToggle" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle language">
+        <i class="fa-solid fa-language"></i>
+        <span id="langLabel">EN</span>
+      </button>
+      <!-- Theme toggle -->
+      <button id="themeToggle" class="flex items-center justify-center w-9 h-9 rounded-full border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Toggle theme">
+        <i class="fa-solid fa-sun text-sm dark:hidden"></i>
+        <i class="fa-solid fa-moon text-sm hidden dark:inline"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE SIDEBAR OVERLAY ============ -->
+<div id="sidebarOverlay" class="fixed inset-0 bg-black/40 z-30 hidden lg:hidden" aria-hidden="true"></div>
+
+<!-- ============ MAIN CONTENT ============ -->
+<main class="lg:ml-64 pt-14">
+
+<!-- ============ HERO SECTION ============ -->
+<section id="hero" class="relative noise-bg bg-gradient-to-br from-navy via-navy-deep to-[#0d1a33] text-white overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-0 right-0 w-96 h-96 bg-steel/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+  <div class="absolute bottom-0 left-0 w-72 h-72 bg-stripe-red/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/4"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] border border-white/[0.03] rounded-full"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] border border-white/[0.03] rounded-full"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto px-6 py-16 sm:py-24">
+    <!-- Badge -->
+    <div class="flex items-center gap-2 mb-6">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 backdrop-blur-sm rounded-full text-xs font-medium tracking-wide border border-white/10">
+        <span class="w-2 h-2 bg-stripe-red rounded-full animate-pulse"></span>
+        <span data-zh>外交情报简报</span><span data-en>Diplomatic Intelligence Dossier</span>
+      </span>
+      <span class="text-xs text-gray-400">
+        <span data-zh>2026年3月30日 — 4月5日</span><span data-en>Mar 30 – Apr 5, 2026</span>
+      </span>
+    </div>
+
+    <!-- Title -->
+    <h1 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-black leading-tight mb-4">
+      <span data-zh>巴西与美国<br class="sm:hidden">双边关系动态速览</span>
+      <span data-en>Brazil-USA Bilateral<br class="sm:hidden"> Relations Flash</span>
+    </h1>
+    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mb-4 leading-relaxed">
+      <span data-zh>基于 Supinfor 区域国别实时监测平台（巴西全栏目 × 美国关联标签），覆盖政治、经济、人文、民生、外交、产业、科技、国防、教育、医疗、环保共11个栏目。</span>
+      <span data-en>Based on Supinfor Regional Country Real-time Monitoring Platform (Brazil full channels × USA association tags), covering 11 channels: Politics, Economy, Culture, Livelihood, Diplomacy, Industry, Technology, Defense, Education, Healthcare, and Environment.</span>
+    </p>
+    <p class="text-xs text-gray-500 mb-10">
+      <span data-zh>报告编制：Supinfor Ltd. | 数据规模：原始360条，URL去重后230条</span>
+      <span data-en>Compiled by: Supinfor Ltd. | Data: 360 raw items, 230 after URL deduplication</span>
+    </p>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4 stagger-children">
+      <!-- KPI 1: Total -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-white mb-1">230</div>
+        <div class="text-xs text-gray-400 uppercase tracking-wider">
+          <span data-zh>去重资讯</span><span data-en>Deduped Items</span>
+        </div>
+      </div>
+      <!-- KPI 2: Politics -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-stripe-light mb-1">96</div>
+        <div class="text-xs text-gray-400">
+          <span data-zh>政治 <span class="text-stripe-light">41.7%</span></span>
+          <span data-en>Politics <span class="text-stripe-light">41.7%</span></span>
+        </div>
+      </div>
+      <!-- KPI 3: Economy -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-steel mb-1">68</div>
+        <div class="text-xs text-gray-400">
+          <span data-zh>经济 <span class="text-steel">29.6%</span></span>
+          <span data-en>Economy <span class="text-steel">29.6%</span></span>
+        </div>
+      </div>
+      <!-- KPI 4: Diplomacy -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-amber-400 mb-1">46</div>
+        <div class="text-xs text-gray-400">
+          <span data-zh>外交 <span class="text-amber-400">20.0%</span></span>
+          <span data-en>Diplomacy <span class="text-amber-400">20.0%</span></span>
+        </div>
+      </div>
+      <!-- KPI 5: Culture -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-brazil-light mb-1">56</div>
+        <div class="text-xs text-gray-400">
+          <span data-zh>人文 <span class="text-brazil-light">24.3%</span></span>
+          <span data-en>Culture <span class="text-brazil-light">24.3%</span></span>
+        </div>
+      </div>
+      <!-- KPI 6: Channels -->
+      <div class="kpi-card reveal bg-white/[0.07] backdrop-blur-sm rounded-xl p-4 border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-purple-400 mb-1">11</div>
+        <div class="text-xs text-gray-400">
+          <span data-zh>覆盖栏目</span><span data-en>Channels</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 1: WEEKLY OVERVIEW ============ -->
+<section id="section1" class="py-16 sm:py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <!-- Section header -->
+    <div class="reveal flex items-center gap-3 mb-8">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">01</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>本周总览：巴西与美国关联度评估</span>
+        <span data-en>Weekly Overview: Brazil-USA Relevance Assessment</span>
+      </h2>
+    </div>
+
+    <!-- Assessment paragraph -->
+    <div class="reveal bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700/50 shadow-sm mb-10">
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+        <span data-zh>本周巴西与美国关联资讯高度密集，去重后230条资讯覆盖11个栏目，反映出两国关系正处于多维度高频互动期。政治栏目以96条占比41.7%，构成绝对主导，核心议题围绕美国国会报告批评巴西最高法院、博索纳罗家族在美活动、Pix支付系统争端及2026大选外部干预风险展开。经济栏目68条（29.6%）聚焦美国关税调整对巴西出口的冲击、Pix贸易壁垒定性及稀土矿产融资合作。人文栏目56条（24.3%）以世界杯热身赛在美举办、球员转会及文化活动为主，属于"软连接"范畴。外交栏目46条反映卢拉访美推迟、WTO电商谈判僵局等结构性分歧。</span>
+        <span data-en>This week saw highly concentrated Brazil-USA related news, with 230 deduplicated items across 11 channels, reflecting a period of multi-dimensional high-frequency interaction between the two countries. The Politics channel dominated with 96 items (41.7%), centered on the US Congressional report criticizing Brazil's Supreme Court, the Bolsonaro family's activities in the US, the Pix payment system dispute, and risks of external interference in the 2026 elections. The Economy channel (68 items, 29.6%) focused on US tariff adjustments impacting Brazilian exports, Pix trade barrier designation, and rare earth mineral financing cooperation. The Culture channel (56 items, 24.3%) featured World Cup warm-up matches held in the US, player transfers, and cultural activities as "soft connections." The Diplomacy channel (46 items) reflected structural divergences including Lula's postponed US visit and the WTO e-commerce negotiation deadlock.</span>
+      </p>
+    </div>
+
+    <!-- Channel Distribution Bar Chart -->
+    <div class="reveal mb-10">
+      <h3 class="font-serif text-lg font-bold text-navy dark:text-gray-200 mb-5 flex items-center gap-2">
+        <i class="fa-solid fa-chart-bar text-steel text-sm"></i>
+        <span data-zh>栏目分布</span><span data-en>Channel Distribution</span>
+      </h3>
+      <div class="space-y-3" id="barChart">
+        <!-- Bar: 政治 96 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>政治</span><span data-en>Politics</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-stripe-red to-red-400" data-width="100%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">96 (41.7%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🔴</span>
+        </div>
+        <!-- Bar: 经济 68 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>经济</span><span data-en>Economy</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-stripe-red to-red-400" data-width="70.8%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">68 (29.6%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🔴</span>
+        </div>
+        <!-- Bar: 人文 56 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>人文</span><span data-en>Culture</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" data-width="58.3%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">56 (24.3%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟡</span>
+        </div>
+        <!-- Bar: 民生 48 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>民生</span><span data-en>Livelihood</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" data-width="50%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">48 (20.9%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟡</span>
+        </div>
+        <!-- Bar: 外交 46 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>外交</span><span data-en>Diplomacy</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-stripe-red to-red-400" data-width="47.9%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">46 (20.0%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🔴</span>
+        </div>
+        <!-- Bar: 产业 20 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>产业</span><span data-en>Industry</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-amber-500 to-yellow-400" data-width="20.8%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">20 (8.7%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟡</span>
+        </div>
+        <!-- Bar: 科技 9 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>科技</span><span data-en>Tech</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-brazil-green to-emerald-400" data-width="9.4%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">9 (3.9%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟢</span>
+        </div>
+        <!-- Bar: 国防 6 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>国防</span><span data-en>Defense</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-brazil-green to-emerald-400" data-width="6.3%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">6 (2.6%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟢</span>
+        </div>
+        <!-- Bar: 教育 4 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>教育</span><span data-en>Education</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-brazil-green to-emerald-400" data-width="4.2%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">4 (1.7%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟢</span>
+        </div>
+        <!-- Bar: 医疗 4 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>医疗</span><span data-en>Healthcare</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-brazil-green to-emerald-400" data-width="4.2%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">4 (1.7%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟢</span>
+        </div>
+        <!-- Bar: 环保 3 -->
+        <div class="flex items-center gap-3">
+          <div class="w-16 sm:w-20 text-right text-sm font-medium text-gray-600 dark:text-gray-400 shrink-0">
+            <span data-zh>环保</span><span data-en>Environ.</span>
+          </div>
+          <div class="flex-1 bg-gray-100 dark:bg-white/5 rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-brazil-green to-emerald-400" data-width="3.1%"></div>
+            <span class="absolute right-2 top-1/2 -translate-y-1/2 text-xs font-bold text-gray-700 dark:text-gray-300">3 (1.3%)</span>
+          </div>
+          <span class="w-6 text-center text-sm">🟢</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Channel Distribution Table with 关联度判断 -->
+    <div class="reveal overflow-x-auto mb-10">
+      <table class="data-table w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-navy dark:bg-white/10 text-white">
+            <th class="px-4 py-3 text-left font-semibold rounded-tl-lg"><span data-zh>栏目</span><span data-en>Channel</span></th>
+            <th class="px-4 py-3 text-center font-semibold"><span data-zh>条数</span><span data-en>Count</span></th>
+            <th class="px-4 py-3 text-center font-semibold"><span data-zh>占比</span><span data-en>Share</span></th>
+            <th class="px-4 py-3 text-left font-semibold rounded-tr-lg"><span data-zh>关联度判断</span><span data-en>Relevance Assessment</span></th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700/50">
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-red-50/50 dark:hover:bg-red-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>政治</span><span data-en>Politics</span></td>
+            <td class="px-4 py-3 text-center font-bold">96</td>
+            <td class="px-4 py-3 text-center">41.7%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🔴</span> <span data-zh>极高——美国国会报告、大选干预、Pix争端、博索纳罗家族在美活动</span><span data-en>Very High — US Congressional report, election interference, Pix dispute, Bolsonaro family activities in US</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 dark:bg-white/[0.01] hover:bg-red-50/50 dark:hover:bg-red-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>经济</span><span data-en>Economy</span></td>
+            <td class="px-4 py-3 text-center font-bold">68</td>
+            <td class="px-4 py-3 text-center">29.6%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🔴</span> <span data-zh>高——关税冲击、Pix贸易壁垒、稀土融资、金融市场联动</span><span data-en>High — Tariff impact, Pix trade barrier, rare earth financing, financial market linkage</span></td>
+          </tr>
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-yellow-50/50 dark:hover:bg-yellow-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>人文</span><span data-en>Culture</span></td>
+            <td class="px-4 py-3 text-center font-bold">56</td>
+            <td class="px-4 py-3 text-center">24.3%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟡</span> <span data-zh>中——世界杯热身赛在美举办、球员转会、文化活动（软连接）</span><span data-en>Medium — World Cup warm-up matches in US, player transfers, cultural activities (soft connections)</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 dark:bg-white/[0.01] hover:bg-yellow-50/50 dark:hover:bg-yellow-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>民生</span><span data-en>Livelihood</span></td>
+            <td class="px-4 py-3 text-center font-bold">48</td>
+            <td class="px-4 py-3 text-center">20.9%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟡</span> <span data-zh>中——达美航空事故、移民政策、反美情绪事件、名人赴美</span><span data-en>Medium — Delta Air Lines incident, immigration policy, anti-US sentiment events, celebrity visits</span></td>
+          </tr>
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-red-50/50 dark:hover:bg-red-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>外交</span><span data-en>Diplomacy</span></td>
+            <td class="px-4 py-3 text-center font-bold">46</td>
+            <td class="px-4 py-3 text-center">20.0%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🔴</span> <span data-zh>高——卢拉访美推迟、WTO电商谈判、引渡合作、Pix外交博弈</span><span data-en>High — Lula's US visit postponed, WTO e-commerce talks, extradition cooperation, Pix diplomatic game</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 dark:bg-white/[0.01] hover:bg-yellow-50/50 dark:hover:bg-yellow-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>产业</span><span data-en>Industry</span></td>
+            <td class="px-4 py-3 text-center font-bold">20</td>
+            <td class="px-4 py-3 text-center">8.7%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟡</span> <span data-zh>中——女足球员转会美职联、F1迈阿密站</span><span data-en>Medium — Women's football transfers to NWSL, F1 Miami Grand Prix</span></td>
+          </tr>
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>科技</span><span data-en>Technology</span></td>
+            <td class="px-4 py-3 text-center font-bold">9</td>
+            <td class="px-4 py-3 text-center">3.9%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟢</span> <span data-zh>低——达美航空事故技术分析、谷歌与巴西足协AI合作</span><span data-en>Low — Delta incident technical analysis, Google-CBF AI cooperation</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 dark:bg-white/[0.01] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>国防</span><span data-en>Defense</span></td>
+            <td class="px-4 py-3 text-center font-bold">6</td>
+            <td class="px-4 py-3 text-center">2.6%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟢</span> <span data-zh>低——达美航空事故军方调查</span><span data-en>Low — Delta incident military investigation</span></td>
+          </tr>
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>教育</span><span data-en>Education</span></td>
+            <td class="px-4 py-3 text-center font-bold">4</td>
+            <td class="px-4 py-3 text-center">1.7%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟢</span> <span data-zh>低——巴西学生赴美参观NASA、巴西女博士在美失踪案</span><span data-en>Low — Brazilian students visiting NASA, Brazilian PhD student missing in US</span></td>
+          </tr>
+          <tr class="bg-gray-50/50 dark:bg-white/[0.01] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium"><span data-zh>医疗</span><span data-en>Healthcare</span></td>
+            <td class="px-4 py-3 text-center font-bold">4</td>
+            <td class="px-4 py-3 text-center">1.7%</td>
+            <td class="px-4 py-3"><span class="inline-block mr-1">🟢</span> <span data-zh>低——博索纳罗居家监禁医疗、麻疹输入风险</span><span data-en>Low — Bolsonaro house arrest medical care, measles import risk</span></td>
+          </tr>
+          <tr class="bg-white dark:bg-white/[0.02] hover:bg-green-50/50 dark:hover:bg-green-900/10 transition-colors">
+            <td class="px-4 py-3 font-medium rounded-bl-lg"><span data-zh>环保</span><span data-en>Environment</span></td>
+            <td class="px-4 py-3 text-center font-bold">3</td>
+            <td class="px-4 py-3 text-center">1.3%</td>
+            <td class="px-4 py-3 rounded-br-lg"><span class="inline-block mr-1">🟢</span> <span data-zh>低——间接关联</span><span data-en>Low — Indirect relevance</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Core Judgment -->
+    <div class="reveal bg-gradient-to-r from-navy/5 to-stripe-red/5 dark:from-steel/10 dark:to-stripe-red/10 rounded-2xl p-6 sm:p-8 border-l-4 border-navy dark:border-steel">
+      <h3 class="font-serif font-bold text-navy dark:text-steel mb-3 flex items-center gap-2">
+        <i class="fa-solid fa-gavel text-sm"></i>
+        <span data-zh>核心判断</span><span data-en>Core Assessment</span>
+      </h3>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+        <span data-zh>本周巴美关系呈现"政治高压、经贸博弈、民间热络"的三层结构。政治层面，美国众议院司法委员会报告直接介入巴西司法主权争议，博索纳罗家族在美活动将巴西内政国际化，卢拉政府以主权话语强硬回应；经贸层面，美国USTR报告将Pix定性为贸易壁垒、关税调整持续冲击巴西出口，但稀土矿产合作开辟了新的利益交汇点；民间层面，世界杯热身赛在美举办、球员跨国流动、文化交流保持活跃。总体而言，巴美关系正处于"竞争性共存"状态——政治摩擦升温但未失控，经贸分歧加深但合作空间犹存。</span>
+        <span data-en>This week's Brazil-US relations exhibited a three-layered structure of "political high pressure, economic-trade gaming, and vibrant people-to-people exchanges." Politically, the US House Judiciary Committee report directly intervened in Brazil's judicial sovereignty dispute, the Bolsonaro family's US activities internationalized Brazilian domestic politics, and the Lula government responded firmly with sovereignty rhetoric. In trade, the USTR report designated Pix as a trade barrier and tariff adjustments continued to impact Brazilian exports, yet rare earth mineral cooperation opened new convergence points. At the people-to-people level, World Cup warm-up matches in the US, cross-border player movements, and cultural exchanges remained active. Overall, Brazil-US relations are in a state of "competitive coexistence" — political friction is heating up but not out of control, trade divergences are deepening but cooperation space still exists.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 2: KEY EVENTS ============ -->
+<section id="section2" class="py-16 sm:py-20 px-6 bg-gray-50/50 dark:bg-white/[0.01]">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">02</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>本周重要事件</span><span data-en>Key Events This Week</span>
+      </h2>
+    </div>
+
+    <div class="space-y-8 stagger-children">
+
+      <!-- EVENT 1: 🔴 US Congress Report -->
+      <article class="reveal event-high bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-high text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🔴 高影响</span><span data-en>🔴 High Impact</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件一</span><span data-en>Event 1</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>美国众议院司法委员会发布报告批评巴西最高法院</span>
+          <span data-en>US House Judiciary Committee Releases Report Criticizing Brazil's Supreme Court</span>
+        </h3>
+        <!-- 事件概要 -->
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>美国众议院司法委员会（由特朗普盟友吉姆·乔丹主导）发布第三份涉巴西报告，指控巴西联邦最高法院大法官莫赖斯"发起审查与法律战"，称其行为威胁巴西及美国的言论自由，可能影响2026年巴西大选。报告含85份附件，包括要求美国社交媒体平台移除内容的司法令。</span>
+            <span data-en>The US House Judiciary Committee (led by Trump ally Jim Jordan) released its third report on Brazil, accusing Brazilian Supreme Court Justice Moraes of "launching censorship and lawfare," claiming his actions threaten freedom of speech in both Brazil and the US and could affect Brazil's 2026 elections. The report contains 85 attachments, including judicial orders requesting US social media platforms to remove content.</span>
+          </p>
+        </div>
+        <!-- 关键细节 -->
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>巴西联邦最高法院院长法钦迅速发布官方声明驳斥，称报告歪曲巴西司法体系，将通过外交渠道澄清</span><span data-en>Brazilian Supreme Court President Fachin quickly issued an official statement refuting the report, calling it a distortion of Brazil's judicial system, and pledged to clarify through diplomatic channels</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>法钦援引巴西1988年宪法及多起标志性判例，强调巴西言论自由保护体系完善</span><span data-en>Fachin cited Brazil's 1988 Constitution and multiple landmark cases, emphasizing Brazil's comprehensive freedom of speech protection system</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>报告明确偏向博索纳罗支持者立场，委员会主席曾与爱德华多·博索纳罗、弗拉维奥·博索纳罗会面</span><span data-en>The report clearly favors Bolsonaro supporters; the committee chairman had met with Eduardo Bolsonaro and Flávio Bolsonaro</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>多家巴西主流媒体（Folha、Veja、CNN Brasil、Brasil 247等）密集报道，形成舆论热点</span><span data-en>Multiple major Brazilian media outlets (Folha, Veja, CNN Brasil, Brasil 247, etc.) reported extensively, creating a media hotspot</span></span></li>
+          </ul>
+        </div>
+        <!-- 洞察 -->
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-stripe-red">
+          <h4 class="text-sm font-bold text-stripe-red dark:text-red-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>这是美国国会首次以正式报告形式系统性介入巴西司法主权议题，标志着美国对巴西内政的干预从非正式渠道升级为制度化操作。该报告的政治意图明显——为博索纳罗家族在2026大选中争取国际舆论支持，同时为美国科技企业抵制巴西数字监管提供政治弹药。巴西最高法院的快速回应表明，巴方将此视为主权红线问题。</span>
+            <span data-en>This marks the first time the US Congress has systematically intervened in Brazil's judicial sovereignty through a formal report, signaling an escalation from informal channels to institutionalized interference. The report's political intent is clear — to garner international public opinion support for the Bolsonaro family ahead of the 2026 elections, while providing political ammunition for US tech companies to resist Brazilian digital regulation. The Supreme Court's swift response indicates Brazil views this as a sovereignty red line issue.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- EVENT 2: 🔴 USTR Pix -->
+      <article class="reveal event-high bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-high text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🔴 高影响</span><span data-en>🔴 High Impact</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件二</span><span data-en>Event 2</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>美国USTR报告将Pix定性为贸易壁垒，引发巴美支付主权争端</span>
+          <span data-en>USTR Report Designates Pix as Trade Barrier, Triggering Brazil-US Payment Sovereignty Dispute</span>
+        </h3>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>美国贸易代表办公室（USTR）发布年度报告，将巴西央行运营的即时支付系统Pix、数字平台监管法案、"blusinhas税"列为巴西对美贸易的主要壁垒，称Pix"扭曲国际贸易"，损害Visa、Mastercard等美国支付企业利益。</span>
+            <span data-en>The US Trade Representative (USTR) released its annual report, listing Brazil's central bank-operated instant payment system Pix, digital platform regulation bill, and "blusinhas tax" as major barriers to US trade with Brazil, claiming Pix "distorts international trade" and harms the interests of US payment companies like Visa and Mastercard.</span>
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>卢拉在萨尔瓦多公开回应："Pix属于巴西，不会因外部压力修改"</span><span data-en>Lula publicly responded in Salvador: "Pix belongs to Brazil and will not be modified due to external pressure"</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>副总统阿尔克明称Pix无问题，愿与美方对话但不会让步</span><span data-en>Vice President Alckmin stated Pix has no issues, willing to dialogue with the US but will not concede</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>Pix年交易规模达35.4万亿雷亚尔，已成巴西超45%消费者线上支付首选</span><span data-en>Pix annual transaction volume reached R$35.4 trillion, becoming the preferred online payment method for over 45% of Brazilian consumers</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>该报告属301条款调查范畴，可作为美国对巴加征关税的法律依据</span><span data-en>The report falls under Section 301 investigation scope, serving as legal basis for the US to impose additional tariffs on Brazil</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>特朗普政府此前已以Pix为由对巴西产品加征50%关税</span><span data-en>The Trump administration had previously imposed 50% tariffs on Brazilian products citing Pix</span></span></li>
+          </ul>
+        </div>
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-stripe-red">
+          <h4 class="text-sm font-bold text-stripe-red dark:text-red-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>Pix争端的本质是数字支付主权之争。巴西央行通过Pix构建了独立于美国支付体系的国家级金融基础设施，直接冲击了Visa、Mastercard在巴西市场的手续费收入（估计达千亿级雷亚尔）。美方将其纳入301条款框架，意味着可能以此为杠杆在关税谈判中施压。但卢拉政府的强硬表态表明，Pix已成为巴西国家主权的象征性议题，让步空间极小。</span>
+            <span data-en>The Pix dispute is fundamentally about digital payment sovereignty. Brazil's central bank built a national-level financial infrastructure independent of the US payment system through Pix, directly impacting Visa and Mastercard's fee revenue in the Brazilian market (estimated at hundreds of billions of reais). The US inclusion of Pix in the Section 301 framework means it could be used as leverage in tariff negotiations. However, the Lula government's firm stance indicates Pix has become a symbolic sovereignty issue for Brazil, with minimal room for concession.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- EVENT 3: 🔴 Flávio Bolsonaro Rare Earth -->
+      <article class="reveal event-high bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-high text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🔴 高影响</span><span data-en>🔴 High Impact</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件三</span><span data-en>Event 3</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>弗拉维奥·博索纳罗在美CPAC提议向美国供应稀土，引发"叛国"争议</span>
+          <span data-en>Flávio Bolsonaro Proposes Supplying Rare Earths to US at CPAC, Sparking "Treason" Controversy</span>
+        </h3>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>巴西参议员、2026年总统预候选人弗拉维奥·博索纳罗在美国德克萨斯州保守派政治行动会议（CPAC）上称，巴西可作为美国摆脱对华稀土依赖的解决方案，同时呼吁国际社会监督巴西大选。</span>
+            <span data-en>Brazilian Senator and 2026 presidential pre-candidate Flávio Bolsonaro stated at the Conservative Political Action Conference (CPAC) in Texas that Brazil could serve as a solution for the US to reduce its dependence on Chinese rare earths, while calling for international monitoring of Brazilian elections.</span>
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>巴西拥有全球23%稀土储量、93.1%铌储量、8%锂储量</span><span data-en>Brazil holds 23% of global rare earth reserves, 93.1% of niobium reserves, and 8% of lithium reserves</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>卢拉政府多位官员（内阁办公厅部长鲁伊·科斯塔、卫生部长帕迪利亚等）谴责其为"叛国者"</span><span data-en>Multiple Lula government officials (Chief of Staff Rui Costa, Health Minister Padilha, etc.) condemned him as a "traitor"</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>议员Luciene Cavalcante向联邦总检察院提交刑事举报</span><span data-en>Congresswoman Luciene Cavalcante filed a criminal complaint with the Federal Prosecutor's Office</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>美国国际开发金融公司已向巴西Serra Verde矿企提供5.65亿美元融资，附带稀土优先供应美国条款</span><span data-en>The US International Development Finance Corporation has provided $565 million in financing to Brazilian mining company Serra Verde, with conditions for priority rare earth supply to the US</span></span></li>
+            <li class="flex gap-2"><span class="text-stripe-red mt-1 shrink-0">▸</span><span><span data-zh>戈亚斯州州长卡亚多与美方签署稀土合作备忘录，联邦政府认为越权</span><span data-en>Goiás Governor Caiado signed a rare earth cooperation memorandum with the US side; the federal government considers this an overreach of authority</span></span></li>
+          </ul>
+        </div>
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-stripe-red">
+          <h4 class="text-sm font-bold text-stripe-red dark:text-red-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>稀土议题正成为巴美关系的新焦点。弗拉维奥的言论将巴西战略矿产资源与2026大选政治博弈绑定，暴露了巴西右翼阵营"以资源换政治支持"的策略。与此同时，美国通过开发金融公司的融资已在事实层面推进稀土供应链布局，形成"政治喊话+资本渗透"的双轨策略。巴西联邦政府面临的挑战是：如何在保护战略资源主权的同时，利用稀土合作作为对美谈判筹码。</span>
+            <span data-en>Rare earths are becoming a new focal point in Brazil-US relations. Flávio's remarks tied Brazil's strategic mineral resources to the 2026 election political game, exposing the Brazilian right-wing camp's strategy of "trading resources for political support." Meanwhile, the US has already advanced its rare earth supply chain layout through DFC financing, forming a dual-track strategy of "political rhetoric + capital penetration." The challenge for Brazil's federal government is: how to protect strategic resource sovereignty while leveraging rare earth cooperation as a bargaining chip in negotiations with the US.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- EVENT 4: 🟡 Lula Visit Postponed -->
+      <article class="reveal event-mid bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-mid text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🟡 中影响</span><span data-en>🟡 Medium Impact</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件四</span><span data-en>Event 4</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>卢拉访美推迟至7月，巴美高层对话窗口收窄</span>
+          <span data-en>Lula's US Visit Postponed to July, High-Level Dialogue Window Narrows</span>
+        </h3>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>卢拉原计划3月访美会见特朗普，因美伊冲突、双边经贸分歧等因素多次推迟，访问窗口已延至7月底。若届时仍无法成行，因巴西大选将全年无法安排。</span>
+            <span data-en>Lula's originally planned March visit to meet Trump has been repeatedly postponed due to the US-Iran conflict, bilateral trade disputes, and other factors, with the visit window now extended to late July. If it still cannot take place by then, it will be impossible to arrange for the entire year due to Brazil's elections.</span>
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>双方在矿产资源合作、科技巨头监管、打击跨国犯罪等议题上存在分歧</span><span data-en>Both sides have divergences on mineral resource cooperation, tech giant regulation, and combating transnational crime</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>美方考虑将巴西犯罪团伙列为恐怖组织</span><span data-en>The US is considering designating Brazilian criminal gangs as terrorist organizations</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>卢拉已向特朗普请求引渡在迈阿密的Refit集团负责人里卡多·马格罗（涉260亿雷亚尔税务欺诈）</span><span data-en>Lula has requested Trump to extradite Refit Group head Ricardo Magro in Miami (involved in R$26 billion tax fraud)</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>双方拟在访问期间商讨数据共享协议，打击洗钱与追踪非法资金</span><span data-en>Both sides plan to discuss data sharing agreements during the visit to combat money laundering and track illegal funds</span></span></li>
+          </ul>
+        </div>
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-amber-500">
+          <h4 class="text-sm font-bold text-amber-600 dark:text-amber-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>卢拉访美的持续推迟反映了巴美关系的结构性困境——双方在政治价值观和经贸利益上的分歧难以通过单次首脑会晤弥合。但引渡合作和反跨国犯罪议题提供了务实合作的切入点，可能成为破冰的突破口。</span>
+            <span data-en>The continued postponement of Lula's US visit reflects the structural dilemma in Brazil-US relations — divergences in political values and trade interests are difficult to bridge through a single summit. However, extradition cooperation and anti-transnational crime issues provide pragmatic entry points for cooperation, potentially serving as an icebreaker.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- EVENT 5: 🟡 WTO E-commerce -->
+      <article class="reveal event-mid bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-mid text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🟡 中影响</span><span data-en>🟡 Medium Impact</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件五</span><span data-en>Event 5</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>WTO电商关税豁免谈判因巴美分歧破裂</span>
+          <span data-en>WTO E-Commerce Tariff Exemption Negotiations Collapse Due to Brazil-US Divergence</span>
+        </h3>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>WTO日内瓦谈判中，巴西反对美国延长已持续28年的电商关税豁免禁令，将电商议题与农业贸易谈判绑定，导致164个成员国的谈判陷入僵局。</span>
+            <span data-en>In WTO Geneva negotiations, Brazil opposed the US extension of the 28-year e-commerce tariff exemption moratorium, linking e-commerce issues with agricultural trade negotiations, causing a deadlock among 164 member states.</span>
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>美国希望永久豁免电商关税，巴西提出2年或4年带中期审查的延期方案</span><span data-en>The US seeks permanent e-commerce tariff exemption; Brazil proposed a 2-year or 4-year extension with mid-term review</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>巴西将电商议题与敏感的农业贸易谈判绑定，作为谈判筹码</span><span data-en>Brazil linked e-commerce issues with sensitive agricultural trade negotiations as a bargaining chip</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>禁令到期后各国可对数字下载、流媒体等征税</span><span data-en>After the moratorium expires, countries can impose taxes on digital downloads, streaming, etc.</span></span></li>
+            <li class="flex gap-2"><span class="text-amber-500 mt-1 shrink-0">▸</span><span><span data-zh>发展中国家普遍担忧豁免影响财政收入</span><span data-en>Developing countries generally worry that the exemption affects fiscal revenue</span></span></li>
+          </ul>
+        </div>
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-amber-500">
+          <h4 class="text-sm font-bold text-amber-600 dark:text-amber-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>巴西在WTO中采取了"以农业换数字"的策略，反映出新兴经济体在数字贸易规则制定中争取话语权的意图。这一僵局可能加速全球数字贸易规则的碎片化。</span>
+            <span data-en>Brazil adopted a "trade agriculture for digital" strategy at the WTO, reflecting emerging economies' intent to gain a voice in digital trade rule-making. This deadlock may accelerate the fragmentation of global digital trade rules.</span>
+          </p>
+        </div>
+      </article>
+
+      <!-- EVENT 6: 🟢 Delta Airlines -->
+      <article class="reveal event-low bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="badge-low text-xs font-bold px-3 py-1 rounded-full">
+            <span data-zh>🟢 低影响但值得关注</span><span data-en>🟢 Low Impact but Noteworthy</span>
+          </span>
+          <span class="text-xs text-gray-500 dark:text-gray-400">
+            <span data-zh>事件六</span><span data-en>Event 6</span>
+          </span>
+        </div>
+        <h3 class="font-serif text-lg sm:text-xl font-bold text-navy dark:text-gray-100 mb-4">
+          <span data-zh>达美航空圣保罗飞亚特兰大航班发动机爆炸紧急迫降</span>
+          <span data-en>Delta Air Lines São Paulo-Atlanta Flight Engine Explosion Emergency Landing</span>
+        </h3>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-file-lines mr-1"></i>
+            <span data-zh>事件概要</span><span data-en>Event Summary</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px]">
+            <span data-zh>3月29日，达美航空DL104航班（空客A330-300）从圣保罗瓜鲁柳斯机场起飞后左侧发动机爆炸起火，飞行员发出mayday信号后紧急返航，机上272名乘客及14名机组人员无人受伤。</span>
+            <span data-en>On March 29, Delta Air Lines flight DL104 (Airbus A330-300) experienced a left engine explosion and fire after takeoff from São Paulo Guarulhos Airport. The pilot issued a mayday signal and made an emergency return, with all 272 passengers and 14 crew members uninjured.</span>
+          </p>
+        </div>
+        <div class="mb-4">
+          <h4 class="text-sm font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">
+            <i class="fa-solid fa-list-check mr-1"></i>
+            <span data-zh>关键细节</span><span data-en>Key Details</span>
+          </h4>
+          <ul class="space-y-2 text-[15px] text-gray-700 dark:text-gray-300">
+            <li class="flex gap-2"><span class="text-brazil-green mt-1 shrink-0">▸</span><span><span data-zh>飞机在空中停留约9分钟后安全降落</span><span data-en>The aircraft remained airborne for approximately 9 minutes before landing safely</span></span></li>
+            <li class="flex gap-2"><span class="text-brazil-green mt-1 shrink-0">▸</span><span><span data-zh>巴西空军航空事故调查中心（Cenipa）已介入调查</span><span data-en>Brazil's Air Force Aviation Accident Investigation Center (Cenipa) has launched an investigation</span></span></li>
+            <li class="flex gap-2"><span class="text-brazil-green mt-1 shrink-0">▸</span><span><span data-zh>事故导致机场短暂运营中断，多架航班延误</span><span data-en>The incident caused brief airport operational disruption and multiple flight delays</span></span></li>
+            <li class="flex gap-2"><span class="text-brazil-green mt-1 shrink-0">▸</span><span><span data-zh>超过15条资讯从不同角度报道此事件（民生、国防、科技栏目）</span><span data-en>Over 15 news items reported on this event from different angles (Livelihood, Defense, Technology channels)</span></span></li>
+          </ul>
+        </div>
+        <div class="bg-navy/5 dark:bg-steel/10 rounded-xl p-4 border-l-3 border-brazil-green">
+          <h4 class="text-sm font-bold text-brazil-green dark:text-emerald-400 mb-2 flex items-center gap-1">
+            <i class="fa-solid fa-lightbulb"></i>
+            <span data-zh>洞察</span><span data-en>Insight</span>
+          </h4>
+          <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
+            <span data-zh>该事件本身为航空安全个案，但其高报道密度（占民生栏目近三分之一）反映了巴美航线的重要性。圣保罗-亚特兰大是巴美主要航空通道之一，事故处置的高效性也体现了两国在民航安全领域的协作基础。</span>
+            <span data-en>While this is an individual aviation safety case, its high reporting density (nearly one-third of the Livelihood channel) reflects the importance of Brazil-US air routes. São Paulo-Atlanta is one of the major air corridors between the two countries, and the efficient handling of the incident demonstrates the collaborative foundation in civil aviation safety.</span>
+          </p>
+        </div>
+      </article>
+
+    </div><!-- end events space -->
+  </div>
+</section>
+
+<!-- ============ SECTION 3: TREND ANALYSIS ============ -->
+<section id="section3" class="py-16 sm:py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">03</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>趋势观察</span><span data-en>Trend Analysis</span>
+      </h2>
+    </div>
+
+    <div class="space-y-8 stagger-children">
+
+      <!-- TREND 1 -->
+      <div class="reveal bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex items-start gap-3 mb-4">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-stripe-red/10 dark:bg-stripe-red/20 text-stripe-red dark:text-red-400 text-sm font-bold shrink-0 mt-0.5">1</span>
+          <h3 class="font-serif text-lg font-bold text-navy dark:text-gray-100">
+            <span data-zh>美国对巴西的"全方位施压"格局正在形成</span>
+            <span data-en>A "Full-Spectrum Pressure" Pattern from the US on Brazil is Taking Shape</span>
+          </h3>
+        </div>
+        <div class="pl-11">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>本周数据显示，美国对巴西的施压已从单一的关税领域扩展至司法主权（国会报告批评最高法院）、数字支付（Pix贸易壁垒定性）、战略资源（稀土供应链布局）、选举安全（干预2026大选风险）四个维度。美国众议院司法委员会报告、USTR年度报告、开发金融公司稀土融资三项行动在同一周密集释放，形成"政治+经贸+资源"的组合施压态势。</span>
+            <span data-en>This week's data shows that US pressure on Brazil has expanded from a single tariff domain to four dimensions: judicial sovereignty (Congressional report criticizing the Supreme Court), digital payments (Pix trade barrier designation), strategic resources (rare earth supply chain layout), and election security (2026 election interference risk). The House Judiciary Committee report, USTR annual report, and DFC rare earth financing — three actions released in the same week — form a combined "political + trade + resource" pressure posture.</span>
+          </p>
+          <div class="bg-gray-50 dark:bg-white/[0.03] rounded-lg p-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+            <div class="font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-1">
+              <i class="fa-solid fa-link text-xs text-steel"></i>
+              <span data-zh>多条资讯交叉印证</span><span data-en>Cross-validation from multiple sources</span>
+            </div>
+            <p>
+              <span data-zh>美国国会报告偏向博索纳罗支持者（#5、#6、#14、#15、#42、#43），USTR报告将Pix列为壁垒（#20、#24、#29、#120、#122），开发金融公司向Serra Verde提供5.65亿美元融资（#113），弗拉维奥在CPAC的稀土提议（#11、#46、#77、#81、#87）。</span>
+              <span data-en>US Congressional report favoring Bolsonaro supporters (#5, #6, #14, #15, #42, #43), USTR report listing Pix as barrier (#20, #24, #29, #120, #122), DFC providing $565M financing to Serra Verde (#113), Flávio's rare earth proposal at CPAC (#11, #46, #77, #81, #87).</span>
+            </p>
+          </div>
+          <div class="bg-stripe-red/5 dark:bg-stripe-red/10 rounded-lg p-4 border-l-3 border-stripe-red">
+            <span class="text-sm font-bold text-stripe-red dark:text-red-400">
+              <i class="fa-solid fa-chart-line mr-1"></i>
+              <span data-zh>趋势判断</span><span data-en>Trend Assessment</span>
+            </span>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+              <span data-zh>美国正构建对巴西的多维度施压框架，短期内巴美摩擦将持续升温。但美国在伊朗战争中的战略消耗可能限制其对巴西施压的力度和持续性。</span>
+              <span data-en>The US is building a multi-dimensional pressure framework against Brazil; bilateral friction will continue to escalate in the short term. However, US strategic exhaustion from the Iran war may limit the intensity and sustainability of its pressure on Brazil.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TREND 2 -->
+      <div class="reveal bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex items-start gap-3 mb-4">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 text-sm font-bold shrink-0 mt-0.5">2</span>
+          <h3 class="font-serif text-lg font-bold text-navy dark:text-gray-100">
+            <span data-zh>巴西2026大选成为巴美关系的核心变量</span>
+            <span data-en>Brazil's 2026 Election Becomes the Core Variable in Brazil-US Relations</span>
+          </h3>
+        </div>
+        <div class="pl-11">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>本周政治栏目96条资讯中，超过60%直接或间接涉及2026年10月巴西总统大选。卢拉阵营以"捍卫主权"为核心叙事，将弗拉维奥·博索纳罗定位为"美国代理人"；博索纳罗阵营则借助美国保守派平台争取国际支持，试图将巴西司法争议国际化。</span>
+            <span data-en>Among the 96 items in this week's Politics channel, over 60% directly or indirectly relate to Brazil's October 2026 presidential election. The Lula camp uses "defending sovereignty" as its core narrative, positioning Flávio Bolsonaro as a "US agent"; the Bolsonaro camp leverages US conservative platforms to seek international support, attempting to internationalize Brazil's judicial disputes.</span>
+          </p>
+          <div class="bg-gray-50 dark:bg-white/[0.03] rounded-lg p-4 mb-4 text-sm text-gray-600 dark:text-gray-400">
+            <div class="font-semibold text-gray-700 dark:text-gray-300 mb-2 flex items-center gap-1">
+              <i class="fa-solid fa-link text-xs text-steel"></i>
+              <span data-zh>关键信号</span><span data-en>Key Signals</span>
+            </div>
+            <p>
+              <span data-zh>弗拉维奥在CPAC的系列活动（#46、#49、#72）、爱德华多计划向美国当局提交巴西选举"指控"（#38）、卢拉指控博索纳罗家族寻求外国干预（#53）、美国国会报告明确提及可能影响2026大选（#43）。</span>
+              <span data-en>Flávio's series of activities at CPAC (#46, #49, #72), Eduardo's plan to submit Brazilian election "accusations" to US authorities (#38), Lula's accusation that the Bolsonaro family seeks foreign intervention (#53), US Congressional report explicitly mentioning potential impact on 2026 elections (#43).</span>
+            </p>
+          </div>
+          <div class="bg-amber-500/5 dark:bg-amber-500/10 rounded-lg p-4 border-l-3 border-amber-500">
+            <span class="text-sm font-bold text-amber-600 dark:text-amber-400">
+              <i class="fa-solid fa-chart-line mr-1"></i>
+              <span data-zh>趋势判断</span><span data-en>Trend Assessment</span>
+            </span>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+              <span data-zh>巴美关系将在2026大选周期内持续政治化。无论哪方胜选，巴美关系的结构性张力（数字主权、贸易规则、战略资源）都将延续，但政治叙事的方向将发生根本性转变。</span>
+              <span data-en>Brazil-US relations will remain politicized throughout the 2026 election cycle. Regardless of which side wins, the structural tensions (digital sovereignty, trade rules, strategic resources) will persist, but the direction of political narratives will undergo fundamental transformation.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TREND 3 -->
+      <div class="reveal bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex items-start gap-3 mb-4">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-steel/10 dark:bg-steel/20 text-steel text-sm font-bold shrink-0 mt-0.5">3</span>
+          <h3 class="font-serif text-lg font-bold text-navy dark:text-gray-100">
+            <span data-zh>稀土矿产正成为巴美合作与博弈的新战场</span>
+            <span data-en>Rare Earth Minerals Becoming a New Battleground for Brazil-US Cooperation and Competition</span>
+          </h3>
+        </div>
+        <div class="pl-11">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>本周围绕稀土的资讯形成了清晰的事件链：弗拉维奥在CPAC提议供应稀土（#11、#46、#77）→美国开发金融公司向Serra Verde提供5.65亿美元融资（#113）→戈亚斯州长卡亚多与美方签署稀土合作备忘录（#67）→联邦政府质疑地方越权（#67）→FT中文网报道拉美加入稀土争夺战（#142）。</span>
+            <span data-en>This week's rare earth news formed a clear event chain: Flávio proposed supplying rare earths at CPAC (#11, #46, #77) → US DFC provided $565M financing to Serra Verde (#113) → Goiás Governor Caiado signed rare earth cooperation MOU with US (#67) → Federal government questioned state overreach (#67) → FT Chinese reported Latin America joining the rare earth race (#142).</span>
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>巴西拥有全球23%稀土储量，但2024年产量仅20吨（中国27万吨）。美国正通过金融工具（开发金融公司贷款）和政治渠道（博索纳罗家族、地方政府）双管齐下推进稀土供应链布局。</span>
+            <span data-en>Brazil holds 23% of global rare earth reserves, but its 2024 production was only 20 tons (compared to China's 270,000 tons). The US is advancing its rare earth supply chain layout through both financial instruments (DFC loans) and political channels (Bolsonaro family, state governments).</span>
+          </p>
+          <div class="bg-steel/5 dark:bg-steel/10 rounded-lg p-4 border-l-3 border-steel">
+            <span class="text-sm font-bold text-steel">
+              <i class="fa-solid fa-chart-line mr-1"></i>
+              <span data-zh>趋势判断</span><span data-en>Trend Assessment</span>
+            </span>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+              <span data-zh>稀土将在未来6-12个月内成为巴美关系的关键议题。巴西联邦政府需在"资源主权保护"与"吸引外资开发"之间找到平衡点，国家关键战略矿产计划的立法进程将是关键节点。</span>
+              <span data-en>Rare earths will become a key issue in Brazil-US relations within the next 6-12 months. Brazil's federal government needs to find a balance between "resource sovereignty protection" and "attracting foreign investment for development"; the legislative process of the National Critical Strategic Minerals Plan will be a key milestone.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TREND 4 -->
+      <div class="reveal bg-white dark:bg-white/5 rounded-2xl p-6 sm:p-8 shadow-sm border border-gray-200 dark:border-gray-700/50">
+        <div class="flex items-start gap-3 mb-4">
+          <span class="flex items-center justify-center w-8 h-8 rounded-full bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 text-sm font-bold shrink-0 mt-0.5">4</span>
+          <h3 class="font-serif text-lg font-bold text-navy dark:text-gray-100">
+            <span data-zh>伊朗战争通过能源价格链条深度影响巴美经贸关系</span>
+            <span data-en>Iran War Deeply Impacts Brazil-US Trade Relations Through Energy Price Chain</span>
+          </h3>
+        </div>
+        <div class="pl-11">
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>美伊冲突推高国际油价（布伦特原油突破100美元/桶，3月涨幅42.68%），对巴西经济产生双重效应：一方面，巴西石油公司因油价上涨利润大增（PETR3月涨26%），巴西作为石油净出口国填补中东供应缺口；另一方面，巴西30%柴油依赖进口，航空煤油涨价55%，通胀压力上升，政府被迫出台柴油补贴措施。</span>
+            <span data-en>The US-Iran conflict has pushed up international oil prices (Brent crude surpassed $100/barrel, with a 42.68% increase in March), creating a dual effect on Brazil's economy: on one hand, Petrobras profits surged due to rising oil prices (PETR3 up 26% in March), and Brazil as a net oil exporter fills Middle East supply gaps; on the other hand, Brazil imports 30% of its diesel, aviation fuel prices rose 55%, inflationary pressure increased, and the government was forced to introduce diesel subsidies.</span>
+          </p>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-[15px] mb-4">
+            <span data-zh>卢拉多次公开批评特朗普发动伊朗战争（#47、#50、#53），将油价上涨的政治责任归咎于美国，这一叙事同时服务于国内选举和对美外交。</span>
+            <span data-en>Lula has publicly criticized Trump multiple times for launching the Iran war (#47, #50, #53), attributing political responsibility for oil price increases to the US — a narrative that serves both domestic elections and diplomacy with the US.</span>
+          </p>
+          <div class="bg-purple-500/5 dark:bg-purple-500/10 rounded-lg p-4 border-l-3 border-purple-500">
+            <span class="text-sm font-bold text-purple-600 dark:text-purple-400">
+              <i class="fa-solid fa-chart-line mr-1"></i>
+              <span data-zh>趋势判断</span><span data-en>Trend Assessment</span>
+            </span>
+            <p class="text-sm text-gray-700 dark:text-gray-300 mt-1">
+              <span data-zh>若美伊冲突持续，巴西将在能源出口收益与进口成本之间承受更大张力，卢拉政府的"反战+主权"叙事将进一步强化，巴美政治摩擦可能因能源议题加剧。</span>
+              <span data-en>If the US-Iran conflict continues, Brazil will face greater tension between energy export gains and import costs. The Lula government's "anti-war + sovereignty" narrative will further strengthen, and Brazil-US political friction may intensify due to energy issues.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end trends -->
+  </div>
+</section>
+
+<!-- ============ SECTION 4: RISK ALERTS ============ -->
+<section id="section4" class="py-16 sm:py-20 px-6 bg-gray-50/50 dark:bg-white/[0.01]">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">04</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>风险警示</span><span data-en>Risk Alerts</span>
+      </h2>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 stagger-children">
+
+      <!-- RISK 1 -->
+      <div class="reveal risk-card bg-white dark:bg-white/5 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700/50 border-t-4 border-t-stripe-red">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-lg">⚠️</span>
+          <span class="badge-high text-xs font-bold px-2 py-0.5 rounded-full">🔴 <span data-zh>高</span><span data-en>High</span></span>
+        </div>
+        <h3 class="font-serif font-bold text-navy dark:text-gray-100 mb-3 text-base">
+          <span data-zh>美国以301条款为杠杆对巴西加征关税的风险</span>
+          <span data-en>Risk of US Imposing Additional Tariffs on Brazil Using Section 301</span>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>风险来源</span><span data-en>Risk Source</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>USTR年度报告将Pix、数字平台监管、"blusinhas税"列为贸易壁垒，该报告属301条款调查范畴，可作为对巴加征关税的法律依据。特朗普政府此前已以Pix为由对巴西产品加征50%关税。</span>
+              <span data-en>The USTR annual report lists Pix, digital platform regulation, and "blusinhas tax" as trade barriers. This report falls under Section 301 investigation scope, serving as legal basis for additional tariffs. The Trump administration previously imposed 50% tariffs on Brazilian products citing Pix.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>影响范围</span><span data-en>Impact Scope</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>巴西对美出口全行业，尤其是机械设备（2025年对美出口已下滑9.1%）、钢铝产品（新关税25%）、农产品。</span>
+              <span data-en>All Brazilian export industries to the US, especially machinery (2025 exports to US already declined 9.1%), steel and aluminum products (new 25% tariff), and agricultural products.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>严重程度</span><span data-en>Severity</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>🔴 高——301条款赋予美国总统广泛的单边制裁权力，且当前巴美缺乏有效的高层对话机制缓冲。</span>
+              <span data-en>🔴 High — Section 301 grants the US President broad unilateral sanction powers, and there is currently no effective high-level dialogue mechanism to buffer Brazil-US tensions.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RISK 2 -->
+      <div class="reveal risk-card bg-white dark:bg-white/5 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700/50 border-t-4 border-t-amber-500">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-lg">⚠️</span>
+          <span class="badge-mid text-xs font-bold px-2 py-0.5 rounded-full">🟡 <span data-zh>中高</span><span data-en>Med-High</span></span>
+        </div>
+        <h3 class="font-serif font-bold text-navy dark:text-gray-100 mb-3 text-base">
+          <span data-zh>美国干预巴西2026大选的风险</span>
+          <span data-en>Risk of US Interference in Brazil's 2026 Elections</span>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>风险来源</span><span data-en>Risk Source</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>美国众议院司法委员会报告明确提及可能影响2026大选；爱德华多·博索纳罗计划通过即时通讯向美国当局提交选举"指控"；大科技公司亲近特朗普政府，巴西社交平台监管缺失为信息干预提供空间。</span>
+              <span data-en>The US House Judiciary Committee report explicitly mentions potential impact on 2026 elections; Eduardo Bolsonaro plans to submit election "accusations" to US authorities via instant messaging; big tech companies' proximity to the Trump administration and gaps in Brazilian social platform regulation create space for information interference.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>影响范围</span><span data-en>Impact Scope</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>巴西选举安全、司法独立性、社会舆论环境。</span>
+              <span data-en>Brazilian election security, judicial independence, and social opinion environment.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>严重程度</span><span data-en>Severity</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>🟡 中高——美国有干预拉美选举的历史记录（1964年政变、近年哥伦比亚大选），但当前特朗普因伊朗战争陷入战略消耗，干预力度可能受限。</span>
+              <span data-en>🟡 Medium-High — The US has a historical record of intervening in Latin American elections (1964 coup, recent Colombian elections), but Trump's current strategic exhaustion from the Iran war may limit intervention intensity.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RISK 3 -->
+      <div class="reveal risk-card bg-white dark:bg-white/5 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700/50 border-t-4 border-t-amber-500">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-lg">⚠️</span>
+          <span class="badge-mid text-xs font-bold px-2 py-0.5 rounded-full">🟡 <span data-zh>中</span><span data-en>Medium</span></span>
+        </div>
+        <h3 class="font-serif font-bold text-navy dark:text-gray-100 mb-3 text-base">
+          <span data-zh>巴西战略矿产资源主权被侵蚀的风险</span>
+          <span data-en>Risk of Erosion of Brazil's Strategic Mineral Resource Sovereignty</span>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>风险来源</span><span data-en>Risk Source</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>美国开发金融公司向Serra Verde提供5.65亿美元融资并附带优先供应条款；戈亚斯州长绕过联邦政府与美方签署稀土合作备忘录；博索纳罗阵营公开主张向美国供应稀土。</span>
+              <span data-en>US DFC provided $565M financing to Serra Verde with priority supply conditions; Goiás Governor bypassed the federal government to sign a rare earth cooperation MOU with the US; the Bolsonaro camp openly advocates supplying rare earths to the US.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>影响范围</span><span data-en>Impact Scope</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>巴西稀土、铌、锂等战略矿产的开发主权和定价权。</span>
+              <span data-en>Development sovereignty and pricing power of Brazil's strategic minerals including rare earths, niobium, and lithium.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>严重程度</span><span data-en>Severity</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>🟡 中——联邦政府已表态质疑地方越权，国家关键战略矿产计划正在国会讨论，但立法进程存在不确定性。</span>
+              <span data-en>🟡 Medium — The federal government has questioned state overreach, the National Critical Strategic Minerals Plan is under Congressional discussion, but the legislative process faces uncertainty.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RISK 4 -->
+      <div class="reveal risk-card bg-white dark:bg-white/5 rounded-2xl p-6 shadow-sm border border-gray-200 dark:border-gray-700/50 border-t-4 border-t-amber-500">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="text-lg">⚠️</span>
+          <span class="badge-mid text-xs font-bold px-2 py-0.5 rounded-full">🟡 <span data-zh>中</span><span data-en>Medium</span></span>
+        </div>
+        <h3 class="font-serif font-bold text-navy dark:text-gray-100 mb-3 text-base">
+          <span data-zh>美伊冲突持续推高巴西能源进口成本</span>
+          <span data-en>US-Iran Conflict Continues to Push Up Brazil's Energy Import Costs</span>
+        </h3>
+        <div class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>风险来源</span><span data-en>Risk Source</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>霍尔木兹海峡封锁影响全球约20%石油供应，布伦特原油突破100美元/桶，巴西30%柴油依赖进口。</span>
+              <span data-en>Strait of Hormuz blockade affects approximately 20% of global oil supply, Brent crude surpassed $100/barrel, and Brazil imports 30% of its diesel.</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>影响范围</span><span data-en>Impact Scope</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>巴西国内燃油价格、通胀水平、财政支出（柴油补贴每月约15亿雷亚尔）。</span>
+              <span data-en>Domestic fuel prices, inflation levels, and fiscal expenditure (diesel subsidies approximately R$1.5 billion per month).</span>
+            </p>
+          </div>
+          <div>
+            <span class="font-semibold text-gray-500 dark:text-gray-400 text-xs uppercase tracking-wider">
+              <span data-zh>严重程度</span><span data-en>Severity</span>
+            </span>
+            <p class="mt-1">
+              <span data-zh>🟡 中——巴西石油公司可覆盖70%国内柴油需求，且政府已出台补贴措施，但若冲突长期化，财政压力将显著上升。</span>
+              <span data-en>🟡 Medium — Petrobras can cover 70% of domestic diesel demand and the government has introduced subsidies, but if the conflict becomes prolonged, fiscal pressure will increase significantly.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end risk grid -->
+  </div>
+</section>
+
+<!-- ============ SECTION 5: COOPERATION HIGHLIGHTS ============ -->
+<section id="section5" class="py-16 sm:py-20 px-6">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">05</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>合作亮点</span><span data-en>Cooperation Highlights</span>
+      </h2>
+    </div>
+
+    <div class="reveal overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <thead>
+          <tr class="bg-brazil-green text-white">
+            <th class="px-4 py-3 text-left font-semibold rounded-tl-lg w-24">
+              <i class="fa-solid fa-layer-group mr-1"></i>
+              <span data-zh>领域</span><span data-en>Field</span>
+            </th>
+            <th class="px-4 py-3 text-left font-semibold">
+              <i class="fa-solid fa-star mr-1"></i>
+              <span data-zh>亮点</span><span data-en>Highlight</span>
+            </th>
+            <th class="px-4 py-3 text-left font-semibold rounded-tr-lg w-1/3">
+              <i class="fa-solid fa-bullseye mr-1"></i>
+              <span data-zh>意义</span><span data-en>Significance</span>
+            </th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700/50">
+          <!-- Row 1 -->
+          <tr class="coop-row bg-white dark:bg-white/[0.02]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>执法合作</span><span data-en>Law Enforcement</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>卢拉向特朗普请求引渡在迈阿密的Refit集团负责人，双方拟商讨数据共享协议打击洗钱</span>
+              <span data-en>Lula requested Trump to extradite Refit Group head in Miami; both sides plan to discuss data sharing agreements to combat money laundering</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>反跨国犯罪成为巴美务实合作的突破口，有望缓和政治摩擦</span>
+              <span data-en>Anti-transnational crime becomes a breakthrough for pragmatic Brazil-US cooperation, potentially easing political friction</span>
+            </td>
+          </tr>
+          <!-- Row 2 -->
+          <tr class="coop-row bg-gray-50/50 dark:bg-white/[0.01]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>执法合作</span><span data-en>Law Enforcement</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>FBI与巴西联邦警方合作破获跨境网络性犯罪案，锁定圣保罗嫌犯，涉300+受害者</span>
+              <span data-en>FBI and Brazilian Federal Police jointly cracked a cross-border online sexual crime case, identifying a São Paulo suspect involving 300+ victims</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>两国执法机构在数字犯罪领域的合作机制运转良好</span>
+              <span data-en>Cooperation mechanisms between the two countries' law enforcement agencies in digital crime are functioning well</span>
+            </td>
+          </tr>
+          <!-- Row 3 -->
+          <tr class="coop-row bg-white dark:bg-white/[0.02]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>矿产资源</span><span data-en>Mineral Resources</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>美国开发金融公司向巴西Serra Verde矿企提供5.65亿美元融资，推进稀土开发</span>
+              <span data-en>US DFC provided $565 million financing to Brazilian mining company Serra Verde to advance rare earth development</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>虽存在主权争议，但为巴西稀土产业化提供了资金和技术支持</span>
+              <span data-en>Despite sovereignty disputes, provides funding and technical support for Brazil's rare earth industrialization</span>
+            </td>
+          </tr>
+          <!-- Row 4 -->
+          <tr class="coop-row bg-gray-50/50 dark:bg-white/[0.01]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>体育交流</span><span data-en>Sports Exchange</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>巴西国家队在奥兰多举办世界杯热身赛，3-1击败克罗地亚，超4.6万观众</span>
+              <span data-en>Brazilian national team held World Cup warm-up match in Orlando, defeating Croatia 3-1 with over 46,000 spectators</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>2026美加墨世界杯前巴美体育交流密集，增进民间好感</span>
+              <span data-en>Intensive Brazil-US sports exchanges ahead of 2026 US-Canada-Mexico World Cup, enhancing people-to-people goodwill</span>
+            </td>
+          </tr>
+          <!-- Row 5 -->
+          <tr class="coop-row bg-white dark:bg-white/[0.02]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>科技合作</span><span data-en>Tech Cooperation</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>谷歌与巴西足协签订赞助协议，将Gemini AI技术应用于国家队技术分析</span>
+              <span data-en>Google signed a sponsorship agreement with the Brazilian Football Confederation, applying Gemini AI technology to national team technical analysis</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>美国科技企业在巴西体育领域的商业合作持续深化</span>
+              <span data-en>US tech companies' commercial cooperation in Brazilian sports continues to deepen</span>
+            </td>
+          </tr>
+          <!-- Row 6 -->
+          <tr class="coop-row bg-gray-50/50 dark:bg-white/[0.01]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>文化交流</span><span data-en>Cultural Exchange</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>巴西创作歌手João Bosco在普林斯顿大学举办80岁纪念演出</span>
+              <span data-en>Brazilian singer-songwriter João Bosco held an 80th birthday commemorative performance at Princeton University</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>巴西文化在美国学术与艺术圈的影响力持续</span>
+              <span data-en>Brazilian culture's influence in US academic and artistic circles continues</span>
+            </td>
+          </tr>
+          <!-- Row 7 -->
+          <tr class="coop-row bg-white dark:bg-white/[0.02]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>文化产业</span><span data-en>Cultural Industry</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>Globoplay原创剧集《Os Outros》已销往美国、德国、希腊等国</span>
+              <span data-en>Globoplay original series "Os Outros" has been sold to the US, Germany, Greece, and other countries</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>巴西影视内容的国际化输出，美国是重要市场</span>
+              <span data-en>International export of Brazilian audiovisual content, with the US as a key market</span>
+            </td>
+          </tr>
+          <!-- Row 8 -->
+          <tr class="coop-row bg-gray-50/50 dark:bg-white/[0.01]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400">
+              <span data-zh>金融市场</span><span data-en>Financial Markets</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>高盛报告指出巴西作为石油净出口国具备复苏优势，外资持续流入</span>
+              <span data-en>Goldman Sachs report noted Brazil's recovery advantage as a net oil exporter, with continued foreign capital inflows</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400">
+              <span data-zh>国际资本对巴西市场的信心在地缘动荡中逆势增强</span>
+              <span data-en>International capital confidence in Brazil's market strengthens against the backdrop of geopolitical turbulence</span>
+            </td>
+          </tr>
+          <!-- Row 9 -->
+          <tr class="coop-row bg-white dark:bg-white/[0.02]">
+            <td class="px-4 py-3 font-medium text-brazil-green dark:text-emerald-400 rounded-bl-lg">
+              <span data-zh>社会政策</span><span data-en>Social Policy</span>
+            </td>
+            <td class="px-4 py-3 text-gray-700 dark:text-gray-300">
+              <span data-zh>巴西将陪产假延长至20天，超越美国（无联邦带薪陪产假）</span>
+              <span data-en>Brazil extended paternity leave to 20 days, surpassing the US (no federal paid paternity leave)</span>
+            </td>
+            <td class="px-4 py-3 text-gray-600 dark:text-gray-400 rounded-br-lg">
+              <span data-zh>巴西在社会福利领域的进步获得国际对比关注</span>
+              <span data-en>Brazil's progress in social welfare gains international comparative attention</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SECTION 6: NEXT WEEK FOCUS ============ -->
+<section id="section6" class="py-16 sm:py-20 px-6 bg-gray-50/50 dark:bg-white/[0.01]">
+  <div class="max-w-5xl mx-auto">
+    <div class="reveal flex items-center gap-3 mb-10">
+      <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-navy dark:bg-steel/20 text-white dark:text-steel text-sm font-bold">06</span>
+      <h2 class="font-serif text-2xl sm:text-3xl font-bold text-navy dark:text-gray-100">
+        <span data-zh>下周关注点</span><span data-en>Next Week Focus</span>
+      </h2>
+    </div>
+
+    <div class="space-y-4 stagger-children">
+
+      <!-- Item 1 -->
+      <div class="reveal flex gap-4 bg-white dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-stripe-red/10 dark:bg-stripe-red/20 text-stripe-red dark:text-red-400 font-bold text-sm shrink-0">1</div>
+        <div>
+          <h3 class="font-semibold text-navy dark:text-gray-100 mb-1">
+            <span data-zh>4月14日：爱德华多·博索纳罗视频质询</span>
+            <span data-en>April 14: Eduardo Bolsonaro Video Hearing</span>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <span data-zh>巴西联邦最高法院将以视频方式质询身在美国的爱德华多·博索纳罗，涉及其在美施压巴西司法机关的指控，可能引发新一轮巴美司法主权争议。</span>
+            <span data-en>Brazil's Supreme Court will conduct a video hearing of Eduardo Bolsonaro, who is in the US, regarding accusations of pressuring Brazilian judicial authorities from abroad, potentially triggering a new round of Brazil-US judicial sovereignty disputes.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="reveal flex gap-4 bg-white dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-amber-500/10 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400 font-bold text-sm shrink-0">2</div>
+        <div>
+          <h3 class="font-semibold text-navy dark:text-gray-100 mb-1">
+            <span data-zh>4月中旬：美国钢铝关税新规落地效果观察</span>
+            <span data-en>Mid-April: Observation of US Steel &amp; Aluminum Tariff New Rules Implementation</span>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <span data-zh>特朗普政府调整后的钢铝关税（成品25%）对巴西机械、钢铁出口的实际冲击将在本周开始显现，关注巴西行业协会的反应。</span>
+            <span data-en>The actual impact of the Trump administration's adjusted steel and aluminum tariffs (25% on finished products) on Brazilian machinery and steel exports will begin to materialize this week; watch for Brazilian industry association reactions.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="reveal flex gap-4 bg-white dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-steel/10 dark:bg-steel/20 text-steel font-bold text-sm shrink-0">3</div>
+        <div>
+          <h3 class="font-semibold text-navy dark:text-gray-100 mb-1">
+            <span data-zh>4月底前：巴西国家关键战略矿产计划国会审议进展</span>
+            <span data-en>Before End of April: Progress on Brazil's National Critical Strategic Minerals Plan Congressional Review</span>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <span data-zh>副总统阿尔克明已参与相关辩论，该法案将决定巴西稀土等战略资源的开发框架，直接影响巴美矿产合作走向。</span>
+            <span data-en>Vice President Alckmin has participated in related debates; this bill will determine the development framework for Brazil's strategic resources including rare earths, directly affecting the direction of Brazil-US mineral cooperation.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="reveal flex gap-4 bg-white dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-purple-500/10 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400 font-bold text-sm shrink-0">4</div>
+        <div>
+          <h3 class="font-semibold text-navy dark:text-gray-100 mb-1">
+            <span data-zh>持续关注：卢拉访美日程是否在7月前敲定</span>
+            <span data-en>Ongoing: Whether Lula's US Visit Schedule is Finalized Before July</span>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <span data-zh>美伊冲突走向、巴西大选选情变化将影响访问安排，若7月前无法成行，今年将无法举办巴美首脑会晤。</span>
+            <span data-en>The trajectory of the US-Iran conflict and changes in Brazil's election landscape will affect visit arrangements; if it cannot take place before July, a Brazil-US summit will be impossible this year.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="reveal flex gap-4 bg-white dark:bg-white/5 rounded-xl p-5 border border-gray-200 dark:border-gray-700/50 shadow-sm hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brazil-green/10 dark:bg-brazil-green/20 text-brazil-green dark:text-emerald-400 font-bold text-sm shrink-0">5</div>
+        <div>
+          <h3 class="font-semibold text-navy dark:text-gray-100 mb-1">
+            <span data-zh>持续关注：美伊冲突对巴西能源价格和财政的影响</span>
+            <span data-en>Ongoing: Impact of US-Iran Conflict on Brazil's Energy Prices and Fiscal Position</span>
+          </h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            <span data-zh>巴西政府柴油补贴措施的执行效果、巴西石油公司航空煤油涨价55%的传导效应需持续跟踪。</span>
+            <span data-en>The effectiveness of Brazil's government diesel subsidy measures and the transmission effects of Petrobras' 55% aviation fuel price increase require continuous monitoring.</span>
+          </p>
+        </div>
+      </div>
+
+    </div><!-- end focus items -->
+  </div>
+</section>
+
+<!-- ============ AUTHOR & FOOTER ============ -->
+<footer class="bg-navy dark:bg-navy-deep text-gray-400 py-12 px-6">
+  <div class="max-w-5xl mx-auto">
+    <!-- Author block -->
+    <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-8 pb-8 border-b border-white/10">
+      <div class="flex items-center justify-center w-12 h-12 rounded-full bg-white/10 text-white">
+        <i class="fa-solid fa-building-columns text-lg"></i>
+      </div>
+      <div>
+        <div class="text-white font-semibold">Supinfor Ltd.</div>
+        <div class="text-sm text-gray-400">
+          <span data-zh>发布日期：2026年4月5日</span>
+          <span data-en>Published: April 5, 2026</span>
+        </div>
+      </div>
+    </div>
+    <!-- Disclaimer -->
+    <div class="text-xs text-gray-500 leading-relaxed space-y-2">
+      <p>
+        <span data-zh>本报告基于 Supinfor 区域国别实时监测数据编制，仅供参考，不构成投资或决策建议。</span>
+        <span data-en>This report is compiled based on Supinfor Regional Country Real-time Monitoring data, for reference only, and does not constitute investment or decision-making advice.</span>
+      </p>
+      <p>
+        <span data-zh>报告生成时间：2026年4月5日</span>
+        <span data-en>Report generated: April 5, 2026</span>
+      </p>
+      <p>© 2026 Supinfor Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+</main><!-- end main -->
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-11 h-11 rounded-full bg-navy dark:bg-steel text-white dark:text-ink shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up text-sm"></i>
+</button>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+(function() {
+  'use strict';
+
+  // ---- Theme Toggle ----
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      html.setAttribute('data-theme', 'dark');
+    } else {
+      html.classList.remove('dark');
+      html.setAttribute('data-theme', 'light');
+    }
+  }
+
+  // Init theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(getSystemTheme());
+  }
+
+  themeBtn.addEventListener('click', function() {
+    const current = html.classList.contains('dark') ? 'dark' : 'light';
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  // ---- Language Toggle ----
+  const langBtn = document.getElementById('langToggle');
+  const langLabel = document.getElementById('langLabel');
+
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh' : 'en');
+    langLabel.textContent = lang === 'zh' ? 'EN' : '中';
+  }
+
+  const savedLang = localStorage.getItem('lang');
+  if (savedLang) {
+    applyLang(savedLang);
+  }
+
+  langBtn.addEventListener('click', function() {
+    const current = html.getAttribute('data-lang');
+    const next = current === 'zh' ? 'en' : 'zh';
+    applyLang(next);
+    localStorage.setItem('lang', next);
+  });
+
+  // ---- Sidebar / Hamburger ----
+  const sidebar = document.getElementById('sidebar');
+  const hamburger = document.getElementById('hamburgerBtn');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  function openSidebar() {
+    sidebar.classList.remove('-translate-x-full');
+    overlay.classList.remove('hidden');
+    hamburger.classList.add('hamburger-open');
+  }
+
+  function closeSidebar() {
+    sidebar.classList.add('-translate-x-full');
+    overlay.classList.add('hidden');
+    hamburger.classList.remove('hamburger-open');
+  }
+
+  hamburger.addEventListener('click', function() {
+    if (sidebar.classList.contains('-translate-x-full')) {
+      openSidebar();
+    } else {
+      closeSidebar();
+    }
+  });
+
+  overlay.addEventListener('click', closeSidebar);
+
+  // Close sidebar on link click (mobile)
+  sidebar.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', function() {
+      if (window.innerWidth < 1024) {
+        closeSidebar();
+      }
+    });
+  });
+
+  // ---- Active TOC link ----
+  const sections = document.querySelectorAll('section[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  function updateActiveToc() {
+    let current = '';
+    sections.forEach(function(section) {
+      const top = section.offsetTop - 80;
+      if (window.scrollY >= top) {
+        current = section.getAttribute('id');
+      }
+    });
+    tocLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+
+  // ---- Scroll Reveal ----
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ---- Bar Chart Animation ----
+  const barFills = document.querySelectorAll('.bar-fill');
+  const barObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        entry.target.style.width = width;
+        entry.target.classList.add('animated');
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  barFills.forEach(function(bar) {
+    barObserver.observe(bar);
+  });
+
+  // ---- Back to Top ----
+  const backToTop = document.getElementById('backToTop');
+
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTop.classList.add('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    } else {
+      backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+      backToTop.classList.remove('opacity-100', 'pointer-events-auto', 'translate-y-0');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+})();
+</script>
+</body>
+</html>

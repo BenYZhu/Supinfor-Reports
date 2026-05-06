@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>动力电池行业洞察月报 2026-03 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #d97706; --c-primary-light: #f59e0b; --c-primary-dark: #b45309;
+  --c-accent: #059669; --c-accent-light: #10b981;
+  --c-bg: #fffbeb; --c-surface: #ffffff; --c-surface-alt: #fef9ee;
+  --c-border: #d1d5db; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #1a1508; --c-surface: #2b2210; --c-surface-alt: #332a15;
+  --c-border: #5a4a2d; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #1a1508; --c-surface: #2b2210; --c-surface-alt: #332a15;
+    --c-border: #5a4a2d; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#d97706 0%,#b45309 40%,#92400e 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-car-battery"></i>
+      <span data-zh>动力电池行业洞察月报</span>
+      <span data-en>Power Battery Industry Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年3月刊 · Supinfor Ltd.</span>
+      <span data-en>March 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>动力电池行业<br>洞察月报</span>
+      <span data-en>Power Battery<br>Industry Insight</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>EV+储能双赛道转型 · 中国电池全球市占率突破70% · 超快充技术量产落地 · 供应链区域化重构加速</span>
+      <span data-en>EV + ESS Dual-Track Transformation · China Battery Global Share Exceeds 70% · Ultra-Fast Charging Mass Production · Supply Chain Regionalization Accelerates</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">81</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">16</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">4</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、产业转型</span><span data-en>I. Industry Transformation</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、技术竞赛</span><span data-en>II. Technology Race</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、竞争格局</span><span data-en>III. Competitive Landscape</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、全球化布局</span><span data-en>IV. Global Expansion</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、储能出海</span><span data-en>V. ESS Global Expansion</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、安全与合规</span><span data-en>VI. Safety & Compliance</span></a>
+      <a href="#s7" class="toc-link"><span data-zh>七、企业治理与行业生态</span><span data-en>VII. Governance & Ecosystem</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>全球电池产业从EV单赛道向"EV+储能"双赛道加速转型</span><span data-en>Global Battery Industry Accelerates Shift from EV-Only to "EV + ESS" Dual Track</span></h3>
+      <p><span data-zh>韩系三巨头集体将EV产线改造为ESS产线，LG能源ESS营收预计2026年首次超过EV电池营收，标志行业拐点到来。</span><span data-en>Korean Big Three collectively converting EV lines to ESS. LG Energy's ESS revenue expected to surpass EV battery revenue for the first time in 2026, marking an industry inflection point.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>中国电池企业全球市占率突破70%，中韩差距进入不可逆转的结构性分化</span><span data-en>Chinese Battery Makers Exceed 70% Global Share; China-Korea Gap Enters Irreversible Structural Divergence</span></h3>
+      <p><span data-zh>CATL连续9年全球第一（39.2%），韩系三家合计仅15.3%。CATL单家研发投入（221亿元）超过韩系三家合计（3万亿韩元）。</span><span data-en>CATL ranks #1 globally for 9 consecutive years (39.2%), Korean Big Three combined only 15.3%. CATL's R&D spending alone (¥22.1B) exceeds the Korean trio's combined total (₩3T).</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>固态电池商业化路线分歧加剧，行业共识尚未形成</span><span data-en>Solid-State Battery Commercialization Route Diverges; Industry Consensus Yet to Form</span></h3>
+      <p><span data-zh>CATL高管公开质疑固态电池炒作过热，认为钠离子电池才是真正突破方向；三星SDI、奇瑞仍加速推进固态电池商业化。</span><span data-en>CATL executive publicly questions solid-state battery hype, favoring sodium-ion as the real breakthrough; Samsung SDI and Chery continue accelerating solid-state commercialization.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>比亚迪"5分钟充至70%"量产落地，超快充成为新一轮技术军备竞赛核心</span><span data-en>BYD "5-Min to 70%" Mass Produced; Ultra-Fast Charging Becomes Core of New Tech Arms Race</span></h3>
+      <p><span data-zh>第二代刀片电池与Flash Charging技术实现量产搭载，多家投行认为将带来至少6个月的市场领先优势。</span><span data-en>2nd-gen Blade Battery with Flash Charging enters mass production. Multiple investment banks estimate at least 6 months of market leadership advantage.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>全球电池供应链加速区域化重构，中国企业海外建厂成为刚需</span><span data-en>Global Battery Supply Chain Accelerates Regionalization; Overseas Factories Become a Must for Chinese Companies</span></h3>
+      <p><span data-zh>欧盟《产业加速法》要求电池核心组件至少3种为本土生产，叠加美国供应链去中国化政策，本地化生产进入强制阶段。</span><span data-en>EU Industrial Acceleration Act requires at least 3 core battery components to be locally produced, combined with US de-China supply chain policies, localization enters mandatory phase.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">39.2%</div>
+      <div class="lbl"><span data-zh>CATL 全球市占率</span><span data-en>CATL Global Market Share</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#047857)">
+      <div class="val">70%+</div>
+      <div class="lbl"><span data-zh>中国电池全球市占率</span><span data-en>China Battery Global Share</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">5min</div>
+      <div class="lbl"><span data-zh>比亚迪充至70%</span><span data-en>BYD Charge to 70%</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+      <div class="val">68+</div>
+      <div class="lbl"><span data-zh>中国电池海外工厂</span><span data-en>China Battery Overseas Factories</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: 产业转型 ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-arrows-rotate"></i>
+    <h2><span data-zh>一、产业转型：EV放缓倒逼储能赛道全面提速</span><span data-en>I. Industry Transformation: EV Slowdown Forces ESS Track Acceleration</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>韩系电池企业集体转向ESS，EV产线大规模改造标志行业拐点到来</span><span data-en>Korean Battery Makers Collectively Pivot to ESS; Mass EV Line Conversion Marks Industry Inflection Point</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>全球EV市场增速放缓已从周期性波动演变为结构性调整信号。韩系三大电池企业——LG能源、三星SDI、SK On——在2026年3月几乎同步宣布将EV产线转型为ESS产线，这不是个别企业的战术调整，而是整个行业对EV单一赛道依赖模式的集体纠偏。</span><span data-en><strong>Key Insight:</strong> The global EV market slowdown has evolved from cyclical fluctuation to a structural adjustment signal. Korea's Big Three — LG Energy, Samsung SDI, SK On — almost simultaneously announced EV-to-ESS line conversions in March 2026, representing an industry-wide collective correction away from EV-only dependence.</span></p>
+    </div>
+
+    <!-- Data Viz: Korean ESS Transformation Table -->
+    <table class="styled-table" style="margin-top:1rem">
+      <thead><tr>
+        <th><span data-zh>企业</span><span data-en>Company</span></th>
+        <th><span data-zh>ESS转型举措</span><span data-en>ESS Transformation</span></th>
+        <th><span data-zh>目标产能/订单</span><span data-en>Target Capacity/Orders</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td>LG<span data-zh>能源</span><span data-en> Energy</span></td><td><span data-zh>北美5个ESS基地，EV产线转ESS</span><span data-en>5 North America ESS bases, EV lines to ESS</span></td><td><span data-zh>2026年底全球ESS产能60GWh+</span><span data-en>60GWh+ global ESS capacity by end 2026</span></td></tr>
+        <tr><td><span data-zh>三星</span><span data-en>Samsung </span>SDI</td><td><span data-zh>印第安纳工厂部分转ESS</span><span data-en>Indiana plant partially converted to ESS</span></td><td><span data-zh>10亿美元级ESS订单</span><span data-en>$1B+ ESS orders</span></td></tr>
+        <tr><td>SK On</td><td><span data-zh>瑞山工厂转ESS，美国工厂改造</span><span data-en>Seosan plant to ESS, US plant conversion</span></td><td><span data-zh>全球产能20%转向ESS</span><span data-en>20% of global capacity to ESS</span></td></tr>
+        <tr><td>Ultium Cells</td><td><span data-zh>田纳西工厂转LFP ESS产线</span><span data-en>Tennessee plant to LFP ESS line</span></td><td><span data-zh>2026年Q2量产</span><span data-en>Mass production Q2 2026</span></td></tr>
+      </tbody>
+    </table>
+
+    <ul class="fact-list">
+      <li><span data-zh>LG能源全球工厂平均产能利用率从2024年的57.8%降至2025年底的47.6%，为上市以来首次低于50%</span><span data-en>LG Energy global factory average utilization dropped from 57.8% (2024) to 47.6% (end 2025), first time below 50% since IPO</span></li>
+      <li><span data-zh>三星SDI将美国印第安纳州合资工厂部分产线转型为ESS电池产线，已获10亿美元级别ESS电池供应订单</span><span data-en>Samsung SDI converting part of Indiana JV plant to ESS battery lines, secured $1B+ ESS battery supply orders</span></li>
+      <li><span data-zh>SK On计划将韩国瑞山工厂EV电池设施转型为ESS产线，目标将全球100GWh产能中的20%转向ESS</span><span data-en>SK On plans to convert Seosan plant EV facilities to ESS, targeting 20% of 100GWh global capacity for ESS</span></li>
+      <li><span data-zh>通用与LG合资企业Ultium Cells投资7000万美元将田纳西工厂部分EV产线转型为ESS用LFP电池产线</span><span data-en>GM-LG JV Ultium Cells invests $70M to convert Tennessee plant EV lines to ESS LFP battery lines</span></li>
+      <li><span data-zh>LG能源计划将ESS及新业务营收占比从20%提升至40%以上，预计2026年ESS电池营收首次超过EV电池营收，达12.109万亿韩元</span><span data-en>LG Energy plans to raise ESS & new business revenue share from 20% to 40%+; 2026 ESS revenue expected to surpass EV battery revenue for the first time at ₩12.109T</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>LG能源与特斯拉43亿美元协议锁定北美储能格局，"非中国LFP供应商"定位成型</span><span data-en>LG Energy's $4.3B Tesla Deal Locks North America ESS Landscape; "Non-China LFP Supplier" Positioning Takes Shape</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>LG能源与特斯拉签署的43亿美元LFP方形电池供应协议，不仅是一笔商业订单，更标志着北美储能供应链"去中国化"路径的实质性落地。LG能源正在构建"北美唯一非中国本土ESS用LFP电池供应商"的战略定位。</span><span data-en><strong>Key Insight:</strong> LG Energy's $4.3B LFP prismatic battery supply agreement with Tesla is not just a commercial order — it marks the substantive implementation of a "de-China" path for North America's ESS supply chain. LG Energy is building a strategic position as "North America's only non-Chinese domestic LFP battery supplier for ESS."</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>LG能源将在密歇根州兰辛工厂生产LFP方形电池，供应特斯拉德州休斯顿Megapack 3储能系统，2027年投产</span><span data-en>LG Energy to produce LFP prismatic cells at Lansing, Michigan plant for Tesla's Houston Megapack 3 ESS, production starting 2027</span></li>
+      <li><span data-zh>LG能源北美ESS产能占全球ESS产能的80%以上（50GWh+），北美ESS生产基地扩至5个</span><span data-en>LG Energy's North America ESS capacity exceeds 80% of global ESS capacity (50GWh+), North America ESS bases expanded to 5</span></li>
+      <li><span data-zh>Stellantis将NextStar Energy 49%股份转让给LG能源，后者获得加拿大温莎工厂全部所有权</span><span data-en>Stellantis transferred 49% NextStar Energy stake to LG Energy, giving it full ownership of Windsor, Canada plant</span></li>
+      <li><span data-zh>美国Benchmark数据显示2026年美国储能电池需求占比将从26%提升至41%</span><span data-en>US Benchmark data shows US ESS battery demand share will rise from 26% to 41% in 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: 技术竞赛 ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-bolt"></i>
+    <h2><span data-zh>二、技术竞赛：超快充量产落地，固态电池路线分歧加剧</span><span data-en>II. Technology Race: Ultra-Fast Charging Mass Produced, Solid-State Route Diverges</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>比亚迪"5分钟充至70%"量产落地，超快充技术从概念进入实战阶段</span><span data-en>BYD "5-Min to 70%" Mass Produced; Ultra-Fast Charging Moves from Concept to Reality</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>比亚迪第二代刀片电池与Flash Charging技术的量产搭载，将超快充从实验室概念推入消费者可感知的实战阶段。多家车企同步推出5C级快充产品，表明超快充已成为2026年动力电池技术竞争的核心维度，充电体验正在取代续航焦虑成为消费者决策的关键变量。</span><span data-en><strong>Key Insight:</strong> BYD's 2nd-gen Blade Battery with Flash Charging technology enters mass production, pushing ultra-fast charging from lab concept to consumer-perceptible reality. Multiple automakers simultaneously launching 5C fast-charging products indicates ultra-fast charging has become the core dimension of 2026 battery tech competition.</span></p>
+    </div>
+
+    <!-- Data Viz: BYD Flash Charging Specs -->
+    <div class="stat-highlight" style="margin:1.25rem 0">
+      <div class="stat-highlight-card">
+        <div class="val">5 min</div>
+        <div class="lbl"><span data-zh>10%→70% 充电时间</span><span data-en>10%→70% Charge Time</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#047857)">
+        <div class="val">9 min</div>
+        <div class="lbl"><span data-zh>10%→97% 充电时间</span><span data-en>10%→97% Charge Time</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+        <div class="val">-30°C</div>
+        <div class="lbl"><span data-zh>低温仅增加约3分钟</span><span data-en>Cold Weather +3 min Only</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+        <div class="val">525kW</div>
+        <div class="lbl"><span data-zh>小鹏G9最大充电功率</span><span data-en>Xpeng G9 Max Charge Power</span></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>比亚迪Flash Charging：10%→70%仅需5分钟，10%→97%仅需9分钟，-30℃低温仅增加约3分钟</span><span data-en>BYD Flash Charging: 10%→70% in just 5 min, 10%→97% in 9 min, -30°C cold weather adds only ~3 min</span></li>
+      <li><span data-zh>小鹏G9 Performance搭载5C快充，10%→80%仅需12分钟，最大充电功率525kW</span><span data-en>Xpeng G9 Performance with 5C fast charging, 10%→80% in 12 min, max charging power 525kW</span></li>
+      <li><span data-zh>吉利神盾金砖电池最大放电倍率达21.02C，10%→80%仅需10分钟</span><span data-en>Geely Aegis Golden Brick Battery max discharge rate 21.02C, 10%→80% in just 10 min</span></li>
+      <li><span data-zh>比亚迪计划2026年在国内建成20000座超快充站，在欧洲部署约300座1500kW超快充站</span><span data-en>BYD plans 20,000 ultra-fast charging stations in China by 2026, ~300 1500kW stations in Europe</span></li>
+      <li><span data-zh>CLSA评价比亚迪超快充技术将带来至少6个月的市场领先优势</span><span data-en>CLSA estimates BYD's ultra-fast charging tech will deliver at least 6 months of market leadership</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>固态电池商业化路线出现重大分歧，CATL高管公开质疑"炒作过热"</span><span data-en>Solid-State Battery Commercialization Route Diverges; CATL Executive Publicly Questions "Overhype"</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>固态电池被普遍视为下一代电池技术的终极方向，但CATL生产总监Ni Jun公开表示固态电池存在过多技术瓶颈且炒作过热，认为钠离子电池才是真正突破方向。这一表态来自全球最大电池企业的核心高管，反映出行业内部对固态电池商业化时间表的判断存在根本性分歧。</span><span data-en><strong>Key Insight:</strong> Solid-state batteries are widely seen as the ultimate next-gen battery technology, but CATL's production director Ni Jun publicly stated that solid-state batteries face too many technical bottlenecks and are overhyped, arguing sodium-ion batteries are the real breakthrough. This statement from a core executive of the world's largest battery maker reflects fundamental disagreement within the industry on solid-state commercialization timelines.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>CATL已启动500Wh/kg能量密度固态电池试点生产，计划2027年小批量量产，2030年代大规模量产</span><span data-en>CATL has started pilot production of 500Wh/kg solid-state batteries, plans small-batch production in 2027, mass production in 2030s</span></li>
+      <li><span data-zh>奇瑞计划2026年Q4实现固液混合电池量产装车，2027年完成全固态电池验证，目标600Wh/kg</span><span data-en>Chery plans semi-solid battery mass production in Q4 2026, full solid-state validation by 2027, targeting 600Wh/kg</span></li>
+      <li><span data-zh>三星SDI首次展示物理AI用软包全固态电池样品，计划2027年下半年量产</span><span data-en>Samsung SDI first showcased pouch-type all-solid-state battery samples for physical AI, plans mass production H2 2027</span></li>
+      <li><span data-zh>BAIC发布钠离子电池单电芯能量密度达170Wh/kg，接近LFP水平，支持4C快充</span><span data-en>BAIC released sodium-ion battery with 170Wh/kg cell energy density, approaching LFP level, supporting 4C fast charging</span></li>
+      <li><span data-zh>CATL钠电池预计2026年在换电、乘用车等领域大规模应用</span><span data-en>CATL sodium-ion batteries expected for large-scale deployment in battery swap and passenger vehicles in 2026</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.3</span><span data-en>Insight 2.3</span></span>
+    <h3><span data-zh>航空级动力电池量产下线，eVTOL打开电池高端应用新场景</span><span data-en>Aviation-Grade Power Batteries Enter Production; eVTOL Opens New High-End Battery Applications</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>CALB航空级R46圆柱电池（360Wh/kg）和小鹏汇天飞行汽车电池（310Wh/kg，25C瞬时放电）的量产下线，标志着动力电池正式进入航空应用领域。eVTOL对电池的能量密度、功率密度和安全性要求远超汽车场景，这一新赛道将推动电池技术向更高性能边界突破。</span><span data-en><strong>Key Insight:</strong> CALB's aviation-grade R46 cylindrical battery (360Wh/kg) and Xpeng AeroHT's flying car battery (310Wh/kg, 25C burst discharge) entering production marks power batteries' formal entry into aviation applications. eVTOL demands for energy density, power density and safety far exceed automotive scenarios.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>CALB R46圆柱航空电池能量密度360Wh/kg，为行业最高密度固液混合圆柱电池，获国家重点研发计划支持</span><span data-en>CALB R46 cylindrical aviation battery at 360Wh/kg, industry's highest density semi-solid cylindrical cell, supported by national key R&D program</span></li>
+      <li><span data-zh>小鹏汇天飞行汽车电池能量密度310Wh/kg，最大瞬时放电倍率25C，首款同时通过汽车法规与适航认证</span><span data-en>Xpeng AeroHT flying car battery at 310Wh/kg, 25C max burst discharge, first to pass both automotive and airworthiness certification</span></li>
+      <li><span data-zh>MG半固态电池SolidCore中期目标能量密度超400Wh/kg，续航有望超900km</span><span data-en>MG semi-solid battery SolidCore mid-term target exceeds 400Wh/kg, range expected to surpass 900km</span></li>
+      <li><span data-zh>InterBattery 2026主题为"Beyond Battery"，聚焦机器人、UAM、数据中心等新兴领域</span><span data-en>InterBattery 2026 themed "Beyond Battery," focusing on robotics, UAM, data centers and other emerging fields</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: 竞争格局 ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chess"></i>
+    <h2><span data-zh>三、竞争格局：中国主导地位固化，韩系企业陷入结构性困境</span><span data-en>III. Competitive Landscape: China's Dominance Solidifies, Korean Makers in Structural Distress</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>中国电池企业全球市占率突破70%，中韩差距已从量变进入质变</span><span data-en>Chinese Battery Makers Exceed 70% Global Share; China-Korea Gap Shifts from Quantitative to Qualitative</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>中国电池企业全球市占率从2021年的不足50%攀升至2025年的超70%，韩系三家从30%以上降至15.3%。这不再是周期性的市场波动，而是产业链综合竞争力差距导致的结构性分化。韩系企业在规模、成本、技术迭代速度上全面落后。</span><span data-en><strong>Key Insight:</strong> Chinese battery makers' global share climbed from under 50% in 2021 to over 70% in 2025, while the Korean trio dropped from 30%+ to 15.3%. This is no longer cyclical market fluctuation but structural divergence driven by comprehensive supply chain competitiveness gaps.</span></p>
+    </div>
+
+    <!-- Data Viz: Market Share Bar Chart -->
+    <div class="insight-card" style="background:var(--c-surface-alt);margin:1rem 0;border:1px solid var(--c-border)">
+      <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>2025年全球动力电池市占率</span><span data-en>2025 Global EV Battery Market Share</span></span>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label">CATL</div><div class="bar-track"><div class="bar-fill" style="width:78%;background:linear-gradient(90deg,var(--c-primary),var(--c-primary-light))">39.2%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>比亚迪</span><span data-en>BYD</span></div><div class="bar-track"><div class="bar-fill" style="width:33%;background:linear-gradient(90deg,var(--c-accent),#10b981)">16.4%</div></div></div>
+        <div class="bar-row"><div class="bar-label">LG<span data-zh>能源</span><span data-en> Energy</span></div><div class="bar-track"><div class="bar-fill" style="width:14%;background:linear-gradient(90deg,#6366f1,#818cf8)">~6%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>三星</span><span data-en>Samsung </span>SDI</div><div class="bar-track"><div class="bar-fill" style="width:10%;background:linear-gradient(90deg,#6366f1,#818cf8)">~5%</div></div></div>
+        <div class="bar-row"><div class="bar-label">SK On</div><div class="bar-track"><div class="bar-fill" style="width:9%;background:linear-gradient(90deg,#6366f1,#818cf8)">~4.3%</div></div></div>
+      </div>
+      <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>韩系三家合计仅15.3%，中国企业合计超70%</span><span data-en>Korean Big Three combined only 15.3%, Chinese companies combined over 70%</span></p>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>CATL 2025年全球动力电池市占率39.2%，连续9年第一；营收4237亿元，净利润722亿元，同比增长42.3%</span><span data-en>CATL 2025 global EV battery share 39.2%, #1 for 9 consecutive years; revenue ¥423.7B, net profit ¥72.2B, +42.3% YoY</span></li>
+      <li><span data-zh>比亚迪全球市占率16.4%，位居第二；2025年全球电动车销量约455万台，占全球20%</span><span data-en>BYD global share 16.4%, ranked #2; 2025 global EV sales ~4.55M units, 20% of global total</span></li>
+      <li><span data-zh>韩系三家2025年合计市占率仅15.3%，若剔除美国税收抵免，合计亏损4.269万亿韩元</span><span data-en>Korean Big Three 2025 combined share only 15.3%; excluding US tax credits, combined loss of ₩4.269T</span></li>
+      <li><span data-zh>LG能源2025年净利润同比下滑76%，SK On、三星SDI均出现净亏损</span><span data-en>LG Energy 2025 net profit down 76% YoY; SK On and Samsung SDI both posted net losses</span></li>
+      <li><span data-zh>中国电池企业海外布局超68座工厂，总投资超450亿美元，2024年海外投资首次超过国内</span><span data-en>Chinese battery companies have 68+ overseas factories, total investment over $45B; 2024 overseas investment exceeded domestic for the first time</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>CATL业绩创新高与全球化加速，龙头效应持续强化</span><span data-en>CATL Record Performance & Accelerating Globalization; Leader Effect Continues to Strengthen</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>CATL 2025年Q4单季净利润231.67亿元（同比+57.1%）创近两年半最大单季增幅，全年研发投入221亿元（同比+19%），在建产能321GWh。龙头企业在规模效应、技术储备和全球化布局上的优势正在形成正反馈循环，后来者追赶的窗口期正在收窄。</span><span data-en><strong>Key Insight:</strong> CATL Q4 2025 net profit of ¥23.167B (+57.1% YoY) marked the largest single-quarter increase in 2.5 years. Full-year R&D spending of ¥22.1B (+19%), capacity under construction 321GWh. The leader's advantages in scale, technology reserves and globalization are forming a positive feedback loop.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>CATL 2025年锂电池产能772GWh，在建产能321GWh，推进匈牙利、印尼等海外基地建设</span><span data-en>CATL 2025 lithium battery capacity 772GWh, 321GWh under construction, advancing Hungary, Indonesia and other overseas bases</span></li>
+      <li><span data-zh>储能电池出货量市占率30.4%，连续5年全球第一，储能系统出货量同比增长超160%</span><span data-en>ESS battery shipment share 30.4%, #1 globally for 5 consecutive years; ESS system shipments grew 160%+ YoY</span></li>
+      <li><span data-zh>与Stellantis合资在西班牙建50GWh电池工厂，投资超40亿欧元，为CATL在欧洲第三座工厂</span><span data-en>JV with Stellantis to build 50GWh battery plant in Spain, investing €4B+, CATL's 3rd European factory</span></li>
+      <li><span data-zh>与力拓合作推动采矿电气化，与中国信保签署战略合作协议支持全球业务拓展</span><span data-en>Partnering with Rio Tinto on mining electrification; signed strategic cooperation with Sinosure to support global expansion</span></li>
+      <li><span data-zh>拥有超21000名研发人员和超50000项专利</span><span data-en>Over 21,000 R&D staff and 50,000+ patents</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: 全球化布局 ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-globe"></i>
+    <h2><span data-zh>四、全球化布局：供应链区域化重构加速，本地化生产成刚需</span><span data-en>IV. Global Expansion: Supply Chain Regionalization Accelerates, Localization Becomes Mandatory</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>欧盟《产业加速法》与美国去中国化政策形成双重夹击，电池供应链本地化进入强制阶段</span><span data-en>EU Industrial Acceleration Act & US De-China Policies Create Double Squeeze; Battery Supply Chain Localization Enters Mandatory Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>欧盟《产业加速法》要求电池核心组件（电芯、正极材料、电解液、隔膜）至少3种为欧盟本土生产，叠加美国禁止新型武器系统使用中国产电池（2028年起）、IRA补贴要求非中国成分等政策，全球电池供应链的区域化重构已从政策倡导进入强制执行阶段。</span><span data-en><strong>Key Insight:</strong> The EU Industrial Acceleration Act requires at least 3 of 4 core battery components (cells, cathode, electrolyte, separator) to be EU-produced. Combined with US bans on Chinese batteries in new weapons systems (from 2028) and IRA non-China content requirements, global battery supply chain regionalization has moved from policy advocacy to mandatory enforcement.</span></p>
+    </div>
+
+    <!-- Data Viz: China Battery Global Factory -->
+    <div class="stat-highlight" style="margin:1.25rem 0">
+      <div class="stat-highlight-card">
+        <div class="val">68+</div>
+        <div class="lbl"><span data-zh>中国电池海外工厂数</span><span data-en>China Battery Overseas Factories</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#047857)">
+        <div class="val">$45B+</div>
+        <div class="lbl"><span data-zh>海外总投资额</span><span data-en>Total Overseas Investment</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+        <div class="val">3/4</div>
+        <div class="lbl"><span data-zh>欧盟要求本土组件数</span><span data-en>EU Required Local Components</span></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>欧盟要求EV除电池外70%零部件为本土生产，电池核心组件至少3种为本土生产</span><span data-en>EU requires 70% of EV parts (excluding battery) to be locally produced; at least 3 core battery components must be local</span></li>
+      <li><span data-zh>美国计划2028年起禁止新型武器系统使用中国产电池，2031年扩展至潜艇等平台</span><span data-en>US plans to ban Chinese batteries in new weapons systems from 2028, expanding to submarines by 2031</span></li>
+      <li><span data-zh>CATL在欧洲已有/在建3座工厂（德国、匈牙利、西班牙），比亚迪匈牙利工厂2026年Q2投产</span><span data-en>CATL has 3 European factories (existing/under construction: Germany, Hungary, Spain); BYD Hungary plant starts Q2 2026</span></li>
+      <li><span data-zh>斯柯达捷克电池工厂投产，采用CTP技术，年产能33.5万套，生产成本较MEB世代降低约30%</span><span data-en>Škoda Czech battery plant operational, using CTP technology, 335K units/year capacity, ~30% cost reduction vs MEB generation</span></li>
+      <li><span data-zh>Nouveau Monde Graphite获4.59亿加元融资建设G7地区最大石墨矿，75%产能已通过包销协议锁定</span><span data-en>Nouveau Monde Graphite secured C$459M to build G7's largest graphite mine; 75% capacity locked via offtake agreements</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>比亚迪全球多点开花，从产品出海升级为产业链出海</span><span data-en>BYD Blooms Globally; Upgrading from Product Export to Full Supply Chain Export</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>比亚迪的全球化已从单纯的整车出口升级为"工厂+充电网络+研发中心+经销商体系"的全产业链出海模式。匈牙利工厂、巴西工厂、柬埔寨工厂的相继投产，配合欧洲300座超快充站和巴西研发中心的建设，构建了覆盖欧洲、南美、东南亚的三大区域制造与服务网络。</span><span data-en><strong>Key Insight:</strong> BYD's globalization has upgraded from pure vehicle export to a full supply chain model of "factories + charging network + R&D centers + dealer systems." Hungary, Brazil and Cambodia factories coming online, combined with 300 European ultra-fast charging stations and a Brazil R&D center, create three regional manufacturing and service networks covering Europe, South America and Southeast Asia.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>匈牙利Szeged工厂2026年Q2投产，2027年起欧洲多数车型在当地生产</span><span data-en>Hungary Szeged plant starts Q2 2026; most European models to be locally produced from 2027</span></li>
+      <li><span data-zh>巴西巴伊亚州工厂年产能15万辆，目标2028年扩至60万辆，投资5640万美元建研发中心</span><span data-en>Brazil Bahia plant capacity 150K units/year, targeting 600K by 2028; $56.4M R&D center investment</span></li>
+      <li><span data-zh>柬埔寨西哈努克省工厂2025年5月投产，2026年3月交付首批本地生产车型</span><span data-en>Cambodia Sihanoukville plant started May 2025; first locally produced models delivered March 2026</span></li>
+      <li><span data-zh>2025年巴西销量11.3万台（海外最大市场），韩国销量6107台，智利目标2026年增长200%</span><span data-en>2025 Brazil sales 113K units (largest overseas market), Korea 6,107 units, Chile targeting 200% growth in 2026</span></li>
+      <li><span data-zh>欧洲经销商网络从约40家扩至超50家，维也纳设有欧洲首家经销商培训中心</span><span data-en>European dealer network expanded from ~40 to 50+; Vienna hosts Europe's first dealer training center</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: 储能出海 ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-battery-full"></i>
+    <h2><span data-zh>五、储能出海：中国储能企业签署多GWh级国际合作，全球储能版图加速扩张</span><span data-en>V. ESS Global Expansion: Chinese ESS Companies Sign Multi-GWh International Deals</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>中国储能企业密集签署海外大单，从设备出口转向生态输出</span><span data-en>Chinese ESS Companies Sign Overseas Mega-Deals; Shifting from Equipment Export to Ecosystem Export</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年初中国储能企业密集签署多项GWh级国际合作协议，覆盖中东、东南亚、非洲、澳大利亚和欧洲市场。合作模式已从单纯的设备出口升级为"技术+资本+项目"的生态输出，CATL与Schroders Greencoat、Lochpine Capital的三方合作即为典型案例。</span><span data-en><strong>Key Insight:</strong> In early 2026, Chinese ESS companies signed multiple GWh-level international cooperation agreements covering Middle East, Southeast Asia, Africa, Australia and European markets. The cooperation model has upgraded from pure equipment export to "technology + capital + project" ecosystem export, exemplified by CATL's tripartite cooperation with Schroders Greencoat and Lochpine Capital.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Cornex与沙特Al Rajhi Electrical签署未来三年5.5GWh储能产品供应协议</span><span data-en>Cornex signed 5.5GWh ESS product supply agreement with Saudi Arabia's Al Rajhi Electrical for the next 3 years</span></li>
+      <li><span data-zh>CATL与英国Schroders Greencoat、香港Lochpine Capital合作，计划在欧洲建设总年产能10GWh储能设施</span><span data-en>CATL partnered with UK's Schroders Greencoat and HK's Lochpine Capital to build 10GWh annual ESS capacity in Europe</span></li>
+      <li><span data-zh>天能集团与VCI Global合作马来西亚1GWh AI数据中心光伏储能项目</span><span data-en>Tianneng Group partnered with VCI Global on Malaysia 1GWh AI data center solar+storage project</span></li>
+      <li><span data-zh>智光电气与刚果金Vinmart Group签署3个光伏储能微电网项目合同</span><span data-en>Zhiguang Electric signed 3 solar+storage microgrid project contracts with DRC's Vinmart Group</span></li>
+      <li><span data-zh>SolaX与澳大利亚Raystech达成独家代理协议，2026年采购不少于1GWh户用储能产品</span><span data-en>SolaX signed exclusive agency agreement with Australia's Raystech, purchasing no less than 1GWh residential ESS products in 2026</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: 安全与合规 ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-shield-halved"></i>
+    <h2><span data-zh>六、安全与合规：电池安全事件频发，监管环境趋严</span><span data-en>VI. Safety & Compliance: Battery Safety Incidents Surge, Regulatory Environment Tightens</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>多品牌电池召回事件集中爆发，安全问题成为行业系统性风险</span><span data-en>Multi-Brand Battery Recalls Erupt; Safety Issues Become Systemic Industry Risk</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年3月沃尔沃EX30全球召回40323台、日产Leaf召回171台、奔驰因隐瞒电池供应商被罚112亿韩元，叠加此前通用Bolt、现代Kona等大规模召回，电池安全问题已从个案演变为行业系统性风险。值得注意的是，涉事电池供应商覆盖中韩多家企业，没有任何一家可以声称免疫。</span><span data-en><strong>Key Insight:</strong> In March 2026, Volvo EX30 recalled 40,323 units globally, Nissan Leaf recalled 171 units, Mercedes fined ₩11.2B for concealing battery supplier — combined with earlier GM Bolt and Hyundai Kona mass recalls, battery safety has evolved from isolated cases to systemic industry risk. Notably, implicated battery suppliers span multiple Chinese and Korean companies; none can claim immunity.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>沃尔沃EX30召回40323台，涉及吉利欣旺达供应的NMC电池模块缺陷</span><span data-en>Volvo EX30 recalled 40,323 units due to NMC battery module defects from Geely-Sunwoda supply</span></li>
+      <li><span data-zh>日产Leaf召回171台，因AESC供应的电池电极板制造工艺不规范</span><span data-en>Nissan Leaf recalled 171 units due to irregular electrode manufacturing by AESC</span></li>
+      <li><span data-zh>奔驰因隐瞒使用Farasis电池被韩国罚款112.39亿韩元，为全球首例此类处罚</span><span data-en>Mercedes fined ₩11.239B by Korea for concealing use of Farasis batteries — world's first such penalty</span></li>
+      <li><span data-zh>通用召回6.8万余台Bolt（LG化学电池），现代召回7.7万台Kona EV（LG化学电池）</span><span data-en>GM recalled 68K+ Bolt units (LG Chem batteries), Hyundai recalled 77K Kona EV units (LG Chem batteries)</span></li>
+      <li><span data-zh>CATL匈牙利工厂因违规储存危化品遭监管处罚，被要求停用涉事仓库</span><span data-en>CATL Hungary plant penalized for improper hazardous material storage, ordered to cease using affected warehouse</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>奔驰隐瞒电池供应商事件开创监管先例，电池信息透明度成为新合规要求</span><span data-en>Mercedes Battery Supplier Concealment Sets Regulatory Precedent; Battery Info Transparency Becomes New Compliance Requirement</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>韩国公平交易委员会对奔驰的112.39亿韩元罚款，是全球首例针对车企隐瞒动力电池供应商信息的监管处罚。这一先例意味着电池供应商信息的透明度将成为新的合规要求，车企在电池采购中的"品牌替换"行为将面临更严格的监管审查。</span><span data-en><strong>Key Insight:</strong> The Korean Fair Trade Commission's ₩11.239B fine on Mercedes is the world's first regulatory penalty for an automaker concealing EV battery supplier information. This precedent means battery supplier transparency will become a new compliance requirement, and automakers' "brand substitution" in battery procurement will face stricter regulatory scrutiny.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>奔驰2023年6月至2024年8月期间，EQE/EQS车型对外宣称搭载CATL电池，实际部分搭载Farasis电池</span><span data-en>Mercedes claimed CATL batteries in EQE/EQS models from June 2023 to August 2024, but actually used Farasis batteries in some units</span></li>
+      <li><span data-zh>涉案销售额2810亿韩元，罚款按法定最高比例4%计算为112.39亿韩元</span><span data-en>Affected sales of ₩281B; fine calculated at statutory maximum 4% = ₩11.239B</span></li>
+      <li><span data-zh>KFTC已收到超90起消费者投诉，后续可能引发损害赔偿诉讼</span><span data-en>KFTC received 90+ consumer complaints; subsequent damage compensation lawsuits may follow</span></li>
+      <li><span data-zh>Farasis曾在2021年因电池火灾风险在中国实施大规模召回</span><span data-en>Farasis conducted a large-scale recall in China in 2021 due to battery fire risk</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: 企业治理与行业生态 ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-building"></i>
+    <h2><span data-zh>七、企业治理与行业生态：高管更迭与专利博弈折射行业深层变局</span><span data-en>VII. Governance & Ecosystem: Executive Changes & Patent Battles Reflect Deep Industry Shifts</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.1</span><span data-en>Insight 7.1</span></span>
+    <h3><span data-zh>韩系电池企业以专利为武器构建技术护城河，知识产权博弈升温</span><span data-en>Korean Battery Makers Use Patents as Weapons to Build Tech Moats; IP Battles Heat Up</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>三星SDI在InterBattery 2026上高调宣示拥有超1200项美国方形电池专利（远超中日竞争对手的约600项），LG能源CEO强调专利是应对中国企业竞争的重要战略手段，松下与LG在知识产权领域开展合作。韩系企业正试图将竞争维度从规模和成本转向知识产权，通过专利壁垒延缓中国企业的全球化进程。</span><span data-en><strong>Key Insight:</strong> Samsung SDI prominently declared 1,200+ US prismatic battery patents at InterBattery 2026 (far exceeding Chinese/Japanese competitors' ~600), LG Energy CEO emphasized patents as a key strategic tool against Chinese competition, and Panasonic-LG IP cooperation launched. Korean makers are attempting to shift competition from scale and cost to intellectual property, using patent barriers to slow Chinese companies' globalization.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>三星SDI累计拥有超1200项美国方形电池专利，远超中日竞争对手的约600项</span><span data-en>Samsung SDI holds 1,200+ US prismatic battery patents, far exceeding Chinese/Japanese competitors' ~600</span></li>
+      <li><span data-zh>LG能源专利资产指数PAI位列全球前10之首，覆盖材料、电芯、PACK、BMS全领域</span><span data-en>LG Energy's Patent Asset Index (PAI) ranks #1 among global top 10, covering materials, cells, packs and BMS</span></li>
+      <li><span data-zh>雷诺韩国Grand Koleos因电池专利问题面临韩国贸易委员会调查，德国法院已下达销售禁令</span><span data-en>Renault Korea Grand Koleos faces Korean Trade Commission investigation over battery patents; German court issued sales injunction</span></li>
+      <li><span data-zh>SK On收到整车企业A的2.91亿美元索赔，涉及电池单价合同中金属重量解读分歧</span><span data-en>SK On received $291M claim from automaker "A" over metal weight interpretation dispute in battery unit price contract</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.2</span><span data-en>Insight 7.2</span></span>
+    <h3><span data-zh>Rimac、PowerCo等企业高管更迭密集，行业进入战略调整期</span><span data-en>Rimac, PowerCo and Others See Dense Executive Changes; Industry Enters Strategic Adjustment Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Rimac创始人辞去CEO转任集团总裁、大众PowerCo更换COO、LG化学通过股东大会巩固经营自主性，多家企业在同一时期进行高管调整，反映出行业在EV放缓与技术路线转换的双重压力下，正在进行深层次的战略重新校准。</span><span data-en><strong>Key Insight:</strong> Rimac founder resigned as CEO to become Group President, VW PowerCo replaced COO, LG Chem consolidated management autonomy through shareholder meeting — multiple companies making executive changes simultaneously reflects deep strategic recalibration under dual pressures of EV slowdown and technology route transitions.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Rimac创始人Mate Rimac辞去CEO，转任Rimac Group总裁及Bugatti Rimac CEO</span><span data-en>Rimac founder Mate Rimac resigned as CEO, became Rimac Group President and Bugatti Rimac CEO</span></li>
+      <li><span data-zh>大众PowerCo任命René Reif为新COO（4月1日起），负责欧洲与北美所有电池工厂运营</span><span data-en>VW PowerCo appointed René Reif as new COO (from April 1), overseeing all European and North American battery plant operations</span></li>
+      <li><span data-zh>LG化学否决英国激进投资基金Palissy Capital的多项提案，CEO金东春表示将加速低收益业务结构调整</span><span data-en>LG Chem rejected multiple proposals from UK activist fund Palissy Capital; CEO Kim Dong-chun pledged to accelerate low-return business restructuring</span></li>
+      <li><span data-zh>SK On在美国佐治亚州裁减近千名员工，SKIET推出自愿退休计划并实施无薪休假</span><span data-en>SK On laid off nearly 1,000 employees in Georgia, US; SKIET launched voluntary retirement program and unpaid leave</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>韩系电池企业财务风险集中暴露，产业链连锁反应值得警惕</span><span data-en>Korean Battery Makers' Financial Risks Concentrated; Supply Chain Domino Effect Warrants Vigilance</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>LG能源总借款额达22.5万亿韩元，超过EBITDA的4倍，面临财务违约风险；SK On收到2.91亿美元索赔且不排除其他客户效仿；SKIET连续两年亏损，推行无薪休假。韩系电池企业的财务困境可能通过供应链传导至上游材料企业和下游车企，若某一环节出现断裂，将引发连锁反应。</span><span data-en>LG Energy's total borrowings reached ₩22.5T, exceeding 4x EBITDA, facing financial default risk; SK On received $291M claim with potential for other customers to follow; SKIET posted losses for 2 consecutive years with unpaid leave. Korean battery makers' financial distress may cascade through the supply chain to upstream materials and downstream automakers.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>LG能源与银行的信贷条款协商结果、SK On合同纠纷的仲裁进展、韩系电池企业2026年Q1财报中的现金流变化</span><span data-en>LG Energy's credit term negotiations with banks, SK On contract dispute arbitration progress, Korean battery makers' Q1 2026 cash flow changes</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>电池安全事件频发叠加监管趋严，合规成本将显著上升</span><span data-en>Frequent Battery Safety Incidents + Tightening Regulation; Compliance Costs to Rise Significantly</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>沃尔沃EX30全球召回40323台、CATL匈牙利工厂违规储存危化品、奔驰隐瞒电池供应商被罚112亿韩元、新加坡宇通电动巴士电池起火——安全与合规事件在2026年3月集中爆发。欧盟《产业加速法》、韩国电池信息透明度要求等新规将推高企业的合规成本，尤其对在海外快速扩张的中国电池企业构成挑战。</span><span data-en>Volvo EX30 global recall of 40,323 units, CATL Hungary plant hazmat violation, Mercedes fined ₩11.2B for concealing battery supplier, Singapore Yutong e-bus battery fire — safety and compliance incidents erupted in March 2026. EU Industrial Acceleration Act and Korean battery transparency requirements will push up compliance costs, especially challenging for rapidly expanding Chinese battery companies overseas.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>CATL匈牙利工厂合规整改进展、沃尔沃EX30召回的财务影响、各国电池信息披露新规的立法进程</span><span data-en>CATL Hungary plant compliance rectification progress, Volvo EX30 recall financial impact, battery information disclosure legislation progress in various countries</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>全球供应链区域化重构推高生产成本，中小电池企业生存空间收窄</span><span data-en>Global Supply Chain Regionalization Raises Costs; SME Battery Makers' Survival Space Narrows</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>欧盟要求电池核心组件本土化、美国推动供应链去中国化、各国本地化生产要求不断提高，全球电池企业需要在多个区域重复建设产能，这将显著推高生产成本。头部企业（CATL、比亚迪、LG能源）凭借规模优势尚可消化，但中小电池企业和材料供应商可能面临无法承受的合规与建设成本，行业集中度将进一步提升。</span><span data-en>EU requires battery component localization, US pushes supply chain de-China, countries raise local production requirements — global battery companies must duplicate capacity across multiple regions, significantly raising costs. Leaders (CATL, BYD, LG Energy) can absorb this via scale, but SME battery makers and material suppliers may face unbearable compliance and construction costs, further increasing industry concentration.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>欧盟《产业加速法》实施细则、中国电池企业欧洲工厂的实际投产进度、全球电池产能利用率变化趋势</span><span data-en>EU Industrial Acceleration Act implementation details, Chinese battery companies' European factory actual production progress, global battery capacity utilization trends</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>固态电池技术路线分歧可能导致大规模投资错配</span><span data-en>Solid-State Battery Route Divergence May Cause Large-Scale Investment Misallocation</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>CATL高管公开质疑固态电池炒作过热，而三星SDI、奇瑞等企业仍在加速固态电池商业化。若固态电池的商业化时间表大幅延后，已投入大量资源的企业将面临沉没成本风险；反之，若固态电池突破速度超预期，押注钠离子等替代路线的企业可能错失窗口期。</span><span data-en>CATL executive publicly questions solid-state battery overhype, while Samsung SDI and Chery accelerate commercialization. If solid-state commercialization is significantly delayed, companies that invested heavily face sunk cost risk; conversely, if breakthroughs exceed expectations, companies betting on sodium-ion alternatives may miss the window.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>CATL 2027年固态电池小批量量产是否如期推进、三星SDI 2027年下半年全固态电池供应计划的执行情况、奇瑞2026年Q4固液混合电池量产装车进展</span><span data-en>Whether CATL's 2027 small-batch solid-state production proceeds on schedule, Samsung SDI's H2 2027 all-solid-state supply plan execution, Chery's Q4 2026 semi-solid battery mass production progress</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q2 (4-6<span data-zh>月</span><span data-en>)</span></div>
+      <div class="timeline-text"><span data-zh>比亚迪匈牙利Szeged工厂投产、Ultium Cells田纳西工厂ESS用LFP电池量产启动、孚能科技6月起向海外车企供应SPS磷酸铁锂电池——三大事件将验证全球电池供应链区域化重构的实际执行力度</span><span data-en>BYD Hungary Szeged plant starts production, Ultium Cells Tennessee ESS LFP battery mass production begins, Farasis starts SPS LFP supply to overseas automakers from June — three events will validate global battery supply chain regionalization execution</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026<span data-zh>年5月</span><span data-en> May</span></div>
+      <div class="timeline-text"><span data-zh>CIBF 2026展会：预计吸引3000余家展商和35万专业观众，设置全固态、钠电池等技术专区，将成为观察中国电池企业技术路线和产能规划的重要窗口</span><span data-en>CIBF 2026 Exhibition: Expected to attract 3,000+ exhibitors and 350K professional visitors, with all-solid-state and sodium-ion tech zones — a key window to observe Chinese battery companies' technology routes and capacity plans</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q4</div>
+      <div class="timeline-text"><span data-zh>奇瑞固液混合电池计划量产装车、CATL钠电池预计在换电和乘用车领域大规模应用——两大技术路线的商业化验证将对行业技术共识产生重大影响</span><span data-en>Chery semi-solid battery planned for mass production in vehicles, CATL sodium-ion batteries expected for large-scale deployment in battery swap and passenger vehicles — commercialization validation of two major tech routes will significantly impact industry consensus</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 H2</div>
+      <div class="timeline-text"><span data-zh>SK On瑞山工厂ESS产线转型启动、三星SDI预计实现盈利——韩系电池企业的转型成效将在下半年初步显现，决定其能否止住市场份额下滑趋势</span><span data-en>SK On Seosan plant ESS line conversion begins, Samsung SDI expected to return to profitability — Korean battery makers' transformation results will initially emerge in H2, determining whether they can halt market share decline</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年3月的动力电池行业呈现三条清晰的主线：第一，全球EV市场增速放缓已从短期波动演变为结构性调整，推动整个行业从EV单赛道向"EV+储能"双赛道加速转型。第二，中国电池企业的全球主导地位持续固化，CATL和比亚迪在规模、技术、全球化布局上的领先优势正在形成正反馈循环，中韩差距已进入不可逆转的结构性分化阶段。第三，超快充技术量产落地开启新一轮技术军备竞赛，而固态电池商业化路线的分歧则为行业中长期发展增添了不确定性。</span><span data-en>The March 2026 power battery industry shows three clear themes: First, the global EV market slowdown has evolved from short-term fluctuation to structural adjustment, driving the industry from EV-only to "EV + ESS" dual-track transformation. Second, Chinese battery companies' global dominance continues to solidify, with CATL and BYD's advantages in scale, technology and globalization forming a positive feedback loop. Third, ultra-fast charging mass production launches a new tech arms race, while solid-state battery route divergence adds uncertainty to medium-to-long-term development.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>中国电池企业全球市占率突破70%，CATL单家39.2%，韩系三家合计仅15.3%，差距仍在扩大</span><span data-en>Chinese battery makers exceed 70% global share; CATL alone 39.2%, Korean Big Three combined only 15.3%, gap still widening</span></li>
+        <li><span data-zh>韩系企业试图以专利壁垒（三星SDI 1200+项美国专利）和技术差异化对抗中国企业的规模优势</span><span data-en>Korean makers attempt to counter Chinese scale advantage with patent barriers (Samsung SDI 1,200+ US patents) and tech differentiation</span></li>
+        <li><span data-zh>比亚迪从产品出海升级为产业链出海（工厂+充电网络+研发中心），全球化深度已超越多数竞争对手</span><span data-en>BYD upgraded from product export to full supply chain export (factories + charging + R&D), globalization depth surpasses most competitors</span></li>
+        <li><span data-zh>储能赛道成为新的竞争焦点，LG能源43亿美元特斯拉订单、中国企业多GWh级海外合作密集落地</span><span data-en>ESS track becomes new competitive focus; LG Energy's $4.3B Tesla deal, Chinese companies' multi-GWh overseas deals landing intensively</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>韩系电池企业财务压力集中暴露：LG能源借款超EBITDA 4倍、SK On面临2.91亿美元索赔、SKIET连续两年亏损</span><span data-en>Korean battery makers' financial pressure concentrated: LG Energy borrowings exceed 4x EBITDA, SK On faces $291M claim, SKIET 2 consecutive years of losses</span></li>
+        <li><span data-zh>电池安全与合规风险上升：沃尔沃全球召回4万台、CATL匈牙利工厂违规、奔驰隐瞒供应商被罚112亿韩元</span><span data-en>Battery safety & compliance risks rising: Volvo global recall of 40K units, CATL Hungary violation, Mercedes fined ₩11.2B for supplier concealment</span></li>
+        <li><span data-zh>供应链区域化重构推高成本：欧盟、美国本地化要求趋严，多区域重复建设产能将压缩利润空间</span><span data-en>Supply chain regionalization raises costs: EU and US localization requirements tightening, multi-region capacity duplication will compress margins</span></li>
+        <li><span data-zh>固态电池路线分歧可能导致投资错配：CATL质疑固态电池炒作，三星SDI、奇瑞加速推进，行业共识尚未形成</span><span data-en>Solid-state route divergence may cause investment misallocation: CATL questions hype, Samsung SDI and Chery accelerate, no industry consensus yet</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>储能业务布局：</span><span data-en>ESS Business: </span></strong><span data-zh>建议动力电池企业在2026年内完成至少20%产能的ESS转型规划，优先布局北美和欧洲市场的LFP储能产品线</span><span data-en>Battery companies should complete at least 20% capacity ESS conversion planning in 2026, prioritizing LFP ESS product lines for North America and Europe</span></li>
+        <li><strong><span data-zh>超快充技术跟进：</span><span data-en>Ultra-Fast Charging: </span></strong><span data-zh>建议竞争企业在2026年Q3前完成5C级快充电池的产品验证和产线适配，同步推进配套充电基础设施合作</span><span data-en>Competitors should complete 5C fast-charging battery product validation and line adaptation by Q3 2026, simultaneously advancing charging infrastructure partnerships</span></li>
+        <li><strong><span data-zh>海外合规体系建设：</span><span data-en>Overseas Compliance: </span></strong><span data-zh>建议在欧洲有业务布局的中国电池企业在2026年内完成至少3个核心环节的本地化供应商认证或自建产能规划</span><span data-en>Chinese battery companies with European operations should complete localized supplier certification or self-built capacity planning for at least 3 core components in 2026</span></li>
+        <li><strong><span data-zh>技术路线对冲：</span><span data-en>Tech Route Hedging: </span></strong><span data-zh>建议企业采取"主攻一条、储备一条"的策略，对替代路线保持不低于总研发投入15%的持续跟踪投入</span><span data-en>Companies should adopt a "focus on one, reserve one" strategy, maintaining at least 15% of total R&D spending on alternative route tracking</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月</span><span data-en>Published: April 2026</span><br>
+    <span data-zh>本报告基于动力电池行业行业月报2026-03编制，仅供参考，不构成投资建议。</span><span data-en>Based on Power Battery Industry Monthly Report 2026-03. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

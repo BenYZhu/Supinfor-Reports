@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马来西亚国别概览 — Supinfor Ltd.</title>
+<meta name="description" content="马来西亚国别概览 L2标准报告 2026年4月9日">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-emerald-deep: #065f46;
+  --color-emerald-dark: #064e3b;
+  --color-emerald-darker: #022c22;
+  --color-gold: #d97706;
+  --color-gold-light: #f59e0b;
+  --color-warm-white: #fefdf8;
+  --color-warm-gray: #f5f0e8;
+  --color-dark-bg: #0a1f1a;
+  --color-dark-card: #112b24;
+  --color-dark-card2: #163830;
+  --color-dark-border: #1e4d3d;
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+}
+</style>
+<style>
+/* Base & Typography */
+body { font-family: 'Noto Sans SC', sans-serif; }
+h1, h2, h3, h4, h5 { font-family: 'Playfair Display', 'Noto Sans SC', serif; }
+
+/* Language switching */
+[data-lang="zh"] [data-en] { display: none; }
+[data-lang="en"] [data-zh] { display: none; }
+
+/* Tropical geometric pattern for hero */
+.hero-pattern {
+  background-image:
+    radial-gradient(circle at 20% 50%, rgba(217,119,6,0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.04) 0%, transparent 40%),
+    radial-gradient(circle at 60% 80%, rgba(217,119,6,0.05) 0%, transparent 45%),
+    linear-gradient(60deg, transparent 40%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.02) 42%, transparent 42%),
+    linear-gradient(-60deg, transparent 40%, rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.02) 42%, transparent 42%),
+    linear-gradient(135deg, #065f46 0%, #064e3b 40%, #0a3d2e 70%, #1a4731 100%);
+}
+
+/* Scroll reveal animation */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Card hover */
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.12); }
+.dark .card-hover:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+/* Conic gradient donut chart */
+.donut-chart {
+  width: 220px; height: 220px; border-radius: 50%;
+  background: conic-gradient(
+    #065f46 0deg 192.96deg,
+    #d97706 192.96deg 273.96deg,
+    #0891b2 273.96deg 303.48deg,
+    #7c3aed 303.48deg 332.64deg,
+    #e11d48 332.64deg 347.04deg,
+    #94a3b8 347.04deg 360deg
+  );
+  position: relative;
+}
+.donut-chart::after {
+  content: ''; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px; height: 130px; border-radius: 50%;
+}
+.light .donut-chart::after { background: #fefdf8; }
+.dark .donut-chart::after { background: #112b24; }
+
+/* Progress bar */
+.progress-bar { height: 8px; border-radius: 4px; overflow: hidden; }
+.progress-fill { height: 100%; border-radius: 4px; transition: width 1s ease; }
+
+/* Timeline */
+.timeline-line { position: absolute; left: 16px; top: 0; bottom: 0; width: 3px; }
+.light .timeline-line { background: linear-gradient(to bottom, #065f46, #d97706); }
+.dark .timeline-line { background: linear-gradient(to bottom, #10b981, #f59e0b); }
+.timeline-dot {
+  width: 14px; height: 14px; border-radius: 50%; position: absolute; left: 10px;
+  top: 6px; z-index: 1; border: 3px solid;
+}
+.light .timeline-dot { background: #065f46; border-color: #fefdf8; }
+.dark .timeline-dot { background: #10b981; border-color: #112b24; }
+
+/* Table styles */
+.styled-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.styled-table thead th {
+  padding: 12px 16px; text-align: left; font-weight: 600;
+  font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.light .styled-table thead th { background: #065f46; color: white; }
+.dark .styled-table thead th { background: #163830; color: #a7f3d0; }
+.styled-table thead th:first-child { border-radius: 8px 0 0 0; }
+.styled-table thead th:last-child { border-radius: 0 8px 0 0; }
+.styled-table tbody td { padding: 12px 16px; font-size: 0.9rem; }
+.light .styled-table tbody tr { border-bottom: 1px solid #e5e7eb; }
+.dark .styled-table tbody tr { border-bottom: 1px solid #1e4d3d; }
+.light .styled-table tbody tr:nth-child(even) { background: rgba(6,95,70,0.03); }
+.dark .styled-table tbody tr:nth-child(even) { background: rgba(16,185,129,0.05); }
+.light .styled-table tbody tr:hover { background: rgba(6,95,70,0.07); }
+.dark .styled-table tbody tr:hover { background: rgba(16,185,129,0.08); }
+
+/* Back to top */
+#backToTop {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 50;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  cursor: pointer; border: none;
+}
+#backToTop.show { opacity: 1; transform: translateY(0); }
+.light #backToTop { background: #065f46; color: white; box-shadow: 0 4px 15px rgba(6,95,70,0.3); }
+.dark #backToTop { background: #10b981; color: #022c22; box-shadow: 0 4px 15px rgba(16,185,129,0.3); }
+
+/* TOC sidebar */
+#tocSidebar { scrollbar-width: thin; }
+.light #tocSidebar { scrollbar-color: #065f46 transparent; }
+.dark #tocSidebar { scrollbar-color: #10b981 transparent; }
+
+/* KPI counter animation */
+@keyframes countUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+.kpi-number { animation: countUp 0.8s ease forwards; }
+
+/* Dark mode transitions */
+* { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+
+/* Print styles */
+@media print { .no-print { display: none !important; } .reveal { opacity: 1 !important; transform: none !important; } }
+</style>
+</head>
+<body class="light bg-warm-white text-gray-800 dark:bg-dark-bg dark:text-gray-200">
+
+<!-- Language Toggle Button -->
+<button id="langToggle" class="no-print fixed top-4 right-16 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-dark-card/90 shadow-lg backdrop-blur border border-gray-200 dark:border-dark-border hover:scale-110 transition-transform cursor-pointer" aria-label="Switch Language">
+  <i class="fas fa-language text-emerald-deep dark:text-emerald-400 text-sm mr-0.5"></i><span id="langLabel" class="text-xs font-bold text-emerald-deep dark:text-emerald-400">EN</span>
+</button>
+
+<!-- Theme Toggle Button -->
+<button id="themeToggle" class="no-print fixed top-4 right-4 z-50 w-11 h-11 rounded-full flex items-center justify-center bg-white/90 dark:bg-dark-card/90 shadow-lg backdrop-blur border border-gray-200 dark:border-dark-border hover:scale-110 transition-transform cursor-pointer" aria-label="切换深色/浅色模式">
+  <i class="fas fa-moon text-emerald-deep dark:hidden"></i>
+  <i class="fas fa-sun text-gold-light hidden dark:inline"></i>
+</button>
+
+<!-- Back to Top -->
+<button id="backToTop" class="no-print" aria-label="返回顶部">
+  <i class="fas fa-chevron-up text-lg"></i>
+</button>
+
+<!-- ==================== HERO SECTION ==================== -->
+<header class="hero-pattern relative overflow-hidden min-h-[85vh] flex flex-col justify-center items-center text-white px-4 py-16">
+  <!-- Decorative elements -->
+  <div class="absolute top-10 left-10 w-32 h-32 border border-white/10 rounded-full"></div>
+  <div class="absolute bottom-20 right-16 w-48 h-48 border border-gold/10 rounded-full"></div>
+  <div class="absolute top-1/3 right-10 w-20 h-20 border border-white/5 rotate-45"></div>
+
+  <div class="relative z-10 text-center max-w-5xl mx-auto">
+    <p class="text-gold-light font-medium tracking-widest uppercase text-sm mb-4 reveal">Supinfor Ltd. · Country Overview</p>
+    <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight reveal reveal-delay-1" style="font-family:'Playfair Display',serif; text-shadow: 0 2px 20px rgba(0,0,0,0.2);">
+      <span data-zh>马来西亚<br class="md:hidden">国别概览</span><span data-en>Malaysia<br class="md:hidden">Country Overview</span>
+    </h1>
+    <p class="text-xl md:text-2xl text-emerald-100 mb-2 reveal reveal-delay-2"><span data-zh>L2 标准报告 · 2026 年 4 月 9 日</span><span data-en>L2 Standard Report · April 9, 2026</span></p>
+    <p class="text-base text-emerald-200/70 mb-12 max-w-2xl mx-auto reveal reveal-delay-3"><span data-zh>基于区域国别研究三层分析框架，对马来西亚进行全面的国别概览分析，涵盖国家画像、营商环境评估及商业判断与建议三个层次。数据截止日期为 2026 年 4 月 9 日。</span><span data-en>A comprehensive country overview of Malaysia based on a three-tier regional analysis framework, covering country profile, business environment assessment, and commercial judgment &amp; recommendations. Data as of April 9, 2026.</span></p>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-4xl mx-auto reveal reveal-delay-4">
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 card-hover">
+        <div class="text-gold-light text-sm font-medium mb-1"><i class="fas fa-chart-line mr-1"></i> GDP</div>
+        <div class="text-3xl md:text-4xl font-bold kpi-number">4,300<span class="text-lg">-4,500</span></div>
+        <div class="text-emerald-200/70 text-sm mt-1"><span data-zh>亿美元（2025年）</span><span data-en>USD 100M (2025)</span></div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 card-hover">
+        <div class="text-gold-light text-sm font-medium mb-1"><i class="fas fa-arrow-trend-up mr-1"></i> <span data-zh>GDP 增速</span><span data-en>GDP Growth</span></div>
+        <div class="text-3xl md:text-4xl font-bold kpi-number">5.2<span class="text-lg">%</span></div>
+        <div class="text-emerald-200/70 text-sm mt-1"><span data-zh>2025年实际增速</span><span data-en>2025 Actual Growth</span></div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 card-hover">
+        <div class="text-gold-light text-sm font-medium mb-1"><i class="fas fa-users mr-1"></i> <span data-zh>人口</span><span data-en>Population</span></div>
+        <div class="text-3xl md:text-4xl font-bold kpi-number">3,556<span class="text-lg"><span data-zh>万</span><span data-en>0K</span></span></div>
+        <div class="text-emerald-200/70 text-sm mt-1"><span data-zh>2024年统计</span><span data-en>2024 Census</span></div>
+      </div>
+      <div class="bg-white/10 backdrop-blur-md rounded-2xl p-5 border border-white/15 card-hover">
+        <div class="text-gold-light text-sm font-medium mb-1"><i class="fas fa-percent mr-1"></i> <span data-zh>通胀率</span><span data-en>Inflation</span></div>
+        <div class="text-3xl md:text-4xl font-bold kpi-number">1.4<span class="text-lg">%</span></div>
+        <div class="text-emerald-200/70 text-sm mt-1"><span data-zh>2025年平均CPI</span><span data-en>2025 Avg CPI</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-white/50">
+    <i class="fas fa-chevron-down text-2xl"></i>
+  </div>
+</header>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<nav id="tocSection" class="no-print sticky top-0 z-40 bg-warm-white/95 dark:bg-dark-bg/95 backdrop-blur border-b border-gray-200 dark:border-dark-border">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <button id="tocToggle" class="md:hidden flex items-center gap-2 text-emerald-deep dark:text-emerald-400 font-medium">
+      <i class="fas fa-bars"></i> <span data-zh>目录导航</span><span data-en>Navigation</span>
+    </button>
+    <div id="tocContent" class="hidden md:flex flex-wrap gap-x-6 gap-y-2 text-sm">
+      <a href="#partA" class="text-emerald-deep dark:text-emerald-400 hover:text-gold dark:hover:text-gold-light font-semibold transition-colors"><span data-zh>Part A：国家画像</span><span data-en>Part A: Country Profile</span></a>
+      <a href="#sec-a-1" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.1 基本信息</span><span data-en>A.1 Basic Info</span></a>
+      <a href="#sec-a-2" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.2 宏观经济</span><span data-en>A.2 Macro Economy</span></a>
+      <a href="#sec-a-3" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.3 政治体制</span><span data-en>A.3 Political System</span></a>
+      <a href="#sec-a-4" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.4 人口与社会</span><span data-en>A.4 Demographics</span></a>
+      <a href="#sec-a-5" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.5 基础设施</span><span data-en>A.5 Infrastructure</span></a>
+      <a href="#sec-a-6" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>A.6 对外经贸</span><span data-en>A.6 Foreign Trade</span></a>
+      <span class="text-gray-300 dark:text-gray-600">|</span>
+      <a href="#partB" class="text-emerald-deep dark:text-emerald-400 hover:text-gold dark:hover:text-gold-light font-semibold transition-colors"><span data-zh>Part B：营商环境</span><span data-en>Part B: Business Environment</span></a>
+      <a href="#sec-b-1" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>B.1 外资政策</span><span data-en>B.1 FDI Policy</span></a>
+      <a href="#sec-b-2" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>B.2 税收法规</span><span data-en>B.2 Tax &amp; Regulations</span></a>
+      <a href="#sec-b-3" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>B.3 劳动力</span><span data-en>B.3 Labor Market</span></a>
+      <a href="#sec-b-4" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>B.4 风险因素</span><span data-en>B.4 Risk Factors</span></a>
+      <a href="#sec-b-5" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>B.5 记分卡</span><span data-en>B.5 Scorecard</span></a>
+      <span class="text-gray-300 dark:text-gray-600">|</span>
+      <a href="#partC" class="text-emerald-deep dark:text-emerald-400 hover:text-gold dark:hover:text-gold-light font-semibold transition-colors"><span data-zh>Part C：判断与建议</span><span data-en>Part C: Judgment &amp; Advice</span></a>
+      <a href="#sec-c-1" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>C.1 核心结论</span><span data-en>C.1 Key Conclusions</span></a>
+      <a href="#sec-c-2" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>C.2 市场机会</span><span data-en>C.2 Opportunities</span></a>
+      <a href="#sec-c-3" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>C.3 风险提示</span><span data-en>C.3 Risk Alerts</span></a>
+      <a href="#sec-c-4" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>C.4 进入策略</span><span data-en>C.4 Entry Strategy</span></a>
+      <a href="#sec-c-5" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>C.5 SWOT</span><span data-en>C.5 SWOT</span></a>
+      <span class="text-gray-300 dark:text-gray-600">|</span>
+      <a href="#quality-check" class="text-gray-600 dark:text-gray-400 hover:text-emerald-deep dark:hover:text-emerald-400 transition-colors"><span data-zh>质量自检</span><span data-en>Quality Check</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="max-w-7xl mx-auto px-4 md:px-8 py-12">
+
+<!-- ==================== PART A ==================== -->
+<section id="partA" class="mb-20">
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="inline-block w-10 h-1 bg-gold rounded"></span>
+      <span class="text-gold font-medium text-sm tracking-widest uppercase">Part A</span>
+    </div>
+    <h2 class="text-4xl md:text-5xl font-bold text-emerald-deep dark:text-emerald-400 mb-3"><span data-zh>国家画像</span><span data-en>Country Profile</span></h2>
+    <p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-3xl"><span data-zh>马来西亚的宏观经济、政治治理、人口社会、基础设施与对外经贸全景。</span><span data-en>A panoramic view of Malaysia's macroeconomy, political governance, demographics, infrastructure, and foreign trade.</span></p>
+  </div>
+
+  <!-- A.1 国家基本信息 -->
+  <article id="sec-a-1" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.1</span>
+      <span data-zh>国家基本信息</span><span data-en>Basic Country Information</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+      <table class="styled-table">
+        <thead><tr><th style="width:20%"><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>内容</span><span data-en>Details</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>国家/区域</span><span data-en>Country/Region</span></td><td><span data-zh>马来西亚</span><span data-en>Malaysia</span> / Malaysia</td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>首都</span><span data-en>Capital</span></td><td><span data-zh>吉隆坡（Kuala Lumpur）</span><span data-en>Kuala Lumpur</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>地理位置</span><span data-en>Location</span></td><td><span data-zh>东南亚，分为马来半岛（西马）和婆罗洲北部（东马：沙巴、砂拉越），与新加坡、泰国、印度尼西亚、文莱接壤，扼守马六甲海峡要冲</span><span data-en>Southeast Asia, divided into Peninsular Malaysia (West) and northern Borneo (East: Sabah, Sarawak), bordering Singapore, Thailand, Indonesia, and Brunei, commanding the strategic Strait of Malacca</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>面积</span><span data-en>Area</span></td><td><span data-zh>约 <strong>33 万平方公里</strong></span><span data-en>Approx. <strong>330,000 km²</strong></span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>人口</span><span data-en>Population</span></td><td><span data-zh>约 <strong>3,556 万</strong>（2024 年），增长率约 <strong>1.1%</strong>，中位年龄约 <strong>30 岁</strong>（来源：马来西亚统计局）</span><span data-en>Approx. <strong>35.56 million</strong> (2024), growth rate ~<strong>1.1%</strong>, median age ~<strong>30</strong> (Source: DOSM)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>官方语言</span><span data-en>Official Language</span></td><td><span data-zh>马来语（Bahasa Malaysia）为国语，<strong>英语广泛使用</strong>（商业、法律、高等教育领域通用），华语和泰米尔语在各族群中使用</span><span data-en>Malay (Bahasa Malaysia) as national language; <strong>English widely used</strong> (business, legal, higher education); Mandarin and Tamil used among respective communities</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>货币</span><span data-en>Currency</span></td><td><span data-zh>马来西亚林吉特（MYR），<strong>1 USD ≈ 4.2-4.4 MYR</strong>（2025-2026 年波动区间），近年受美元强势和全球贸易环境影响有所波动（来源：马来西亚国家银行 BNM）</span><span data-en>Malaysian Ringgit (MYR), <strong>1 USD ≈ 4.2–4.4 MYR</strong> (2025–2026 range), fluctuating due to strong USD and global trade dynamics (Source: BNM)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>时区</span><span data-en>Time Zone</span></td><td><span data-zh>UTC+8，<strong>与中国无时差</strong>，比美国东部快 13 小时</span><span data-en>UTC+8, <strong>same as China</strong>, 13 hours ahead of US Eastern Time</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- A.2 宏观经济 -->
+  <article id="sec-a-2" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.2</span>
+      <span data-zh>宏观经济</span><span data-en>Macroeconomy</span>
+    </h3>
+
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4"><span data-zh>核心经济指标</span><span data-en>Key Economic Indicators</span></h4>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-8">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>指标</span><span data-en>Indicator</span></th><th><span data-zh>最新数据</span><span data-en>Latest Data</span></th><th><span data-zh>趋势（近 3-5 年）</span><span data-en>Trend (3–5 Years)</span></th><th><span data-zh>来源</span><span data-en>Source</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold"><span data-zh>GDP（名义）</span><span data-en>GDP (Nominal)</span></td><td><span data-zh>约 <strong>4,300-4,500 亿美元</strong>（2025 年）</span><span data-en>Approx. <strong>USD 430–450 billion</strong> (2025)</span></td><td><span data-zh>稳步增长，近 5 年平均增速 <strong>4.9%</strong></span><span data-en>Steady growth, 5-year avg. <strong>4.9%</strong></span></td><td>IMF / World Bank</td></tr>
+          <tr><td class="font-semibold"><span data-zh>GDP 增速</span><span data-en>GDP Growth</span></td><td><span data-zh><strong>5.2%</strong>（2025 年实际，超预期）；2026 年预测 <strong>4.3-4.5%</strong></span><span data-en><strong>5.2%</strong> (2025 actual, above expectations); 2026 forecast <strong>4.3–4.5%</strong></span></td><td><span data-zh>2021 年 3.1%→2022 年 8.7%→2023 年 3.7%→2024 年 5.1%→2025 年 5.2%，疫后强劲复苏</span><span data-en>2021: 3.1%→2022: 8.7%→2023: 3.7%→2024: 5.1%→2025: 5.2%, strong post-pandemic recovery</span></td><td>IMF 4.3% / World Bank 4.4% / Gov't 4-5%</td></tr>
+          <tr><td class="font-semibold"><span data-zh>人均 GDP</span><span data-en>GDP per Capita</span></td><td><span data-zh>约 <strong>11,868 美元</strong>（2024 年）</span><span data-en>Approx. <strong>USD 11,868</strong> (2024)</span></td><td><span data-zh>稳步上升，接近高收入门槛（约 14,000 美元）</span><span data-en>Steadily rising, approaching high-income threshold (~USD 14,000)</span></td><td><span data-zh>世界银行</span><span data-en>World Bank</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>通胀率（CPI）</span><span data-en>Inflation (CPI)</span></td><td><span data-zh><strong>1.4%</strong>（2025 年平均）</span><span data-en><strong>1.4%</strong> (2025 avg.)</span></td><td><span data-zh>低且稳定，2022 年曾因全球通胀升至 3.4%，此后回落</span><span data-en>Low and stable; rose to 3.4% in 2022 due to global inflation, then declined</span></td><td><span data-zh>马来西亚统计局 / BNM</span><span data-en>DOSM / BNM</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>失业率</span><span data-en>Unemployment</span></td><td><span data-zh>约 <strong>3.2%</strong>（2025 年）</span><span data-en>Approx. <strong>3.2%</strong> (2025)</span></td><td><span data-zh>从疫情高点 4.5%（2020 年）持续回落，接近充分就业</span><span data-en>Declined from pandemic peak of 4.5% (2020), near full employment</span></td><td><span data-zh>马来西亚统计局</span><span data-en>DOSM</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>外汇储备</span><span data-en>Forex Reserves</span></td><td><span data-zh>约 <strong>1,150-1,200 亿美元</strong>（2025 年末估计）</span><span data-en>Approx. <strong>USD 115–120 billion</strong> (est. end-2025)</span></td><td><span data-zh>保持在合理水平，覆盖约 5-6 个月进口</span><span data-en>At adequate levels, covering ~5–6 months of imports</span></td><td>BNM</td></tr>
+          <tr><td class="font-semibold"><span data-zh>公共债务/GDP</span><span data-en>Public Debt/GDP</span></td><td><span data-zh>约 <strong>64-65%</strong>（2025 年）</span><span data-en>Approx. <strong>64–65%</strong> (2025)</span></td><td><span data-zh>疫情期间攀升，政府正推进财政整顿，2026 年赤字目标 3.5% of GDP</span><span data-en>Rose during pandemic; gov't pursuing fiscal consolidation, 2026 deficit target 3.5% of GDP</span></td><td><span data-zh>马来西亚财政部</span><span data-en>MOF Malaysia</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>经常账户余额/GDP</span><span data-en>Current Account/GDP</span></td><td><span data-zh>约 <strong>2-3%</strong>（2025 年）</span><span data-en>Approx. <strong>2–3%</strong> (2025)</span></td><td><span data-zh>持续顺差，受益于 E&amp;E 出口和大宗商品收入</span><span data-en>Persistent surplus, driven by E&amp;E exports and commodity revenues</span></td><td>BNM</td></tr>
+          <tr><td class="font-semibold"><span data-zh>主权信用评级</span><span data-en>Sovereign Rating</span></td><td><strong>A3</strong> (Moody's) / <strong>A-</strong> (S&amp;P) / <strong>BBB+</strong> (Fitch)</td><td><span data-zh>展望均为<strong>稳定</strong>，反映财政整顿进展和经济韧性</span><span data-en>All outlooks <strong>stable</strong>, reflecting fiscal consolidation progress and economic resilience</span></td><td>S&amp;P / Moody's / Fitch</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Important finding callout -->
+    <div class="bg-gold/5 dark:bg-gold/10 border-l-4 border-gold rounded-r-xl p-5 mb-8">
+      <p class="text-sm font-semibold text-gold mb-1"><i class="fas fa-lightbulb mr-1"></i> <span data-zh>重要发现</span><span data-en>Key Finding</span></p>
+      <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"><span data-zh>马来西亚央行（BNM）于 2025 年 7 月降息 25 个基点至 <strong>2.75%</strong>，为 5 年来首次降息，释放支持经济增长信号。2026 年联邦预算达 <strong>4,192 亿林吉特</strong>（约 994.7 亿美元），财政赤字目标 <strong>3.5% of GDP</strong>，优于 2025 年的 3.7%。</span><span data-en>BNM cut rates by 25 bps to <strong>2.75%</strong> in July 2025, the first cut in 5 years, signaling growth support. The 2026 federal budget reached <strong>MYR 419.2 billion</strong> (~USD 99.5 billion), with a fiscal deficit target of <strong>3.5% of GDP</strong>, improved from 3.7% in 2025.</span></p>
+    </div>
+
+    <!-- Economic Structure with Donut Chart -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4"><span data-zh>经济结构（2024 年）</span><span data-en>Economic Structure (2024)</span></h4>
+    <div class="grid md:grid-cols-2 gap-8 mb-8">
+      <!-- Donut Chart -->
+      <div class="flex flex-col items-center justify-center bg-white dark:bg-dark-card rounded-2xl p-8 shadow-sm border border-gray-100 dark:border-dark-border">
+        <div class="donut-chart mb-6">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-emerald-deep dark:text-emerald-400">GDP</div>
+              <div class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>产业结构</span><span data-en>Sector Mix</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-sm">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-emerald-deep"></span> <span data-zh>服务业</span><span data-en>Services</span> 53.6%</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-gold"></span> <span data-zh>制造业</span><span data-en>Manufacturing</span> 22.5%</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-cyan-600"></span> <span data-zh>农业</span><span data-en>Agriculture</span> 8.2%</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-violet-600"></span> <span data-zh>矿业</span><span data-en>Mining</span> 8.1%</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-rose-600"></span> <span data-zh>建筑业</span><span data-en>Construction</span> 4.0%</div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-full bg-slate-400"></span> <span data-zh>其他</span><span data-en>Others</span> 3.6%</div>
+        </div>
+      </div>
+
+      <!-- Economic Structure Table -->
+      <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-100 dark:border-dark-border">
+        <table class="styled-table">
+          <thead><tr><th><span data-zh>产业</span><span data-en>Sector</span></th><th><span data-zh>GDP 占比</span><span data-en>GDP Share</span></th><th><span data-zh>就业占比</span><span data-en>Employment</span></th><th><span data-zh>主要内容</span><span data-en>Key Components</span></th></tr></thead>
+          <tbody>
+            <tr><td class="font-semibold"><span data-zh>第一产业（农业）</span><span data-en>Primary (Agriculture)</span></td><td><strong>8.2%</strong></td><td><span data-zh>约 10%</span><span data-en>~10%</span></td><td><span data-zh>棕榈油（全球第二大生产国）、橡胶、水稻、渔业</span><span data-en>Palm oil (world's 2nd largest producer), rubber, rice, fisheries</span></td></tr>
+            <tr><td class="font-semibold"><span data-zh>第二产业（工业）</span><span data-en>Secondary (Industry)</span></td><td><span data-zh><strong>34.6%</strong>（制造业 22.5% + 矿业 8.1% + 建筑业 4.0%）</span><span data-en><strong>34.6%</strong> (Manufacturing 22.5% + Mining 8.1% + Construction 4.0%)</span></td><td><span data-zh>约 27%</span><span data-en>~27%</span></td><td><span data-zh>电子电气（E&amp;E）制造、石油天然气、化工、汽车组装、建筑</span><span data-en>E&amp;E manufacturing, oil &amp; gas, chemicals, auto assembly, construction</span></td></tr>
+            <tr><td class="font-semibold"><span data-zh>第三产业（服务业）</span><span data-en>Tertiary (Services)</span></td><td><strong>53.6%</strong></td><td><span data-zh>约 63%</span><span data-en>~63%</span></td><td><span data-zh>金融服务、旅游、批发零售、信息通信、物流、数字经济</span><span data-en>Financial services, tourism, wholesale &amp; retail, ICT, logistics, digital economy</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-xl p-5 border border-emerald-deep/10 dark:border-emerald-700/30">
+      <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300"><span data-zh><strong>经济发展阶段判断：</strong> <strong>中高收入国家</strong>（世界银行分类）。马来西亚是东南亚经济多元化程度最高的经济体之一，正处于从中高收入向高收入国家跨越的关键阶段，政府"昌明大马"（MADANI）愿景目标在 2028 年前迈入高收入国家行列。</span><span data-en><strong>Development Stage:</strong> <strong>Upper-middle-income country</strong> (World Bank classification). Malaysia is one of ASEAN's most diversified economies, at a critical juncture transitioning to high-income status. The government's MADANI vision targets high-income status by 2028.</span></p>
+    </div>
+  </article>
+
+  <!-- A.3 政治体制与治理 -->
+  <article id="sec-a-3" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.3</span>
+      <span data-zh>政治体制与治理</span><span data-en>Political System &amp; Governance</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-6">
+      <table class="styled-table">
+        <thead><tr><th style="width:18%"><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>内容</span><span data-en>Details</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>政体</span><span data-en>Government</span></td><td><span data-zh><strong>联邦议会君主立宪制</strong>。最高元首（Yang di-Pertuan Agong）由马来半岛 9 个州的苏丹每 5 年轮流担任，为国家元首；行政权归总理和内阁</span><span data-en><strong>Federal parliamentary constitutional monarchy</strong>. The Yang di-Pertuan Agong (Supreme Head of State) is elected every 5 years from among 9 Malay state sultans; executive power rests with the Prime Minister and Cabinet</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>现任领导人</span><span data-en>Current Leader</span></td><td><span data-zh>总理<strong>安瓦尔·易卜拉欣</strong>（Anwar Ibrahim），2022 年 11 月就任，领导"团结政府"（unity government），由希望联盟（PH）、国民阵线（BN）等多党联盟组成</span><span data-en>Prime Minister <strong>Anwar Ibrahim</strong>, took office November 2022, leading a "unity government" coalition comprising Pakatan Harapan (PH), Barisan Nasional (BN), and other parties</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>政治稳定性</span><span data-en>Political Stability</span></td><td><span data-zh><strong>基本稳定</strong>。团结政府维持了前任政府未能实现的政治稳定水平，执政联盟在 2023-2025 年多次州选举中巩固了执政地位，但联盟内部妥协较多，政策推进需平衡各方利益</span><span data-en><strong>Generally stable</strong>. The unity government has maintained stability that predecessors could not achieve, consolidating power through multiple state elections (2023–2025). However, intra-coalition compromises may slow policy implementation</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>法治水平</span><span data-en>Rule of Law</span></td><td><span data-zh>中等偏上。法律体系以英国普通法为基础，商业法律框架较为完善，合同执行力在东盟中处于较好水平（来源：世界银行治理指标）</span><span data-en>Above average. Legal system based on English common law, with a well-developed commercial legal framework and strong contract enforcement by ASEAN standards (Source: World Bank Governance Indicators)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>腐败程度</span><span data-en>Corruption</span></td><td><span data-zh>透明国际 CPI 得分 <strong>52/100</strong>，全球排名<strong>第 54 位</strong>，东盟第 3（仅次于新加坡和文莱），为<strong>历史最高分</strong>，反映反腐力度加强（来源：透明国际 2025）</span><span data-en>Transparency International CPI score <strong>52/100</strong>, global rank <strong>#54</strong>, 3rd in ASEAN (after Singapore and Brunei), a <strong>historic high</strong> reflecting strengthened anti-corruption efforts (Source: TI 2025)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>政府效能</span><span data-en>Gov't Effectiveness</span></td><td><span data-zh>中等偏上。政府推进数字化改革和财政整顿，行政效率在东盟中处于中上水平，但官僚程序仍有改善空间（来源：世界银行政府效能指标）</span><span data-en>Above average. Government advancing digital reforms and fiscal consolidation; administrative efficiency ranks upper-middle in ASEAN, though bureaucratic processes have room for improvement (Source: World Bank GEI)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>与中国关系</span><span data-en>Relations with China</span></td><td><span data-zh><strong>全面战略伙伴关系</strong>。2025 年 4 月习近平访马，签署 <strong>31 项双边合作协议</strong>（涵盖 AI、绿色技术、东海岸铁路升级、互免签证等）。中国是马来西亚<strong>最大贸易伙伴</strong>（连续多年），双边经贸合作深入</span><span data-en><strong>Comprehensive Strategic Partnership</strong>. Xi Jinping visited Malaysia in April 2025, signing <strong>31 bilateral cooperation agreements</strong> (covering AI, green tech, ECRL upgrade, mutual visa exemption, etc.). China is Malaysia's <strong>largest trading partner</strong> (for consecutive years) with deep bilateral economic ties</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>与美国/欧盟关系</span><span data-en>Relations with US/EU</span></td><td><span data-zh>与美国保持长期经贸关系，马来西亚对美贸易顺差约 <strong>260 亿美元</strong>（2023 年），但面临美国关税压力。与欧盟关系稳定，正推进马来西亚-欧盟 FTA 谈判。马来西亚在中美之间奉行<strong>务实平衡外交</strong></span><span data-en>Long-standing trade ties with the US; Malaysia's trade surplus with the US ~<strong>USD 26 billion</strong> (2023), but faces US tariff pressure. Stable EU relations with ongoing Malaysia-EU FTA negotiations. Malaysia pursues <strong>pragmatic balanced diplomacy</strong> between China and the US</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-400 dark:text-gray-500 italic"></p>
+  </article>
+
+  <!-- A.4 人口与社会 -->
+  <article id="sec-a-4" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.4</span>
+      <span data-zh>人口与社会</span><span data-en>Demographics &amp; Society</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>商业含义</span><span data-en>Business Implications</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>总人口</span><span data-en>Total Population</span></td><td><span data-zh>约 <strong>3,556 万</strong>（2024 年）</span><span data-en>Approx. <strong>35.56 million</strong> (2024)</span></td><td><span data-zh>中等规模市场，东盟第 6 大人口国，消费市场具备一定体量</span><span data-en>Mid-sized market, 6th largest ASEAN population, consumer market of meaningful scale</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>人口增长率</span><span data-en>Population Growth</span></td><td><span data-zh>约 <strong>1.1%</strong></span><span data-en>~<strong>1.1%</strong></span></td><td><span data-zh>温和增长，市场持续扩容但非爆发式增长</span><span data-en>Moderate growth; market expanding steadily but not explosively</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>中位年龄</span><span data-en>Median Age</span></td><td><span data-zh>约 <strong>30 岁</strong></span><span data-en>~<strong>30 years</strong></span></td><td><span data-zh>年轻劳动力充裕，消费活力强，数字化接受度高</span><span data-en>Abundant young workforce, strong consumer vitality, high digital adoption</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>城镇化率</span><span data-en>Urbanization</span></td><td><span data-zh>约 <strong>78%</strong></span><span data-en>~<strong>78%</strong></span></td><td><span data-zh>高度城镇化，消费集中在吉隆坡、槟城、柔佛等城市群，物流覆盖效率高</span><span data-en>Highly urbanized; consumption concentrated in KL, Penang, Johor metro areas; efficient logistics coverage</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>识字率/教育水平</span><span data-en>Literacy/Education</span></td><td><span data-zh>识字率约 <strong>95%</strong>，高等教育入学率较高</span><span data-en>Literacy ~<strong>95%</strong>, high tertiary enrollment rate</span></td><td><span data-zh>劳动力素质较好，中高端人才可得性尚可，但顶尖技术人才存在外流现象</span><span data-en>Good workforce quality; mid-to-high-end talent available, but top tech talent faces brain drain</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>互联网渗透率</span><span data-en>Internet Penetration</span></td><td><span data-zh>约 <strong>97%</strong></span><span data-en>~<strong>97%</strong></span></td><td><span data-zh>数字经济基础极为扎实，线上获客和数字化运营条件成熟</span><span data-en>Extremely solid digital economy foundation; mature conditions for online acquisition and digital operations</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>智能手机渗透率</span><span data-en>Smartphone Penetration</span></td><td><span data-zh>约 <strong>98%</strong></span><span data-en>~<strong>98%</strong></span></td><td><span data-zh>移动商务和移动支付高度普及，移动端优先策略可行</span><span data-en>Mobile commerce and payments highly prevalent; mobile-first strategy viable</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>主要宗教/文化特征</span><span data-en>Religion/Culture</span></td><td><span data-zh>伊斯兰教为国教（约 <strong>61%</strong>），佛教（约 20%），基督教（约 9%），印度教（约 6%）。民族构成：马来人约 50%，华人约 23%，印度人约 7%，其他原住民约 12%</span><span data-en>Islam as state religion (~<strong>61%</strong>), Buddhism (~20%), Christianity (~9%), Hinduism (~6%). Ethnic composition: Malay ~50%, Chinese ~23%, Indian ~7%, other indigenous ~12%</span></td><td><span data-zh><strong>多元文化市场</strong>，需注意清真（Halal）认证要求、斋月消费节奏、宗教节日营销节点；华人社群是重要消费力量，中文营销有效</span><span data-en><strong>Multicultural market</strong>; note Halal certification requirements, Ramadan consumption patterns, religious holiday marketing; Chinese community is a significant consumer force, Chinese-language marketing effective</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>贫富差距（基尼系数）</span><span data-en>Inequality (Gini)</span></td><td><span data-zh>约 <strong>0.40</strong>（2022 年）</span><span data-en>~<strong>0.40</strong> (2022)</span></td><td><span data-zh>中等偏高，消费分层明显，高端和大众市场均有空间，但需差异化定位（来源：马来西亚统计局）</span><span data-en>Moderately high; clear consumption stratification, opportunities in both premium and mass markets, differentiated positioning needed (Source: DOSM)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- A.5 基础设施 -->
+  <article id="sec-a-5" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.5</span>
+      <span data-zh>基础设施</span><span data-en>Infrastructure</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-6">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>现状</span><span data-en>Status</span></th><th><span data-zh>评级</span><span data-en>Rating</span></th><th><span data-zh>商业影响</span><span data-en>Business Impact</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>交通（公路/铁路）</span><span data-en>Transport (Road/Rail)</span></td>
+            <td><span data-zh>公路网发达，南北大道（NSE）连接主要城市；<strong>东海岸铁路（ECRL）在建</strong>（中马合作旗舰项目，预计 2027 年通车），将大幅改善东西马连通性；吉隆坡城市轨道交通持续扩建</span><span data-en>Well-developed road network; North-South Expressway (NSE) connects major cities; <strong>ECRL under construction</strong> (China-Malaysia flagship project, expected 2027 completion), significantly improving east-west connectivity; KL urban rail expanding</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>物流成本可控，西马半岛内陆运输高效；ECRL 通车后将显著降低东海岸物流成本</span><span data-en>Manageable logistics costs; efficient inland transport in Peninsular Malaysia; ECRL will significantly reduce east coast logistics costs</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>港口/航空</span><span data-en>Ports/Aviation</span></td>
+            <td><span data-zh><strong>巴生港（Port Klang）</strong>和<strong>丹戎帕拉帕斯港（PTP）</strong>为全球最繁忙转运港之一，PTP 全球排名前 20；<strong>吉隆坡国际机场（KLIA）</strong>为区域航空枢纽，年旅客吞吐量超 6,000 万人次</span><span data-en><strong>Port Klang</strong> and <strong>Port of Tanjung Pelepas (PTP)</strong> among world's busiest transshipment ports, PTP ranked global top 20; <strong>KLIA</strong> is a regional aviation hub with 60M+ annual passengers</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>进出口便利度极高，马六甲海峡航运优势突出，适合作为东盟区域分销中心</span><span data-en>Extremely high import/export convenience; outstanding Strait of Malacca shipping advantage; ideal as ASEAN regional distribution center</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>电力供应</span><span data-en>Power Supply</span></td>
+            <td><span data-zh>供应<strong>稳定可靠</strong>，电力覆盖率超 99%，以天然气和煤炭发电为主，可再生能源占比逐步提升，政府目标 2035 年可再生能源占比 40%</span><span data-en>Supply <strong>stable and reliable</strong>, electrification rate >99%, primarily gas and coal-fired; renewable energy share gradually increasing, government targets 40% renewables by 2035</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>制造业和数据中心运营电力保障充足，电价在区域内具有竞争力</span><span data-en>Ample power for manufacturing and data center operations; regionally competitive electricity prices</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>通信/互联网</span><span data-en>Telecom/Internet</span></td>
+            <td><span data-zh><strong>5G 部署推进中</strong>（由 Digital Nasional Berhad 统一建设），互联网渗透率 <strong>97%</strong>，固定宽带和移动网络覆盖良好</span><span data-en><strong>5G deployment underway</strong> (unified rollout by Digital Nasional Berhad), internet penetration <strong>97%</strong>, good fixed broadband and mobile coverage</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>数字业务基础扎实，支持云计算、物联网、远程办公等数字化运营</span><span data-en>Solid digital business foundation; supports cloud computing, IoT, remote work and digital operations</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>金融基础设施</span><span data-en>Financial Infrastructure</span></td>
+            <td><span data-zh>银行体系健全，伊斯兰金融全球领先，电子支付（DuitNow、Touch 'n Go eWallet）普及率高，吉隆坡为区域金融中心之一</span><span data-en>Sound banking system; global leader in Islamic finance; high e-payment adoption (DuitNow, Touch 'n Go eWallet); KL is a regional financial center</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>支付便利，融资渠道多元，伊斯兰金融产品可服务穆斯林市场需求</span><span data-en>Convenient payments, diverse financing channels; Islamic finance products serve Muslim market needs</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>工业园区/经济特区</span><span data-en>Industrial Parks/SEZs</span></td>
+            <td><span data-zh>多个自由贸易区和经济特区，包括<strong>柔佛-新加坡经济特区（JS-SEZ）</strong>、槟城自由工业区、赛城科技园等，提供税收优惠和简化审批</span><span data-en>Multiple FTZs and SEZs including <strong>Johor-Singapore SEZ (JS-SEZ)</strong>, Penang Free Industrial Zone, Cyberjaya Tech Park, etc., offering tax incentives and streamlined approvals</span></td>
+            <td><span class="text-gray-400">—</span></td>
+            <td><span data-zh>入驻经济特区可享受税收减免、简化通关等优惠，集聚效应有利于供应链整合</span><span data-en>SEZ tenants enjoy tax exemptions, simplified customs clearance; agglomeration effects benefit supply chain integration</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-gold/5 dark:bg-gold/10 border-l-4 border-gold rounded-r-xl p-5">
+      <p class="text-sm font-semibold text-gold mb-1"><i class="fas fa-lightbulb mr-1"></i> <span data-zh>重要发现</span><span data-en>Key Finding</span></p>
+      <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"><span data-zh>马来西亚物流市场 2025 年规模约 <strong>248 亿美元</strong>，预计 2034 年达 <strong>346 亿美元</strong>（CAGR 3.68%）。数字经济为东南亚增长最快，2025 年预计达 <strong>390 亿美元</strong>（来源：Google e-Conomy SEA 报告）。基础设施整体评级优良，是东盟中基础设施最完善的国家之一。</span><span data-en>Malaysia's logistics market is ~<strong>USD 24.8 billion</strong> in 2025, projected to reach <strong>USD 34.6 billion</strong> by 2034 (CAGR 3.68%). Its digital economy is ASEAN's fastest-growing, expected to reach <strong>USD 39 billion</strong> in 2025 (Source: Google e-Conomy SEA). Overall infrastructure rated excellent — one of the best in ASEAN.</span></p>
+    </div>
+  </article>
+
+  <!-- A.6 对外经贸 -->
+  <article id="sec-a-6" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">A.6</span>
+      <span data-zh>对外经贸</span><span data-en>Foreign Trade &amp; Investment</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-6">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>来源</span><span data-en>Source</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>进出口总额</span><span data-en>Total Trade</span></td><td><span data-zh>约 <strong>5,000-5,500 亿美元</strong>（2025 年估计），贸易依存度高</span><span data-en>Approx. <strong>USD 500–550 billion</strong> (2025 est.), high trade dependency</span></td><td><span data-zh>马来西亚统计局</span><span data-en>DOSM</span> / MATRADE</td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>主要出口商品</span><span data-en>Key Exports</span></td><td><span data-zh><strong>电子电气产品（E&amp;E）</strong>（占出口约 40%）、棕榈油及制品、石油天然气、橡胶制品、化工产品</span><span data-en><strong>E&amp;E products</strong> (~40% of exports), palm oil &amp; derivatives, oil &amp; gas, rubber products, chemicals</span></td><td>MATRADE</td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>主要进口商品</span><span data-en>Key Imports</span></td><td><span data-zh>电子零部件、机械设备、化工产品、金属制品、运输设备</span><span data-en>Electronic components, machinery, chemicals, metal products, transport equipment</span></td><td><span data-zh>马来西亚统计局</span><span data-en>DOSM</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>前 5 大贸易伙伴</span><span data-en>Top 5 Trade Partners</span></td><td><span data-zh><strong>中国</strong>（最大）、新加坡、美国、日本、中国台湾</span><span data-en><strong>China</strong> (largest), Singapore, US, Japan, Taiwan</span></td><td><span data-zh>马来西亚统计局</span><span data-en>DOSM</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>与中国双边贸易额</span><span data-en>China Bilateral Trade</span></td><td><span data-zh>约 <strong>2,000 亿美元</strong>（2025 年估计），中国连续多年为马来西亚最大贸易伙伴</span><span data-en>Approx. <strong>USD 200 billion</strong> (2025 est.); China has been Malaysia's largest trading partner for consecutive years</span></td><td><span data-zh>中国海关总署 / 马来西亚统计局</span><span data-en>China Customs / DOSM</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400">FTA/<span data-zh>区域贸易协定</span><span data-en>Regional Trade Agreements</span></td><td><span data-zh><strong>RCEP</strong>、<strong>CPTPP</strong>、<strong>ASEAN-China FTA 3.0</strong>（2025 年 10 月签署升级议定书）、ASEAN-Australia-NZ FTA、马来西亚-日本 EPA 等 16 个 FTA</span><span data-en><strong>RCEP</strong>, <strong>CPTPP</strong>, <strong>ASEAN-China FTA 3.0</strong> (upgrade protocol signed Oct 2025), ASEAN-Australia-NZ FTA, Malaysia-Japan EPA, etc. — 16 FTAs in total</span></td><td>MITI</td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>关税水平（平均）</span><span data-en>Avg. Tariff Level</span></td><td><span data-zh>简单平均约 <strong>5-6%</strong>，工业品平均更低；RCEP/CPTPP 框架下大量商品零关税</span><span data-en>Simple avg. ~<strong>5–6%</strong>, lower for industrial goods; many products at zero tariff under RCEP/CPTPP</span></td><td>WTO / MITI</td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>外商直接投资（FDI）流入</span><span data-en>FDI Inflows</span></td><td><span data-zh>2025 年上半年获批投资 <strong>1,903 亿林吉特</strong>（约 451 亿美元），同比增长 <strong>18.7%</strong></span><span data-en>H1 2025 approved investments <strong>MYR 190.3 billion</strong> (~USD 45.1 billion), YoY growth <strong>18.7%</strong></span></td><td>MIDA</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bg-gold/5 dark:bg-gold/10 border-l-4 border-gold rounded-r-xl p-5">
+      <p class="text-sm font-semibold text-gold mb-1"><i class="fas fa-lightbulb mr-1"></i> <span data-zh>重要发现</span><span data-en>Key Finding</span></p>
+      <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed"><span data-zh>E&amp;E 制造业是马来西亚关键增长引擎，2026 年 1 月制造业销售额达 <strong>1,694 亿林吉特</strong>（同比 +7.1%），其中 E&amp;E 增长 <strong>15.6%</strong>。马来西亚在全球半导体供应链中占据重要位置，是全球第六大半导体出口国。ASEAN-China FTA 3.0 升级议定书的签署将进一步深化中马经贸合作。</span><span data-en>E&amp;E manufacturing is Malaysia's key growth engine. Jan 2026 manufacturing sales reached <strong>MYR 169.4 billion</strong> (YoY +7.1%), with E&amp;E growing <strong>15.6%</strong>. Malaysia holds a critical position in the global semiconductor supply chain as the world's 6th largest semiconductor exporter. The ASEAN-China FTA 3.0 upgrade protocol will further deepen China-Malaysia economic ties.</span></p>
+    </div>
+  </article>
+</section>
+<!-- END PART A -->
+
+<!-- ==================== PART B ==================== -->
+<section id="partB" class="mb-20">
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="inline-block w-10 h-1 bg-gold rounded"></span>
+      <span class="text-gold font-medium text-sm tracking-widest uppercase">Part B</span>
+    </div>
+    <h2 class="text-4xl md:text-5xl font-bold text-emerald-deep dark:text-emerald-400 mb-3"><span data-zh>营商环境评估</span><span data-en>Business Environment Assessment</span></h2>
+    <p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-3xl"><span data-zh>外资政策、税收法规、劳动力市场、风险因素与营商吸引力综合评估。</span><span data-en>Comprehensive assessment of FDI policies, tax regulations, labor market, risk factors, and overall business attractiveness.</span></p>
+  </div>
+
+  <!-- B.1 外资政策与市场准入 -->
+  <article id="sec-b-1" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">B.1</span>
+      <span data-zh>外资政策与市场准入</span><span data-en>FDI Policy &amp; Market Access</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+      <table class="styled-table">
+        <thead><tr><th style="width:18%"><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>内容</span><span data-en>Details</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>外资准入限制</span><span data-en>FDI Restrictions</span></td><td><span data-zh>大部分行业允许 <strong>100% 外资持股</strong>，无需本地合作伙伴。限制行业包括：水务和能源分配（外资上限 49%）、部分媒体和电信（需审批）、土著（Bumiputera）保留行业（如部分政府采购）。负面清单相对较短（来源：MIDA）</span><span data-en>Most sectors allow <strong>100% foreign ownership</strong> without local partners. Restricted sectors include: water &amp; energy distribution (49% foreign cap), some media &amp; telecom (approval required), Bumiputera-reserved sectors (e.g., certain government procurement). Negative list is relatively short (Source: MIDA)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>外资审批流程</span><span data-en>FDI Approval Process</span></td><td><span data-zh>主要审批机构为<strong>马来西亚投资发展局（MIDA）</strong>，制造业许可证审批周期通常 <strong>2-4 周</strong>，流程相对透明高效。经济特区内审批更为简化</span><span data-en>Primary approval body is <strong>MIDA</strong>; manufacturing license approval typically takes <strong>2–4 weeks</strong>, with relatively transparent and efficient processes. Approvals further streamlined within SEZs</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>外汇管制</span><span data-en>Forex Controls</span></td><td><span data-zh><strong>相对宽松</strong>。利润、股息、资本利得汇出基本自由，无需特别审批。大额资金流动需向 BNM 报告，但不构成实质障碍。林吉特为受管理浮动汇率</span><span data-en><strong>Relatively relaxed</strong>. Profit, dividend, and capital gains repatriation largely unrestricted without special approval. Large fund flows require BNM reporting but pose no substantive barrier. MYR is a managed float currency</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>投资保护</span><span data-en>Investment Protection</span></td><td><span data-zh>与中国签有<strong>双边投资保护协定（BIT）</strong>，参与 ICSID 争端解决机制。RCEP 和 CPTPP 提供额外投资保护条款。外资企业与本地企业享有同等法律保护</span><span data-en><strong>BIT signed with China</strong>; participates in ICSID dispute resolution. RCEP and CPTPP provide additional investment protection. Foreign enterprises enjoy equal legal protection as local firms</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>优惠政策</span><span data-en>Incentive Policies</span></td><td><span data-zh><strong>新投资激励框架（NIIF）</strong>提供分层税收优惠：先锋地位（5-10 年所得税减免）、投资税务补贴、再投资补贴等。高科技、绿色技术、数据中心等领域优惠力度更大。经济特区提供额外优惠</span><span data-en><strong>New Investment Incentive Framework (NIIF)</strong> offers tiered tax incentives: Pioneer Status (5–10 year income tax exemption), Investment Tax Allowance, Reinvestment Allowance, etc. Enhanced incentives for high-tech, green tech, data centers. SEZs offer additional benefits</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>土地/房产政策</span><span data-en>Land/Property Policy</span></td><td><span data-zh>外资可购买工业用地和商业地产，但住宅购买有最低价格限制（各州不同，通常 100-200 万林吉特以上）。工业用地可通过长期租赁（60-99 年）获得</span><span data-en>Foreign investors may purchase industrial land and commercial property; residential purchases have minimum price thresholds (varies by state, typically MYR 1–2 million+). Industrial land available via long-term lease (60–99 years)</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- B.2 税收与法规 -->
+  <article id="sec-b-2" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">B.2</span>
+      <span data-zh>税收与法规</span><span data-en>Tax &amp; Regulations</span>
+    </h3>
+
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-8">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>税种</span><span data-en>Tax Type</span></th><th><span data-zh>税率</span><span data-en>Rate</span></th><th><span data-zh>说明</span><span data-en>Notes</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>企业所得税</span><span data-en>Corporate Income Tax</span></td><td><span data-zh>标准 <strong>24%</strong></span><span data-en>Standard <strong>24%</strong></span></td><td><span data-zh>中小企业首 60 万林吉特应税收入适用 <strong>17%</strong> 优惠税率；NIIF 框架下可获 5-15 年税收减免；2025 年起对大型跨国企业实施全球最低税率 <strong>15%</strong>（来源：LHDN / 马来西亚财政部）</span><span data-en>SMEs enjoy <strong>17%</strong> preferential rate on first MYR 600K taxable income; NIIF offers 5–15 year tax exemptions; global minimum tax of <strong>15%</strong> for large MNEs from 2025 (Source: LHDN / MOF)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>增值税/消费税</span><span data-en>VAT/Consumption Tax</span></td><td><span data-zh>服务税 <strong>6-8%</strong>（2025 年起部分新纳入服务扩大至 8%）；销售税 <strong>5-10%</strong></span><span data-en>Service tax <strong>6–8%</strong> (expanded to 8% for some services from 2025); Sales tax <strong>5–10%</strong></span></td><td><span data-zh>马来西亚不征收增值税（GST 于 2018 年废除），改为销售与服务税（SST）体系，税负相对较轻</span><span data-en>Malaysia does not levy VAT (GST abolished in 2018), replaced by Sales &amp; Service Tax (SST) system; relatively light tax burden</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>个人所得税</span><span data-en>Personal Income Tax</span></td><td><span data-zh>最高边际税率 <strong>30%</strong></span><span data-en>Top marginal rate <strong>30%</strong></span></td><td><span data-zh>累进税率 0-30%，非居民统一 30%。外籍员工可享受"知识工人"等特殊税率优惠</span><span data-en>Progressive rates 0–30%; non-residents flat 30%. Expatriates may qualify for "Knowledge Worker" special tax rates</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>关税</span><span data-en>Customs Duty</span></td><td><span data-zh>简单平均约 <strong>5-6%</strong></span><span data-en>Simple avg. ~<strong>5–6%</strong></span></td><td><span data-zh>RCEP/CPTPP 框架下大量商品零关税，E&amp;E 零部件和资本设备进口多数免税</span><span data-en>Many goods at zero tariff under RCEP/CPTPP; most E&amp;E components and capital equipment imports duty-free</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>预提税</span><span data-en>Withholding Tax</span></td><td><span data-zh>股息 <strong>0%</strong>（单层税制）；利息 <strong>15%</strong>；特许权使用费 <strong>10%</strong></span><span data-en>Dividends <strong>0%</strong> (single-tier system); Interest <strong>15%</strong>; Royalties <strong>10%</strong></span></td><td><span data-zh>中马双边税收协定可降低预提税率（利息降至 10%，特许权使用费降至 8-10%）</span><span data-en>China-Malaysia DTA reduces WHT rates (interest to 10%, royalties to 8–10%)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>转让定价规则</span><span data-en>Transfer Pricing</span></td><td><span data-zh>有，<strong>较为严格</strong></span><span data-en>Yes, <strong>relatively strict</strong></span></td><td><span data-zh>遵循 OECD 转让定价指南，要求准备同期文档（Master File + Local File），税务局审查力度逐年加强</span><span data-en>Follows OECD TP Guidelines; contemporaneous documentation required (Master File + Local File); tax authority scrutiny increasing annually</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>避免双重征税协定</span><span data-en>Double Tax Agreement</span></td><td><span data-zh><strong>已签署</strong></span><span data-en><strong>Signed</strong></span></td><td><span data-zh>中马于 1985 年签署避免双重征税协定，2016 年修订议定书生效，覆盖所得税和资本利得税</span><span data-en>China-Malaysia DTA signed in 1985, revised protocol effective 2016, covering income tax and capital gains tax</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4"><span data-zh>关键法规环境</span><span data-en>Key Regulatory Environment</span></h4>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>评估</span><span data-en>Rating</span></th><th><span data-zh>说明</span><span data-en>Notes</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>知识产权保护</span><span data-en>IP Protection</span></td>
+            <td><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> <span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>法律框架较完善（专利法、商标法、版权法齐备），加入 WIPO 主要公约，但执法力度有待加强，盗版和仿冒问题在部分领域仍存在</span><span data-en>Comprehensive legal framework (patent, trademark, copyright laws in place); member of key WIPO conventions; enforcement needs strengthening; piracy and counterfeiting persist in some sectors</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>数据隐私/跨境数据</span><span data-en>Data Privacy/Cross-border</span></td>
+            <td><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> <span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>《个人数据保护法》（PDPA 2010）为主要法规，2024 年修订加强执法力度。跨境数据传输需满足白名单国家要求或获得数据主体同意，数据本地化要求逐步收紧</span><span data-en>Personal Data Protection Act (PDPA 2010) is the primary regulation, amended in 2024 with stronger enforcement. Cross-border data transfers require whitelist country compliance or data subject consent; data localization requirements tightening</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>劳动法</span><span data-en>Labor Law</span></td>
+            <td><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> <span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>《雇佣法》（Employment Act 1955）2023 年修订后加强劳工保护（最低工资提至 <strong>1,500 林吉特/月</strong>，最高工时 45 小时/周）。解雇需合理理由，遣散费有法定标准。外籍劳工雇佣需申请配额</span><span data-en>Employment Act 1955 (amended 2023) strengthened labor protections (minimum wage raised to <strong>MYR 1,500/month</strong>, max 45 hours/week). Dismissal requires just cause; statutory severance pay. Foreign worker hiring requires quota approval</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>环保法规</span><span data-en>Environmental Regulations</span></td>
+            <td><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> <span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>环保法规日趋严格，大型项目需环境影响评估（EIA），碳排放管理框架正在建立。2026 年预算强调绿色转型，企业需关注合规成本上升</span><span data-en>Environmental regulations increasingly strict; large projects require EIA; carbon emission management framework under development. 2026 budget emphasizes green transition; companies should monitor rising compliance costs</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>反垄断/竞争法</span><span data-en>Antitrust/Competition</span></td>
+            <td><span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400 font-semibold"><span class="w-3 h-3 rounded-full bg-green-500 inline-block"></span> <span data-zh>优</span><span data-en>Excellent</span></span></td>
+            <td><span data-zh>《竞争法》（Competition Act 2010）由马来西亚竞争委员会（MyCC）执行，框架清晰，执法力度适中，对外资企业无歧视性适用</span><span data-en>Competition Act 2010 enforced by MyCC; clear framework, moderate enforcement, non-discriminatory application to foreign enterprises</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- B.3 劳动力市场 -->
+  <article id="sec-b-3" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">B.3</span>
+      <span data-zh>劳动力市场</span><span data-en>Labor Market</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>评估</span><span data-en>Assessment</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>劳动力总量</span><span data-en>Total Workforce</span></td><td><span data-zh>约 <strong>1,680 万</strong>（2025 年），劳动参与率约 70%</span><span data-en>Approx. <strong>16.8 million</strong> (2025), labor participation rate ~70%</span></td><td><span data-zh>劳动力规模适中，能满足中等规模制造和服务业需求（来源：马来西亚统计局）</span><span data-en>Adequate workforce size for mid-scale manufacturing and services (Source: DOSM)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>平均工资水平</span><span data-en>Average Wages</span></td><td><span data-zh>制造业平均月薪约 <strong>2,800-3,500 林吉特</strong>（约 650-820 美元），白领/技术岗位 <strong>4,000-8,000 林吉特</strong></span><span data-en>Manufacturing avg. monthly salary ~<strong>MYR 2,800–3,500</strong> (~USD 650–820); white-collar/tech roles <strong>MYR 4,000–8,000</strong></span></td><td><span data-zh>高于越南、印尼，低于新加坡、中国沿海，<strong>性价比适中</strong>（来源：Jobstreet / 马来西亚统计局）</span><span data-en>Higher than Vietnam/Indonesia, lower than Singapore/China coastal; <strong>moderate cost-effectiveness</strong> (Source: Jobstreet / DOSM)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>技术工人可得性</span><span data-en>Skilled Worker Availability</span></td><td><span data-zh>E&amp;E 和制造业技术工人储备较好，IT/数字人才需求缺口约 <strong>12,000-15,000 人/年</strong></span><span data-en>Good E&amp;E and manufacturing skilled worker reserves; IT/digital talent gap ~<strong>12,000–15,000/year</strong></span></td><td><span data-zh><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> 中等偏上</span>。基础技术工人充足，但高端 AI、半导体设计等领域人才竞争激烈</span><span data-en><span class="inline-flex items-center gap-1 text-yellow-600 dark:text-yellow-400 font-semibold"><span class="w-3 h-3 rounded-full bg-yellow-500 inline-block"></span> Above Average</span>. Basic skilled workers sufficient, but intense competition for high-end AI, semiconductor design talent</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>英语/中文能力</span><span data-en>English/Chinese Proficiency</span></td><td><span data-zh><strong>英语</strong>：商务环境广泛使用，大部分白领英语流利；<strong>中文</strong>：华人社群（约 23%）普遍掌握中文，吉隆坡、槟城等地中文人才丰富</span><span data-en><strong>English</strong>: widely used in business, most white-collar workers fluent; <strong>Chinese</strong>: Chinese community (~23%) generally proficient, abundant Chinese-speaking talent in KL, Penang</span></td><td><span data-zh>中国企业在马来西亚招聘双语人才相对容易，这是马来西亚相对其他东盟国家的独特优势</span><span data-en>Chinese companies find it relatively easy to recruit bilingual talent in Malaysia — a unique advantage over other ASEAN countries</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>劳动力成本趋势</span><span data-en>Labor Cost Trend</span></td><td><span data-zh><strong>温和上升</strong>。最低工资 2023 年提至 1,500 林吉特/月，未来可能进一步上调；技术岗位薪资年增约 4-6%</span><span data-en><strong>Moderately rising</strong>. Minimum wage raised to MYR 1,500/month in 2023, may increase further; tech role salaries growing ~4–6% annually</span></td><td><span data-zh>成本上升可控，但需关注最低工资政策变化对劳动密集型行业的影响</span><span data-en>Cost increases manageable, but monitor minimum wage policy changes impacting labor-intensive industries</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>劳资关系</span><span data-en>Labor Relations</span></td><td><span data-zh>总体<strong>稳定</strong>。工会组织率约 6-7%，罢工极为罕见，劳资纠纷主要通过工业法庭解决</span><span data-en>Generally <strong>stable</strong>. Union membership ~6–7%, strikes extremely rare, disputes mainly resolved through Industrial Court</span></td><td><span data-zh>劳资关系风险低，用工环境相对友好，但需遵守日益严格的劳工保护法规</span><span data-en>Low labor relations risk; relatively friendly employment environment, but must comply with increasingly strict labor protection regulations</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </article>
+
+  <!-- B.4 风险因素 -->
+  <article id="sec-b-4" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">B.4</span>
+      <span data-zh>风险因素</span><span data-en>Risk Factors</span>
+    </h3>
+
+    <!-- Political Risks -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2"><i class="fas fa-landmark text-emerald-deep dark:text-emerald-400"></i> <span data-zh>政治风险</span><span data-en>Political Risks</span></h4>
+    <div class="grid md:grid-cols-1 gap-4 mb-8">
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>政权更迭/政策连续性</span><span data-en>Regime Change/Policy Continuity</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>团结政府执政基础已巩固，但联盟内部多党博弈可能导致部分政策推进缓慢。下届大选最迟 2027 年举行，政策连续性风险需关注</span><span data-en>The unity government's power base is consolidated, but intra-coalition multi-party dynamics may slow some policy implementation. Next general election due by 2027; policy continuity risk warrants monitoring</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>地缘政治冲突</span><span data-en>Geopolitical Conflict</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>南海主权争议（与中国在南沙群岛存在重叠主张）为潜在摩擦点，但双方均倾向通过外交途径管控分歧，短期内升级为冲突的概率低</span><span data-en>South China Sea sovereignty disputes (overlapping claims with China in the Spratly Islands) are a potential friction point, but both sides prefer diplomatic management; low probability of short-term escalation</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>制裁/贸易限制</span><span data-en>Sanctions/Trade Restrictions</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>马来西亚本身不面临制裁风险，但<strong>美国关税压力</strong>是主要外部风险。IMF 预计 2026 年增速因美国关税从 4.6% 降至 4.3%。中美科技脱钩可能影响马来西亚 E&amp;E 供应链</span><span data-en>Malaysia itself faces no sanctions risk, but <strong>US tariff pressure</strong> is the main external risk. IMF estimates 2026 growth reduced from 4.6% to 4.3% due to US tariffs. US-China tech decoupling may impact Malaysia's E&amp;E supply chain</span></p>
+      </div>
+    </div>
+
+    <!-- Economic Risks -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2"><i class="fas fa-chart-bar text-emerald-deep dark:text-emerald-400"></i> <span data-zh>经济风险</span><span data-en>Economic Risks</span></h4>
+    <div class="grid md:grid-cols-1 gap-4 mb-8">
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>汇率波动</span><span data-en>Exchange Rate Volatility</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>林吉特受美元走势、大宗商品价格和全球风险偏好影响波动。2025-2026 年 USD/MYR 在 4.2-4.4 区间波动，企业需做好汇率对冲</span><span data-en>MYR fluctuates with USD trends, commodity prices, and global risk appetite. USD/MYR ranged 4.2–4.4 in 2025–2026; companies should implement FX hedging</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>通胀/经济衰退</span><span data-en>Inflation/Recession</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>通胀保持在 1.4% 的低水平，央行降息支持增长。全球经济放缓可能拖累出口，但内需韧性较强，经济衰退概率低</span><span data-en>Inflation remains low at 1.4%; central bank rate cut supports growth. Global slowdown may drag exports, but domestic demand is resilient; recession probability low</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>主权债务风险</span><span data-en>Sovereign Debt Risk</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>公共债务/GDP 约 64-65%，处于可控水平。政府积极推进财政整顿，主权评级稳定，债务违约风险极低</span><span data-en>Public debt/GDP ~64–65%, at manageable levels. Government actively pursuing fiscal consolidation; sovereign ratings stable; default risk extremely low</span></p>
+      </div>
+    </div>
+
+    <!-- Legal Risks -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2"><i class="fas fa-gavel text-emerald-deep dark:text-emerald-400"></i> <span data-zh>法律风险</span><span data-en>Legal Risks</span></h4>
+    <div class="grid md:grid-cols-1 gap-4 mb-8">
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>法规变化不可预测性</span><span data-en>Regulatory Unpredictability</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>税收政策调整较频繁（如服务税扩围、全球最低税率实施），企业需持续跟踪政策变化。但整体法规框架透明度尚可</span><span data-en>Tax policy adjustments are frequent (e.g., service tax expansion, global minimum tax implementation); companies must continuously track policy changes. Overall regulatory framework transparency is acceptable</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>合同执行力</span><span data-en>Contract Enforcement</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>法律体系以英国普通法为基础，商业合同执行力较强，仲裁机制（AIAC 亚洲国际仲裁中心）运作良好</span><span data-en>Legal system based on English common law; strong commercial contract enforcement; arbitration mechanism (AIAC) operates effectively</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>知识产权侵权</span><span data-en>IP Infringement</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>法律框架完善但执法力度不足，部分行业（软件、消费品）仿冒问题仍存在，企业需主动注册和维权</span><span data-en>Comprehensive legal framework but insufficient enforcement; counterfeiting persists in some sectors (software, consumer goods); companies should proactively register and defend IP</span></p>
+      </div>
+    </div>
+
+    <!-- Operational Risks -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2"><i class="fas fa-cogs text-emerald-deep dark:text-emerald-400"></i> <span data-zh>运营风险</span><span data-en>Operational Risks</span></h4>
+    <div class="grid md:grid-cols-1 gap-4 mb-8">
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>基础设施不足</span><span data-en>Infrastructure Gaps</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>基础设施整体完善，是东盟中最好的国家之一。东马（沙巴、砂拉越）基础设施相对薄弱，但西马半岛运营条件优良</span><span data-en>Overall infrastructure is excellent, among the best in ASEAN. East Malaysia (Sabah, Sarawak) infrastructure relatively weaker, but Peninsular Malaysia operating conditions are superior</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-yellow-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>供应链中断</span><span data-en>Supply Chain Disruption</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>全球贸易不确定性和中美科技脱钩可能影响 E&amp;E 供应链。马六甲海峡航运安全总体有保障，但极端情况下存在瓶颈风险</span><span data-en>Global trade uncertainty and US-China tech decoupling may impact E&amp;E supply chains. Strait of Malacca shipping security generally assured, but bottleneck risk exists in extreme scenarios</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>自然灾害</span><span data-en>Natural Disasters</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>不在地震带和台风路径上，但东海岸每年 11-2 月季风季节有洪水风险，部分地区偶发山体滑坡</span><span data-en>Not on earthquake belt or typhoon path, but east coast faces flood risk during Nov–Feb monsoon season; occasional landslides in some areas</span></p>
+      </div>
+    </div>
+
+    <!-- Social Risks -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4 flex items-center gap-2"><i class="fas fa-users text-emerald-deep dark:text-emerald-400"></i> <span data-zh>社会风险</span><span data-en>Social Risks</span></h4>
+    <div class="grid md:grid-cols-1 gap-4 mb-6">
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>文化差异/沟通障碍</span><span data-en>Cultural Differences/Communication</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>多元文化社会，华人社群庞大，中文沟通无障碍。英语广泛使用，文化差异对商业运营影响有限</span><span data-en>Multicultural society with large Chinese community; no Chinese communication barriers. English widely used; cultural differences have limited impact on business operations</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>社会治安</span><span data-en>Public Safety</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>总体治安良好，犯罪率在东盟中处于较低水平。吉隆坡等大城市需注意一般性城市安全问题（扒窃等）</span><span data-en>Generally good public safety; crime rate relatively low by ASEAN standards. Major cities like KL require attention to general urban safety issues (pickpocketing, etc.)</span></p>
+      </div>
+      <div class="bg-white dark:bg-dark-card rounded-xl border-l-4 border-green-500 p-5 shadow-sm card-hover">
+        <div class="flex flex-wrap items-center gap-3 mb-2">
+          <span class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>反外资情绪</span><span data-en>Anti-FDI Sentiment</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>严重度：低</span><span data-en>Severity: Low</span></span>
+          <span class="text-xs px-2 py-0.5 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400"><span data-zh>概率：低</span><span data-en>Probability: Low</span></span>
+        </div>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>马来西亚长期欢迎外资，社会对外资企业接受度高。但部分敏感行业（如涉及土著权益的领域）需注意本地化合规</span><span data-en>Malaysia has long welcomed foreign investment; high social acceptance of foreign enterprises. However, some sensitive sectors (involving Bumiputera interests) require attention to localization compliance</span></p>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 dark:text-gray-500 italic"></p>
+  </article>
+
+  <!-- B.5 营商环境吸引力记分卡 -->
+  <article id="sec-b-5" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">B.5</span>
+      <span data-zh>营商环境吸引力记分卡</span><span data-en>Business Attractiveness Scorecard</span>
+    </h3>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-6">
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>市场规模与增长潜力</span><span data-en>Market Size &amp; Growth</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-green-500" style="width:90%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>GDP 增速 5.2%（2025 年），人口 3,556 万，数字经济和 E&amp;E 制造业增长强劲，市场扩容动力充足</span><span data-en>GDP growth 5.2% (2025), population 35.56M, strong digital economy and E&amp;E manufacturing growth, ample market expansion momentum</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>外资政策友好度</span><span data-en>FDI Policy Friendliness</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-green-500" style="width:92%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>大部分行业允许 100% 外资，MIDA 审批高效，NIIF 提供有竞争力的税收优惠，外汇管制宽松</span><span data-en>Most sectors allow 100% foreign ownership; MIDA approval efficient; NIIF offers competitive tax incentives; relaxed forex controls</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>税收竞争力</span><span data-en>Tax Competitiveness</span></h5>
+          <span class="w-4 h-4 rounded-full bg-yellow-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-yellow-500" style="width:65%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>企业所得税 24% 在区域内中等偏高（高于新加坡 17%、泰国 20%），但 NIIF 优惠可大幅降低实际税负；无增值税是优势</span><span data-en>CIT 24% is regionally above average (vs. Singapore 17%, Thailand 20%), but NIIF incentives significantly reduce effective tax burden; no VAT is an advantage</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>法治与合规环境</span><span data-en>Rule of Law &amp; Compliance</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-green-500" style="width:85%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>英国普通法体系，商业法律框架完善，合同执行力强，仲裁机制成熟。CPI 得分持续改善</span><span data-en>English common law system; comprehensive commercial legal framework; strong contract enforcement; mature arbitration. CPI score continuously improving</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>基础设施完善度</span><span data-en>Infrastructure Quality</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-green-500" style="width:93%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>交通、港口、电力、通信全面优良，东盟领先水平。数据中心和 5G 基础设施快速建设中</span><span data-en>Transport, ports, power, telecom all excellent, ASEAN-leading. Data center and 5G infrastructure rapidly expanding</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>劳动力性价比</span><span data-en>Labor Cost-Effectiveness</span></h5>
+          <span class="w-4 h-4 rounded-full bg-yellow-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-yellow-500" style="width:68%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>劳动力素质较好，双语人才丰富，但成本高于越南、印尼等竞争对手。高端技术人才存在缺口</span><span data-en>Good workforce quality, abundant bilingual talent, but costs higher than Vietnam/Indonesia competitors. High-end tech talent gap exists</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>政治稳定性</span><span data-en>Political Stability</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-green-500" style="width:82%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>团结政府执政稳定，政策可预测性较好，社会安定</span><span data-en>Unity government governing stably; good policy predictability; social stability</span></p>
+      </div>
+
+      <div class="bg-white dark:bg-dark-card rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-dark-border card-hover">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold text-gray-800 dark:text-gray-200"><span data-zh>汇率与金融稳定性</span><span data-en>FX &amp; Financial Stability</span></h5>
+          <span class="w-4 h-4 rounded-full bg-yellow-500 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-gray-200 dark:bg-dark-border mb-3">
+          <div class="progress-fill bg-yellow-500" style="width:70%"></div>
+        </div>
+        <p class="text-xs text-gray-500 dark:text-gray-400"><span data-zh>林吉特波动可控，金融体系健全，但受外部因素（美元走势、大宗商品价格）影响较大</span><span data-en>MYR volatility manageable; sound financial system, but significantly influenced by external factors (USD trends, commodity prices)</span></p>
+      </div>
+
+      <div class="bg-emerald-deep dark:bg-emerald-900 rounded-2xl p-6 shadow-lg border border-emerald-deep/20 dark:border-emerald-700/30 card-hover text-white">
+        <div class="flex items-center justify-between mb-3">
+          <h5 class="font-semibold"><span data-zh>综合营商吸引力</span><span data-en>Overall Business Attractiveness</span></h5>
+          <span class="w-4 h-4 rounded-full bg-green-400 flex-shrink-0"></span>
+        </div>
+        <div class="progress-bar bg-white/20 mb-3">
+          <div class="progress-fill bg-gold" style="width:88%"></div>
+        </div>
+        <p class="text-xs text-emerald-100"><span data-zh><strong>马来西亚是东盟中营商环境最友好的国家之一</strong>，基础设施完善、法治健全、外资政策开放、文化多元包容，特别适合作为中国企业进入东盟市场的桥头堡和区域运营中心</span><span data-en><strong>Malaysia is one of ASEAN's most business-friendly countries</strong>, with excellent infrastructure, sound rule of law, open FDI policies, and multicultural inclusiveness — particularly suitable as a bridgehead and regional operations center for Chinese enterprises entering the ASEAN market</span></p>
+      </div>
+    </div>
+  </article>
+</section>
+<!-- END PART B -->
+
+<!-- ==================== PART C ==================== -->
+<section id="partC" class="mb-20">
+  <div class="reveal">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="inline-block w-10 h-1 bg-gold rounded"></span>
+      <span class="text-gold font-medium text-sm tracking-widest uppercase">Part C</span>
+    </div>
+    <h2 class="text-4xl md:text-5xl font-bold text-emerald-deep dark:text-emerald-400 mb-3"><span data-zh>判断与建议</span><span data-en>Judgment &amp; Recommendations</span></h2>
+    <p class="text-gray-500 dark:text-gray-400 text-lg mb-10 max-w-3xl"><span data-zh>编者注：本部分内容为分析师基于 Part A/B 事实和数据的研判观点，不构成投资建议。</span><span data-en>Editor's Note: This section presents analyst opinions based on Part A/B facts and data, and does not constitute investment advice.</span></p>
+  </div>
+
+  <!-- C.1 核心结论 -->
+  <article id="sec-c-1" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">C.1</span>
+      <span data-zh>核心结论</span><span data-en>Key Conclusions</span>
+    </h3>
+    <div class="bg-gradient-to-br from-emerald-deep/5 to-gold/5 dark:from-emerald-900/30 dark:to-gold/10 rounded-2xl p-8 border border-emerald-deep/10 dark:border-emerald-700/30">
+      <p class="text-sm text-gold font-semibold mb-3"><i class="fas fa-user-tie mr-1"></i> <span data-zh>分析师观点</span><span data-en>Analyst's View</span></p>
+      <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-base"><span data-zh>马来西亚的核心吸引力在于其<strong>完善的基础设施、开放的外资政策、多元文化优势（尤其是华人社群和双语人才）以及在全球半导体供应链中的战略地位</strong>。最大的风险/障碍是<strong>美国关税政策带来的外部贸易不确定性</strong>以及中美科技脱钩对 E&amp;E 供应链的潜在冲击。总体而言，马来西亚<strong>高度值得关注和进入</strong>——它是中国企业布局东盟的首选目的地之一，特别适合作为区域总部、制造基地和面向东盟及全球市场的跳板。</span><span data-en>Malaysia's core appeal lies in its <strong>excellent infrastructure, open FDI policies, multicultural advantages (especially the Chinese community and bilingual talent), and strategic position in the global semiconductor supply chain</strong>. The biggest risk/barrier is <strong>external trade uncertainty from US tariff policies</strong> and the potential impact of US-China tech decoupling on the E&amp;E supply chain. Overall, Malaysia is <strong>highly worth attention and entry</strong> — it is one of the top destinations for Chinese enterprises expanding into ASEAN, particularly suitable as a regional HQ, manufacturing base, and springboard to ASEAN and global markets.</span></p>
+    </div>
+  </article>
+
+  <!-- C.2 市场机会识别 -->
+  <article id="sec-c-2" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">C.2</span>
+      <span data-zh>市场机会识别</span><span data-en>Market Opportunity Identification</span>
+    </h3>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-6">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>机会领域</span><span data-en>Opportunity</span></th><th><span data-zh>市场空间</span><span data-en>Market Size</span></th><th><span data-zh>竞争程度</span><span data-en>Competition</span></th><th><span data-zh>进入难度</span><span data-en>Entry Difficulty</span></th><th><span data-zh>说明</span><span data-en>Description</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>数据中心与云服务</span><span data-en>Data Centers &amp; Cloud</span></td><td><span data-zh>大</span><span data-en>Large</span></td><td><span data-zh>中等</span><span data-en>Medium</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>投资热潮持续，市场预计 2027 年达 <strong>16 亿美元</strong>。微软、谷歌、字节跳动等已大举投资。电力充足、政策支持、地理位置优越（服务东盟市场），中国云服务商和数据中心运营商有明确机会</span><span data-en>Investment boom continues; market projected to reach <strong>USD 1.6 billion</strong> by 2027. Microsoft, Google, ByteDance already investing heavily. Ample power, policy support, strategic location (serving ASEAN); clear opportunities for Chinese cloud providers and DC operators</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>电子电气（E&amp;E）制造</span><span data-en>E&amp;E Manufacturing</span></td><td><span data-zh>大</span><span data-en>Large</span></td><td><span data-zh>激烈</span><span data-en>Intense</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>全球半导体供应链重组背景下，马来西亚作为封测和制造重镇地位提升。E&amp;E 增长 15.6%（2026 年 1 月），中国半导体设备和材料企业可借此切入全球供应链</span><span data-en>Amid global semiconductor supply chain restructuring, Malaysia's position as a packaging/testing and manufacturing hub is rising. E&amp;E grew 15.6% (Jan 2026); Chinese semiconductor equipment and materials firms can leverage this to enter global supply chains</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>数字经济与电子商务</span><span data-en>Digital Economy &amp; E-commerce</span></td><td><span data-zh>大</span><span data-en>Large</span></td><td><span data-zh>激烈</span><span data-en>Intense</span></td><td><span data-zh>低</span><span data-en>Low</span></td><td><span data-zh>数字经济 2025 年预计达 <strong>390 亿美元</strong>，电商前 9 个月收入 9,375 亿林吉特。Shopee、Lazada 主导，但垂直品类和跨境电商仍有空间</span><span data-en>Digital economy projected at <strong>USD 39 billion</strong> in 2025; e-commerce revenue MYR 937.5 billion in first 9 months. Shopee and Lazada dominate, but vertical categories and cross-border e-commerce still have room</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>清真（Halal）产业</span><span data-en>Halal Industry</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>中等</span><span data-en>Medium</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>马来西亚是全球清真认证标准制定者之一，清真食品、化妆品、药品市场辐射全球 20 亿穆斯林消费者。中国食品和消费品企业可借马来西亚清真认证进入全球穆斯林市场</span><span data-en>Malaysia is a global Halal certification standard-setter; Halal food, cosmetics, and pharmaceutical markets reach 2 billion Muslim consumers worldwide. Chinese F&amp;B and consumer goods companies can leverage Malaysian Halal certification to access global Muslim markets</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>绿色技术与新能源</span><span data-en>Green Tech &amp; New Energy</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>蓝海</span><span data-en>Blue Ocean</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>政府大力推动绿色转型，2025 年中马签署绿色技术合作协议。太阳能、储能、电动汽车充电基础设施等领域机会涌现</span><span data-en>Government strongly promoting green transition; China-Malaysia green tech cooperation agreement signed in 2025. Opportunities emerging in solar, energy storage, EV charging infrastructure</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>旅游与服务业</span><span data-en>Tourism &amp; Services</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>中等</span><span data-en>Medium</span></td><td><span data-zh>低</span><span data-en>Low</span></td><td><span data-zh>2025 年入境游客增长超 20%，中国游客为重要客源。旅游科技、酒店管理、文旅开发等领域有合作空间</span><span data-en>Inbound tourists grew 20%+ in 2025; Chinese tourists are a key source. Opportunities in travel tech, hotel management, cultural tourism development</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>物流与供应链服务</span><span data-en>Logistics &amp; Supply Chain</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>中等</span><span data-en>Medium</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>物流市场 2025 年约 248 亿美元，CAGR 3.68%。跨境电商物流、冷链物流、智慧仓储等细分领域增长快</span><span data-en>Logistics market ~USD 24.8 billion in 2025, CAGR 3.68%. Fast growth in cross-border e-commerce logistics, cold chain, smart warehousing</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs text-gray-400 dark:text-gray-500 italic"></p>
+  </article>
+
+  <!-- C.3 关键风险提示 -->
+  <article id="sec-c-3" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">C.3</span>
+      <span data-zh>关键风险提示</span><span data-en>Key Risk Alerts</span>
+    </h3>
+
+    <div class="bg-white dark:bg-dark-card rounded-2xl border-l-4 border-red-500 p-6 shadow-sm mb-5 card-hover">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 font-semibold"><span data-zh>严重度：高</span><span data-en>Severity: High</span></span>
+        <h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg"><span data-zh>风险 1：美国关税与贸易保护主义升级</span><span data-en>Risk 1: US Tariffs &amp; Trade Protectionism Escalation</span></h4>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed"><span data-zh>美国对马来西亚商品加征关税的风险是当前最大外部威胁。马来西亚对美贸易顺差约 260 亿美元，已引起美方关注。IMF 预计此因素将使 2026 年 GDP 增速从 4.6% 降至 4.3%。对企业的影响：以马来西亚为基地出口美国的企业可能面临成本上升；部分中国企业通过马来西亚"转口"规避关税的策略可能受到审查。</span><span data-en>The risk of US tariffs on Malaysian goods is the biggest external threat. Malaysia's ~USD 26 billion trade surplus with the US has drawn attention. IMF estimates this could reduce 2026 GDP growth from 4.6% to 4.3%. Business impact: companies exporting to the US from Malaysia may face rising costs; some Chinese firms' "re-export" strategies via Malaysia may face scrutiny.</span></p>
+      <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-lg p-3">
+        <p class="text-sm text-emerald-deep dark:text-emerald-400 font-semibold mb-1"><i class="fas fa-shield-halved mr-1"></i> <span data-zh>应对建议</span><span data-en>Mitigation</span></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>关注美国贸易政策动态，评估供应链布局的合规性，考虑产品原产地规则的影响。</span><span data-en>Monitor US trade policy developments; assess supply chain compliance; consider rules of origin implications.</span></p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-dark-card rounded-2xl border-l-4 border-orange-500 p-6 shadow-sm mb-5 card-hover">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-orange-100 text-orange-800 dark:bg-orange-900/30 dark:text-orange-400 font-semibold"><span data-zh>严重度：中高</span><span data-en>Severity: Medium-High</span></span>
+        <h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg"><span data-zh>风险 2：中美科技脱钩对 E&amp;E 供应链的冲击</span><span data-en>Risk 2: US-China Tech Decoupling Impact on E&amp;E Supply Chain</span></h4>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed"><span data-zh>马来西亚 E&amp;E 产业深度嵌入中美两国供应链，中美科技脱钩可能迫使企业在两个体系间做出选择。美国对华半导体出口管制可能波及在马来西亚运营的中国关联企业。</span><span data-en>Malaysia's E&amp;E industry is deeply embedded in both US and China supply chains; tech decoupling may force companies to choose between the two systems. US semiconductor export controls on China may affect China-linked enterprises operating in Malaysia.</span></p>
+      <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-lg p-3">
+        <p class="text-sm text-emerald-deep dark:text-emerald-400 font-semibold mb-1"><i class="fas fa-shield-halved mr-1"></i> <span data-zh>应对建议</span><span data-en>Mitigation</span></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>密切跟踪美国实体清单和出口管制政策变化，确保供应链合规，考虑建立"中国+1"和"美国友岸"双轨供应链布局。</span><span data-en>Closely track US Entity List and export control policy changes; ensure supply chain compliance; consider establishing dual-track "China+1" and "US friend-shoring" supply chain layouts.</span></p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-dark-card rounded-2xl border-l-4 border-yellow-500 p-6 shadow-sm mb-5 card-hover">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 font-semibold"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+        <h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg"><span data-zh>风险 3：林吉特汇率波动</span><span data-en>Risk 3: MYR Exchange Rate Volatility</span></h4>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed"><span data-zh>林吉特受美元走势、全球风险偏好和大宗商品价格多重影响，2025-2026 年在 4.2-4.4 区间波动。央行降息可能进一步施压汇率。对企业的影响：以林吉特计价的收入在换汇时可能缩水，进口成本波动影响利润率。</span><span data-en>MYR is influenced by USD trends, global risk appetite, and commodity prices, fluctuating in the 4.2–4.4 range in 2025–2026. Central bank rate cuts may further pressure the exchange rate. Business impact: MYR-denominated revenues may shrink upon conversion; import cost volatility affects margins.</span></p>
+      <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-lg p-3">
+        <p class="text-sm text-emerald-deep dark:text-emerald-400 font-semibold mb-1"><i class="fas fa-shield-halved mr-1"></i> <span data-zh>应对建议</span><span data-en>Mitigation</span></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>建立系统性汇率对冲机制，考虑使用远期合约和期权工具，在合同中加入汇率调整条款。</span><span data-en>Establish systematic FX hedging mechanisms; consider forward contracts and options; include exchange rate adjustment clauses in contracts.</span></p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-dark-card rounded-2xl border-l-4 border-yellow-500 p-6 shadow-sm mb-5 card-hover">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-yellow-100 text-yellow-800 dark:bg-yellow-900/30 dark:text-yellow-400 font-semibold"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+        <h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg"><span data-zh>风险 4：税收政策调整频繁</span><span data-en>Risk 4: Frequent Tax Policy Changes</span></h4>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed"><span data-zh>马来西亚近年税收政策变化较多（服务税扩围至 8%、全球最低税率 15% 实施、2026 年预算调整），企业税务合规成本上升。</span><span data-en>Malaysia has seen frequent tax policy changes in recent years (service tax expanded to 8%, global minimum tax 15% implemented, 2026 budget adjustments); corporate tax compliance costs are rising.</span></p>
+      <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-lg p-3">
+        <p class="text-sm text-emerald-deep dark:text-emerald-400 font-semibold mb-1"><i class="fas fa-shield-halved mr-1"></i> <span data-zh>应对建议</span><span data-en>Mitigation</span></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>聘请本地专业税务顾问，及时跟踪财政预算和税法修订，充分利用 NIIF 和双边税收协定的优惠条款。</span><span data-en>Engage local professional tax advisors; promptly track budget and tax law amendments; fully leverage NIIF and bilateral DTA preferential provisions.</span></p>
+      </div>
+    </div>
+
+    <div class="bg-white dark:bg-dark-card rounded-2xl border-l-4 border-green-500 p-6 shadow-sm card-hover">
+      <div class="flex flex-wrap items-center gap-3 mb-3">
+        <span class="text-xs px-2.5 py-1 rounded-full bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 font-semibold"><span data-zh>严重度：中低</span><span data-en>Severity: Medium-Low</span></span>
+        <h4 class="font-bold text-gray-800 dark:text-gray-200 text-lg"><span data-zh>风险 5：高端人才竞争加剧</span><span data-en>Risk 5: Intensifying High-End Talent Competition</span></h4>
+      </div>
+      <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 leading-relaxed"><span data-zh>AI、半导体设计、数据科学等领域人才缺口明显，新加坡的虹吸效应导致部分高端人才外流。</span><span data-en>Significant talent gaps in AI, semiconductor design, data science; Singapore's brain drain effect causes some high-end talent outflow.</span></p>
+      <div class="bg-emerald-deep/5 dark:bg-emerald-900/20 rounded-lg p-3">
+        <p class="text-sm text-emerald-deep dark:text-emerald-400 font-semibold mb-1"><i class="fas fa-shield-halved mr-1"></i> <span data-zh>应对建议</span><span data-en>Mitigation</span></p>
+        <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>提前布局人才储备，与本地大学建立合作，提供有竞争力的薪酬和职业发展路径，考虑从中国外派核心技术人员。</span><span data-en>Plan talent reserves early; establish university partnerships; offer competitive compensation and career paths; consider seconding core technical staff from China.</span></p>
+      </div>
+    </div>
+  </article>
+
+  <!-- C.4 市场进入策略建议 -->
+  <article id="sec-c-4" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">C.4</span>
+      <span data-zh>市场进入策略建议</span><span data-en>Market Entry Strategy Recommendations</span>
+    </h3>
+
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4"><span data-zh>进入模式选择</span><span data-en>Entry Mode Selection</span></h4>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-10">
+      <table class="styled-table">
+        <thead><tr><th><span data-zh>进入模式</span><span data-en>Entry Mode</span></th><th><span data-zh>适用性</span><span data-en>Suitability</span></th><th><span data-zh>优势</span><span data-en>Advantages</span></th><th><span data-zh>劣势</span><span data-en>Disadvantages</span></th><th><span data-zh>建议</span><span data-en>Recommendation</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>直接出口</span><span data-en>Direct Export</span></td><td><span data-zh>高</span><span data-en>High</span></td><td><span data-zh>投入低、风险小、可快速测试市场</span><span data-en>Low investment, low risk, quick market testing</span></td><td><span data-zh>无法享受本地优惠政策，关税和物流成本较高</span><span data-en>Cannot access local incentives; higher tariff and logistics costs</span></td><td><span data-zh><strong>适合初期试水</strong>，特别是消费品和工业品。利用 RCEP/CPTPP 零关税优势</span><span data-en><strong>Suitable for initial market testing</strong>, especially consumer and industrial goods. Leverage RCEP/CPTPP zero-tariff advantages</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>设立代表处</span><span data-en>Representative Office</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>建立本地存在，了解市场，成本可控</span><span data-en>Establish local presence, understand market, controllable costs</span></td><td><span data-zh>不能直接从事经营活动，功能有限</span><span data-en>Cannot engage in direct business activities; limited functions</span></td><td><span data-zh><strong>适合市场调研阶段</strong>，为后续设立实体做准备</span><span data-en><strong>Suitable for market research phase</strong>, preparing for subsequent entity establishment</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>合资企业</span><span data-en>Joint Venture</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>借助本地伙伴的市场网络和政府关系，部分行业有准入优势</span><span data-en>Leverage local partner's market network and government relations; access advantages in some sectors</span></td><td><span data-zh>管理复杂，利益分配需协商，文化融合挑战</span><span data-en>Complex management, profit-sharing negotiations, cultural integration challenges</span></td><td><span data-zh><strong>适合需要本地资源的行业</strong>（如政府采购相关、清真产业），选择伙伴需谨慎尽调</span><span data-en><strong>Suitable for sectors requiring local resources</strong> (e.g., government procurement, Halal industry); partner selection requires careful due diligence</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>独资子公司</span><span data-en>Wholly-Owned Subsidiary</span></td><td><span data-zh>高</span><span data-en>High</span></td><td><span data-zh>完全控制运营，保护知识产权，可享受 NIIF 全部优惠</span><span data-en>Full operational control, IP protection, access to full NIIF incentives</span></td><td><span data-zh>投入较大，需自建团队和市场网络</span><span data-en>Higher investment; need to build own team and market network</span></td><td><span data-zh><strong>推荐的主要进入模式</strong>。大部分行业允许 100% 外资，MIDA 审批高效，适合有明确业务计划的企业</span><span data-en><strong>Recommended primary entry mode</strong>. Most sectors allow 100% foreign ownership; MIDA approval efficient; suitable for companies with clear business plans</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>并购本地企业</span><span data-en>M&amp;A of Local Firms</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>快速获得市场份额、客户基础和本地团队</span><span data-en>Quickly acquire market share, customer base, and local team</span></td><td><span data-zh>估值溢价、整合风险、文化融合挑战</span><span data-en>Valuation premiums, integration risks, cultural challenges</span></td><td><span data-zh><strong>适合快速扩张需求</strong>，需充分尽调，关注土著股权要求和行业准入限制</span><span data-en><strong>Suitable for rapid expansion needs</strong>; thorough due diligence required; note Bumiputera equity requirements and sector access restrictions</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>特许经营/授权</span><span data-en>Franchise/Licensing</span></td><td><span data-zh>中</span><span data-en>Medium</span></td><td><span data-zh>轻资产扩张，利用本地加盟商资源</span><span data-en>Asset-light expansion, leveraging local franchisee resources</span></td><td><span data-zh>品牌控制力弱，质量管理挑战</span><span data-en>Weak brand control, quality management challenges</span></td><td><span data-zh><strong>适合餐饮、零售、教育等服务行业</strong>，马来西亚特许经营法规较完善</span><span data-en><strong>Suitable for F&amp;B, retail, education services</strong>; Malaysia has well-developed franchise regulations</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-4"><span data-zh>本地化策略建议</span><span data-en>Localization Strategy Recommendations</span></h4>
+    <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border mb-10">
+      <table class="styled-table">
+        <thead><tr><th style="width:18%"><span data-zh>维度</span><span data-en>Dimension</span></th><th><span data-zh>建议</span><span data-en>Recommendation</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>产品/服务本地化</span><span data-en>Product/Service Localization</span></td><td><span data-zh>重视<strong>清真认证</strong>（食品、化妆品、药品必须），适应多元文化消费偏好（马来、华人、印度三大族群需求差异），产品说明需提供马来语和英语版本</span><span data-en>Prioritize <strong>Halal certification</strong> (mandatory for food, cosmetics, pharmaceuticals); adapt to multicultural consumer preferences (Malay, Chinese, Indian communities); product documentation in Malay and English</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>定价策略</span><span data-en>Pricing Strategy</span></td><td><span data-zh>人均 GDP 约 11,868 美元，消费力中等偏上。高端产品定位吉隆坡、槟城等一线城市，大众产品覆盖二三线城市。注意与新加坡的价格差异（消费者可能跨境比价）</span><span data-en>GDP per capita ~USD 11,868; upper-middle purchasing power. Position premium products in KL, Penang tier-1 cities; mass products for tier-2/3 cities. Note price differentials with Singapore (cross-border price comparison)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>渠道策略</span><span data-en>Channel Strategy</span></td><td><span data-zh>线上渠道优先（互联网渗透率 97%），Shopee 和 Lazada 为主要电商平台；线下重视大型商超（AEON、Giant）和便利店（7-Eleven、99 Speedmart）网络；社交电商（TikTok Shop）增长迅速</span><span data-en>Online channels first (97% internet penetration); Shopee and Lazada as primary e-commerce platforms; offline focus on major retailers (AEON, Giant) and convenience stores (7-Eleven, 99 Speedmart); social commerce (TikTok Shop) growing rapidly</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>人才策略</span><span data-en>Talent Strategy</span></td><td><span data-zh>优先招聘<strong>双语人才</strong>（中文+英语/马来语），华人社群是核心人才池。核心技术岗位可从中国外派，中层管理和市场岗位本地化。与本地大学（马来亚大学、理科大学等）建立实习和招聘合作</span><span data-en>Prioritize <strong>bilingual talent</strong> (Chinese + English/Malay); Chinese community is the core talent pool. Core tech roles can be seconded from China; localize mid-management and marketing roles. Establish internship and recruitment partnerships with local universities (UM, USM, etc.)</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>合规策略</span><span data-en>Compliance Strategy</span></td><td><span data-zh>聘请本地律所和税务顾问，重点关注：NIIF 税收优惠申请、PDPA 数据合规、劳动法合规（最低工资、工时限制）、清真认证（如适用）、转让定价文档准备</span><span data-en>Engage local law firms and tax advisors; key focus areas: NIIF tax incentive applications, PDPA data compliance, labor law compliance (minimum wage, working hours), Halal certification (if applicable), transfer pricing documentation</span></td></tr>
+          <tr><td class="font-semibold text-emerald-deep dark:text-emerald-400"><span data-zh>合作伙伴策略</span><span data-en>Partner Strategy</span></td><td><span data-zh>通过 MIDA 和中国驻马使馆商务处获取本地合作伙伴推荐。优先选择有政府关系和行业资源的本地企业。参加 MITI/MIDA 组织的投资对接活动</span><span data-en>Obtain local partner recommendations through MIDA and the Chinese Embassy Commercial Section. Prioritize local firms with government connections and industry resources. Attend MITI/MIDA investment matchmaking events</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Timeline: 进入路径建议 -->
+    <h4 class="text-lg font-semibold text-gray-700 dark:text-gray-300 mb-6"><span data-zh>进入路径建议（时间线）</span><span data-en>Recommended Entry Path (Timeline)</span></h4>
+    <div class="relative pl-10 mb-6">
+      <div class="timeline-line"></div>
+
+      <!-- Phase 1 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot"></div>
+        <div class="bg-white dark:bg-dark-card rounded-xl p-5 shadow-sm border border-gray-100 dark:border-dark-border ml-6 card-hover">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-deep/10 text-emerald-deep dark:bg-emerald-900/30 dark:text-emerald-400 font-semibold"><span data-zh>准备期</span><span data-en>Preparation</span></span>
+            <span class="text-sm text-gray-500 dark:text-gray-400"><span data-zh>0-6 个月</span><span data-en>0–6 Months</span></span>
+          </div>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>行动：</span><span data-en>Actions:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2"><span data-zh>市场调研、法律和税务咨询、合作伙伴筛选、MIDA 沟通、商标/IP 注册</span><span data-en>Market research, legal &amp; tax advisory, partner screening, MIDA engagement, trademark/IP registration</span></p>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>目标：</span><span data-en>Goals:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>完成可行性评估，确定进入模式和目标市场</span><span data-en>Complete feasibility assessment; determine entry mode and target market</span></p>
+        </div>
+      </div>
+
+      <!-- Phase 2 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot"></div>
+        <div class="bg-white dark:bg-dark-card rounded-xl p-5 shadow-sm border border-gray-100 dark:border-dark-border ml-6 card-hover">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs px-2.5 py-1 rounded-full bg-gold/10 text-gold dark:bg-gold/20 dark:text-gold-light font-semibold"><span data-zh>试水期</span><span data-en>Pilot Phase</span></span>
+            <span class="text-sm text-gray-500 dark:text-gray-400"><span data-zh>6-18 个月</span><span data-en>6–18 Months</span></span>
+          </div>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>行动：</span><span data-en>Actions:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2"><span data-zh>注册公司/代表处、组建核心团队、申请 NIIF 优惠、启动试点业务、建立本地供应链</span><span data-en>Register company/rep office, build core team, apply for NIIF incentives, launch pilot business, establish local supply chain</span></p>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>目标：</span><span data-en>Goals:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>验证商业模式，获得首批客户/订单，建立本地运营能力</span><span data-en>Validate business model; acquire first customers/orders; establish local operational capability</span></p>
+        </div>
+      </div>
+
+      <!-- Phase 3 -->
+      <div class="relative">
+        <div class="timeline-dot"></div>
+        <div class="bg-white dark:bg-dark-card rounded-xl p-5 shadow-sm border border-gray-100 dark:border-dark-border ml-6 card-hover">
+          <div class="flex flex-wrap items-center gap-3 mb-2">
+            <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-deep/10 text-emerald-deep dark:bg-emerald-900/30 dark:text-emerald-400 font-semibold"><span data-zh>扩张期</span><span data-en>Expansion</span></span>
+            <span class="text-sm text-gray-500 dark:text-gray-400"><span data-zh>18-36 个月</span><span data-en>18–36 Months</span></span>
+          </div>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>行动：</span><span data-en>Actions:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-2"><span data-zh>扩大团队和产能、拓展渠道网络、深化本地化、考虑区域辐射（以马来西亚为基地覆盖东盟）</span><span data-en>Scale team and capacity; expand channel network; deepen localization; consider regional expansion (using Malaysia as base to cover ASEAN)</span></p>
+          <p class="text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1"><span data-zh>目标：</span><span data-en>Goals:</span></p>
+          <p class="text-sm text-gray-600 dark:text-gray-400"><span data-zh>实现盈利，建立品牌认知，形成可复制的区域扩张模式</span><span data-en>Achieve profitability; build brand awareness; develop replicable regional expansion model</span></p>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <!-- C.5 SWOT 矩阵 -->
+  <article id="sec-c-5" class="mb-16 reveal">
+    <h3 class="text-2xl font-bold text-emerald-deep dark:text-emerald-400 mb-6 flex items-center gap-2">
+      <span class="w-8 h-8 rounded-lg bg-emerald-deep dark:bg-emerald-700 text-white flex items-center justify-center text-sm">C.5</span>
+      <span data-zh>国家 SWOT 矩阵（作为商业目的地）</span><span data-en>National SWOT Matrix (as Business Destination)</span>
+    </h3>
+
+    <div class="grid md:grid-cols-2 gap-5 mb-6">
+      <!-- Strengths -->
+      <div class="bg-green-50 dark:bg-green-900/20 rounded-2xl p-6 border border-green-200 dark:border-green-800/40 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-green-600 text-white flex items-center justify-center text-lg"><i class="fas fa-arrow-up"></i></span>
+          <div>
+            <h4 class="font-bold text-green-800 dark:text-green-400 text-lg"><span data-zh>优势 (S)</span><span data-en>Strengths (S)</span></h4>
+            <p class="text-xs text-green-600 dark:text-green-500"><span data-zh>内部 · 正面</span><span data-en>Internal · Positive</span></p>
+          </div>
+        </div>
+        <ol class="space-y-2 text-sm text-gray-700 dark:text-gray-300 list-none">
+          <li class="flex gap-2"><span class="text-green-600 dark:text-green-400 font-bold flex-shrink-0">①</span> <span data-zh>基础设施完善，交通、港口、电力、通信全面优良，东盟领先</span><span data-en>Excellent infrastructure — transport, ports, power, telecom all top-tier, ASEAN-leading</span></li>
+          <li class="flex gap-2"><span class="text-green-600 dark:text-green-400 font-bold flex-shrink-0">②</span> <span data-zh>多元文化社会，华人社群庞大（23%），双语人才丰富，中国企业文化适应成本低</span><span data-en>Multicultural society with large Chinese community (23%); abundant bilingual talent; low cultural adaptation cost for Chinese enterprises</span></li>
+          <li class="flex gap-2"><span class="text-green-600 dark:text-green-400 font-bold flex-shrink-0">③</span> <span data-zh>外资政策开放，大部分行业允许 100% 外资，MIDA 审批高效，NIIF 提供有竞争力的税收优惠</span><span data-en>Open FDI policies; most sectors allow 100% foreign ownership; efficient MIDA approval; competitive NIIF tax incentives</span></li>
+          <li class="flex gap-2"><span class="text-green-600 dark:text-green-400 font-bold flex-shrink-0">④</span> <span data-zh>法治健全，英国普通法体系，商业合同执行力强</span><span data-en>Sound rule of law; English common law system; strong commercial contract enforcement</span></li>
+          <li class="flex gap-2"><span class="text-green-600 dark:text-green-400 font-bold flex-shrink-0">⑤</span> <span data-zh>战略地理位置，扼守马六甲海峡，连接东亚与南亚/中东市场</span><span data-en>Strategic geographic location commanding the Strait of Malacca, connecting East Asia with South Asia/Middle East</span></li>
+        </ol>
+      </div>
+
+      <!-- Weaknesses -->
+      <div class="bg-red-50 dark:bg-red-900/20 rounded-2xl p-6 border border-red-200 dark:border-red-800/40 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-red-600 text-white flex items-center justify-center text-lg"><i class="fas fa-arrow-down"></i></span>
+          <div>
+            <h4 class="font-bold text-red-800 dark:text-red-400 text-lg"><span data-zh>劣势 (W)</span><span data-en>Weaknesses (W)</span></h4>
+            <p class="text-xs text-red-600 dark:text-red-500"><span data-zh>内部 · 负面</span><span data-en>Internal · Negative</span></p>
+          </div>
+        </div>
+        <ol class="space-y-2 text-sm text-gray-700 dark:text-gray-300 list-none">
+          <li class="flex gap-2"><span class="text-red-600 dark:text-red-400 font-bold flex-shrink-0">①</span> <span data-zh>国内市场规模有限（3,556 万人口），单一市场天花板较低</span><span data-en>Limited domestic market size (35.56M population); low single-market ceiling</span></li>
+          <li class="flex gap-2"><span class="text-red-600 dark:text-red-400 font-bold flex-shrink-0">②</span> <span data-zh>劳动力成本高于越南、印尼等竞争对手，部分劳动密集型产业竞争力下降</span><span data-en>Labor costs higher than Vietnam/Indonesia competitors; declining competitiveness in some labor-intensive industries</span></li>
+          <li class="flex gap-2"><span class="text-red-600 dark:text-red-400 font-bold flex-shrink-0">③</span> <span data-zh>高端技术人才缺口明显，新加坡虹吸效应持续</span><span data-en>Significant high-end tech talent gap; persistent Singapore brain drain effect</span></li>
+          <li class="flex gap-2"><span class="text-red-600 dark:text-red-400 font-bold flex-shrink-0">④</span> <span data-zh>企业所得税标准税率 24% 在区域内偏高（不含优惠）</span><span data-en>Standard CIT rate of 24% is regionally high (excluding incentives)</span></li>
+          <li class="flex gap-2"><span class="text-red-600 dark:text-red-400 font-bold flex-shrink-0">⑤</span> <span data-zh>部分行业存在土著（Bumiputera）政策限制，增加合规复杂度</span><span data-en>Bumiputera policy restrictions in some sectors increase compliance complexity</span></li>
+        </ol>
+      </div>
+
+      <!-- Opportunities -->
+      <div class="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 border border-blue-200 dark:border-blue-800/40 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center text-lg"><i class="fas fa-lightbulb"></i></span>
+          <div>
+            <h4 class="font-bold text-blue-800 dark:text-blue-400 text-lg"><span data-zh>机会 (O)</span><span data-en>Opportunities (O)</span></h4>
+            <p class="text-xs text-blue-600 dark:text-blue-500"><span data-zh>外部 · 正面</span><span data-en>External · Positive</span></p>
+          </div>
+        </div>
+        <ol class="space-y-2 text-sm text-gray-700 dark:text-gray-300 list-none">
+          <li class="flex gap-2"><span class="text-blue-600 dark:text-blue-400 font-bold flex-shrink-0">①</span> <span data-zh>全球供应链重组，"中国+1"战略使马来西亚成为制造业转移首选目的地之一</span><span data-en>Global supply chain restructuring; "China+1" strategy makes Malaysia a top manufacturing relocation destination</span></li>
+          <li class="flex gap-2"><span class="text-blue-600 dark:text-blue-400 font-bold flex-shrink-0">②</span> <span data-zh>RCEP、CPTPP、ASEAN-China FTA 3.0 多重贸易协定叠加，关税优势显著</span><span data-en>Multiple overlapping trade agreements (RCEP, CPTPP, ASEAN-China FTA 3.0); significant tariff advantages</span></li>
+          <li class="flex gap-2"><span class="text-blue-600 dark:text-blue-400 font-bold flex-shrink-0">③</span> <span data-zh>全球数据中心和 AI 投资浪潮，马来西亚凭借电力和政策优势吸引大量投资</span><span data-en>Global data center and AI investment wave; Malaysia attracting massive investment with power and policy advantages</span></li>
+          <li class="flex gap-2"><span class="text-blue-600 dark:text-blue-400 font-bold flex-shrink-0">④</span> <span data-zh>中马关系深化（31 项合作协议），为中国企业提供政策红利</span><span data-en>Deepening China-Malaysia relations (31 cooperation agreements) provide policy dividends for Chinese enterprises</span></li>
+          <li class="flex gap-2"><span class="text-blue-600 dark:text-blue-400 font-bold flex-shrink-0">⑤</span> <span data-zh>东盟经济一体化深化，马来西亚可作为区域总部辐射 6.8 亿人口市场</span><span data-en>Deepening ASEAN economic integration; Malaysia can serve as regional HQ covering a 680M-population market</span></li>
+        </ol>
+      </div>
+
+      <!-- Threats -->
+      <div class="bg-amber-50 dark:bg-amber-900/20 rounded-2xl p-6 border border-amber-200 dark:border-amber-800/40 card-hover">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-amber-600 text-white flex items-center justify-center text-lg"><i class="fas fa-triangle-exclamation"></i></span>
+          <div>
+            <h4 class="font-bold text-amber-800 dark:text-amber-400 text-lg"><span data-zh>威胁 (T)</span><span data-en>Threats (T)</span></h4>
+            <p class="text-xs text-amber-600 dark:text-amber-500"><span data-zh>外部 · 负面</span><span data-en>External · Negative</span></p>
+          </div>
+        </div>
+        <ol class="space-y-2 text-sm text-gray-700 dark:text-gray-300 list-none">
+          <li class="flex gap-2"><span class="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">①</span> <span data-zh>美国关税政策不确定性，可能冲击出口导向型产业</span><span data-en>US tariff policy uncertainty may impact export-oriented industries</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">②</span> <span data-zh>中美科技脱钩风险，E&amp;E 供应链可能被迫选边</span><span data-en>US-China tech decoupling risk; E&amp;E supply chain may be forced to choose sides</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">③</span> <span data-zh>区域竞争加剧，越南、印度在制造业领域的竞争力快速提升</span><span data-en>Intensifying regional competition; Vietnam and India rapidly increasing manufacturing competitiveness</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">④</span> <span data-zh>全球经济放缓风险，可能抑制外需和投资</span><span data-en>Global economic slowdown risk may suppress external demand and investment</span></li>
+          <li class="flex gap-2"><span class="text-amber-600 dark:text-amber-400 font-bold flex-shrink-0">⑤</span> <span data-zh>地缘政治紧张（南海问题）可能影响区域稳定预期</span><span data-en>Geopolitical tensions (South China Sea) may affect regional stability expectations</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <p class="text-xs text-gray-400 dark:text-gray-500 italic"></p>
+  </article>
+</section>
+<!-- END PART C -->
+
+<!-- ==================== 质量自检 ==================== -->
+<section id="quality-check" class="mb-20 reveal">
+  <div class="flex items-center gap-3 mb-2">
+    <span class="inline-block w-10 h-1 bg-gold rounded"></span>
+    <span class="text-gold font-medium text-sm tracking-widest uppercase">Quality Check</span>
+  </div>
+  <h2 class="text-3xl font-bold text-emerald-deep dark:text-emerald-400 mb-6"><span data-zh>质量自检</span><span data-en>Quality Check</span></h2>
+
+  <div class="overflow-x-auto rounded-xl shadow-sm border border-gray-200 dark:border-dark-border">
+    <table class="styled-table">
+      <thead><tr><th><span data-zh>检查项</span><span data-en>Check Item</span></th><th><span data-zh>状态</span><span data-en>Status</span></th></tr></thead>
+      <tbody>
+        <tr><td class="font-semibold"><span data-zh>目标国家/区域已明确</span><span data-en>Target country/region identified</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>马来西亚（Malaysia），覆盖西马半岛和东马（沙巴、砂拉越）</span><span data-en>Malaysia, covering Peninsular Malaysia and East Malaysia (Sabah, Sarawak)</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>宏观数据标注来源和年份</span><span data-en>Macro data sourced and dated</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>所有核心经济指标均标注数据来源（IMF、世界银行、BNM、马来西亚统计局等）和年份（2024-2026 年）</span><span data-en>All key economic indicators sourced (IMF, World Bank, BNM, DOSM, etc.) and dated (2024–2026)</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>政策信息标注来源和时效</span><span data-en>Policy info sourced and current</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>税收政策引用 LHDN/财政部 2025-2026 年预算，外资政策引用 MIDA 最新指引，贸易协定标注签署时间</span><span data-en>Tax policies cite LHDN/MOF 2025–2026 budgets; FDI policies cite latest MIDA guidelines; trade agreements dated</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>缺失信息已声明</span><span data-en>Missing info declared</span></td><td><span class="text-yellow-600 dark:text-yellow-400">⚠️</span> <span data-zh>部分数据为估计值（如 2025 年 GDP 总量、外汇储备、进出口总额），已在文中标注"估计"。基尼系数使用 2022 年数据（最新可得）。部分就业占比数据为近似值</span><span data-en>Some data are estimates (e.g., 2025 GDP total, forex reserves, total trade), marked as "est." in text. Gini coefficient uses 2022 data (latest available). Some employment share data are approximate</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>数据时效已标注</span><span data-en>Data currency marked</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>数据截止日期为 2026 年 4 月 9 日，各数据点均标注具体年份</span><span data-en>Data cutoff date: April 9, 2026; each data point marked with specific year</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>事实与观点已区分</span><span data-en>Facts vs. opinions distinguished</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>Part A/B 以事实描述为主，Part C 明确标注为"分析师观点"，使用引用块区分</span><span data-en>Part A/B primarily factual; Part C clearly labeled as "Analyst's View" with distinct callout blocks</span></td></tr>
+        <tr><td class="font-semibold"><span data-zh>政治描述保持客观中立</span><span data-en>Political descriptions objective</span></td><td><span class="text-green-600 dark:text-green-400">✅</span> <span data-zh>政治分析仅描述事实和对商业的影响，未做价值判断。中美关系描述保持平衡</span><span data-en>Political analysis describes only facts and business impact; no value judgments. China-US relations described in balanced manner</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+<!-- END MAIN CONTENT -->
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="bg-emerald-darker dark:bg-[#061210] text-emerald-100 py-16">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <!-- Disclaimer -->
+    <div class="mb-10 pb-8 border-b border-emerald-800/50">
+      <p class="text-sm leading-relaxed text-emerald-300/80 italic"><span data-zh>本报告由 Supinfor Ltd. 编制，数据截止 2026 年 4 月 9 日。报告内容仅供参考，不构成投资建议。Part C 中的判断与建议为分析师观点，使用者应结合自身情况独立决策。</span><span data-en>This report was prepared by Supinfor Ltd., with data as of April 9, 2026. The content is for reference only and does not constitute investment advice. Judgments and recommendations in Part C represent analyst opinions; users should make independent decisions based on their own circumstances.</span></p>
+    </div>
+
+    <!-- Footer info -->
+    <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="text-center md:text-left">
+        <p class="font-semibold text-lg text-white mb-1" style="font-family:'Playfair Display',serif;">Supinfor Ltd.</p>
+        <p class="text-sm text-emerald-400"><span data-zh>2026 年 4 月 9 日</span><span data-en>April 9, 2026</span></p>
+      </div>
+      <div class="text-center md:text-right">
+        <p class="text-sm text-emerald-400/70">&copy; 2026 Supinfor Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Management =====
+  const html = document.documentElement;
+  const body = document.body;
+  const themeToggle = document.getElementById('themeToggle');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    body.classList.remove('light', 'dark');
+    body.classList.add(theme);
+    if (theme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+  }
+
+  // Initialize theme
+  var savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(getSystemTheme());
+  }
+
+  // Toggle theme
+  themeToggle.addEventListener('click', function() {
+    var current = body.classList.contains('dark') ? 'dark' : 'light';
+    var next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    localStorage.setItem('theme', next);
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e) {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  // ===== Language Management =====
+  var langToggle = document.getElementById('langToggle');
+  var langLabel = document.getElementById('langLabel');
+
+  function getPreferredLang() {
+    return localStorage.getItem('lang') || 'zh';
+  }
+
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    langLabel.textContent = lang === 'zh' ? 'EN' : '中';
+    localStorage.setItem('lang', lang);
+  }
+
+  applyLang(getPreferredLang());
+
+  langToggle.addEventListener('click', function() {
+    var current = html.getAttribute('data-lang');
+    applyLang(current === 'zh' ? 'en' : 'zh');
+  });
+
+  // ===== Scroll Reveal with IntersectionObserver =====
+  var revealElements = document.querySelectorAll('.reveal');
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  // ===== Back to Top Button =====
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== TOC Toggle (Mobile) =====
+  var tocToggle = document.getElementById('tocToggle');
+  var tocContent = document.getElementById('tocContent');
+  if (tocToggle && tocContent) {
+    tocToggle.addEventListener('click', function() {
+      tocContent.classList.toggle('hidden');
+    });
+  }
+
+  // ===== Smooth scroll for anchor links =====
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      var target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        var offset = 60; // Account for sticky nav
+        var top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+        // Close mobile TOC
+        if (tocContent) tocContent.classList.add('hidden');
+      }
+    });
+  });
+
+  // ===== Animate progress bars on scroll =====
+  var progressBars = document.querySelectorAll('.progress-fill');
+  var progressObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var bar = entry.target;
+        var width = bar.style.width;
+        bar.style.width = '0%';
+        requestAnimationFrame(function() {
+          requestAnimationFrame(function() {
+            bar.style.width = width;
+          });
+        });
+        progressObserver.unobserve(bar);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  progressBars.forEach(function(bar) {
+    progressObserver.observe(bar);
+  });
+
+})();
+</script>
+</body>
+</html>

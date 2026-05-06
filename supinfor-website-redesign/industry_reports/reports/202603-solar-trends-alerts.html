@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>光伏行业趋势与风险速览（2026年3月）</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@400;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        solar: { gold: '#f59e0b', goldLight: '#fbbf24', goldDark: '#d97706' },
+        eco: { green: '#10b981', greenLight: '#34d399', greenDark: '#059669' },
+        dark: { bg: '#0a1f1a', card: '#0f2d24', border: '#1a4a3a', text: '#e2e8f0', muted: '#94a3b8' },
+        light: { bg: '#fafaf5', card: '#ffffff', border: '#d4d4c8', text: '#1a3a2a', muted: '#6b7280' }
+      },
+      fontFamily: {
+        serif: ['Noto Serif SC', 'serif'],
+        sans: ['Noto Sans SC', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  * { scrollbar-width: thin; scrollbar-color: #f59e0b transparent; }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #f59e0b; border-radius: 3px; }
+
+  /* Progress bar */
+  #progress-bar { position: fixed; top: 0; left: 0; height: 3px; background: linear-gradient(90deg, #f59e0b, #10b981); z-index: 9999; transition: width 0.1s linear; }
+
+  /* Solar panel hero pattern */
+  .solar-pattern {
+    background-image:
+      linear-gradient(45deg, rgba(245,158,11,0.05) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(245,158,11,0.05) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(245,158,11,0.05) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(245,158,11,0.05) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  }
+  .dark .solar-pattern {
+    background-image:
+      linear-gradient(45deg, rgba(245,158,11,0.08) 25%, transparent 25%),
+      linear-gradient(-45deg, rgba(245,158,11,0.08) 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, rgba(245,158,11,0.08) 75%),
+      linear-gradient(-45deg, transparent 75%, rgba(245,158,11,0.08) 75%);
+    background-size: 40px 40px;
+    background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+  }
+
+  /* Fade-in animation */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* Sidebar active */
+  .sidebar-link.active { color: #f59e0b; border-left-color: #f59e0b; font-weight: 600; }
+  .sidebar-link { border-left: 3px solid transparent; transition: all 0.2s; }
+  .sidebar-link:hover { color: #f59e0b; border-left-color: #fbbf24; }
+
+  /* Callout */
+  .callout {
+    border-left: 4px solid #f59e0b;
+    padding: 1rem 1.25rem;
+    border-radius: 0 0.5rem 0.5rem 0;
+  }
+  .dark .callout { background: rgba(245,158,11,0.08); }
+  .callout:not(.dark .callout) { background: rgba(245,158,11,0.06); }
+
+  /* Heatmap colors */
+  .heat-0 { background: transparent; }
+  .heat-1 { background: rgba(245,158,11,0.15); }
+  .heat-2 { background: rgba(245,158,11,0.25); }
+  .heat-3 { background: rgba(245,158,11,0.38); }
+  .heat-4 { background: rgba(245,158,11,0.50); }
+  .heat-5 { background: rgba(245,158,11,0.65); }
+  .heat-23 { background: rgba(239,68,68,0.55); }
+
+  /* Strategy card */
+  .strategy-card { counter-increment: strategy; position: relative; }
+  .strategy-card::before {
+    content: counter(strategy);
+    position: absolute; top: -12px; left: -12px;
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 1rem;
+  }
+  .dark .strategy-card::before { background: #f59e0b; color: #0a1f1a; }
+  :not(.dark) .strategy-card::before { background: #f59e0b; color: #fff; }
+
+  /* Collapsible */
+  details summary { cursor: pointer; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::before { content: '▶'; display: inline-block; margin-right: 8px; transition: transform 0.2s; font-size: 0.75rem; }
+  details[open] summary::before { transform: rotate(90deg); }
+
+  /* Bar chart */
+  .bar-fill { transition: width 0.8s ease; }
+
+  /* Mobile menu */
+  .mobile-menu { transform: translateX(-100%); transition: transform 0.3s ease; }
+  .mobile-menu.open { transform: translateX(0); }
+  .mobile-overlay { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+  .mobile-overlay.open { opacity: 1; pointer-events: auto; }
+
+  /* Back to top */
+  #back-to-top { opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+  #back-to-top.show { opacity: 1; pointer-events: auto; }
+
+  /* Print */
+  @media print { .no-print { display: none !important; } }
+
+  body { font-family: 'Noto Sans SC', sans-serif; }
+  h1, h2, h3, h4 { font-family: 'Noto Serif SC', serif; }
+</style>
+</head>
+<body class="bg-light-bg text-light-text dark:bg-dark-bg dark:text-dark-text transition-colors duration-300">
+
+<!-- Progress Bar -->
+<div id="progress-bar" class="no-print" style="width:0%"></div>
+
+<!-- Mobile Overlay -->
+<div id="mobile-overlay" class="mobile-overlay fixed inset-0 bg-black/50 z-40 lg:hidden no-print"></div>
+
+<!-- Mobile Sidebar -->
+<nav id="mobile-menu" class="mobile-menu fixed top-0 left-0 w-72 h-full z-50 bg-light-card dark:bg-dark-card shadow-2xl overflow-y-auto lg:hidden no-print">
+  <div class="p-4 border-b border-light-border dark:border-dark-border flex justify-between items-center">
+    <span class="font-serif font-bold text-solar-gold text-lg"><i class="fas fa-solar-panel mr-2"></i>目录导航</span>
+    <button id="close-menu" class="text-2xl text-light-muted dark:text-dark-muted hover:text-solar-gold">&times;</button>
+  </div>
+  <div id="mobile-nav-links" class="p-4 space-y-1 text-sm"></div>
+</nav>
+
+<!-- Desktop Sidebar -->
+<aside class="hidden lg:block fixed top-0 left-0 w-64 h-full z-30 bg-light-card/95 dark:bg-dark-card/95 backdrop-blur border-r border-light-border dark:border-dark-border overflow-y-auto no-print">
+  <div class="p-5 border-b border-light-border dark:border-dark-border">
+    <div class="flex items-center gap-2 text-solar-gold font-serif font-bold text-lg">
+      <i class="fas fa-solar-panel"></i>
+      <span>光伏行业报告</span>
+    </div>
+    <div class="text-xs text-light-muted dark:text-dark-muted mt-1">2026年3月 · 月度分析</div>
+  </div>
+  <nav id="desktop-nav-links" class="p-4 space-y-0.5 text-sm"></nav>
+  <!-- Theme toggle in sidebar -->
+  <div class="absolute bottom-0 left-0 right-0 p-4 border-t border-light-border dark:border-dark-border">
+    <button id="theme-toggle-sidebar" class="w-full flex items-center justify-center gap-2 py-2 px-3 rounded-lg bg-light-bg dark:bg-dark-bg text-sm hover:text-solar-gold transition-colors">
+      <i class="fas fa-sun dark:hidden"></i><i class="fas fa-moon hidden dark:inline"></i>
+      <span class="dark:hidden">切换深色模式</span><span class="hidden dark:inline">切换浅色模式</span>
+    </button>
+  </div>
+</aside>
+
+<!-- Main Content -->
+<main class="lg:ml-64">
+
+<!-- Top Bar (Mobile) -->
+<header class="lg:hidden sticky top-0 z-20 bg-light-card/95 dark:bg-dark-card/95 backdrop-blur border-b border-light-border dark:border-dark-border no-print">
+  <div class="flex items-center justify-between px-4 py-3">
+    <button id="open-menu" class="text-xl text-light-muted dark:text-dark-muted hover:text-solar-gold"><i class="fas fa-bars"></i></button>
+    <span class="font-serif font-bold text-solar-gold text-sm"><i class="fas fa-solar-panel mr-1"></i>光伏行业报告</span>
+    <button id="theme-toggle-mobile" class="text-xl text-light-muted dark:text-dark-muted hover:text-solar-gold">
+      <i class="fas fa-sun dark:hidden"></i><i class="fas fa-moon hidden dark:inline"></i>
+    </button>
+  </div>
+</header>
+
+<!-- Hero Section -->
+<section id="hero" class="solar-pattern relative overflow-hidden">
+  <div class="absolute inset-0 bg-gradient-to-br from-solar-gold/10 via-transparent to-eco-green/10"></div>
+  <div class="relative max-w-5xl mx-auto px-6 py-16 md:py-24">
+    <div class="fade-in">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-solar-gold/15 text-solar-gold border border-solar-gold/30 mb-6">
+        <i class="fas fa-chart-line"></i> 月度定期报告
+      </div>
+      <h1 class="font-serif text-3xl md:text-5xl font-bold leading-tight mb-4">
+        光伏行业<br><span class="text-solar-gold">趋势与风险速览</span>
+      </h1>
+      <p class="text-lg text-light-muted dark:text-dark-muted mb-2">2026年3月 · 数据来源：Supinfor 全球商情速递平台</p>
+      <p class="text-sm text-light-muted dark:text-dark-muted mb-8">覆盖范围：45家企业 · 1327条资讯 · 生成日期：2026-04-20</p>
+    </div>
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 fade-in">
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-light-border dark:border-dark-border shadow-sm text-center">
+        <div class="text-3xl md:text-4xl font-bold text-solar-gold font-serif">1189</div>
+        <div class="text-xs text-light-muted dark:text-dark-muted mt-1"><i class="fas fa-arrow-trend-up mr-1 text-eco-green"></i>趋势资讯</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-light-border dark:border-dark-border shadow-sm text-center">
+        <div class="text-3xl md:text-4xl font-bold text-red-500 font-serif">138</div>
+        <div class="text-xs text-light-muted dark:text-dark-muted mt-1"><i class="fas fa-triangle-exclamation mr-1 text-red-400"></i>风险资讯</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-light-border dark:border-dark-border shadow-sm text-center">
+        <div class="text-3xl md:text-4xl font-bold text-eco-green font-serif">9:1</div>
+        <div class="text-xs text-light-muted dark:text-dark-muted mt-1"><i class="fas fa-scale-balanced mr-1 text-solar-gold"></i>趋势/风险比</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-light-border dark:border-dark-border shadow-sm text-center">
+        <div class="text-3xl md:text-4xl font-bold text-blue-400 font-serif">45</div>
+        <div class="text-xs text-light-muted dark:text-dark-muted mt-1"><i class="fas fa-building mr-1 text-blue-400"></i>覆盖企业</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Executive Summary -->
+<section id="executive-summary" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-solar-gold/15 flex items-center justify-center text-solar-gold"><i class="fas fa-clipboard-list"></i></span>
+      执行摘要
+    </h2>
+    <p class="text-base leading-relaxed mb-6 text-light-muted dark:text-dark-muted">
+      本报告基于光伏行业行业45家企业在2026年3月的1327条资讯（趋势1189条、风险138条），趋势/风险比为9:1。
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Trend signals -->
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-light-border dark:border-dark-border shadow-sm">
+        <h3 class="font-serif text-lg font-bold mb-4 flex items-center gap-2 text-eco-green">
+          <i class="fas fa-arrow-trend-up"></i> 本月核心趋势信号
+        </h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2"><span class="text-solar-gold mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>趋势资讯最集中的标签为「经营业绩」（193条），新品发布活动密集</span></li>
+          <li class="flex items-start gap-2"><span class="text-solar-gold mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>趋势资讯量最大的企业为第一太阳能（111条）</span></li>
+          <li class="flex items-start gap-2"><span class="text-solar-gold mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>资讯活跃度前三：第一太阳能、阿特斯、SMA太阳能</span></li>
+        </ul>
+      </div>
+      <!-- Risk signals -->
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-light-border dark:border-dark-border shadow-sm">
+        <h3 class="font-serif text-lg font-bold mb-4 flex items-center gap-2 text-red-500">
+          <i class="fas fa-triangle-exclamation"></i> 本月核心风险信号
+        </h3>
+        <ul class="space-y-3 text-sm">
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>风险资讯最集中的标签为「监管调查」（51条）</span></li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>风险暴露最大的企业为Enphase（50条）</span></li>
+          <li class="flex items-start gap-2"><span class="text-red-400 mt-0.5"><i class="fas fa-circle text-[6px]"></i></span><span>趋势/风险比偏低（&lt;6:1）的企业：Enphase、韩华Qcells、法电新能源（光伏）、阿达尼绿色能源（光伏）、新特能源</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="max-w-5xl mx-auto border-light-border dark:border-dark-border">
+
+<!-- Part 1: Industry Development -->
+<section id="part1" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-eco-green/15 flex items-center justify-center text-eco-green"><i class="fas fa-chart-line"></i></span>
+      第一部分：行业发展态势
+    </h2>
+  </div>
+
+  <!-- 1.1 Trend Tag Distribution -->
+  <div id="sec-1-1" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-solar-gold">1.1</span> 趋势标签分布
+    </h3>
+    <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-light-border dark:border-dark-border shadow-sm">
+      <div class="space-y-3">
+        <!-- Bar: 经营业绩 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">经营业绩</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-solar-gold to-solar-goldLight flex items-center justify-end pr-2" style="width:0%" data-width="100%">
+              <span class="text-[10px] font-bold text-dark-bg">193</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">28.8%</div>
+        </div>
+        <!-- Bar: 重大项目 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">重大项目</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-solar-gold to-solar-goldLight flex items-center justify-end pr-2" style="width:0%" data-width="80.8%">
+              <span class="text-[10px] font-bold text-dark-bg">156</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">23.2%</div>
+        </div>
+        <!-- Bar: 新品发布 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">新品发布</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="51.3%">
+              <span class="text-[10px] font-bold text-dark-bg">99</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">14.8%</div>
+        </div>
+        <!-- Bar: 技术创新 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">技术创新</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="29.0%">
+              <span class="text-[10px] font-bold text-dark-bg">56</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">8.3%</div>
+        </div>
+        <!-- Bar: 采购合作 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">采购合作</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="24.9%">
+              <span class="text-[10px] font-bold text-dark-bg">48</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">7.2%</div>
+        </div>
+        <!-- Bar: 区域拓展 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">区域拓展</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="21.2%">
+              <span class="text-[10px] font-bold text-dark-bg">41</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">6.1%</div>
+        </div>
+        <!-- Bar: 扩大投资 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">扩大投资</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="15.0%">
+              <span class="text-[10px] font-bold text-dark-bg">29</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">4.3%</div>
+        </div>
+        <!-- Bar: 荣誉奖项 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">荣誉奖项</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="10.9%">
+              <span class="text-[10px] font-bold text-dark-bg">21</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">3.1%</div>
+        </div>
+        <!-- Bar: 销售合作 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">销售合作</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-purple-400 to-purple-300 flex items-center justify-end pr-2" style="width:0%" data-width="9.8%">
+              <span class="text-[10px] font-bold text-dark-bg">19</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">2.8%</div>
+        </div>
+        <!-- Bar: 研发合作 -->
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">研发合作</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden relative">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-purple-400 to-purple-300 flex items-center justify-end pr-2" style="width:0%" data-width="4.7%">
+              <span class="text-[10px] font-bold text-dark-bg">9</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">1.3%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.2 Trend Active Top 10 -->
+  <div id="sec-1-2" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-solar-gold">1.2</span> 趋势活跃企业 Top 10
+    </h3>
+    <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-light-border dark:border-dark-border shadow-sm">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-solar-gold font-bold text-center">1</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">第一太阳能</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-solar-gold to-solar-goldLight flex items-center justify-end pr-2" style="width:0%" data-width="100%">
+              <span class="text-[10px] font-bold text-dark-bg">111</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">经营业绩,重大项目</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-solar-gold font-bold text-center">2</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">阿特斯</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-solar-gold to-solar-goldLight flex items-center justify-end pr-2" style="width:0%" data-width="82.0%">
+              <span class="text-[10px] font-bold text-dark-bg">91</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">经营业绩,重大项目</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-solar-gold font-bold text-center">3</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">SMA太阳能</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="76.6%">
+              <span class="text-[10px] font-bold text-dark-bg">85</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">经营业绩,重大项目</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-solar-gold font-bold text-center">4</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">阳光电源</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="76.6%">
+              <span class="text-[10px] font-bold text-dark-bg">85</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">新品发布,技术创新</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">5</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">晶科能源</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-eco-green to-eco-greenLight flex items-center justify-end pr-2" style="width:0%" data-width="67.6%">
+              <span class="text-[10px] font-bold text-dark-bg">75</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">采购合作,技术创新</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">6</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">天合光能</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="63.1%">
+              <span class="text-[10px] font-bold text-dark-bg">70</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">重大项目,新品发布</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">7</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">华为（光伏）</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="54.1%">
+              <span class="text-[10px] font-bold text-dark-bg">60</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">重大项目,新品发布</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">8</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">隆基绿能</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="45.9%">
+              <span class="text-[10px] font-bold text-dark-bg">51</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">重大项目,新品发布</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">9</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">信义光能</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-blue-400 to-blue-300 flex items-center justify-end pr-2" style="width:0%" data-width="41.4%">
+              <span class="text-[10px] font-bold text-dark-bg">46</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">经营业绩,区域拓展</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-4 text-xs text-light-muted dark:text-dark-muted font-bold text-center">10</div>
+          <div class="w-24 md:w-32 text-xs font-medium shrink-0 truncate">Enphase</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-red-400 to-red-300 flex items-center justify-end pr-2" style="width:0%" data-width="30.6%">
+              <span class="text-[10px] font-bold text-dark-bg">34</span>
+            </div>
+          </div>
+          <div class="w-36 text-[10px] text-light-muted dark:text-dark-muted hidden md:block">经营业绩,销售合作</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.3 Key Company Trend Dynamics -->
+  <div id="sec-1-3" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-solar-gold">1.3</span> 重点企业趋势动态
+    </h3>
+
+    <!-- 第一太阳能 -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">第一太阳能 <span class="text-sm font-normal text-solar-gold ml-2">趋势量 111</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-solar-gold/15 text-solar-gold">经营业绩</span>
+          <p>First Solar首席供应链官Mike Koralewski称，公司正为全美数据中心供电，有能力为俄亥俄西北部的数据中心提供所需能源，认为需整合多种能源作为解决方案。该公司前身为1984年Harold McMaster创立的Glasstech Solar，1990年更名为Solar Cells Inc.，1999年被收购后成立First Solar LLC，2025年营收52亿美元，在美有6000名员工，海外也有生产基地。公司是中国以外最大的太阳能制造商，在美国俄亥俄等地创造大量劳动收入，正采用近乎百分百的本土供应链，未来希望实现全本土供应。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-eco-green/15 text-eco-green">重大项目</span>
+          <p>印度Deola的7MW光伏项目将为农户提供专属日间电力，解决农业用电难题。项目接入农业 feeder，减少输电损耗，保障灌溉与农作日间正常开展，降低常规电力依赖与供电补贴负担，提升灌溉规划效率与农业生产力，同时助力乡村电力基建现代化与清洁能源推广。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-400/15 text-blue-400">采购合作</span>
+          <p>据俄亥俄托莱多报纸《The Blade》报道，First Solar在俄亥俄莱克镇的新制造工厂已投产，将生产Series 6薄膜太阳能面板。NSG Pilkington North America与First Solar合作，为其莱克镇工厂供应浮法玻璃，该配套工厂今年初动工，距First Solar工厂10英里。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 阿特斯 -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">阿特斯 <span class="text-sm font-normal text-solar-gold ml-2">趋势量 91</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-solar-gold/15 text-solar-gold">经营业绩</span>
+          <p>13位覆盖该股的分析师给出"持有"共识评级，其中4家看跌、5家持有、3家买入、1家强力买入，去年更新评级的分析师平均12个月目标价为17.664美元，多家机构调整了评级和目标价。该股开盘价12.98美元，50日和200日移动均价分别为18.50和19.85美元，相关财务指标包括流动比率1.02、速动比率0.83等，去年股价区间6.57至34.59美元。2月14日发布季度EPS为-1.66美元，营收12.2亿美元，今年分析师预测全年EPS为-0.23。公司是全球光伏模块供应商，主营光伏组件、储能及系统集成服务。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-400/15 text-blue-400">区域拓展</span>
+          <p>SEIC更新2026新斯科舍省太阳能计算器，针对该省补贴计划关停后的市场，帮助房主对比系统规模、预估发电量、项目定价等。当前本地9.17kW光伏系统现金价约2.3万至2.9万加元，每千瓦年发电量约1000至1100千瓦时。原SolarHomes返现、加拿大绿色家庭拨款及贷款已停止新申请，计算器纳入现行电价、安装成本、融资方案及剩余激励政策，支持对比现金与融资场景的成本和发电量。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-eco-green/15 text-eco-green">重大项目</span>
+          <p>Grupo GET在阿尔马哈姆启用穆尔西亚地区首座融合自发自用光伏与大容量储能的工业厂房，位于萨利纳斯工业园，面积超2000平方米，适配高能耗连续作业企业。搭配704kWp光伏系统与1939kWh储能电池，采用加拿大Solar的组件、逆变器及KuBank 2.0储能单元，可降30%-40%用电成本，支持950kW电网供电，适配物流、食品加工等领域。该项目获多方肯定，Grupo GET CEO称其兼顾竞争力、可持续与创新，将穆尔西亚置于工业能源转型前沿；加拿大Solar高管表示其提升能源效率与运营韧性；当地官员称其契合区域工业战略，助力阿尔马哈姆打造优质营商环境，项目获欧盟复苏计划相关补贴。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SMA太阳能 -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">SMA太阳能 <span class="text-sm font-normal text-solar-gold ml-2">趋势量 85</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-solar-gold/15 text-solar-gold">经营业绩</span>
+          <p>2025年SMA集团营收微降0.9%至15.16亿欧元，毛利率从2024年16.5%大幅降至8.1%。除特殊项目外EBITDA为1.066亿欧元，含特殊项目后为-6540万欧元，EBITDA利润率为-4.3%。Large Scale &amp; Project Solutions营收增长7.9%至12.688亿欧元，占总营收83.7%，EBIT微降；Home &amp; Business Solutions营收锐减至2.472亿欧元，占比降至16.3%，EBIT为-3.756亿欧元，主因竞争激烈、需求疲软及特殊项目。2025年集团自由现金流达1.097亿欧元，净现金增至1.764亿欧元。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-purple-400/15 text-purple-400">荣誉奖项</span>
+          <p>SMA Solar Technology凭借Sunny Boy Smart Energy斩获2013年慕尼黑欧洲国际太阳能展光伏类最佳产品奖，这是其第三次获该奖项，彰显了其技术领导力。该产品是首款内置电池的壁挂式量产光伏逆变器，可将户用光伏自用电率提升超50%，内置约2kWh锂离子电池，寿命10年、深度放电90%，安装简便且无需额外 sizing 成本，可融入智能家庭系统。SMA认为分散式可再生能源供电需依赖分散储能系统，该产品契合智能能源转型需求，可优化本地供电、平衡电网功率波动，助力能源转型。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-eco-green/15 text-eco-green">重大项目</span>
+          <p>SMA为葡萄牙Alcoutim聚光光伏电站提供Sunny Tripower系列逆变器，共89台Sunny Tripower 15000TL型号，搭配Soitec的CPV组件，总装机容量1.29MWc，年发电量1900MWh，可供应数百户家庭用电。SMA逆变器可完美适配各类光伏组件包括CPV模块，能满足技术要求，此前已在意大利等地为搭载Soitec组件的光伏电站供货。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 阳光电源 -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">阳光电源 <span class="text-sm font-normal text-solar-gold ml-2">趋势量 85</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-solar-gold/15 text-solar-gold">经营业绩</span>
+          <p>阳光电源公布2025年年度报告，营收891.84亿元同比增14.55%，毛利率31.83%同比增1.89%，归母净利润134.61亿元同比增21.97%。销售、研发费用因扩张与创新投入分别增28.49%、31.97%，财务费用下降，经营现金流净额增40.18%。每10股派现6.9元。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-blue-400/15 text-blue-400">销售合作</span>
+          <p>全球光伏逆变器及储能系统领军企业阳光电源，与其南非官方分销伙伴赫霍尔特集团签署历史性协议，将在南非部署总计1155兆瓦时工商业储能系统。该协议是阳光电源拓展南非市场的重要里程碑，将分阶段在南非全境落地项目，助力当地企业提升供电可靠性、能源效率及可再生能源整合度。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-purple-400/15 text-purple-400">荣誉奖项</span>
+          <p>Sungrow被彭博新能源财经（BNEF）发布的2025逆变器金融可靠性研究评为全球金融最可靠逆变器品牌，这是其第六次获此荣誉，再次确认了其在全球可再生能源市场的领先地位与产品认可度。该研究是评估逆变器厂商金融可靠性的关键指标，涵盖厂商担保、客户支持服务、交付时效等多项标准，并结合全球投资者反馈编制而成。Sungrow获受访参与者100%金融可靠评级，体现其市场强势地位与投资者对其技术的持续信任，其产品能提升项目获取长期融资的可能性，为投资者提供金融保障。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enphase -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-red-500/5">
+        <h4 class="font-serif font-bold text-lg">Enphase <span class="text-sm font-normal text-solar-gold ml-2">趋势量 34</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-eco-green/15 text-eco-green">新品发布</span>
+          <p>Enphase Energy近期为澳新推出AI驱动的IQ®能源管理平台，可整合自家光伏与储能系统，通过Enphase App管理电价与第三方设备，体现其深化软件与能源管理能力的战略。Enphase需依靠集成光伏、储能与软件需求抵消美国本土市场萎缩与关税压力，此次澳新平台发布与法国Ensol合作强化了国际与软件多元化布局，但仍面临美国税收抵免到期等短期风险，其增长需依托海外市场与电网服务对冲本土压力。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-purple-400/15 text-purple-400">荣誉奖项</span>
+          <p>Enphase Energy凭借先进微逆变器技术，为个人和企业提供清洁、安全、低成本能源，成为光伏市场技术领导者。其产品契合智能电网、大数据、储能等光伏新挑战，公司CEO Paul Nahi肯定了团队努力。该奖项表彰推动前沿技术并影响市场的企业，Frost &amp; Sullivan看好Enphase以技术、品质和客户关系实现长期增长。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-eco-green/15 text-eco-green">重大项目</span>
+          <p>法国索恩-卢瓦尔省的葡萄酒农洛朗·戈贝，因能源价格上涨，在900平米农业建筑屋顶安装221块光伏板，配套Enphase Energy公司的微型逆变器，年产能72930千瓦时，可覆盖其酿酒高峰期的5万至6万千瓦时能耗，大幅降低能源账单。当地认证安装师迪迪埃·若曼承接该项目，选用Enphase微型逆变器，其单块故障不会导致全站停机，保障农业建筑用电安全且优化发电效率，该公司法国销售负责人认为项目验证了产品适配性。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.4 Trend Analysis -->
+  <div id="sec-1-4" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-solar-gold">1.4</span> 趋势分析
+    </h3>
+    <div class="space-y-4">
+      <div class="callout rounded-r-xl">
+        <p class="font-bold mb-2">经营业绩与重大项目并重，行业进入规模化交付期。</p>
+        <p class="text-sm leading-relaxed">经营业绩（28.8%）和重大项目（23.2%）合计占趋势资讯的52%，说明光伏行业已过了"讲故事"阶段，进入实际交付和财务兑现期。阳光电源营收891亿元增15%、First Solar营收52亿美元、SMA集团营收15亿欧元——头部企业正在用业绩证明商业模式。</p>
+      </div>
+      <div class="callout rounded-r-xl">
+        <p class="font-bold mb-2">技术创新聚焦钙钛矿和储能集成。</p>
+        <p class="text-sm leading-relaxed">牛津光伏专注钙钛矿叠层电池商业化；阳光电源和SMA在逆变器+储能一体化方向发力；Enphase推出AI驱动的能源管理平台。技术竞争正从单一组件效率转向"光伏+储能+智能管理"的系统级解决方案。</p>
+      </div>
+      <div class="callout rounded-r-xl">
+        <p class="font-bold mb-2">区域拓展以中东、南非、拉美为主战场。</p>
+        <p class="text-sm leading-relaxed">阳光电源与南非赫霍尔特签署1155MWh储能协议；ACWA电力在中东布局大型光伏项目；阿特斯在西班牙落地工商业光储项目。新兴市场的大型地面电站和工商业分布式是当前增长最快的两个细分。</p>
+      </div>
+      <div class="callout rounded-r-xl">
+        <p class="font-bold mb-2">中国企业主导组件和逆变器出货，欧美企业聚焦本土制造。</p>
+        <p class="text-sm leading-relaxed">晶科、天合、隆基、阳光电源等中国企业在全球出货量上占据绝对优势；First Solar和韩华Qcells则在美国本土制造上加大投入，利用IRA政策红利构建非中国供应链。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="max-w-5xl mx-auto border-light-border dark:border-dark-border">
+
+<!-- Part 2: Risk Warning -->
+<section id="part2" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-red-500/15 flex items-center justify-center text-red-500"><i class="fas fa-shield-halved"></i></span>
+      第二部分：风险预警
+    </h2>
+  </div>
+
+  <!-- 2.1 Risk Tag Distribution -->
+  <div id="sec-2-1" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-red-500">2.1</span> 风险标签分布
+    </h3>
+    <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-light-border dark:border-dark-border shadow-sm">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">监管调查</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-red-500 to-red-400 flex items-center justify-end pr-2" style="width:0%" data-width="100%">
+              <span class="text-[10px] font-bold text-white">51</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">51.0%</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">法律诉讼</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-orange-500 to-orange-400 flex items-center justify-end pr-2" style="width:0%" data-width="72.5%">
+              <span class="text-[10px] font-bold text-white">37</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">37.0%</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">裁减人员</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-yellow-500 to-yellow-400 flex items-center justify-end pr-2" style="width:0%" data-width="15.7%">
+              <span class="text-[10px] font-bold text-dark-bg">8</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">8.0%</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">劳资冲突</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-gray-400 to-gray-300 flex items-center justify-end pr-2" style="width:0%" data-width="3.9%">
+              <span class="text-[10px] font-bold text-dark-bg">2</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">2.0%</div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-20 md:w-28 text-xs text-right shrink-0 font-medium">安全事故</div>
+          <div class="flex-1 bg-light-bg dark:bg-dark-bg rounded-full h-7 overflow-hidden">
+            <div class="bar-fill h-full rounded-full bg-gradient-to-r from-gray-400 to-gray-300 flex items-center justify-end pr-2" style="width:0%" data-width="3.9%">
+              <span class="text-[10px] font-bold text-dark-bg">2</span>
+            </div>
+          </div>
+          <div class="w-12 text-xs text-light-muted dark:text-dark-muted text-right">2.0%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.2 Risk Exposure Top 5 Cards -->
+  <div id="sec-2-2" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-red-500">2.2</span> 风险暴露企业 Top 10
+    </h3>
+    <!-- Top 5 indicator cards -->
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-red-500/30 shadow-sm text-center">
+        <div class="text-3xl font-bold text-red-500 font-serif">50</div>
+        <div class="text-xs font-medium mt-1">Enphase</div>
+        <div class="text-[10px] text-light-muted dark:text-dark-muted mt-0.5">法律诉讼,监管调查</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-orange-500/30 shadow-sm text-center">
+        <div class="text-3xl font-bold text-orange-500 font-serif">13</div>
+        <div class="text-xs font-medium mt-1">第一太阳能</div>
+        <div class="text-[10px] text-light-muted dark:text-dark-muted mt-0.5">监管调查,法律诉讼</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-yellow-500/30 shadow-sm text-center">
+        <div class="text-3xl font-bold text-yellow-500 font-serif">10</div>
+        <div class="text-xs font-medium mt-1">韩华Qcells</div>
+        <div class="text-[10px] text-light-muted dark:text-dark-muted mt-0.5">监管调查,裁减人员</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-solar-gold/30 shadow-sm text-center">
+        <div class="text-3xl font-bold text-solar-gold font-serif">7</div>
+        <div class="text-xs font-medium mt-1">法电新能源</div>
+        <div class="text-[10px] text-light-muted dark:text-dark-muted mt-0.5">监管调查,法律诉讼</div>
+      </div>
+      <div class="bg-light-card dark:bg-dark-card rounded-xl p-4 border border-solar-gold/30 shadow-sm text-center">
+        <div class="text-3xl font-bold text-solar-gold font-serif">7</div>
+        <div class="text-xs font-medium mt-1">阿达尼绿色能源</div>
+        <div class="text-[10px] text-light-muted dark:text-dark-muted mt-0.5">监管调查,法律诉讼</div>
+      </div>
+    </div>
+    <!-- Full Top 10 table -->
+    <div class="bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-light-border dark:border-dark-border bg-light-bg/50 dark:bg-dark-bg/50">
+            <th class="px-4 py-3 text-left font-medium text-xs">排名</th>
+            <th class="px-4 py-3 text-left font-medium text-xs">企业</th>
+            <th class="px-4 py-3 text-right font-medium text-xs">风险量</th>
+            <th class="px-4 py-3 text-left font-medium text-xs">主要标签</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-light-border dark:divide-dark-border">
+          <tr><td class="px-4 py-2.5 text-solar-gold font-bold">1</td><td class="px-4 py-2.5 font-medium">Enphase</td><td class="px-4 py-2.5 text-right text-red-500 font-bold">50</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">法律诉讼,监管调查</td></tr>
+          <tr><td class="px-4 py-2.5 text-solar-gold font-bold">2</td><td class="px-4 py-2.5 font-medium">第一太阳能</td><td class="px-4 py-2.5 text-right text-red-500 font-bold">13</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查,法律诉讼</td></tr>
+          <tr><td class="px-4 py-2.5 text-solar-gold font-bold">3</td><td class="px-4 py-2.5 font-medium">韩华Qcells</td><td class="px-4 py-2.5 text-right text-red-500 font-bold">10</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查,裁减人员</td></tr>
+          <tr><td class="px-4 py-2.5">4</td><td class="px-4 py-2.5 font-medium">法电新能源（光伏）</td><td class="px-4 py-2.5 text-right text-orange-500 font-bold">7</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查,法律诉讼</td></tr>
+          <tr><td class="px-4 py-2.5">5</td><td class="px-4 py-2.5 font-medium">阿达尼绿色能源（光伏）</td><td class="px-4 py-2.5 text-right text-orange-500 font-bold">7</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查,法律诉讼</td></tr>
+          <tr><td class="px-4 py-2.5">6</td><td class="px-4 py-2.5 font-medium">华为（光伏）</td><td class="px-4 py-2.5 text-right text-orange-500 font-bold">6</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查</td></tr>
+          <tr><td class="px-4 py-2.5">7</td><td class="px-4 py-2.5 font-medium">SMA太阳能</td><td class="px-4 py-2.5 text-right font-bold">5</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">裁减人员,监管调查</td></tr>
+          <tr><td class="px-4 py-2.5">8</td><td class="px-4 py-2.5 font-medium">晶科能源</td><td class="px-4 py-2.5 text-right font-bold">3</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">裁减人员,监管调查</td></tr>
+          <tr><td class="px-4 py-2.5">9</td><td class="px-4 py-2.5 font-medium">天合光能</td><td class="px-4 py-2.5 text-right font-bold">3</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查,法律诉讼</td></tr>
+          <tr><td class="px-4 py-2.5">10</td><td class="px-4 py-2.5 font-medium">隆基绿能</td><td class="px-4 py-2.5 text-right font-bold">3</td><td class="px-4 py-2.5 text-xs text-light-muted dark:text-dark-muted">监管调查</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2.3 Risk Tag × Company Matrix (Heatmap) -->
+  <div id="sec-2-3" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-red-500">2.3</span> 风险标签×企业矩阵（Top 15）
+    </h3>
+    <div class="bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-x-auto">
+      <table class="w-full text-sm" id="heatmap-table">
+        <thead>
+          <tr class="border-b border-light-border dark:border-dark-border bg-light-bg/50 dark:bg-dark-bg/50">
+            <th class="px-3 py-3 text-left font-medium text-xs sticky left-0 bg-light-bg dark:bg-dark-bg z-10">企业</th>
+            <th class="px-3 py-3 text-center font-medium text-xs">监管调查</th>
+            <th class="px-3 py-3 text-center font-medium text-xs">法律诉讼</th>
+            <th class="px-3 py-3 text-center font-medium text-xs">裁减人员</th>
+            <th class="px-3 py-3 text-center font-medium text-xs">劳资冲突</th>
+            <th class="px-3 py-3 text-center font-medium text-xs">安全事故</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-light-border dark:divide-dark-border">
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">Enphase</td><td class="px-3 py-2.5 text-center heat-2 rounded font-bold">2</td><td class="px-3 py-2.5 text-center heat-23 rounded font-bold text-white">23</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">第一太阳能</td><td class="px-3 py-2.5 text-center heat-5 rounded font-bold">5</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">韩华Qcells</td><td class="px-3 py-2.5 text-center heat-5 rounded font-bold">5</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-2 rounded font-bold">2</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">法电新能源（光伏）</td><td class="px-3 py-2.5 text-center heat-4 rounded font-bold">4</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">阿达尼绿色能源（光伏）</td><td class="px-3 py-2.5 text-center heat-4 rounded font-bold">4</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">华为（光伏）</td><td class="px-3 py-2.5 text-center heat-5 rounded font-bold">5</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">SMA太阳能</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">晶科能源</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">天合光能</td><td class="px-3 py-2.5 text-center heat-2 rounded font-bold">2</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">隆基绿能</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">信义光能</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">SolarEdge</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">新特能源</td><td class="px-3 py-2.5 text-center heat-3 rounded font-bold">3</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">Enel绿色电力（光伏）</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td></tr>
+          <tr><td class="px-3 py-2.5 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">NextEra能源（光伏）</td><td class="px-3 py-2.5 text-center heat-1 rounded font-bold">1</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-0 text-light-muted dark:text-dark-muted">-</td><td class="px-3 py-2.5 text-center heat-2 rounded font-bold">2</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 2.4 Key Company Risk Events -->
+  <div id="sec-2-4" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-red-500">2.4</span> 重点企业风险事件
+    </h3>
+
+    <!-- Enphase Risk -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-red-500/30 shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-red-500/20 bg-red-500/5">
+        <h4 class="font-serif font-bold text-lg">Enphase <span class="text-sm font-normal text-red-500 ml-2">风险量 50</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>Portnoy律师事务所代理Enphase Energy股东发起集体诉讼，诉讼时段为2025年4月22日至10月28日，投资者需在2026年4月20日前提交牵头原告动议。诉讼指控Enphase虚假陈述，夸大渠道库存管理能力与25D税收抵免影响。2025年10月28日Enphase发布三季度财报，称四季度电池出货量将因高库存下滑，2026年一季度营收受25D抵到期影响，股价当日跌超15%。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>阳台光伏系统通过安装阳台太阳能板连接家用插座运行，从德国扩散至美国，特朗普政府的煤电政策反而推高了其关注度。该系统4年前因乌克兰规避俄电网攻击诞生，后借德国补贴快速普及，美企Enphase已入局。此前美国阳台光伏受法规和协会规则阻碍，如今伊利诺伊州推进SB3104法案，简化安装审批流程；加州后犹他州通过1200瓦以下阳台光伏许可法案，多州正审议同类立法。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>美国知名券商律所Faruqi &amp; Faruqi, LLP正调查针对Enphase Energy, Inc.的潜在证券索赔，已提起联邦证券集体诉讼，提醒投资者在2026年4月20日前申请担任诉讼牵头原告。该律所证券诉讼合伙人James (Josh) Wilson鼓励2025年4月22日至10月28日期间买入Enphase证券遭受损失的投资者，直接致电联系咨询法律维权选项。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 第一太阳能 Risk -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-orange-500/30 shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-orange-500/20 bg-orange-500/5">
+        <h4 class="font-serif font-bold text-lg">第一太阳能 <span class="text-sm font-normal text-orange-500 ml-2">风险量 13</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>3月26日美國ITC投票對特定TOPCon太陽能電池、組件等啟動337調查，編碼337-TA-1494。此前美國First Solar申請立案，稱相關產品侵權專利號9130074，請求發布排除令等。ITC將在立案45天內確定調查結束期，救濟令通常生效後60日具終局效力。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>Pomerantz LLP代表First Solar投资者调查公司及高管是否存在证券欺诈等违规行为。此前First Solar发布2025年财报业绩远不及预期且下调2026年营收指引，引发行研机构下调评级，股价当日暴跌13.61%。该律所是证券集体诉讼领域顶级律所，曾多次为投资者追回千万美元赔偿。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>美国对印度进口太阳能电池及组件征收125.87%反补贴税，还发起针对印度、印尼、老挝的反倾销调查，相关调查由USITC主导，反补贴调查约205天，短于反倾销调查。印度正配合美当局提供信息，需等待最终裁定才能采取补救措施。美国太阳能制造联盟及First Solar等企业，向USITC和美国商务部提交AD/CVD请愿书，指控印、印尼、老挝在美市场倾销太阳能组件。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 韩华Qcells Risk -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-yellow-500/30 shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-yellow-500/20 bg-yellow-500/5">
+        <h4 class="font-serif font-bold text-lg">韩华Qcells <span class="text-sm font-normal text-yellow-500 ml-2">风险量 10</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>韩华解决方案突然公布2.4万亿韩元大额增资，被韩国企业治理论坛质疑违反董事忠实义务。此次增资跳过章程召集程序，且近4成增资规模或严重影响股本结构，增资近6成用于偿债，源于韩华解决方案长期亏损下激进光伏投资导致债务高企。韩华解决方案此次增资的独立董事中2名在增资前2日刚通过股东大会新选任，其是否能基于美企现金流分析等完成审慎审议存疑。同时旧任独立监事未阻止过激化的风险投资，增资流程合规性及董事勤勉义务均遭质疑。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>[Biz&amp;Law] 한화큐셀, 美 핑크에너지 파산 분쟁 종결… 환수금 삭감 '성공' - 서울와이어</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-yellow-500/15 text-yellow-600">裁减人员</span>
+          <p>Qcells因产品遭美国海关扣货曾停工并裁员1000人，现已恢复佐治亚州两处工厂的正常组件生产，该公司称其供应链完全非中国本土，正推进完整美国本土光伏供应链建设，计划2026年底前启动全产业链生产。美国海关依据《维吾尔强迫劳动预防法》扣留了Qcells的韩国产太阳能电池，2022年6月至2026年间超328亿美元电子类产品被扣留，其中8541编码的太阳能产品占比83%，多数从马来西亚、越南、泰国进口，79%被扣产品最终获释。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 法电新能源 Risk -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">法电新能源（光伏） <span class="text-sm font-normal text-solar-gold ml-2">风险量 7</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>2024年法国审计院公民参与活动中，针对可再生能源尤其是光伏产业财政支持的相关建言，推动其将原能源公共服务成本审计拓展至可再生能源预算支持领域。法国为推动能源气候政策实现2050碳中和，通过购电合同与薪酬补贴等机制支持可再生能源产业，2016-2024年累计成本达263亿欧元，2024年底长期财政承诺达870亿欧元。审计院发现现有机制存在超额收益、市场不良影响及监管不足等问题，建议加强产业调研、打击欺诈、优化长期财政信息披露等，以提升政策效率与成本管控能力。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>2010年12月13日，法国冲突法庭就巴黎商事法庭中Green Yellow与负责光伏电力购电义务的EDF之间的诉讼程序作出裁决，相关说明可查阅专业律师Arnaud Gossement的网站获取更多信息。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>总部位于荷兰鹿特丹的Solarplaza是全球独立光伏行业平台，将在马赛举办法国光伏未来主题会议，汇聚行业专家探讨相关议题。法国政府因担忧光伏产业过热，仓促出台光伏电价收购下调、税收信贷减少等政策，引发行业不满，存在监管不稳定风险。法国光伏产业存在治理缺陷，审批流程不透明，存在投机性申请质疑，3000MW项目待并网，且数据来源不明，行业呼吁建立透明过滤机制。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 阿达尼绿色能源 Risk -->
+    <div class="mb-6 bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <div class="px-6 py-4 border-b border-light-border dark:border-dark-border bg-solar-gold/5">
+        <h4 class="font-serif font-bold text-lg">阿达尼绿色能源（光伏） <span class="text-sm font-normal text-solar-gold ml-2">风险量 7</span></h4>
+      </div>
+      <div class="p-6 space-y-4 text-sm leading-relaxed">
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-orange-500/15 text-orange-500">监管调查</span>
+          <p>印度高等法院维持印度太阳能公司将太阳能容量重新分配给阿达尼绿色能源有限公司的决定，该判决强化了可再生能源项目分配的监管权威，明确了项目执行要求，增强了投资者信心，同时巩固了印度太阳能公司作为大型太阳能项目核心执行机构的地位，助力印度太阳能产业按国家能源目标发展。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>德里高院驳回律师拉维·沙尔玛提起的公益诉讼，该诉讼指控印度太阳能公司2023年将2.33吉瓦光伏容量从Azure Power印度转至阿达尼绿色能源的流程违规，造成公共财政损失。法院认为原告无资格就竞标流程争议维权，且未举证公共损失，还提及重分配后购电单价下降未损害财政。</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="shrink-0 mt-0.5 px-2 py-0.5 rounded text-[10px] font-bold bg-red-500/15 text-red-500">法律诉讼</span>
+          <p>德里高等法院驳回了律师拉维·沙尔玛提起的公益诉讼，该诉讼质疑印度太阳能公司将2.33吉瓦太阳能产能从Azure Power转配给阿达尼绿色能源的决定，称其存在竞标违规并导致公共财政损失。法院认为该诉讼主体不适格，且转配后电价下降未损害公共财政，不应干预已完成的合同流程。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.5 Risk Analysis -->
+  <div id="sec-2-5" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-red-500">2.5</span> 风险分析
+    </h3>
+    <div class="space-y-4">
+      <div class="callout rounded-r-xl" style="border-left-color: #ef4444;">
+        <p class="font-bold mb-2">监管调查（51%）和法律诉讼（37%）合计占风险的88%，贸易保护和证券诉讼是两大主线。</p>
+        <p class="text-sm leading-relaxed">光伏行业的风险结构与汽车行业截然不同——几乎没有安全事故，核心风险来自政策和法律层面。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #ef4444;">
+        <p class="font-bold mb-2">美国贸易保护持续升级。</p>
+        <p class="text-sm leading-relaxed">First Solar主导发起337调查，针对TOPCon电池专利侵权；美国对印度光伏组件征收125.87%反补贴税，并对印度、印尼、老挝发起反倾销调查；韩华Qcells因UFLPA（维吾尔强迫劳动预防法）被海关扣货后裁员1000人。美国正通过专利、关税、供应链审查三重手段构建"去中国化"光伏供应链。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #ef4444;">
+        <p class="font-bold mb-2">证券集体诉讼集中在Enphase。</p>
+        <p class="text-sm leading-relaxed">Enphase因三季度财报不及预期、下调四季度指引，股价暴跌15%，引发多家律所发起证券欺诈集体诉讼。这是光伏行业特有的风险——高估值企业一旦业绩不达预期，立即面临美国证券诉讼机制的惩罚。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #ef4444;">
+        <p class="font-bold mb-2">法国光伏补贴政策不稳定。</p>
+        <p class="text-sm leading-relaxed">法国审计院指出2016-2024年可再生能源累计财政支持达263亿欧元，长期承诺达870亿欧元，存在超额收益和监管不足问题，建议收紧。政策不确定性是欧洲光伏市场的持续性风险。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="max-w-5xl mx-auto border-light-border dark:border-dark-border">
+
+<!-- Part 3: Cross Analysis -->
+<section id="part3" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-blue-500/15 flex items-center justify-center text-blue-400"><i class="fas fa-arrows-left-right"></i></span>
+      第三部分：交叉分析
+    </h2>
+  </div>
+
+  <!-- 3.1 Competitive Landscape -->
+  <div id="sec-3-1" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-blue-400">3.1</span> 企业竞争格局
+    </h3>
+    <div class="bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-x-auto">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-light-border dark:border-dark-border bg-light-bg/50 dark:bg-dark-bg/50">
+            <th class="px-4 py-3 text-left font-medium text-xs">分类</th>
+            <th class="px-4 py-3 text-left font-medium text-xs">企业</th>
+            <th class="px-4 py-3 text-left font-medium text-xs">特征</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-light-border dark:divide-dark-border">
+          <tr class="bg-eco-green/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-eco-green/15 text-eco-green"><i class="fas fa-crown text-[8px]"></i> 领先者</span></td>
+            <td class="px-4 py-2.5 font-medium">阿特斯</td>
+            <td class="px-4 py-2.5 text-xs">趋势91，比值91:1</td>
+          </tr>
+          <tr class="bg-eco-green/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-eco-green/15 text-eco-green"><i class="fas fa-crown text-[8px]"></i> 领先者</span></td>
+            <td class="px-4 py-2.5 font-medium">阳光电源</td>
+            <td class="px-4 py-2.5 text-xs">趋势85，比值42:1</td>
+          </tr>
+          <tr class="bg-eco-green/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-eco-green/15 text-eco-green"><i class="fas fa-crown text-[8px]"></i> 领先者</span></td>
+            <td class="px-4 py-2.5 font-medium">晶科能源</td>
+            <td class="px-4 py-2.5 text-xs">趋势75，比值25:1</td>
+          </tr>
+          <tr class="bg-eco-green/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-eco-green/15 text-eco-green"><i class="fas fa-crown text-[8px]"></i> 领先者</span></td>
+            <td class="px-4 py-2.5 font-medium">天合光能</td>
+            <td class="px-4 py-2.5 text-xs">趋势70，比值23:1</td>
+          </tr>
+          <tr class="bg-red-500/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/15 text-red-500"><i class="fas fa-triangle-exclamation text-[8px]"></i> 承压者</span></td>
+            <td class="px-4 py-2.5 font-medium">Enphase</td>
+            <td class="px-4 py-2.5 text-xs">趋势34，风险50，比值0.7:1</td>
+          </tr>
+          <tr class="bg-red-500/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/15 text-red-500"><i class="fas fa-triangle-exclamation text-[8px]"></i> 承压者</span></td>
+            <td class="px-4 py-2.5 font-medium">韩华Qcells</td>
+            <td class="px-4 py-2.5 text-xs">趋势36，风险10，比值3.6:1</td>
+          </tr>
+          <tr class="bg-red-500/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/15 text-red-500"><i class="fas fa-triangle-exclamation text-[8px]"></i> 承压者</span></td>
+            <td class="px-4 py-2.5 font-medium">法电新能源（光伏）</td>
+            <td class="px-4 py-2.5 text-xs">趋势28，风险7，比值4.0:1</td>
+          </tr>
+          <tr class="bg-red-500/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/15 text-red-500"><i class="fas fa-triangle-exclamation text-[8px]"></i> 承压者</span></td>
+            <td class="px-4 py-2.5 font-medium">阿达尼绿色能源（光伏）</td>
+            <td class="px-4 py-2.5 text-xs">趋势14，风险7，比值2.0:1</td>
+          </tr>
+          <tr class="bg-red-500/5">
+            <td class="px-4 py-2.5"><span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-bold bg-red-500/15 text-red-500"><i class="fas fa-triangle-exclamation text-[8px]"></i> 承压者</span></td>
+            <td class="px-4 py-2.5 font-medium">新特能源</td>
+            <td class="px-4 py-2.5 text-xs">趋势7，风险3，比值2.3:1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 3.2 Cross Analysis -->
+  <div id="sec-3-2" class="mb-12 fade-in">
+    <h3 class="font-serif text-xl font-bold mb-6 flex items-center gap-2">
+      <span class="text-blue-400">3.2</span> 交叉分析
+    </h3>
+    <div class="space-y-4">
+      <div class="callout rounded-r-xl" style="border-left-color: #3b82f6;">
+        <p class="font-bold mb-2">中国光伏企业：高趋势、极低风险，全球出货主导地位稳固。</p>
+        <p class="text-sm leading-relaxed">阿特斯（91:1）、阳光电源（42:1）、协鑫（35:1）、晶科（25:1）趋势/风险比极高，说明中国光伏企业在全球市场的正面动态远超负面。其风险主要集中在"监管调查"——即美国贸易保护政策的间接影响，而非产品质量或经营问题。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #3b82f6;">
+        <p class="font-bold mb-2">美国本土制造商：政策红利与诉讼风险并存。</p>
+        <p class="text-sm leading-relaxed">First Solar（9:1）受益于IRA政策和"去中国化"趋势，趋势活跃度高，但同时也是贸易保护的主要推动者和337调查的发起方，自身也面临证券诉讼调查。韩华Qcells（4:1）因UFLPA扣货事件承压，但正加速美国全产业链本土化建设。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #3b82f6;">
+        <p class="font-bold mb-2">Enphase是本月最大异常值（0.7:1）。</p>
+        <p class="text-sm leading-relaxed">风险量（50条）反超趋势量（34条），几乎全部来自证券集体诉讼。这是单一企业的业绩暴雷事件，不代表行业系统性风险，但反映了美国资本市场对光伏企业业绩兑现的严苛要求。</p>
+      </div>
+      <div class="callout rounded-r-xl" style="border-left-color: #3b82f6;">
+        <p class="font-bold mb-2">欧洲市场：补贴退坡与政策不确定性。</p>
+        <p class="text-sm leading-relaxed">法电新能源（4:1）、SMA（17:1但裁员为主要风险）反映欧洲光伏市场正经历补贴退坡后的调整期。SMA户用业务营收锐减、EBIT为负，说明欧洲户用光伏市场需求疲软。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="max-w-5xl mx-auto border-light-border dark:border-dark-border">
+
+<!-- Part 4: Strategic Recommendations -->
+<section id="part4" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-solar-gold/15 flex items-center justify-center text-solar-gold"><i class="fas fa-lightbulb"></i></span>
+      第四部分：战略建议
+    </h2>
+  </div>
+
+  <div class="grid gap-6 fade-in" style="counter-reset: strategy;">
+    <div class="strategy-card bg-light-card dark:bg-dark-card rounded-xl p-6 pl-8 border border-light-border dark:border-dark-border shadow-sm">
+      <h4 class="font-serif font-bold mb-3">中国光伏企业需提前布局"非中国供应链"应对美国贸易壁垒。</h4>
+      <p class="text-sm leading-relaxed text-light-muted dark:text-dark-muted">First Solar发起的337专利调查、UFLPA供应链审查、125%反补贴税——美国正系统性构建排除中国的光伏供应链。通过东南亚、中东转口的路径正在被逐一封堵，需要评估在美国友好国家（如印度、墨西哥）建立产能的必要性。</p>
+    </div>
+    <div class="strategy-card bg-light-card dark:bg-dark-card rounded-xl p-6 pl-8 border border-light-border dark:border-dark-border shadow-sm">
+      <h4 class="font-serif font-bold mb-3">关注"光伏+储能"一体化趋势带来的产品升级机会。</h4>
+      <p class="text-sm leading-relaxed text-light-muted dark:text-dark-muted">阳光电源1155MWh南非储能协议、SMA逆变器+储能一体机、Enphase AI能源管理平台——单纯卖组件的时代正在过去，系统级解决方案（组件+逆变器+储能+智能管理）是下一个价值高地。</p>
+    </div>
+    <div class="strategy-card bg-light-card dark:bg-dark-card rounded-xl p-6 pl-8 border border-light-border dark:border-dark-border shadow-sm">
+      <h4 class="font-serif font-bold mb-3">欧洲户用光伏市场进入调整期，工商业和大型地面电站是当前增长引擎。</h4>
+      <p class="text-sm leading-relaxed text-light-muted dark:text-dark-muted">SMA户用业务营收锐减、Enphase下调指引——欧洲户用市场因补贴退坡和高库存承压。但工商业分布式（如阿特斯西班牙项目）和新兴市场大型电站（中东、南非、拉美）仍在快速增长。</p>
+    </div>
+    <div class="strategy-card bg-light-card dark:bg-dark-card rounded-xl p-6 pl-8 border border-light-border dark:border-dark-border shadow-sm">
+      <h4 class="font-serif font-bold mb-3">钙钛矿技术商业化进程值得持续跟踪。</h4>
+      <p class="text-sm leading-relaxed text-light-muted dark:text-dark-muted">牛津光伏是本月技术创新标签中最活跃的企业之一，钙钛矿叠层电池有望突破硅基电池效率天花板。但从实验室到量产仍有距离，建议关注其稳定性和成本下降曲线。</p>
+    </div>
+    <div class="strategy-card bg-light-card dark:bg-dark-card rounded-xl p-6 pl-8 border border-light-border dark:border-dark-border shadow-sm">
+      <h4 class="font-serif font-bold mb-3">美国证券诉讼机制对高估值光伏企业的惩罚效应不可忽视。</h4>
+      <p class="text-sm leading-relaxed text-light-muted dark:text-dark-muted">Enphase的案例表明，一旦业绩不达预期，美国律所会迅速发起集体诉讼。在美上市或计划赴美上市的光伏企业，需要在业绩指引的保守性和投资者预期管理上更加审慎。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="max-w-5xl mx-auto border-light-border dark:border-dark-border">
+
+<!-- Appendix -->
+<section id="appendix" class="max-w-5xl mx-auto px-6 py-12">
+  <div class="fade-in">
+    <h2 class="font-serif text-2xl md:text-3xl font-bold mb-8 flex items-center gap-3">
+      <span class="w-10 h-10 rounded-lg bg-purple-500/15 flex items-center justify-center text-purple-400"><i class="fas fa-database"></i></span>
+      附录：企业完整数据
+    </h2>
+
+    <details class="bg-light-card dark:bg-dark-card rounded-xl border border-light-border dark:border-dark-border shadow-sm overflow-hidden">
+      <summary class="px-6 py-4 font-serif font-bold text-base cursor-pointer hover:text-solar-gold transition-colors flex items-center gap-2">
+        <i class="fas fa-table text-solar-gold"></i> 点击展开完整企业数据表（41家企业）
+      </summary>
+      <div class="overflow-x-auto">
+        <table class="w-full text-xs">
+          <thead>
+            <tr class="border-b border-light-border dark:border-dark-border bg-light-bg/50 dark:bg-dark-bg/50">
+              <th class="px-3 py-2.5 text-left font-medium sticky left-0 bg-light-bg dark:bg-dark-bg z-10">企业</th>
+              <th class="px-3 py-2.5 text-right font-medium">趋势量</th>
+              <th class="px-3 py-2.5 text-right font-medium">风险量</th>
+              <th class="px-3 py-2.5 text-right font-medium">比值</th>
+              <th class="px-3 py-2.5 text-left font-medium">主要趋势</th>
+              <th class="px-3 py-2.5 text-left font-medium">主要风险</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-light-border dark:divide-dark-border">
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">第一太阳能</td><td class="px-3 py-2 text-right text-eco-green font-bold">111</td><td class="px-3 py-2 text-right text-red-500 font-bold">13</td><td class="px-3 py-2 text-right">9:1</td><td class="px-3 py-2">经营业绩,重大项目</td><td class="px-3 py-2">监管调查,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">阿特斯</td><td class="px-3 py-2 text-right text-eco-green font-bold">91</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right text-eco-green font-bold">91:1</td><td class="px-3 py-2">经营业绩,重大项目</td><td class="px-3 py-2">法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">SMA太阳能</td><td class="px-3 py-2 text-right text-eco-green font-bold">85</td><td class="px-3 py-2 text-right">5</td><td class="px-3 py-2 text-right">17:1</td><td class="px-3 py-2">经营业绩,重大项目</td><td class="px-3 py-2">裁减人员,监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">阳光电源</td><td class="px-3 py-2 text-right text-eco-green font-bold">85</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right text-eco-green font-bold">42:1</td><td class="px-3 py-2">新品发布,技术创新</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr class="bg-red-500/5"><td class="px-3 py-2 font-medium sticky left-0 bg-red-500/5 z-10">Enphase</td><td class="px-3 py-2 text-right">34</td><td class="px-3 py-2 text-right text-red-500 font-bold">50</td><td class="px-3 py-2 text-right text-red-500 font-bold">1:1</td><td class="px-3 py-2">经营业绩,销售合作</td><td class="px-3 py-2">法律诉讼,监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">晶科能源</td><td class="px-3 py-2 text-right text-eco-green font-bold">75</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">25:1</td><td class="px-3 py-2">采购合作,技术创新</td><td class="px-3 py-2">裁减人员,监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">天合光能</td><td class="px-3 py-2 text-right text-eco-green font-bold">70</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">23:1</td><td class="px-3 py-2">重大项目,新品发布</td><td class="px-3 py-2">监管调查,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">华为（光伏）</td><td class="px-3 py-2 text-right text-eco-green font-bold">60</td><td class="px-3 py-2 text-right">6</td><td class="px-3 py-2 text-right">10:1</td><td class="px-3 py-2">重大项目,新品发布</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">隆基绿能</td><td class="px-3 py-2 text-right">51</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">17:1</td><td class="px-3 py-2">重大项目,新品发布</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">信义光能</td><td class="px-3 py-2 text-right">46</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">15:1</td><td class="px-3 py-2">经营业绩,区域拓展</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">晶澳科技</td><td class="px-3 py-2 text-right">41</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right">20:1</td><td class="px-3 py-2">新品发布,重大项目</td><td class="px-3 py-2">裁减人员,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">道达尔能源（光伏）</td><td class="px-3 py-2 text-right">38</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right">38:1</td><td class="px-3 py-2">重大项目,区域拓展</td><td class="px-3 py-2">劳资冲突</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">韩华Qcells</td><td class="px-3 py-2 text-right">36</td><td class="px-3 py-2 text-right text-red-500 font-bold">10</td><td class="px-3 py-2 text-right text-red-500">4:1</td><td class="px-3 py-2">扩大投资,经营业绩</td><td class="px-3 py-2">监管调查,裁减人员</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">协鑫科技</td><td class="px-3 py-2 text-right">35</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right">35:1</td><td class="px-3 py-2">经营业绩,区域拓展</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">SolarEdge</td><td class="px-3 py-2 text-right">31</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">10:1</td><td class="px-3 py-2">经营业绩,新品发布</td><td class="px-3 py-2">监管调查,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">法电新能源（光伏）</td><td class="px-3 py-2 text-right">28</td><td class="px-3 py-2 text-right text-orange-500 font-bold">7</td><td class="px-3 py-2 text-right text-red-500">4:1</td><td class="px-3 py-2">重大项目,区域拓展</td><td class="px-3 py-2">监管调查,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">东方日升</td><td class="px-3 py-2 text-right">28</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">28:0</td><td class="px-3 py-2">技术创新,经营业绩</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">Power Electronics</td><td class="px-3 py-2 text-right">28</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">28:0</td><td class="px-3 py-2">扩大投资,荣誉奖项</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">ENGIE（光伏）</td><td class="px-3 py-2 text-right">25</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right">12:1</td><td class="px-3 py-2">重大项目,扩大投资</td><td class="px-3 py-2">裁减人员</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">牛津光伏</td><td class="px-3 py-2 text-right">25</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">25:0</td><td class="px-3 py-2">技术创新,新品发布</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">固德威</td><td class="px-3 py-2 text-right">23</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right">23:1</td><td class="px-3 py-2">新品发布,销售合作</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">通威股份</td><td class="px-3 py-2 text-right">18</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right">9:1</td><td class="px-3 py-2">新品发布,经营业绩</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">古瑞瓦特</td><td class="px-3 py-2 text-right">16</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">16:0</td><td class="px-3 py-2">新品发布,技术创新</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">阿达尼绿色能源（光伏）</td><td class="px-3 py-2 text-right">14</td><td class="px-3 py-2 text-right text-orange-500 font-bold">7</td><td class="px-3 py-2 text-right text-red-500">2:1</td><td class="px-3 py-2">重大项目,扩大投资</td><td class="px-3 py-2">监管调查,法律诉讼</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">福莱特</td><td class="px-3 py-2 text-right">14</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">14:0</td><td class="px-3 py-2">经营业绩,采购合作</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">ACWA电力（光伏）</td><td class="px-3 py-2 text-right">11</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">11:0</td><td class="px-3 py-2">重大项目,区域拓展</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">大全能源</td><td class="px-3 py-2 text-right">8</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">8:0</td><td class="px-3 py-2">经营业绩</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">德业股份</td><td class="px-3 py-2 text-right">8</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">8:0</td><td class="px-3 py-2">荣誉奖项,重大项目</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">新特能源</td><td class="px-3 py-2 text-right">7</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right text-red-500">2:1</td><td class="px-3 py-2">经营业绩</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">Enel绿色电力（光伏）</td><td class="px-3 py-2 text-right">7</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right text-red-500">2:1</td><td class="px-3 py-2">重大项目,扩大投资</td><td class="px-3 py-2">法律诉讼,监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">锦浪科技</td><td class="px-3 py-2 text-right">7</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right">7:1</td><td class="px-3 py-2">采购合作,新品发布</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">爱旭股份</td><td class="px-3 py-2 text-right">6</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">6:0</td><td class="px-3 py-2">新品发布,采购合作</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">NextEra能源（光伏）</td><td class="px-3 py-2 text-right">5</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right text-red-500">2:1</td><td class="px-3 py-2">技术创新,经营业绩</td><td class="px-3 py-2">安全事故,监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">福斯特</td><td class="px-3 py-2 text-right">4</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">4:0</td><td class="px-3 py-2">重大项目,采购合作</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">瓦克化学（光伏）</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">3:0</td><td class="px-3 py-2">经营业绩,采购合作</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">华能集团（光伏）</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">3:0</td><td class="px-3 py-2">区域拓展,采购合作</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">晶盛机电</td><td class="px-3 py-2 text-right">3</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right text-red-500">2:1</td><td class="px-3 py-2">采购合作,重大项目</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">三峡能源（光伏）</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right">2:1</td><td class="px-3 py-2">重大项目</td><td class="px-3 py-2">监管调查</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">TCL中环</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">2:0</td><td class="px-3 py-2">采购合作,经营业绩</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">国家电投（光伏）</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">2:0</td><td class="px-3 py-2">重大项目,技术创新</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">Swift Solar</td><td class="px-3 py-2 text-right">2</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">2:0</td><td class="px-3 py-2">研发合作,技术创新</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+            <tr><td class="px-3 py-2 font-medium sticky left-0 bg-light-card dark:bg-dark-card z-10">CubicPV</td><td class="px-3 py-2 text-right">1</td><td class="px-3 py-2 text-right text-light-muted dark:text-dark-muted">0</td><td class="px-3 py-2 text-right text-eco-green">1:0</td><td class="px-3 py-2">技术创新</td><td class="px-3 py-2 text-light-muted dark:text-dark-muted">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- Author Info -->
+<section class="max-w-5xl mx-auto px-6 py-8">
+  <div class="fade-in">
+    <div class="bg-light-card dark:bg-dark-card rounded-xl p-6 border border-solar-gold/30 shadow-sm text-center">
+      <div class="flex items-center justify-center gap-3 mb-3">
+        <div class="w-12 h-12 rounded-full bg-solar-gold/15 flex items-center justify-center">
+          <i class="fas fa-building text-solar-gold text-xl"></i>
+        </div>
+      </div>
+      <div class="font-serif font-bold text-lg mb-1">Supinfor Ltd.</div>
+      <div class="text-sm text-light-muted dark:text-dark-muted">2026年4月</div>
+      <div class="text-xs text-light-muted dark:text-dark-muted mt-2">数据来源：Supinfor 全球商情速递平台</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="border-t border-light-border dark:border-dark-border mt-8">
+  <div class="max-w-5xl mx-auto px-6 py-8 text-center text-xs text-light-muted dark:text-dark-muted">
+    <p class="mb-2">数据来源：Supinfor全球商情速递平台 | 生成日期：2026-04-20</p>
+    <p>&copy; 2026 Supinfor Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+</main>
+
+<!-- Back to Top Button -->
+<button id="back-to-top" class="no-print fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-solar-gold text-dark-bg shadow-lg flex items-center justify-center hover:bg-solar-goldLight transition-all" aria-label="返回顶部">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Management =====
+  function getTheme() {
+    const saved = localStorage.getItem('pv-report-theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    document.documentElement.classList.toggle('dark', theme === 'dark');
+    localStorage.setItem('pv-report-theme', theme);
+  }
+
+  function toggleTheme() {
+    const current = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  }
+
+  applyTheme(getTheme());
+
+  document.getElementById('theme-toggle-sidebar')?.addEventListener('click', toggleTheme);
+  document.getElementById('theme-toggle-mobile')?.addEventListener('click', toggleTheme);
+
+  // ===== Progress Bar =====
+  const progressBar = document.getElementById('progress-bar');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    progressBar.style.width = progress + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // ===== Back to Top =====
+  const backToTop = document.getElementById('back-to-top');
+  function updateBackToTop() {
+    backToTop.classList.toggle('show', window.scrollY > 400);
+  }
+  window.addEventListener('scroll', updateBackToTop, { passive: true });
+  backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ===== Mobile Menu =====
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileOverlay = document.getElementById('mobile-overlay');
+  const openMenuBtn = document.getElementById('open-menu');
+  const closeMenuBtn = document.getElementById('close-menu');
+
+  function openMenu() { mobileMenu.classList.add('open'); mobileOverlay.classList.add('open'); }
+  function closeMenu() { mobileMenu.classList.remove('open'); mobileOverlay.classList.remove('open'); }
+
+  openMenuBtn?.addEventListener('click', openMenu);
+  closeMenuBtn?.addEventListener('click', closeMenu);
+  mobileOverlay?.addEventListener('click', closeMenu);
+
+  // ===== Sidebar Navigation =====
+  const sections = [
+    { id: 'hero', label: '报告首页', icon: 'fa-home' },
+    { id: 'executive-summary', label: '执行摘要', icon: 'fa-clipboard-list' },
+    { id: 'part1', label: '第一部分：行业发展态势', icon: 'fa-chart-line', children: [
+      { id: 'sec-1-1', label: '1.1 趋势标签分布' },
+      { id: 'sec-1-2', label: '1.2 趋势活跃企业 Top 10' },
+      { id: 'sec-1-3', label: '1.3 重点企业趋势动态' },
+      { id: 'sec-1-4', label: '1.4 趋势分析' }
+    ]},
+    { id: 'part2', label: '第二部分：风险预警', icon: 'fa-shield-halved', children: [
+      { id: 'sec-2-1', label: '2.1 风险标签分布' },
+      { id: 'sec-2-2', label: '2.2 风险暴露企业 Top 10' },
+      { id: 'sec-2-3', label: '2.3 风险标签×企业矩阵' },
+      { id: 'sec-2-4', label: '2.4 重点企业风险事件' },
+      { id: 'sec-2-5', label: '2.5 风险分析' }
+    ]},
+    { id: 'part3', label: '第三部分：交叉分析', icon: 'fa-arrows-left-right', children: [
+      { id: 'sec-3-1', label: '3.1 企业竞争格局' },
+      { id: 'sec-3-2', label: '3.2 交叉分析' }
+    ]},
+    { id: 'part4', label: '第四部分：战略建议', icon: 'fa-lightbulb' },
+    { id: 'appendix', label: '附录：企业完整数据', icon: 'fa-database' }
+  ];
+
+  function buildNav(containerId) {
+    const container = document.getElementById(containerId);
+    if (!container) return;
+    let html = '';
+    sections.forEach(s => {
+      html += '<a href="#' + s.id + '" class="sidebar-link block px-3 py-2 rounded-md text-light-muted dark:text-dark-muted hover:bg-light-bg dark:hover:bg-dark-bg transition-colors" data-section="' + s.id + '">';
+      if (s.icon) html += '<i class="fas ' + s.icon + ' mr-2 text-[10px] opacity-60"></i>';
+      html += s.label + '</a>';
+      if (s.children) {
+        s.children.forEach(c => {
+          html += '<a href="#' + c.id + '" class="sidebar-link block px-3 py-1.5 pl-8 rounded-md text-light-muted dark:text-dark-muted hover:bg-light-bg dark:hover:bg-dark-bg transition-colors text-[12px]" data-section="' + c.id + '">' + c.label + '</a>';
+        });
+      }
+    });
+    container.innerHTML = html;
+
+    // Click handler
+    container.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = document.getElementById(a.getAttribute('href').slice(1));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          closeMenu();
+        }
+      });
+    });
+  }
+
+  buildNav('desktop-nav-links');
+  buildNav('mobile-nav-links');
+
+  // Active section tracking
+  function updateActiveSection() {
+    const allIds = [];
+    sections.forEach(s => {
+      allIds.push(s.id);
+      if (s.children) s.children.forEach(c => allIds.push(c.id));
+    });
+
+    let activeId = allIds[0];
+    for (const id of allIds) {
+      const el = document.getElementById(id);
+      if (el && el.getBoundingClientRect().top <= 120) activeId = id;
+    }
+
+    document.querySelectorAll('.sidebar-link').forEach(link => {
+      link.classList.toggle('active', link.dataset.section === activeId);
+    });
+  }
+  window.addEventListener('scroll', updateActiveSection, { passive: true });
+  updateActiveSection();
+
+  // ===== Intersection Observer for fade-in =====
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // ===== Bar chart animation =====
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+          const targetWidth = bar.dataset.width;
+          if (targetWidth) {
+            setTimeout(() => { bar.style.width = targetWidth; }, 100);
+          }
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.bg-light-card, .bg-light-bg').forEach(card => {
+    if (card.querySelector('.bar-fill')) barObserver.observe(card);
+  });
+
+  // Also observe parent containers
+  document.querySelectorAll('[id^="sec-"]').forEach(sec => {
+    if (sec.querySelector('.bar-fill')) barObserver.observe(sec);
+  });
+
+})();
+</script>
+</body>
+</html>

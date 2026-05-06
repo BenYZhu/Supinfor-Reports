@@ -1,0 +1,1498 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>马来西亚 区域国别洞察报告 | Malaysia Country Insight Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Noto+Serif+SC:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        'display': ['Playfair Display', 'serif'],
+        'serif-sc': ['Noto Serif SC', 'serif'],
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+      },
+      colors: {
+        navy: { 900: '#0a1628', 800: '#111827', 700: '#1e293b', 600: '#334155' },
+        accent: { gold: '#f59e0b', red: '#ef4444', green: '#10b981', blue: '#3b82f6' },
+      }
+    }
+  }
+}
+</script>
+<style>
+/* Language toggle */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+
+/* Animated grid pattern for hero */
+@keyframes gridMove {
+  0% { background-position: 0 0; }
+  100% { background-position: 40px 40px; }
+}
+.hero-grid {
+  background-image: linear-gradient(rgba(245,158,11,0.05) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(245,158,11,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 20s linear infinite;
+}
+
+/* Card hover */
+.card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+/* Scroll reveal */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Stagger children */
+.stagger-children .reveal:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children .reveal:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children .reveal:nth-child(3) { transition-delay: 0.15s; }
+.stagger-children .reveal:nth-child(4) { transition-delay: 0.2s; }
+.stagger-children .reveal:nth-child(5) { transition-delay: 0.25s; }
+.stagger-children .reveal:nth-child(6) { transition-delay: 0.3s; }
+
+/* Bar chart animation */
+@keyframes barGrow { from { width: 0; } }
+.bar-animate { animation: barGrow 1.2s ease-out forwards; }
+
+/* Theme transitions */
+* { transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; }
+
+/* Dark mode (default) */
+[data-theme="dark"] { background-color: #0a1628; color: #e2e8f0; }
+[data-theme="dark"] .surface { background-color: #111827; }
+[data-theme="dark"] .card { background-color: #1e293b; }
+[data-theme="dark"] .card-alt { background-color: #1e293b; border-color: #334155; }
+[data-theme="dark"] .text-primary { color: #f1f5f9; }
+[data-theme="dark"] .text-secondary { color: #94a3b8; }
+[data-theme="dark"] .text-muted { color: #64748b; }
+[data-theme="dark"] .insight-box { background-color: rgba(245,158,11,0.08); border-left: 4px solid #f59e0b; }
+[data-theme="dark"] .nav-bg { background-color: rgba(10,22,40,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(245,158,11,0.15); }
+[data-theme="dark"] .divider { border-color: #1e293b; }
+[data-theme="dark"] .badge-bg { background-color: rgba(245,158,11,0.12); color: #f59e0b; }
+[data-theme="dark"] .footer-bg { background-color: #070e1a; }
+
+/* Light mode */
+[data-theme="light"] { background-color: #f8fafc; color: #1e293b; }
+[data-theme="light"] .surface { background-color: #ffffff; }
+[data-theme="light"] .card { background-color: #f1f5f9; }
+[data-theme="light"] .card-alt { background-color: #ffffff; border-color: #e2e8f0; }
+[data-theme="light"] .text-primary { color: #0f172a; }
+[data-theme="light"] .text-secondary { color: #475569; }
+[data-theme="light"] .text-muted { color: #94a3b8; }
+[data-theme="light"] .insight-box { background-color: rgba(245,158,11,0.06); border-left: 4px solid #f59e0b; }
+[data-theme="light"] .nav-bg { background-color: rgba(248,250,252,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid #e2e8f0; }
+[data-theme="light"] .divider { border-color: #e2e8f0; }
+[data-theme="light"] .badge-bg { background-color: rgba(245,158,11,0.1); color: #d97706; }
+[data-theme="light"] .footer-bg { background-color: #0f172a; color: #e2e8f0; }
+[data-theme="light"] .hero-section { background: linear-gradient(135deg, #1e3a5f, #0a1628, #1a1a2e) !important; color: #e2e8f0 !important; }
+
+/* Horizontal bar chart */
+.h-bar { height: 32px; border-radius: 4px; position: relative; display: flex; align-items: center; padding-left: 12px; font-weight: 600; font-size: 0.85rem; color: #fff; min-width: 40px; }
+
+/* Back to top */
+.back-to-top { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+.back-to-top.show { opacity: 1; pointer-events: auto; }
+
+/* Print */
+@media print { .no-print { display: none !important; } }
+</style>
+</head>
+<body class="font-sans antialiased">
+
+<!-- Fixed Navigation -->
+<nav class="nav-bg fixed top-0 left-0 right-0 z-50 no-print">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <div class="flex items-center gap-3">
+        <i class="fas fa-globe-asia text-accent-gold text-xl"></i>
+        <span class="font-display font-bold text-lg text-primary">
+          <span data-zh>区域国别洞察</span><span data-en>Country Insight</span>
+        </span>
+      </div>
+      <div class="flex items-center gap-3">
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-white/10 transition-colors" aria-label="Toggle theme">
+          <i class="fas fa-moon text-accent-gold theme-icon-dark"></i>
+          <i class="fas fa-sun text-accent-gold theme-icon-light hidden"></i>
+        </button>
+        <!-- Language Toggle -->
+        <button id="langToggle" class="px-3 py-1.5 rounded-full text-sm font-semibold badge-bg hover:opacity-80 transition-opacity" aria-label="Toggle language">
+          <span data-zh>EN</span><span data-en>中</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section relative overflow-hidden pt-16" style="background: linear-gradient(135deg, #1e3a5f, #0a1628, #1a1a2e);">
+  <div class="hero-grid absolute inset-0"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 text-center">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-amber-400 text-sm mb-8 reveal">
+      <i class="fas fa-shield-halved"></i>
+      <span data-zh>Supinfor Ltd. · 区域国别洞察报告</span>
+      <span data-en>Supinfor Ltd. · Country Insight Report</span>
+    </div>
+    <h1 class="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white mb-6 reveal" style="line-height:1.15;">
+      <span data-zh>马来西亚<br><span class="text-amber-400">区域国别洞察报告</span></span>
+      <span data-en>Malaysia<br><span class="text-amber-400">Country Insight Report</span></span>
+    </h1>
+    <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto mb-10 reveal" style="font-family:'Noto Serif SC',serif;">
+      <span data-zh>基于马来西亚国别月报 2026-03 · 深度分析与战略洞察</span>
+      <span data-en>Based on Malaysia Country Monthly Report 2026-03 · In-depth Analysis & Strategic Insights</span>
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-8 reveal">
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-sm">
+        <i class="fas fa-database text-amber-400"></i>
+        <span data-zh>317 条资讯</span><span data-en>317 Items</span>
+      </span>
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-sm">
+        <i class="fas fa-project-diagram text-blue-400"></i>
+        <span data-zh>48 个关联簇</span><span data-en>48 Clusters</span>
+      </span>
+      <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 border border-white/10 text-slate-200 text-sm">
+        <i class="fas fa-lightbulb text-emerald-400"></i>
+        <span data-zh>55 条洞察</span><span data-en>55 Insights</span>
+      </span>
+    </div>
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-300 text-sm">
+        <i class="fas fa-calendar-alt"></i>
+        <span data-zh>分析日期：2026年4月24日</span><span data-en>Analysis Date: April 24, 2026</span>
+      </span>
+    </div>
+  </div>
+  <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0a1628] to-transparent"></div>
+</section>
+
+<!-- ==================== CORE INSIGHTS SUMMARY ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="text-center mb-12 reveal">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-primary mb-3">
+      <span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span>
+    </h2>
+    <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
+    <!-- Insight 1 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-red-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-fire-flame-curved text-red-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-red-400 uppercase tracking-wider">
+            <span data-zh>财政危机</span><span data-en>Fiscal Crisis</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>中东冲突引发全方位危机应对，马来西亚燃油补贴月支出从7亿飙升至40亿令吉，财政可持续性面临严峻考验</span>
+            <span data-en>Middle East conflict triggers comprehensive crisis response; Malaysia's fuel subsidy monthly expenditure surges from RM700M to RM4B, posing severe fiscal sustainability challenges</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Insight 2 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-amber-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-landmark text-amber-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-amber-400 uppercase tracking-wider">
+            <span data-zh>政治重塑</span><span data-en>Political Reshaping</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>2026年大选前哨战全面展开，巫统前领袖回归、国盟权力重组、行动党内讧三线并行，政治格局加速重塑</span>
+            <span data-en>2026 election prelude unfolds on three fronts: UMNO leaders' return, Perikatan power restructuring, and DAP internal strife — accelerating political realignment</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Insight 3 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-red-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-scale-balanced text-red-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-red-400 uppercase tracking-wider">
+            <span data-zh>廉政冲击</span><span data-en>Anti-Corruption Crisis</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>反贪会主席持股丑闻与"企业黑手党"案交织发酵，廉政体系公信力遭遇系统性冲击</span>
+            <span data-en>MACC chief's shareholding scandal intertwines with "corporate mafia" case, dealing a systemic blow to anti-corruption credibility</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Insight 4 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-emerald-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-chart-line text-emerald-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+            <span data-zh>经济韧性</span><span data-en>Economic Resilience</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>经济基本面依然稳健——GDP增长5.2%、外储创8年新高、投资额破4267亿令吉历史纪录——但民众获得感与宏观数据脱节</span>
+            <span data-en>Economic fundamentals remain solid — GDP growth 5.2%, FX reserves at 8-year high, investment hits record RM426.7B — but public sentiment disconnects from macro data</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Insight 5 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-blue-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-map-marked-alt text-blue-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-blue-400 uppercase tracking-wider">
+            <span data-zh>联邦-州张力</span><span data-en>Federal-State Tension</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>沙巴砂拉越权益诉求持续升温，40%税收分成案与石油主权争议进入司法关键期，联邦-州关系面临结构性调整压力</span>
+            <span data-en>Sabah-Sarawak rights demands intensify; 40% tax revenue case and oil sovereignty dispute enter critical judicial phase, pressuring federal-state structural adjustment</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Insight 6 -->
+    <div class="card card-hover rounded-xl p-6 border-l-4 border-emerald-500 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-microchip text-emerald-500 text-xl"></i>
+        </div>
+        <div>
+          <span class="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+            <span data-zh>产业升级</span><span data-en>Industrial Upgrade</span>
+          </span>
+          <p class="text-primary text-sm mt-2 leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>槟城半导体金融中心规划与砂拉越氢能布局标志产业升级加速，但地缘冲突下全球供应链重构为马来西亚带来机遇与风险并存的窗口期</span>
+            <span data-en>Penang semiconductor financial center and Sarawak hydrogen energy layout mark accelerating industrial upgrade, while global supply chain restructuring brings both opportunities and risks</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DATA VIZ: MACRO INDICATORS ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  <div class="text-center mb-10 reveal">
+    <h2 class="font-display text-2xl md:text-3xl font-bold text-primary mb-3">
+      <span data-zh>宏观经济指标仪表盘</span><span data-en>Macro Economic Indicators Dashboard</span>
+    </h2>
+    <div class="w-16 h-1 bg-amber-500 mx-auto rounded-full"></div>
+  </div>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 stagger-children">
+    <div class="card card-hover rounded-xl p-6 text-center reveal">
+      <div class="w-14 h-14 rounded-full bg-emerald-500/10 flex items-center justify-center mx-auto mb-3">
+        <i class="fas fa-arrow-trend-up text-emerald-500 text-2xl"></i>
+      </div>
+      <div class="text-3xl md:text-4xl font-bold text-emerald-400 mb-1">5.2%</div>
+      <div class="text-sm text-secondary">
+        <span data-zh>GDP 增长率</span><span data-en>GDP Growth</span>
+      </div>
+    </div>
+    <div class="card card-hover rounded-xl p-6 text-center reveal">
+      <div class="w-14 h-14 rounded-full bg-blue-500/10 flex items-center justify-center mx-auto mb-3">
+        <i class="fas fa-users text-blue-500 text-2xl"></i>
+      </div>
+      <div class="text-3xl md:text-4xl font-bold text-blue-400 mb-1">2.9%</div>
+      <div class="text-sm text-secondary">
+        <span data-zh>失业率（11年低位）</span><span data-en>Unemployment (11yr Low)</span>
+      </div>
+    </div>
+    <div class="card card-hover rounded-xl p-6 text-center reveal">
+      <div class="w-14 h-14 rounded-full bg-amber-500/10 flex items-center justify-center mx-auto mb-3">
+        <i class="fas fa-vault text-amber-500 text-2xl"></i>
+      </div>
+      <div class="text-3xl md:text-4xl font-bold text-amber-400 mb-1">$128.3B</div>
+      <div class="text-sm text-secondary">
+        <span data-zh>外汇储备（8年新高）</span><span data-en>FX Reserves (8yr High)</span>
+      </div>
+    </div>
+    <div class="card card-hover rounded-xl p-6 text-center reveal">
+      <div class="w-14 h-14 rounded-full bg-purple-500/10 flex items-center justify-center mx-auto mb-3">
+        <i class="fas fa-building text-purple-500 text-2xl"></i>
+      </div>
+      <div class="text-3xl md:text-4xl font-bold text-purple-400 mb-1">RM426.7B</div>
+      <div class="text-sm text-secondary">
+        <span data-zh>获批投资额（历史新高）</span><span data-en>Approved Investment (Record)</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 1 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch1">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-fire text-red-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>一、中东冲突冲击波：能源安全与财政韧性的双重考验</span>
+          <span data-en>I. Middle East Conflict Shockwave: Energy Security & Fiscal Resilience Under Dual Test</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">1.1</span>
+      <span data-zh>燃油补贴成本六倍暴涨，财政缓冲空间急剧收窄</span>
+      <span data-en>Fuel Subsidy Costs Surge 6x, Fiscal Buffer Shrinks Rapidly</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>西亚冲突导致马来西亚燃油补贴月支出从7亿令吉飙升至32-40亿令吉，政府被迫将BUDI95月度配额从300升下调至200升，但维持RON95补贴价1.99令吉/升不变。这一"保价缩量"策略虽短期稳定了民心，但财政可持续性堪忧——若冲突持续，年化补贴增量将超300亿令吉。</span>
+        <span data-en>The West Asian conflict caused Malaysia's fuel subsidy monthly expenditure to surge from RM700M to RM3.2-4B. The government was forced to reduce the BUDI95 monthly quota from 300L to 200L while maintaining the RON95 subsidized price at RM1.99/L. This "maintain price, reduce volume" strategy stabilizes public sentiment short-term, but fiscal sustainability is concerning — if the conflict persists, annualized subsidy increases will exceed RM30B.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">
+      <i class="fas fa-list-check mr-2"></i>
+      <span data-zh>关键事实</span><span data-en>Key Facts</span>
+    </h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span>
+          <span data-zh>国际油价曾飙升至119美元/桶，新加坡油价达10.30令吉/升，马来西亚补贴价仅1.99令吉/升</span>
+          <span data-en>International oil prices surged to $119/barrel, Singapore prices reached RM10.30/L, while Malaysia's subsidized price remained at only RM1.99/L</span>
+        </span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span>
+          <span data-zh>政府确认国内燃油供应可维持至2026年5月，Petronas正从西非、拉美寻求替代供应源</span>
+          <span data-en>Government confirms domestic fuel supply sustainable until May 2026; Petronas seeking alternative sources from West Africa and Latin America</span>
+        </span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span>
+          <span data-zh>成立由第二财长牵头的专项经济影响评估委员会，每日向内阁汇报</span>
+          <span data-en>Established a special economic impact assessment committee led by the Second Finance Minister, reporting daily to the cabinet</span>
+        </span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span>
+          <span data-zh>取消所有政府机构开斋节活动、限制部长海外出访等财政紧缩措施已启动</span>
+          <span data-en>Fiscal austerity measures launched: all government Hari Raya events cancelled, ministerial overseas travel restricted</span>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 1.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">1.2</span>
+      <span data-zh>能源安全保障体系启动，但中长期供应链脆弱性暴露</span>
+      <span data-en>Energy Security System Activated, but Medium-Long Term Supply Chain Vulnerabilities Exposed</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>Petronas将本国原油优先供应本地炼厂，并新增西非、拉美供应源以降低航线依赖，天然气供应因主要来自丁加奴和马泰联合开发区而暂不受影响。但马来西亚作为高度依赖贸易的开放型经济体，能源进口成本上升、物流成本攀升、通胀传导效应等中长期风险尚未充分对冲。</span>
+        <span data-en>Petronas prioritizes domestic crude oil supply to local refineries and adds West African and Latin American sources to reduce route dependency. Natural gas supply remains unaffected as it mainly comes from Terengganu and the Malaysia-Thailand Joint Development Area. However, as a highly trade-dependent open economy, Malaysia has not fully hedged medium-long term risks including rising energy import costs, logistics costs, and inflation transmission effects.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">
+      <i class="fas fa-list-check mr-2"></i>
+      <span data-zh>关键事实</span><span data-en>Key Facts</span>
+    </h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>马来西亚日均产约200万桶油当量（75%天然气、14%石油）</span><span data-en>Malaysia produces approximately 2 million barrels of oil equivalent daily (75% natural gas, 14% oil)</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>半岛电力40%-45%依赖天然气，供应暂稳</span><span data-en>Peninsular electricity 40%-45% dependent on natural gas; supply temporarily stable</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>沙巴副首长要求联邦保障沙巴柴油补贴，称沙巴作为油气产出州有权获得回报</span><span data-en>Sabah Deputy Chief Minister demands federal guarantee of Sabah diesel subsidies, stating Sabah as an oil-producing state deserves returns</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>政府加强燃油走私管控，扩大外籍车辆禁购RON95执法范围</span><span data-en>Government strengthens fuel smuggling controls, expands enforcement of RON95 purchase ban for foreign vehicles</span></span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 1.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">1.3</span>
+      <span data-zh>跨党派危机应对机制初步成型，但政治化风险犹存</span>
+      <span data-en>Cross-Party Crisis Response Mechanism Takes Shape, but Politicization Risks Remain</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>安华计划召集各州首长、政党领袖（含反对党）举行特别简报会，由国安会和国家经济行动理事会主讲，这是罕见的跨阵营协调尝试。但反对党领袖要求召开国会特别会议、土团党批评政府应对不力、马华质疑补贴调整加重民众负担，危机应对正被选举政治裹挟。</span>
+        <span data-en>Anwar plans to convene state chief ministers and party leaders (including opposition) for a special briefing led by the National Security Council and National Economic Action Council — a rare cross-coalition coordination attempt. However, opposition leaders demand a special parliamentary session, Bersatu criticizes government response, and MCA questions subsidy adjustments burdening the public — crisis response is being hijacked by electoral politics.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3">
+      <i class="fas fa-list-check mr-2"></i>
+      <span data-zh>关键事实</span><span data-en>Key Facts</span>
+    </h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>行动党副秘书长倪可敏呼吁搁置政治分歧，团结应对</span><span data-en>DAP Deputy Secretary-General Nga Kor Ming calls for setting aside political differences and uniting in response</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>土团党主席慕尤丁要求成立国家经济行动理事会每日开会</span><span data-en>Bersatu President Muhyiddin demands the National Economic Action Council meet daily</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>学者提议成立非党派国家经济咨询委员会</span><span data-en>Scholars propose establishing a non-partisan National Economic Advisory Committee</span></span>
+      </li>
+      <li class="flex items-start gap-2">
+        <i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i>
+        <span><span data-zh>雪兰莪、柔佛等州政府已启动本州层面的经济影响评估</span><span data-en>Selangor, Johor and other state governments have launched state-level economic impact assessments</span></span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== DATA VIZ: FUEL SUBSIDY COST ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="card rounded-xl p-6 md:p-8 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-2">
+      <i class="fas fa-chart-bar text-red-400 mr-2"></i>
+      <span data-zh>燃油补贴月支出飙升趋势</span><span data-en>Fuel Subsidy Monthly Expenditure Surge Trend</span>
+    </h3>
+    <p class="text-sm text-secondary mb-6">
+      <span data-zh>单位：亿令吉/月 (RM Billion/Month)</span><span data-en>Unit: RM Billion/Month</span>
+    </p>
+    <div class="space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="w-28 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>冲突前</span><span data-en>Pre-Conflict</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-emerald-500" style="width: 17.5%;">7</div>
+        </div>
+        <div class="w-20 text-sm font-semibold text-primary">RM 7<span data-zh>亿</span><span data-en>00M</span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-28 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>冲突初期</span><span data-en>Early Conflict</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-amber-500" style="width: 80%;">32</div>
+        </div>
+        <div class="w-20 text-sm font-semibold text-primary">RM 32<span data-zh>亿</span><span data-en>00M</span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-28 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>当前峰值</span><span data-en>Current Peak</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-red-500" style="width: 100%;">40</div>
+        </div>
+        <div class="w-20 text-sm font-semibold text-primary">RM 40<span data-zh>亿</span><span data-en>00M</span></div>
+      </div>
+    </div>
+    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-muted">
+      <i class="fas fa-info-circle mr-1"></i>
+      <span data-zh>若冲突持续，年化补贴增量将超300亿令吉</span>
+      <span data-en>If conflict persists, annualized subsidy increase will exceed RM30 billion</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 2 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch2">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-landmark text-amber-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>二、大选前哨战：三大阵营的权力重组与选举布局</span>
+          <span data-en>II. Election Prelude: Power Restructuring & Electoral Strategy of Three Coalitions</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-amber-400 mr-2">2.1</span>
+      <span data-zh>巫统"大帐篷"战略启动，前领袖回归重塑党内格局</span>
+      <span data-en>UMNO "Big Tent" Strategy Launched; Former Leaders' Return Reshapes Party Dynamics</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>希山慕丁、凯里等前巫统领袖的重新入党申请将于4月17日提交最高理事会审议，巫统主席阿末扎希持积极态度。这一"大帐篷"策略旨在整合马来选票、吸引年轻城市选民，但也可能引发党内既得利益者的反弹。</span>
+        <span data-en>Re-admission applications from former UMNO leaders Hishammuddin and Khairy will be submitted to the Supreme Council on April 17, with UMNO President Ahmad Zahid taking a positive stance. This "big tent" strategy aims to consolidate Malay votes and attract young urban voters, but may trigger backlash from party incumbents.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>凯里因2023年大选违纪被开除，希山慕丁被冻结党籍6年</span><span data-en>Khairy expelled for 2023 election indiscipline; Hishammuddin's membership frozen for 6 years</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>国大党95%中委支持留在国阵，暂缓加入国盟计划</span><span data-en>95% of MIC central committee supports staying in BN, postponing plans to join Perikatan</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>巫统团结态势为国阵注入新政治动能</span><span data-en>UMNO's unity momentum injects new political energy into BN</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 2.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-amber-400 mr-2">2.2</span>
+      <span data-zh>国盟权力天平向伊斯兰党倾斜，土团党边缘化加速</span>
+      <span data-en>Perikatan Power Tilts Toward PAS; Bersatu Marginalization Accelerates</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>国盟决定将反对党领袖职位交由伊斯兰党议员担任，伊党在霹雳率先点名5名州务大臣人选，土团党则因内部分裂持续失血——韩沙再努丁被开除后多名高层跟随离去。伊党对国盟的主导权正从幕后走向台前。</span>
+        <span data-en>Perikatan decides to hand the opposition leader position to a PAS MP. PAS names 5 Menteri Besar candidates in Perak first, while Bersatu continues hemorrhaging from internal splits — multiple senior leaders departed after Hamzah Zainudin's expulsion. PAS's dominance over Perikatan is moving from behind the scenes to center stage.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>新任反对党领袖预计3月底或6月国会前确定</span><span data-en>New opposition leader expected to be confirmed by end of March or before June parliament session</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>土团党波德申支部主席等多人被开除党籍</span><span data-en>Multiple members expelled including Bersatu Port Dickson division chief</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>伊党在柔佛计划争夺新邦Jeram州席，与诚信党形成竞争</span><span data-en>PAS plans to contest Sungai Jeram state seat in Johor, competing with Amanah</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 2.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-amber-400 mr-2">2.3</span>
+      <span data-zh>行动党槟城地税内讧暴露执政联盟深层裂痕</span>
+      <span data-en>DAP Penang Land Tax Infighting Exposes Deep Ruling Coalition Fractures</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>前首长林冠英与现任首长曹观友因地税暴涨公开交锋，秘书长陆兆福被迫介入调解。这不仅是政策分歧，更折射出行动党内部的权力代际交替矛盾——林冠英仍试图对州政策施加影响力，而曹观友的"鲜少收到投诉"言论暴露了与基层的脱节。</span>
+        <span data-en>Former Chief Minister Lim Guan Eng and current Chief Minister Chow Kon Yeow publicly clash over land tax surges, forcing Secretary-General Anthony Loke to intervene. This reflects not just policy disagreement but DAP's internal generational power transition — Lim still attempts to influence state policy, while Chow's "rarely received complaints" remark reveals disconnect from grassroots.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>部分土地地税出现数千倍涨幅，如农地从112令吉涨至33.5万令吉</span><span data-en>Some land taxes surged thousands-fold, e.g., agricultural land from RM112 to RM335,000</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>州政府已接获逾2000宗上诉</span><span data-en>State government has received over 2,000 appeals</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>陆兆福安排3月30日"曹林会"，由党主席哥宾星坐镇协调</span><span data-en>Anthony Loke arranged a March 30 "Chow-Lim meeting" with party chairman Gobind Singh presiding</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>民政党趁机批评槟州政府施政，呼吁选民"觉醒"</span><span data-en>Gerakan seizes the opportunity to criticize Penang state governance, calling voters to "awaken"</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 2.4 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-amber-400 mr-2">2.4</span>
+      <span data-zh>72个注册政党备战第16届大选，选举生态碎片化加剧</span>
+      <span data-en>72 Registered Parties Prepare for GE16; Electoral Fragmentation Intensifies</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>全国72个注册政党加上16个待审新政党，马来西亚政党生态高度碎片化。各阵营已进入议席分配谈判阶段，但中东危机可能推迟大选时机——执政联盟需在经济稳定与选举窗口之间寻找平衡。</span>
+        <span data-en>With 72 registered parties plus 16 pending new parties, Malaysia's party ecosystem is highly fragmented. All coalitions have entered seat allocation negotiations, but the Middle East crisis may delay election timing — the ruling coalition must balance economic stability with the electoral window.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>槟城希盟启动竞选机器，重新推广希盟统一标志</span><span data-en>Penang Pakatan Harapan activates election machinery, re-promoting the unified PH logo</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>民政党展延党选至大选后8个月</span><span data-en>Gerakan postpones party elections to 8 months after the general election</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>公正党槟州认为当前不宜提前大选</span><span data-en>PKR Penang believes early elections are currently inadvisable</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 3 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch3">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-scale-balanced text-red-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>三、廉政危机：反贪体系公信力的系统性冲击</span>
+          <span data-en>III. Anti-Corruption Crisis: Systemic Blow to Institutional Credibility</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">3.1</span>
+      <span data-zh>阿占巴基持股丑闻与报告暂缓公开，动摇反贪机构根基</span>
+      <span data-en>Azam Baki Shareholding Scandal & Report Delay Shake MACC Foundations</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>反贪会首席专员阿占巴基被指持有Velocity Capital Bhd 1770万股股权违规，彭博社报道安华要求暂缓公开调查报告。政府虽否认但未公开报告全文，"选择性透明"策略正在侵蚀安华政府的改革承诺公信力。</span>
+        <span data-en>MACC Chief Commissioner Azam Baki is alleged to have improperly held 17.7 million shares in Velocity Capital Bhd. Bloomberg reports Anwar requested delaying the investigation report's release. The government denies this but hasn't released the full report — this "selective transparency" strategy is eroding the credibility of Anwar's reform promises.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>特别调查委员会报告已提交内阁，但结果未公开</span><span data-en>Special investigation committee report submitted to cabinet, but results not made public</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>伊党要求7天内公开完整报告</span><span data-en>PAS demands full report be released within 7 days</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>"逮捕阿占巴基秘书处"宣布4月25日集会，33个民权组织支持</span><span data-en>"Arrest Azam Baki Secretariat" announces April 25 rally, supported by 33 civil rights organizations</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>阿占巴基已起诉彭博社诽谤</span><span data-en>Azam Baki has sued Bloomberg for defamation</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 3.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">3.2</span>
+      <span data-zh>"企业黑手党"案牵出政商勾结网络，多方要求皇家调查委员会</span>
+      <span data-en>"Corporate Mafia" Case Exposes Political-Business Collusion; Multiple Parties Demand Royal Commission</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>商人陈文龙指控公正党议员索要950万令吉"服务费"，前经济部长拉菲兹爆料涉及安华前政治秘书法哈斯，案件已从个案升级为对执政联盟政商关系的系统性质疑。警方搜查陈文龙房产、反贪会联合证券委员会突袭——多机构介入显示案件严重性。</span>
+        <span data-en>Businessman Tan Boon Long alleges PKR MPs demanded RM9.5M in "service fees." Former Economy Minister Rafizi reveals involvement of Anwar's former political secretary Farhash. The case has escalated from an individual incident to systemic questioning of the ruling coalition's political-business relationships. Police raids on Tan's properties and joint MACC-Securities Commission operations indicate case severity.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>警方冻结并扣押总值超4亿令吉资产</span><span data-en>Police froze and seized assets worth over RM400 million</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>陈文龙目前在境外，警方寻求国际合作追捕</span><span data-en>Tan Boon Long is currently overseas; police seeking international cooperation for arrest</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>人力资源部长拉玛南公开表达对拉菲兹的失望</span><span data-en>Human Resources Minister Ramanan publicly expresses disappointment with Rafizi</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>马华呼吁成立皇家调查委员会</span><span data-en>MCA calls for establishment of a Royal Commission of Inquiry</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 3.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-red-400 mr-2">3.3</span>
+      <span data-zh>多起高官司法案件密集推进，反腐高压态势持续</span>
+      <span data-en>Multiple High-Profile Judicial Cases Advance Rapidly; Anti-Corruption Pressure Continues</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>纳吉被判赔偿SRC国际13亿美元、前陆军总长夫妇11项指控合并审理、前霹雳州务大臣被揭收受106万令吉——密集的司法进展显示反腐机制仍在运转，但阿占巴基丑闻使"谁来监督监督者"成为核心问题。</span>
+        <span data-en>Najib ordered to pay SRC International $1.3B, former Army Chief and wife face 11 combined charges, former Perak MB revealed to have received RM1.06M — intensive judicial progress shows anti-corruption mechanisms still functioning, but the Azam Baki scandal makes "who watches the watchmen" the core question.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>纳吉需向SRC国际支付11.8亿美元损失+1.2亿美元赔偿</span><span data-en>Najib must pay SRC International $1.18B in losses + $120M in damages</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>前陆军总长案件定于5月18日审理</span><span data-en>Former Army Chief's case scheduled for trial on May 18</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>反贪会吉打分局扣留涉嫌收贿警员</span><span data-en>MACC Kedah branch detains police officers suspected of bribery</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>已故前财长敦达因4名子女被追踪资产申报</span><span data-en>Four children of late former Finance Minister Tun Daim tracked for asset declarations</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 4 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch4">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-chart-line text-emerald-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>四、经济韧性与结构性挑战并存</span>
+          <span data-en>IV. Economic Resilience Coexists with Structural Challenges</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">4.1</span>
+      <span data-zh>宏观数据亮眼但民众获得感不足，"数据繁荣"与"体感衰退"并存</span>
+      <span data-en>Macro Data Shines but Public Sentiment Lags; "Data Prosperity" vs "Felt Recession"</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>GDP增长5.2%、失业率2.9%创11年低位、外储1283亿美元创8年新高、令吉为亚洲最佳货币——宏观指标全面向好。但小贩年货销售不佳、中小企业承受地税和汇率双重压力、出口厂商利润率萎缩10%-20%，民间经济体感与官方数据存在显著落差。</span>
+        <span data-en>GDP growth 5.2%, unemployment 2.9% at 11-year low, FX reserves $128.3B at 8-year high, Ringgit as Asia's best-performing currency — macro indicators all positive. But hawkers report poor festive sales, SMEs face dual pressure from land taxes and exchange rates, exporters' profit margins shrink 10%-20% — public economic sentiment significantly diverges from official data.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>2025年获批投资4267亿令吉，创历史新高，预计创造24.4万就业</span><span data-en>2025 approved investment RM426.7B, a record high, expected to create 244,000 jobs</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>财政赤字从6.1%降至3.7%，预计2026年进一步降至3%</span><span data-en>Fiscal deficit reduced from 6.1% to 3.7%, expected to further decrease to 3% in 2026</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>清廉指数排名从第62位升至第54位</span><span data-en>Corruption Perceptions Index ranking improved from 62nd to 54th</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>霹雳华人五金公会呼吁改善退税机制、降低隔夜政策利率</span><span data-en>Perak Chinese Hardware Association calls for improved tax refund mechanisms and lower overnight policy rate</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 4.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">4.2</span>
+      <span data-zh>柔佛州投资1100亿令吉领跑全国，州际竞争格局分化</span>
+      <span data-en>Johor Leads with RM110B Investment; Interstate Competition Diverges</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>柔佛州2025年获批投资1100亿令吉占全国25.77%，州收入从不足20亿增至26.7亿令吉，以新加坡为标杆的治理模式成效显著。但州际发展差距正在拉大——沙巴仍在争取40%税收分成，吉兰丹的伊斯兰化政策被指抑制经济活力。</span>
+        <span data-en>Johor's 2025 approved investment of RM110B accounts for 25.77% of the national total; state revenue grew from under RM2B to RM2.67B, with Singapore-benchmarked governance proving effective. But interstate development gaps are widening — Sabah still fights for 40% tax revenue share, while Kelantan's Islamization policies are criticized for suppressing economic vitality.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>柔佛2026年投资目标提升至1400亿令吉</span><span data-en>Johor's 2026 investment target raised to RM140B</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>柔佛推出Maju Johor 2030发展蓝图</span><span data-en>Johor launches Maju Johor 2030 development blueprint</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>槟城出口占全国超44%，蝉联出口冠军</span><span data-en>Penang exports account for over 44% of national total, retaining export champion title</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>华总批评吉兰丹、登嘉楼伊斯兰化政策"开倒车"</span><span data-en>Chinese Assembly Hall criticizes Kelantan and Terengganu Islamization policies as "going backwards"</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 4.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">4.3</span>
+      <span data-zh>国际商事法庭设立与资本市场蓝图发布，营商制度基建升级</span>
+      <span data-en>International Commercial Court Established & Capital Market Blueprint Released; Business Infrastructure Upgraded</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>高等法院设立国际商业与海事法庭（ICAD）、发布2026-2030资本市场蓝图、推动伊斯兰金融与wakaf社会金融工具——马来西亚正在系统性升级营商制度基建，但2000万令吉以上物业交易须50%土著股权的新规引发市场对制度风险的担忧。</span>
+        <span data-en>The High Court establishes the International Commercial and Admiralty Division (ICAD), releases the 2026-2030 Capital Market Blueprint, and promotes Islamic finance and wakaf social finance instruments — Malaysia is systematically upgrading business institutional infrastructure. However, the new rule requiring 50% Bumiputera equity for property transactions above RM20M raises market concerns about institutional risk.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>ICAD旨在将吉隆坡打造为区域商业纠纷解决枢纽</span><span data-en>ICAD aims to position Kuala Lumpur as a regional commercial dispute resolution hub</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>资本市场蓝图强调伊斯兰金融发展</span><span data-en>Capital Market Blueprint emphasizes Islamic finance development</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>土著股权新规被批评收窄高价值资产买家范围</span><span data-en>Bumiputera equity rule criticized for narrowing the pool of high-value asset buyers</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== DATA VIZ: INVESTMENT BY STATE ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+  <div class="card rounded-xl p-6 md:p-8 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-2">
+      <i class="fas fa-chart-bar text-emerald-400 mr-2"></i>
+      <span data-zh>各州获批投资额对比</span><span data-en>Approved Investment by State Comparison</span>
+    </h3>
+    <p class="text-sm text-secondary mb-6">
+      <span data-zh>2025年获批投资额（亿令吉）· 全国总计4267亿令吉</span>
+      <span data-en>2025 Approved Investment (RM Billion) · National Total RM426.7B</span>
+    </p>
+    <div class="space-y-4">
+      <div class="flex items-center gap-4">
+        <div class="w-24 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>柔佛</span><span data-en>Johor</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-gradient-to-r from-emerald-500 to-emerald-400" style="width: 100%;">1100</div>
+        </div>
+        <div class="w-24 text-sm font-semibold text-primary">RM 1100<span data-zh>亿</span><span data-en>B</span></div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-24 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>槟城</span><span data-en>Penang</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-gradient-to-r from-blue-500 to-blue-400" style="width: 55%;">~600</div>
+        </div>
+        <div class="w-24 text-sm font-semibold text-primary">
+          <span data-zh>出口占44%+</span><span data-en>44%+ Exports</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-24 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>砂拉越</span><span data-en>Sarawak</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-gradient-to-r from-purple-500 to-purple-400" style="width: 40%;">
+            <span data-zh>氢能+数据中心</span><span data-en>H₂+Data Center</span>
+          </div>
+        </div>
+        <div class="w-24 text-sm font-semibold text-primary">
+          <span data-zh>新增长极</span><span data-en>New Growth</span>
+        </div>
+      </div>
+      <div class="flex items-center gap-4">
+        <div class="w-24 text-right text-sm text-secondary flex-shrink-0">
+          <span data-zh>雪兰莪</span><span data-en>Selangor</span>
+        </div>
+        <div class="flex-1">
+          <div class="h-bar bar-animate bg-gradient-to-r from-amber-500 to-amber-400" style="width: 35%;">
+            <span data-zh>奇瑞22亿</span><span data-en>Chery RM2.2B</span>
+          </div>
+        </div>
+        <div class="w-24 text-sm font-semibold text-primary">
+          <span data-zh>汽车制造</span><span data-en>Auto Mfg</span>
+        </div>
+      </div>
+    </div>
+    <div class="mt-4 pt-4 border-t border-white/10 text-xs text-muted">
+      <i class="fas fa-info-circle mr-1"></i>
+      <span data-zh>柔佛州占全国获批投资25.77%，2026年目标提升至1400亿令吉</span>
+      <span data-en>Johor accounts for 25.77% of national approved investment; 2026 target raised to RM140B</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 5 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch5">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-earth-asia text-blue-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>五、外交棋局：中东危机下的多线博弈</span>
+          <span data-en>V. Diplomatic Chessboard: Multi-Front Maneuvering Amid Middle East Crisis</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-blue-400 mr-2">5.1</span>
+      <span data-zh>安华外交斡旋获区域认可，马来西亚国际影响力上升</span>
+      <span data-en>Anwar's Diplomatic Mediation Gains Regional Recognition; Malaysia's International Influence Rises</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>安华与伊朗、海湾国家、土耳其等多国领导人密集沟通，成功获得伊朗不袭击邻国的承诺，马来西亚成为少数获伊朗放行霍尔木兹海峡航运的国家。砂拉越首长等官员公开赞扬安华外交努力，国际影响力提升为经济外交创造了有利条件。</span>
+        <span data-en>Anwar engages in intensive communication with leaders of Iran, Gulf states, Turkey and others, successfully securing Iran's commitment not to attack neighboring countries. Malaysia becomes one of few nations granted Iranian clearance for Strait of Hormuz shipping. Sarawak Premier and other officials publicly praise Anwar's diplomatic efforts; rising international influence creates favorable conditions for economic diplomacy.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>撤侨行动接回163名公民及7名外籍家属</span><span data-en>Evacuation operation brought back 163 citizens and 7 foreign family members</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>启动30集装箱人道主义援助计划，援助超10万巴勒斯坦民众</span><span data-en>Launched 30-container humanitarian aid plan, assisting over 100,000 Palestinians</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>国会跨党派声援伊朗，向美国大使馆递交备忘录</span><span data-en>Cross-party parliamentary solidarity with Iran; memorandum submitted to US Embassy</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>2025年吸引投资4267亿令吉创历史新高</span><span data-en>2025 attracted record RM426.7B in investment</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 5.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-blue-400 mr-2">5.2</span>
+      <span data-zh>马美贸易协定争议悬而未决，301条款调查阴影笼罩</span>
+      <span data-en>Malaysia-US Trade Agreement Dispute Unresolved; Section 301 Investigation Looms</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>马美互惠贸易协定（ART）因美国最高法院裁决被宣布"无效"，但8名公正党议员要求政府提供正式废止文件，媒体警告率先宣布无效可能招致美国报复。美国已对马来西亚启动301条款贸易调查，贸易关系面临不确定性。</span>
+        <span data-en>The Malaysia-US Agreed Reciprocal Trade (ART) agreement was declared "void" following a US Supreme Court ruling, but 8 PKR MPs demand the government provide formal annulment documents. Media warns that being first to declare it void may invite US retaliation. The US has launched a Section 301 trade investigation against Malaysia; trade relations face uncertainty.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>协定于2025年10月签署，两国尚未完成国内法律程序</span><span data-en>Agreement signed in October 2025; neither country has completed domestic legal procedures</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>3月18日消息称政府将重启马美贸易谈判</span><span data-en>March 18 reports indicate government will restart Malaysia-US trade negotiations</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>议员要求未来贸易协定须经议会批准</span><span data-en>MPs demand future trade agreements require parliamentary approval</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 5.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-blue-400 mr-2">5.3</span>
+      <span data-zh>新柔捷运法案通过，马新跨境合作迈入新阶段</span>
+      <span data-en>RTS Link Bill Passed; Malaysia-Singapore Cross-Border Cooperation Enters New Phase</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>RTS Link法案无需修宪即可实施，"一地检查"模式将通关时间缩短至5分钟，新加坡官员仅享有海关移民安保职能豁免而非刑事豁免——在主权保障与效率提升之间找到了平衡点。</span>
+        <span data-en>The RTS Link Bill can be implemented without constitutional amendments. The "single-location inspection" model reduces clearance time to 5 minutes. Singapore officials enjoy only customs, immigration and security functional immunity, not criminal immunity — striking a balance between sovereignty protection and efficiency improvement.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>法案明确新加坡官员在指定区域的职能边界</span><span data-en>Bill clearly defines Singapore officials' functional boundaries in designated areas</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>采用一站式检查模式</span><span data-en>Adopts one-stop inspection model</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>马来西亚国家主权得到充分保障</span><span data-en>Malaysia's national sovereignty fully safeguarded</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 6 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch6">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-map-marked-alt text-blue-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>六、沙巴砂拉越：联邦-州关系的结构性张力</span>
+          <span data-en>VI. Sabah & Sarawak: Structural Tensions in Federal-State Relations</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-blue-400 mr-2">6.1</span>
+      <span data-zh>沙巴40%税收分成案进入上诉关键期</span>
+      <span data-en>Sabah 40% Tax Revenue Sharing Case Enters Critical Appeal Phase</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>亚庇高庭2025年10月裁定沙巴有权获得联邦净税收40%，联邦政府申请暂缓执行，上诉庭将于4月6日裁决。MUDA批评安华"已有定案"的说法与实际矛盾，沙巴州议员要求联邦先行支付当年应得税收。这一案件的走向将深刻影响联邦-州财政关系框架。</span>
+        <span data-en>Kota Kinabalu High Court ruled in October 2025 that Sabah is entitled to 40% of federal net tax revenue. The federal government applied for a stay of execution; the Court of Appeal will rule on April 6. MUDA criticizes Anwar's "already settled" claim as contradicting reality. Sabah assemblymen demand the federal government pay the current year's due taxes first. This case's outcome will profoundly impact the federal-state fiscal relationship framework.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>高庭要求90天内完成1974-2021年税收审核</span><span data-en>High Court requires completion of 1974-2021 tax audit within 90 days</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>SABAR组织筹款50万令吉推进大陆架主权诉讼</span><span data-en>SABAR organization raises RM500,000 to advance continental shelf sovereignty litigation</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>砂拉越石油主权请愿已提交联邦法院</span><span data-en>Sarawak oil sovereignty petition submitted to Federal Court</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 6.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-blue-400 mr-2">6.2</span>
+      <span data-zh>菲律宾沙巴主权主张再起，但被视为选举噱头</span>
+      <span data-en>Philippines Revives Sabah Sovereignty Claim, but Seen as Electoral Gimmick</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>菲律宾参议员帕迪拉重提沙巴主权主张，沙巴首长哈芝芝诺迅速驳斥，联邦与州政府立场一致。该主张虽无实质威胁，但每逢菲律宾选举周期性出现，需持续关注其对沙巴投资环境的心理影响。</span>
+        <span data-en>Philippine Senator Padilla revives the Sabah sovereignty claim; Sabah Chief Minister Hajiji Noor swiftly rebuts, with federal and state governments aligned. While the claim poses no substantive threat, it cyclically resurfaces during Philippine elections — its psychological impact on Sabah's investment environment warrants continued monitoring.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 7 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch7">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-microchip text-emerald-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>七、产业升级：半导体、新能源与数字经济的战略布局</span>
+          <span data-en>VII. Industrial Upgrade: Strategic Layout of Semiconductors, New Energy & Digital Economy</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">7.1</span>
+      <span data-zh>槟城国际金融中心规划启动，半导体产业链金融服务补短板</span>
+      <span data-en>Penang International Financial Center Planning Launched; Semiconductor Supply Chain Financial Services Gap Addressed</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>槟城成立专项工作组推进PIFC项目，定位为科技与金融枢纽服务半导体产业链，开发周期长达20年。峇都交湾ATE园区建设将进一步巩固槟城电子电气产业重镇地位。</span>
+        <span data-en>Penang establishes a dedicated task force to advance the PIFC project, positioned as a tech and financial hub serving the semiconductor supply chain with a 20-year development cycle. The Batu Kawan ATE park construction will further consolidate Penang's status as an electronics and electrical industry powerhouse.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>槟城出口占全国超44%</span><span data-en>Penang exports account for over 44% of national total</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>州政府提升发展拨款44.8%至3.19亿令吉</span><span data-en>State government increases development allocation by 44.8% to RM319 million</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>"槟城STEM"计划每年培养超5000名专业人才</span><span data-en>"Penang STEM" program trains over 5,000 professionals annually</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 7.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">7.2</span>
+      <span data-zh>砂拉越氢能与半导体双轮驱动，打造后石油时代增长极</span>
+      <span data-en>Sarawak's Hydrogen & Semiconductor Dual Engine; Building Post-Oil Era Growth Pole</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>砂拉越自主研发氮化镓AI驱动化合物晶片、开发全球首个电源转换器"KETEQ AI"、布局氢能经济与大型数据中心——正从资源型经济向高科技制造与清洁能源枢纽转型。</span>
+        <span data-en>Sarawak independently develops GaN AI-driven compound chips, creates the world's first power converter "KETEQ AI," and layouts hydrogen economy and large-scale data centers — transitioning from a resource-based economy to a high-tech manufacturing and clean energy hub.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>选派学生赴英国攻读半导体博士</span><span data-en>Sends students to the UK for semiconductor doctoral studies</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>成立航太工业及卫星委员会</span><span data-en>Establishes Aerospace Industry and Satellite Committee</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>与世界银行合作优化治理与财政规划</span><span data-en>Collaborates with World Bank to optimize governance and fiscal planning</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 7.3 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-emerald-400 mr-2">7.3</span>
+      <span data-zh>比亚迪马来西亚建厂受阻，本土车企保护与开放引资的政策博弈</span>
+      <span data-en>BYD Malaysia Factory Stalled; Policy Tug-of-War Between Local Auto Protection & Open Investment</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>比亚迪因无法满足80%出口比例和20万令吉最低单价要求，正重新评估霹雳建厂计划。政府保护宝腾与第二国产车的意图明确，但过度保护可能错失新能源汽车产业链转移的窗口期。</span>
+        <span data-en>BYD is reassessing its Perak factory plan due to inability to meet the 80% export ratio and RM200,000 minimum unit price requirements. The government's intent to protect Proton and Perodua is clear, but overprotection may miss the window for NEV supply chain transfer.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>宝腾2026年2月电动车销量全国第一（1802辆）</span><span data-en>Proton ranked #1 in EV sales nationally in February 2026 (1,802 units)</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>比亚迪同期仅469辆</span><span data-en>BYD sold only 469 units in the same period</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>奇瑞在雪兰莪投资22亿令吉建设组装厂已敲定</span><span data-en>Chery's RM2.2B assembly plant investment in Selangor has been finalized</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 8 ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12" id="ch8">
+  <div class="reveal">
+    <div class="flex items-center gap-4 mb-8">
+      <div class="w-12 h-12 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0">
+        <i class="fas fa-users-gear text-purple-500 text-xl"></i>
+      </div>
+      <div>
+        <h2 class="font-display text-2xl md:text-3xl font-bold text-primary">
+          <span data-zh>八、社会治理：种族宗教敏感与数字时代挑战</span>
+          <span data-en>VIII. Social Governance: Racial-Religious Sensitivities & Digital Age Challenges</span>
+        </h2>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8.1 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-purple-400 mr-2">8.1</span>
+      <span data-zh>种族主义事件创11年新高，AI生成煽动性内容成新威胁</span>
+      <span data-en>Racist Incidents Hit 11-Year High; AI-Generated Inflammatory Content Emerges as New Threat</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>2025年录得107宗种族主义事件，70%网络敏感留言为AI生成，被政客用作煽动工具。政府拟制定国会3R言论指南，但在议会特权与言论自由之间的平衡仍是难题。</span>
+        <span data-en>107 racist incidents recorded in 2025; 70% of sensitive online comments are AI-generated, weaponized by politicians as incitement tools. The government plans to formulate parliamentary 3R speech guidelines, but balancing parliamentary privilege with freedom of speech remains challenging.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>国会相关种族主义事件占比40.2%</span><span data-en>Parliament-related racist incidents account for 40.2%</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>近80%相关言论来自反对党议员</span><span data-en>Nearly 80% of related remarks come from opposition MPs</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>非法兴都庙争议被炒作成宗教问题</span><span data-en>Illegal Hindu temple disputes exploited as religious issues</span></span></li>
+    </ul>
+  </div>
+
+  <!-- 8.2 -->
+  <div class="card-alt border rounded-xl p-6 md:p-8 mb-6 reveal">
+    <h3 class="font-display text-xl font-bold text-primary mb-4">
+      <span class="text-purple-400 mr-2">8.2</span>
+      <span data-zh>《线上安全法令》实施推进，但平台合规响应参差不齐</span>
+      <span data-en>Online Safety Act Implementation Advances, but Platform Compliance Varies</span>
+    </h3>
+    <div class="insight-box rounded-lg p-4 mb-5">
+      <p class="text-sm md:text-base leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>ONSA法令已生效，MCMC移除超1万个冒用王室身份的虚假账号，但Meta平台响应缓慢。政府正加速制定AI监管框架，应对deepfake等新型网络安全威胁。</span>
+        <span data-en>The ONSA Act is now in effect; MCMC has removed over 10,000 fake accounts impersonating royalty, but Meta's response has been slow. The government is accelerating AI regulatory framework development to address deepfake and other emerging cybersecurity threats.</span>
+      </p>
+    </div>
+    <h4 class="text-sm font-semibold text-amber-400 uppercase tracking-wider mb-3"><i class="fas fa-list-check mr-2"></i><span data-zh>关键事实</span><span data-en>Key Facts</span></h4>
+    <ul class="space-y-2 text-sm text-secondary">
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>全国超3.5万起网络诈骗案件，损失约15.8亿令吉</span><span data-en>Over 35,000 cybercrime cases nationwide, losses approximately RM1.58 billion</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>16岁以下禁止开设社交媒体账户</span><span data-en>Under-16s prohibited from opening social media accounts</span></span></li>
+      <li class="flex items-start gap-2"><i class="fas fa-chevron-right text-amber-500 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>附属条例预计未来几周内发布</span><span data-en>Subsidiary regulations expected to be released within the coming weeks</span></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== FULL SUMMARY ==================== -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16" id="summary">
+  <div class="text-center mb-12 reveal">
+    <h2 class="font-display text-3xl md:text-4xl font-bold text-primary mb-3">
+      <span data-zh>全文总结</span><span data-en>Executive Summary</span>
+    </h2>
+    <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10 stagger-children">
+    <!-- 政治环境 -->
+    <div class="card card-hover rounded-xl p-6 md:p-8 border-t-4 border-amber-500 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+          <i class="fas fa-landmark text-amber-500"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-primary">
+          <span data-zh>政治环境概述</span><span data-en>Political Environment Overview</span>
+        </h3>
+      </div>
+      <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>安华政府面临中东危机应对、反贪体系公信力危机、大选备战三重压力叠加。执政联盟内部行动党地税内讧、公正党"企业黑手党"丑闻暴露裂痕，但巫统前领袖回归和国大党留在国阵为国阵注入新动能。反对阵营中伊斯兰党对国盟的主导权上升，土团党持续分裂。政治稳定性短期可控，但大选前的不确定性正在累积。</span>
+        <span data-en>The Anwar government faces triple overlapping pressures: Middle East crisis response, anti-corruption credibility crisis, and election preparation. Within the ruling coalition, DAP's land tax infighting and PKR's "corporate mafia" scandal expose fractures, but UMNO former leaders' return and MIC staying in BN inject new momentum. In the opposition camp, PAS's dominance over Perikatan rises while Bersatu continues to fragment. Political stability is manageable short-term, but pre-election uncertainty is accumulating.</span>
+      </p>
+    </div>
+
+    <!-- 经济发展 -->
+    <div class="card card-hover rounded-xl p-6 md:p-8 border-t-4 border-emerald-500 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+          <i class="fas fa-chart-line text-emerald-500"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-primary">
+          <span data-zh>经济发展概述</span><span data-en>Economic Development Overview</span>
+        </h3>
+      </div>
+      <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+        <span data-zh>宏观经济基本面稳健，GDP增长5.2%、投资额创历史新高、外储充裕、令吉走强。但中东冲突导致燃油补贴成本六倍暴涨，财政紧缩措施已启动。结构性挑战包括民众获得感不足、州际发展差距拉大、中小企业经营压力上升。政府正通过每周经济行动理事会会议、专项评估委员会等机制实时应对。</span>
+        <span data-en>Macroeconomic fundamentals are solid: GDP growth 5.2%, record-high investment, ample FX reserves, and a strengthening Ringgit. However, the Middle East conflict has caused fuel subsidy costs to surge 6x, triggering fiscal austerity measures. Structural challenges include insufficient public economic sentiment, widening interstate development gaps, and rising SME operational pressures. The government is responding in real-time through weekly Economic Action Council meetings and special assessment committees.</span>
+      </p>
+    </div>
+
+    <!-- 营商环境 -->
+    <div class="card card-hover rounded-xl p-6 md:p-8 border-t-4 border-blue-500 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+          <i class="fas fa-briefcase text-blue-500"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-primary">
+          <span data-zh>营商环境洞察</span><span data-en>Business Environment Insights</span>
+        </h3>
+      </div>
+      <ul class="space-y-3 text-sm text-secondary" style="font-family:'Noto Serif SC',serif;">
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 font-bold flex-shrink-0">
+            <span data-zh>制度升级：</span><span data-en>Institutional Upgrade:</span>
+          </span>
+          <span>
+            <span data-zh>国际商事法庭设立、资本市场蓝图发布、零工经济立法推进，营商制度基建持续完善</span>
+            <span data-en>International commercial court established, capital market blueprint released, gig economy legislation advancing — business institutional infrastructure continuously improving</span>
+          </span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 font-bold flex-shrink-0">
+            <span data-zh>政策风险：</span><span data-en>Policy Risk:</span>
+          </span>
+          <span>
+            <span data-zh>2000万令吉以上物业交易50%土著股权新规、比亚迪建厂条件限制，显示产业保护主义倾向</span>
+            <span data-en>50% Bumiputera equity rule for property transactions above RM20M, BYD factory conditions — indicating protectionist tendencies</span>
+          </span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-amber-400 font-bold flex-shrink-0">
+            <span data-zh>能源保障：</span><span data-en>Energy Security:</span>
+          </span>
+          <span>
+            <span data-zh>燃油供应可维持至5月，天然气供应稳定，但中长期供应链脆弱性需关注</span>
+            <span data-en>Fuel supply sustainable until May, natural gas supply stable, but medium-long term supply chain vulnerabilities need attention</span>
+          </span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-400 font-bold flex-shrink-0">
+            <span data-zh>投资热点：</span><span data-en>Investment Hotspots:</span>
+          </span>
+          <span>
+            <span data-zh>柔佛（1100亿令吉投资）、槟城（半导体/金融中心）、砂拉越（氢能/数据中心）为三大增长极</span>
+            <span data-en>Johor (RM110B investment), Penang (semiconductor/financial center), Sarawak (hydrogen/data center) as three major growth poles</span>
+          </span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 中资企业建议 -->
+    <div class="card card-hover rounded-xl p-6 md:p-8 border-t-4 border-red-500 reveal">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center">
+          <i class="fas fa-building-flag text-red-500"></i>
+        </div>
+        <h3 class="font-display text-lg font-bold text-primary">
+          <span data-zh>中资企业建议</span><span data-en>Recommendations for Chinese Enterprises</span>
+        </h3>
+      </div>
+      <p class="text-xs text-muted mb-3">
+        <span data-zh>共6项战略建议，详见下方展开</span><span data-en>6 strategic recommendations, see expanded section below</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- 6 中资企业建议 - Full Detail -->
+  <div class="space-y-4 stagger-children">
+    <!-- Recommendation 1 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-microchip text-blue-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>半导体与电子制造</span><span data-en>Semiconductors & Electronics Manufacturing</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>槟城PIFC项目和ATE园区建设为半导体产业链企业提供战略机遇，建议关注槟城州政府的招商政策和人才培养计划（每年5000+STEM人才），可考虑在测试封装、设备制造等环节布局</span>
+            <span data-en>Penang's PIFC project and ATE park construction provide strategic opportunities for semiconductor supply chain enterprises. Recommend monitoring Penang state government's investment policies and talent development programs (5,000+ STEM talents annually). Consider positioning in testing, packaging, and equipment manufacturing segments.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation 2 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-car-battery text-emerald-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>新能源汽车</span><span data-en>New Energy Vehicles</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>比亚迪受阻案例表明马来西亚对本土车企保护力度强，中资车企进入需满足高出口比例和高单价门槛；奇瑞22亿令吉雪兰莪项目已获批，可作为参考路径，建议优先考虑零部件供应链而非整车组装</span>
+            <span data-en>BYD's setback demonstrates Malaysia's strong protection of local automakers. Chinese auto companies must meet high export ratio and high unit price thresholds. Chery's RM2.2B Selangor project approval serves as a reference pathway. Recommend prioritizing component supply chain over whole-vehicle assembly.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation 3 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-green-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-wind text-green-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>清洁能源与数据中心</span><span data-en>Clean Energy & Data Centers</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>砂拉越氢能经济和数据中心布局为中资企业提供合作窗口，砂拉越与世界银行的治理合作提升了制度可预期性，建议关注砂拉越数字经济机构（SDEC）的合作框架</span>
+            <span data-en>Sarawak's hydrogen economy and data center layout provide cooperation windows for Chinese enterprises. Sarawak's governance collaboration with the World Bank enhances institutional predictability. Recommend monitoring the Sarawak Digital Economy Corporation (SDEC) cooperation framework.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation 4 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-road text-amber-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>基础设施与建筑</span><span data-en>Infrastructure & Construction</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>泛婆罗洲高速公路、东海岸高速路三期、模块化预制建筑试点等项目持续推进，公共工程部管理1492个教育基建项目总值379.8亿令吉，中资建筑企业可关注公私合营模式的招标机会</span>
+            <span data-en>Pan Borneo Highway, East Coast Expressway Phase 3, modular prefabricated construction pilots and other projects continue advancing. The Public Works Department manages 1,492 educational infrastructure projects worth RM37.98B. Chinese construction enterprises can monitor PPP model tender opportunities.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation 5 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-red-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-shield-halved text-red-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>合规风险管理</span><span data-en>Compliance Risk Management</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>反贪会"企业黑手党"案件警示政商关系风险，中资企业应严格合规经营，避免通过中间人进行政府关系运作；土著股权新规可能影响高价值资产交易，需提前评估合资架构</span>
+            <span data-en>The MACC "corporate mafia" case warns of political-business relationship risks. Chinese enterprises must strictly comply with regulations, avoiding government relations through intermediaries. The Bumiputera equity rule may affect high-value asset transactions — advance assessment of JV structures is needed.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recommendation 6 -->
+    <div class="card-alt border rounded-xl p-6 reveal">
+      <div class="flex items-start gap-4">
+        <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center flex-shrink-0 mt-1">
+          <i class="fas fa-chess text-purple-400"></i>
+        </div>
+        <div>
+          <h4 class="font-semibold text-primary mb-2">
+            <span data-zh>政治风险对冲</span><span data-en>Political Risk Hedging</span>
+          </h4>
+          <p class="text-sm text-secondary leading-relaxed" style="font-family:'Noto Serif SC',serif;">
+            <span data-zh>大选前政策不确定性上升，建议密切关注4月17日巫统最高理事会、4月6日沙巴税收案上诉裁决、4月25日反贪会集会三个关键节点；中东冲突若持续恶化，燃油补贴政策可能进一步调整，影响运营成本预算</span>
+            <span data-en>Pre-election policy uncertainty is rising. Recommend closely monitoring three key dates: April 17 UMNO Supreme Council, April 6 Sabah tax case appeal ruling, and April 25 MACC rally. If the Middle East conflict continues to worsen, fuel subsidy policies may be further adjusted, impacting operational cost budgets.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer-bg py-12 mt-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-amber-500/10 flex items-center justify-center">
+          <i class="fas fa-globe-asia text-amber-500"></i>
+        </div>
+        <div>
+          <div class="font-display font-bold text-white text-lg">Supinfor Ltd.</div>
+          <div class="text-slate-400 text-sm">
+            <span data-zh>区域国别洞察报告</span><span data-en>Country Insight Report</span>
+          </div>
+        </div>
+      </div>
+      <div class="text-center md:text-right">
+        <div class="text-slate-400 text-sm">
+          <span data-zh>分析日期：2026年4月24日</span><span data-en>Analysis Date: April 24, 2026</span>
+        </div>
+        <div class="text-slate-500 text-xs mt-1">
+          <span data-zh>基于马来西亚国别月报 2026-03 · 317条资讯 · 48个关联簇 · 55条洞察</span>
+          <span data-en>Based on Malaysia Country Monthly Report 2026-03 · 317 Items · 48 Clusters · 55 Insights</span>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-slate-700 mt-8 pt-6 text-center">
+      <p class="text-slate-500 text-xs">
+        © 2026 Supinfor Ltd. All rights reserved.
+        <span data-zh>本报告仅供内部参考，未经授权不得转载。</span>
+        <span data-en>This report is for internal reference only. Unauthorized reproduction is prohibited.</span>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="back-to-top fixed bottom-8 right-8 w-12 h-12 rounded-full bg-amber-500 text-white shadow-lg flex items-center justify-center hover:bg-amber-600 transition-all z-50 no-print" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Management =====
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+
+  function getPreferredTheme() {
+    const stored = localStorage.getItem('theme');
+    if (stored) return stored;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  function setTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+    updateThemeIcon(theme);
+  }
+
+  function updateThemeIcon(theme) {
+    const darkIcon = document.querySelector('.theme-icon-dark');
+    const lightIcon = document.querySelector('.theme-icon-light');
+    if (theme === 'dark') {
+      darkIcon.classList.remove('hidden');
+      lightIcon.classList.add('hidden');
+    } else {
+      darkIcon.classList.add('hidden');
+      lightIcon.classList.remove('hidden');
+    }
+  }
+
+  setTheme(getPreferredTheme());
+
+  themeToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // ===== Language Management =====
+  const langToggle = document.getElementById('langToggle');
+
+  function setLang(lang) {
+    html.setAttribute('data-lang', lang);
+    localStorage.setItem('lang', lang);
+  }
+
+  const storedLang = localStorage.getItem('lang') || 'zh';
+  setLang(storedLang);
+
+  langToggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang');
+    setLang(current === 'zh' ? 'en' : 'zh');
+  });
+
+  // ===== Scroll Reveal =====
+  const revealElements = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(el => observer.observe(el));
+
+  // ===== Back to Top =====
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== Bar Chart Animation on Scroll =====
+  const bars = document.querySelectorAll('.h-bar');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('bar-animate');
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  bars.forEach(bar => barObserver.observe(bar));
+
+})();
+</script>
+</body>
+</html>

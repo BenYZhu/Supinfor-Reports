@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-zh="俄罗斯营商环境动态洞察报告 | 2026.04.13–04.19 | Supinfor" data-en="Russia Business Environment Insight Report | 2026.04.13–04.19 | Supinfor">俄罗斯营商环境动态洞察报告 | 2026.04.13–04.19 | Supinfor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: { serif: ['"Noto Serif SC"', 'Georgia', 'serif'], sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'] },
+                    colors: { accent: { 50:'#ecfdf5', 100:'#d1fae5', 200:'#a7f3d0', 300:'#6ee7b7', 400:'#34d399', 500:'#10b981', 600:'#059669', 700:'#047857', 800:'#065f46', 900:'#064e3b' } }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+        .text-gradient { background: linear-gradient(135deg, #059669, #10b981, #34d399); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .bg-mesh { background-color: #0f172a; background-image: radial-gradient(at 20% 25%, rgba(5,150,105,.18) 0, transparent 50%), radial-gradient(at 80% 75%, rgba(51,65,85,.25) 0, transparent 50%), radial-gradient(at 50% 50%, rgba(5,150,105,.08) 0, transparent 60%); }
+        .bg-mesh-light { background-color: #f8fafc; background-image: radial-gradient(at 20% 25%, rgba(5,150,105,.04) 0, transparent 50%), radial-gradient(at 80% 75%, rgba(51,65,85,.03) 0, transparent 50%); }
+        .card { transition: transform .3s cubic-bezier(.4,0,.2,1), box-shadow .3s ease; }
+        .card:hover { transform: translateY(-6px); }
+        .dark .card:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,.5); }
+        .card:hover { box-shadow: 0 25px 50px -12px rgba(0,0,0,.12); }
+        .drop-cap::first-letter { float: left; font-family: 'Noto Serif SC', serif; font-size: 3.5rem; line-height: .8; font-weight: 900; margin-right: .5rem; margin-top: .15rem; color: #059669; }
+        .dark .drop-cap::first-letter { color: #34d399; }
+        .divider { height: 4px; background: linear-gradient(90deg, #059669, #10b981, #34d399, transparent 80%); border-radius: 2px; }
+        .pulse-dot { animation: pulse 2s infinite; }
+        @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-thumb { background: linear-gradient(#059669, #334155); border-radius: 3px; }
+        * { transition: background-color .25s, color .25s, border-color .25s, box-shadow .25s; }
+        .bar-chart { display: flex; align-items: flex-end; gap: 12px; height: 200px; padding-top: 20px; }
+        .bar-col { display: flex; flex-direction: column; align-items: center; flex: 1; gap: 6px; }
+        .bar { width: 100%; border-radius: 6px 6px 0 0; min-height: 4px; transition: height .8s ease; }
+        .bar-label { font-size: 11px; text-align: center; line-height: 1.2; color: #64748b; }
+        .dark .bar-label { color: #94a3b8; }
+        .bar-value { font-size: 11px; font-weight: 700; color: #334155; }
+        .dark .bar-value { color: #e2e8f0; }
+    </style>
+</head>
+<body class="bg-mesh-light dark:bg-mesh text-gray-900 dark:text-gray-100 font-sans antialiased">
+
+    <!-- Floating Theme Toggle -->
+    <button id="theme-toggle" class="fixed top-5 right-5 z-[100] w-11 h-11 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Toggle theme">
+        <i class="fas fa-moon text-gray-600 dark:hidden"></i>
+        <i class="fas fa-sun hidden dark:block text-emerald-400"></i>
+    </button>
+    <!-- Floating Language Toggle -->
+    <button id="lang-toggle" class="fixed top-5 right-[72px] z-[100] w-11 h-11 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:scale-110 transition-transform text-sm font-bold text-gray-600 dark:text-gray-300" aria-label="Toggle language">EN</button>
+
+    <!-- ==================== HERO ==================== -->
+    <header class="relative min-h-[85vh] flex items-end overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-emerald-950"></div>
+        <div class="absolute inset-0 opacity-[.07]" style="background-image:url('data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%23ffffff%22%3E%3Cpath d=%22M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+        <div class="absolute top-20 left-10 w-72 h-72 bg-emerald-700/20 rounded-full blur-[100px]"></div>
+        <div class="absolute bottom-20 right-10 w-96 h-96 bg-slate-700/20 rounded-full blur-[120px]"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-600/5 rounded-full blur-[150px]"></div>
+
+        <div class="relative w-full max-w-6xl mx-auto px-6 sm:px-8 pb-20 pt-32">
+            <div class="flex flex-wrap items-center gap-3 mb-8">
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-emerald-200 text-sm font-medium border border-white/10">
+                    <i class="fas fa-briefcase"></i> <span data-zh="营商环境洞察" data-en="Business Environment Insight">营商环境洞察</span>
+                </span>
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-emerald-200 text-sm font-medium border border-white/10">
+                    <i class="far fa-calendar-alt"></i> 2026.04.13 — 04.19
+                </span>
+            </div>
+            <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-8">
+                <span data-zh="俄罗斯营商环境" data-en="Russia Business Environment">俄罗斯营商环境</span><br class="hidden sm:block">
+                <span class="bg-gradient-to-r from-emerald-300 via-green-300 to-teal-300 bg-clip-text text-transparent" data-zh="动态洞察报告" data-en="Dynamic Insight Report">动态洞察报告</span>
+            </h1>
+            <p class="max-w-2xl text-lg sm:text-xl text-emerald-100/80 font-light leading-relaxed mb-12" data-zh="全方位监管收紧 · 外部能源红利 · 内部结构性改革三重叠加，重塑俄罗斯营商生态" data-en="Comprehensive regulatory tightening · External energy dividends · Internal structural reforms — a triple overlay reshaping Russia's business ecosystem">
+                全方位监管收紧 · 外部能源红利 · 内部结构性改革三重叠加，重塑俄罗斯营商生态
+            </p>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <span class="px-4 py-2 rounded-xl bg-white/5 backdrop-blur border border-white/10 text-white/70"><i class="far fa-calendar mr-2"></i>2026.04.13–04.19</span>
+                <span class="px-4 py-2 rounded-xl bg-white/5 backdrop-blur border border-white/10 text-white/70"><i class="far fa-newspaper mr-2"></i><span data-zh="去重后1337条·精选400条" data-en="1,337 deduplicated · 400 curated">去重后1337条·精选400条</span></span>
+                <span class="px-4 py-2 rounded-xl bg-white/5 backdrop-blur border border-white/10 text-white/70"><i class="fas fa-tags mr-2"></i><span data-zh="24个营商标签·11个栏目" data-en="24 business tags · 11 categories">24个营商标签·11个栏目</span></span>
+                <span class="px-4 py-2 rounded-xl bg-white/5 backdrop-blur border border-white/10 text-white/70"><i class="fas fa-building mr-2"></i>Supinfor Ltd.</span>
+            </div>
+        </div>
+        <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-gray-50 dark:from-[#0f172a]"></div>
+    </header>
+
+    <!-- ==================== EXECUTIVE SUMMARY ==================== -->
+    <section class="relative py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="执行摘要" data-en="Executive Summary">执行摘要</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-10" data-zh="一周营商脉搏，核心信号速览" data-en="Weekly business pulse — key signals at a glance">一周营商脉搏，核心信号速览</p>
+            <div class="card bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-500/10 dark:to-teal-500/5 rounded-3xl p-8 sm:p-10 border border-emerald-200/60 dark:border-emerald-500/20">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="w-12 h-12 rounded-2xl bg-emerald-600 flex items-center justify-center text-white text-lg shadow-lg shadow-emerald-600/25"><i class="fas fa-file-alt"></i></span>
+                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-400">Executive Summary</span>
+                </div>
+                <div class="drop-cap text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg" data-zh="本周俄罗斯营商环境呈现"全方位监管收紧＋外部能源红利＋内部结构性改革"三重叠加特征。最值得关注的信号：一是税务监控体系大幅升级，2027年起将对年超240万卢布未申报银行转账收入实施自动监控，预计波及700-1000万人；二是对不友好国家企业资产的强制收购正式落地，德国Wintershall Dea和奥地利OMV在俄油气资产被以约157亿卢布强制出售；三是中东冲突推高乌拉尔原油价格突破120美元/桶，美国被迫第三次延长俄油交易豁免许可。此外，医护薪酬改革、劳动力培养体系重构、AI监管法案、VPN限制升级、移民政策收紧、文化遗产修复投资等多领域政策同步推进，正在重塑俄罗斯的营商生态。" data-en="This week, Russia's business environment exhibited a triple overlay of 'comprehensive regulatory tightening + external energy dividends + internal structural reforms.' The most noteworthy signals: First, a major upgrade to the tax monitoring system — starting 2027, automatic monitoring of undeclared bank transfer income exceeding 2.4 million rubles annually, expected to affect 7–10 million people. Second, the forced acquisition of 'unfriendly country' corporate assets became reality — Germany's Wintershall Dea and Austria's OMV had their Russian oil and gas assets forcibly sold for approximately 15.7 billion rubles. Third, the Middle East conflict pushed Urals crude oil prices above $120/barrel, forcing the U.S. to extend Russian oil transaction waivers for the third time. Additionally, healthcare wage reforms, workforce development restructuring, AI regulation bills, VPN restriction upgrades, immigration policy tightening, and cultural heritage restoration investments are advancing simultaneously, reshaping Russia's business ecosystem.">
+                    本周俄罗斯营商环境呈现"全方位监管收紧＋外部能源红利＋内部结构性改革"三重叠加特征。最值得关注的信号：<strong>一是税务监控体系大幅升级</strong>，2027年起将对年超240万卢布未申报银行转账收入实施自动监控，预计波及700-1000万人；<strong>二是对不友好国家企业资产的强制收购正式落地</strong>，德国Wintershall Dea和奥地利OMV在俄油气资产被以约157亿卢布强制出售；<strong>三是中东冲突推高乌拉尔原油价格突破120美元/桶</strong>，美国被迫第三次延长俄油交易豁免许可。此外，医护薪酬改革、劳动力培养体系重构、AI监管法案、VPN限制升级、移民政策收紧、文化遗产修复投资等多领域政策同步推进，正在重塑俄罗斯的营商生态。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== DATA OVERVIEW ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="数据概览" data-en="Data Overview">数据概览</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-10" data-zh="各栏目合计6796条 · URL去重后1337条 · 精选400条均衡取样" data-en="6,796 total across categories · 1,337 after URL deduplication · 400 balanced curated samples">各栏目合计6796条 · URL去重后1337条 · 精选400条均衡取样</p>
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- 栏目分布 Top 5 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl p-7 border border-gray-200/60 dark:border-white/10">
+                    <h3 class="font-bold mb-1" data-zh="栏目分布 TOP 5" data-en="Category Distribution TOP 5">栏目分布 TOP 5</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-6" data-zh="按命中数量排序" data-en="Sorted by hit count">按命中数量排序</p>
+                    <div class="bar-chart">
+                        <div class="bar-col"><div class="bar-value">2053</div><div class="bar bg-gradient-to-t from-emerald-700 to-emerald-500" style="height:100%"></div><div class="bar-label" data-zh="经济&#10;30.2%" data-en="Economy&#10;30.2%">经济<br>30.2%</div></div>
+                        <div class="bar-col"><div class="bar-value">1857</div><div class="bar bg-gradient-to-t from-emerald-600 to-emerald-400" style="height:90%"></div><div class="bar-label" data-zh="民生&#10;27.3%" data-en="Livelihood&#10;27.3%">民生<br>27.3%</div></div>
+                        <div class="bar-col"><div class="bar-value">1027</div><div class="bar bg-gradient-to-t from-teal-600 to-teal-400" style="height:50%"></div><div class="bar-label" data-zh="产业&#10;15.1%" data-en="Industry&#10;15.1%">产业<br>15.1%</div></div>
+                        <div class="bar-col"><div class="bar-value">760</div><div class="bar bg-gradient-to-t from-slate-600 to-slate-400" style="height:37%"></div><div class="bar-label" data-zh="政治&#10;11.2%" data-en="Politics&#10;11.2%">政治<br>11.2%</div></div>
+                        <div class="bar-col"><div class="bar-value">352</div><div class="bar bg-gradient-to-t from-slate-500 to-slate-300" style="height:17%"></div><div class="bar-label" data-zh="科技&#10;5.2%" data-en="Technology&#10;5.2%">科技<br>5.2%</div></div>
+                    </div>
+                </div>
+                <!-- 营商标签分布 Top 8 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl p-7 border border-gray-200/60 dark:border-white/10">
+                    <h3 class="font-bold mb-1" data-zh="营商标签分布 TOP 8" data-en="Business Tag Distribution TOP 8">营商标签分布 TOP 8</h3>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mb-6" data-zh="精选400条均衡取样后" data-en="After 400 balanced curated samples">精选400条均衡取样后</p>
+                    <div class="bar-chart">
+                        <div class="bar-col"><div class="bar-value">63</div><div class="bar bg-gradient-to-t from-emerald-700 to-emerald-500" style="height:100%"></div><div class="bar-label" data-zh="公共&#10;服务" data-en="Public&#10;Services">公共<br>服务</div></div>
+                        <div class="bar-col"><div class="bar-value">52</div><div class="bar bg-gradient-to-t from-emerald-600 to-emerald-400" style="height:82%"></div><div class="bar-label" data-zh="知识&#10;产权" data-en="Intellectual&#10;Property">知识<br>产权</div></div>
+                        <div class="bar-col"><div class="bar-value">37</div><div class="bar bg-gradient-to-t from-teal-600 to-teal-400" style="height:59%"></div><div class="bar-label" data-zh="税收&#10;法规" data-en="Tax&#10;Regulation">税收<br>法规</div></div>
+                        <div class="bar-col"><div class="bar-value">34</div><div class="bar bg-gradient-to-t from-teal-500 to-teal-300" style="height:54%"></div><div class="bar-label" data-zh="营商&#10;文化" data-en="Business&#10;Culture">营商<br>文化</div></div>
+                        <div class="bar-col"><div class="bar-value">30</div><div class="bar bg-gradient-to-t from-slate-600 to-slate-400" style="height:48%"></div><div class="bar-label" data-zh="交通&#10;物流" data-en="Transport&#10;Logistics">交通<br>物流</div></div>
+                        <div class="bar-col"><div class="bar-value">24</div><div class="bar bg-gradient-to-t from-slate-500 to-slate-400" style="height:38%"></div><div class="bar-label" data-zh="产业&#10;政策" data-en="Industrial&#10;Policy">产业<br>政策</div></div>
+                        <div class="bar-col"><div class="bar-value">24</div><div class="bar bg-gradient-to-t from-slate-500 to-slate-300" style="height:38%"></div><div class="bar-label" data-zh="国际&#10;贸易" data-en="International&#10;Trade">国际<br>贸易</div></div>
+                        <div class="bar-col"><div class="bar-value">22</div><div class="bar bg-gradient-to-t from-gray-500 to-gray-300" style="height:35%"></div><div class="bar-label" data-zh="环保&#10;政策" data-en="Environmental&#10;Policy">环保<br>政策</div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== KEY EVENTS ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="重点事件解读" data-en="Key Events Analysis">重点事件解读</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-12" data-zh="六大营商信号，穿透表象看趋势" data-en="Six key business signals — seeing through the surface to the trends">六大营商信号，穿透表象看趋势</p>
+            <div class="space-y-6">
+                <!-- Event 1: 税务监控升级 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-emerald-600 to-teal-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center"><i class="fas fa-search-dollar text-emerald-600"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-emerald-600" data-zh="税务监控" data-en="Tax Monitoring">税务监控</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="30+条相关资讯" data-en="30+ related news">30+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="税务监控体系全面升级——2027年起监控个人银行转账" data-en="Comprehensive Tax Monitoring System Upgrade — Personal Bank Transfers Monitored from 2027">税务监控体系全面升级——2027年起监控个人银行转账</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="俄政府向国家杜马提交法案，允许联邦税务局从央行获取未申报经营人士的银行账户数据。2027年起，年超240万卢布的未申报非现金收入将被自动监控。同时，ATM现金存款设限每月100万卢布，СБП转账新规要求提供ИНН。" data-en="The Russian government submitted a bill to the State Duma allowing the Federal Tax Service to obtain bank account data of undeclared business operators from the Central Bank. Starting 2027, undeclared non-cash income exceeding 2.4 million rubles annually will be automatically monitored. ATM cash deposits are capped at 1 million rubles per month, and SBP transfer rules now require providing an INN (taxpayer ID).">俄政府向国家杜马提交法案，允许联邦税务局从央行获取未申报经营人士的银行账户数据。2027年起，年超240万卢布的未申报非现金收入将被自动监控。同时，ATM现金存款设限每月100万卢布，СБП转账新规要求提供ИНН。</p>
+                            <div class="bg-emerald-50 dark:bg-emerald-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：预计波及700-1000万俄民众。专家预测将催生更多灰色应对手段，俄现金需求或年增2-3万亿卢布。对在俄外商企业而言，合规成本将上升，需确保所有交易有据可查。" data-en="Impact Assessment: Expected to affect 7–10 million Russian citizens. Experts predict it will spawn more gray-market workarounds, with Russia's cash demand potentially increasing by 2–3 trillion rubles annually. For foreign enterprises in Russia, compliance costs will rise, and all transactions must be well-documented.">
+                                <strong class="text-emerald-700 dark:text-emerald-400">影响评估：</strong>预计波及700-1000万俄民众。专家预测将催生更多灰色应对手段，俄现金需求或年增2-3万亿卢布。对在俄外商企业而言，合规成本将上升，需确保所有交易有据可查。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 2: 强制收购外资资产 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-red-500 to-orange-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-red-100 dark:bg-red-500/20 flex items-center justify-center"><i class="fas fa-gavel text-red-500"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-red-500" data-zh="资产风险" data-en="Asset Risk">资产风险</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="15+条相关资讯" data-en="15+ related news">15+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="强制收购不友好国家企业在俄油气资产" data-en="Forced Acquisition of 'Unfriendly Country' Enterprises' Oil and Gas Assets in Russia">强制收购不友好国家企业在俄油气资产</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="俄总理米舒斯京签署政令，批准СОГАЗ以81亿卢布收购德国Wintershall Dea和奥地利OMV在南俄罗斯油田项目的股权；Газовые технологии以76亿卢布收购两家欧企在乌连戈伊油田阿钦姆矿层开发项目的股权。补偿款冻结在俄境内С类账户。" data-en="Prime Minister Mishustin signed a decree approving SOGAZ's acquisition of Germany's Wintershall Dea and Austria's OMV stakes in the South Russia oil field project for 8.1 billion rubles; Gazovye Tekhnologii acquired both European companies' stakes in the Urengoy field Achimov formation development project for 7.6 billion rubles. Compensation funds are frozen in Type C accounts within Russia.">俄总理米舒斯京签署政令，批准СОГАЗ以81亿卢布收购德国Wintershall Dea和奥地利OMV在南俄罗斯油田项目的股权；Газовые технологии以76亿卢布收购两家欧企在乌连戈伊油田阿钦姆矿层开发项目的股权。补偿款冻结在俄境内С类账户。</p>
+                            <div class="bg-red-50 dark:bg-red-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：这是俄首次依据2023年12月总统令强制没收不友好国家企业在俄资产的实际执行，向所有在俄外资企业发出明确信号：外资在俄资产面临被强制低价收购的系统性风险，且补偿款无法汇出。" data-en="Impact Assessment: This is Russia's first actual enforcement of the December 2023 presidential decree on forced seizure of 'unfriendly country' corporate assets, sending a clear signal to all foreign enterprises in Russia: foreign assets face systemic risk of forced low-price acquisition, with compensation funds unable to be repatriated.">
+                                <strong class="text-red-600 dark:text-red-400">影响评估：</strong>这是俄首次依据2023年12月总统令强制没收不友好国家企业在俄资产的实际执行，向所有在俄外资企业发出明确信号：外资在俄资产面临被强制低价收购的系统性风险，且补偿款无法汇出。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 3: 美国延长俄油豁免 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-amber-500 to-yellow-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-500/20 flex items-center justify-center"><i class="fas fa-oil-can text-amber-500"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-amber-500" data-zh="能源红利" data-en="Energy Dividend">能源红利</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="20+条相关资讯" data-en="20+ related news">20+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="美国第三次延长俄油交易豁免许可" data-en="U.S. Extends Russian Oil Transaction Waiver for the Third Time">美国第三次延长俄油交易豁免许可</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="美国财政部OFAC于4月17日签发第三批俄油采购许可，覆盖4月11-17日装船的俄油及油品，有效期至5月16日，涉及约4000-5000万桶俄油。马来西亚总理也表态愿与俄洽谈石油采购。" data-en="The U.S. Treasury's OFAC issued the third batch of Russian oil purchase licenses on April 17, covering Russian crude and petroleum products shipped between April 11–17, valid until May 16, involving approximately 40–50 million barrels. Malaysia's Prime Minister also expressed willingness to negotiate oil purchases with Russia.">美国财政部OFAC于4月17日签发第三批俄油采购许可，覆盖4月11-17日装船的俄油及油品，有效期至5月16日，涉及约4000-5000万桶俄油。马来西亚总理也表态愿与俄洽谈石油采购。</p>
+                            <div class="bg-amber-50 dark:bg-amber-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：中东冲突推高乌拉尔原油价格突破120美元/桶，俄短期获得显著能源红利。俄财政部副部长莫伊谢耶夫甚至表示，若未来一年无新军事冲突，西方投资者将重返俄市场。" data-en="Impact Assessment: The Middle East conflict pushed Urals crude oil prices above $120/barrel, providing Russia with significant short-term energy dividends. Deputy Finance Minister Moiseev even stated that if no new military conflicts arise in the next year, Western investors will return to the Russian market.">
+                                <strong class="text-amber-600 dark:text-amber-400">影响评估：</strong>中东冲突推高乌拉尔原油价格突破120美元/桶，俄短期获得显著能源红利。俄财政部副部长莫伊谢耶夫甚至表示，若未来一年无新军事冲突，西方投资者将重返俄市场。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 4: 医护薪酬改革 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-blue-500 to-indigo-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center"><i class="fas fa-user-md text-blue-500"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-blue-500" data-zh="劳动力" data-en="Labor Force">劳动力</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="15+条相关资讯" data-en="15+ related news">15+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="医护薪酬改革与劳动力培养体系重构" data-en="Healthcare Wage Reform and Workforce Development Restructuring">医护薪酬改革与劳动力培养体系重构</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="俄政府联合雇主与工会制定医疗行业薪酬调整建议，要求基本工资占总薪酬不低于50%。莫斯科交通物流、建筑、工业等核心行业近三年薪资增长28%-33%。最紧缺的是机电工、铸工、焊工等工种。" data-en="The Russian government, together with employers and trade unions, developed healthcare wage adjustment recommendations requiring base salary to account for no less than 50% of total compensation. Moscow's transport/logistics, construction, and industrial sectors saw 28%–33% wage growth over the past three years. The most acute shortages are in electricians, foundry workers, and welders.">俄政府联合雇主与工会制定医疗行业薪酬调整建议，要求基本工资占总薪酬不低于50%。莫斯科交通物流、建筑、工业等核心行业近三年薪资增长28%-33%。最紧缺的是机电工、铸工、焊工等工种。</p>
+                            <div class="bg-blue-50 dark:bg-blue-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：劳动力成本持续上升将推高企业运营成本，但也为高技能人才提供更好的就业环境。莫斯科州已建立从基础教育到就业的农业产业人才培养体系。" data-en="Impact Assessment: Continuously rising labor costs will push up corporate operating expenses, but also provide a better employment environment for highly skilled workers. Moscow Oblast has established an agricultural talent pipeline from basic education to employment.">
+                                <strong class="text-blue-600 dark:text-blue-400">影响评估：</strong>劳动力成本持续上升将推高企业运营成本，但也为高技能人才提供更好的就业环境。莫斯科州已建立从基础教育到就业的农业产业人才培养体系。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 5: AI监管与数字围墙 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-violet-500 to-purple-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-violet-100 dark:bg-violet-500/20 flex items-center justify-center"><i class="fas fa-robot text-violet-500"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-violet-500" data-zh="数字监管" data-en="Digital Regulation">数字监管</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="25+条相关资讯" data-en="25+ related news">25+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="AI监管法案与数字经济围墙升级" data-en="AI Regulation Bill and Digital Economy Barrier Escalation">AI监管法案与数字经济围墙升级</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="俄数字文化部发布AI监管法案征求公众意见，将AI模型分为"主权""国家""受信任"三类。VPN限制全面升级，Ozon和Wildberries被要求检测并限制VPN用户。加密货币非法流转刑责法案提交杜马。" data-en="Russia's Ministry of Digital Development released an AI regulation bill for public comment, classifying AI models into three categories: 'sovereign,' 'national,' and 'trusted.' VPN restrictions were comprehensively upgraded, with Ozon and Wildberries required to detect and restrict VPN users. A bill criminalizing illegal cryptocurrency circulation was submitted to the Duma.">俄数字文化部发布AI监管法案征求公众意见，将AI模型分为"主权""国家""受信任"三类。VPN限制全面升级，Ozon和Wildberries被要求检测并限制VPN用户。加密货币非法流转刑责法案提交杜马。</p>
+                            <div class="bg-violet-50 dark:bg-violet-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：商界预计AI法案将推高研发成本20%-40%。VPN限制导致电商平台订单量暴跌约40%。俄共提交法案保障公民数字空间权利，显示政策存在博弈空间。" data-en="Impact Assessment: The business community expects the AI bill to increase R&D costs by 20%–40%. VPN restrictions caused e-commerce platform orders to plummet by approximately 40%. The Communist Party submitted a bill to protect citizens' digital space rights, indicating room for policy negotiation.">
+                                <strong class="text-violet-600 dark:text-violet-400">影响评估：</strong>商界预计AI法案将推高研发成本20%-40%。VPN限制导致电商平台订单量暴跌约40%。俄共提交法案保障公民数字空间权利，显示政策存在博弈空间。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Event 6: 私有化诉讼时效与文化遗产 -->
+                <article class="card bg-white dark:bg-white/[.03] rounded-3xl border border-gray-200/60 dark:border-white/10 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-2 bg-gradient-to-b from-teal-500 to-cyan-500 flex-shrink-0"></div>
+                        <div class="p-6 sm:p-8 flex-1">
+                            <div class="flex items-center gap-3 mb-4">
+                                <span class="w-10 h-10 rounded-xl bg-teal-100 dark:bg-teal-500/20 flex items-center justify-center"><i class="fas fa-landmark text-teal-500"></i></span>
+                                <span class="text-xs font-bold uppercase tracking-wider text-teal-500" data-zh="法律/文化" data-en="Legal/Culture">法律/文化</span>
+                                <span class="ml-auto text-xs text-gray-400" data-zh="15+条相关资讯" data-en="15+ related news">15+条相关资讯</span>
+                            </div>
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold mb-3" data-zh="私有化交易诉讼时效法案与文化遗产投资" data-en="Privatization Transaction Statute of Limitations Bill and Cultural Heritage Investment">私有化交易诉讼时效法案与文化遗产投资</h3>
+                            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-3" data-zh="俄政府向杜马提交法案，限定私有化交易纠纷诉讼时效为10年，获俄工企联等商界广泛支持。同时，俄总统要求修复1000处不良状态文化遗产，ДОМ.РФ平台已上线超2000处遗产，585处已找到投资方。" data-en="The Russian government submitted a bill to the Duma setting a 10-year statute of limitations for privatization transaction disputes, receiving broad support from the Russian Union of Industrialists and Entrepreneurs (RSPP). Meanwhile, the President ordered the restoration of 1,000 deteriorating cultural heritage sites; the DOM.RF platform has listed over 2,000 heritage properties, with 585 having found investors.">俄政府向杜马提交法案，限定私有化交易纠纷诉讼时效为10年，获俄工企联等商界广泛支持。同时，俄总统要求修复1000处不良状态文化遗产，ДОМ.РФ平台已上线超2000处遗产，585处已找到投资方。</p>
+                            <div class="bg-teal-50 dark:bg-teal-500/10 rounded-xl p-4 text-sm text-gray-600 dark:text-gray-400" data-zh="影响评估：私有化诉讼时效法案若通过，将为历史私有化资产提供法律确定性。文化遗产修复为投资者提供新机遇，但需注意文化遗产保护法规的严格要求。" data-en="Impact Assessment: If passed, the privatization statute of limitations bill will provide legal certainty for historical privatization assets. Cultural heritage restoration offers new opportunities for investors, though strict heritage protection regulations must be observed.">
+                                <strong class="text-teal-600 dark:text-teal-400">影响评估：</strong>私有化诉讼时效法案若通过，将为历史私有化资产提供法律确定性。文化遗产修复为投资者提供新机遇，但需注意文化遗产保护法规的严格要求。
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== TREND ANALYSIS ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="趋势研判" data-en="Trend Analysis">趋势研判</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-10" data-zh="五大趋势，锁定中长期走向" data-en="Five major trends — locking in medium-to-long-term trajectories">五大趋势，锁定中长期走向</p>
+            <div class="relative pl-8 border-l-2 border-emerald-200 dark:border-emerald-900 space-y-8">
+                <!-- Trend 1 -->
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-emerald-600 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-6 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-emerald-700 dark:text-emerald-400 mb-2" data-zh="趋势一" data-en="Trend 1">趋势一</div>
+                        <h4 class="font-bold mb-2" data-zh="俄正加速构建"数字经济围墙"，外商IT合规成本将持续攀升" data-en="Russia accelerates building a 'digital economy wall' — foreign IT compliance costs will continue to rise">俄正加速构建"数字经济围墙"，外商IT合规成本将持续攀升</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="VPN限制升级、AI监管法案、加密货币刑责法案、Telegram/WhatsApp持续受限——本周多条资讯交叉印证，俄正系统性地收紧数字经济监管。值得注意的是，俄共同时提交了保障公民数字空间权利的法案，显示政策存在内部博弈。" data-en="VPN restriction upgrades, AI regulation bills, cryptocurrency criminal liability bills, continued Telegram/WhatsApp restrictions — multiple reports this week cross-confirm that Russia is systematically tightening digital economy regulation. Notably, the Communist Party simultaneously submitted a bill to protect citizens' digital space rights, indicating internal policy contestation.">VPN限制升级、AI监管法案、加密货币刑责法案、Telegram/WhatsApp持续受限——本周多条资讯交叉印证，俄正系统性地收紧数字经济监管。值得注意的是，俄共同时提交了保障公民数字空间权利的法案，显示政策存在内部博弈。</p>
+                        <div class="bg-emerald-50 dark:bg-emerald-500/10 rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400" data-zh="研判：在俄运营的IT和互联网企业需重新评估数据合规架构。但政策博弈也意味着最终落地版本可能较征求意见稿有所缓和，建议密切跟踪立法进程。" data-en="Assessment: IT and internet companies operating in Russia need to reassess their data compliance architecture. However, policy contestation also means the final version may be more moderate than the draft, so close monitoring of the legislative process is recommended."><i class="fas fa-eye text-emerald-600 mr-2"></i><strong>研判：</strong>在俄运营的IT和互联网企业需重新评估数据合规架构。但政策博弈也意味着最终落地版本可能较征求意见稿有所缓和，建议密切跟踪立法进程。</div>
+                    </div>
+                </div>
+                <!-- Trend 2 -->
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-slate-600 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-6 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-slate-600 dark:text-slate-400 mb-2" data-zh="趋势二" data-en="Trend 2">趋势二</div>
+                        <h4 class="font-bold mb-2" data-zh="税收监管从"事后追缴"转向"实时监控"，灰色经济空间急剧压缩" data-en="Tax regulation shifts from 'post-hoc collection' to 'real-time monitoring' — gray economy space shrinks dramatically">税收监管从"事后追缴"转向"实时监控"，灰色经济空间急剧压缩</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="银行转账监控、ATM现金存款限额、СБП转账新规、加密货币交易报备、增值税免征门槛下调——多项税收政策同步收紧。殡葬行业新企业注册暴增37.5%、中小微企业缴税超过油气行业（13.2万亿卢布），均为灰色市场合法化的缩影。" data-en="Bank transfer monitoring, ATM cash deposit limits, SBP transfer rules, cryptocurrency transaction reporting, VAT exemption threshold reduction — multiple tax policies tightened simultaneously. Funeral industry new business registrations surged 37.5%, and SME tax payments exceeded the oil and gas sector (13.2 trillion rubles), both reflecting the formalization of the gray market.">银行转账监控、ATM现金存款限额、СБП转账新规、加密货币交易报备、增值税免征门槛下调——多项税收政策同步收紧。殡葬行业新企业注册暴增37.5%、中小微企业缴税超过油气行业（13.2万亿卢布），均为灰色市场合法化的缩影。</p>
+                        <div class="bg-slate-50 dark:bg-slate-500/10 rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400" data-zh="研判：在俄经营的企业需全面审视财务合规性。俄共领袖久加诺夫警告加税给中小微企业带来负面影响，95%商家称2026年营商环境恶化，政策或面临调整压力。" data-en="Assessment: Enterprises operating in Russia need to comprehensively review financial compliance. Communist Party leader Zyuganov warned of the negative impact of tax increases on SMEs; 95% of merchants say the 2026 business environment has deteriorated, and policies may face adjustment pressure."><i class="fas fa-eye text-slate-600 mr-2"></i><strong>研判：</strong>在俄经营的企业需全面审视财务合规性。俄共领袖久加诺夫警告加税给中小微企业带来负面影响，95%商家称2026年营商环境恶化，政策或面临调整压力。</div>
+                    </div>
+                </div>
+                <!-- Trend 3 -->
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-6 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-blue-600 dark:text-blue-400 mb-2" data-zh="趋势三" data-en="Trend 3">趋势三</div>
+                        <h4 class="font-bold mb-2" data-zh="劳动力市场结构性紧张加剧，薪资成本持续攀升" data-en="Structural labor market tightening intensifies — wage costs continue to climb">劳动力市场结构性紧张加剧，薪资成本持续攀升</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="移民政策收紧（驱逐条款从22条增至43条）、核心行业薪资三年增28%-33%、机电工/铸工/焊工等工种严重短缺、出租车行业预计年内涨价30%——多维度数据交叉印证劳动力市场紧张。" data-en="Immigration policy tightening (deportation clauses increased from 22 to 43), core industry wages up 28%–33% over three years, severe shortages of electricians/foundry workers/welders, taxi industry expected to raise prices 30% this year — multi-dimensional data cross-confirms labor market tightness.">移民政策收紧（驱逐条款从22条增至43条）、核心行业薪资三年增28%-33%、机电工/铸工/焊工等工种严重短缺、出租车行业预计年内涨价30%——多维度数据交叉印证劳动力市场紧张。</p>
+                        <div class="bg-blue-50 dark:bg-blue-500/10 rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400" data-zh="研判：劳动密集型行业用工成本将持续上升。企业需提前布局自动化和本地化人才培养，关注俄政府推出的"职业人才"联邦项目等政策红利。" data-en="Assessment: Labor costs in labor-intensive industries will continue to rise. Enterprises should plan ahead for automation and localized talent development, and monitor policy dividends such as the government's 'Professional Talent' federal program."><i class="fas fa-eye text-blue-500 mr-2"></i><strong>研判：</strong>劳动密集型行业用工成本将持续上升。企业需提前布局自动化和本地化人才培养，关注俄政府推出的"职业人才"联邦项目等政策红利。</div>
+                    </div>
+                </div>
+                <!-- Trend 4 -->
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-amber-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-6 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-amber-600 dark:text-amber-400 mb-2" data-zh="趋势四" data-en="Trend 4">趋势四</div>
+                        <h4 class="font-bold mb-2" data-zh="反腐运动持续深化，系统性清理地方权力网络" data-en="Anti-corruption campaign deepens — systematic cleanup of local power networks">反腐运动持续深化，系统性清理地方权力网络</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="克拉斯诺达尔边疆区半年内4名副州长落网、前法院院长130亿卢布资产被没收、莫斯科联邦执行总局两名副局长被拘、万亿卢布"纸质增值税"逃税平台被破获——反腐案件密集且呈跨区域、跨层级特征。" data-en="Krasnodar Krai saw 4 deputy governors arrested within six months; a former court president had 13 billion rubles in assets confiscated; two deputy directors of Moscow's Federal Bailiff Service were detained; a trillion-ruble 'paper VAT' tax evasion platform was busted — anti-corruption cases are dense and cross-regional, cross-hierarchical in nature.">克拉斯诺达尔边疆区半年内4名副州长落网、前法院院长130亿卢布资产被没收、莫斯科联邦执行总局两名副局长被拘、万亿卢布"纸质增值税"逃税平台被破获——反腐案件密集且呈跨区域、跨层级特征。</p>
+                        <div class="bg-amber-50 dark:bg-amber-500/10 rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400" data-zh="研判：反腐运动短期内提升了营商环境透明度，但也增加了政商关系的不确定性。与地方政府有深度合作的外商企业需关注合作方的合规风险。" data-en="Assessment: The anti-corruption campaign has improved business environment transparency in the short term, but also increased uncertainty in government-business relations. Foreign enterprises with deep local government partnerships should monitor compliance risks of their partners."><i class="fas fa-eye text-amber-500 mr-2"></i><strong>研判：</strong>反腐运动短期内提升了营商环境透明度，但也增加了政商关系的不确定性。与地方政府有深度合作的外商企业需关注合作方的合规风险。</div>
+                    </div>
+                </div>
+                <!-- Trend 5 -->
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-red-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-6 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-red-600 dark:text-red-400 mb-2" data-zh="趋势五" data-en="Trend 5">趋势五</div>
+                        <h4 class="font-bold mb-2" data-zh="能源与原材料行业面临"高价不高利"困境" data-en="Energy and raw materials sectors face 'high prices, low profits' dilemma">能源与原材料行业面临"高价不高利"困境</h4>
+                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="尽管中东冲突推高全球铝价和油价，俄铝2026年一季度仍亏损——75%原料依赖进口、高息贷款、强势卢布侵蚀利润。波斯湾冲突导致经迪拜进口的欧洲品牌家电供应链中断，进口家电价格或涨10%-20%。" data-en="Despite the Middle East conflict pushing up global aluminum and oil prices, Rusal still posted losses in Q1 2026 — 75% raw material import dependency, high-interest loans, and a strong ruble eroding profits. The Persian Gulf conflict disrupted European brand appliance supply chains via Dubai, with imported appliance prices potentially rising 10%–20%.">尽管中东冲突推高全球铝价和油价，俄铝2026年一季度仍亏损——75%原料依赖进口、高息贷款、强势卢布侵蚀利润。波斯湾冲突导致经迪拜进口的欧洲品牌家电供应链中断，进口家电价格或涨10%-20%。</p>
+                        <div class="bg-red-50 dark:bg-red-500/10 rounded-lg p-3 text-xs text-gray-600 dark:text-gray-400" data-zh="研判：俄央行强势卢布与高利率政策正在抵消国际大宗商品涨价收益。4月24日央行利率决议（市场预期降至14.5%）将是关键观察点。" data-en="Assessment: The Central Bank's strong ruble and high interest rate policies are offsetting international commodity price gains. The April 24 Central Bank rate decision (market expects a cut to 14.5%) will be a key observation point."><i class="fas fa-eye text-red-500 mr-2"></i><strong>研判：</strong>俄央行强势卢布与高利率政策正在抵消国际大宗商品涨价收益。4月24日央行利率决议（市场预期降至14.5%）将是关键观察点。</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== RISK ALERTS ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="风险警示" data-en="Risk Alerts">风险警示</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-12" data-zh="七大风险信号，分级预警" data-en="Seven risk signals — tiered early warnings">七大风险信号，分级预警</p>
+            <div class="space-y-5">
+                <!-- 🔴 High Risk 1 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-red-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🔴</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400" data-zh="高风险" data-en="High Risk">高风险</span><h3 class="font-bold" data-zh="外资在俄资产面临强制收购的系统性风险" data-en="Foreign assets in Russia face systemic risk of forced acquisition">外资在俄资产面临强制收购的系统性风险</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="Wintershall Dea和OMV资产被强制出售的先例表明，来自"不友好国家"的企业在俄资产随时可能被低价强制收购，且补偿款无法汇出。该风险不限于能源行业。" data-en="The precedent of Wintershall Dea and OMV assets being forcibly sold demonstrates that enterprises from 'unfriendly countries' may have their Russian assets forcibly acquired at low prices at any time, with compensation funds unable to be repatriated. This risk is not limited to the energy sector.">Wintershall Dea和OMV资产被强制出售的先例表明，来自"不友好国家"的企业在俄资产随时可能被低价强制收购，且补偿款无法汇出。该风险不限于能源行业。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-exclamation-triangle text-red-500"></i><span data-zh="关注：后续是否扩展至其他行业的外资资产" data-en="Watch: Whether this extends to foreign assets in other industries">关注：后续是否扩展至其他行业的外资资产</span></div>
+                </div>
+                <!-- 🔴 High Risk 2 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-red-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🔴</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-red-100 dark:bg-red-500/20 text-red-600 dark:text-red-400" data-zh="高风险" data-en="High Risk">高风险</span><h3 class="font-bold" data-zh="数字经济监管急剧收紧，跨境业务面临中断风险" data-en="Digital economy regulation tightens sharply — cross-border business faces disruption risk">数字经济监管急剧收紧，跨境业务面临中断风险</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="VPN限制、AI监管、数据本地化要求等多项政策叠加，依赖跨境数据传输和国际互联网服务的企业面临业务中断风险。电商平台因VPN限制订单量暴跌40%已是现实案例。" data-en="Multiple overlapping policies including VPN restrictions, AI regulation, and data localization requirements put enterprises relying on cross-border data transmission and international internet services at risk of business disruption. E-commerce platforms seeing 40% order drops due to VPN restrictions is already a real case.">VPN限制、AI监管、数据本地化要求等多项政策叠加，依赖跨境数据传输和国际互联网服务的企业面临业务中断风险。电商平台因VPN限制订单量暴跌40%已是现实案例。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-exclamation-triangle text-red-500"></i><span data-zh="关注：AI监管法案最终版本、VPN限制执行力度" data-en="Watch: Final version of AI regulation bill, VPN restriction enforcement intensity">关注：AI监管法案最终版本、VPN限制执行力度</span></div>
+                </div>
+                <!-- 🟡 Medium Risk 1 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-yellow-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🟡</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400" data-zh="中风险" data-en="Medium Risk">中风险</span><h3 class="font-bold" data-zh="税务合规成本大幅上升" data-en="Tax compliance costs rise significantly">税务合规成本大幅上升</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="2027年起的银行转账监控、ATM现金存款限额、增值税门槛下调等政策将显著增加企业财务合规成本。95%商家称2026年营商环境恶化，仅7.6%能将成本转嫁给消费者。" data-en="Policies starting 2027 including bank transfer monitoring, ATM cash deposit limits, and VAT threshold reductions will significantly increase corporate financial compliance costs. 95% of merchants say the 2026 business environment has deteriorated, with only 7.6% able to pass costs on to consumers.">2027年起的银行转账监控、ATM现金存款限额、增值税门槛下调等政策将显著增加企业财务合规成本。95%商家称2026年营商环境恶化，仅7.6%能将成本转嫁给消费者。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-chart-line text-yellow-500"></i><span data-zh="关注：2027年银行转账监控实施细则" data-en="Watch: 2027 bank transfer monitoring implementation details">关注：2027年银行转账监控实施细则</span></div>
+                </div>
+                <!-- 🟡 Medium Risk 2 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-yellow-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🟡</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400" data-zh="中风险" data-en="Medium Risk">中风险</span><h3 class="font-bold" data-zh="劳动力市场持续紧张，用工成本攀升" data-en="Persistent labor market tightness — employment costs rising">劳动力市场持续紧张，用工成本攀升</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="移民政策收紧叠加人口结构问题，出租车、建筑、快递等劳动密集型行业用工成本将进一步上升。医护薪酬改革也将推高医疗行业人力成本。" data-en="Immigration policy tightening combined with demographic structural issues will further increase employment costs in labor-intensive industries such as taxis, construction, and delivery. Healthcare wage reforms will also push up medical industry labor costs.">移民政策收紧叠加人口结构问题，出租车、建筑、快递等劳动密集型行业用工成本将进一步上升。医护薪酬改革也将推高医疗行业人力成本。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-chart-line text-yellow-500"></i><span data-zh="关注：5月国家杜马移民法案投票结果" data-en="Watch: May State Duma immigration bill vote results">关注：5月国家杜马移民法案投票结果</span></div>
+                </div>
+                <!-- 🟡 Medium Risk 3 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-yellow-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🟡</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-100 dark:bg-yellow-500/20 text-yellow-700 dark:text-yellow-400" data-zh="中风险" data-en="Medium Risk">中风险</span><h3 class="font-bold" data-zh="供应链中断风险——中东冲突波及俄进口通道" data-en="Supply chain disruption risk — Middle East conflict impacts Russia's import channels">供应链中断风险——中东冲突波及俄进口通道</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="波斯湾冲突导致经迪拜进口的欧洲品牌家电供应链中断（此前占俄欧产家电进口60-70%），物流时长和成本上涨1.5-3倍，进口家电价格或涨10%-20%。" data-en="The Persian Gulf conflict disrupted European brand appliance supply chains via Dubai (previously accounting for 60–70% of Russia's European appliance imports), with logistics time and costs rising 1.5–3x, and imported appliance prices potentially increasing 10%–20%.">波斯湾冲突导致经迪拜进口的欧洲品牌家电供应链中断（此前占俄欧产家电进口60-70%），物流时长和成本上涨1.5-3倍，进口家电价格或涨10%-20%。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-chart-line text-yellow-500"></i><span data-zh="关注：中东局势演变及替代进口通道建设" data-en="Watch: Middle East situation evolution and alternative import channel development">关注：中东局势演变及替代进口通道建设</span></div>
+                </div>
+                <!-- 🟢 Low Risk / Opportunity 1 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-emerald-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🟢</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" data-zh="机遇" data-en="Opportunity">机遇</span><h3 class="font-bold" data-zh="能源价格高企带来短期红利" data-en="High energy prices bring short-term dividends">能源价格高企带来短期红利</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="乌拉尔原油价格突破120美元/桶，美国被迫延长俄油交易豁免，马来西亚等国表态愿购俄油。俄财政部副部长表示西方投资者或将重返俄市场。" data-en="Urals crude oil prices broke through $120/barrel, the U.S. was forced to extend Russian oil transaction waivers, and countries like Malaysia expressed willingness to purchase Russian oil. The Deputy Finance Minister stated Western investors may return to the Russian market.">乌拉尔原油价格突破120美元/桶，美国被迫延长俄油交易豁免，马来西亚等国表态愿购俄油。俄财政部副部长表示西方投资者或将重返俄市场。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-arrow-trend-up text-emerald-500"></i><span data-zh="关注：5月16日俄油豁免许可到期后的政策走向" data-en="Watch: Policy direction after May 16 Russian oil waiver expiration">关注：5月16日俄油豁免许可到期后的政策走向</span></div>
+                </div>
+                <!-- 🟢 Low Risk / Opportunity 2 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl border-l-4 border-l-emerald-500 border border-gray-200/60 dark:border-white/10 p-7">
+                    <div class="flex items-center gap-3 mb-3"><span class="text-lg">🟢</span><span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-100 dark:bg-emerald-500/20 text-emerald-700 dark:text-emerald-400" data-zh="机遇" data-en="Opportunity">机遇</span><h3 class="font-bold" data-zh="文化遗产修复、创意产业与医药出口增长" data-en="Cultural heritage restoration, creative industries, and pharmaceutical export growth">文化遗产修复、创意产业与医药出口增长</h3></div>
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-zh="俄总统要求修复1000处文化遗产，ДОМ.РФ平台已上线超2000处遗产供投资者选择。列宁格勒州创意产业获税收优惠。俄药企Промомед获阿联酋GMP认证，圣彼得堡医疗旅游2025年营收超5000万美元。" data-en="The President ordered restoration of 1,000 cultural heritage sites; the DOM.RF platform has listed over 2,000 heritage properties for investors. Leningrad Oblast's creative industries received tax incentives. Russian pharma company Promomed obtained UAE GMP certification; St. Petersburg medical tourism revenue exceeded $50 million in 2025.">俄总统要求修复1000处文化遗产，ДОМ.РФ平台已上线超2000处遗产供投资者选择。列宁格勒州创意产业获税收优惠。俄药企Промомед获阿联酋GMP认证，圣彼得堡医疗旅游2025年营收超5000万美元。</p>
+                    <div class="flex items-center gap-2 text-xs text-gray-500"><i class="fas fa-arrow-trend-up text-emerald-500"></i><span data-zh="关注：文化遗产投资政策细则、医药出口市场拓展" data-en="Watch: Cultural heritage investment policy details, pharmaceutical export market expansion">关注：文化遗产投资政策细则、医药出口市场拓展</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== ACTION RECOMMENDATIONS ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="行动建议" data-en="Action Recommendations">行动建议</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-12" data-zh="三类主体，差异化应对策略" data-en="Three stakeholder types — differentiated response strategies">三类主体，差异化应对策略</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Column 1: 已在俄投资企业 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl p-7 border border-gray-200/60 dark:border-white/10">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-500/20 flex items-center justify-center"><i class="fas fa-building text-emerald-600"></i></span>
+                        <h3 class="font-bold text-sm" data-zh="已在俄投资企业" data-en="Enterprises Already Invested in Russia">已在俄投资企业</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span><span data-zh="立即审查财务合规性，确保所有交易有据可查，为2027年银行转账监控做好准备" data-en="Immediately review financial compliance, ensure all transactions are well-documented, and prepare for 2027 bank transfer monitoring">立即审查财务合规性，确保所有交易有据可查，为2027年银行转账监控做好准备</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span><span data-zh="评估IT基础设施的数据本地化程度，提前布局俄境内数据中心" data-en="Assess IT infrastructure data localization levels and plan ahead for data centers within Russia">评估IT基础设施的数据本地化程度，提前布局俄境内数据中心</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span><span data-zh="关注AI监管法案最终版本，评估对现有AI应用的影响" data-en="Monitor the final version of the AI regulation bill and assess its impact on existing AI applications">关注AI监管法案最终版本，评估对现有AI应用的影响</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span><span data-zh="审视与地方政府合作方的合规风险，避免反腐运动牵连" data-en="Review compliance risks of local government partners to avoid being implicated in anti-corruption campaigns">审视与地方政府合作方的合规风险，避免反腐运动牵连</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-emerald-400 mt-2 flex-shrink-0"></span><span data-zh="关注劳动力成本上升趋势，布局自动化和本地化人才培养" data-en="Monitor rising labor cost trends and plan for automation and localized talent development">关注劳动力成本上升趋势，布局自动化和本地化人才培养</span></li>
+                    </ul>
+                </div>
+                <!-- Column 2: 计划进入企业 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl p-7 border border-gray-200/60 dark:border-white/10">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-500/20 flex items-center justify-center"><i class="fas fa-plane-arrival text-blue-500"></i></span>
+                        <h3 class="font-bold text-sm" data-zh="计划进入企业" data-en="Enterprises Planning to Enter">计划进入企业</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span><span data-zh="充分评估"不友好国家"身份带来的资产安全风险，考虑通过第三国架构降低风险" data-en="Thoroughly assess asset security risks from 'unfriendly country' status and consider reducing risk through third-country structures">充分评估"不友好国家"身份带来的资产安全风险，考虑通过第三国架构降低风险</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span><span data-zh="关注私有化交易诉讼时效法案进展，评估对目标资产的影响" data-en="Monitor progress of the privatization transaction statute of limitations bill and assess its impact on target assets">关注私有化交易诉讼时效法案进展，评估对目标资产的影响</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span><span data-zh="将数字合规成本（VPN限制、数据本地化、AI监管）纳入投资测算" data-en="Include digital compliance costs (VPN restrictions, data localization, AI regulation) in investment calculations">将数字合规成本（VPN限制、数据本地化、AI监管）纳入投资测算</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span><span data-zh="关注文化遗产修复、创意产业、医药出口等新兴投资机遇" data-en="Monitor emerging investment opportunities in cultural heritage restoration, creative industries, and pharmaceutical exports">关注文化遗产修复、创意产业、医药出口等新兴投资机遇</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-blue-400 mt-2 flex-shrink-0"></span><span data-zh="评估供应链中断风险，特别是经中东转运的进口通道" data-en="Assess supply chain disruption risks, especially import channels transiting through the Middle East">评估供应链中断风险，特别是经中东转运的进口通道</span></li>
+                    </ul>
+                </div>
+                <!-- Column 3: 研究机构跟踪指标 -->
+                <div class="card bg-white dark:bg-white/[.03] rounded-3xl p-7 border border-gray-200/60 dark:border-white/10">
+                    <div class="flex items-center gap-3 mb-5">
+                        <span class="w-10 h-10 rounded-xl bg-slate-100 dark:bg-slate-500/20 flex items-center justify-center"><i class="fas fa-chart-bar text-slate-600"></i></span>
+                        <h3 class="font-bold text-sm" data-zh="研究机构跟踪指标" data-en="Research Institution Tracking Indicators">研究机构跟踪指标</h3>
+                    </div>
+                    <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="4月24日俄央行关键利率决议（市场预期降至14.5%）" data-en="April 24 Central Bank key interest rate decision (market expects cut to 14.5%)">4月24日俄央行关键利率决议（市场预期降至14.5%）</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="AI监管法案公众意见征集结果及最终版本" data-en="AI regulation bill public comment results and final version">AI监管法案公众意见征集结果及最终版本</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="5月国家杜马移民法案投票结果" data-en="May State Duma immigration bill vote results">5月国家杜马移民法案投票结果</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="美国5月16日俄油豁免许可到期后的政策走向" data-en="U.S. policy direction after May 16 Russian oil waiver expiration">美国5月16日俄油豁免许可到期后的政策走向</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="2026年一季度GDP数据（此前1-2月同比降1.8%）" data-en="Q1 2026 GDP data (previously down 1.8% YoY in Jan–Feb)">2026年一季度GDP数据（此前1-2月同比降1.8%）</span></li>
+                        <li class="flex items-start gap-2"><span class="pulse-dot w-1.5 h-1.5 rounded-full bg-slate-400 mt-2 flex-shrink-0"></span><span data-zh="基因治疗药物流通法规修正案（征求意见至5月15日）" data-en="Gene therapy drug circulation regulation amendment (public comment until May 15)">基因治疗药物流通法规修正案（征求意见至5月15日）</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="divider"></div></div>
+
+    <!-- ==================== NEXT WATCH ==================== -->
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8">
+            <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-3" data-zh="下期关注" data-en="Next Week Watch">下期关注</h2>
+            <p class="text-gray-500 dark:text-gray-400 mb-10" data-zh="六大焦点，持续追踪" data-en="Six focal points — continuous tracking">六大焦点，持续追踪</p>
+            <div class="relative pl-8 border-l-2 border-slate-200 dark:border-slate-800 space-y-6">
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-emerald-600 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-emerald-600 mb-1" data-zh="焦点一 · 4月24日" data-en="Focus 1 · April 24">焦点一 · 4月24日</div>
+                        <h4 class="font-bold text-sm" data-zh="俄央行关键利率决议" data-en="Central Bank Key Interest Rate Decision">俄央行关键利率决议</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="市场预期降至14.5%，将直接影响企业融资成本和卢布汇率" data-en="Market expects a cut to 14.5%, directly impacting corporate financing costs and ruble exchange rate">市场预期降至14.5%，将直接影响企业融资成本和卢布汇率</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-violet-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-violet-500 mb-1" data-zh="焦点二 · 持续跟踪" data-en="Focus 2 · Ongoing">焦点二 · 持续跟踪</div>
+                        <h4 class="font-bold text-sm" data-zh="AI监管法案公众意见征集结果" data-en="AI Regulation Bill Public Comment Results">AI监管法案公众意见征集结果</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="最终版本将决定在俄IT企业的合规成本和运营模式" data-en="The final version will determine compliance costs and operating models for IT enterprises in Russia">最终版本将决定在俄IT企业的合规成本和运营模式</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-blue-500 mb-1" data-zh="焦点三 · 5月" data-en="Focus 3 · May">焦点三 · 5月</div>
+                        <h4 class="font-bold text-sm" data-zh="国家杜马移民法案投票" data-en="State Duma Immigration Bill Vote">国家杜马移民法案投票</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="驱逐条款从22条增至43条，将进一步加剧劳动力市场紧张" data-en="Deportation clauses increased from 22 to 43, further intensifying labor market tightness">驱逐条款从22条增至43条，将进一步加剧劳动力市场紧张</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-amber-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-amber-500 mb-1" data-zh="焦点四 · 5月16日" data-en="Focus 4 · May 16">焦点四 · 5月16日</div>
+                        <h4 class="font-bold text-sm" data-zh="美国俄油豁免许可到期" data-en="U.S. Russian Oil Waiver Expiration">美国俄油豁免许可到期</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="是否第四次延长将影响俄能源出口收入和国际油价走势" data-en="Whether a fourth extension occurs will impact Russia's energy export revenue and international oil price trends">是否第四次延长将影响俄能源出口收入和国际油价走势</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-red-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-red-500 mb-1" data-zh="焦点五 · 待发布" data-en="Focus 5 · Pending Release">焦点五 · 待发布</div>
+                        <h4 class="font-bold text-sm" data-zh="2026年一季度GDP数据" data-en="Q1 2026 GDP Data">2026年一季度GDP数据</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="此前1-2月同比降1.8%，全年经济走势的关键风向标" data-en="Previously down 1.8% YoY in Jan–Feb — a key barometer for the full-year economic trajectory">此前1-2月同比降1.8%，全年经济走势的关键风向标</p>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[2.35rem] w-4 h-4 rounded-full bg-teal-500 border-4 border-gray-50 dark:border-[#0f172a]"></div>
+                    <div class="bg-white dark:bg-white/[.03] rounded-2xl p-5 border border-gray-200/60 dark:border-white/10">
+                        <div class="text-xs font-bold text-teal-500 mb-1" data-zh="焦点六 · 5月15日" data-en="Focus 6 · May 15">焦点六 · 5月15日</div>
+                        <h4 class="font-bold text-sm" data-zh="基因治疗药物流通法规修正案" data-en="Gene Therapy Drug Circulation Regulation Amendment">基因治疗药物流通法规修正案</h4>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mt-1" data-zh="征求意见截止，将影响医药行业准入和出口格局" data-en="Public comment deadline — will impact pharmaceutical industry access and export landscape">征求意见截止，将影响医药行业准入和出口格局</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-gray-200 dark:border-white/10 bg-white/50 dark:bg-white/[.02] backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 sm:px-8 py-12">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div>
+                    <div class="font-serif text-lg font-bold mb-1">Supinfor Ltd.</div>
+                    <div class="text-xs text-gray-500 dark:text-gray-400" data-zh="区域国别实时监测平台" data-en="Regional Country Real-time Monitoring Platform">区域国别实时监测平台</div>
+                </div>
+                <div class="text-center text-xs text-gray-400 dark:text-gray-500">
+                    <p data-zh="基于 Supinfor 区域国别实时监测平台编制" data-en="Compiled based on Supinfor Regional Country Real-time Monitoring Platform">基于 Supinfor 区域国别实时监测平台编制</p>
+                    <p class="mt-1" data-zh="数据截止：2026-04-19 23:59 (UTC+8) · 仅供参考，不构成投资建议" data-en="Data as of: 2026-04-19 23:59 (UTC+8) · For reference only, does not constitute investment advice">数据截止：2026-04-19 23:59 (UTC+8) · 仅供参考，不构成投资建议</p>
+                </div>
+                <div class="text-xs text-gray-400 dark:text-gray-500">
+                    © 2026 Supinfor Ltd.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script>
+        // Theme toggle
+        const html = document.documentElement;
+        const toggle = document.getElementById('theme-toggle');
+        const stored = localStorage.getItem('theme');
+        if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        toggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                document.querySelector(a.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Intersection Observer for fade-in
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('section').forEach(s => {
+            s.style.opacity = '0';
+            s.style.transform = 'translateY(20px)';
+            s.style.transition = 'opacity .6s ease, transform .6s ease';
+            observer.observe(s);
+        });
+        // Make header and footer always visible
+        document.querySelector('header').style.opacity = '1';
+        document.querySelector('header').style.transform = 'none';
+        document.querySelector('footer').style.opacity = '1';
+        document.querySelector('footer').style.transform = 'none';
+
+        // Language toggle
+        const langToggle = document.getElementById('lang-toggle');
+        let currentLang = 'zh';
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'zh' ? 'en' : 'zh';
+            langToggle.textContent = currentLang === 'zh' ? 'EN' : '中';
+            document.querySelectorAll('[data-zh][data-en]').forEach(el => {
+                el.textContent = el.dataset[currentLang];
+            });
+        });
+    </script>
+</body>
+</html>

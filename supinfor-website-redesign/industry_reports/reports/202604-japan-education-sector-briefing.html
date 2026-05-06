@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本教育领域速览 — 2026年4月12日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif+SC:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        indigo: { 50:'#EEF2FF',100:'#E0E7FF',200:'#C7D2FE',300:'#A5B4FC',400:'#818CF8',500:'#6366F1',600:'#4F46E5',700:'#4338CA',800:'#3730A3',900:'#312E81',950:'#1E1B4B' },
+        coral: { 50:'#FFF5F5',100:'#FFE3E3',200:'#FFC9C9',300:'#FFA8A8',400:'#FF8787',500:'#FF6B6B',600:'#FA5252',700:'#F03E3E',800:'#E03131',900:'#C92A2A' },
+        slate: { 850:'#162032',950:'#0B1120' }
+      },
+      fontFamily: {
+        serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
+        sans: ['Inter', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+  .font-serif { font-family: 'Noto Serif SC', Georgia, serif; }
+  /* Reveal animations */
+  .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .reveal.active { opacity: 1; transform: translateY(0); }
+  /* Stagger delays */
+  .delay-1 { transition-delay: 0.1s; }
+  .delay-2 { transition-delay: 0.2s; }
+  .delay-3 { transition-delay: 0.3s; }
+  .delay-4 { transition-delay: 0.4s; }
+  .delay-5 { transition-delay: 0.5s; }
+  /* Card hover */
+  .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(79,70,229,0.12); }
+  .dark .card-hover:hover { box-shadow: 0 12px 40px rgba(99,102,241,0.2); }
+  /* Timeline */
+  .timeline-line { position: relative; }
+  .timeline-line::before { content:''; position:absolute; left:24px; top:0; bottom:0; width:3px; background:linear-gradient(to bottom,#6366F1,#FF6B6B); border-radius:2px; }
+  .dark .timeline-line::before { background:linear-gradient(to bottom,#818CF8,#FF8787); }
+  /* Risk card border */
+  .risk-card { border-left: 4px solid #FF6B6B; }
+  .dark .risk-card { border-left-color: #FF8787; }
+  /* Table styling */
+  .styled-table th { background: #4F46E5; color: white; }
+  .dark .styled-table th { background: #4338CA; }
+  .styled-table tr:nth-child(even) td { background: #F8FAFC; }
+  .dark .styled-table tr:nth-child(even) td { background: #1E293B; }
+  /* Noise texture overlay */
+  .noise-bg::after { content:''; position:absolute; inset:0; opacity:0.03; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"); pointer-events:none; }
+  /* Hamburger */
+  .hamburger span { display:block; width:24px; height:2px; background:currentColor; transition:all 0.3s; }
+  .hamburger.active span:nth-child(1) { transform:rotate(45deg) translate(5px,5px); }
+  .hamburger.active span:nth-child(2) { opacity:0; }
+  .hamburger.active span:nth-child(3) { transform:rotate(-45deg) translate(5px,-5px); }
+  /* Progress bar */
+  .nav-progress { height:3px; background:linear-gradient(90deg,#4F46E5,#FF6B6B); transform-origin:left; transition:transform 0.3s; }
+  /* Scrollbar */
+  ::-webkit-scrollbar { width:8px; }
+  ::-webkit-scrollbar-track { background:transparent; }
+  ::-webkit-scrollbar-thumb { background:#CBD5E1; border-radius:4px; }
+  .dark ::-webkit-scrollbar-thumb { background:#475569; }
+  /* Language toggle */
+  [data-lang="zh"] [data-en] { display: none; }
+  [data-lang="en"] [data-zh] { display: none; }
+</style>
+</head>
+<body class="bg-white dark:bg-slate-950 text-slate-800 dark:text-slate-200 transition-colors duration-300">
+
+<!-- Navigation -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="#hero" class="font-serif font-bold text-lg text-indigo-600 dark:text-indigo-400 flex items-center gap-2">
+        <i class="fa-solid fa-graduation-cap"></i>
+        <span class="hidden sm:inline"><span data-zh>教育洞察</span><span data-en>Education Insights</span></span>
+      </a>
+      <div class="hidden lg:flex items-center gap-1">
+        <a href="#findings" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>核心发现</span><span data-en>Core Findings</span></a>
+        <a href="#focus" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>焦点事件</span><span data-en>Focus Events</span></a>
+        <a href="#dynamics" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>重要动态</span><span data-en>Key Developments</span></a>
+        <a href="#trends" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></a>
+        <a href="#risks" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+        <a href="#opportunities" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>合作机会</span><span data-en>Opportunities</span></a>
+        <a href="#watchlist" class="nav-link px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50 transition-all"><span data-zh>下期关注</span><span data-en>Watchlist</span></a>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="切换主题">
+          <i class="fa-solid fa-sun dark:hidden"></i>
+          <i class="fa-solid fa-moon hidden dark:inline"></i>
+        </button>
+        <button id="langToggle" class="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="Switch Language" style="font-size:12px;font-weight:700;">EN</button>
+        <button id="hamburgerBtn" class="lg:hidden hamburger p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 flex flex-col gap-1.5 items-center justify-center" aria-label="菜单">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+    <div class="px-4 py-3 space-y-1">
+      <a href="#findings" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>核心发现</span><span data-en>Core Findings</span></a>
+      <a href="#focus" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>焦点事件</span><span data-en>Focus Events</span></a>
+      <a href="#dynamics" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>重要动态</span><span data-en>Key Developments</span></a>
+      <a href="#trends" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></a>
+      <a href="#risks" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#opportunities" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>合作机会</span><span data-en>Opportunities</span></a>
+      <a href="#watchlist" class="mobile-nav block px-3 py-2 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 rounded-lg hover:bg-indigo-50 dark:hover:bg-indigo-950/50"><span data-zh>下期关注</span><span data-en>Watchlist</span></a>
+    </div>
+  </div>
+  <div class="nav-progress" id="navProgress" style="transform:scaleX(0)"></div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden noise-bg">
+  <div class="absolute inset-0 bg-gradient-to-br from-indigo-50 via-white to-coral-50 dark:from-slate-950 dark:via-indigo-950/30 dark:to-slate-900"></div>
+  <div class="absolute top-20 left-10 w-72 h-72 bg-indigo-200/30 dark:bg-indigo-800/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-coral-200/20 dark:bg-coral-800/10 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/3 right-1/4 w-48 h-48 bg-indigo-300/20 dark:bg-indigo-700/10 rounded-full blur-2xl"></div>
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-16">
+    <div class="reveal">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 text-sm font-medium mb-8">
+        <i class="fa-solid fa-calendar-week"></i>
+        <span><span data-zh>2026年4月6日 — 4月12日</span><span data-en>April 6 – April 12, 2026</span></span>
+      </div>
+    </div>
+    <h1 class="reveal delay-1 font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white leading-tight mb-6">
+      <span data-zh>日本教育<br class="sm:hidden"><span class="text-indigo-600 dark:text-indigo-400">领域速览</span></span><span data-en>Japan Education<br class="sm:hidden"><span class="text-indigo-600 dark:text-indigo-400">Sector Overview</span></span>
+    </h1>
+    <p class="reveal delay-2 text-lg sm:text-xl text-slate-500 dark:text-slate-400 mb-4 font-medium">
+      <span data-zh>Supinfor 区域国别实时监测平台 · 教育栏目</span><span data-en>Supinfor Regional Country Real-time Monitoring Platform · Education Section</span>
+    </p>
+    <p class="reveal delay-3 text-base sm:text-lg text-slate-400 dark:text-slate-500 mb-12">
+      <span data-zh>1,658条资讯 · 600条去重 · 11个核心事件簇</span><span data-en>1,658 news items · 600 deduplicated · 11 core event clusters</span>
+    </p>
+    <!-- Stat Cards -->
+    <div class="reveal delay-4 grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto">
+      <div class="card-hover bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="text-3xl sm:text-4xl font-bold text-coral-500 dark:text-coral-400 mb-2">2</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 font-medium"><span data-zh>焦点事件</span><span data-en>Focus Events</span></div>
+      </div>
+      <div class="card-hover bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="text-3xl sm:text-4xl font-bold text-indigo-600 dark:text-indigo-400 mb-2">3</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 font-medium"><span data-zh>趋势研判</span><span data-en>Trend Analyses</span></div>
+      </div>
+      <div class="card-hover bg-white/70 dark:bg-slate-800/70 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="text-3xl sm:text-4xl font-bold text-indigo-500 dark:text-indigo-300 mb-2">6</div>
+        <div class="text-sm text-slate-500 dark:text-slate-400 font-medium"><span data-zh>合作机会</span><span data-en>Cooperation Opportunities</span></div>
+      </div>
+    </div>
+    <div class="reveal delay-5 mt-12">
+      <a href="#findings" class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 hover:text-indigo-700 dark:hover:text-indigo-300 transition-colors">
+        <span class="text-sm font-medium"><span data-zh>开始阅读</span><span data-en>Start Reading</span></span>
+        <i class="fa-solid fa-chevron-down animate-bounce"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Core Findings -->
+<section id="findings" class="py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-bullseye"></i> <span data-zh>第一章</span><span data-en>Chapter 1</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>本周核心发现</span><span data-en>Core Findings of the Week</span></h2>
+    </div>
+    <div class="space-y-6">
+      <!-- Finding 1 -->
+      <div class="reveal card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50 flex gap-5 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+          <span class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">1</span>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2"><span data-zh>校外活动安全管理体系面临系统性重构</span><span data-en>Extracurricular Activity Safety Management System Faces Systemic Restructuring</span></h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>同志社国际高中冲绳研修旅行船翻覆事故（2死14伤）促使文科省罕见启动对私立学校法人的直接调查，并向全国发出安全保障通知，标志着日本校外活动监管从"事后追责"向"事前审查"转型。</span><span data-en>The Doshisha International High School boat capsizing accident during an Okinawa study trip (2 deaths, 14 injuries) prompted MEXT to launch an unprecedented direct investigation into the private school corporation and issue a nationwide safety assurance notice, marking Japan's shift in extracurricular activity oversight from "post-incident accountability" to "pre-event review."</span></p>
+        </div>
+      </div>
+      <!-- Finding 2 -->
+      <div class="reveal delay-1 card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50 flex gap-5 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+          <span class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">2</span>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2"><span data-zh>学生心理健康危机倒逼学校管理模式变革</span><span data-en>Student Mental Health Crisis Forces School Management Model Reform</span></h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>广岛县立中学生自死事件第三方调查认定学校不当应对为诱因，调查委员会建议设立独立于学校的学生咨询窗口，预示日本教育系统将加速引入第三方心理支援机制。</span><span data-en>A third-party investigation into a Hiroshima prefectural middle school student's suicide determined that the school's improper response was a contributing factor. The investigation committee recommended establishing student counseling services independent of schools, signaling Japan's education system will accelerate the introduction of third-party psychological support mechanisms.</span></p>
+        </div>
+      </div>
+      <!-- Finding 3 -->
+      <div class="reveal delay-2 card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50 flex gap-5 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+          <span class="text-xl sm:text-2xl font-bold text-coral-600 dark:text-coral-400">3</span>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2"><span data-zh>生成式AI已深度渗透日本基础教育</span><span data-en>Generative AI Has Deeply Penetrated Japan's Basic Education</span></h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>73.7%高中生、43.2%初中生、36.6%小学生使用生成式AI，约80%初高中生使用过ChatGPT或Gemini，AI素养教育需求迫在眉睫。</span><span data-en>73.7% of high school students, 43.2% of middle school students, and 36.6% of elementary school students use generative AI. Approximately 80% of middle and high school students have used ChatGPT or Gemini, making AI literacy education an urgent priority.</span></p>
+        </div>
+      </div>
+      <!-- Finding 4 -->
+      <div class="reveal delay-3 card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50 flex gap-5 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+          <span class="text-xl sm:text-2xl font-bold text-indigo-600 dark:text-indigo-400">4</span>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2"><span data-zh>中日教育交流在政治寒冬中呈现"官冷民温"格局</span><span data-en>China-Japan Education Exchange Shows "Cold Government, Warm People" Pattern Amid Political Chill</span></h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>JET项目中国参与者首次全部公开征集（无地方政府推荐），但上海日中友好成人式参与人数反增，民间交流韧性显现。</span><span data-en>For the first time, all Chinese participants in the JET Program were recruited through open solicitation (without local government recommendations), yet attendance at the Shanghai Japan-China Friendship Coming-of-Age Ceremony increased, demonstrating the resilience of people-to-people exchanges.</span></p>
+        </div>
+      </div>
+      <!-- Finding 5 -->
+      <div class="reveal delay-4 card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50 flex gap-5 sm:gap-6">
+        <div class="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+          <span class="text-xl sm:text-2xl font-bold text-coral-600 dark:text-coral-400">5</span>
+        </div>
+        <div>
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2"><span data-zh>特殊教育资源缺口持续扩大</span><span data-en>Special Education Resource Gap Continues to Widen</span></h3>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>全国公立特别支援学校教室不足3,192间，虽较上年有所改善，但学生持续增加使缺口常态化，结构性矛盾短期难解。</span><span data-en>Nationwide public special needs schools face a shortage of 3,192 classrooms. Although this represents a slight improvement from the previous year, the continuous increase in students has made the gap a permanent fixture, with structural contradictions unlikely to be resolved in the short term.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Focus Events -->
+<section id="focus" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-coral-500 dark:text-coral-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-magnifying-glass-chart"></i> <span data-zh>第二章</span><span data-en>Chapter 2</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>焦点事件深度解读</span><span data-en>In-Depth Analysis of Focus Events</span></h2>
+    </div>
+
+    <!-- Focus Event 1 -->
+    <div class="reveal card-hover mb-10 rounded-2xl overflow-hidden border border-slate-200/50 dark:border-slate-700/50">
+      <div class="bg-gradient-to-r from-indigo-600 to-indigo-800 dark:from-indigo-700 dark:to-indigo-900 px-6 sm:px-8 py-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white text-sm font-bold">1</span>
+          <span class="text-indigo-200 text-sm font-medium"><span data-zh>焦点一</span><span data-en>Focus 1</span></span>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-white leading-snug"><span data-zh>同志社国际高中冲绳研修旅行船翻覆事故——文科省启动直接调查</span><span data-en>Doshisha International High School Okinawa Study Trip Boat Capsizing — MEXT Launches Direct Investigation</span></h3>
+      </div>
+      <div class="bg-white dark:bg-slate-800 px-6 sm:px-8 py-8 space-y-6">
+        <div>
+          <h4 class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-file-lines"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>3月16日，同志社国际高中在冲绳名护市边野古海域进行研修旅行时，两艘船只翻覆，造成2名女学生死亡、14人受伤。这是近年来日本校外教育活动中最严重的安全事故之一，超过20家媒体持续跟踪报道，舆论热度在本周达到峰值。</span><span data-en>On March 16, during a study trip by Doshisha International High School in the Henoko waters off Nago City, Okinawa, two boats capsized, resulting in 2 female students dead and 14 injured. This is one of the most serious safety incidents in Japanese extracurricular educational activities in recent years, with over 20 media outlets providing continuous coverage and public attention peaking this week.</span></p>
+        </div>
+        <div>
+          <h4 class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-microscope"></i> <span data-zh>深层分析</span><span data-en>In-Depth Analysis</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>文科省调查发现，学校在安全管理上存在多重失职：事前未对活动海域进行实地考察、未充分告知家长活动风险、教师带队能力不足。更值得关注的是，此前京都府通过书面核查方式未能获得学校充分答复，暴露出地方教育行政对私立学校监管力度的结构性不足。</span><span data-en>MEXT's investigation found multiple safety management failures by the school: no prior on-site inspection of the activity waters, insufficient risk disclosure to parents, and inadequate teacher supervision capabilities. More notably, Kyoto Prefecture's earlier written inquiry failed to obtain a satisfactory response from the school, exposing structural deficiencies in local education authorities' oversight of private schools.</span></p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>这意味着日本现行的"地方教委—私立学校"监管链条存在明显断裂。私立学校法人在安全管理上的自主权过大，而地方教委缺乏有效的强制核查手段。文科省决定绕过京都府直接调查学校法人同志社，是对这一制度缺陷的应急补救。</span><span data-en>This indicates a clear breakdown in Japan's current "local board of education–private school" regulatory chain. Private school corporations have excessive autonomy in safety management, while local boards of education lack effective mandatory inspection mechanisms. MEXT's decision to bypass Kyoto Prefecture and directly investigate the Doshisha school corporation represents an emergency remedy for this institutional deficiency.</span></p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>此外，该校研学旅行手册中出现美军普天间基地反对运动参与号召的内容，将事故调查延伸至教育内容合规性层面。安全事故与政治化教育内容的叠加，使同志社面临双重审查压力。</span><span data-en>Additionally, the school's study trip handbook contained content calling for participation in protests against the U.S. Futenma military base, extending the investigation into educational content compliance. The combination of the safety incident and politicized educational content has placed Doshisha under dual scrutiny pressure.</span></p>
+        </div>
+        <div>
+          <h4 class="flex items-center gap-2 text-indigo-600 dark:text-indigo-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-arrow-trend-up"></i> <span data-zh>政策影响与未来走向</span><span data-en>Policy Impact and Future Outlook</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>文科省4月7日已向全国教育委员会和私立学校发出通知，要求彻底落实校外活动安全保障措施。最快4月下旬将派员赴同志社进行面谈调查，调查范围涵盖安全管理体制和教育内容合规性。</span><span data-en>On April 7, MEXT issued a notice to all national boards of education and private schools, requiring thorough implementation of extracurricular activity safety measures. MEXT plans to send investigators to Doshisha for in-person interviews as early as late April, covering both safety management systems and educational content compliance.</span></p>
+          <div class="bg-indigo-50 dark:bg-indigo-950/30 rounded-xl p-5 border border-indigo-100 dark:border-indigo-900/50">
+            <p class="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-3"><span data-zh>未来预判：</span><span data-en>Future Projections:</span></p>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-indigo-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>短期内，全国中小学校外活动（尤其是涉水、登山等高风险项目）将面临更严格的事前审批要求</span><span data-en>In the short term, extracurricular activities at schools nationwide (especially high-risk activities involving water and mountain climbing) will face stricter pre-approval requirements</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-indigo-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>文科省可能推动修订《学校教育法》相关条款，强化对私立学校校外活动的监管权限</span><span data-en>MEXT may push to amend relevant provisions of the School Education Act to strengthen oversight authority over private school extracurricular activities</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-indigo-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>研学旅行的教育内容审查标准可能趋严，政治敏感内容将受到更多关注</span><span data-en>Review standards for study trip educational content may become stricter, with politically sensitive content receiving greater scrutiny</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-indigo-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>该事件可能催生校外活动安全保险制度的完善和第三方安全评估机制的建立</span><span data-en>This incident may catalyze improvements in extracurricular activity safety insurance systems and the establishment of third-party safety assessment mechanisms</span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Focus Event 2 -->
+    <div class="reveal card-hover rounded-2xl overflow-hidden border border-slate-200/50 dark:border-slate-700/50">
+      <div class="bg-gradient-to-r from-coral-500 to-coral-700 dark:from-coral-600 dark:to-coral-800 px-6 sm:px-8 py-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-white/20 text-white text-sm font-bold">2</span>
+          <span class="text-coral-100 text-sm font-medium"><span data-zh>焦点二</span><span data-en>Focus 2</span></span>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-white leading-snug"><span data-zh>广岛县立中学生自死事件——第三方调查认定学校不当应对</span><span data-en>Hiroshima Prefectural Middle School Student Suicide — Third-Party Investigation Finds School's Improper Response</span></h3>
+      </div>
+      <div class="bg-white dark:bg-slate-800 px-6 sm:px-8 py-8 space-y-6">
+        <div>
+          <h4 class="flex items-center gap-2 text-coral-600 dark:text-coral-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-file-lines"></i> <span data-zh>事件概述</span><span data-en>Event Overview</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>2022年，广岛县立某中学二年级男生（14岁）自死。县第三方调查委员会于4月12日正式公布调查结果，认定学校的不当应对是导致该生走向极端的诱因之一。</span><span data-en>In 2022, a second-year male student (age 14) at a Hiroshima prefectural middle school died by suicide. The prefectural third-party investigation committee officially released its findings on April 12, determining that the school's improper response was one of the contributing factors.</span></p>
+        </div>
+        <div>
+          <h4 class="flex items-center gap-2 text-coral-600 dark:text-coral-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-microscope"></i> <span data-zh>深层分析</span><span data-en>In-Depth Analysis</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>调查揭示了一条清晰的因果链：教师布置大量作业→学生无法按时完成→教师斥责迟交但未提供必要学习支援→学生因课业压力、严苛管教及社团活动困境陷入抑郁→最终走向极端。这一案例折射出日本教育系统中长期存在的"高压管教"文化与学生心理支援体系薄弱之间的深层矛盾。</span><span data-en>The investigation revealed a clear causal chain: teachers assigned excessive homework → the student could not complete it on time → teachers reprimanded late submissions without providing necessary learning support → the student fell into depression due to academic pressure, strict discipline, and club activity difficulties → ultimately leading to the extreme outcome. This case reflects the deep-seated contradiction in Japan's education system between the long-standing "high-pressure discipline" culture and the weak student psychological support system.</span></p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>这意味着日本中学教育中"严格管理=好教育"的传统观念正在受到根本性质疑。教师在施加学业压力的同时缺乏对学生心理状态的敏感度和支援能力，学校内部的心理咨询机制形同虚设或独立性不足，无法为学生提供有效的求助渠道。</span><span data-en>This means the traditional notion in Japanese middle school education that "strict management = good education" is being fundamentally questioned. Teachers lack sensitivity to students' psychological states and support capabilities while imposing academic pressure. Internal school counseling mechanisms are either nominal or lack independence, failing to provide students with effective channels for seeking help.</span></p>
+        </div>
+        <div>
+          <h4 class="flex items-center gap-2 text-coral-600 dark:text-coral-400 font-semibold text-sm uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-arrow-trend-up"></i> <span data-zh>政策影响与未来走向</span><span data-en>Policy Impact and Future Outlook</span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>调查委员会明确建议设立独立于学校的学生咨询窗口，这一建议具有制度创新意义——将学生心理支援从学校内部体系中剥离，交由独立第三方机构运营，以消除学生"向管理者求助"的心理障碍。</span><span data-en>The investigation committee explicitly recommended establishing student counseling services independent of schools — an institutionally innovative proposal that would separate student psychological support from the school's internal system and entrust it to independent third-party organizations, eliminating the psychological barrier of students "seeking help from their administrators."</span></p>
+          <div class="bg-coral-50 dark:bg-coral-950/20 rounded-xl p-5 border border-coral-100 dark:border-coral-900/30">
+            <p class="text-sm font-semibold text-coral-700 dark:text-coral-300 mb-3"><span data-zh>未来预判：</span><span data-en>Future Projections:</span></p>
+            <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-coral-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>广岛县可能率先试点独立学生咨询窗口，若效果显著将向全国推广</span><span data-en>Hiroshima Prefecture may pioneer independent student counseling services; if effective, the model will be promoted nationwide</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-coral-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>文科省可能加大对学校心理咨询师（スクールカウンセラー）配置的财政支持</span><span data-en>MEXT may increase financial support for the deployment of school counselors (sukūru kaunserā)</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-coral-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>教师培训体系中"学生心理健康识别与应对"模块的权重将提升</span><span data-en>The weight of "student mental health identification and response" modules in teacher training systems will increase</span></span></li>
+              <li class="flex gap-2"><i class="fa-solid fa-chevron-right text-coral-400 mt-1 flex-shrink-0 text-xs"></i><span><span data-zh>社会舆论将持续推动"从管教型教育向支援型教育"的范式转换</span><span data-en>Public opinion will continue to drive the paradigm shift "from disciplinary education to supportive education"</span></span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Important Dynamics -->
+<section id="dynamics" class="py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-radar"></i> <span data-zh>第三章</span><span data-en>Chapter 3</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>重要动态扫描</span><span data-en>Key Developments Scan</span></h2>
+    </div>
+
+    <!-- 3.1 Education Policy & Safety -->
+    <div class="reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+          <i class="fa-solid fa-shield-halved text-indigo-600 dark:text-indigo-400"></i>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"><span data-zh>3.1 教育政策与安全管理</span><span data-en>3.1 Education Policy and Safety Management</span></h3>
+      </div>
+      <div class="grid gap-6">
+        <!-- Card: Tokyo Univ -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-university text-indigo-500 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>东京大学附属医院元教授受贿案暴露高校治理顽疾</span><span data-en>University of Tokyo Hospital Former Professor Bribery Case Exposes University Governance Chronic Issues</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>东京大学附属医院元教授受贿案的第三方委员会报告指出，校方从内部通报到公布调查结果耗时约1年4个月，存在"组织自净作用不足、封闭体质与纵贯结构弊端"。与此同时，文科省仍在推进东大"国际卓越研究大学"认定审核。</span><span data-en>The third-party committee report on the University of Tokyo Hospital former professor bribery case noted that it took approximately 1 year and 4 months from internal reporting to public disclosure, citing "insufficient organizational self-purification, closed institutional culture, and vertical structure deficiencies." Meanwhile, MEXT continues to advance the University of Tokyo's "International Distinguished Research University" certification review.</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-indigo-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-indigo-600 dark:text-indigo-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>日本顶尖大学的内部治理透明度与其追求的国际化目标之间存在张力。东大作为"国际卓越研究大学"候选校，其治理能力将受到更严格的外部审视。未来，高校治理改革（尤其是利益冲突管理和信息公开机制）可能成为"卓越大学"认定的硬性门槛。</span><span data-en>There is tension between the internal governance transparency of Japan's top universities and their internationalization goals. As a candidate for "International Distinguished Research University," the University of Tokyo's governance capabilities will face stricter external scrutiny. In the future, university governance reform (especially conflict of interest management and information disclosure mechanisms) may become a mandatory threshold for "distinguished university" certification.</span></p>
+          </div>
+        </div>
+        <!-- Card: Futoukou -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-house-chimney-user text-indigo-500 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>不登校支援模式多元化探索加速</span><span data-en>Diversification of School Refusal (Futōkō) Support Models Accelerates</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>全寮制学校为不登校中小学生提供共同生活环境，8名不登校寮生自主设计蓝莓蛋糕并在店铺售卖，展现了"生活即教育"的实践成果。同时，以自由学校为舞台的电视剧播出后好评如潮，推动社会对不登校群体的认知从"问题儿童"向"多元成长路径"转变。</span><span data-en>Boarding schools provide communal living environments for school-refusing students. Eight boarding students independently designed blueberry cakes and sold them in shops, demonstrating the practical results of "life as education." Meanwhile, a TV drama set in a free school received widespread acclaim, shifting public perception of school-refusing children from "problem children" to "diverse growth paths."</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-indigo-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-indigo-600 dark:text-indigo-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>日本社会对不登校现象的态度正在经历根本性转变。未来，不登校支援将从边缘化的"补救措施"升级为教育体系的正式组成部分，全寮制学校、自由学校等替代教育形态有望获得更多政策支持和财政拨款。</span><span data-en>Japanese society's attitude toward school refusal (futōkō) is undergoing a fundamental transformation. In the future, school refusal support will be upgraded from a marginalized "remedial measure" to a formal component of the education system, with boarding schools, free schools, and other alternative education models expected to receive more policy support and financial allocation.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 EdTech & AI -->
+    <div class="reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+          <i class="fa-solid fa-microchip text-coral-600 dark:text-coral-400"></i>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"><span data-zh>3.2 教育科技与AI</span><span data-en>3.2 EdTech and AI</span></h3>
+      </div>
+      <div class="grid gap-6">
+        <!-- Card: AI penetration -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-robot text-coral-500 dark:text-coral-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>生成式AI渗透率远超预期，AI素养教育缺口凸显</span><span data-en>Generative AI Penetration Far Exceeds Expectations, AI Literacy Education Gap Highlighted</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>学研学习教育研究所2025年11月对2,400名中小学生的调查显示：73.7%高中生、43.2%初中生、36.6%小学生已在使用生成式AI。菅公学生服公司的另一项调查进一步印证：约80%初高中生使用过ChatGPT、Gemini等工具。最常见用途为学习辅助与信息收集，小学生还常用AI创作图像。</span><span data-en>A November 2025 survey by Gakken Institute of Education Research of 2,400 K-12 students showed: 73.7% of high school students, 43.2% of middle school students, and 36.6% of elementary school students are already using generative AI. Another survey by Kanko Gakuseifuku further confirmed: approximately 80% of middle and high school students have used tools like ChatGPT and Gemini. The most common uses are study assistance and information gathering, with elementary students also frequently using AI for image creation.</span></p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>值得关注的是，超四成学生称使用AI后思维能力无明显变化，但年龄段差异显著：小学生和初中生更多认为能力变强，高中生更多认为能力变弱。青山学院大学教授呼吁系统培养学生AI素养。</span><span data-en>Notably, over 40% of students reported no significant change in thinking ability after using AI, but age-group differences are significant: elementary and middle school students more often believe their abilities have strengthened, while high school students more often feel their abilities have weakened. A professor at Aoyama Gakuin University called for systematic cultivation of student AI literacy.</span></p>
+          <!-- AI Usage Bar Chart -->
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-xl p-5 mb-4">
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-4"><span data-zh>生成式AI使用率（按学段）</span><span data-en>Generative AI Usage Rate (by School Level)</span></p>
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 w-16 text-right"><span data-zh>高中生</span><span data-en>High School</span></span>
+                <div class="flex-1 bg-slate-200 dark:bg-slate-600 rounded-full h-6 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-coral-400 to-coral-600 rounded-full flex items-center justify-end pr-2 transition-all duration-1000" style="width:73.7%">
+                    <span class="text-xs font-bold text-white">73.7%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 w-16 text-right"><span data-zh>初中生</span><span data-en>Middle School</span></span>
+                <div class="flex-1 bg-slate-200 dark:bg-slate-600 rounded-full h-6 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-end pr-2 transition-all duration-1000" style="width:43.2%">
+                    <span class="text-xs font-bold text-white">43.2%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-xs font-medium text-slate-500 dark:text-slate-400 w-16 text-right"><span data-zh>小学生</span><span data-en>Elementary</span></span>
+                <div class="flex-1 bg-slate-200 dark:bg-slate-600 rounded-full h-6 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-indigo-300 to-indigo-500 rounded-full flex items-center justify-end pr-2 transition-all duration-1000" style="width:36.6%">
+                    <span class="text-xs font-bold text-white">36.6%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-coral-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-coral-600 dark:text-coral-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>生成式AI已成为日本基础教育的"隐性基础设施"，但教育系统的应对严重滞后。高中生对AI依赖导致思维能力弱化的自我感知尤其值得警惕。未来，文科省可能加速制定中小学AI使用指南，AI素养将成为信息教育课程的核心模块。</span><span data-en>Generative AI has become the "invisible infrastructure" of Japan's basic education, but the education system's response is severely lagging. The self-perception among high school students that AI dependence weakens thinking ability is particularly concerning. In the future, MEXT may accelerate the development of AI usage guidelines for K-12 schools, with AI literacy becoming a core module of information education curricula.</span></p>
+          </div>
+        </div>
+        <!-- Card: Programming education -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-code text-coral-500 dark:text-coral-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>儿童编程教育市场持续扩张</span><span data-en>Children's Programming Education Market Continues to Expand</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>これからKIDS已在全国开设19家教室、拥有约千名学员，受小学编程必修化及IT人才缺口影响，市场需求持续增长。0元起加盟模式加速全国扩张。</span><span data-en>KorekaraKIDS has opened 19 classrooms nationwide with approximately 1,000 students. Driven by mandatory programming education in elementary schools and the IT talent gap, market demand continues to grow. A zero-yen franchise model is accelerating nationwide expansion.</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-coral-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-coral-600 dark:text-coral-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>编程教育正从"兴趣班"向"刚需课程"转型。未来，编程教育市场的竞争将从规模扩张转向质量分化，与学校课程的衔接度将成为核心竞争力。</span><span data-en>Programming education is transitioning from "hobby classes" to "essential courses." In the future, competition in the programming education market will shift from scale expansion to quality differentiation, with alignment to school curricula becoming a core competitive advantage.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.3 International Education Exchange -->
+    <div class="reveal mb-12">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+          <i class="fa-solid fa-earth-asia text-indigo-600 dark:text-indigo-400"></i>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"><span data-zh>3.3 国际教育交流</span><span data-en>3.3 International Education Exchange</span></h3>
+      </div>
+      <div class="grid gap-6">
+        <!-- Card: JET -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-plane-departure text-indigo-500 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>JET项目折射中日教育交流的结构性变化</span><span data-en>JET Program Reflects Structural Changes in China-Japan Education Exchange</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>日本驻华大使馆为21名JET项目中国参与者举办欢送会。2024年是该项目1992年在中国实施以来，首次无地方政府推荐人员，全部通过公开征集选出。分析认为这直接受中日关系恶化影响——中方地方政府不再愿意为日本教育交流项目背书推荐。</span><span data-en>The Japanese Embassy in China held a farewell reception for 21 Chinese JET Program participants. 2024 marks the first time since the program's implementation in China in 1992 that no participants were recommended by local governments — all were selected through open recruitment. Analysis suggests this is a direct result of deteriorating China-Japan relations, with Chinese local governments no longer willing to endorse Japanese education exchange programs.</span></p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>JET项目1987年启动，旨在通过外语教育增进国际相互理解，是日本最重要的教育外交工具之一。中国参与渠道从"政府推荐"转为"公开征集"，标志着中日教育交流的官方支撑正在弱化。</span><span data-en>The JET Program, launched in 1987 to promote international mutual understanding through foreign language education, is one of Japan's most important educational diplomacy tools. The shift in Chinese participation channels from "government recommendation" to "open recruitment" marks the weakening of official support for China-Japan education exchange.</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-indigo-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-indigo-600 dark:text-indigo-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>中日教育交流的官方支撑正在弱化，JET项目中国参与渠道从"政府推荐"转为"公开征集"是一个标志性事件。</span><span data-en>Official support for China-Japan education exchange is weakening. The shift in JET Program Chinese participation channels from "government recommendation" to "open recruitment" is a landmark event.</span></p>
+          </div>
+        </div>
+        <!-- Card: Shanghai -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-handshake text-indigo-500 dark:text-indigo-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>上海日中友好成人式逆势增长</span><span data-en>Shanghai Japan-China Friendship Coming-of-Age Ceremony Grows Against the Trend</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>与官方渠道收窄形成对比的是，上海日中友好成人式约50名中日学生各自参与，人数多于去年。活动中有和服、汉服参与者，开展和太鼓演奏、镜开等文化交流环节。日本同志社大学学生用中文分享交流经历。但北京此前举办的同款活动因中方大学施压取消较多。</span><span data-en>In contrast to the narrowing of official channels, approximately 50 Chinese and Japanese students each participated in the Shanghai Japan-China Friendship Coming-of-Age Ceremony, with attendance exceeding last year. Participants wore kimono and hanfu, and cultural exchange activities included wadaiko drumming and kagami-biraki. A Doshisha University student shared exchange experiences in Chinese. However, similar events previously held in Beijing were largely canceled due to pressure from Chinese universities.</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-indigo-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-indigo-600 dark:text-indigo-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>中日教育交流呈现明显的"官冷民温"和"南热北冷"格局。上海作为国际化程度最高的城市，民间交流空间相对宽松；而北京受政治敏感度影响更大。未来，中日教育交流可能更多依赖民间渠道和市场化机制，官方项目的规模和影响力将持续收缩。</span><span data-en>China-Japan education exchange shows a clear pattern of "cold government, warm people" and "warm south, cold north." As the most internationalized city, Shanghai offers relatively more space for people-to-people exchanges, while Beijing is more affected by political sensitivity. In the future, China-Japan education exchange may increasingly rely on private channels and market mechanisms, with official programs continuing to shrink in scale and influence.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.4 Education Infrastructure & Special Education -->
+    <div class="reveal">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+          <i class="fa-solid fa-building-columns text-coral-600 dark:text-coral-400"></i>
+        </div>
+        <h3 class="font-serif text-xl sm:text-2xl font-bold text-slate-900 dark:text-white"><span data-zh>3.4 教育基础设施与特殊教育</span><span data-en>3.4 Education Infrastructure and Special Education</span></h3>
+      </div>
+      <div class="grid gap-6">
+        <!-- Card: Special support schools -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-school text-coral-500 dark:text-coral-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>特别支援学校教室缺口常态化</span><span data-en>Special Needs School Classroom Shortage Becomes the Norm</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>文科省调查显示，全国公立特别支援学校教室不足3,192间，较2023年的3,359间有所改善（减少167间），但特别支援学校学生人数持续增加，教室不足已成为结构性问题。</span><span data-en>A MEXT survey shows that nationwide public special needs schools face a shortage of 3,192 classrooms, an improvement from 3,359 in 2023 (a reduction of 167), but with the continuous increase in special needs school enrollment, the classroom shortage has become a structural issue.</span></p>
+          <!-- Classroom gap visualization -->
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-xl p-5 mb-4">
+            <p class="text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3"><span data-zh>教室缺口变化</span><span data-en>Classroom Shortage Change</span></p>
+            <div class="flex items-end gap-6 justify-center">
+              <div class="text-center">
+                <div class="bg-coral-200 dark:bg-coral-800/50 rounded-lg w-20 flex items-end justify-center" style="height:100px">
+                  <span class="text-xs font-bold text-coral-700 dark:text-coral-300 pb-2">3,359</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2"><span data-zh>2023年</span><span data-en>2023</span></p>
+              </div>
+              <div class="text-center">
+                <div class="bg-indigo-200 dark:bg-indigo-800/50 rounded-lg w-20 flex items-end justify-center" style="height:95px">
+                  <span class="text-xs font-bold text-indigo-700 dark:text-indigo-300 pb-2">3,192</span>
+                </div>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-2"><span data-zh>2024年</span><span data-en>2024</span></p>
+              </div>
+              <div class="text-center flex flex-col items-center">
+                <span class="text-lg font-bold text-green-600 dark:text-green-400">↓167</span>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1"><span data-zh>减少</span><span data-en>Decrease</span></p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-coral-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-coral-600 dark:text-coral-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>日本特殊教育面临"需求增长快于供给扩张"的长期困境。随着发展障碍诊断标准的细化和社会认知的提升，特别支援教育的需求将持续上升。未来，文科省可能加大特别支援学校建设的财政投入，同时探索"普通学校内设特别支援教室"等灵活模式。</span><span data-en>Japan's special education faces a long-term dilemma of "demand growing faster than supply expansion." As diagnostic criteria for developmental disabilities become more refined and social awareness increases, demand for special needs education will continue to rise. In the future, MEXT may increase fiscal investment in special needs school construction while exploring flexible models such as "special needs classrooms within regular schools."</span></p>
+          </div>
+        </div>
+        <!-- Card: Fukui campus -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-landmark text-coral-500 dark:text-coral-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>福井县立大勝山キャンパス开设——地方大学差异化发展样本</span><span data-en>Fukui Prefectural University Katsuyama Campus Opens — A Model for Regional University Differentiation</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed mb-4"><span data-zh>由建筑大师隈研吾设计的新学部棟毗邻县立恐龙博物馆，配备CT解析实验室、化石清洁室等专业设备，总建筑面积约4,200平方米，整备费约42亿日元。</span><span data-en>The new faculty building, designed by renowned architect Kengo Kuma, is adjacent to the prefectural dinosaur museum and equipped with CT analysis laboratories, fossil cleaning rooms, and other specialized facilities. The total floor area is approximately 4,200 square meters, with development costs of approximately ¥4.2 billion.</span></p>
+          <div class="bg-slate-50 dark:bg-slate-700/30 rounded-lg p-4 border-l-4 border-coral-400">
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><strong class="text-coral-600 dark:text-coral-400"><span data-zh>洞察：</span><span data-en>Insight:</span></strong><span data-zh>地方公立大学正通过"地域资源+专业特色"的差异化路径寻求突破。未来，更多地方大学可能效仿这一模式，将地域产业优势转化为学术竞争力，形成与都市圈综合大学错位竞争的格局。</span><span data-en>Regional public universities are seeking breakthroughs through differentiation paths combining "regional resources + specialized features." In the future, more regional universities may emulate this model, converting regional industrial advantages into academic competitiveness and forming a differentiated competition landscape with metropolitan comprehensive universities.</span></p>
+          </div>
+        </div>
+        <!-- Card: Tsubame cooperation -->
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h4 class="font-serif text-lg font-bold text-slate-900 dark:text-white mb-3 flex items-start gap-2">
+            <i class="fa-solid fa-link text-coral-500 dark:text-coral-400 mt-1 flex-shrink-0"></i>
+            <span><span data-zh>县立燕中等教育学校与三条市立大签署合作协定</span><span data-en>Prefectural Tsubame Secondary School Signs Cooperation Agreement with Sanjo City University</span></span>
+          </h4>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>双方将推进数字、制造体验学习及政企协同课题解决型学习，体现了地方教育机构之间纵向衔接（中等教育—高等教育）和横向协同（学校—企业—政府）的深化趋势。</span><span data-en>Both parties will advance digital and manufacturing experiential learning as well as government-industry collaborative problem-solving learning, reflecting the deepening trend of vertical integration (secondary education–higher education) and horizontal collaboration (school–industry–government) among regional educational institutions.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Trends -->
+<section id="trends" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-chart-line"></i> <span data-zh>第四章</span><span data-en>Chapter 4</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></h2>
+    </div>
+
+    <div class="timeline-line pl-12 sm:pl-16 space-y-12">
+      <!-- Trend 1 -->
+      <div class="reveal relative">
+        <div class="absolute -left-12 sm:-left-16 top-0 w-12 h-12 rounded-full bg-indigo-600 dark:bg-indigo-500 flex items-center justify-center text-white font-bold text-lg z-10">1</div>
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4"><span data-zh>日本教育安全治理正从"分散自律"走向"集中监管"</span><span data-en>Japan's Education Safety Governance Is Shifting from "Decentralized Self-Regulation" to "Centralized Oversight"</span></h3>
+          <div class="bg-indigo-50 dark:bg-indigo-950/30 rounded-lg p-4 mb-4">
+            <p class="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2"><i class="fa-solid fa-link mr-1"></i><span data-zh>交叉印证：</span><span data-en>Cross-Verification:</span></p>
+            <p class="text-sm text-slate-600 dark:text-slate-300"><span data-zh>同志社事故后文科省直接调查私立学校法人（突破地方教委中介）+ 向全国发出安全保障通知 + 广岛自死事件调查委员会建议设立独立咨询窗口 + 东大受贿案暴露高校自净能力不足。</span><span data-en>MEXT directly investigated the private school corporation after the Doshisha accident (bypassing local board of education intermediaries) + issued a nationwide safety assurance notice + Hiroshima suicide investigation committee recommended establishing independent counseling services + University of Tokyo bribery case exposed insufficient university self-purification capabilities.</span></p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>四起事件共同指向一个方向：日本教育系统长期依赖的"学校自律+地方监管"模式正在失效。文科省正被迫从"政策指导者"角色转向"直接监管者"，第三方独立机构的介入也在加速。这一转型将深刻改变日本教育行政的权力结构，私立学校和国立大学的自主权边界将被重新划定。</span><span data-en>Four incidents collectively point in one direction: Japan's long-relied-upon model of "school self-regulation + local oversight" is failing. MEXT is being forced to shift from a "policy advisor" role to a "direct regulator," with third-party independent institutions also accelerating their involvement. This transformation will profoundly change the power structure of Japan's education administration, with the autonomy boundaries of private schools and national universities being redrawn.</span></p>
+        </div>
+      </div>
+
+      <!-- Trend 2 -->
+      <div class="reveal relative">
+        <div class="absolute -left-12 sm:-left-16 top-0 w-12 h-12 rounded-full bg-coral-500 dark:bg-coral-400 flex items-center justify-center text-white font-bold text-lg z-10">2</div>
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4"><span data-zh>生成式AI正在重塑日本基础教育生态，但制度应对严重滞后</span><span data-en>Generative AI Is Reshaping Japan's Basic Education Ecosystem, but Institutional Response Severely Lags Behind</span></h3>
+          <div class="bg-coral-50 dark:bg-coral-950/20 rounded-lg p-4 mb-4">
+            <p class="text-sm font-semibold text-coral-700 dark:text-coral-300 mb-2"><i class="fa-solid fa-link mr-1"></i><span data-zh>交叉印证：</span><span data-en>Cross-Verification:</span></p>
+            <p class="text-sm text-slate-600 dark:text-slate-300"><span data-zh>73.7%高中生使用生成式AI + 80%初高中生用过ChatGPT/Gemini + 高中生自感思维能力变弱 + 编程教育市场加速扩张 + 县立燕中等教育学校推进数字学习合作。</span><span data-en>73.7% of high school students use generative AI + 80% of middle and high school students have used ChatGPT/Gemini + high school students self-report weakened thinking ability + programming education market accelerating expansion + Prefectural Tsubame Secondary School advancing digital learning cooperation.</span></p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>生成式AI的渗透速度远超教育政策的响应速度。学生已经在大规模使用AI工具，但学校层面的AI使用规范、教师的AI教学能力、课程体系的AI整合方案均处于空白或起步阶段。编程教育市场的扩张和学校间数字学习合作的推进，反映出教育系统正在"自下而上"地适应技术变革，但缺乏"自上而下"的顶层设计。</span><span data-en>The penetration speed of generative AI far exceeds the response speed of education policy. Students are already using AI tools at scale, but school-level AI usage norms, teachers' AI teaching capabilities, and curriculum AI integration plans are all either blank or in their infancy. The expansion of the programming education market and the advancement of inter-school digital learning cooperation reflect that the education system is adapting to technological change "bottom-up," but lacks "top-down" strategic design.</span></p>
+        </div>
+      </div>
+
+      <!-- Trend 3 -->
+      <div class="reveal relative">
+        <div class="absolute -left-12 sm:-left-16 top-0 w-12 h-12 rounded-full bg-indigo-500 dark:bg-indigo-400 flex items-center justify-center text-white font-bold text-lg z-10">3</div>
+        <div class="card-hover bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+          <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-4"><span data-zh>中日教育交流进入"去官方化"新阶段</span><span data-en>China-Japan Education Exchange Enters a New Phase of "De-Officialization"</span></h3>
+          <div class="bg-indigo-50 dark:bg-indigo-950/30 rounded-lg p-4 mb-4">
+            <p class="text-sm font-semibold text-indigo-700 dark:text-indigo-300 mb-2"><i class="fa-solid fa-link mr-1"></i><span data-zh>交叉印证：</span><span data-en>Cross-Verification:</span></p>
+            <p class="text-sm text-slate-600 dark:text-slate-300"><span data-zh>JET项目中国参与者首次全部公开征集（无政府推荐）+ 上海成人式参与人数逆势增长 + 北京同类活动因大学施压取消 + 同志社大学学生用中文分享交流经历。</span><span data-en>JET Program Chinese participants recruited entirely through open solicitation for the first time (no government recommendations) + Shanghai Coming-of-Age Ceremony attendance grew against the trend + similar Beijing events canceled due to university pressure + Doshisha University student shared exchange experiences in Chinese.</span></p>
+          </div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>中日教育交流的官方支撑正在系统性弱化，但民间交流展现出超预期的韧性。这一趋势的深层逻辑是：政治关系恶化首先冲击的是需要官方背书的制度化交流渠道，而基于个人意愿和民间组织的非制度化交流反而因"去政治化"而获得更大生存空间。未来，中日教育交流的主体将从政府项目转向大学自主合作、民间文化组织和市场化留学服务。</span><span data-en>Official support for China-Japan education exchange is systematically weakening, but people-to-people exchanges demonstrate resilience beyond expectations. The underlying logic of this trend is: deteriorating political relations first impact institutionalized exchange channels requiring official endorsement, while non-institutionalized exchanges based on individual will and civil organizations actually gain more survival space through "de-politicization." In the future, the main actors in China-Japan education exchange will shift from government programs to autonomous university cooperation, civil cultural organizations, and market-based study abroad services.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Risk Alerts -->
+<section id="risks" class="py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-coral-500 dark:text-coral-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-triangle-exclamation"></i> <span data-zh>第五章</span><span data-en>Chapter 5</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Risk 1 -->
+      <div class="reveal card-hover risk-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+            <span class="text-2xl">⚠️</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3"><span data-zh>风险一：校外活动安全事故的"寒蝉效应"可能过度压缩教育空间</span><span data-en>Risk 1: The "Chilling Effect" of Extracurricular Safety Incidents May Excessively Compress Educational Space</span></h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>同志社事故后，全国学校可能出于避责心理大幅削减校外活动，尤其是涉及自然环境的研学旅行、野外实习等项目。这将导致学生体验式学习机会减少，与文科省推动的"探究型学习"改革方向产生矛盾。需要警惕"安全至上主义"对教育多样性的挤压。</span><span data-en>After the Doshisha accident, schools nationwide may drastically reduce extracurricular activities out of liability avoidance, especially study trips and field training involving natural environments. This would reduce experiential learning opportunities for students, conflicting with MEXT's "inquiry-based learning" reform direction. Vigilance is needed against "safety-first absolutism" squeezing educational diversity.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk 2 -->
+      <div class="reveal delay-1 card-hover risk-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+            <span class="text-2xl">⚠️</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3"><span data-zh>风险二：生成式AI依赖可能加剧教育公平问题</span><span data-en>Risk 2: Generative AI Dependence May Exacerbate Educational Equity Issues</span></h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>当前AI使用率调查显示，不同学段学生的AI使用率差异显著（高中73.7% vs 小学36.6%），但未披露城乡差异和家庭收入差异数据。若AI工具的使用效果与家庭数字素养和经济条件高度相关，则可能在"数字原住民"内部制造新的教育不平等。</span><span data-en>Current AI usage surveys show significant differences across school levels (high school 73.7% vs. elementary 36.6%), but do not disclose urban-rural or household income disparities. If the effectiveness of AI tool usage is highly correlated with family digital literacy and economic conditions, it may create new educational inequalities within the "digital native" generation.</span></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Risk 3 -->
+      <div class="reveal delay-2 card-hover risk-card bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+        <div class="flex items-start gap-4">
+          <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+            <span class="text-2xl">⚠️</span>
+          </div>
+          <div>
+            <h3 class="font-serif text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-3"><span data-zh>风险三：中日教育交流收缩可能影响日语教育和区域研究人才储备</span><span data-en>Risk 3: Shrinking China-Japan Education Exchange May Impact Japanese Language Education and Regional Studies Talent Pipeline</span></h3>
+            <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>JET项目中国参与渠道的弱化，叠加北京地区交流活动的取消，可能导致中国青年赴日教育交流的意愿和机会同步下降。长期来看，这将影响中国的日语教育人才供给和日本研究领域的学术梯队建设，也将削弱日本在中国的"软实力"投射能力。</span><span data-en>The weakening of JET Program Chinese participation channels, combined with the cancellation of exchange activities in the Beijing area, may lead to a simultaneous decline in Chinese youth's willingness and opportunities for educational exchange with Japan. In the long term, this will affect China's Japanese language education talent supply and academic pipeline in Japan studies, while also weakening Japan's "soft power" projection capability in China.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Cooperation Opportunities -->
+<section id="opportunities" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-handshake-angle"></i> <span data-zh>第六章</span><span data-en>Chapter 6</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>教育合作机会清单</span><span data-en>Education Cooperation Opportunities</span></h2>
+    </div>
+
+    <div class="reveal overflow-x-auto">
+      <table class="styled-table w-full min-w-[800px] border-collapse rounded-2xl overflow-hidden shadow-lg">
+        <thead>
+          <tr>
+            <th class="px-5 py-4 text-left text-sm font-semibold tracking-wider"><span data-zh>领域</span><span data-en>Area</span></th>
+            <th class="px-5 py-4 text-left text-sm font-semibold tracking-wider"><span data-zh>机会描述</span><span data-en>Opportunity Description</span></th>
+            <th class="px-5 py-4 text-left text-sm font-semibold tracking-wider"><span data-zh>相关事件</span><span data-en>Related Events</span></th>
+            <th class="px-5 py-4 text-left text-sm font-semibold tracking-wider"><span data-zh>建议行动</span><span data-en>Recommended Actions</span></th>
+          </tr>
+        </thead>
+        <tbody class="bg-white dark:bg-slate-800 text-sm">
+          <tr class="border-b border-slate-100 dark:border-slate-700">
+            <td class="px-5 py-4 font-semibold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
+              <i class="fa-solid fa-shield-halved mr-1"></i> <span data-zh>校园安全管理</span><span data-en>Campus Safety</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>日本全国学校正在强化校外活动安全体系，对安全评估、风险管理、应急响应等解决方案需求激增</span><span data-en>Schools across Japan are strengthening extracurricular activity safety systems, with surging demand for safety assessment, risk management, and emergency response solutions</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>同志社事故、文科省全国通知</span><span data-en>Doshisha accident, MEXT nationwide notice</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>引入中国成熟的校园安全管理系统和物联网监控技术，与日本教育安全企业合作开发本地化产品</span><span data-en>Introduce China's mature campus safety management systems and IoT monitoring technology, cooperate with Japanese education safety companies to develop localized products</span></td>
+          </tr>
+          <tr class="border-b border-slate-100 dark:border-slate-700">
+            <td class="px-5 py-4 font-semibold text-coral-600 dark:text-coral-400 whitespace-nowrap">
+              <i class="fa-solid fa-robot mr-1"></i> <span data-zh>AI教育</span><span data-en>AI Education</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>73.7%高中生已使用AI但缺乏系统指导，AI素养教育市场处于爆发前夜</span><span data-en>73.7% of high school students already use AI but lack systematic guidance; the AI literacy education market is on the verge of explosion</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>生成式AI使用率调查、编程教育扩张</span><span data-en>Generative AI usage survey, programming education expansion</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>开发面向日本中小学的AI素养课程体系，与日本EdTech企业合作推广</span><span data-en>Develop AI literacy curriculum systems for Japanese K-12 schools, cooperate with Japanese EdTech companies for promotion</span></td>
+          </tr>
+          <tr class="border-b border-slate-100 dark:border-slate-700">
+            <td class="px-5 py-4 font-semibold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
+              <i class="fa-solid fa-universal-access mr-1"></i> <span data-zh>特殊教育</span><span data-en>Special Education</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>教室缺口3,192间，特别支援教育资源持续短缺</span><span data-en>Classroom shortage of 3,192 rooms; special needs education resources remain in persistent deficit</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>特别支援学校教室不足</span><span data-en>Special needs school classroom shortage</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>提供特殊教育辅助技术（如AI个性化学习系统、无障碍教学设备），参与特别支援学校建设项目</span><span data-en>Provide special education assistive technology (e.g., AI personalized learning systems, accessible teaching equipment), participate in special needs school construction projects</span></td>
+          </tr>
+          <tr class="border-b border-slate-100 dark:border-slate-700">
+            <td class="px-5 py-4 font-semibold text-coral-600 dark:text-coral-400 whitespace-nowrap">
+              <i class="fa-solid fa-heart-pulse mr-1"></i> <span data-zh>心理健康支援</span><span data-en>Mental Health Support</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>第三方调查建议设立独立学生咨询窗口，学校心理支援体系面临重构</span><span data-en>Third-party investigation recommends establishing independent student counseling services; school psychological support systems face restructuring</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>广岛自死事件</span><span data-en>Hiroshima suicide incident</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>引入数字化心理健康筛查和干预平台，与日本心理咨询机构合作开发校园心理支援方案</span><span data-en>Introduce digital mental health screening and intervention platforms, cooperate with Japanese counseling institutions to develop campus psychological support solutions</span></td>
+          </tr>
+          <tr class="border-b border-slate-100 dark:border-slate-700">
+            <td class="px-5 py-4 font-semibold text-indigo-600 dark:text-indigo-400 whitespace-nowrap">
+              <i class="fa-solid fa-house-chimney-user mr-1"></i> <span data-zh>不登校支援</span><span data-en>School Refusal Support</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>全寮制学校、自由学校等替代教育模式获社会认可，市场空间扩大</span><span data-en>Alternative education models such as boarding schools and free schools gain social recognition, expanding market space</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>不登校支援动态</span><span data-en>School refusal support developments</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>开发在线学习平台和虚拟社交空间，为不登校学生提供远程教育和社会化支援</span><span data-en>Develop online learning platforms and virtual social spaces to provide remote education and socialization support for school-refusing students</span></td>
+          </tr>
+          <tr>
+            <td class="px-5 py-4 font-semibold text-coral-600 dark:text-coral-400 whitespace-nowrap">
+              <i class="fa-solid fa-people-arrows mr-1"></i> <span data-zh>民间教育交流</span><span data-en>People-to-People Education Exchange</span>
+            </td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>官方渠道收窄但民间交流需求旺盛，需要新的组织和服务模式</span><span data-en>Official channels narrowing but demand for people-to-people exchange remains strong, requiring new organizational and service models</span></td>
+            <td class="px-5 py-4 text-slate-500 dark:text-slate-400"><span data-zh>JET项目变化、上海成人式</span><span data-en>JET Program changes, Shanghai Coming-of-Age Ceremony</span></td>
+            <td class="px-5 py-4 text-slate-600 dark:text-slate-300"><span data-zh>搭建中日青年教育交流的市场化平台，提供留学咨询、文化体验、语言学习等一站式服务</span><span data-en>Build market-based platforms for China-Japan youth education exchange, providing one-stop services including study abroad consulting, cultural experiences, and language learning</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Watchlist -->
+<section id="watchlist" class="py-20 sm:py-28 bg-slate-50/50 dark:bg-slate-900/50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-indigo-600 dark:text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-binoculars"></i> <span data-zh>第七章</span><span data-en>Chapter 7</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>下期关注</span><span data-en>Watchlist</span></h2>
+    </div>
+
+    <div class="reveal card-hover bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/50 dark:border-slate-700/50 overflow-hidden">
+      <div class="divide-y divide-slate-100 dark:divide-slate-700">
+        <!-- Item 1 -->
+        <div class="flex gap-4 sm:gap-6 p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+            <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">1</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-900 dark:text-white mb-1"><span data-zh>文科省对同志社的直接调查进展</span><span data-en>Progress of MEXT's Direct Investigation into Doshisha</span></h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>最快4月下旬派员面谈，调查结果将直接影响全国校外活动安全管理制度的修订方向。</span><span data-en>Investigators may be dispatched for in-person interviews as early as late April; the findings will directly influence the direction of nationwide extracurricular activity safety management system revisions.</span></p>
+          </div>
+        </div>
+        <!-- Item 2 -->
+        <div class="flex gap-4 sm:gap-6 p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+            <span class="text-sm font-bold text-coral-600 dark:text-coral-400">2</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-900 dark:text-white mb-1"><span data-zh>文科省AI教育政策动向</span><span data-en>MEXT AI Education Policy Developments</span></h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>在学生AI使用率数据公布后，文科省是否会加速出台中小学AI使用指南和AI素养教育课程标准。</span><span data-en>Following the release of student AI usage data, whether MEXT will accelerate the issuance of K-12 AI usage guidelines and AI literacy education curriculum standards.</span></p>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="flex gap-4 sm:gap-6 p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+            <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">3</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-900 dark:text-white mb-1"><span data-zh>东京大学"国际卓越研究大学"认定审核</span><span data-en>University of Tokyo "International Distinguished Research University" Certification Review</span></h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>受贿案第三方报告对东大治理能力的批评是否会影响认定结果，将成为高校治理改革的风向标。</span><span data-en>Whether the third-party report's criticism of the University of Tokyo's governance capabilities will affect the certification outcome will serve as a bellwether for university governance reform.</span></p>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="flex gap-4 sm:gap-6 p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-coral-100 dark:bg-coral-900/30 flex items-center justify-center">
+            <span class="text-sm font-bold text-coral-600 dark:text-coral-400">4</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-900 dark:text-white mb-1"><span data-zh>不登校学生人数最新统计</span><span data-en>Latest Statistics on School-Refusing Students</span></h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>文科省年度统计数据预计近期发布，若人数继续创新高，将进一步推动替代教育政策的制度化。</span><span data-en>MEXT's annual statistics are expected to be released soon; if numbers continue to reach new highs, it will further drive the institutionalization of alternative education policies.</span></p>
+          </div>
+        </div>
+        <!-- Item 5 -->
+        <div class="flex gap-4 sm:gap-6 p-6 sm:p-8 hover:bg-slate-50 dark:hover:bg-slate-700/30 transition-colors">
+          <div class="flex-shrink-0 w-10 h-10 rounded-full bg-indigo-100 dark:bg-indigo-900/50 flex items-center justify-center">
+            <span class="text-sm font-bold text-indigo-600 dark:text-indigo-400">5</span>
+          </div>
+          <div>
+            <h4 class="font-serif font-bold text-slate-900 dark:text-white mb-1"><span data-zh>中日教育交流后续动态</span><span data-en>Follow-up Developments in China-Japan Education Exchange</span></h4>
+            <p class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>关注JET项目2026年度中国参与者招募情况，以及北京地区中日学生交流活动的恢复程度。</span><span data-en>Monitor the JET Program's 2026 Chinese participant recruitment status and the degree of recovery of China-Japan student exchange activities in the Beijing area.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Appendix -->
+<section id="appendix" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="reveal text-center mb-16">
+      <div class="inline-flex items-center gap-2 text-slate-500 dark:text-slate-400 text-sm font-semibold uppercase tracking-wider mb-4">
+        <i class="fa-solid fa-paperclip"></i> <span data-zh>附录</span><span data-en>Appendix</span>
+      </div>
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-slate-900 dark:text-white"><span data-zh>数据附录</span><span data-en>Data Appendix</span></h2>
+    </div>
+
+    <!-- Data Statistics Table -->
+    <div class="reveal mb-12">
+      <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-chart-bar text-indigo-500 dark:text-indigo-400"></i> <span data-zh>数据统计</span><span data-en>Data Statistics</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="w-full border-collapse rounded-xl overflow-hidden shadow-md">
+          <thead>
+            <tr class="bg-indigo-600 dark:bg-indigo-700 text-white">
+              <th class="px-6 py-3 text-left text-sm font-semibold"><span data-zh>指标</span><span data-en>Indicator</span></th>
+              <th class="px-6 py-3 text-left text-sm font-semibold"><span data-zh>数值</span><span data-en>Value</span></th>
+            </tr>
+          </thead>
+          <tbody class="bg-white dark:bg-slate-800 text-sm">
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>API 原始数据量</span><span data-en>API Raw Data Volume</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>1,658条</span><span data-en>1,658 items</span></td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>去重后独立资讯</span><span data-en>Deduplicated Independent News</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>600条</span><span data-en>600 items</span></td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>精选高价值资讯</span><span data-en>Curated High-Value News</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>约80条</span><span data-en>~80 items</span></td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>核心事件簇</span><span data-en>Core Event Clusters</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>11个</span><span data-en>11 clusters</span></td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>体育赛事类资讯占比</span><span data-en>Sports Event News Proportion</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>约60-70%</span><span data-en>~60-70%</span></td>
+            </tr>
+            <tr class="border-b border-slate-100 dark:border-slate-700 bg-slate-50 dark:bg-slate-700/30">
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>教育政策/改革/国际合作类占比</span><span data-en>Education Policy/Reform/International Cooperation Proportion</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>约20-30%</span><span data-en>~20-30%</span></td>
+            </tr>
+            <tr>
+              <td class="px-6 py-3 text-slate-600 dark:text-slate-300"><span data-zh>最高重复报道事件</span><span data-en>Most Repeated Event</span></td>
+              <td class="px-6 py-3 font-semibold text-slate-900 dark:text-white"><span data-zh>同志社事故（超20家媒体）</span><span data-en>Doshisha accident (20+ media outlets)</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Data Characteristics -->
+    <div class="reveal mb-12">
+      <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-circle-info text-indigo-500 dark:text-indigo-400"></i> <span data-zh>数据特征说明</span><span data-en>Data Characteristics</span>
+      </h3>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed"><span data-zh>本周教育栏目600条独立资讯中，大量内容为大学及高中体育赛事报道（棒球、排球、篮球等），约占总量的60-70%。真正与教育政策、制度改革、国际合作相关的高价值资讯约占20-30%。同一事件在多家地方媒体重复报道现象严重，如同志社事故被超过20家媒体报道。本报告基于精选后的约80条高价值资讯进行深度分析。</span><span data-en>Among the 600 independent news items in this week's education section, a large portion consists of university and high school sports event coverage (baseball, volleyball, basketball, etc.), accounting for approximately 60-70% of the total. Truly high-value news related to education policy, institutional reform, and international cooperation accounts for approximately 20-30%. The same events are heavily duplicated across multiple regional media outlets — for example, the Doshisha accident was covered by over 20 media outlets. This report is based on in-depth analysis of approximately 80 curated high-value news items.</span></p>
+      </div>
+    </div>
+
+    <!-- Data Sources -->
+    <div class="reveal">
+      <h3 class="font-serif text-xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
+        <i class="fa-solid fa-newspaper text-indigo-500 dark:text-indigo-400"></i> <span data-zh>主要信源</span><span data-en>Primary Sources</span>
+      </h3>
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-6 sm:p-8 border border-slate-200/50 dark:border-slate-700/50">
+        <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>日本文部科学省（文科省）官方通报</span><span data-en>Official notices from Japan's Ministry of Education, Culture, Sports, Science and Technology (MEXT)</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>广岛县第三方调查委员会报告</span><span data-en>Hiroshima Prefecture Third-Party Investigation Committee Report</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>学研学习教育研究所调查报告</span><span data-en>Gakken Institute of Education Research Survey Report</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>菅公学生服公司调查数据</span><span data-en>Kanko Gakuseifuku Company Survey Data</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>日本驻华大使馆公告</span><span data-en>Japanese Embassy in China Announcements</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>NHK、朝日新闻、读卖新闻、每日新闻、产经新闻等全国性媒体</span><span data-en>National media including NHK, Asahi Shimbun, Yomiuri Shimbun, Mainichi Shimbun, Sankei Shimbun</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>京都新闻、中国新闻（广岛）、福井新闻等地方媒体</span><span data-en>Regional media including Kyoto Shimbun, Chugoku Shimbun (Hiroshima), Fukui Shimbun</span></span></li>
+          <li class="flex items-start gap-2"><i class="fa-solid fa-check text-indigo-500 dark:text-indigo-400 mt-1 text-xs flex-shrink-0"></i><span><span data-zh>Supinfor 区域国别实时监测平台</span><span data-en>Supinfor Regional Country Real-time Monitoring Platform</span></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-slate-900 dark:bg-slate-950 text-slate-400 py-12 border-t border-slate-800">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center space-y-4">
+      <div class="flex items-center justify-center gap-2 text-slate-300">
+        <i class="fa-solid fa-graduation-cap text-indigo-400"></i>
+        <span class="font-serif font-bold text-lg">Supinfor Ltd.</span>
+      </div>
+      <p class="text-sm"><span data-zh>本报告由 Supinfor 区域国别实时监测平台自动采集数据，经分析师深度研判后生成。</span><span data-en>This report was generated from data automatically collected by the Supinfor Regional Country Real-time Monitoring Platform, with in-depth analysis by professional analysts.</span></p>
+      <p class="text-sm"><span data-zh>报告内容仅供参考，不构成任何决策建议。</span><span data-en>Report content is for reference only and does not constitute any decision-making advice.</span></p>
+      <div class="pt-4 border-t border-slate-800">
+        <p class="text-xs text-slate-500"><span data-zh>报告周期：2026年4月6日 — 2026年4月12日 · 发布日期：2026年4月12日</span><span data-en>Report Period: April 6, 2026 – April 12, 2026 · Publication Date: April 12, 2026</span></p>
+        <p class="text-xs text-slate-500 mt-1">© 2026 Supinfor Ltd. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-indigo-600 dark:bg-indigo-500 text-white shadow-lg hover:bg-indigo-700 dark:hover:bg-indigo-600 transition-all duration-300 opacity-0 translate-y-4 pointer-events-none flex items-center justify-center" aria-label="返回顶部">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script>
+// Theme Toggle
+(function() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+  const stored = localStorage.getItem('theme');
+  if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    html.classList.add('dark');
+  }
+  toggle.addEventListener('click', () => {
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  });
+})();
+
+// Mobile Menu
+(function() {
+  const btn = document.getElementById('hamburgerBtn');
+  const menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', () => {
+    btn.classList.toggle('active');
+    menu.classList.toggle('hidden');
+  });
+  document.querySelectorAll('.mobile-nav').forEach(link => {
+    link.addEventListener('click', () => {
+      btn.classList.remove('active');
+      menu.classList.add('hidden');
+    });
+  });
+})();
+
+// Scroll Progress
+(function() {
+  const bar = document.getElementById('navProgress');
+  window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = docHeight > 0 ? scrollTop / docHeight : 0;
+    bar.style.transform = 'scaleX(' + progress + ')';
+  });
+})();
+
+// Back to Top
+(function() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+      btn.classList.add('opacity-100', 'translate-y-0');
+    } else {
+      btn.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      btn.classList.remove('opacity-100', 'translate-y-0');
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+
+// IntersectionObserver Staggered Reveal
+(function() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+})();
+
+// Navbar background on scroll
+(function() {
+  const nav = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+      nav.classList.add('shadow-md');
+    } else {
+      nav.classList.remove('shadow-md');
+    }
+  });
+})();
+
+// Language Toggle
+(function() {
+  const html = document.documentElement;
+  const btn = document.getElementById('langToggle');
+  const stored = localStorage.getItem('lang');
+  if (stored) {
+    html.setAttribute('data-lang', stored);
+    html.setAttribute('lang', stored === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = stored === 'en' ? '中' : 'EN';
+  }
+  btn.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang') || 'zh';
+    const next = current === 'zh' ? 'en' : 'zh';
+    html.setAttribute('data-lang', next);
+    html.setAttribute('lang', next === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = next === 'en' ? '中' : 'EN';
+    localStorage.setItem('lang', next);
+  });
+})();
+</script>
+</body>
+</html>

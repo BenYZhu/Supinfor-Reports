@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本 区域国别洞察报告 — Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: ['class', '[data-theme="dark"]'],
+  theme: {
+    extend: {
+      colors: {
+        navy: { 900: '#0a1628', 800: '#0f2035', 700: '#132a45', 600: '#1a3a5c' },
+        amber: { 400: '#f59e0b', 500: '#d97706' },
+        ice: { 400: '#38bdf8', 500: '#0ea5e9' },
+        slate: { 200: '#e2e8f0', 400: '#94a3b8' }
+      },
+      fontFamily: {
+        serif: ['Noto Serif SC', 'serif'],
+        sans: ['system-ui', '-apple-system', 'PingFang SC', 'Microsoft YaHei', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ===== BASE & THEME ===== */
+:root { --bg: #0a1628; --card: #0f2035; --card2: #132a45; --amber: #f59e0b; --ice: #38bdf8; --text: #e2e8f0; --text2: #94a3b8; --success: #10b981; --danger: #ef4444; }
+[data-theme="light"] { --bg: #ffffff; --card: #f8fafc; --card2: #f1f5f9; --amber: #d97706; --ice: #0284c7; --text: #1e293b; --text2: #475569; --success: #059669; --danger: #dc2626; }
+body { background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif; transition: background .4s, color .4s; }
+h1,h2,h3,h4 { font-family: 'Noto Serif SC', serif; }
+::selection { background: rgba(56,189,248,.3); }
+[data-lang="zh"] [data-en] { display: none; }
+[data-lang="en"] [data-zh] { display: none; }
+</style>
+<style>
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--ice); border-radius: 3px; }
+
+/* ===== HERO GRID ANIMATION ===== */
+.hero-grid { position: absolute; inset: 0; overflow: hidden; }
+.hero-grid::before { content: ''; position: absolute; inset: -50%; background: repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(56,189,248,.06) 50px), repeating-linear-gradient(90deg, transparent, transparent 49px, rgba(56,189,248,.06) 50px); background-size: 50px 50px; animation: gridMove 20s linear infinite; }
+@keyframes gridMove { 0% { transform: translate(0,0); } 100% { transform: translate(50px,50px); } }
+.hero-particles { position: absolute; inset: 0; }
+.hero-particles span { position: absolute; width: 2px; height: 2px; background: var(--ice); border-radius: 50%; opacity: .4; animation: float 6s ease-in-out infinite; }
+.hero-particles span:nth-child(1) { top:20%; left:10%; animation-delay:0s; }
+.hero-particles span:nth-child(2) { top:60%; left:80%; animation-delay:1s; }
+.hero-particles span:nth-child(3) { top:30%; left:50%; animation-delay:2s; }
+.hero-particles span:nth-child(4) { top:80%; left:30%; animation-delay:3s; }
+.hero-particles span:nth-child(5) { top:10%; left:70%; animation-delay:4s; }
+.hero-particles span:nth-child(6) { top:50%; left:20%; animation-delay:1.5s; }
+.hero-particles span:nth-child(7) { top:70%; left:60%; animation-delay:2.5s; }
+.hero-particles span:nth-child(8) { top:40%; left:90%; animation-delay:3.5s; }
+@keyframes float { 0%,100% { transform: translateY(0) scale(1); opacity:.4; } 50% { transform: translateY(-20px) scale(1.5); opacity:.8; } }
+
+/* ===== SIDEBAR NAV ===== */
+.sidebar { position: fixed; left: 0; top: 0; width: 280px; height: 100vh; background: var(--card); border-right: 1px solid rgba(56,189,248,.1); z-index: 40; overflow-y: auto; padding: 80px 0 20px; transition: transform .3s; }
+.sidebar a { display: block; padding: 8px 20px; font-size: 13px; color: var(--text2); text-decoration: none; border-left: 3px solid transparent; transition: all .2s; }
+.sidebar a:hover, .sidebar a.active { color: var(--ice); border-left-color: var(--ice); background: rgba(56,189,248,.05); }
+.sidebar .nav-title { padding: 12px 20px 6px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); font-weight: 700; }
+@media (max-width: 1024px) { .sidebar { transform: translateX(-100%); } .sidebar.open { transform: translateX(0); } .main-content { margin-left: 0 !important; } }
+
+/* ===== CARDS ===== */
+.insight-card { background: var(--card); border: 1px solid rgba(56,189,248,.08); border-radius: 12px; padding: 28px; margin-bottom: 24px; transition: all .3s; }
+.insight-card:hover { border-color: rgba(56,189,248,.25); box-shadow: 0 0 30px rgba(56,189,248,.08); }
+.stat-card { background: var(--card); border: 1px solid rgba(56,189,248,.1); border-radius: 12px; padding: 20px; text-align: center; transition: all .3s; }
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(56,189,248,.12); }
+
+/* ===== RISK PULSE ===== */
+.risk-card { border: 1px solid var(--amber); border-radius: 12px; padding: 24px; margin-bottom: 20px; position: relative; overflow: hidden; background: var(--card); }
+.risk-card::before { content: ''; position: absolute; inset: 0; border: 2px solid var(--amber); border-radius: 12px; animation: pulse-border 2s ease-in-out infinite; opacity: 0; }
+@keyframes pulse-border { 0%,100% { opacity:0; transform:scale(1); } 50% { opacity:.3; transform:scale(1.01); } }
+
+/* ===== STYLED TABLE ===== */
+.data-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.data-table th { background: rgba(56,189,248,.1); color: var(--ice); padding: 10px 14px; text-align: left; font-weight: 600; border-bottom: 2px solid rgba(56,189,248,.2); }
+.data-table td { padding: 10px 14px; border-bottom: 1px solid rgba(56,189,248,.06); }
+.data-table tr:hover td { background: rgba(56,189,248,.03); }
+.status-badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 12px; font-weight: 600; }
+.status-deployed { background: rgba(16,185,129,.15); color: var(--success); }
+.status-delivered { background: rgba(56,189,248,.15); color: var(--ice); }
+.status-dev { background: rgba(245,158,11,.15); color: var(--amber); }
+
+/* ===== BAR CHART ===== */
+.bar-chart .bar-row { display: flex; align-items: center; margin-bottom: 10px; }
+.bar-chart .bar-label { width: 120px; font-size: 13px; color: var(--text2); flex-shrink: 0; }
+.bar-chart .bar-track { flex: 1; height: 24px; background: rgba(56,189,248,.08); border-radius: 4px; overflow: hidden; position: relative; }
+.bar-chart .bar-fill { height: 100%; border-radius: 4px; display: flex; align-items: center; justify-content: flex-end; padding-right: 8px; font-size: 12px; font-weight: 700; color: #fff; transition: width 1s ease; }
+
+/* ===== DONUT CHART ===== */
+.donut-chart { width: 180px; height: 180px; border-radius: 50%; position: relative; }
+.donut-chart .donut-hole { position: absolute; inset: 30px; background: var(--card); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+
+/* ===== REVEAL ANIMATION ===== */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity .6s ease, transform .6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== BACK TO TOP ===== */
+.back-top { position: fixed; bottom: 30px; right: 30px; width: 44px; height: 44px; border-radius: 50%; background: var(--ice); color: #fff; display: flex; align-items: center; justify-content: center; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all .3s; z-index: 50; box-shadow: 0 4px 15px rgba(56,189,248,.3); }
+.back-top.show { opacity: 1; transform: translateY(0); }
+.back-top:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(56,189,248,.4); }
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 50; width: 40px; height: 40px; border-radius: 50%; background: var(--card); border: 1px solid rgba(56,189,248,.2); color: var(--ice); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: all .3s; }
+.theme-toggle:hover { background: rgba(56,189,248,.1); }
+
+/* ===== MOBILE MENU ===== */
+.mobile-menu-btn { display: none; position: fixed; top: 20px; left: 20px; z-index: 50; width: 40px; height: 40px; border-radius: 50%; background: var(--card); border: 1px solid rgba(56,189,248,.2); color: var(--ice); align-items: center; justify-content: center; cursor: pointer; }
+@media (max-width: 1024px) { .mobile-menu-btn { display: flex; } }
+
+/* ===== KEY FACT LIST ===== */
+.fact-list li { position: relative; padding-left: 20px; margin-bottom: 8px; line-height: 1.7; color: var(--text); font-size: 14px; }
+.fact-list li::before { content: ''; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; background: var(--ice); border-radius: 50%; }
+
+/* ===== SECTION HEADER ===== */
+.section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 2px solid rgba(56,189,248,.15); }
+.section-num { font-size: 14px; font-weight: 700; color: var(--amber); background: rgba(245,158,11,.1); padding: 4px 12px; border-radius: 6px; }
+.section-title { font-size: 22px; font-weight: 700; color: var(--text); }
+
+/* ===== INSIGHT HEADER ===== */
+.insight-header { font-size: 16px; font-weight: 700; color: var(--ice); margin-bottom: 16px; line-height: 1.6; }
+.insight-body { font-size: 14px; line-height: 1.8; color: var(--text2); margin-bottom: 16px; }
+.insight-label { font-size: 12px; font-weight: 700; color: var(--amber); letter-spacing: 1px; margin-bottom: 8px; }
+
+/* ===== OVERLAY ===== */
+.sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.5); z-index: 35; }
+.sidebar-overlay.show { display: block; }
+
+/* ===== SUMMARY SECTION ===== */
+.summary-block { background: var(--card2); border-radius: 12px; padding: 24px; margin-bottom: 20px; border-left: 4px solid var(--ice); }
+.summary-block h4 { color: var(--ice); font-size: 18px; margin-bottom: 12px; }
+.summary-block p, .summary-block li { font-size: 14px; line-height: 1.8; color: var(--text); }
+
+/* ===== UPCOMING ITEMS ===== */
+.upcoming-card { background: var(--card); border: 1px solid rgba(56,189,248,.1); border-radius: 10px; padding: 18px; margin-bottom: 14px; }
+.upcoming-date { font-size: 12px; font-weight: 700; color: var(--amber); margin-bottom: 6px; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="themeToggle" aria-label="切换主题">
+  <i class="fas fa-moon"></i>
+</button>
+
+<!-- Language Toggle -->
+<button class="theme-toggle" id="langToggle" aria-label="Switch Language" style="right:70px;">
+  <span style="font-size:12px;font-weight:700;">EN</span>
+</button>
+
+<!-- Mobile Menu Button -->
+<button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="打开导航">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar" id="sidebar">
+  <div class="nav-title"><i class="fas fa-compass" style="margin-right:6px;"></i><span data-zh>目录导航</span><span data-en>Navigation</span></div>
+  <a href="#hero"><span data-zh>报告概览</span><span data-en>Report Overview</span></a>
+  <a href="#core-summary"><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></a>
+  <div class="nav-title" style="margin-top:12px;"><i class="fas fa-layer-group" style="margin-right:6px;"></i><span data-zh>章节</span><span data-en>Chapters</span></div>
+  <a href="#ch1"><span data-zh>一、安保防卫体制转型</span><span data-en>I. Security & Defense Transformation</span></a>
+  <a href="#ch2"><span data-zh>二、中东冲突与能源危机</span><span data-en>II. Middle East Conflict & Energy Crisis</span></a>
+  <a href="#ch3"><span data-zh>三、高市政权与政治格局</span><span data-en>III. Takaichi Administration & Political Landscape</span></a>
+  <a href="#ch4"><span data-zh>四、中日关系与地缘博弈</span><span data-en>IV. China-Japan Relations & Geopolitical Dynamics</span></a>
+  <a href="#ch5"><span data-zh>五、财政金融与宏观经济</span><span data-en>V. Fiscal Policy & Macroeconomy</span></a>
+  <a href="#ch6"><span data-zh>六、产业转型与经济安保</span><span data-en>VI. Industrial Transformation & Economic Security</span></a>
+  <a href="#ch7"><span data-zh>七、人口危机与社会转型</span><span data-en>VII. Demographic Crisis & Social Transformation</span></a>
+  <a href="#ch8"><span data-zh>八、科技创新与数字治理</span><span data-en>VIII. Tech Innovation & Digital Governance</span></a>
+  <a href="#ch9"><span data-zh>九、环保与能源政策</span><span data-en>IX. Environmental & Energy Policy</span></a>
+  <a href="#ch10"><span data-zh>十、冲绳基地与地方政治</span><span data-en>X. Okinawa Bases & Local Politics</span></a>
+  <div class="nav-title" style="margin-top:12px;"><i class="fas fa-exclamation-triangle" style="margin-right:6px;"></i><span data-zh>风险与展望</span><span data-en>Risks & Outlook</span></div>
+  <a href="#risks"><span data-zh>风险警示</span><span data-en>Risk Warnings</span></a>
+  <a href="#upcoming"><span data-zh>下期关注</span><span data-en>Upcoming Watch</span></a>
+  <a href="#summary"><span data-zh>全文总结</span><span data-en>Full Summary</span></a>
+</nav>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0a1628 0%, #0f2035 40%, #132a45 70%, #0a1628 100%);">
+  <div class="hero-grid"></div>
+  <div class="hero-particles">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+    <div class="inline-block mb-6 px-4 py-1 rounded-full text-xs font-bold tracking-widest" style="background:rgba(245,158,11,.12);color:var(--amber);border:1px solid rgba(245,158,11,.25);">
+      <i class="fas fa-satellite-dish mr-1"></i> <span data-zh>SUPINFOR INTELLIGENCE REPORT</span><span data-en>SUPINFOR INTELLIGENCE REPORT</span>
+    </div>
+    <h1 class="font-serif text-5xl md:text-7xl font-black mb-4" style="color:var(--text);line-height:1.2;">
+      <span data-zh>日本 <span style="color:var(--ice);">区域国别</span>洞察报告</span><span data-en>Japan <span style="color:var(--ice);">Country</span> Insight Report</span>
+    </h1>
+    <p class="text-lg md:text-xl mb-8" style="color:var(--text2);">
+      <span data-zh>基于日本国别月报 2026-03 · 138条资讯 · 28条洞察</span><span data-en>Based on Japan Country Monthly Report 2026-03 · 138 News Items · 28 Insights</span>
+    </p>
+    <div class="flex flex-wrap justify-center gap-4 mb-10">
+      <div class="stat-card" style="min-width:140px;">
+        <div class="text-3xl font-black" style="color:var(--ice);">138</div>
+        <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>条资讯</span><span data-en>News Items</span></div>
+      </div>
+      <div class="stat-card" style="min-width:140px;">
+        <div class="text-3xl font-black" style="color:var(--amber);">22</div>
+        <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>个关联簇</span><span data-en>Clusters</span></div>
+      </div>
+      <div class="stat-card" style="min-width:140px;">
+        <div class="text-3xl font-black" style="color:var(--success);">28</div>
+        <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>条洞察</span><span data-en>Insights</span></div>
+      </div>
+      <div class="stat-card" style="min-width:140px;">
+        <div class="text-3xl font-black" style="color:var(--danger);">10</div>
+        <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>大主题</span><span data-en>Themes</span></div>
+      </div>
+    </div>
+    <div class="text-sm" style="color:var(--text2);">
+      <i class="fas fa-calendar-alt mr-1" style="color:var(--amber);"></i> <span data-zh>分析日期：2026年4月24日</span><span data-en>Analysis Date: April 24, 2026</span> &nbsp;|&nbsp;
+      <i class="fas fa-building mr-1" style="color:var(--amber);"></i> <span data-zh>出品方：Supinfor Ltd.</span><span data-en>Published by: Supinfor Ltd.</span>
+    </div>
+  </div>
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+    <i class="fas fa-chevron-down text-xl" style="color:var(--ice);opacity:.5;"></i>
+  </div>
+</section>
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content" style="margin-left:280px;padding:40px 40px 40px 40px;">
+
+<!-- ===== CORE SUMMARY (8 items) ===== -->
+<section id="core-summary" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num"><i class="fas fa-star"></i> <span data-zh>核心</span><span data-en>Core</span></span>
+    <h2 class="section-title"><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <!-- 1 -->
+    <div class="insight-card" style="border-left:4px solid var(--danger);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--danger);">01</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>中东冲突引发的能源危机正全面冲击日本经济民生，汽油价格创36年新高，政府被迫启动史上最大规模石油储备释放（8000万桶），但中长期能源安全仍面临结构性脆弱。</span><span data-en>The energy crisis triggered by the Middle East conflict is comprehensively impacting Japan's economy and livelihoods. Gasoline prices have hit a 36-year high, forcing the government to initiate the largest-ever strategic petroleum reserve release (80 million barrels), yet medium-to-long-term energy security remains structurally vulnerable.</span></p>
+      </div>
+    </div>
+    <!-- 2 -->
+    <div class="insight-card" style="border-left:4px solid var(--ice);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--ice);">02</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>日本防卫政策完成从"专守防卫"向"远程反击能力"的历史性转型，首次部署射程超1000公里的长射程导弹，防卫预算突破9万亿日元，安保体制正经历战后最深刻变革。</span><span data-en>Japan's defense policy has completed a historic transformation from "exclusively defense-oriented" to "long-range counterstrike capability," deploying missiles with ranges exceeding 1,000 km for the first time. The defense budget has surpassed ¥9 trillion, marking the most profound post-war security reform.</span></p>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="insight-card" style="border-left:4px solid var(--amber);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--amber);">03</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>高市早苗政权凭借众院316席绝对多数强势推进修宪、防卫增税和武器出口解禁，但参院少数执政困境导致11年来首次临时预算，执政效率与民意之间的张力持续加大。</span><span data-en>The Takaichi administration, leveraging a supermajority of 316 seats in the House of Representatives, is aggressively advancing constitutional revision, defense tax hikes, and arms export deregulation. However, minority governance in the upper house has led to the first interim budget in 11 years, with growing tension between governing efficiency and public opinion.</span></p>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="insight-card" style="border-left:4px solid var(--danger);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--danger);">04</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>中日关系因"台湾有事"表态、自卫队员闯馆事件和稀土出口管制持续恶化，中国点名禁止20家日本团体出口军民两用产品，双边经济脱钩风险显著上升。</span><span data-en>China-Japan relations continue to deteriorate due to the "Taiwan contingency" statement, the SDF member embassy intrusion incident, and rare earth export controls. China has specifically banned 20 Japanese entities from receiving dual-use product exports, significantly elevating bilateral economic decoupling risks.</span></p>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="insight-card" style="border-left:4px solid var(--amber);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--amber);">05</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>日本企业实现35年来最大幅度加薪（5.26%），但中东冲突推高的能源成本和4月2516项食品涨价正侵蚀实质购买力，工资-物价良性循环面临中断风险。</span><span data-en>Japanese companies have achieved the largest wage increase in 35 years (5.26%), but rising energy costs from the Middle East conflict and April price hikes on 2,516 food items are eroding real purchasing power, putting the virtuous wage-price cycle at risk of disruption.</span></p>
+      </div>
+    </div>
+    <!-- 6 -->
+    <div class="insight-card" style="border-left:4px solid var(--danger);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--danger);">06</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>人口危机加速深化——2025年出生人数降至705,809人（连续10年新低），30岁以下62.6%不愿生育，OECD预测日本经济增速将较前20年放缓70%，结构性衰退压力不可逆。</span><span data-en>The demographic crisis is accelerating — births in 2025 fell to 705,809 (a 10th consecutive record low), 62.6% of those under 30 are unwilling to have children, and the OECD projects Japan's economic growth will slow by 70% compared to the previous two decades. Structural decline pressure is irreversible.</span></p>
+      </div>
+    </div>
+    <!-- 7 -->
+    <div class="insight-card" style="border-left:4px solid var(--success);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--success);">07</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>日本核电产业迎来福岛事故后最强复兴信号，51%民众支持重启，三菱重工核电部门销售额预计达4000亿日元，但核电人才断层（招生人数从317人降至177人）构成中长期瓶颈。</span><span data-en>Japan's nuclear power industry is seeing the strongest revival signals since the Fukushima disaster, with 51% public support for restarts and Mitsubishi Heavy Industries' nuclear division projected to reach ¥400 billion in sales. However, a talent gap (enrollment dropping from 317 to 177) poses a medium-to-long-term bottleneck.</span></p>
+      </div>
+    </div>
+    <!-- 8 -->
+    <div class="insight-card" style="border-left:4px solid var(--ice);">
+      <div class="flex items-start gap-3">
+        <span class="text-2xl font-black" style="color:var(--ice);">08</span>
+        <p class="text-sm leading-relaxed" style="color:var(--text);"><span data-zh>日本经济安保体制全面升级——设立日本版CFIUS强化外资审查、修订经济安保推进法支援海外拓展、强化稀土等关键矿物供应链，对中资企业在日投资和供应链布局构成直接影响。</span><span data-en>Japan's economic security framework has been comprehensively upgraded — establishing a Japanese version of CFIUS to strengthen foreign investment review, revising the Economic Security Promotion Act to support overseas expansion, and reinforcing critical mineral supply chains including rare earths, directly impacting Chinese enterprises' investment and supply chain operations in Japan.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 1: 安保防卫体制转型 ===== -->
+<section id="ch1" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num"><span data-zh>一</span><span data-en>I</span></span>
+    <h2 class="section-title"><span data-zh>安保防卫体制转型：从专守防卫到远程打击的历史性跨越</span><span data-en>Security & Defense Transformation: A Historic Leap from Exclusively Defense-Oriented Policy to Long-Range Strike Capability</span></h2>
+  </div>
+
+  <!-- 1.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-crosshairs mr-1"></i> <span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></div>
+    <h3 class="insight-header"><span data-zh>日本战后首次部署长射程反击导弹标志着安保政策质变已不可逆</span><span data-en>Japan's First Post-War Deployment of Long-Range Counterstrike Missiles Marks an Irreversible Qualitative Shift in Security Policy</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>3月31日日本在熊本县和静冈县部署射程超1000公里的12式改进型反舰导弹，是战后首次拥有对敌基地攻击能力。这一部署不仅打破了"专守防卫"的政策底线，更与射程2000公里远程导弹的研发计划形成梯次打击体系，标志着日本军事力量投射能力的根本性转变。</span><span data-en>On March 31, Japan deployed Type-12 improved anti-ship missiles with ranges exceeding 1,000 km in Kumamoto and Shizuoka prefectures — the first post-war capability to strike enemy bases. This deployment not only breaks the "exclusively defense-oriented" policy baseline but also forms a layered strike system with the 2,000 km range missile development program, marking a fundamental transformation in Japan's military power projection capability.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list mb-4">
+        <li><span data-zh>3月31日在熊本县健军驻屯地、静冈县富士驻屯地部署射程超1000公里的长射程反击导弹</span><span data-en>On March 31, long-range counterstrike missiles with ranges exceeding 1,000 km were deployed at Camp Kengun in Kumamoto and Camp Fuji in Shizuoka</span></li>
+        <li><span data-zh>该部署与静冈县此前"不将东富士演习场导弹基地化"的约定存在争议，引发当地居民强烈抗议</span><span data-en>The deployment conflicts with Shizuoka Prefecture's prior agreement not to turn the East Fuji training ground into a missile base, sparking strong local protests</span></li>
+        <li><span data-zh>射程2000公里的远程导弹正在研发中，将形成多层次打击能力</span><span data-en>A 2,000 km range long-range missile is under development, forming multi-layered strike capability</span></li>
+        <li><span data-zh>已交付战斧导弹和联合打击导弹，强化防卫装备采购</span><span data-en>Tomahawk cruise missiles and Joint Strike Missiles have been delivered, strengthening defense equipment procurement</span></li>
+      </ul>
+      <!-- Missile Deployment Table -->
+      <div class="insight-label"><i class="fas fa-table mr-1"></i> <span data-zh>导弹部署状态</span><span data-en>Missile Deployment Status</span></div>
+      <div class="overflow-x-auto">
+        <table class="data-table">
+          <thead>
+            <tr><th><span data-zh>导弹类型</span><span data-en>Missile Type</span></th><th><span data-zh>射程</span><span data-en>Range</span></th><th><span data-zh>部署地点</span><span data-en>Deployment Location</span></th><th><span data-zh>状态</span><span data-en>Status</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span data-zh>12式改进型陆基反舰导弹</span><span data-en>Type-12 Improved Ground-Based Anti-Ship Missile</span></td><td>1000+ <span data-zh>公里</span><span data-en>km</span></td><td><span data-zh>熊本县、静冈县</span><span data-en>Kumamoto, Shizuoka</span></td><td><span class="status-badge status-deployed"><span data-zh>已部署</span><span data-en>Deployed</span></span></td></tr>
+            <tr><td><span data-zh>战斧巡航导弹</span><span data-en>Tomahawk Cruise Missile</span></td><td><span data-zh>约1600公里</span><span data-en>~1,600 km</span></td><td>—</td><td><span class="status-badge status-delivered"><span data-zh>已交付</span><span data-en>Delivered</span></span></td></tr>
+            <tr><td><span data-zh>联合打击导弹</span><span data-en>Joint Strike Missile</span></td><td>—</td><td>—</td><td><span class="status-badge status-delivered"><span data-zh>已交付</span><span data-en>Delivered</span></span></td></tr>
+            <tr><td><span data-zh>新型远程导弹</span><span data-en>New Long-Range Missile</span></td><td>2000 <span data-zh>公里</span><span data-en>km</span></td><td>—</td><td><span class="status-badge status-dev"><span data-zh>研发中</span><span data-en>In Development</span></span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-yen-sign mr-1"></i> <span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></div>
+    <h3 class="insight-header"><span data-zh>防卫预算突破9万亿日元并启动增税机制，军事扩张获得可持续财政支撑</span><span data-en>Defense Budget Surpasses ¥9 Trillion with Tax Hike Mechanism Activated, Providing Sustainable Fiscal Support for Military Expansion</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>2026财年防卫预算达9.04万亿日元创历史新高，4月1日起启动防卫增税（法人税、烟草税），2027年上调所得税，预计年增税收超1万亿日元。防卫费GDP占比目标提升至2%以上，意味着日本军事扩张已获得制度化的财政保障，而非一次性拨款。</span><span data-en>The FY2026 defense budget reached a record ¥9.04 trillion. Defense tax hikes (corporate tax, tobacco tax) took effect on April 1, with income tax increases scheduled for 2027, expected to generate over ¥1 trillion annually. The defense spending target of 2%+ of GDP means Japan's military expansion now has institutionalized fiscal backing rather than one-time appropriations.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list mb-4">
+        <li><span data-zh>2026财年防卫预算9.04万亿日元，为历史最高</span><span data-en>FY2026 defense budget of ¥9.04 trillion, the highest in history</span></li>
+        <li><span data-zh>4月1日起法人税（中小微企业除外）和烟草税上调，2027年1月起上调所得税</span><span data-en>Corporate tax (excluding SMEs) and tobacco tax raised from April 1; income tax increase from January 2027</span></li>
+        <li><span data-zh>预计年增税收超1万亿日元专项用于防卫费增强</span><span data-en>Expected annual tax revenue increase of over ¥1 trillion earmarked for defense enhancement</span></li>
+        <li><span data-zh>防卫费GDP占比目标从1%提升至2%以上</span><span data-en>Defense spending target raised from 1% to 2%+ of GDP</span></li>
+        <li><span data-zh>新设"防卫特别所得税"</span><span data-en>New "Special Defense Income Tax" established</span></li>
+      </ul>
+      <!-- Defense Budget Bar Chart -->
+      <div class="insight-label"><i class="fas fa-chart-bar mr-1"></i> <span data-zh>防卫预算增长趋势</span><span data-en>Defense Budget Growth Trend</span></div>
+      <div class="bar-chart" style="max-width:500px;">
+        <div class="bar-row"><span class="bar-label"><span data-zh>GDP 1%时代</span><span data-en>GDP 1% Era</span></span><div class="bar-track"><div class="bar-fill" style="width:55%;background:linear-gradient(90deg,#1e40af,#38bdf8);"><span data-zh>~5万亿</span><span data-en>~¥5T</span></div></div></div>
+        <div class="bar-row"><span class="bar-label"><span data-zh>2025年度</span><span data-en>FY2025</span></span><div class="bar-track"><div class="bar-fill" style="width:80%;background:linear-gradient(90deg,#1e40af,#38bdf8);"><span data-zh>~8万亿</span><span data-en>~¥8T</span></div></div></div>
+        <div class="bar-row"><span class="bar-label"><span data-zh>2026年度</span><span data-en>FY2026</span></span><div class="bar-track"><div class="bar-fill" style="width:90%;background:linear-gradient(90deg,#d97706,#f59e0b);"><span data-zh>9.04万亿</span><span data-en>¥9.04T</span></div></div></div>
+        <div class="bar-row"><span class="bar-label"><span data-zh>GDP 2%目标</span><span data-en>GDP 2% Target</span></span><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#dc2626,#ef4444);"><span data-zh>~11万亿</span><span data-en>~¥11T</span></div></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.3 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-fighter-jet mr-1"></i> <span data-zh>洞察 1.3</span><span data-en>Insight 1.3</span></div>
+    <h3 class="insight-header"><span data-zh>武器出口全面解禁与西南诸岛军事部署加速推进，日本军事外向化趋势明确</span><span data-en>Full Deregulation of Arms Exports and Accelerated Military Deployment on Southwestern Islands Confirm Japan's Military Outward Orientation</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>自民党与维新会联合推动废除"五类型"武器出口限制，允许杀伤性武器出口至17个签约国，同时西南诸岛军事部署持续强化。尽管超48%民众反对武器出口，但执政联盟凭借议会绝对多数仍在强力推进，日本正从"武器进口国"向"武器出口国"转型。</span><span data-en>The LDP and Nippon Ishin no Kai are jointly pushing to abolish the "five-category" arms export restrictions, allowing lethal weapons exports to 17 signatory nations, while military deployment on the southwestern islands continues to intensify. Despite over 48% public opposition to arms exports, the ruling coalition is pressing forward with its parliamentary supermajority, as Japan transitions from an "arms importer" to an "arms exporter."</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>自民党与维新会提出废除"五类型"武器出口限制，原则上允许杀伤性武器出口</span><span data-en>LDP and Nippon Ishin proposed abolishing "five-category" arms export restrictions, allowing lethal weapons exports in principle</span></li>
+        <li><span data-zh>出口对象限定为与日本签订相关协定的17个国家</span><span data-en>Exports limited to 17 countries with relevant agreements with Japan</span></li>
+        <li><span data-zh>世论调查显示过半数民众反对武器出口解禁</span><span data-en>Public opinion polls show over half of citizens oppose arms export deregulation</span></li>
+        <li><span data-zh>与那国岛计划2030年部署地对空导弹部队，驻屯人数增至370人</span><span data-en>Yonaguni Island plans to deploy surface-to-air missile units by 2030, increasing garrison to 370 personnel</span></li>
+        <li><span data-zh>西南诸岛部署PAC-3、中程地空导弹</span><span data-en>PAC-3 and medium-range surface-to-air missiles deployed on southwestern islands</span></li>
+        <li><span data-zh>安保3文档年内改定，4月下旬设立有识者会议</span><span data-en>Three security documents to be revised within the year; expert panel established in late April</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 1.4 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-handshake mr-1"></i> <span data-zh>洞察 1.4</span><span data-en>Insight 1.4</span></div>
+    <h3 class="insight-header"><span data-zh>日美同盟在中东局势下面临宪法约束与盟友义务的深层矛盾</span><span data-en>The Japan-U.S. Alliance Faces Deep Contradictions Between Constitutional Constraints and Alliance Obligations Amid the Middle East Situation</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>特朗普要求日本向霍尔木兹海峡派遣军舰护航，高市首相以宪法限制婉拒，但在台湾有事问题上的"存立危机事态"表态被美国视为"重大转换"。日本在中东护航上的法律约束与在台海问题上的安保承诺之间存在逻辑张力，反映出日美同盟正进入需要重新定义权责边界的关键期。</span><span data-en>Trump demanded Japan dispatch warships to escort convoys in the Strait of Hormuz, which PM Takaichi declined citing constitutional limitations. However, her "survival-threatening situation" statement regarding a Taiwan contingency was viewed by the U.S. as a "major shift." The logical tension between Japan's legal constraints on Middle East escort missions and its security commitments on the Taiwan Strait reflects that the Japan-U.S. alliance is entering a critical period requiring redefined boundaries of rights and responsibilities.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>特朗普要求日本派遣军舰至霍尔木兹海峡护航，高市以法律限制婉拒</span><span data-en>Trump demanded Japan dispatch warships to the Strait of Hormuz; Takaichi declined citing legal limitations</span></li>
+        <li><span data-zh>高市"台湾有事可视为日本存立危机事态"的表态被美国年度报告评为"重大转换"</span><span data-en>Takaichi's statement that a Taiwan contingency could be deemed a "survival-threatening situation" was assessed as a "major shift" in the U.S. annual report</span></li>
+        <li><span data-zh>安保法施行10年，集体自卫权从未实际使用</span><span data-en>10 years since security legislation took effect, collective self-defense has never been actually exercised</span></li>
+        <li><span data-zh>超82%民众反对美以对伊朗军事攻击</span><span data-en>Over 82% of citizens oppose U.S.-Israeli military strikes on Iran</span></li>
+        <li><span data-zh>国内各政党普遍对中东派遣持谨慎态度</span><span data-en>Domestic political parties generally maintain a cautious stance on Middle East deployments</span></li>
+        <li><span data-zh>日本与加拿大签署国防能源战略协议，拓展安保合作网络</span><span data-en>Japan and Canada signed a defense-energy strategic agreement, expanding the security cooperation network</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 2: 中东冲突与能源危机 ===== -->
+<section id="ch2" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num"><span data-zh>二</span><span data-en>II</span></span>
+    <h2 class="section-title"><span data-zh>中东冲突与能源危机：日本经济安全的系统性冲击</span><span data-en>Middle East Conflict & Energy Crisis: Systemic Shock to Japan's Economic Security</span></h2>
+  </div>
+
+  <!-- 2.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-oil-can mr-1"></i> <span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></div>
+    <h3 class="insight-header"><span data-zh>霍尔木兹海峡危机暴露日本能源供应链的致命脆弱性</span><span data-en>The Strait of Hormuz Crisis Exposes Fatal Vulnerabilities in Japan's Energy Supply Chain</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>日本90%以上原油进口依赖中东，霍尔木兹海峡封锁风险直接威胁国家能源安全。政府被迫启动1978年制度创立以来首次单独释放国家石油储备，规模达8000万桶（45天国内需求），是2011年福岛核事故后释放量的1.8倍。但即便拥有254天石油储备，石脑油储备仅够20天，半数依赖石脑油的炼油厂已减产，暴露出储备结构的深层缺陷。</span><span data-en>Over 90% of Japan's crude oil imports depend on the Middle East, and the risk of a Strait of Hormuz blockade directly threatens national energy security. The government was forced to initiate the first independent release of national petroleum reserves since the system's establishment in 1978, totaling 80 million barrels (45 days of domestic demand) — 1.8 times the volume released after the 2011 Fukushima nuclear disaster. Yet even with 254 days of petroleum reserves, naphtha reserves cover only 20 days, and half of naphtha-dependent refineries have already cut production, exposing deep structural flaws in reserve composition.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list mb-4">
+        <li><span data-zh>日本90%以上原油进口来自中东</span><span data-en>Over 90% of Japan's crude oil imports come from the Middle East</span></li>
+        <li><span data-zh>释放国家石油储备8000万桶，相当于45天国内需求</span><span data-en>Released 80 million barrels of national petroleum reserves, equivalent to 45 days of domestic demand</span></li>
+        <li><span data-zh>日本拥有254天石油储备（国家146天进口量+民间101天消费量+产油国联合7天）</span><span data-en>Japan holds 254 days of petroleum reserves (national 146 days of imports + private 101 days of consumption + oil-producing nations joint 7 days)</span></li>
+        <li><span data-zh>石脑油储备仅够20天消费，半数炼油厂已减产</span><span data-en>Naphtha reserves cover only 20 days of consumption; half of refineries have cut production</span></li>
+        <li><span data-zh>汽油补贴目标价170日元/升，实际冲绳已达227.1日元/升创历史新高</span><span data-en>Gasoline subsidy target price ¥170/liter, but Okinawa has reached a record ¥227.1/liter</span></li>
+        <li><span data-zh>石油联盟要求5月追加释放国家储备</span><span data-en>The Petroleum Association of Japan has requested additional national reserve releases in May</span></li>
+      </ul>
+      <!-- Energy Dependency Stat Cards -->
+      <div class="insight-label"><i class="fas fa-tachometer-alt mr-1"></i> <span data-zh>能源依赖度指标</span><span data-en>Energy Dependency Indicators</span></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mb-4">
+        <div class="stat-card">
+          <div class="text-3xl font-black" style="color:var(--danger);">90%+</div>
+          <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>中东原油依赖度</span><span data-en>Middle East Oil Dependency</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="text-3xl font-black" style="color:var(--amber);">254<span data-zh>天</span><span data-en>d</span></div>
+          <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>石油储备总量</span><span data-en>Total Petroleum Reserves</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="text-3xl font-black" style="color:var(--danger);">20<span data-zh>天</span><span data-en>d</span></div>
+          <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>石脑油储备</span><span data-en>Naphtha Reserves</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="text-3xl font-black" style="color:var(--ice);">8000<span data-zh>万桶</span><span data-en>M bbl</span></div>
+          <div class="text-xs mt-1" style="color:var(--text2);"><span data-zh>释放储备规模</span><span data-en>Reserve Release Volume</span></div>
+        </div>
+      </div>
+      <!-- Oil Reserve Donut Chart -->
+      <div class="insight-label"><i class="fas fa-chart-pie mr-1"></i> <span data-zh>石油储备结构</span><span data-en>Petroleum Reserve Structure</span></div>
+      <div class="flex flex-wrap items-center gap-6">
+        <div class="donut-chart" style="background: conic-gradient(var(--ice) 0deg 209deg, var(--amber) 209deg 352deg, var(--success) 352deg 360deg);">
+          <div class="donut-hole">
+            <span class="text-2xl font-black" style="color:var(--text);">254</span>
+            <span class="text-xs" style="color:var(--text2);"><span data-zh>天</span><span data-en>days</span></span>
+          </div>
+        </div>
+        <div class="text-sm" style="color:var(--text2);">
+          <div class="flex items-center gap-2 mb-2"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--ice);"></span> <span data-zh>国家储备 146天（57.5%）</span><span data-en>National Reserves 146 days (57.5%)</span></div>
+          <div class="flex items-center gap-2 mb-2"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--amber);"></span> <span data-zh>民间储备 101天（39.8%）</span><span data-en>Private Reserves 101 days (39.8%)</span></div>
+          <div class="flex items-center gap-2"><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--success);"></span> <span data-zh>产油国联合 7天（2.8%）</span><span data-en>Oil-Producing Nations Joint 7 days (2.8%)</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-fire mr-1"></i> <span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></div>
+    <h3 class="insight-header"><span data-zh>能源价格飙升正通过多渠道传导至民生终端，家庭年负担增加超5万日元</span><span data-en>Surging Energy Prices Are Transmitting Through Multiple Channels to Household Costs, Increasing Annual Burden by Over ¥50,000</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>原油价格突破100美元/桶后，冲击波正沿"能源→物流→食品→日用品"链条全面传导。4月起2516项食品涨价，电费、燃气费同步上调，叠加4月到期的电气补贴，普通家庭年负担增加超5万日元。汽油价格一周上涨18%创36年新高，农业领域柴油供应困难，公共交通燃料招标流标，能源危机已从金融市场蔓延至实体经济的毛细血管。</span><span data-en>After crude oil prices breached $100/barrel, the shockwave is transmitting along the "energy → logistics → food → daily necessities" chain. Starting April, 2,516 food items saw price increases, electricity and gas rates rose simultaneously, and with electricity subsidies expiring in April, average household annual burden increased by over ¥50,000. Gasoline prices surged 18% in one week to a 36-year high, agricultural diesel supply is strained, and public transit fuel tenders have failed — the energy crisis has spread from financial markets to the capillaries of the real economy.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>美国原油期货一度上涨至119美元/桶，为2022年7月以来首次突破100美元</span><span data-en>U.S. crude oil futures briefly rose to $119/barrel, breaking $100 for the first time since July 2022</span></li>
+        <li><span data-zh>日经平均股价一度下跌4200日元</span><span data-en>The Nikkei average briefly fell by ¥4,200</span></li>
+        <li><span data-zh>国内汽油价格一周上涨18%，达36年来最高水平</span><span data-en>Domestic gasoline prices rose 18% in one week, reaching a 36-year high</span></li>
+        <li><span data-zh>4月起2516项饮食品涨价（日清鸡肉拉面涨幅5%-11%等）</span><span data-en>Starting April, 2,516 food items saw price increases (Nissin Chicken Ramen up 5%-11%, etc.)</span></li>
+        <li><span data-zh>10家大型电力企业和4家大型燃气企业4月起上调费用</span><span data-en>10 major electric utilities and 4 major gas companies raised rates from April</span></li>
+        <li><span data-zh>普通家庭年负担增加超5万日元</span><span data-en>Average household annual burden increased by over ¥50,000</span></li>
+        <li><span data-zh>农业领域柴油供应困难，经销商已开始限购燃油</span><span data-en>Agricultural diesel supply is strained; dealers have begun rationing fuel</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 2.3 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-atom mr-1"></i> <span data-zh>洞察 2.3</span><span data-en>Insight 2.3</span></div>
+    <h3 class="insight-header"><span data-zh>日本加速核电重启和能源多元化以降低中东依赖，但短期内无法改变供给结构</span><span data-en>Japan Accelerates Nuclear Restarts and Energy Diversification to Reduce Middle East Dependency, but Cannot Change Supply Structure in the Short Term</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>中东危机倒逼日本加速能源转型：柏崎刈羽核电站1台机组已于2026年1月重启，51%民众支持核电重启（较2013年28%大幅提升），政府同时启用中东以外原油采购渠道并临时提高煤炭发电利用率。但33台可运营核电机组中仅15台在线，且核电人才严重断层，短期内无法根本改变对中东能源的依赖格局。</span><span data-en>The Middle East crisis is forcing Japan to accelerate energy transition: one unit at Kashiwazaki-Kariwa Nuclear Power Plant was restarted in January 2026, 51% of citizens support nuclear restarts (up significantly from 28% in 2013), and the government has activated non-Middle East crude oil procurement channels while temporarily increasing coal power utilization. However, only 15 of 33 operable nuclear units are online, and severe talent gaps in the nuclear sector mean the fundamental dependency on Middle Eastern energy cannot be changed in the short term.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>柏崎刈羽核电站1台机组2026年1月重启</span><span data-en>One unit at Kashiwazaki-Kariwa Nuclear Power Plant restarted in January 2026</span></li>
+        <li><span data-zh>51%民众支持核电重启，18-29岁群体支持率高达66%</span><span data-en>51% of citizens support nuclear restarts; support among ages 18-29 reaches 66%</span></li>
+        <li><span data-zh>33台可运营核电机组中仅15台恢复在线</span><span data-en>Only 15 of 33 operable nuclear units have returned online</span></li>
+        <li><span data-zh>核电相关专业招生人数从福岛前317人降至177人</span><span data-en>Nuclear-related program enrollment dropped from 317 pre-Fukushima to 177</span></li>
+        <li><span data-zh>日本核电政策调整：14座重启，19座停运，27座计划拆除</span><span data-en>Japan's nuclear policy adjustment: 14 restarted, 19 suspended, 27 planned for decommissioning</span></li>
+        <li><span data-zh>临时提高煤炭发电利用率，背离脱碳目标</span><span data-en>Temporarily increased coal power utilization, deviating from decarbonization targets</span></li>
+        <li><span data-zh>三菱重工核电部门销售额预计达4000亿日元</span><span data-en>Mitsubishi Heavy Industries' nuclear division sales projected to reach ¥400 billion</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 3: 高市政权与政治格局 ===== -->
+<section id="ch3" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num"><span data-zh>三</span><span data-en>III</span></span>
+    <h2 class="section-title"><span data-zh>高市政权与政治格局：强势执政下的结构性矛盾</span><span data-en>Takaichi Administration & Political Landscape: Structural Contradictions Under Strong Governance</span></h2>
+  </div>
+
+  <!-- 3.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-landmark mr-1"></i> <span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></div>
+    <h3 class="insight-header"><span data-zh>高市早苗凭借众院绝对多数强势推进政策议程，但参院少数执政构成持续制约</span><span data-en>Takaichi Leverages House Supermajority to Aggressively Advance Policy Agenda, but Upper House Minority Governance Poses Ongoing Constraints</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>高市早苗带领自民党在2月众院选举中获316席（绝对多数），与维新会联合执政基础稳固，内阁支持率维持61%-71%。但参院少数执政导致2026年度预算案无法在3月内成立，11年来首次通过临时预算案（8.5641万亿日元），预算审议仅用约59小时为近数十年最短，引发在野党"强行推进"批评。</span><span data-en>Takaichi led the LDP to 316 seats (supermajority) in the February House of Representatives election, with a stable coalition with Nippon Ishin and cabinet approval ratings of 61%-71%. However, minority governance in the upper house prevented the FY2026 budget from passing within March, resulting in the first interim budget in 11 years (¥8.5641 trillion). Budget deliberation lasted only about 59 hours — the shortest in decades — drawing opposition criticism of "railroading."</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>2月众院选举自民党获316席，超众议院总席位三分之二</span><span data-en>LDP won 316 seats in the February House election, exceeding two-thirds of total seats</span></li>
+        <li><span data-zh>与维新会合计掌控超四分之三席位</span><span data-en>Combined with Nippon Ishin, controlling over three-quarters of seats</span></li>
+        <li><span data-zh>内阁支持率维持在61%-71%区间</span><span data-en>Cabinet approval ratings maintained at 61%-71%</span></li>
+        <li><span data-zh>11年来首次通过临时预算案，总额8.5641万亿日元</span><span data-en>First interim budget in 11 years, totaling ¥8.5641 trillion</span></li>
+        <li><span data-zh>预算审议仅耗时约59小时，为近数十年最短</span><span data-en>Budget deliberation lasted only about 59 hours, the shortest in decades</span></li>
+        <li><span data-zh>中道改革联合从172席锐减至49席，支持率仅2%</span><span data-en>Centrist Reform Coalition plummeted from 172 to 49 seats, with only 2% approval</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-scroll mr-1"></i> <span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></div>
+    <h3 class="insight-header"><span data-zh>修宪进程加速推进但社会共识不足，宪法第九条争议将长期化</span><span data-en>Constitutional Revision Accelerates but Lacks Social Consensus; Article 9 Debate Will Persist Long-Term</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>自民党将宪法修改列为核心执政目标，计划在众参两院宪法审查会设立条文起草委员会，力争今国会实现相关法案成立。修宪内容涵盖明确自卫队合法定位、增设紧急条款等。但同性婚姻诉讼已提交最高裁大法庭统一宪法判断，国旗损坏罪法案引发表达自由争议，社会对宪法修改的共识远未形成。</span><span data-en>The LDP has listed constitutional revision as a core governance objective, planning to establish article drafting committees in both houses' constitutional review commissions, aiming to pass related legislation in the current Diet session. Revision content includes clarifying the SDF's constitutional status and adding emergency provisions. However, same-sex marriage litigation has been referred to the Supreme Court Grand Bench for unified constitutional judgment, and a flag desecration bill has sparked freedom of expression debates — social consensus on constitutional revision is far from formed.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>自民党2026年运动方针明确宪法修改为核心目标</span><span data-en>LDP's 2026 action plan explicitly lists constitutional revision as a core objective</span></li>
+        <li><span data-zh>计划在众参两院宪法审查会设立条文起草委员会</span><span data-en>Plans to establish article drafting committees in both houses' constitutional review commissions</span></li>
+        <li><span data-zh>同性婚姻合法化诉讼由最高裁15名法官组成的大法庭审理</span><span data-en>Same-sex marriage legalization case heard by the Supreme Court Grand Bench of 15 justices</span></li>
+        <li><span data-zh>国旗损坏罪法案引发党内对表达自由的争议</span><span data-en>Flag desecration bill sparked intra-party debate on freedom of expression</span></li>
+        <li><span data-zh>社民党批评长射程导弹部署违反宪法第九条</span><span data-en>Social Democratic Party criticized long-range missile deployment as violating Article 9</span></li>
+        <li><span data-zh>驻韩大使回应称日本国民无人想再次成为军事大国</span><span data-en>Ambassador to South Korea stated no Japanese citizen wants to become a military power again</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3.3 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-passport mr-1"></i> <span data-zh>洞察 3.3</span><span data-en>Insight 3.3</span></div>
+    <h3 class="insight-header"><span data-zh>入国管理政策大幅收紧与外国人权利保障之间的矛盾激化</span><span data-en>Intensifying Contradictions Between Tightened Immigration Controls and Foreign Residents' Rights Protection</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>4月1日起归化审查居住要件从5年延长至10年，在留资格手续费上限从1万日元大幅上调至10万日元（永住许可30万日元），2025年强制送还人数达318人创历史新高，难民认定率仅1.4%。这些政策收紧与日本劳动力严重短缺（特定技能签证已达33.6万人）之间形成深层矛盾，也引发国际社会对日本人权状况的关注。</span><span data-en>From April 1, naturalization residency requirements were extended from 5 to 10 years, residence status processing fees raised from ¥10,000 to ¥100,000 (¥300,000 for permanent residency), 2025 deportations reached a record 318, and the refugee recognition rate stands at only 1.4%. These policy tightenings create deep contradictions with Japan's severe labor shortage (Specified Skilled Worker visa holders already at 336,000), also drawing international attention to Japan's human rights situation.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>归化审查居住要件从5年改为10年，纳税确认期延长至5年</span><span data-en>Naturalization residency requirement changed from 5 to 10 years; tax verification period extended to 5 years</span></li>
+        <li><span data-zh>在留资格手续费上限从1万日元上调至10万日元</span><span data-en>Residence status processing fee cap raised from ¥10,000 to ¥100,000</span></li>
+        <li><span data-zh>永住许可手续费上限提至30万日元</span><span data-en>Permanent residency processing fee cap raised to ¥300,000</span></li>
+        <li><span data-zh>2025年强制送还人数达318人创历史新高</span><span data-en>2025 deportations reached a record 318 persons</span></li>
+        <li><span data-zh>难民认定率仅1.4%</span><span data-en>Refugee recognition rate at only 1.4%</span></li>
+        <li><span data-zh>特定技能签证持有者已达33.6万人，印尼籍增长最快</span><span data-en>Specified Skilled Worker visa holders reached 336,000, with Indonesian nationals growing fastest</span></li>
+        <li><span data-zh>多个民间团体在国会前举行抗议集会</span><span data-en>Multiple civil society groups held protest rallies in front of the Diet</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHAPTER 4: 中日关系与地缘博弈 ===== -->
+<section id="ch4" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num"><span data-zh>四</span><span data-en>IV</span></span>
+    <h2 class="section-title"><span data-zh>中日关系与地缘博弈：对抗升级下的经济脱钩风险</span><span data-en>China-Japan Relations & Geopolitical Dynamics: Economic Decoupling Risks Amid Escalating Confrontation</span></h2>
+  </div>
+
+  <!-- 4.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-bolt mr-1"></i> <span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></div>
+    <h3 class="insight-header"><span data-zh>中日关系因"台湾有事"表态和自卫队员闯馆事件陷入多年来最紧张状态</span><span data-en>China-Japan Relations at Their Most Tense in Years Due to "Taiwan Contingency" Statement and SDF Embassy Intrusion</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>高市首相"台湾有事可视为日本存立危机事态"的表态被美国视为安保政策"重大转换"，同时引发中国强烈反弹。自卫队员闯入中国驻日大使馆事件、东京马拉松中国观众遭右翼滋扰等事件叠加，中国国防部批评日本"右倾化趋势加剧及新型军国主义抬头"，中国呼吁国民避免赴日旅游，中日关系正滑向多年来最低点。</span><span data-en>PM Takaichi's statement that a Taiwan contingency could be deemed a "survival-threatening situation" was viewed by the U.S. as a "major shift" in security policy, while simultaneously triggering strong Chinese backlash. Combined with the SDF member's intrusion into the Chinese Embassy and harassment of Chinese spectators at the Tokyo Marathon by right-wing groups, China's Ministry of National Defense criticized Japan's "intensifying rightward shift and rising neo-militarism." China urged citizens to avoid traveling to Japan, as China-Japan relations slide toward their lowest point in years.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>高市"台湾有事"表态被美国年度报告评为"重大转换"</span><span data-en>Takaichi's "Taiwan contingency" statement assessed as a "major shift" in the U.S. annual report</span></li>
+        <li><span data-zh>陆上自卫队3等陆尉村田晃大闯入中国驻日大使馆</span><span data-en>GSDF Third Lieutenant Murata Kodai intruded into the Chinese Embassy in Japan</span></li>
+        <li><span data-zh>东京马拉松赛事期间多名中国观众遭日本右翼分子滋扰推搡</span><span data-en>Multiple Chinese spectators were harassed and pushed by Japanese right-wing groups during the Tokyo Marathon</span></li>
+        <li><span data-zh>中国国防部批评日本自卫队"极右思想浸透"</span><span data-en>China's Ministry of National Defense criticized the SDF for "permeation of far-right ideology"</span></li>
+        <li><span data-zh>中国驻日大使馆建议中国公民近期避免赴日旅游</span><span data-en>Chinese Embassy in Japan advised Chinese citizens to avoid traveling to Japan</span></li>
+        <li><span data-zh>中国官媒连续发表评论批判日本右倾化动向</span><span data-en>Chinese state media published consecutive commentaries criticizing Japan's rightward shift</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 4.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-link-slash mr-1"></i> <span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></div>
+    <h3 class="insight-header"><span data-zh>中国对日稀土出口管制和军民两用产品禁令正重塑双边供应链格局</span><span data-en>China's Rare Earth Export Controls and Dual-Use Product Bans on Japan Are Reshaping Bilateral Supply Chain Dynamics</span></h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);"><span data-zh>关键洞察：</span><span data-en>Key Insight:</span></strong><span data-zh>中国因高市"台湾有事"国会答辩，于1月启动军民两用产品出口管制，2月进一步点名禁止20家日本团体出口。1月中国对日稀土磁石出口环比减少21.1%至221吨。这一管制措施直接冲击日本高科技产业和防卫产业的关键原材料供应，倒逼日本加速供应链去中国化，但短期内替代来源有限。</span><span data-en>In response to Takaichi's "Taiwan contingency" Diet testimony, China initiated dual-use product export controls in January and further named 20 Japanese entities for export bans in February. China's rare earth magnet exports to Japan fell 21.1% month-on-month to 221 tons in January. These controls directly impact critical raw material supplies for Japan's high-tech and defense industries, forcing Japan to accelerate supply chain de-Sinicization, though alternative sources remain limited in the short term.</span></p>
+      <div class="insight-label"><span data-zh>关键事实</span><span data-en>Key Facts</span></div>
+      <ul class="fact-list">
+        <li><span data-zh>1月中国对日稀土磁石出口221吨，环比减少21.1%</span><span data-en>China's rare earth magnet exports to Japan were 221 tons in January, down 21.1% month-on-month</span></li>
+        <li><span data-zh>2月出口222吨，环比微增0.7%，维持低位</span><span data-en>February exports were 222 tons, up 0.7% month-on-month, remaining at low levels</span></li>
+        <li><span data-zh>中国点名禁止20家日本企业及团体的军民两用产品出口</span><span data-en>China specifically banned dual-use product exports to 20 Japanese companies and organizations</span></li>
+        <li><span data-zh>日美首脑会谈讨论强化稀土供应链合作</span><span data-en>Japan-U.S. summit discussed strengthening rare earth supply chain cooperation</span></li>
+        <li><span data-zh>日本与加拿大签署国防能源战略协议，拓展替代供应源</span><span data-en>Japan and Canada signed a defense-energy strategic agreement, expanding alternative supply sources</span></li>
+        <li><span data-zh>经济安保推进法修订纳入关键矿物为特定重要物资</span><span data-en>Economic Security Promotion Act revision designated critical minerals as specified important materials</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 5: 财政金融与宏观经济 ===== -->
+<section id="ch5" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">五</span>
+    <h2 class="section-title">财政金融与宏观经济：扩张性政策下的多重风险累积</h2>
+  </div>
+
+  <!-- 5.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-coins mr-1"></i> 洞察 5.1</div>
+    <h3 class="insight-header">2026年度预算创历史新高但财政纪律持续恶化，日本正走向"财政悬崖"</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>2026年度一般会计预算达122.31万亿日元创历史新高，发行29.58万亿日元新债券，财政状况为G7最差。政府更放弃单年度基础财政收支黑字目标，改为数年单位平衡，赤字国债发行特例法延长至2030年度。在防卫增税、食品消费税减免（年减5万亿日元）、社保支出刚性增长的多重压力下，财政可持续性面临严峻挑战。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>2026年度预算122.31万亿日元，连续第二年创历史新高</li>
+        <li>发行29.58万亿日元新债券填补收入缺口</li>
+        <li>财政状况为G7最差</li>
+        <li>放弃单年度基础财政收支黑字目标</li>
+        <li>赤字国债发行特例法延长至2030年度</li>
+        <li>食品消费税零税率政策预计年减5万亿日元税收</li>
+        <li>防卫增税预计年增1万亿日元，远不足以覆盖防卫费增长</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-chart-line mr-1"></i> 洞察 5.2</div>
+    <h3 class="insight-header">日元贬值至160关口叠加能源价格飙升，日银加息路径面临两难抉择</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>日元贬值至160兑1美元低位，日银任命两名"通胀派"审议委员引发市场对利率政策转向的担忧。东京3月核心CPI同比上涨1.7%为近两年最慢，但中东冲突推高的能源价格将在下半年推升通胀至2.5%-3%。日银维持利率0.75%，市场预计7月加息至1%，但加息可能进一步打击已经疲弱的消费和投资。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>日元贬值至160兑1美元</li>
+        <li>日银任命两名"通胀派"学者为审议委员</li>
+        <li>东京3月核心CPI同比上涨1.7%，为2024年4月以来最小涨幅</li>
+        <li>野村证券预计下半年通胀率或升至2.5%-3%</li>
+        <li>日银维持政策利率0.75%</li>
+        <li>市场预计7月加息至1%，4月加息概率约60%</li>
+        <li>2月工业生产环比下降2.1%，零售销售环比下降2%</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 5.3 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-money-bill-wave mr-1"></i> 洞察 5.3</div>
+    <h3 class="insight-header">企业35年最大幅度加薪与中东冲击并存，工资-物价良性循环面临中断风险</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>春季劳资谈判平均加薪5.26%为1991年以来最高，丰田、本田、日立全额满足工会要求，加薪趋势正向中小企业蔓延。但中东冲突推高能源成本可能挤压企业利润空间，削弱后续加薪意愿，4月2516项食品涨价和家庭年负担增加5万日元正侵蚀实质购买力，日银期望的工资-物价良性循环面临外部冲击的严峻考验。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>春季劳资谈判平均加薪5.26%，为1991年以来最高</li>
+        <li>丰田、本田、日立等大型企业全额满足工会加薪要求</li>
+        <li>加薪趋势正向中小企业蔓延</li>
+        <li>日本70%石脑油依赖中东进口，储备仅够20天</li>
+        <li>中东地区占日本汽车出口总量的15%</li>
+        <li>税制改正法案将所得税起征点从160万日元上调至178万日元</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 6: 产业转型与经济安保 ===== -->
+<section id="ch6" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">六</span>
+    <h2 class="section-title">产业转型与经济安保：国家战略驱动下的产业重构</h2>
+  </div>
+
+  <!-- 6.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-shield-alt mr-1"></i> 洞察 6.1</div>
+    <h3 class="insight-header">经济安保推进法修订标志着日本产业政策从"自由市场"向"国家主导"全面转向</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>经济安保推进法首次大规模修订，新增支援民营企业海外拓展条款，放宽JBIC劣后出资限制，将海底电缆、卫星通信、船舶燃料补给等纳入支援范围。同时设立日本版CFIUS强化外国投资审查，要求受外国政府指示的国内投资者履行事前申报义务。日本正构建一套以国家安全为核心逻辑的产业政策体系。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>经济安保推进法2022年成立以来首次大规模修订</li>
+        <li>新增支援经济安保领域民营企业海外拓展条款</li>
+        <li>放宽JBIC劣后出资限制，支持企业进入经济安保重要领域</li>
+        <li>支援范围涵盖船舶燃料补给基地、卫星通信、海底电缆铺设</li>
+        <li>设立日本版CFIUS（对日外国投资委员会）</li>
+        <li>财务省与国家安全保障局共同担任议长</li>
+        <li>新增受外国政府指示的国内投资者事前申报义务</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-ship mr-1"></i> 洞察 6.2</div>
+    <h3 class="insight-header">造船业和核电产业成为经济安保优先扶持领域，10年万亿级投资计划启动</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>日本重启LNG运输船国内建造，计划10年内公私合计投入1万亿日元，造船业路线图提出整合为1-3个集团以提升与中韩的全球竞争力。核电产业同步加速，三菱重工核电部门销售额预计达4000亿日元，SMR建设倡议和新型反应堆研发并行推进。两大产业的复兴均以能源安全和经济安保为核心驱动力。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>今治造船计划使用大岛造船长崎县设施重启LNG运输船建造</li>
+        <li>造船领域10年内公私合计投入1万亿日元</li>
+        <li>造船业路线图提出整合为1-3个集团</li>
+        <li>三菱重工核电部门销售额预计达4000亿日元</li>
+        <li>SMR（小型模块化反应堆）建设倡议启动</li>
+        <li>东芝、三菱重工研发新型反应堆</li>
+        <li>第7期科技创新基本计划（2026-2030）推进两用技术研发</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 6.3 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-industry mr-1"></i> 洞察 6.3</div>
+    <h3 class="insight-header">防卫产业正从"成本中心"转型为"增长引擎"，军民融合成为产业政策新方向</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>高市政权将防卫产业定位为成长战略支柱，推进武器出口解禁和军民两用技术发展。防卫产业衍生的ETC系统、骨科钛螺栓等民用技术案例被用于论证军民融合的经济价值。自民党计划5月汇总安保相关产业政策提言，纳入"骨太方针"，防卫产业的政策优先级正快速提升。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>防卫费GDP占比目标提升至2%以上</li>
+        <li>自民党计划5月末汇总安保相关产业政策提言</li>
+        <li>防卫产业衍生民用技术案例：ETC系统、骨科钛螺栓</li>
+        <li>第7期科技基本计划推进两用技术研发</li>
+        <li>福岛创新海岸构想：约130件新技术商业化，5000个就业岗位</li>
+        <li>大阪万博150台EV巴士因故障停用，购车费约75亿日元（产业政策失误案例）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 7: 人口危机与社会转型 ===== -->
+<section id="ch7" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">七</span>
+    <h2 class="section-title">人口危机与社会转型：不可逆的结构性衰退</h2>
+  </div>
+
+  <!-- 7.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-baby mr-1"></i> 洞察 7.1</div>
+    <h3 class="insight-header">少子化加速突破临界点，人口结构性衰退已成为日本最大的长期风险</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>2025年出生人数降至705,809人（连续10年新低），30岁以下62.6%不愿生育，OECD预测日本经济增速将较前20年放缓70%。空屋超900万套、2025年上半年40,913人孤独死、65岁以上劳动参与率达四分之一，这些数据共同描绘出一个正在加速老化和收缩的社会图景。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list mb-4">
+        <li>2025年出生人数705,809人，连续10年创新低</li>
+        <li>30岁以下62.6%不愿生育</li>
+        <li>OECD预测日本经济增速较前20年放缓70%</li>
+        <li>空屋超900万套</li>
+        <li>2025年上半年40,913人孤独死</li>
+        <li>65岁以上劳动参与率达四分之一</li>
+        <li>富裕经济体50岁以上群体就业岗位增幅是50岁以下的两倍多</li>
+      </ul>
+      <!-- Population Crisis Indicator Cards -->
+      <div class="insight-label"><i class="fas fa-users mr-1"></i> 人口危机关键指标</div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--danger);">705,809</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">2025年出生人数</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--danger);">62.6%</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">30岁以下不愿生育</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--amber);">70%</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">OECD预测增速放缓</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--amber);">900万+</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">空屋套数</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--danger);">40,913</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">半年孤独死人数</div>
+        </div>
+        <div class="stat-card">
+          <div class="text-2xl font-black" style="color:var(--ice);">25%</div>
+          <div class="text-xs mt-1" style="color:var(--text2);">65岁以上劳动参与率</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-hard-hat mr-1"></i> 洞察 7.2</div>
+    <h3 class="insight-header">劳动力短缺倒逼制度改革，但外国劳工政策与入管收紧之间存在根本矛盾</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>失业率降至2.6%、求人倍率升至1.19反映劳动力市场极度紧张，特定技能签证持有者已达33.6万人。但归化审查严格化（居住要件从5年延至10年）、手续费大幅上调、强制送还创新高等政策收紧，与吸引外国劳动力的现实需求形成尖锐矛盾。劳动市场改革分科会启动讨论裁量劳动制，但经团联与连合立场对立。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>失业率降至2.6%，求人倍率升至1.19</li>
+        <li>特定技能签证持有者33.6万人，印尼籍增长最快</li>
+        <li>归化审查居住要件从5年改为10年</li>
+        <li>女性月均工资差约9万日元，课长占比仅15.9%</li>
+        <li>加班上限维持80小时</li>
+        <li>客户骚扰对策新法2026年10月施行</li>
+        <li>高校学费无偿化扩充纳入暂定预算</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHAPTER 8: 科技创新与数字治理 ===== -->
+<section id="ch8" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">八</span>
+    <h2 class="section-title">科技创新与数字治理：两用技术研发成为国家优先方向</h2>
+  </div>
+
+  <!-- 8.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-microchip mr-1"></i> 洞察 8.1</div>
+    <h3 class="insight-header">第7期科技基本计划将两用技术研发提升至国家战略高度</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>2026-2030年度第7期科技创新基本计划明确推进军民两用技术研发，自民党将AI对策纳入长期党纲，政府计划5年内彻底活用生成AI提升行政效率。科技政策正从纯民用导向转向服务于经济安保和防卫需求的双轨模式，这一转变将深刻影响日本科技产业的发展方向和国际合作格局。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>第7期科技创新基本计划（2026-2030）推进两用技术研发</li>
+        <li>自民党将AI对策纳入长期党纲</li>
+        <li>2026年度起5年内彻底活用生成AI提升行政效率</li>
+        <li>强化AI滥用网络攻击应对，扩充AI安全研究所</li>
+        <li>AI安全国际协作：跨境AI网络攻击需国际合作</li>
+        <li>善通寺市等推进平板电子投票系统</li>
+        <li>北海道上士幌町推进自动驾驶巴士、无人机等数字技术</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 8.2 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-dna mr-1"></i> 洞察 8.2</div>
+    <h3 class="insight-header">iPS细胞再生医疗产品全球首批获批，日本在前沿医疗领域保持领先优势</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>全球首两款iPS细胞再生医疗产品（心衰、帕金森）在日本获批，标志着日本在再生医疗产业化方面走在世界前列。但后发药品供应不足、医疗保险制度改革加重患者负担、医生直升机345日计划运休等问题，反映出日本医疗体系在前沿创新与基础保障之间的失衡。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>全球首两款iPS细胞再生医疗产品获批（心衰、帕金森）</li>
+        <li>紧急避孕药非处方上市，定价7480日元/片</li>
+        <li>高额疗养费制度调整最大调幅38%，反对签名超25万</li>
+        <li>医生直升机345日计划运休</li>
+        <li>后发药品供应不足，提议设立支援金</li>
+        <li>子育て支援金4月起通过医疗保险征收，月均300-1000日元</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== CHAPTER 9: 环保与能源政策 ===== -->
+<section id="ch9" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">九</span>
+    <h2 class="section-title">环保与能源政策：脱碳目标与能源安全的现实冲突</h2>
+  </div>
+
+  <!-- 9.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-smog mr-1"></i> 洞察 9.1</div>
+    <h3 class="insight-header">中东危机迫使日本临时提高煤炭发电利用率，脱碳进程遭遇重大挫折</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>为应对中东能源危机，日本计划提高老旧煤炭火力发电设备使用率，这与其脱碳承诺形成直接矛盾。核电重启虽在加速但进展有限（33台中仅15台在线），中部电力耐震数据造假事件更打击了核电安全信誉。日本的能源政策正在安全、经济和环保三个目标之间艰难平衡。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>临时提高煤炭发电利用率至2026年度，背离脱碳目标</li>
+        <li>核电政策调整：14座重启，19座停运，27座计划拆除</li>
+        <li>中部电力滨冈核电站耐震设计数据造假，始于2012年</li>
+        <li>原子力市民委员会批判核电回归政策</li>
+        <li>青森县拒绝2026年度使用过的核燃料搬入</li>
+        <li>福岛880吨熔毁燃料碎片待处理，2.3万灾民未返乡</li>
+        <li>鹤居村收购太阳能用地保护景观（8350万日元）</li>
+        <li>千岁市新设零碳推进课</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CHAPTER 10: 冲绳基地问题与地方政治 ===== -->
+<section id="ch10" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num">十</span>
+    <h2 class="section-title">冲绳基地问题与地方政治：中央-地方矛盾的缩影</h2>
+  </div>
+
+  <!-- 10.1 -->
+  <div class="insight-card">
+    <div class="insight-label"><i class="fas fa-map-marked-alt mr-1"></i> 洞察 10.1</div>
+    <h3 class="insight-header">辺野古基地移设争议因抗议船事故升级，冲绳问题已成为日本政治的长期裂痕</h3>
+    <div class="insight-body">
+      <p class="mb-3"><strong style="color:var(--amber);">关键洞察：</strong>辺野古海域抗议船倾覆事故致2人死亡，抗议活动已持续超8000日。冲绳知事玉城丹尼宣布以阻止基地移设为核心诉求参选连任，与自民党推举的古谢玄太形成对决。与那国岛10年间持续军事化引发居民对"要塞化"的担忧，美军直升机紧急降落和陆战队员性侵案进一步激化矛盾。冲绳问题折射出日本中央安保政策与地方民意之间难以调和的深层矛盾。</p>
+      <div class="insight-label">关键事实</div>
+      <ul class="fact-list">
+        <li>辺野古海域抗议船倾覆事故致1名高中生和1名船长死亡</li>
+        <li>辺野古新基地建设抗议活动已持续超8000日</li>
+        <li>冲绳知事玉城丹尼宣布参选连任，核心诉求为阻止基地移设</li>
+        <li>与那国岛计划2030年部署地对空导弹，驻屯人数增至370人</li>
+        <li>美军UH-1直升机因故障紧急降落名护市棒球训练场</li>
+        <li>美军陆战队员性侵案被判7年监禁</li>
+        <li>宜野湾市议会通过决议要求普天间基地早期返还</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- ===== RISK WARNINGS ===== -->
+<section id="risks" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num" style="background:rgba(239,68,68,.1);color:var(--danger);"><i class="fas fa-exclamation-triangle"></i></span>
+    <h2 class="section-title">风险警示</h2>
+  </div>
+
+  <!-- Risk Level Heat Scale -->
+  <div class="mb-8 p-4 rounded-lg" style="background:var(--card);border:1px solid rgba(56,189,248,.08);">
+    <div class="insight-label"><i class="fas fa-thermometer-full mr-1"></i> 风险等级热力色标</div>
+    <div class="flex items-center gap-1 mt-2" style="height:12px;border-radius:6px;overflow:hidden;">
+      <div style="flex:1;background:var(--success);height:100%;"></div>
+      <div style="flex:1;background:#84cc16;height:100%;"></div>
+      <div style="flex:1;background:var(--amber);height:100%;"></div>
+      <div style="flex:1;background:#f97316;height:100%;"></div>
+      <div style="flex:1;background:var(--danger);height:100%;"></div>
+    </div>
+    <div class="flex justify-between mt-1 text-xs" style="color:var(--text2);">
+      <span>低风险</span><span>中低</span><span>中等</span><span>中高</span><span>高风险</span>
+    </div>
+  </div>
+
+  <!-- Risk 1 -->
+  <div class="risk-card">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-2xl" style="color:var(--danger);"><i class="fas fa-oil-can"></i></span>
+      <h3 class="font-serif text-lg font-bold" style="color:var(--amber);">⚠️ 风险一：中东冲突长期化导致日本能源供应链断裂风险</h3>
+    </div>
+    <p class="text-sm leading-relaxed mb-3" style="color:var(--text);">中东局势若持续恶化，霍尔木兹海峡长期封锁将耗尽日本石油储备（当前254天），石脑油储备仅够20天已导致半数炼油厂减产。能源价格持续高企将推升通胀至3%以上，侵蚀企业利润和居民购买力，可能引发经济衰退。89%民众已对经济影响表示担忧。</p>
+    <div class="text-xs font-bold" style="color:var(--amber);"><i class="fas fa-chart-line mr-1"></i> 关注指标：<span style="color:var(--text2);font-weight:400;">原油期货价格走势、霍尔木兹海峡通航状况、石油储备剩余天数、汽油零售价格、CPI月度变化</span></div>
+  </div>
+
+  <!-- Risk 2 -->
+  <div class="risk-card">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-2xl" style="color:var(--danger);"><i class="fas fa-unlink"></i></span>
+      <h3 class="font-serif text-lg font-bold" style="color:var(--amber);">⚠️ 风险二：中日经济脱钩加速，稀土等关键原材料供应面临系统性中断</h3>
+    </div>
+    <p class="text-sm leading-relaxed mb-3" style="color:var(--text);">中国已点名禁止20家日本团体出口军民两用产品，稀土出口环比减少21.1%。若"台湾有事"相关紧张持续升级，中国可能进一步扩大出口管制范围至半导体材料、稀有金属等领域，直接冲击日本高科技产业和防卫产业供应链。</p>
+    <div class="text-xs font-bold" style="color:var(--amber);"><i class="fas fa-chart-line mr-1"></i> 关注指标：<span style="color:var(--text2);font-weight:400;">中国对日稀土月度出口量、军民两用产品禁令扩展范围、中国赴日旅游人数变化、中日外交互动频率</span></div>
+  </div>
+
+  <!-- Risk 3 -->
+  <div class="risk-card">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-2xl" style="color:var(--amber);"><i class="fas fa-balance-scale"></i></span>
+      <h3 class="font-serif text-lg font-bold" style="color:var(--amber);">⚠️ 风险三：财政扩张与增税并行加剧经济政策内在矛盾</h3>
+    </div>
+    <p class="text-sm leading-relaxed mb-3" style="color:var(--text);">122.31万亿日元预算创新高、29.58万亿日元新债发行、食品消费税减免年减5万亿日元税收，与防卫增税年增1万亿日元形成"一边减税一边增税"的矛盾格局。放弃财政收支黑字目标后，日本国债信用评级面临下调风险，可能引发国债利率上升和日元进一步贬值。</p>
+    <div class="text-xs font-bold" style="color:var(--amber);"><i class="fas fa-chart-line mr-1"></i> 关注指标：<span style="color:var(--text2);font-weight:400;">日本国债收益率、国际评级机构动态、日元汇率、基础财政收支数据</span></div>
+  </div>
+
+  <!-- Risk 4 -->
+  <div class="risk-card">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-2xl" style="color:var(--danger);"><i class="fas fa-shield-alt"></i></span>
+      <h3 class="font-serif text-lg font-bold" style="color:var(--amber);">⚠️ 风险四：防卫政策激进转型引发地区安全困境和国内社会撕裂</h3>
+    </div>
+    <p class="text-sm leading-relaxed mb-3" style="color:var(--text);">长射程导弹部署、武器出口解禁、防卫预算突破9万亿日元等举措引发中国强烈反弹和周边国家担忧，可能触发地区军备竞赛。国内超48%民众反对武器出口、超82%反对参与中东军事行动，安保政策与民意之间的鸿沟持续扩大，长期可能动摇执政基础。</p>
+    <div class="text-xs font-bold" style="color:var(--amber);"><i class="fas fa-chart-line mr-1"></i> 关注指标：<span style="color:var(--text2);font-weight:400;">中国军事活动频率（台海、东海）、周边国家军费变化、日本内阁支持率、安保相关民调数据</span></div>
+  </div>
+
+  <!-- Risk 5 -->
+  <div class="risk-card">
+    <div class="flex items-center gap-3 mb-3">
+      <span class="text-2xl" style="color:var(--danger);"><i class="fas fa-users-slash"></i></span>
+      <h3 class="font-serif text-lg font-bold" style="color:var(--amber);">⚠️ 风险五：人口危机加速恶化，经济社会可持续性面临根本性挑战</h3>
+    </div>
+    <p class="text-sm leading-relaxed mb-3" style="color:var(--text);">出生人数连续10年新低（705,809人）、30岁以下62.6%不愿生育、空屋超900万套、孤独死半年超4万人。OECD预测经济增速放缓70%，劳动力短缺与入管政策收紧的矛盾将进一步加剧，部分地方可能出现公共服务崩溃。</p>
+    <div class="text-xs font-bold" style="color:var(--amber);"><i class="fas fa-chart-line mr-1"></i> 关注指标：<span style="color:var(--text2);font-weight:400;">月度出生人数、特定技能签证申请量、地方自治体财政健全度、空屋增长率</span></div>
+  </div>
+</section>
+<!-- ===== UPCOMING ITEMS ===== -->
+<section id="upcoming" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num" style="background:rgba(56,189,248,.1);color:var(--ice);"><i class="fas fa-binoculars"></i></span>
+    <h2 class="section-title">下期关注</h2>
+  </div>
+
+  <div class="upcoming-card">
+    <div class="upcoming-date"><i class="fas fa-calendar-day mr-1"></i> 4月28日（日银政策会议）</div>
+    <p class="text-sm leading-relaxed" style="color:var(--text);">日本央行将在此次会议上评估中东冲突对经济的影响并决定是否加息，市场预计加息概率约60%。若加息至1%，将对日元汇率、企业融资成本和房地产市场产生重大影响。</p>
+  </div>
+
+  <div class="upcoming-card">
+    <div class="upcoming-date"><i class="fas fa-calendar-day mr-1"></i> 4月下旬-5月上旬（安保3文档改定有识者会议启动）</div>
+    <p class="text-sm leading-relaxed" style="color:var(--text);">4月下旬设立的有识者会议将开始讨论安保3文档年内改定方案，涉及防卫力整备计划、国家安全保障战略等核心文件修订，将决定日本未来5-10年的安保政策方向。</p>
+  </div>
+
+  <div class="upcoming-card">
+    <div class="upcoming-date"><i class="fas fa-calendar-day mr-1"></i> 5月中旬（自民党安保产业政策提言汇总）</div>
+    <p class="text-sm leading-relaxed" style="color:var(--text);">自民党计划5月末汇总安保相关产业政策提言，内容将纳入6月"骨太方针"，涉及防卫产业育成、武器出口规则、经济安保强化等，对中资企业在日投资环境有直接影响。</p>
+  </div>
+
+  <div class="upcoming-card">
+    <div class="upcoming-date"><i class="fas fa-calendar-day mr-1"></i> 4月-5月（石油储备追加释放决策）</div>
+    <p class="text-sm leading-relaxed" style="color:var(--text);">石油联盟已要求5月追加释放国家储备，政府需评估首轮8000万桶释放效果并决定后续措施。若中东局势未缓和，可能启动G7联合储备释放机制。</p>
+  </div>
+
+  <div class="upcoming-card">
+    <div class="upcoming-date"><i class="fas fa-calendar-day mr-1"></i> 4月中旬（皇室典范改正协商重启）</div>
+    <p class="text-sm leading-relaxed" style="color:var(--text);">4月15日与野党全体会议将重启皇位继承相关协商，讨论女性皇族婚后保留身份等议题，涉及日本国体根本制度，政治敏感度极高。</p>
+  </div>
+</section>
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="max-w-5xl mx-auto mb-16 reveal">
+  <div class="section-header">
+    <span class="section-num" style="background:rgba(16,185,129,.1);color:var(--success);"><i class="fas fa-file-alt"></i></span>
+    <h2 class="section-title">全文总结</h2>
+  </div>
+
+  <!-- 政治环境概述 -->
+  <div class="summary-block">
+    <h4><i class="fas fa-landmark mr-2"></i>政治环境概述</h4>
+    <p>2026年3月的日本政治格局呈现"强政府、弱共识"的特征。高市早苗凭借众院316席绝对多数和61%-71%的内阁支持率强势推进修宪、防卫增税、武器出口解禁等重大政策议程，但参院少数执政导致11年来首次临时预算，预算审议仅59小时引发"强行推进"批评。中道改革联合从172席锐减至49席、支持率仅2%，在野党力量严重碎片化，无法形成有效制衡。自民党与维新会的联合执政在宪法修改、防卫政策上高度一致，但维新会内部在大阪都构想上存在分歧，部分议员担忧过快推进可能波及国政。地方选举中共产党籍候选人在清濑市当选（东京都内时隔30年），反映出基层民众对执政党政策的不满情绪。入管政策大幅收紧（归化居住要件从5年延至10年、手续费上调至10万日元）与劳动力短缺现实之间的矛盾日益尖锐。同性婚姻诉讼提交最高裁大法庭、离婚后共同亲权制度施行等司法进展，显示日本社会在保守政治主导下仍在缓慢推进权利保障。总体而言，高市政权短期执政基础稳固，但安保政策激进转型与民意之间的张力、财政扩张与增税并行的内在矛盾，构成中长期政治风险。</p>
+  </div>
+
+  <!-- 经济发展概述 -->
+  <div class="summary-block">
+    <h4><i class="fas fa-chart-area mr-2"></i>经济发展概述</h4>
+    <p>日本经济正处于"内忧外患"的复杂局面。外部冲击方面，中东冲突导致原油价格突破100美元/桶，日经平均一度下跌4200日元，汽油价格创36年新高，政府被迫启动史上最大规模石油储备释放（8000万桶）。4月起2516项食品涨价、电费燃气费上调，普通家庭年负担增加超5万日元。内部结构方面，2026年度预算122.31万亿日元创历史新高，发行29.58万亿日元新债券，财政状况G7最差，政府更放弃单年度财政收支黑字目标。积极信号是企业加薪5.26%为35年最高，失业率降至2.6%，但中东冲击可能中断工资-物价良性循环。日元贬值至160关口，日银维持利率0.75%面临两难——加息抑制通胀但打击经济，不加息则日元继续贬值推高进口成本。食品消费税零税率政策（年减5万亿日元税收）引发外食产业强烈反对和财源争议。中国对日稀土出口管制（环比减少21.1%）和军民两用产品禁令正重塑供应链格局。OECD预测日本经济增速将较前20年放缓70%，人口缩减和老龄化构成最根本的长期制约。</p>
+  </div>
+  <!-- 营商环境洞察 -->
+  <div class="summary-block">
+    <h4><i class="fas fa-briefcase mr-2"></i>营商环境洞察</h4>
+    <ul class="fact-list" style="margin-top:8px;">
+      <li><strong style="color:var(--amber);">外资审查收紧：</strong>设立日本版CFIUS强化外国投资审查，受外国政府指示的国内投资者需事前申报，对中资企业在日投资构成直接合规门槛</li>
+      <li><strong style="color:var(--amber);">防卫增税影响：</strong>4月起法人税上调（中小微企业除外），2027年所得税上调，企业税负增加；但防卫产业和军民两用技术领域将获得政策倾斜和财政支持</li>
+      <li><strong style="color:var(--amber);">经济安保法修订：</strong>关键矿物、半导体、海底电缆等纳入特定重要物资，相关领域外资参与将面临更严格审查</li>
+      <li><strong style="color:var(--amber);">劳动力市场：</strong>失业率2.6%、求人倍率1.19反映极度紧张，企业加薪5.26%推高用工成本，但外国劳工政策收紧（归化要件延至10年）限制了人才引进</li>
+      <li><strong style="color:var(--amber);">能源成本：</strong>汽油价格创36年新高，电费燃气费上调，企业运营成本显著增加，尤其影响制造业和物流业</li>
+      <li><strong style="color:var(--amber);">消费市场：</strong>食品消费税零税率政策若落地，将改变零售和外食行业竞争格局；2516项食品涨价和家庭负担增加抑制消费意愿</li>
+      <li><strong style="color:var(--amber);">核电产业机遇：</strong>核电重启加速，三菱重工核电部门销售额预计达4000亿日元，SMR建设倡议启动，核电相关设备和技术领域存在合作机会</li>
+    </ul>
+  </div>
+
+  <!-- 中资企业建议 -->
+  <div class="summary-block" style="border-left-color:var(--amber);">
+    <h4 style="color:var(--amber);"><i class="fas fa-lightbulb mr-2"></i>中资企业建议</h4>
+    <ul class="fact-list" style="margin-top:8px;">
+      <li><strong style="color:var(--ice);">能源与资源领域：</strong>日本90%以上原油依赖中东进口，正加速推进能源供应多元化和核电重启（33台中仅15台在线），中资企业可关注LNG供应链（10年万亿日元投资计划）、核电设备零部件、可再生能源等领域的合作机会，但需注意经济安保法对能源领域外资参与的审查趋严。</li>
+      <li><strong style="color:var(--ice);">高科技与稀土领域：</strong>中国已点名禁止20家日本团体出口军民两用产品，稀土出口环比减少21.1%。中资企业应评估自身是否在禁令名单内，梳理对日供应链敞口，做好合规预案。同时关注日本加速稀土替代来源开发（日加国防能源协议）可能带来的市场份额流失风险。</li>
+      <li><strong style="color:var(--ice);">制造业与产业合作：</strong>日本企业加薪5.26%推高用工成本，劳动力短缺（失业率2.6%）持续加剧，中资制造企业可关注自动化、机器人等领域的技术合作需求。福岛创新海岸构想已实现约130件新技术商业化、5000个就业岗位，机器人和无人机领域存在产业合作空间。</li>
+      <li><strong style="color:var(--ice);">消费与服务领域：</strong>中国驻日大使馆建议公民避免赴日旅游，中国赴日游客可能大幅减少，依赖中国客源的旅游、零售、酒店等行业面临冲击。IR（综合度假村）扩大申请受理（北海道、爱知县表达意向），但中资参与需评估政治敏感性和外资审查风险。</li>
+      <li><strong style="color:var(--ice);">医疗健康领域：</strong>全球首两款iPS细胞再生医疗产品在日获批（心衰、帕金森），后发药品供应不足，医疗领域纳入经济安保关键基础设施范畴。中资医药企业可关注再生医疗技术合作和仿制药供应机会，但需注意医疗领域外资审查可能趋严。</li>
+      <li><strong style="color:var(--ice);">合规风险管理：</strong>日本版CFIUS设立后，中资企业在日投资（尤其涉及半导体、关键矿物、通信基础设施等领域）将面临更严格的事前审查。建议提前梳理在日投资组合，评估是否涉及"特定重要物资"或"关键基础设施"领域，必要时聘请日本本地法律顾问进行合规评估。</li>
+      <li><strong style="color:var(--ice);">政治风险对冲：</strong>中日关系因"台湾有事"表态持续紧张，中国对日出口管制可能进一步扩大。建议中资企业建立"情景规划"机制，针对中日关系恶化（如台海危机升级）制定供应链替代方案和人员撤离预案。同时密切关注5月自民党安保产业政策提言和6月"骨太方针"中涉及外资和经济安保的政策动向。</li>
+    </ul>
+  </div>
+</section>
+<!-- ===== FOOTER ===== -->
+<footer class="max-w-5xl mx-auto py-12 border-t" style="border-color:rgba(56,189,248,.1);">
+  <div class="text-center">
+    <div class="mb-4">
+      <span class="font-serif text-lg font-bold" style="color:var(--ice);">日本国别洞察月报</span>
+    </div>
+    <div class="text-sm mb-2" style="color:var(--text2);">
+      <i class="fas fa-user-tie mr-1" style="color:var(--amber);"></i> 出品方：Supinfor Ltd. &nbsp;|&nbsp;
+      <i class="fas fa-calendar-alt mr-1" style="color:var(--amber);"></i> 发布日期：2026年4月24日
+    </div>
+    <p class="text-xs mt-4" style="color:var(--text2);opacity:.7;">
+      本报告基于 日本国别月报 2026-03 编制，仅供参考，不构成投资或决策建议。
+    </p>
+    <p class="text-xs mt-1" style="color:var(--text2);opacity:.7;">
+      © Supinfor Ltd.
+    </p>
+  </div>
+</footer>
+
+</main><!-- end main-content -->
+
+<!-- Back to Top Button -->
+<button class="back-top" id="backTop" aria-label="返回顶部">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<script>
+// ===== THEME TOGGLE =====
+const themeToggle = document.getElementById('themeToggle');
+const html = document.documentElement;
+const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+
+function setTheme(theme) {
+  html.setAttribute('data-theme', theme);
+  themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+  localStorage.setItem('theme', theme);
+}
+
+// Init theme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme) { setTheme(savedTheme); }
+else { setTheme(prefersDark.matches ? 'dark' : 'light'); }
+
+themeToggle.addEventListener('click', () => {
+  const current = html.getAttribute('data-theme');
+  setTheme(current === 'dark' ? 'light' : 'dark');
+});
+
+// ===== MOBILE SIDEBAR =====
+const sidebar = document.getElementById('sidebar');
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const sidebarOverlay = document.getElementById('sidebarOverlay');
+
+mobileMenuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('open');
+  sidebarOverlay.classList.toggle('show');
+});
+sidebarOverlay.addEventListener('click', () => {
+  sidebar.classList.remove('open');
+  sidebarOverlay.classList.remove('show');
+});
+// Close sidebar on nav click (mobile)
+sidebar.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    if (window.innerWidth <= 1024) {
+      sidebar.classList.remove('open');
+      sidebarOverlay.classList.remove('show');
+    }
+  });
+});
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+  });
+});
+
+// ===== BACK TO TOP =====
+const backTop = document.getElementById('backTop');
+window.addEventListener('scroll', () => {
+  backTop.classList.toggle('show', window.scrollY > 600);
+});
+backTop.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+// ===== INTERSECTION OBSERVER (Reveal + Active Nav) =====
+const revealElements = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => { entry.target.classList.add('visible'); }, i * 100);
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+revealElements.forEach(el => revealObserver.observe(el));
+
+// Active nav highlight
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.sidebar a');
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+      });
+    }
+  });
+}, { rootMargin: '-20% 0px -70% 0px' });
+sections.forEach(section => navObserver.observe(section));
+
+// ===== LANGUAGE TOGGLE =====
+const langToggle = document.getElementById('langToggle');
+langToggle.addEventListener('click', () => {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-lang');
+  const next = current === 'zh' ? 'en' : 'zh';
+  html.setAttribute('data-lang', next);
+  html.setAttribute('lang', next === 'zh' ? 'zh-CN' : 'en');
+  langToggle.innerHTML = next === 'zh' ? '<span style="font-size:12px;font-weight:700;">EN</span>' : '<span style="font-size:12px;font-weight:700;">中</span>';
+  localStorage.setItem('lang', next);
+});
+// Restore language preference
+const savedLang = localStorage.getItem('lang');
+if (savedLang) {
+  document.documentElement.setAttribute('data-lang', savedLang);
+  document.documentElement.setAttribute('lang', savedLang === 'zh' ? 'zh-CN' : 'en');
+  langToggle.innerHTML = savedLang === 'zh' ? '<span style="font-size:12px;font-weight:700;">EN</span>' : '<span style="font-size:12px;font-weight:700;">中</span>';
+}
+</script>
+</body>
+</html>

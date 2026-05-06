@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="zh-CN" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-zh="印度 区域国别洞察报告 · 2026年3月 | Supinfor" data-en="India Country Insight Report · March 2026 | Supinfor">印度 区域国别洞察报告 · 2026年3月 | Supinfor</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['"Playfair Display"', 'serif'],
+        serif: ['"Noto Serif SC"', 'Georgia', 'serif'],
+        sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif']
+      },
+      colors: {
+        indigo: { 950: '#1e1b4b' },
+        amber: { gold: '#f59e0b' },
+        ice: { blue: '#38bdf8' }
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ===== BASE ===== */
+:root { --c-indigo: #1e1b4b; --c-amber: #f59e0b; --c-ice: #38bdf8; }
+</style>
+<style>
+/* ===== DARK MESH BG ===== */
+.bg-mesh-dark {
+  background-color: #0c0a1f;
+  background-image:
+    radial-gradient(at 15% 20%, rgba(30,27,75,.9) 0, transparent 55%),
+    radial-gradient(at 85% 80%, rgba(56,189,248,.07) 0, transparent 50%),
+    radial-gradient(at 50% 50%, rgba(245,158,11,.04) 0, transparent 60%);
+}
+.bg-mesh-light {
+  background-color: #f8fafc;
+  background-image:
+    radial-gradient(at 15% 20%, rgba(30,27,75,.03) 0, transparent 55%),
+    radial-gradient(at 85% 80%, rgba(56,189,248,.04) 0, transparent 50%);
+}
+/* ===== GEO PATTERN OVERLAY ===== */
+.geo-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+/* ===== GLASSMORPHISM CARD ===== */
+.glass-card {
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s ease, border-color .35s ease;
+}
+.glass-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px rgba(56,189,248,.12);
+  border-color: rgba(56,189,248,.2);
+}
+.light .glass-card, html:not(.dark) .glass-card {
+  background: rgba(255,255,255,0.85);
+  border-color: rgba(0,0,0,0.08);
+}
+html:not(.dark) .glass-card:hover {
+  box-shadow: 0 12px 40px rgba(30,27,75,.1);
+  border-color: rgba(30,27,75,.15);
+}
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #1e1b4b, #f59e0b); border-radius: 3px; }
+html:not(.dark) ::-webkit-scrollbar-thumb { background: linear-gradient(180deg, #6366f1, #f59e0b); }
+/* ===== ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(40px); transition: opacity .7s cubic-bezier(.4,0,.2,1), transform .7s cubic-bezier(.4,0,.2,1); }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+/* stagger children */
+.reveal-stagger > .reveal:nth-child(1) { transition-delay: .05s; }
+.reveal-stagger > .reveal:nth-child(2) { transition-delay: .12s; }
+.reveal-stagger > .reveal:nth-child(3) { transition-delay: .19s; }
+.reveal-stagger > .reveal:nth-child(4) { transition-delay: .26s; }
+.reveal-stagger > .reveal:nth-child(5) { transition-delay: .33s; }
+.reveal-stagger > .reveal:nth-child(6) { transition-delay: .40s; }
+/* ===== SECTION HEADER ===== */
+.section-title { font-family: 'Playfair Display', 'Noto Serif SC', serif; }
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #f59e0b, transparent);
+  border-radius: 2px;
+  margin-top: 12px;
+}
+/* ===== CSS BAR CHART ===== */
+.bar-chart-bar {
+  height: 28px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #38bdf8, #818cf8);
+  transition: width 1.2s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.bar-chart-bar span {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+  white-space: nowrap;
+}
+/* ===== RISK SEVERITY ===== */
+.severity-bar {
+  height: 6px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.severity-fill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 1s ease;
+}
+/* ===== TIMELINE ===== */
+.timeline-line {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #f59e0b, #38bdf8, #1e1b4b);
+}
+.timeline-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 3px solid;
+  position: absolute;
+  left: 9px;
+  top: 4px;
+  z-index: 2;
+}
+/* ===== TOC SIDEBAR ===== */
+#toc-panel {
+  transform: translateX(-100%);
+  transition: transform .35s cubic-bezier(.4,0,.2,1);
+}
+#toc-panel.open { transform: translateX(0); }
+/* ===== BACK TO TOP ===== */
+#back-to-top {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+#back-to-top.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+/* ===== STAT GLOW ===== */
+.stat-glow {
+  text-shadow: 0 0 20px rgba(56,189,248,.4);
+}
+html:not(.dark) .stat-glow {
+  text-shadow: none;
+  color: #1e1b4b;
+}
+/* ===== MISC ===== */
+* { transition: background-color .25s, color .25s, border-color .25s; }
+.text-gradient-amber {
+  background: linear-gradient(135deg, #f59e0b, #fbbf24);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.text-gradient-ice {
+  background: linear-gradient(135deg, #38bdf8, #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+</style>
+</head>
+<body class="bg-mesh-light dark:bg-mesh-dark text-gray-900 dark:text-gray-100 font-sans antialiased">
+
+<!-- ========== TOC SIDEBAR ========== -->
+<div id="toc-overlay" class="fixed inset-0 bg-black/50 z-[200] hidden" onclick="toggleTOC()"></div>
+<nav id="toc-panel" class="fixed top-0 left-0 h-full w-72 z-[201] bg-white/95 dark:bg-[#0f0d2e]/95 backdrop-blur-xl border-r border-gray-200 dark:border-white/10 overflow-y-auto p-6">
+  <div class="flex items-center justify-between mb-6">
+    <h3 class="font-serif font-bold text-lg" data-zh="目录导航" data-en="Table of Contents">目录导航</h3>
+    <button onclick="toggleTOC()" class="w-8 h-8 rounded-lg bg-gray-100 dark:bg-white/10 flex items-center justify-center"><i class="fas fa-times text-sm"></i></button>
+  </div>
+  <ul class="space-y-1 text-sm" id="toc-list">
+    <li><a href="#hero" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-flag mr-2 text-amber-500"></i><span data-zh="报告概览" data-en="Report Overview">报告概览</span></a></li>
+    <li><a href="#core-insights" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-lightbulb mr-2 text-amber-500"></i><span data-zh="核心洞察摘要" data-en="Core Insights Summary">核心洞察摘要</span></a></li>
+    <li><a href="#section1" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-fire mr-2 text-red-500"></i><span data-zh="一、西亚冲突与能源安全" data-en="I. West Asia Conflict & Energy Security">一、西亚冲突与能源安全</span></a></li>
+    <li><a href="#section2" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-globe mr-2 text-blue-500"></i><span data-zh="二、外交政策的多重困境" data-en="II. Multiple Diplomatic Dilemmas">二、外交政策的多重困境</span></a></li>
+    <li><a href="#section3" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-vote-yea mr-2 text-purple-500"></i><span data-zh="三、选举政治与治理变革" data-en="III. Electoral Politics & Governance Reform">三、选举政治与治理变革</span></a></li>
+    <li><a href="#section4" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-microchip mr-2 text-cyan-500"></i><span data-zh="四、产业与科技发展" data-en="IV. Industry & Technology Development">四、产业与科技发展</span></a></li>
+    <li><a href="#section5" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-shield-alt mr-2 text-green-500"></i><span data-zh="五、国防与内部安全" data-en="V. Defense & Internal Security">五、国防与内部安全</span></a></li>
+    <li><a href="#risk-alerts" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-exclamation-triangle mr-2 text-red-500"></i><span data-zh="风险警示" data-en="Risk Alerts">风险警示</span></a></li>
+    <li><a href="#next-watch" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-binoculars mr-2 text-amber-500"></i><span data-zh="下期关注" data-en="Upcoming Watch">下期关注</span></a></li>
+    <li><a href="#full-summary" class="block py-2 px-3 rounded-lg hover:bg-gray-100 dark:hover:bg-white/5 transition-colors"><i class="fas fa-file-alt mr-2 text-indigo-500"></i><span data-zh="全文总结" data-en="Full Summary">全文总结</span></a></li>
+  </ul>
+</nav>
+
+<!-- ========== FLOATING BUTTONS ========== -->
+<!-- TOC Toggle -->
+<button onclick="toggleTOC()" class="fixed top-5 left-5 z-[100] w-11 h-11 rounded-full bg-white/90 dark:bg-[#1e1b4b]/90 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-white/10 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Toggle TOC">
+  <i class="fas fa-bars text-gray-600 dark:text-amber-400"></i>
+</button>
+<!-- Language Toggle -->
+<button id="lang-toggle" class="fixed top-5 right-[72px] z-[100] w-11 h-11 rounded-full bg-white/90 dark:bg-gray-800/90 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-gray-700 flex items-center justify-center hover:scale-110 transition-transform text-sm font-bold text-gray-600 dark:text-gray-300" aria-label="Toggle language">EN</button>
+<!-- Theme Toggle -->
+<button id="theme-toggle" class="fixed top-5 right-5 z-[100] w-11 h-11 rounded-full bg-white/90 dark:bg-[#1e1b4b]/90 backdrop-blur-lg shadow-lg border border-gray-200 dark:border-white/10 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Toggle theme">
+  <i class="fas fa-moon text-gray-600 dark:hidden"></i>
+  <i class="fas fa-sun hidden dark:block text-amber-400"></i>
+</button>
+<!-- Back to Top -->
+<button id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-8 right-8 z-[100] w-12 h-12 rounded-full bg-gradient-to-br from-amber-500 to-amber-600 text-white shadow-lg shadow-amber-500/30 flex items-center justify-center hover:scale-110 transition-transform" aria-label="Back to top">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- ========================================== -->
+<!-- ============= HERO SECTION =============== -->
+<!-- ========================================== -->
+<header id="hero" class="relative min-h-screen flex items-center overflow-hidden">
+  <!-- BG layers -->
+  <div class="absolute inset-0 bg-gradient-to-br from-[#0c0a1f] via-[#1e1b4b] to-[#1a103c]"></div>
+  <div class="absolute inset-0 geo-pattern"></div>
+  <!-- Decorative orbs -->
+  <div class="absolute top-20 left-10 w-80 h-80 bg-amber-500/10 rounded-full blur-[120px]"></div>
+  <div class="absolute bottom-20 right-10 w-96 h-96 bg-sky-500/8 rounded-full blur-[140px]"></div>
+  <div class="absolute top-1/3 right-1/4 w-64 h-64 bg-indigo-500/15 rounded-full blur-[100px]"></div>
+  <!-- Grid lines decoration -->
+  <div class="absolute inset-0 opacity-[.04]" style="background-image: linear-gradient(rgba(255,255,255,.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.1) 1px, transparent 1px); background-size: 80px 80px;"></div>
+
+  <div class="relative w-full max-w-6xl mx-auto px-6 sm:px-8 py-32">
+    <!-- Eyebrow -->
+    <div class="flex items-center gap-3 mb-6 reveal">
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md text-amber-300 text-sm font-medium border border-amber-500/20">
+        <i class="fas fa-satellite-dish"></i> INTELLIGENCE BRIEFING
+      </span>
+      <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md text-sky-300 text-sm font-medium border border-sky-500/20">
+        <i class="far fa-calendar-alt"></i> <span data-zh="2026年3月" data-en="March 2026">2026年3月</span>
+      </span>
+    </div>
+    <!-- Title -->
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-8xl font-black text-white leading-[1.05] tracking-tight mb-4 reveal">
+      <span data-zh="印度" data-en="India">印度</span><br>
+      <span class="text-gradient-amber" data-zh="区域国别洞察报告" data-en="Country Insight Report">区域国别洞察报告</span>
+    </h1>
+    <p class="text-lg sm:text-xl text-indigo-200/70 max-w-2xl mb-12 reveal" style="transition-delay:.15s">
+      <span data-zh="基于265条资讯 · 48个关联簇 · 53条洞察提炼" data-en="Based on 265 news items · 48 correlation clusters · 53 insights extracted">基于265条资讯 · 48个关联簇 · 53条洞察提炼</span><br>
+      <span data-zh="分析日期：2026年4月24日 · 出品方：Supinfor Ltd." data-en="Analysis date: April 24, 2026 · Produced by: Supinfor Ltd.">分析日期：2026年4月24日 · 出品方：Supinfor Ltd.</span>
+    </p>
+
+    <!-- 4 Hero Stat Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 reveal-stagger">
+      <!-- Stat 1 -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 text-center reveal">
+        <div class="text-4xl sm:text-5xl font-black stat-glow text-sky-300 mb-1">265</div>
+        <div class="text-xs sm:text-sm text-gray-400 dark:text-indigo-300/60" data-zh="条资讯" data-en="News Items">条资讯</div>
+        <div class="mt-3 w-full h-1 rounded bg-sky-500/20"><div class="h-full rounded bg-sky-400" style="width:100%"></div></div>
+      </div>
+      <!-- Stat 2 -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 text-center reveal">
+        <div class="text-4xl sm:text-5xl font-black stat-glow text-amber-300 mb-1">48</div>
+        <div class="text-xs sm:text-sm text-gray-400 dark:text-indigo-300/60" data-zh="个关联簇" data-en="Correlation Clusters">个关联簇</div>
+        <div class="mt-3 w-full h-1 rounded bg-amber-500/20"><div class="h-full rounded bg-amber-400" style="width:72%"></div></div>
+      </div>
+      <!-- Stat 3 -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 text-center reveal">
+        <div class="text-4xl sm:text-5xl font-black stat-glow text-sky-300 mb-1">53</div>
+        <div class="text-xs sm:text-sm text-gray-400 dark:text-indigo-300/60" data-zh="条洞察" data-en="Insights">条洞察</div>
+        <div class="mt-3 w-full h-1 rounded bg-sky-500/20"><div class="h-full rounded bg-sky-400" style="width:85%"></div></div>
+      </div>
+      <!-- Stat 4 -->
+      <div class="glass-card rounded-2xl p-5 sm:p-6 text-center reveal">
+        <div class="text-4xl sm:text-5xl font-black stat-glow text-amber-300 mb-1">6</div>
+        <div class="text-xs sm:text-sm text-gray-400 dark:text-indigo-300/60" data-zh="条核心摘要" data-en="Core Summaries">条核心摘要</div>
+        <div class="mt-3 w-full h-1 rounded bg-amber-500/20"><div class="h-full rounded bg-amber-400" style="width:45%"></div></div>
+      </div>
+    </div>
+  </div>
+  <!-- Bottom fade -->
+  <div class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-gray-50 dark:from-[#0c0a1f]"></div>
+</header>
+
+<!-- ========================================== -->
+<!-- ========= CORE INSIGHTS SUMMARY ========== -->
+<!-- ========================================== -->
+<section id="core-insights" class="relative py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <h2 class="section-title text-3xl sm:text-4xl font-black mb-12 reveal" data-zh="核心洞察摘要" data-en="Core Insights Summary">核心洞察摘要</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5 reveal-stagger">
+      <!-- Insight 1 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-red-500/20 flex items-center justify-center"><i class="fas fa-fire text-red-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-red-400 bg-red-500/10 px-2 py-1 rounded" data-zh="能源危机" data-en="Energy Crisis">能源危机</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="西亚冲突全面冲击印度能源安全与经济基本面：霍尔木兹海峡航运中断导致LPG供应危机，孟买20%餐厅停业，古吉拉特170家瓷砖厂关闭，约1000万人面临失业风险，Sensex暴跌超2500点，卢比贬至92.18历史低位" data-en="West Asia conflict severely impacts India's energy security and economic fundamentals: Strait of Hormuz shipping disruption triggers LPG supply crisis, 20% of Mumbai restaurants shut down, 170 tile factories in Gujarat closed, approximately 10 million people face unemployment risk, Sensex plunges over 2,500 points, Rupee depreciates to historic low of 92.18">西亚冲突全面冲击印度能源安全与经济基本面：霍尔木兹海峡航运中断导致LPG供应危机，孟买20%餐厅停业，古吉拉特170家瓷砖厂关闭，约1000万人面临失业风险，Sensex暴跌超2500点，卢比贬至92.18历史低位</p>
+      </div>
+      <!-- Insight 2 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center"><i class="fas fa-globe text-blue-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-400 bg-blue-500/10 px-2 py-1 rounded" data-zh="外交困境" data-en="Diplomatic Dilemma">外交困境</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="莫迪政府外交政策遭遇多方夹击：国大党批评其作为BRICS+主席国对美以空袭伊朗保持沉默，美国"许可式"豁免印度进口俄油被视为损害战略自主，查巴哈尔港项目因制裁陷入不确定性" data-en="Modi government's foreign policy faces pressure from multiple fronts: Congress Party criticizes silence as BRICS+ chair on US-Israel airstrikes on Iran, US 'permission-based' exemption for India's Russian oil imports seen as undermining strategic autonomy, Chabahar port project faces uncertainty due to sanctions">莫迪政府外交政策遭遇多方夹击：国大党批评其作为BRICS+主席国对美以空袭伊朗保持沉默，美国"许可式"豁免印度进口俄油被视为损害战略自主，查巴哈尔港项目因制裁陷入不确定性</p>
+      </div>
+      <!-- Insight 3 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center"><i class="fas fa-vote-yea text-purple-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-purple-400 bg-purple-500/10 px-2 py-1 rounded" data-zh="选举政治" data-en="Electoral Politics">选举政治</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="多邦议会选举密集展开，福利承诺竞赛加剧财政压力：泰米尔纳德邦、阿萨姆邦、喀拉拉邦同期选举，邦级福利支出五年增长五倍至1.7万亿卢比，最高法院警告不能仅靠免费福利" data-en="Multiple state assembly elections unfold simultaneously, welfare promise competition intensifies fiscal pressure: Tamil Nadu, Assam, Kerala hold concurrent elections, state-level welfare spending grows fivefold in five years to ₹1.7 trillion, Supreme Court warns against relying solely on free welfare">多邦议会选举密集展开，福利承诺竞赛加剧财政压力：泰米尔纳德邦、阿萨姆邦、喀拉拉邦同期选举，邦级福利支出五年增长五倍至1.7万亿卢比，最高法院警告不能仅靠免费福利</p>
+      </div>
+      <!-- Insight 4 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-cyan-500/20 flex items-center justify-center"><i class="fas fa-microchip text-cyan-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded" data-zh="科技战略" data-en="Tech Strategy">科技战略</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="AI与半导体成为国家战略核心：国家AI任务五年预算10372亿卢比，古吉拉特第二座半导体工厂启动量产，但研发支出仅占GDP 0.64%远低于全球平均" data-en="AI and semiconductors become core national strategy: National AI Mission five-year budget of ₹1,037.2 billion, Gujarat's second semiconductor factory begins mass production, but R&D spending at only 0.64% of GDP is far below global average">AI与半导体成为国家战略核心：国家AI任务五年预算10372亿卢比，古吉拉特第二座半导体工厂启动量产，但研发支出仅占GDP 0.64%远低于全球平均</p>
+      </div>
+      <!-- Insight 5 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-green-500/20 flex items-center justify-center"><i class="fas fa-shield-alt text-green-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-green-400 bg-green-500/10 px-2 py-1 rounded" data-zh="内部安全" data-en="Internal Security">内部安全</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="毛主义叛乱宣告终结：受影响地区从106个降至6个，恰蒂斯加尔邦宣称武装纳萨尔主义已彻底终结，超3000人投降" data-en="Maoist insurgency declared over: Affected districts reduced from 106 to 6, Chhattisgarh declares armed Naxalism completely ended, over 3,000 surrendered">毛主义叛乱宣告终结：受影响地区从106个降至6个，恰蒂斯加尔邦宣称武装纳萨尔主义已彻底终结，超3000人投降</p>
+      </div>
+      <!-- Insight 6 -->
+      <div class="glass-card rounded-2xl p-6 reveal">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center"><i class="fas fa-fighter-jet text-amber-400"></i></span>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 px-2 py-1 rounded" data-zh="国防自主" data-en="Defense Autonomy">国防自主</span>
+        </div>
+        <p class="text-sm leading-relaxed text-gray-700 dark:text-gray-300" data-zh="印度国防自主化面临结构性瓶颈：长期依赖俄法以美进口装备，本土军工交付周期过长，美以伊冲突敲响警钟" data-en="India's defense indigenization faces structural bottlenecks: Long-term dependence on imported equipment from Russia, France, Israel, and the US, domestic defense industry delivery cycles too long, US-Israel-Iran conflict sounds alarm">印度国防自主化面临结构性瓶颈：长期依赖俄法以美进口装备，本土军工交付周期过长，美以伊冲突敲响警钟</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-amber-500/30 to-transparent"></div></div>
+
+<!-- ========================================== -->
+<!-- ====== SECTION 1: 西亚冲突与能源安全 ====== -->
+<!-- ========================================== -->
+<section id="section1" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="flex items-center gap-4 mb-10 reveal">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white text-xl shadow-lg shadow-red-500/25"><i class="fas fa-fire"></i></div>
+      <div>
+        <h2 class="section-title text-3xl sm:text-4xl font-black" data-zh="一、西亚冲突与能源安全危机" data-en="I. West Asia Conflict & Energy Security Crisis">一、西亚冲突与能源安全危机</h2>
+      </div>
+    </div>
+
+    <!-- 1.1 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="1.1 霍尔木兹海峡航运中断引发系统性能源危机" data-en="1.1 Strait of Hormuz Shipping Disruption Triggers Systemic Energy Crisis">1.1 霍尔木兹海峡航运中断引发系统性能源危机</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3 mb-4">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="美以对伊朗的军事行动导致印度约60%的LPG进口和90%的原油进口通道受阻，暴露了印度能源安全的结构性脆弱。政府虽采取多项应急措施，但危机已从能源端传导至制造业、餐饮业和资本市场。" data-en="US-Israel military operations against Iran have blocked approximately 60% of India's LPG imports and 90% of crude oil import routes, exposing the structural vulnerability of India's energy security. Despite multiple emergency measures by the government, the crisis has spread from the energy sector to manufacturing, food service, and capital markets.">美以对伊朗的军事行动导致印度约60%的LPG进口和90%的原油进口通道受阻，暴露了印度能源安全的结构性脆弱。政府虽采取多项应急措施，但危机已从能源端传导至制造业、餐饮业和资本市场。</span></p>
+        </div>
+      </div>
+
+      <!-- CSS Bar Chart: Impact Data -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-6"><i class="fas fa-chart-bar mr-2"></i><span data-zh="冲击影响数据可视化" data-en="Impact Data Visualization">冲击影响数据可视化</span></h4>
+        <div class="space-y-5">
+          <div>
+            <div class="flex justify-between text-xs mb-1"><span class="text-gray-500 dark:text-gray-400" data-zh="孟买餐厅停业率" data-en="Mumbai Restaurant Closure Rate">孟买餐厅停业率</span><span class="font-bold text-red-400">20%</span></div>
+            <div class="w-full h-7 rounded bg-gray-200/50 dark:bg-white/5 overflow-hidden"><div class="bar-chart-bar" style="width:20%"><span>20%</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1"><span class="text-gray-500 dark:text-gray-400" data-zh="古吉拉特瓷砖厂关闭" data-en="Gujarat Tile Factories Closed">古吉拉特瓷砖厂关闭</span><span class="font-bold text-red-400" data-zh="170家" data-en="170">170家</span></div>
+            <div class="w-full h-7 rounded bg-gray-200/50 dark:bg-white/5 overflow-hidden"><div class="bar-chart-bar" style="width:68%"><span data-zh="170家" data-en="170">170家</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1"><span class="text-gray-500 dark:text-gray-400" data-zh="Sensex暴跌" data-en="Sensex Plunge">Sensex暴跌</span><span class="font-bold text-red-400" data-zh="-2500+ 点" data-en="-2500+ pts">-2500+ 点</span></div>
+            <div class="w-full h-7 rounded bg-gray-200/50 dark:bg-white/5 overflow-hidden"><div class="bar-chart-bar" style="width:85%; background: linear-gradient(90deg, #ef4444, #f97316);"><span>-2500+</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1"><span class="text-gray-500 dark:text-gray-400" data-zh="卢比汇率（历史低位）" data-en="Rupee Exchange Rate (Historic Low)">卢比汇率（历史低位）</span><span class="font-bold text-red-400">92.18</span></div>
+            <div class="w-full h-7 rounded bg-gray-200/50 dark:bg-white/5 overflow-hidden"><div class="bar-chart-bar" style="width:92%; background: linear-gradient(90deg, #dc2626, #b91c1c);"><span>₹92.18</span></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs mb-1"><span class="text-gray-500 dark:text-gray-400" data-zh="面临失业风险人口" data-en="Population at Unemployment Risk">面临失业风险人口</span><span class="font-bold text-red-400" data-zh="~1000万" data-en="~10M">~1000万</span></div>
+            <div class="w-full h-7 rounded bg-gray-200/50 dark:bg-white/5 overflow-hidden"><div class="bar-chart-bar" style="width:78%; background: linear-gradient(90deg, #f59e0b, #ef4444);"><span data-zh="~1000万人" data-en="~10M">~1000万人</span></div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Key Facts -->
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-amber-400 mt-1 flex-shrink-0"></i><span data-zh="孟买20%餐厅酒店关停，古吉拉特170家瓷砖厂关闭，约1000万人面临失业" data-en="20% of Mumbai restaurants and hotels shut down, 170 tile factories in Gujarat closed, approximately 10 million people face unemployment">孟买20%餐厅酒店关停，古吉拉特170家瓷砖厂关闭，约1000万人面临失业</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-amber-400 mt-1 flex-shrink-0"></i><span data-zh="商业LPG涨价114.5卢比，民用涨60卢比，恐慌性预订从750万升至880万" data-en="Commercial LPG price increased by ₹114.5, residential by ₹60, panic bookings surged from 7.5 million to 8.8 million">商业LPG涨价114.5卢比，民用涨60卢比，恐慌性预订从750万升至880万</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-amber-400 mt-1 flex-shrink-0"></i><span data-zh="Sensex暴跌超2500点，投资者财富缩水超11万亿卢比，卢比贬至92.18历史低位" data-en="Sensex plunged over 2,500 points, investor wealth shrank by over ₹11 trillion, Rupee depreciated to historic low of 92.18">Sensex暴跌超2500点，投资者财富缩水超11万亿卢比，卢比贬至92.18历史低位</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-amber-400 mt-1 flex-shrink-0"></i><span data-zh="政府启动《Essential Commodities Act》，商业LPG配额从50%提至70%" data-en="Government activated the Essential Commodities Act, commercial LPG quota raised from 50% to 70%">政府启动《Essential Commodities Act》，商业LPG配额从50%提至70%</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-amber-400 mt-1 flex-shrink-0"></i><span data-zh="战略石油储备仅74天，距90天目标仍有差距" data-en="Strategic petroleum reserves at only 74 days, still short of the 90-day target">战略石油储备仅74天，距90天目标仍有差距</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 1.2 -->
+    <div>
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="1.2 能源危机倒逼加速清洁能源转型" data-en="1.2 Energy Crisis Forces Accelerated Clean Energy Transition">1.2 能源危机倒逼加速清洁能源转型</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3 mb-4">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="危机不仅是短期冲击，更成为印度能源结构转型的催化剂。从PNG管网扩张到电磁炉销量暴涨30倍，从生物质燃料回归到太阳能烹饪推广，印度正被迫加速摆脱对进口化石能源的依赖。" data-en="The crisis is not just a short-term shock but has become a catalyst for India's energy structural transformation. From PNG pipeline expansion to a 30-fold surge in induction cooker sales, from biomass fuel revival to solar cooking promotion, India is being forced to accelerate its departure from imported fossil fuel dependence.">危机不仅是短期冲击，更成为印度能源结构转型的催化剂。从PNG管网扩张到电磁炉销量暴涨30倍，从生物质燃料回归到太阳能烹饪推广，印度正被迫加速摆脱对进口化石能源的依赖。</span></p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-green-400 mt-1 flex-shrink-0"></i><span data-zh="新增12万户管道天然气连接，推动各邦向PNG转型" data-en="120,000 new piped natural gas connections added, driving states toward PNG transition">新增12万户管道天然气连接，推动各邦向PNG转型</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-green-400 mt-1 flex-shrink-0"></i><span data-zh="印度已提前完成50%非化石能源装机目标，未来20年电力领域有望吸引200万亿卢比投资" data-en="India has achieved its 50% non-fossil energy capacity target ahead of schedule, power sector expected to attract ₹200 trillion investment over next 20 years">印度已提前完成50%非化石能源装机目标，未来20年电力领域有望吸引200万亿卢比投资</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-green-400 mt-1 flex-shrink-0"></i><span data-zh="GNA Energy推出AI驱动的GNAi电力智能平台" data-en="GNA Energy launches AI-driven GNAi power intelligence platform">GNA Energy推出AI驱动的GNAi电力智能平台</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-green-400 mt-1 flex-shrink-0"></i><span data-zh="钠离子电池被视为印度能源独立的"最后拼图"" data-en="Sodium-ion batteries seen as the 'final piece' of India's energy independence">钠离子电池被视为印度能源独立的"最后拼图"</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-sky-500/30 to-transparent"></div></div>
+
+<!-- ========================================== -->
+<!-- ====== SECTION 2: 外交政策的多重困境 ====== -->
+<!-- ========================================== -->
+<section id="section2" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="flex items-center gap-4 mb-10 reveal">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl shadow-lg shadow-blue-500/25"><i class="fas fa-globe"></i></div>
+      <div>
+        <h2 class="section-title text-3xl sm:text-4xl font-black" data-zh="二、外交政策的多重困境" data-en="II. Multiple Diplomatic Dilemmas">二、外交政策的多重困境</h2>
+      </div>
+    </div>
+
+    <!-- 2.1 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="2.1 BRICS+主席国角色与美以关系的两难" data-en="2.1 BRICS+ Chair Role vs. US-Israel Relations Dilemma">2.1 BRICS+主席国角色与美以关系的两难</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="印度作为2026年BRICS+轮值主席国，未就美以空袭伊朗发表成员国联合声明，被国大党批评为"讨好美以、削弱BRICS+影响力"。这一沉默反映了印度在新兴市场合作机制与西方盟友关系之间的深层矛盾。" data-en="As the 2026 BRICS+ rotating chair, India has not issued a joint member statement on US-Israel airstrikes on Iran, criticized by Congress Party as 'appeasing the US and Israel while weakening BRICS+ influence.' This silence reflects India's deep contradiction between emerging market cooperation mechanisms and Western alliance relationships.">印度作为2026年BRICS+轮值主席国，未就美以空袭伊朗发表成员国联合声明，被国大党批评为"讨好美以、削弱BRICS+影响力"。这一沉默反映了印度在新兴市场合作机制与西方盟友关系之间的深层矛盾。</span></p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="巴西作为2025年主席国曾推动11国联合声明，印度至今未发声" data-en="Brazil as 2025 chair had pushed for an 11-nation joint statement; India has yet to speak">巴西作为2025年主席国曾推动11国联合声明，印度至今未发声</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="国大党称莫迪的外交政策将印度推向"附庸地位"" data-en="Congress Party claims Modi's foreign policy is pushing India toward 'vassal status'">国大党称莫迪的外交政策将印度推向"附庸地位"</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="伊朗呼吁印度牵头发表谴责声明，印度陷入外交困境" data-en="Iran calls on India to lead a condemnation statement, India caught in diplomatic bind">伊朗呼吁印度牵头发表谴责声明，印度陷入外交困境</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2.2 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="2.2 美国"许可式"外交冲击印度战略自主" data-en="2.2 US 'Permission-Based' Diplomacy Undermines India's Strategic Autonomy">2.2 美国"许可式"外交冲击印度战略自主</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="美国临时豁免印度进口俄油并称其为"合格伙伴"，美财政部官员称印度是"接到美国命令"后停止购俄原油——这些表态被印度舆论视为对主权的不尊重，严重损害了印度长期奉行的战略自主原则。" data-en="The US temporarily exempted India from Russian oil import restrictions and called it a 'qualified partner,' while a US Treasury official stated India stopped purchasing Russian crude 'after receiving US orders' — these statements are viewed by Indian public opinion as disrespectful to sovereignty, seriously undermining India's long-standing strategic autonomy principle.">美国临时豁免印度进口俄油并称其为"合格伙伴"，美财政部官员称印度是"接到美国命令"后停止购俄原油——这些表态被印度舆论视为对主权的不尊重，严重损害了印度长期奉行的战略自主原则。</span></p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="美国曾因印度购俄油加征50%关税，后降至18%作为交换条件" data-en="US had imposed 50% tariffs on India for purchasing Russian oil, later reduced to 18% as a bargaining condition">美国曾因印度购俄油加征50%关税，后降至18%作为交换条件</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="美国副国务卿公开称将印度视为"制衡力量"而非平等伙伴" data-en="US Deputy Secretary of State publicly described India as a 'counterbalancing force' rather than an equal partner">美国副国务卿公开称将印度视为"制衡力量"而非平等伙伴</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-blue-400 mt-1 flex-shrink-0"></i><span data-zh="国大党称印度能源主权已被"出卖"" data-en="Congress Party claims India's energy sovereignty has been 'sold out'">国大党称印度能源主权已被"出卖"</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 2.3 -->
+    <div>
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="2.3 查巴哈尔港项目陷入战略挫折" data-en="2.3 Chabahar Port Project Faces Strategic Setback">2.3 查巴哈尔港项目陷入战略挫折</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="2026-27财年未为查巴哈尔港项目拨款，被国大党称为继关闭塔吉克斯坦艾尼空军基地后的"第二次中亚外交挫折"。该港口是印度对接中亚与阿富汗的战略节点，其前景不确定性反映了美国制裁政策对印度地缘战略的制约。" data-en="No budget allocation for the Chabahar port project in FY2026-27, described by Congress Party as the 'second Central Asian diplomatic setback' after closing the Ayni Air Base in Tajikistan. The port is India's strategic node connecting Central Asia and Afghanistan; its uncertain prospects reflect the constraints of US sanctions policy on India's geostrategy.">2026-27财年未为查巴哈尔港项目拨款，被国大党称为继关闭塔吉克斯坦艾尼空军基地后的"第二次中亚外交挫折"。该港口是印度对接中亚与阿富汗的战略节点，其前景不确定性反映了美国制裁政策对印度地缘战略的制约。</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent"></div></div>
+
+<!-- ========================================== -->
+<!-- ====== SECTION 3: 选举政治与治理变革 ====== -->
+<!-- ========================================== -->
+<section id="section3" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="flex items-center gap-4 mb-10 reveal">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-xl shadow-lg shadow-purple-500/25"><i class="fas fa-vote-yea"></i></div>
+      <div>
+        <h2 class="section-title text-3xl sm:text-4xl font-black" data-zh="三、选举政治与治理变革" data-en="III. Electoral Politics & Governance Reform">三、选举政治与治理变革</h2>
+      </div>
+    </div>
+
+    <!-- 3.1 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="3.1 多邦同期选举重塑政治版图" data-en="3.1 Concurrent State Elections Reshape Political Landscape">3.1 多邦同期选举重塑政治版图</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="泰米尔纳德邦、阿萨姆邦、喀拉拉邦、西孟加拉邦等多邦同期选举，BJP以"反腐+发展+国家安全"三重叙事全面出击，但在南印面临DMK、LDF等地方强势政党的顽强抵抗。选举政治深度影响经济政策走向。" data-en="Tamil Nadu, Assam, Kerala, West Bengal and other states hold concurrent elections. BJP launches a full offensive with its 'anti-corruption + development + national security' triple narrative, but faces strong resistance from regional powerhouses like DMK and LDF in South India. Electoral politics deeply influences economic policy direction.">泰米尔纳德邦、阿萨姆邦、喀拉拉邦、西孟加拉邦等多邦同期选举，BJP以"反腐+发展+国家安全"三重叙事全面出击，但在南印面临DMK、LDF等地方强势政党的顽强抵抗。选举政治深度影响经济政策走向。</span></p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-purple-400 mt-1 flex-shrink-0"></i><span data-zh="DMK将选举定义为"泰米尔纳德邦对抗新德里"" data-en="DMK defines the election as 'Tamil Nadu vs. New Delhi'">DMK将选举定义为"泰米尔纳德邦对抗新德里"</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-purple-400 mt-1 flex-shrink-0"></i><span data-zh="BJP在阿萨姆邦民调领先（87-97席），喀拉拉邦UDF与LDF势均力敌" data-en="BJP leads in Assam polls (87-97 seats), UDF and LDF neck-and-neck in Kerala">BJP在阿萨姆邦民调领先（87-97席），喀拉拉邦UDF与LDF势均力敌</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-purple-400 mt-1 flex-shrink-0"></i><span data-zh="演员维杰首次带队参选泰米尔纳德邦" data-en="Actor Vijay leads his party into Tamil Nadu elections for the first time">演员维杰首次带队参选泰米尔纳德邦</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3.2 -->
+    <div>
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="3.2 免费福利政治引发财政可持续性担忧" data-en="3.2 Freebie Politics Raises Fiscal Sustainability Concerns">3.2 免费福利政治引发财政可持续性担忧</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="邦级福利支出五年增长五倍至1.7万亿卢比，最高法院警告不能仅靠免费福利而忽视可持续就业创造。泰米尔纳德邦的福利模式曾依托工业税收形成良性循环，但当前工业集群面临成本上升、利润收紧的困境。" data-en="State-level welfare spending has grown fivefold in five years to ₹1.7 trillion. The Supreme Court warns against relying solely on free welfare while neglecting sustainable job creation. Tamil Nadu's welfare model once formed a virtuous cycle supported by industrial tax revenue, but current industrial clusters face rising costs and tightening margins.">邦级福利支出五年增长五倍至1.7万亿卢比，最高法院警告不能仅靠免费福利而忽视可持续就业创造。泰米尔纳德邦的福利模式曾依托工业税收形成良性循环，但当前工业集群面临成本上升、利润收紧的困境。</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent"></div></div>
+
+<!-- ========================================== -->
+<!-- ====== SECTION 4: 产业与科技发展 ========== -->
+<!-- ========================================== -->
+<section id="section4" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="flex items-center gap-4 mb-10 reveal">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-xl shadow-lg shadow-cyan-500/25"><i class="fas fa-microchip"></i></div>
+      <div>
+        <h2 class="section-title text-3xl sm:text-4xl font-black" data-zh="四、产业与科技发展" data-en="IV. Industry & Technology Development">四、产业与科技发展</h2>
+      </div>
+    </div>
+
+    <!-- 4.1 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="4.1 AI与半导体成为国家战略双引擎" data-en="4.1 AI & Semiconductors Become Dual National Strategy Engines">4.1 AI与半导体成为国家战略双引擎</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 mb-6 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="印度正以前所未有的速度推进AI和半导体产业布局，但研发投入不足（仅占GDP 0.64%）和基础设施瓶颈制约了发展速度。北方邦取消与Puch AI的25000亿卢比MoU暴露了AI投资泡沫风险。" data-en="India is advancing AI and semiconductor industry deployment at an unprecedented pace, but insufficient R&D investment (only 0.64% of GDP) and infrastructure bottlenecks constrain development speed. Uttar Pradesh's cancellation of the ₹2,500 billion MoU with Puch AI exposes AI investment bubble risks.">印度正以前所未有的速度推进AI和半导体产业布局，但研发投入不足（仅占GDP 0.64%）和基础设施瓶颈制约了发展速度。北方邦取消与Puch AI的25000亿卢比MoU暴露了AI投资泡沫风险。</span></p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <h4 class="text-sm font-bold uppercase tracking-wider text-sky-400 mb-4"><i class="fas fa-list-ul mr-2"></i><span data-zh="关键事实" data-en="Key Facts">关键事实</span></h4>
+        <ul class="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-cyan-400 mt-1 flex-shrink-0"></i><span data-zh="国家AI任务五年预算10372亿卢比，已提供38000个GPU补贴" data-en="National AI Mission five-year budget of ₹1,037.2 billion, 38,000 GPU subsidies already provided">国家AI任务五年预算10372亿卢比，已提供38000个GPU补贴</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-cyan-400 mt-1 flex-shrink-0"></i><span data-zh="古吉拉特第二座半导体工厂（凯恩斯）启动量产，日产能633万单位" data-en="Gujarat's second semiconductor factory (Kaynes) begins mass production, daily capacity of 6.33 million units">古吉拉特第二座半导体工厂（凯恩斯）启动量产，日产能633万单位</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-cyan-400 mt-1 flex-shrink-0"></i><span data-zh="卡纳塔克邦建设"班加罗尔机器人与AI创新区"" data-en="Karnataka builds 'Bengaluru Robotics & AI Innovation Zone'">卡纳塔克邦建设"班加罗尔机器人与AI创新区"</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-caret-right text-cyan-400 mt-1 flex-shrink-0"></i><span data-zh="数据中心电力需求预计到2031-32年增长800%" data-en="Data center power demand expected to grow 800% by 2031-32">数据中心电力需求预计到2031-32年增长800%</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 4.2 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="4.2 各邦产业竞争格局加速分化" data-en="4.2 Accelerating Divergence in State-Level Industrial Competition">4.2 各邦产业竞争格局加速分化</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="安得拉邦吸引谷歌1.35万亿卢比AI数据中心、北方邦9年提供90万政府岗位、恰蒂斯加尔邦目标2030年成全国第一大电力生产邦——各邦正以差异化产业政策争夺投资和人才，但西孟加拉邦14年流失6688家企业的教训警示，政治环境是产业发展的关键变量。" data-en="Andhra Pradesh attracts Google's ₹1.35 trillion AI data center, Uttar Pradesh provides 900,000 government jobs over 9 years, Chhattisgarh targets becoming the nation's largest power-producing state by 2030 — states compete for investment and talent with differentiated industrial policies, but West Bengal's loss of 6,688 enterprises over 14 years warns that the political environment is a critical variable for industrial development.">安得拉邦吸引谷歌1.35万亿卢比AI数据中心、北方邦9年提供90万政府岗位、恰蒂斯加尔邦目标2030年成全国第一大电力生产邦——各邦正以差异化产业政策争夺投资和人才，但西孟加拉邦14年流失6688家企业的教训警示，政治环境是产业发展的关键变量。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.3 -->
+    <div>
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="4.3 数字监管框架快速收紧" data-en="4.3 Digital Regulatory Framework Tightens Rapidly">4.3 数字监管框架快速收紧</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="IT规则修订将社交媒体删帖时限从36小时缩至3小时，拟将用户生成的新闻内容纳入出版商式监管，卡纳塔克邦拟禁止16岁以下儿童使用社交媒体——印度正成为全球最激进的在线内容监管者之一，但过度监管可能抑制创新。" data-en="IT rule amendments shorten social media content removal deadlines from 36 hours to 3 hours, plan to subject user-generated news content to publisher-style regulation, Karnataka proposes banning social media for children under 16 — India is becoming one of the world's most aggressive online content regulators, but over-regulation may stifle innovation.">IT规则修订将社交媒体删帖时限从36小时缩至3小时，拟将用户生成的新闻内容纳入出版商式监管，卡纳塔克邦拟禁止16岁以下儿童使用社交媒体——印度正成为全球最激进的在线内容监管者之一，但过度监管可能抑制创新。</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-green-500/30 to-transparent"></div></div>
+
+<!-- ========================================== -->
+<!-- ====== SECTION 5: 国防与内部安全 ========== -->
+<!-- ========================================== -->
+<section id="section5" class="py-20 sm:py-28">
+  <div class="max-w-6xl mx-auto px-6 sm:px-8">
+    <div class="flex items-center gap-4 mb-10 reveal">
+      <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-xl shadow-lg shadow-green-500/25"><i class="fas fa-shield-alt"></i></div>
+      <div>
+        <h2 class="section-title text-3xl sm:text-4xl font-black" data-zh="五、国防与内部安全" data-en="V. Defense & Internal Security">五、国防与内部安全</h2>
+      </div>
+    </div>
+
+    <!-- 5.1 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="5.1 毛主义叛乱历史性终结" data-en="5.1 Historic End of Maoist Insurgency">5.1 毛主义叛乱历史性终结</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="受影响地区从106个降至6个，恰蒂斯加尔邦宣称武装纳萨尔主义已彻底终结。"卡加尔行动"消灭超536名纳萨尔人员，超3000人投降。但部分地区民众对发展带来的土地被占风险仍有担忧。" data-en="Affected districts reduced from 106 to 6, Chhattisgarh declares armed Naxalism completely ended. 'Operation Kagaar' eliminated over 536 Naxal operatives, over 3,000 surrendered. However, residents in some areas remain concerned about land seizure risks from development.">受影响地区从106个降至6个，恰蒂斯加尔邦宣称武装纳萨尔主义已彻底终结。"卡加尔行动"消灭超536名纳萨尔人员，超3000人投降。但部分地区民众对发展带来的土地被占风险仍有担忧。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5.2 -->
+    <div class="mb-16">
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="5.2 国防自主化面临结构性瓶颈" data-en="5.2 Defense Indigenization Faces Structural Bottlenecks">5.2 国防自主化面临结构性瓶颈</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="印度签署超5083亿卢比军购合同（含俄罗斯VL Shtil导弹、HAL直升机），同时推进S-400、阵风战机等采购，但本土军工交付周期过长、军民互信不足的问题未根本解决。美以伊冲突敲响了减少对外依赖的警钟。" data-en="India signed over ₹508.3 billion in military procurement contracts (including Russian VL Shtil missiles, HAL helicopters), while advancing S-400 and Rafale fighter acquisitions, but fundamental issues of overly long domestic defense industry delivery cycles and insufficient military-civilian trust remain unresolved. The US-Israel-Iran conflict sounds the alarm for reducing external dependence.">印度签署超5083亿卢比军购合同（含俄罗斯VL Shtil导弹、HAL直升机），同时推进S-400、阵风战机等采购，但本土军工交付周期过长、军民互信不足的问题未根本解决。美以伊冲突敲响了减少对外依赖的警钟。</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5.3 -->
+    <div>
+      <h3 class="font-serif text-xl sm:text-2xl font-bold mb-4 reveal" data-zh="5.3 印缅边境安全漏洞暴露" data-en="5.3 India-Myanmar Border Security Vulnerabilities Exposed">5.3 印缅边境安全漏洞暴露</h3>
+      <div class="glass-card rounded-2xl p-6 sm:p-8 reveal">
+        <div class="flex items-start gap-3">
+          <i class="fas fa-crosshairs text-amber-400 mt-1"></i>
+          <p class="text-sm sm:text-base leading-relaxed text-gray-700 dark:text-gray-300"><strong class="text-amber-500" data-zh="关键洞察：" data-en="Key Insight:">关键洞察：</strong><span data-zh="7名外籍人员（含美国安全分析师）经米佐拉姆非法入境，涉嫌为缅甸武装团体提供训练和走私无人机。印度已计划对印缅1643公里边境全线加装围栏。" data-en="7 foreign nationals (including a US security analyst) illegally entered through Mizoram, suspected of providing training and smuggling drones for Myanmar armed groups. India has planned to install fencing along the entire 1,643 km India-Myanmar border.">7名外籍人员（含美国安全分析师）经米佐拉姆非法入境，涉嫌为缅甸武装团体提供训练和走私无人机。印度已计划对印缅1643公里边境全线加装围栏。</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="max-w-6xl mx-auto px-6 sm:px-8"><div class="h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div></div>

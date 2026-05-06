@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="system" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本与中国双边动态速览 — 2026年4月24日</title>
+<meta name="description" content="Supinfor 区域国别实时监测平台 · 日本与中国双边动态速览">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-navy-950: #070d1a;
+  --color-navy-900: #0f172a;
+  --color-navy-800: #1e293b;
+  --color-navy-700: #1e3a5f;
+  --color-navy-600: #2a4a7f;
+  --color-navy-500: #3b5998;
+  --color-gold-500: #d4a843;
+  --color-gold-400: #f59e0b;
+  --color-gold-300: #fbbf24;
+  --color-gold-200: #fde68a;
+  --color-risk-red: #ef4444;
+  --color-risk-yellow: #f59e0b;
+  --color-risk-green: #22c55e;
+}
+</style>
+<style>
+/* Base & Theme */
+:root {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --border-color: #e2e8f0;
+  --border-accent: #d4a843;
+  --gold: #d4a843;
+  --gold-light: #f59e0b;
+  --navy: #0f172a;
+  --navy-light: #1e3a5f;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+[data-theme="dark"] {
+  --bg-primary: #070d1a;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --bg-card: #162033;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: #1e3a5f;
+  --border-accent: #d4a843;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', -apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: var(--noise);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.serif { font-family: 'Noto Serif SC', 'Georgia', serif; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* Reveal Animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #070d1a 0%, #0f172a 30%, #1e3a5f 70%, #0f172a 100%);
+  position: relative;
+  overflow: hidden;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(212,168,67,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(30,58,95,0.4) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--noise);
+  opacity: 0.4;
+  pointer-events: none;
+}
+.hero-grid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212,168,67,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212,168,67,0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+}
+.hero-line {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,168,67,0.3), transparent);
+  width: 100%;
+}
+
+/* Sidebar Nav */
+.sidebar-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 280px;
+  background: var(--bg-secondary);
+  border-right: 1px solid var(--border-color);
+  z-index: 40;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+  padding-top: 80px;
+}
+.sidebar-nav.open { transform: translateX(0); }
+@media (min-width: 1280px) {
+  .sidebar-nav {
+    transform: translateX(0);
+  }
+  .main-content { margin-left: 280px; }
+}
+.nav-link {
+  display: block;
+  padding: 10px 24px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--gold);
+  border-left-color: var(--gold);
+  background: rgba(212,168,67,0.05);
+}
+
+/* Top Bar */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 56px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg-secondary) 85%, transparent);
+}
+@media (min-width: 1280px) {
+  .top-bar { left: 280px; }
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 28px;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  box-shadow: var(--shadow-sm);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-accent);
+}
+
+/* Event Cards */
+.event-card-red { border-left: 4px solid #ef4444; }
+.event-card-yellow { border-left: 4px solid #f59e0b; }
+.event-card-green { border-left: 4px solid #22c55e; }
+
+/* Bar Chart */
+.bar-chart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+.bar-label {
+  width: 48px;
+  text-align: right;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+.bar-track {
+  flex: 1;
+  height: 28px;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, var(--navy-light), var(--gold));
+  transition: width 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+[data-theme="dark"] .bar-fill {
+  background: linear-gradient(90deg, var(--gold), #fbbf24);
+}
+.bar-value {
+  font-size: 12px;
+  font-weight: 600;
+  color: white;
+  white-space: nowrap;
+}
+.bar-pct {
+  width: 52px;
+  text-align: left;
+  font-size: 13px;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+/* Risk Cards */
+.risk-card {
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.risk-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.risk-high { border-top: 4px solid #ef4444; }
+.risk-medium { border-top: 4px solid #f59e0b; }
+.risk-low { border-top: 4px solid #22c55e; }
+
+/* Cooperation Table */
+.coop-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+.coop-table th {
+  background: var(--navy);
+  color: var(--gold);
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+[data-theme="dark"] .coop-table th { background: #1e3a5f; }
+.coop-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+.coop-table tr:nth-child(even) td { background: var(--bg-tertiary); }
+.coop-table tr:hover td { background: rgba(212,168,67,0.06); }
+
+/* Trend Timeline */
+.trend-line {
+  position: relative;
+  padding-left: 32px;
+}
+.trend-line::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--navy-light));
+}
+.trend-dot {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 3px solid var(--bg-primary);
+  z-index: 1;
+}
+
+/* Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s, background 0.3s;
+  z-index: 60;
+  box-shadow: 0 4px 12px rgba(212,168,67,0.4);
+  border: none;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: #fbbf24; }
+
+/* Section Title */
+.section-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+@media (max-width: 640px) { .section-title { font-size: 22px; } }
+
+/* Insight Box */
+.insight-box {
+  background: linear-gradient(135deg, rgba(212,168,67,0.08), rgba(212,168,67,0.02));
+  border-left: 3px solid var(--gold);
+  border-radius: 0 8px 8px 0;
+  padding: 20px 24px;
+  margin-top: 16px;
+}
+[data-theme="dark"] .insight-box {
+  background: linear-gradient(135deg, rgba(212,168,67,0.1), rgba(212,168,67,0.03));
+}
+
+/* Tag */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.tag-red { background: rgba(239,68,68,0.12); color: #ef4444; }
+.tag-yellow { background: rgba(245,158,11,0.12); color: #f59e0b; }
+.tag-green { background: rgba(34,197,94,0.12); color: #22c55e; }
+
+/* Mobile Nav Overlay */
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 35;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+.nav-overlay.open { opacity: 1; pointer-events: auto; }
+
+/* Watchlist */
+.watch-item {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 10px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.watch-item:hover { transform: translateX(4px); box-shadow: var(--shadow-md); }
+.watch-num {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+
+/* Print */
+@media print {
+  .sidebar-nav, .top-bar, .back-to-top, .nav-overlay { display: none !important; }
+  .main-content { margin-left: 0 !important; }
+  .hero { min-height: auto; padding: 40px 20px; }
+}
+
+/* Language Toggle */
+[data-lang="zh"] [data-en] { display: none; }
+[data-lang="en"] [data-zh] { display: none; }
+</style>
+</head>
+<body>
+
+<!-- Nav Overlay -->
+<div class="nav-overlay" id="navOverlay" onclick="toggleNav()"></div>
+
+<!-- Sidebar Navigation -->
+<nav class="sidebar-nav" id="sidebarNav">
+  <div style="padding: 0 24px 16px;">
+    <div style="font-size:11px;letter-spacing:2px;color:var(--gold);font-weight:700;text-transform:uppercase;"><span data-zh>目录导航</span><span data-en>CONTENTS</span></div>
+    <div style="height:1px;background:var(--border-color);margin-top:12px;"></div>
+  </div>
+  <a href="#section1" class="nav-link active" data-section="section1" onclick="closeMobileNav()">
+    <i class="fas fa-globe-asia" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>一、本周总览</span><span data-en>I. Weekly Overview</span>
+  </a>
+  <a href="#section2" class="nav-link" data-section="section2" onclick="closeMobileNav()">
+    <i class="fas fa-fire" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>二、本周重要事件</span><span data-en>II. Key Events</span>
+  </a>
+  <a href="#section3" class="nav-link" data-section="section3" onclick="closeMobileNav()">
+    <i class="fas fa-chart-line" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>三、趋势观察</span><span data-en>III. Trend Analysis</span>
+  </a>
+  <a href="#section4" class="nav-link" data-section="section4" onclick="closeMobileNav()">
+    <i class="fas fa-exclamation-triangle" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>四、风险警示</span><span data-en>IV. Risk Alerts</span>
+  </a>
+  <a href="#section5" class="nav-link" data-section="section5" onclick="closeMobileNav()">
+    <i class="fas fa-handshake" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>五、合作亮点</span><span data-en>V. Cooperation Highlights</span>
+  </a>
+  <a href="#section6" class="nav-link" data-section="section6" onclick="closeMobileNav()">
+    <i class="fas fa-binoculars" style="width:20px;margin-right:8px;color:var(--gold);"></i><span data-zh>六、下周关注点</span><span data-en>VI. Next Week's Watch</span>
+  </a>
+  <div style="padding:24px;">
+    <div style="height:1px;background:var(--border-color);margin-bottom:16px;"></div>
+    <div style="font-size:12px;color:var(--text-muted);line-height:1.6;">
+      <i class="fas fa-database" style="color:var(--gold);margin-right:4px;"></i>
+      <span data-zh>数据来源：Supinfor</span><span data-en>Data Source: Supinfor</span><br>
+      <i class="fas fa-calendar" style="color:var(--gold);margin-right:4px;"></i>
+      <span data-zh>2026年4月18日 — 24日</span><span data-en>April 18 – 24, 2026</span>
+    </div>
+  </div>
+</nav>
+
+<!-- Top Bar -->
+<header class="top-bar">
+  <button onclick="toggleNav()" style="background:none;border:none;color:var(--text-primary);cursor:pointer;font-size:20px;margin-right:16px;" class="xl:hidden" aria-label="切换导航">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div style="flex:1;font-size:14px;font-weight:600;color:var(--text-primary);" class="serif">
+    <span class="hidden sm:inline"><span data-zh>日本与中国双边动态速览</span><span data-en>Japan-China Bilateral Dynamics Briefing</span></span>
+    <span class="sm:hidden"><span data-zh>中日关联洞察</span><span data-en>China-Japan Insights</span></span>
+  </div>
+  <button id="langToggle" aria-label="Switch Language" style="background:none;border:none;color:var(--text-primary);cursor:pointer;font-size:12px;font-weight:700;padding:8px;margin-right:4px;">EN</button>
+  <button onclick="toggleTheme()" style="background:none;border:none;color:var(--text-primary);cursor:pointer;font-size:18px;padding:8px;" aria-label="切换主题" id="themeBtn">
+    <i class="fas fa-moon"></i>
+  </button>
+</header>
+
+<!-- Main Content -->
+<div class="main-content">
+
+<!-- Hero Section -->
+<section class="hero" style="padding-top:56px;">
+  <div class="hero-grid"></div>
+  <div class="hero-line" style="top:25%;"></div>
+  <div class="hero-line" style="top:75%;"></div>
+  <div style="position:relative;z-index:1;width:100%;max-width:900px;margin:0 auto;padding:60px 24px;text-align:center;">
+    <div class="reveal" style="margin-bottom:20px;">
+      <span style="display:inline-block;padding:6px 20px;border:1px solid rgba(212,168,67,0.4);border-radius:24px;font-size:12px;letter-spacing:3px;color:#d4a843;text-transform:uppercase;font-weight:600;">
+        <i class="fas fa-satellite-dish" style="margin-right:6px;"></i><span data-zh>Supinfor 区域国别实时监测平台</span><span data-en>Supinfor Regional Country Real-Time Monitoring Platform</span>
+      </span>
+    </div>
+    <h1 class="reveal reveal-delay-1 serif" style="font-size:clamp(28px,5vw,52px);font-weight:900;color:#ffffff;line-height:1.3;margin-bottom:16px;">
+      <span data-zh>日本与中国<br>双边动态速览</span><span data-en>Japan &amp; China<br>Bilateral Dynamics Briefing</span>
+    </h1>
+    <p class="reveal reveal-delay-2" style="font-size:18px;color:rgba(255,255,255,0.6);margin-bottom:32px;font-weight:300;">
+      2026年4月18日 — 2026年4月24日
+    </p>
+    <div class="reveal reveal-delay-3" style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-bottom:36px;">
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.25);border-radius:8px;color:#fbbf24;font-size:14px;font-weight:600;">
+        <i class="fas fa-newspaper"></i> 1,147 <span data-zh>条资讯</span><span data-en>News Items</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:rgba(212,168,67,0.12);border:1px solid rgba(212,168,67,0.25);border-radius:8px;color:#fbbf24;font-size:14px;font-weight:600;">
+        <i class="fas fa-filter"></i> 730 <span data-zh>条去重</span><span data-en>Deduplicated</span>
+      </span>
+      <span style="display:inline-flex;align-items:center;gap:6px;padding:8px 18px;background:rgba(239,68,68,0.15);border:1px solid rgba(239,68,68,0.3);border-radius:8px;color:#f87171;font-size:14px;font-weight:600;">
+        <i class="fas fa-bolt"></i> <span data-zh>5起🔴级高影响事件同时发酵</span><span data-en>5 🔴 High-Impact Events Unfolding Simultaneously</span>
+      </span>
+    </div>
+    <div class="reveal reveal-delay-4" style="display:flex;justify-content:center;gap:32px;flex-wrap:wrap;">
+      <div style="text-align:center;">
+        <div style="font-size:36px;font-weight:700;color:#d4a843;font-family:'Inter',sans-serif;">11</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px;"><span data-zh>覆盖栏目</span><span data-en>Categories</span></div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:36px;font-weight:700;color:#d4a843;font-family:'Inter',sans-serif;">13</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px;"><span data-zh>重要事件</span><span data-en>Key Events</span></div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:36px;font-weight:700;color:#d4a843;font-family:'Inter',sans-serif;">4</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px;"><span data-zh>趋势观察</span><span data-en>Trends</span></div>
+      </div>
+      <div style="text-align:center;">
+        <div style="font-size:36px;font-weight:700;color:#d4a843;font-family:'Inter',sans-serif;">4</div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px;"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: 本周总览 -->
+<section id="section1" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 01</div>
+    <div class="section-title"><span data-zh>一、本周总览：日本与中国关联度评估</span><span data-en>I. Weekly Overview: Japan-China Relevance Assessment</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 28px;border-radius:2px;"></div>
+  </div>
+
+  <div class="reveal reveal-delay-1 card" style="margin-bottom:32px;">
+    <p style="color:var(--text-secondary);line-height:2;font-size:15px;">
+      <span data-zh>本周中日关系呈现"政冷经冷、安全对抗升级"的严峻态势。靖国神社春祭引发新一轮外交摩擦，日本海自护卫舰首次在高市任期内通过台湾海峡，叠加日本废除战后致命武器出口禁令，三大事件形成共振，将中日安全互信推至近年低点。与此同时，中国对日稀土磁铁出口管制效果初显，日本加速推进供应链"去中国化"，经济脱钩风险持续累积。值得注意的是，日本多个经贸团体正积极筹备访华，释放出在政治寒冬中维系经济纽带的务实信号。总体而言，本周中日关系处于"安全对抗加剧、经济摩擦扩大、民间交流承压"的多重困境之中。</span><span data-en>This week, China-Japan relations exhibited a severe posture of "political chill, economic chill, and escalating security confrontation." The Yasukuni Shrine (靖国神社) spring festival triggered a new round of diplomatic friction; a JMSDF escort ship transited the Taiwan Strait for the first time under PM Takaichi Sanae's (高市早苗) tenure; and Japan abolished its postwar ban on lethal weapons exports. These three events resonated together, pushing China-Japan security trust to its lowest point in recent years. Meanwhile, China's rare earth magnet export controls on Japan are showing initial effects, and Japan is accelerating supply chain "de-Sinicization," with economic decoupling risks continuing to accumulate. Notably, multiple Japanese business and trade organizations are actively preparing visits to China, signaling a pragmatic desire to maintain economic ties amid the political winter. Overall, China-Japan relations this week are mired in a multi-layered predicament of "intensifying security confrontation, expanding economic friction, and strained people-to-people exchanges."</span>
+    </p>
+  </div>
+
+  <!-- Bar Chart: 栏目分布 -->
+  <div class="reveal reveal-delay-2">
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:20px;color:var(--text-primary);">
+      <i class="fas fa-chart-bar" style="color:var(--gold);margin-right:8px;"></i><span data-zh>栏目分布</span><span data-en>Category Distribution</span>
+    </h3>
+    <div class="card" style="padding:24px;">
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>民生</span><span data-en>Society</span></span><div class="bar-track"><div class="bar-fill" data-width="100" style="width:0"><span class="bar-value">235</span></div></div><span class="bar-pct">20.5%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>人文</span><span data-en>Culture</span></span><div class="bar-track"><div class="bar-fill" data-width="79" style="width:0"><span class="bar-value">186</span></div></div><span class="bar-pct">16.2%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>产业</span><span data-en>Industry</span></span><div class="bar-track"><div class="bar-fill" data-width="78" style="width:0"><span class="bar-value">184</span></div></div><span class="bar-pct">16.0%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>外交</span><span data-en>Diplomacy</span></span><div class="bar-track"><div class="bar-fill" data-width="41" style="width:0"><span class="bar-value">96</span></div></div><span class="bar-pct">8.4%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>经济</span><span data-en>Economy</span></span><div class="bar-track"><div class="bar-fill" data-width="37" style="width:0"><span class="bar-value">88</span></div></div><span class="bar-pct">7.7%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>政治</span><span data-en>Politics</span></span><div class="bar-track"><div class="bar-fill" data-width="33" style="width:0"><span class="bar-value">77</span></div></div><span class="bar-pct">6.7%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>科技</span><span data-en>Tech</span></span><div class="bar-track"><div class="bar-fill" data-width="28" style="width:0"><span class="bar-value">66</span></div></div><span class="bar-pct">5.8%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>教育</span><span data-en>Edu</span></span><div class="bar-track"><div class="bar-fill" data-width="28" style="width:0"><span class="bar-value">66</span></div></div><span class="bar-pct">5.8%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>国防</span><span data-en>Defense</span></span><div class="bar-track"><div class="bar-fill" data-width="22" style="width:0"><span class="bar-value">51</span></div></div><span class="bar-pct">4.4%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>医疗</span><span data-en>Health</span></span><div class="bar-track"><div class="bar-fill" data-width="22" style="width:0"><span class="bar-value">51</span></div></div><span class="bar-pct">4.4%</span></div>
+      <div class="bar-chart-item"><span class="bar-label"><span data-zh>环保</span><span data-en>Environ</span></span><div class="bar-track"><div class="bar-fill" data-width="20" style="width:0"><span class="bar-value">47</span></div></div><span class="bar-pct">4.1%</span></div>
+
+      <!-- 关联特征标注 -->
+      <div style="margin-top:20px;display:flex;flex-wrap:wrap;gap:8px;">
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>民生 — 在日华人社区动态</span><span data-en>Society — Chinese community dynamics in Japan</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>人文 — 文化交流、历史记忆</span><span data-en>Culture — Cultural exchange, historical memory</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>产业 — 供应链调整、技术竞争</span><span data-en>Industry — Supply chain shifts, tech competition</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>外交 — 靖国神社、台海等高热度议题</span><span data-en>Diplomacy — Yasukuni, Taiwan Strait &amp; other hot topics</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>经济 — 贸易管制、投资环境变化</span><span data-en>Economy — Trade controls, investment climate shifts</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>政治 — 内阁动态、对华政策</span><span data-en>Politics — Cabinet dynamics, China policy</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>科技 — AI立法、技术管制</span><span data-en>Tech — AI legislation, technology controls</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>教育 — 留学生政策、学术交流</span><span data-en>Education — Student policies, academic exchange</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>国防 — 台海巡航、武器出口</span><span data-en>Defense — Taiwan Strait patrols, arms exports</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>医疗 — 医药产业链关联</span><span data-en>Healthcare — Pharmaceutical supply chain links</span></span>
+        <span style="font-size:11px;padding:4px 10px;border-radius:4px;background:var(--bg-tertiary);color:var(--text-muted);"><span data-zh>环保 — 能源转型、碳中和合作</span><span data-en>Environment — Energy transition, carbon neutrality</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 核心判断 -->
+  <div class="reveal reveal-delay-3 insight-box" style="margin-top:24px;">
+    <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;">
+      <i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>核心判断</span><span data-en>Core Assessment</span>
+    </div>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;">
+      <span data-zh>直接涉及中日双边互动的高价值资讯约占 30-35%（约220-255条），集中在外交、国防、经济、产业栏目；民生与人文栏目合计占比 36.7%，以间接关联为主，反映中国因素已深度嵌入日本社会日常议题。本周高影响事件密集度异常偏高，5起🔴级事件同时发酵，为近期罕见。</span><span data-en>High-value news directly involving China-Japan bilateral interactions accounts for approximately 30–35% (about 220–255 items), concentrated in the Diplomacy, Defense, Economy, and Industry categories. Society and Culture categories together account for 36.7%, primarily with indirect relevance, reflecting how deeply the "China factor" is embedded in Japan's everyday social discourse. The density of high-impact events this week is unusually elevated, with 5 🔴-level events unfolding simultaneously — a rare occurrence in recent periods.</span>
+    </p>
+  </div>
+</section>
+
+<!-- Section 2: 本周重要事件 -->
+<section id="section2" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 02</div>
+    <div class="section-title"><span data-zh>二、本周重要事件</span><span data-en>II. Key Events This Week</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 28px;border-radius:2px;"></div>
+  </div>
+
+  <!-- 🔴 高影响事件 -->
+  <div class="reveal" style="margin-bottom:24px;">
+    <span class="tag tag-red" style="font-size:14px;padding:6px 16px;"><i class="fas fa-circle" style="font-size:8px;"></i> <span data-zh>高影响事件</span><span data-en>High-Impact Events</span></span>
+  </div>
+
+  <!-- 事件1 -->
+  <div class="reveal card event-card-red" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#ef4444;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 1</span><span data-en>Event 1</span></span>
+      <span class="tag tag-red"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>高影响</span><span data-en>High Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>靖国神社春祭引发中日外交摩擦</span><span data-en>Yasukuni Shrine Spring Festival Triggers China-Japan Diplomatic Friction</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>靖国神社春季例大祭期间，高市早苗首相以首相名义供奉"真榊"祭品，次日又以自民党党魁名义献上"玉串料"，内阁成员城内实首次参拜，126名跨党派议员集体参拜，引发中方强烈反应。</span><span data-en>During the Yasukuni Shrine (靖国神社) spring festival, PM Takaichi Sanae (高市早苗) offered a "masakaki" ritual offering in her capacity as Prime Minister, followed the next day by a "tamagushi-ryō" offering as LDP party leader. Cabinet member Jōnai Minoru (城内実) made his first visit, and 126 cross-party lawmakers paid a collective visit, triggering a strong response from China.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>高市早苗采取"双重供奉"策略——首相名义供奉"真榊"、党魁名义献"玉串料"，政治信号明确</span><span data-en>Takaichi adopted a "dual offering" strategy — a "masakaki" as PM and "tamagushi-ryō" as party leader — sending a clear political signal</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>内阁成员城内实系首次参拜，126名跨党派议员集体参拜规模可观</span><span data-en>Cabinet member Jōnai Minoru visited for the first time; 126 cross-party lawmakers made a collective visit of considerable scale</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中国外交部郭嘉昆副报道局长发表"坚决反对、严厉谴责"声明，向日方提出严正交涉</span><span data-en>China's MFA Deputy Spokesperson Guo Jiakun (郭嘉昆) issued a statement of "firm opposition and strong condemnation," lodging solemn representations with Japan</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中方定性靖国神社为"军国主义侵略战争精神工具"，人民日报、环球时报头版批判，军媒钧正平工作室称其为"军国主义招魂"</span><span data-en>China characterized Yasukuni as a "spiritual tool of militarist wars of aggression"; People's Daily and Global Times ran front-page critiques; military media outlet Junzhengping Studio called it "summoning the ghost of militarism"</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>高市本人未亲自参拜，被解读为对中日关系恶化的有限克制</span><span data-en>Takaichi herself did not personally visit, interpreted as limited restraint regarding the deterioration of China-Japan relations</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>高市的"双重供奉"策略表明其试图在国内保守派支持与对华关系管控之间寻求平衡，但这一平衡空间正在收窄。中方反应的烈度（外交部声明+官媒全线批判+军媒介入）显示北京将此事件与台海、武器出口等议题打包处理，作为对日施压的综合筹码。未来，靖国神社问题将持续成为中日关系的"引爆点"，每逢春祭、秋祭和"8·15"终战纪念日，外交摩擦将周期性重演。</span><span data-en>Takaichi's "dual offering" strategy indicates her attempt to balance domestic conservative support with managing China relations, but this balancing space is narrowing. The intensity of China's response (MFA statement + full-spectrum state media criticism + military media involvement) shows Beijing is bundling this event with Taiwan Strait and arms export issues as comprehensive leverage against Japan. Going forward, the Yasukuni issue will remain a "flashpoint" in China-Japan relations, with diplomatic friction recurring cyclically around each spring festival, autumn festival, and the August 15 war anniversary.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件2 -->
+  <div class="reveal card event-card-red" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#ef4444;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 2</span><span data-en>Event 2</span></span>
+      <span class="tag tag-red"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>高影响</span><span data-en>High Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日本废除战后致命武器出口禁令</span><span data-en>Japan Abolishes Postwar Ban on Lethal Weapons Exports</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>日本内阁正式通过修改"防卫装备转移三原则"，原则上允许出口杀伤性武器，标志着日本背离二战后和平主义防卫政策的里程碑式转变。</span><span data-en>Japan's Cabinet formally approved revisions to the "Three Principles on Defense Equipment Transfer," in principle permitting the export of lethal weapons — marking a milestone departure from Japan's postwar pacifist defense policy.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>出口对象仅限17个与日本签有防务协议的国家，需经国家安全保障会议（NSC）逐案审批</span><span data-en>Exports limited to 17 countries with defense agreements with Japan, requiring case-by-case approval by the National Security Council (NSC)</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中国表达"深刻关切"并"坚决抵制"，韩国呼吁日方遵循和平宪法精神</span><span data-en>China expressed "deep concern" and "firm opposition"; South Korea urged Japan to adhere to the spirit of its peace constitution</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>澳大利亚、菲律宾等防务伙伴表示欢迎，菲、澳等国或成为首批采购方</span><span data-en>Defense partners including Australia and the Philippines welcomed the move; the Philippines and Australia may become the first buyers</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>BBC、Bloomberg、NBC、Al Jazeera、Reuters 等国际主流媒体广泛报道，国际关注度极高</span><span data-en>Widely covered by BBC, Bloomberg, NBC, Al Jazeera, Reuters and other major international media, with extremely high global attention</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>这一政策转向的深层逻辑是日本将自身定位从"和平国家"转向"正常安全行为体"，其直接驱动力是对中国军事崛起和台海局势的战略焦虑。对中日关系而言，这意味着日本正在从"经济竞争对手"向"潜在安全对手"的角色转变加速。未来，日本防务产业将获得出口市场支撑，军工产能扩张将进一步刺激地区军备竞赛，中方可能以加强东海、台海方向军事部署作为回应。</span><span data-en>The deeper logic behind this policy shift is Japan repositioning itself from a "peace state" to a "normal security actor," directly driven by strategic anxiety over China's military rise and the Taiwan Strait situation. For China-Japan relations, this means Japan's accelerating role transformation from "economic competitor" to "potential security adversary." Going forward, Japan's defense industry will gain export market support, military-industrial capacity expansion will further stimulate a regional arms race, and China may respond by strengthening military deployments in the East China Sea and Taiwan Strait directions.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件3 -->
+  <div class="reveal card event-card-red" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#ef4444;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 3</span><span data-en>Event 3</span></span>
+      <span class="tag tag-red"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>高影响</span><span data-en>High Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日本海自护卫舰"雷"号通过台湾海峡</span><span data-en>JMSDF Escort Ship "Ikazuchi" Transits Taiwan Strait</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>日本海上自卫队护卫舰"雷"号通过台湾海峡，系高市早苗上任后首次，计划参加美菲"肩并肩"联合军演，中方以多维度军事行动回应。</span><span data-en>JMSDF escort ship "Ikazuchi" (雷) transited the Taiwan Strait — the first such transit under PM Takaichi's tenure — en route to the US-Philippines "Balikatan" joint military exercise. China responded with multi-dimensional military actions.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>通过时间恰逢《马关条约》签订131周年，中方认为时间选择具有蓄意挑衅意味</span><span data-en>The transit coincided with the 131st anniversary of the Treaty of Shimonoseki (马关条约); China viewed the timing as deliberately provocative</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中方全程监视，东部战区次日在东海组织联合战备巡航</span><span data-en>China monitored the entire transit; the Eastern Theater Command organized a joint combat readiness patrol in the East China Sea the following day</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>国台办批评日方"蓄意挑衅"，称严重损害中日关系政治基础</span><span data-en>The Taiwan Affairs Office criticized Japan's "deliberate provocation," stating it seriously damages the political foundation of China-Japan relations</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中国海军驱逐舰、护卫舰各1艘随后在鹿儿岛横当岛周边海域航行，形成对等回应</span><span data-en>One PLA Navy destroyer and one frigate subsequently sailed near Yokoate Island off Kagoshima, forming a reciprocal response</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>台湾海峡正在成为中日军事博弈的"新常态化"场域。日方选择在《马关条约》签订纪念日通过台海，无论是否有意为之，都触碰了中方的历史敏感神经。中方以"东海战备巡航+近日本本土海域航行"的组合回应，显示其"对等升级"的意志。未来，台海通行将成为日本展示安全姿态的常规动作，而中方的回应烈度也将逐步升级，双方在西太平洋的军事摩擦风险持续上升。</span><span data-en>The Taiwan Strait is becoming a "new normal" arena for China-Japan military competition. Japan's choice to transit the Strait on the Treaty of Shimonoseki anniversary — whether intentional or not — touched China's historical sensitivities. China's combined response of "East China Sea combat readiness patrol + sailing near Japan's home waters" demonstrates its will for "reciprocal escalation." Going forward, Taiwan Strait transits will become routine for Japan to demonstrate its security posture, while China's response intensity will gradually escalate, with military friction risks in the Western Pacific continuing to rise.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件4 -->
+  <div class="reveal card event-card-red" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#ef4444;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 4</span><span data-en>Event 4</span></span>
+      <span class="tag tag-red"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>高影响</span><span data-en>High Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>东海中间线中国新建第23基构造物</span><span data-en>China Builds 23rd Structure Near East China Sea Median Line</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>日本外务省确认中方在中日东海中间线西侧新建第23基构造物，为天然气田开发设施，日方提出外交抗议并要求重启共同开发谈判。</span><span data-en>Japan's Ministry of Foreign Affairs confirmed that China has built a 23rd structure on the western side of the China-Japan East China Sea median line, a natural gas field development facility. Japan lodged a diplomatic protest and demanded the resumption of joint development negotiations.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>外务省亚洲大洋州局长金井正彰向中国临时代办施泳正式提出抗议</span><span data-en>MOFA Asian and Oceanian Affairs Bureau Director-General Kanai Masaaki (金井正彰) formally protested to Chinese Chargé d'Affaires Shi Yong (施泳)</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>日方要求在2008年共同开发合意基础上重启谈判</span><span data-en>Japan demanded the resumption of negotiations based on the 2008 joint development agreement</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>这是日方确认的第23基构造物，中方持续推进单边开发</span><span data-en>This is the 23rd structure confirmed by Japan; China continues to advance unilateral development</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>东海油气田问题是中日海洋权益争端的缩影。中方持续新建构造物表明其"既成事实"策略不会因日方抗议而改变，2008年共同开发共识实质上已被搁置。这意味着东海中间线附近的单边开发将继续推进，日方除外交抗议外缺乏有效反制手段。未来，该议题可能与台海、靖国神社等问题联动，成为中日关系恶化时的"加码筹码"。</span><span data-en>The East China Sea gas field issue epitomizes the China-Japan maritime rights dispute. China's continued construction of structures indicates its "fait accompli" strategy will not change due to Japanese protests, and the 2008 joint development consensus has been effectively shelved. This means unilateral development near the median line will continue, and Japan lacks effective countermeasures beyond diplomatic protests. Going forward, this issue may be linked with the Taiwan Strait and Yasukuni issues, becoming additional leverage when China-Japan relations deteriorate.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件5 -->
+  <div class="reveal card event-card-red" style="margin-bottom:32px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#ef4444;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 5</span><span data-en>Event 5</span></span>
+      <span class="tag tag-red"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>高影响</span><span data-en>High Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>中国对日稀土磁铁出口大幅下降</span><span data-en>China's Rare Earth Magnet Exports to Japan Drop Sharply</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>中国对日稀土磁铁出口出现显著下滑，2025年3月同比减少27.2%至184吨，9个月来首次跌破200吨大关，出口管制效果初步显现。</span><span data-en>China's rare earth magnet exports to Japan declined significantly, falling 27.2% year-on-year to 184 tons in March 2025 — dropping below the 200-ton mark for the first time in 9 months, with export control effects beginning to materialize.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>2024年12月中国出台军民两用物项出口条例，2026年1月进一步加强对日管制</span><span data-en>China issued dual-use item export regulations in December 2024, further tightening controls on Japan in January 2026</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>部分日本企业（含三菱重工关联企业）被列入管制清单</span><span data-en>Some Japanese companies (including Mitsubishi Heavy Industries affiliates) have been placed on the control list</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>在华日企反映管制已造成实际业务困扰，长期影响有待评估</span><span data-en>Japanese companies in China report that controls have caused actual business disruptions; long-term impacts remain to be assessed</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>稀土管制是中国对日经济施压的精准工具——既能对日本高端制造业（电动汽车、风力发电、精密电机）形成供应链压力，又可针对性打击涉军企业。27.2%的降幅和跌破200吨的心理关口，标志着管制从"政策信号"进入"实质影响"阶段。未来，日本将加速推进稀土供应链多元化（澳大利亚、加拿大等替代来源），但短期内替代产能难以填补缺口，日本制造业将面临成本上升和供应不确定性的双重压力。</span><span data-en>Rare earth controls are China's precision tool for economic pressure on Japan — capable of creating supply chain pressure on Japan's high-end manufacturing (EVs, wind power, precision motors) while targeting military-linked enterprises. The 27.2% decline and breach of the psychological 200-ton threshold mark the transition from "policy signal" to "substantive impact." Going forward, Japan will accelerate rare earth supply chain diversification (Australia, Canada, and other alternative sources), but replacement capacity cannot fill the gap in the short term, leaving Japanese manufacturers facing dual pressures of rising costs and supply uncertainty.</span></p>
+    </div>
+  </div>
+
+  <!-- 🟡 中影响事件 -->
+  <div class="reveal" style="margin-bottom:24px;">
+    <span class="tag tag-yellow" style="font-size:14px;padding:6px 16px;"><i class="fas fa-circle" style="font-size:8px;"></i> <span data-zh>中影响事件</span><span data-en>Medium-Impact Events</span></span>
+  </div>
+
+  <!-- 事件6 -->
+  <div class="reveal card event-card-yellow" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#f59e0b;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 6</span><span data-en>Event 6</span></span>
+      <span class="tag tag-yellow"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>中影响</span><span data-en>Medium Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日本总务省排除中国制IT设备</span><span data-en>Japan's MIC Excludes Chinese-Made IT Equipment</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>日本总务省要求地方自治体仅采购经政府评价制度认定的IT产品，中国产设备被实质性排除，明年夏季起施行。</span><span data-en>Japan's Ministry of Internal Affairs and Communications (MIC) requires local governments to procure only IT products certified under the government evaluation system, effectively excluding Chinese-made equipment, effective from next summer.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>覆盖范围包括电脑、平板、通信设备等</span><span data-en>Coverage includes computers, tablets, communication equipment, etc.</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>延续2019年以来排除华为、中兴的政策方向，范围进一步扩大至全品类中国IT产品</span><span data-en>Continues the policy direction of excluding Huawei and ZTE since 2019, now expanded to all categories of Chinese IT products</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>这标志着日本IT供应链"去中国化"从针对特定企业（华为、中兴）升级为针对"中国制造"的系统性排除。对中国IT企业而言，日本政府采购市场将基本关闭。未来，这一政策可能向民间企业采购领域扩散，中国IT设备在日本市场的空间将持续收窄。</span><span data-en>This marks Japan's IT supply chain "de-Sinicization" escalating from targeting specific companies (Huawei, ZTE) to a systematic exclusion of "Made in China." For Chinese IT companies, Japan's government procurement market will be essentially closed. Going forward, this policy may spread to private sector procurement, further narrowing the space for Chinese IT equipment in the Japanese market.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件7 -->
+  <div class="reveal card event-card-yellow" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#f59e0b;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 7</span><span data-en>Event 7</span></span>
+      <span class="tag tag-yellow"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>中影响</span><span data-en>Medium Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日本经贸团体探索恢复对华交流</span><span data-en>Japanese Business Groups Explore Resuming Engagement with China</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>多个日本经贸团体正积极筹备访华，释放出在政治寒冬中维系经济纽带的务实信号。</span><span data-en>Multiple Japanese business and trade organizations are actively preparing visits to China, signaling a pragmatic desire to maintain economic ties amid the political winter.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>河野洋平任会长的日本国际贸易促进协会拟6月访华，寻求与习近平指导部会面</span><span data-en>The Japan Association for the Promotion of International Trade, chaired by Kōno Yōhei (河野洋平), plans to visit China in June, seeking meetings with Xi Jinping's leadership</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>日本经济同友会计划5月小规模访华</span><span data-en>The Japan Association of Corporate Executives (Keizai Dōyūkai) plans a small-scale visit to China in May</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>日中经济协会计划5月赴上海考察</span><span data-en>The Japan-China Economic Association plans a study visit to Shanghai in May</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>这是高市涉台言论后日方首批经贸访华团</span><span data-en>These are the first Japanese business delegations to visit China since Takaichi's Taiwan-related remarks</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>经贸团体的集体行动表明日本商界对政治主导的对华强硬路线存在"纠偏"诉求。河野洋平作为知华派代表人物出面，具有政治信号意义。这意味着中日经济关系仍存在"压舱石"功能，但其效力正在减弱。未来，经贸交流能否实质性恢复，取决于北京是否愿意在政治摩擦升级的背景下接纳日方经济橄榄枝。</span><span data-en>The collective action of business groups indicates Japan's business community has a "corrective" demand against the politically-driven hardline approach toward China. Kōno Yōhei's involvement as a representative "China-friendly" figure carries political signal significance. This means the "ballast" function of China-Japan economic relations still exists, but its effectiveness is weakening. Whether economic exchanges can substantively recover depends on whether Beijing is willing to accept Japan's economic olive branch amid escalating political friction.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件8 -->
+  <div class="reveal card event-card-yellow" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#f59e0b;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 8</span><span data-en>Event 8</span></span>
+      <span class="tag tag-yellow"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>中影响</span><span data-en>Medium Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>福冈朝仓市反华人公寓项目被取消</span><span data-en>Anti-Chinese Apartment Project in Fukuoka's Asakura City Cancelled</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>福冈县朝仓市一处预计80%住户为中国/港澳台居民的公寓开发项目，在反移民抗议后被土地所有者叫停。</span><span data-en>An apartment development project in Asakura City, Fukuoka Prefecture, where an estimated 80% of residents would be from China/Hong Kong/Macau/Taiwan, was halted by the landowner following anti-immigration protests.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>去年12月约60人举日之丸旗游行抗议，社交媒体持续造势</span><span data-en>About 60 people marched with Hinomaru flags in protest last December, with sustained social media campaigns</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>土地所有者最终决定取消项目</span><span data-en>The landowner ultimately decided to cancel the project</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>这一事件折射出日本社会对中国人购房和定居的排斥情绪正在从网络舆论转化为实际行动。在中日政治关系恶化的大背景下，民间反华情绪获得了更大的社会容忍度。未来，类似事件可能在其他地区重演，在日华人的居住和投资环境面临恶化风险。</span><span data-en>This incident reflects how Japanese society's rejection of Chinese property purchases and settlement is transitioning from online discourse to real-world action. Against the backdrop of deteriorating China-Japan political relations, anti-Chinese sentiment has gained greater social tolerance. Similar incidents may recur in other regions, with the living and investment environment for Chinese residents in Japan facing deterioration risks.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件9 -->
+  <div class="reveal card event-card-yellow" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#f59e0b;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 9</span><span data-en>Event 9</span></span>
+      <span class="tag tag-yellow"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>中影响</span><span data-en>Medium Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日澳签署经济安全协议</span><span data-en>Japan-Australia Sign Economic Security Agreement</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>日澳签署涵盖能源、稀土、食品等关键大宗商品的经济安全协议，日企与政府联合在澳投资稀土项目。</span><span data-en>Japan and Australia signed an economic security agreement covering key commodities including energy, rare earths, and food. Japanese companies and the government jointly invest in rare earth projects in Australia.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>协议覆盖能源、稀土、食品等关键大宗商品供应链</span><span data-en>The agreement covers supply chains for key commodities including energy, rare earths, and food</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>日企与政府联合在澳投资稀土项目，直接对标降低对华依赖</span><span data-en>Japanese companies and the government jointly invest in Australian rare earth projects, directly aimed at reducing dependence on China</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>上周双方还签署了超10艘海军舰艇销售协议，经济安全与军事合作并行推进</span><span data-en>Both sides also signed a naval vessel sales agreement for over 10 ships last week, advancing economic security and military cooperation in parallel</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>日澳经济安全协议是日本"供应链去中国化"战略的关键拼图。稀土项目投资与事件5（中国对日稀土管制）形成直接因果链——中方管制加速了日方替代来源的开发。未来，日澳在关键矿产领域的合作将持续深化，但澳大利亚稀土产能从投资到量产需要3-5年周期，短期内无法完全替代中国供应。</span><span data-en>The Japan-Australia economic security agreement is a key piece of Japan's "supply chain de-Sinicization" strategy. The rare earth project investment forms a direct causal chain with Event 5 (China's rare earth controls on Japan) — Chinese controls have accelerated Japan's development of alternative sources. Japan-Australia cooperation in critical minerals will continue to deepen, but Australian rare earth capacity requires 3–5 years from investment to production, unable to fully replace Chinese supply in the short term.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件10 -->
+  <div class="reveal card event-card-yellow" style="margin-bottom:32px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#f59e0b;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 10</span><span data-en>Event 10</span></span>
+      <span class="tag tag-yellow"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>中影响</span><span data-en>Medium Impact</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>日本自民党AI法提言</span><span data-en>Japan's LDP Proposes AI Legislation</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>自民党提言案要求在AI法中追加对恶质事业者的罚则，明确提及欧美和中国已有相关法律，日本需跟进。</span><span data-en>The LDP's proposal calls for adding penalties for malicious operators in the AI law, explicitly noting that the EU, US, and China already have relevant legislation and Japan needs to follow suit.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>提言案以欧盟AI法案和中国AI监管框架为参照</span><span data-en>The proposal references the EU AI Act and China's AI regulatory framework</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>要求追加罚则以应对AI滥用风险</span><span data-en>Calls for additional penalties to address AI misuse risks</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>日本在AI治理领域将中国视为"制度竞争参照系"，这一定位本身具有信号意义——承认中国在AI监管方面的先行者地位。未来，中日在AI治理领域可能形成"竞争性趋同"，即各自建立监管框架但在标准互认上存在壁垒。</span><span data-en>Japan's positioning of China as a "regulatory competition benchmark" in AI governance is itself significant — acknowledging China's first-mover status in AI regulation. Going forward, China and Japan may develop "competitive convergence" in AI governance, each building regulatory frameworks but with barriers to mutual standard recognition.</span></p>
+    </div>
+  </div>
+
+  <!-- 🟢 值得关注 -->
+  <div class="reveal" style="margin-bottom:24px;">
+    <span class="tag tag-green" style="font-size:14px;padding:6px 16px;"><i class="fas fa-circle" style="font-size:8px;"></i> <span data-zh>值得关注</span><span data-en>Noteworthy</span></span>
+  </div>
+
+  <!-- 事件11 -->
+  <div class="reveal card event-card-green" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#22c55e;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 11</span><span data-en>Event 11</span></span>
+      <span class="tag tag-green"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>值得关注</span><span data-en>Noteworthy</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>黑龙江方正县"中日友好園林"门被拆除</span><span data-en>Gate of "China-Japan Friendship Garden" in Fangzheng County, Heilongjiang Demolished</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>曾作为中日友好象征的黑龙江方正县日本人公墓"中日友好園林"大门于2026年3月消失，被更换为有刺铁丝网。</span><span data-en>The gate of the "China-Japan Friendship Garden" (中日友好園林), a Japanese cemetery in Fangzheng County, Heilongjiang that once symbolized China-Japan friendship, disappeared in March 2026 and was replaced with barbed wire.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>该公墓长期作为中日民间友好的象征性地标</span><span data-en>The cemetery had long served as a symbolic landmark of China-Japan grassroots friendship</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>大门拆除并更换为有刺铁丝网，象征意味强烈</span><span data-en>The gate was demolished and replaced with barbed wire, carrying strong symbolic implications</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>这一看似微小的变化，实则是中日关系恶化在民间层面的具象化表达。"友好"符号的消失与"隔离"符号的出现，反映出中国基层社会对日情感的转向。未来，类似的民间"去友好化"现象可能在更多地方出现。</span><span data-en>This seemingly minor change is in fact a tangible expression of deteriorating China-Japan relations at the grassroots level. The disappearance of "friendship" symbols and the appearance of "isolation" symbols reflect a shift in sentiment toward Japan in Chinese grassroots society. Similar grassroots "de-friendshipization" phenomena may appear in more locations going forward.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件12 -->
+  <div class="reveal card event-card-green" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#22c55e;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 12</span><span data-en>Event 12</span></span>
+      <span class="tag tag-green"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>值得关注</span><span data-en>Noteworthy</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>俄罗斯联合中国在历史问题上对日施压</span><span data-en>Russia Joins China in Pressuring Japan on Historical Issues</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>俄罗斯拟建千岛群岛占领作战博物馆，中俄在领土和历史问题上形成对日联合施压态势。</span><span data-en>Russia plans to build a museum on the Kuril Islands occupation campaign. China and Russia are forming a joint pressure posture against Japan on territorial and historical issues.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>俄方博物馆计划强化其对北方四岛/南千岛群岛的主权叙事</span><span data-en>Russia's museum plan aims to reinforce its sovereignty narrative over the Northern Territories/Southern Kurils</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中俄在历史问题上互相支持，形成对日"双线施压"</span><span data-en>China and Russia mutually support each other on historical issues, forming "dual-track pressure" on Japan</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>中国军机此前首次侵犯日本领空，军事压力与历史叙事压力叠加</span><span data-en>A Chinese military aircraft previously violated Japanese airspace for the first time, with military pressure overlapping historical narrative pressure</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>中俄在对日问题上的协调正从"默契"走向"显性"。历史问题的联合施压与军事领域的协同行动（中国军机侵犯日本领空、中俄联合军演）构成多维度压力。未来，日本将面临"北有俄罗斯、西有中国"的双线安全压力，这将进一步推动日本向美国及其盟友体系靠拢。</span><span data-en>China-Russia coordination on Japan issues is moving from "tacit understanding" to "explicit alignment." Joint pressure on historical issues combined with coordinated military actions (Chinese military aircraft violating Japanese airspace, China-Russia joint exercises) creates multi-dimensional pressure. Japan will face "Russia to the north, China to the west" dual-track security pressure, further pushing Japan closer to the US and its alliance system.</span></p>
+    </div>
+  </div>
+
+  <!-- 事件13 -->
+  <div class="reveal card event-card-green" style="margin-bottom:24px;">
+    <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+      <span style="background:#22c55e;color:white;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;"><span data-zh>事件 13</span><span data-en>Event 13</span></span>
+      <span class="tag tag-green"><i class="fas fa-circle" style="font-size:6px;"></i> <span data-zh>值得关注</span><span data-en>Noteworthy</span></span>
+    </div>
+    <h3 class="serif" style="font-size:20px;font-weight:700;margin-bottom:12px;color:var(--text-primary);"><span data-zh>高市内阁支持率降至53%</span><span data-en>Takaichi Cabinet Approval Rating Drops to 53%</span></h3>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;margin-bottom:16px;">
+      <strong style="color:var(--gold);"><span data-zh>事件概要：</span><span data-en>Summary: </span></strong><span data-zh>高市早苗内阁支持率降至53%，为内阁成立以来最低，连续第二个月下降。</span><span data-en>The Takaichi Cabinet's approval rating has dropped to 53%, the lowest since its formation, declining for the second consecutive month.</span>
+    </p>
+    <div style="margin-bottom:16px;">
+      <div style="font-size:13px;font-weight:700;color:var(--text-primary);margin-bottom:8px;"><i class="fas fa-list-ul" style="color:var(--gold);margin-right:6px;"></i><span data-zh>关键细节</span><span data-en>Key Details</span></div>
+      <ul style="list-style:none;padding:0;">
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;border-bottom:1px solid var(--bg-tertiary);"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>支持率下降与中日关系恶化、内外政策争议相关</span><span data-en>The decline is linked to deteriorating China-Japan relations and domestic/foreign policy controversies</span></li>
+        <li style="padding:6px 0 6px 20px;position:relative;color:var(--text-secondary);font-size:14px;line-height:1.8;"><span style="position:absolute;left:0;color:var(--gold);">›</span><span data-zh>连续两个月下滑趋势值得关注</span><span data-en>The two-month consecutive decline trend warrants attention</span></li>
+      </ul>
+    </div>
+    <div class="insight-box">
+      <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-search" style="margin-right:4px;"></i><span data-zh>洞察</span><span data-en>Insight</span></div>
+      <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>支持率下降表明高市的对华强硬路线并未转化为稳定的国内政治红利。日本民众对中日关系恶化带来的经济代价（贸易摩擦、供应链风险）存在隐忧。未来，若支持率持续下滑，高市可能在对华政策上做出策略性调整，以避免内政外交双重困境。</span><span data-en>The declining approval rating indicates Takaichi's hardline approach toward China has not translated into stable domestic political dividends. Japanese citizens harbor concerns about the economic costs of deteriorating China-Japan relations (trade friction, supply chain risks). If the approval rating continues to slide, Takaichi may make strategic adjustments to her China policy to avoid a dual domestic-foreign policy predicament.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: 趋势观察 -->
+<section id="section3" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 03</div>
+    <div class="section-title"><span data-zh>三、趋势观察</span><span data-en>III. Trend Analysis</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 28px;border-radius:2px;"></div>
+  </div>
+
+  <div class="trend-line">
+    <!-- 趋势一 -->
+    <div class="reveal card" style="margin-bottom:32px;position:relative;">
+      <div class="trend-dot"></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><span data-zh>趋势一</span><span data-en>Trend 1</span></span>
+      </div>
+      <h3 class="serif" style="font-size:18px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>日本安全政策"正常化"加速，中日安全互信持续侵蚀</span><span data-en>Japan's Security Policy "Normalization" Accelerates, China-Japan Security Trust Continues to Erode</span></h3>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;"><i class="fas fa-binoculars" style="margin-right:6px;"></i><span data-zh>趋势描述</span><span data-en>Trend Description</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>本周三大安全事件——废除致命武器出口禁令（事件2）、护卫舰通过台湾海峡（事件3）、日澳军事合作深化（事件9）——共同指向一个方向：日本正在系统性地突破战后和平主义防卫框架。武器出口解禁为日本防务产业打开国际市场，台海通行常态化展示安全姿态，日澳舰艇销售协议则将经济安全与军事合作捆绑。这三条线索交织，构成日本安全政策转型的完整图景。</span><span data-en>Three major security events this week — abolishing the lethal weapons export ban (Event 2), escort ship transit through the Taiwan Strait (Event 3), and deepening Japan-Australia military cooperation (Event 9) — all point in one direction: Japan is systematically breaking through its postwar pacifist defense framework. The weapons export liberalization opens international markets for Japan's defense industry, Taiwan Strait transit normalization demonstrates security posture, and the Japan-Australia naval vessel sales agreement bundles economic security with military cooperation. These three threads interweave to form a complete picture of Japan's security policy transformation.</span></p>
+      </div>
+      <div class="insight-box">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-gavel" style="margin-right:4px;"></i><span data-zh>趋势判断</span><span data-en>Trend Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>日本安全政策的"正常化"已从政策讨论阶段进入实质执行阶段，且获得了美、澳、菲等盟友的明确支持。中方将此视为地区安全秩序的根本性挑战，军事回应的频率和烈度将同步上升。中日之间正在形成"安全困境"的经典螺旋——一方的防御性举措被另一方解读为进攻性威胁，双方军事部署持续升级。</span><span data-en>Japan's security policy "normalization" has moved from the policy discussion phase to substantive implementation, with explicit support from allies including the US, Australia, and the Philippines. China views this as a fundamental challenge to the regional security order, and the frequency and intensity of military responses will rise in tandem. A classic "security dilemma" spiral is forming between China and Japan — one side's defensive measures are interpreted as offensive threats by the other, with both sides' military deployments continuously escalating.</span></p>
+      </div>
+    </div>
+
+    <!-- 趋势二 -->
+    <div class="reveal card" style="margin-bottom:32px;position:relative;">
+      <div class="trend-dot"></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><span data-zh>趋势二</span><span data-en>Trend 2</span></span>
+      </div>
+      <h3 class="serif" style="font-size:18px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>供应链"去中国化"从口号走向落地，中日经济脱钩风险加剧</span><span data-en>Supply Chain "De-Sinicization" Moves from Rhetoric to Reality, China-Japan Economic Decoupling Risks Intensify</span></h3>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;"><i class="fas fa-binoculars" style="margin-right:6px;"></i><span data-zh>趋势描述</span><span data-en>Trend Description</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>稀土磁铁出口下降（事件5）、日本排除中国IT设备（事件6）、日澳经济安全协议（事件9）三个事件形成清晰的因果链：中方出口管制→日方感受供应链脆弱性→加速替代来源开发和供应商排除。稀土领域，日本已在澳大利亚布局替代产能；IT领域，排除范围从特定企业扩大到"中国制造"全品类。供应链重构正在从战略规划转化为采购政策和投资行动。</span><span data-en>Three events form a clear causal chain: rare earth magnet export decline (Event 5), Japan excluding Chinese IT equipment (Event 6), and the Japan-Australia economic security agreement (Event 9): Chinese export controls → Japan perceives supply chain vulnerability → accelerated development of alternative sources and supplier exclusion. In rare earths, Japan has already positioned alternative capacity in Australia; in IT, the exclusion scope has expanded from specific companies to all categories of "Made in China." Supply chain restructuring is transitioning from strategic planning to procurement policies and investment actions.</span></p>
+      </div>
+      <div class="insight-box">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-gavel" style="margin-right:4px;"></i><span data-zh>趋势判断</span><span data-en>Trend Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>中日供应链脱钩已进入"不可逆"阶段的早期。短期内（1-2年），日本将承受替代成本上升和供应不稳定的阵痛；中期（3-5年），随着澳大利亚等替代来源产能释放，日本对华关键材料依赖度将显著下降。对中国而言，稀土管制作为"经济武器"的边际效用将随时间递减，需要在窗口期内最大化其战略杠杆价值。</span><span data-en>China-Japan supply chain decoupling has entered the early stage of "irreversibility." In the short term (1–2 years), Japan will endure the pain of rising replacement costs and supply instability; in the medium term (3–5 years), as alternative source capacity from Australia and others comes online, Japan's dependence on China for critical materials will decline significantly. For China, the marginal utility of rare earth controls as an "economic weapon" will diminish over time, requiring maximization of strategic leverage value within the window period.</span></p>
+      </div>
+    </div>
+
+    <!-- 趋势三 -->
+    <div class="reveal card" style="margin-bottom:32px;position:relative;">
+      <div class="trend-dot"></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><span data-zh>趋势三</span><span data-en>Trend 3</span></span>
+      </div>
+      <h3 class="serif" style="font-size:18px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>历史问题与现实安全议题深度绑定，中日关系"情感底座"加速瓦解</span><span data-en>Historical Issues Deeply Bound with Current Security Agenda, the "Emotional Foundation" of China-Japan Relations Accelerates Collapse</span></h3>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;"><i class="fas fa-binoculars" style="margin-right:6px;"></i><span data-zh>趋势描述</span><span data-en>Trend Description</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>靖国神社春祭（事件1）、"中日友好園林"门被拆除（事件11）、俄罗斯联合中国在历史问题上对日施压（事件12）、福冈反华人公寓项目（事件8）——这四个事件跨越政府层面和民间层面，共同指向中日关系的"情感底座"正在瓦解。历史问题不再是孤立的外交摩擦点，而是与台海、武器出口、供应链等现实安全议题深度绑定，形成"历史叙事+现实对抗"的复合型冲突结构。</span><span data-en>The Yasukuni spring festival (Event 1), demolition of the "China-Japan Friendship Garden" gate (Event 11), Russia joining China to pressure Japan on historical issues (Event 12), and the Fukuoka anti-Chinese apartment project (Event 8) — these four events span government and grassroots levels, collectively pointing to the collapse of the "emotional foundation" of China-Japan relations. Historical issues are no longer isolated diplomatic friction points but are deeply bound with current security issues such as the Taiwan Strait, arms exports, and supply chains, forming a compound conflict structure of "historical narrative + real-world confrontation."</span></p>
+      </div>
+      <div class="insight-box">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-gavel" style="margin-right:4px;"></i><span data-zh>趋势判断</span><span data-en>Trend Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>当历史问题与现实安全议题形成共振时，中日关系的修复难度将指数级上升——因为历史问题涉及国家认同和民族情感，不像经济利益那样可以通过谈判交换。民间层面的"去友好化"（方正县公墓、福冈反华抗议）一旦形成社会共识，将成为政府改善关系的结构性障碍。</span><span data-en>When historical issues resonate with current security issues, the difficulty of repairing China-Japan relations rises exponentially — because historical issues involve national identity and ethnic sentiment, unlike economic interests that can be exchanged through negotiation. Once grassroots "de-friendshipization" (Fangzheng County cemetery, Fukuoka anti-Chinese protests) forms social consensus, it will become a structural obstacle for governments seeking to improve relations.</span></p>
+      </div>
+    </div>
+
+    <!-- 趋势四 -->
+    <div class="reveal card" style="margin-bottom:0;position:relative;">
+      <div class="trend-dot"></div>
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+        <span style="background:var(--gold);color:var(--navy);font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><span data-zh>趋势四</span><span data-en>Trend 4</span></span>
+      </div>
+      <h3 class="serif" style="font-size:18px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>日本经济界"务实纠偏"与政治"强硬路线"形成张力</span><span data-en>Japan's Business Community "Pragmatic Correction" Creates Tension with Political "Hardline Approach"</span></h3>
+      <div style="margin-bottom:16px;">
+        <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;"><i class="fas fa-binoculars" style="margin-right:6px;"></i><span data-zh>趋势描述</span><span data-en>Trend Description</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>经贸团体集体筹备访华（事件7）与高市内阁支持率下降（事件13）形成呼应——商界对政治主导的对华强硬路线存在不满，而民众对中日关系恶化的经济代价也有隐忧。河野洋平、经济同友会、日中经济协会三方同时行动，显示这不是个别企业的诉求，而是日本经济界的集体意志。</span><span data-en>Business groups collectively preparing China visits (Event 7) echoes the Takaichi Cabinet's declining approval rating (Event 13) — the business community is dissatisfied with the politically-driven hardline approach toward China, while the public harbors concerns about the economic costs of deteriorating relations. The simultaneous actions of Kōno Yōhei, Keizai Dōyūkai, and the Japan-China Economic Association show this is not an individual company's demand but the collective will of Japan's business community.</span></p>
+      </div>
+      <div class="insight-box">
+        <div style="font-size:12px;font-weight:700;color:var(--gold);margin-bottom:6px;"><i class="fas fa-gavel" style="margin-right:4px;"></i><span data-zh>趋势判断</span><span data-en>Trend Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;"><span data-zh>日本对华政策正在形成"政治强硬vs经济务实"的内部张力。短期内，安全议题的优先级仍将压倒经济利益；但若高市支持率持续下滑，经济界的"纠偏"力量可能获得更大政策影响力。中方是否接纳日方经贸橄榄枝，将成为判断中日关系走向的关键风向标。</span><span data-en>Japan's China policy is developing an internal tension between "political hardline vs. economic pragmatism." In the short term, security issues will continue to take priority over economic interests; but if Takaichi's approval rating continues to slide, the business community's "corrective" force may gain greater policy influence. Whether China accepts Japan's economic olive branch will be a key indicator for judging the direction of China-Japan relations.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: 风险警示 -->
+<section id="section4" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 04</div>
+    <div class="section-title"><span data-zh>四、风险警示</span><span data-en>IV. Risk Alerts</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 28px;border-radius:2px;"></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:24px;">
+    <!-- 风险一 -->
+    <div class="reveal risk-card risk-high">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="background:rgba(239,68,68,0.12);color:#ef4444;font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><i class="fas fa-exclamation-circle" style="margin-right:4px;"></i><span data-zh>高风险</span><span data-en>High Risk</span></span>
+        <span style="font-size:13px;font-weight:600;color:var(--text-primary);"><span data-zh>风险一</span><span data-en>Risk 1</span></span>
+      </div>
+      <h3 class="serif" style="font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>台海军事摩擦升级风险</span><span data-en>Risk of Taiwan Strait Military Friction Escalation</span></h3>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>日本海自护卫舰台海通行常态化（事件3）+ 中方对等军事回应 + 日本参加美菲"肩并肩"军演</span><span data-en>JMSDF escort ship Taiwan Strait transit normalization (Event 3) + China's reciprocal military response + Japan's participation in US-Philippines "Balikatan" exercise</span></p>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>中日双边安全关系、台海地区稳定、在华日企安全</span><span data-en>China-Japan bilateral security relations, Taiwan Strait regional stability, safety of Japanese companies in China</span></p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险评估</span><span data-en>Risk Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>台海通行从"偶发事件"转为"常态操作"后，中方回应也将制度化。双方军舰在狭窄水域的高频接触，增加了误判和意外冲突的概率。一旦发生海上摩擦事件，将迅速升级为全面外交危机，在华日企可能面临经营环境急剧恶化。</span><span data-en>Once Taiwan Strait transits shift from "occasional events" to "routine operations," China's responses will also become institutionalized. High-frequency contact between both sides' warships in narrow waters increases the probability of miscalculation and accidental conflict. Any maritime friction incident would rapidly escalate into a full diplomatic crisis, with Japanese companies in China potentially facing a sharp deterioration in their operating environment.</span></p>
+      </div>
+    </div>
+
+    <!-- 风险二 -->
+    <div class="reveal risk-card risk-high">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="background:rgba(239,68,68,0.12);color:#ef4444;font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><i class="fas fa-exclamation-circle" style="margin-right:4px;"></i><span data-zh>高风险</span><span data-en>High Risk</span></span>
+        <span style="font-size:13px;font-weight:600;color:var(--text-primary);"><span data-zh>风险二</span><span data-en>Risk 2</span></span>
+      </div>
+      <h3 class="serif" style="font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>稀土及关键材料供应链断裂风险</span><span data-en>Risk of Rare Earth and Critical Materials Supply Chain Disruption</span></h3>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>中国对日稀土管制持续加强（事件5）+ 军民两用物项出口条例扩大适用 + 更多日企可能被列入管制清单</span><span data-en>Continued strengthening of China's rare earth controls on Japan (Event 5) + expanded application of dual-use item export regulations + more Japanese companies may be added to control lists</span></p>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>日本电动汽车、风力发电、精密电机、国防工业</span><span data-en>Japan's EV, wind power, precision motor, and defense industries</span></p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险评估</span><span data-en>Risk Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>当前27.2%的降幅尚在可控范围，但若中方进一步扩大管制清单或提高管制级别，日本高端制造业将面临"断供"风险。三菱重工等涉军企业已受直接影响，供应链中断可能波及其民用业务线。替代来源（澳大利亚）产能释放需要3-5年，窗口期内日本处于被动地位。</span><span data-en>The current 27.2% decline is still within a manageable range, but if China further expands the control list or raises control levels, Japan's high-end manufacturing will face "supply cutoff" risks. Military-linked companies like Mitsubishi Heavy Industries are already directly affected, and supply chain disruptions may spill over into their civilian business lines. Alternative source (Australia) capacity requires 3–5 years to come online, leaving Japan in a passive position during the window period.</span></p>
+      </div>
+    </div>
+
+    <!-- 风险三 -->
+    <div class="reveal risk-card risk-medium">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="background:rgba(245,158,11,0.12);color:#f59e0b;font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><i class="fas fa-exclamation-triangle" style="margin-right:4px;"></i><span data-zh>中风险</span><span data-en>Medium Risk</span></span>
+        <span style="font-size:13px;font-weight:600;color:var(--text-primary);"><span data-zh>风险三</span><span data-en>Risk 3</span></span>
+      </div>
+      <h3 class="serif" style="font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>在日华人社会环境恶化风险</span><span data-en>Risk of Deteriorating Social Environment for Chinese Residents in Japan</span></h3>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>福冈反华人公寓抗议（事件8）+ 日本社会反华情绪上升 + 中日政治关系持续恶化</span><span data-en>Fukuoka anti-Chinese apartment protest (Event 8) + rising anti-Chinese sentiment in Japanese society + continued deterioration of China-Japan political relations</span></p>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>在日华人（约80万人）的居住、投资、就业环境</span><span data-en>Living, investment, and employment environment for Chinese residents in Japan (approx. 800,000 people)</span></p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险评估</span><span data-en>Risk Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>福冈事件表明反华情绪已从网络舆论转化为线下行动，且获得了社会容忍。在中日政治关系持续恶化的背景下，类似事件可能在其他华人聚居区重演。对在日华人企业家和投资者而言，不动产投资和社区融入的难度将上升。</span><span data-en>The Fukuoka incident shows anti-Chinese sentiment has transitioned from online discourse to offline action, gaining social tolerance. Against the backdrop of continued deterioration in China-Japan political relations, similar incidents may recur in other Chinese-concentrated areas. For Chinese entrepreneurs and investors in Japan, the difficulty of real estate investment and community integration will increase.</span></p>
+      </div>
+    </div>
+
+    <!-- 风险四 -->
+    <div class="reveal risk-card risk-medium">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+        <span style="background:rgba(245,158,11,0.12);color:#f59e0b;font-size:12px;font-weight:700;padding:4px 12px;border-radius:6px;"><i class="fas fa-exclamation-triangle" style="margin-right:4px;"></i><span data-zh>中风险</span><span data-en>Medium Risk</span></span>
+        <span style="font-size:13px;font-weight:600;color:var(--text-primary);"><span data-zh>风险四</span><span data-en>Risk 4</span></span>
+      </div>
+      <h3 class="serif" style="font-size:17px;font-weight:700;margin-bottom:14px;color:var(--text-primary);line-height:1.5;"><span data-zh>东海海洋权益争端激化风险</span><span data-en>Risk of East China Sea Maritime Rights Dispute Escalation</span></h3>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险来源</span><span data-en>Risk Source</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>中国新建第23基构造物（事件4）+ 日方外交抗议无效 + 2008年共同开发共识搁置</span><span data-en>China's construction of 23rd structure (Event 4) + ineffective Japanese diplomatic protests + 2008 joint development consensus shelved</span></p>
+      </div>
+      <div style="margin-bottom:12px;">
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>影响范围</span><span data-en>Impact Scope</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>东海油气资源开发、中日海洋划界谈判、东海航行安全</span><span data-en>East China Sea oil and gas resource development, China-Japan maritime delimitation negotiations, East China Sea navigation safety</span></p>
+      </div>
+      <div>
+        <div style="font-size:12px;font-weight:700;color:var(--text-muted);margin-bottom:4px;"><span data-zh>风险评估</span><span data-en>Risk Assessment</span></div>
+        <p style="color:var(--text-secondary);font-size:13px;line-height:1.7;"><span data-zh>中方持续单边开发构造物，日方除外交抗议外缺乏有效反制手段，这种"抗议-无视"循环正在侵蚀日方的耐心。若日方转向更强硬的回应方式（如加强海上保安厅巡逻、在中间线东侧部署监测设施），东海紧张局势可能进一步升级。</span><span data-en>China's continued unilateral construction of structures, with Japan lacking effective countermeasures beyond diplomatic protests, creates a "protest-ignore" cycle that is eroding Japan's patience. If Japan shifts to more assertive responses (such as strengthening Japan Coast Guard patrols or deploying monitoring facilities on the eastern side of the median line), East China Sea tensions could further escalate.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: 合作亮点 -->
+<section id="section5" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 05</div>
+    <div class="section-title"><span data-zh>五、合作亮点</span><span data-en>V. Cooperation Highlights</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 12px;border-radius:2px;"></div>
+    <p style="color:var(--text-secondary);font-size:15px;margin-bottom:28px;"><span data-zh>尽管本周中日关系整体承压，仍有若干积极信号值得关注：</span><span data-en>Despite overall pressure on China-Japan relations this week, several positive signals are worth noting:</span></p>
+  </div>
+
+  <div class="reveal" style="overflow-x:auto;">
+    <table class="coop-table">
+      <thead>
+        <tr>
+          <th style="width:10%;"><span data-zh>领域</span><span data-en>Area</span></th>
+          <th style="width:35%;"><span data-zh>合作亮点</span><span data-en>Cooperation Highlight</span></th>
+          <th style="width:22%;"><span data-zh>参与方</span><span data-en>Participants</span></th>
+          <th style="width:33%;"><span data-zh>意义评估</span><span data-en>Significance</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span style="font-weight:600;"><span data-zh>经贸交流</span><span data-en>Trade</span></span></td>
+          <td><span data-zh>日本国际贸易促进协会拟6月访华，寻求与中方高层会面</span><span data-en>Japan Association for the Promotion of International Trade plans June visit to China, seeking meetings with Chinese leadership</span></td>
+          <td><span data-zh>河野洋平（会长）、中方待定</span><span data-en>Kōno Yōhei (Chairman), Chinese side TBD</span></td>
+          <td><span data-zh>高市涉台言论后首批经贸访华团，政治信号积极</span><span data-en>First business delegation to visit China since Takaichi's Taiwan remarks; positive political signal</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-weight:600;"><span data-zh>经贸交流</span><span data-en>Trade</span></span></td>
+          <td><span data-zh>日本经济同友会计划5月小规模访华</span><span data-en>Keizai Dōyūkai plans small-scale visit to China in May</span></td>
+          <td><span data-zh>经济同友会成员企业</span><span data-en>Keizai Dōyūkai member companies</span></td>
+          <td><span data-zh>商界自发推动交流恢复，体现务实诉求</span><span data-en>Business community spontaneously promoting exchange resumption, reflecting pragmatic demands</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-weight:600;"><span data-zh>经贸考察</span><span data-en>Trade Visit</span></span></td>
+          <td><span data-zh>日中经济协会计划5月赴上海考察</span><span data-en>Japan-China Economic Association plans study visit to Shanghai in May</span></td>
+          <td><span data-zh>日中经济协会会员企业</span><span data-en>Japan-China Economic Association member companies</span></td>
+          <td><span data-zh>聚焦长三角经济圈，关注在华投资环境</span><span data-en>Focused on the Yangtze River Delta economic zone, monitoring investment environment in China</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-weight:600;"><span data-zh>AI治理</span><span data-en>AI Gov.</span></span></td>
+          <td><span data-zh>自民党AI法提言参照中国AI监管框架</span><span data-en>LDP AI law proposal references China's AI regulatory framework</span></td>
+          <td><span data-zh>自民党政策部门</span><span data-en>LDP Policy Division</span></td>
+          <td><span data-zh>承认中国AI治理先行者地位，潜在标准对话空间</span><span data-en>Acknowledges China's first-mover status in AI governance; potential space for standards dialogue</span></td>
+        </tr>
+        <tr>
+          <td><span style="font-weight:600;"><span data-zh>人文交流</span><span data-en>Cultural</span></span></td>
+          <td><span data-zh>民生、人文栏目大量在日华人社区活动报道</span><span data-en>Extensive coverage of Chinese community activities in Japan in Society and Culture categories</span></td>
+          <td><span data-zh>在日华人社区、地方团体</span><span data-en>Chinese communities in Japan, local organizations</span></td>
+          <td><span data-zh>民间交流韧性犹存，文化纽带未断</span><span data-en>Grassroots exchange resilience persists; cultural ties remain intact</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="reveal insight-box" style="margin-top:24px;">
+    <div style="font-size:13px;font-weight:700;color:var(--gold);margin-bottom:8px;">
+      <i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>小结</span><span data-en>Summary</span>
+    </div>
+    <p style="color:var(--text-secondary);font-size:14px;line-height:1.9;">
+      <span data-zh>合作亮点集中在经贸和人文领域，且以日方主动推动为主。经贸团体的集体行动是本周最重要的积极信号，表明日本商界对中日经济关系的"压舱石"功能仍有期待。但需注意，这些合作信号的能量级远低于安全领域的对抗信号，"政冷经温"的空间正在被压缩。</span><span data-en>Cooperation highlights are concentrated in trade and cultural fields, primarily driven by the Japanese side. The collective action of business groups is the most important positive signal this week, indicating Japan's business community still expects the "ballast" function of China-Japan economic relations. However, the energy level of these cooperation signals is far lower than the confrontation signals in the security domain, and the space for "cold politics, warm economics" is being compressed.</span>
+    </p>
+  </div>
+</section>
+
+<!-- Section 6: 下周关注点 -->
+<section id="section6" style="max-width:960px;margin:0 auto;padding:64px 24px;">
+  <div class="reveal">
+    <div class="section-num">CHAPTER 06</div>
+    <div class="section-title"><span data-zh>六、下周关注点</span><span data-en>VI. Next Week's Watch List</span></div>
+    <div style="height:3px;width:60px;background:var(--gold);margin:16px 0 28px;border-radius:2px;"></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:16px;">
+    <div class="reveal watch-item">
+      <div class="watch-num">1</div>
+      <div>
+        <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;font-size:15px;"><span data-zh>经贸访华团进展</span><span data-en>Progress of Business Delegations to China</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;"><span data-zh>关注日本经济同友会5月访华的具体日程和中方接待规格，这将是判断中方是否愿意在政治摩擦中维系经济对话的关键指标。</span><span data-en>Monitor the specific schedule of Keizai Dōyūkai's May visit to China and the level of Chinese reception — this will be a key indicator of whether China is willing to maintain economic dialogue amid political friction.</span></p>
+      </div>
+    </div>
+    <div class="reveal watch-item">
+      <div class="watch-num">2</div>
+      <div>
+        <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;font-size:15px;"><span data-zh>美菲"肩并肩"军演中的日本角色</span><span data-en>Japan's Role in US-Philippines "Balikatan" Exercise</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;"><span data-zh>护卫舰"雷"号参演的具体科目和中方反应，将决定台海军事博弈的下一步走向。</span><span data-en>The specific exercises involving escort ship "Ikazuchi" and China's response will determine the next steps in the Taiwan Strait military competition.</span></p>
+      </div>
+    </div>
+    <div class="reveal watch-item">
+      <div class="watch-num">3</div>
+      <div>
+        <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;font-size:15px;"><span data-zh>稀土管制清单是否扩大</span><span data-en>Whether Rare Earth Control Lists Will Expand</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;"><span data-zh>关注中方是否在靖国神社事件后进一步扩大对日出口管制范围，特别是是否将更多日本企业列入管制清单。</span><span data-en>Monitor whether China further expands export control scope on Japan following the Yasukuni incident, particularly whether more Japanese companies are added to control lists.</span></p>
+      </div>
+    </div>
+    <div class="reveal watch-item">
+      <div class="watch-num">4</div>
+      <div>
+        <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;font-size:15px;"><span data-zh>高市内阁人事与政策调整</span><span data-en>Takaichi Cabinet Personnel and Policy Adjustments</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;"><span data-zh>支持率连续下滑背景下，高市是否会通过内阁改组或政策微调来止血，特别是对华政策是否出现策略性缓和信号。</span><span data-en>Against the backdrop of consecutive approval rating declines, whether Takaichi will attempt to stop the bleeding through cabinet reshuffles or policy fine-tuning, particularly whether strategic easing signals emerge in China policy.</span></p>
+      </div>
+    </div>
+    <div class="reveal watch-item">
+      <div class="watch-num">5</div>
+      <div>
+        <div style="font-weight:700;color:var(--text-primary);margin-bottom:4px;font-size:15px;"><span data-zh>东海构造物后续动态</span><span data-en>East China Sea Structure Follow-up Developments</span></div>
+        <p style="color:var(--text-secondary);font-size:14px;line-height:1.8;"><span data-zh>关注日方是否在外交抗议之外采取更实质性的回应措施，以及中方是否继续推进新的构造物建设。</span><span data-en>Monitor whether Japan takes more substantive response measures beyond diplomatic protests, and whether China continues to advance construction of new structures.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer style="background:var(--bg-secondary);border-top:1px solid var(--border-color);padding:48px 24px;">
+  <div style="max-width:960px;margin:0 auto;text-align:center;">
+    <div class="reveal">
+      <div style="font-size:12px;color:var(--text-muted);line-height:2;margin-bottom:16px;">
+        <i class="fas fa-info-circle" style="color:var(--gold);margin-right:4px;"></i>
+        <span data-zh>本报告基于 Supinfor 区域国别实时监测数据编制，仅供参考，不构成投资或决策建议。</span><span data-en>This report is compiled based on Supinfor regional country real-time monitoring data, for reference only, and does not constitute investment or decision-making advice.</span>
+      </div>
+      <div style="height:1px;background:var(--border-color);margin:16px auto;max-width:200px;"></div>
+      <div style="display:flex;justify-content:center;align-items:center;gap:8px;margin-bottom:8px;">
+        <i class="fas fa-building" style="color:var(--gold);font-size:14px;"></i>
+        <span style="font-size:14px;font-weight:600;color:var(--text-primary);">Supinfor Ltd.</span>
+      </div>
+      <div style="font-size:13px;color:var(--text-muted);margin-bottom:4px;">
+        <i class="fas fa-calendar-alt" style="margin-right:4px;"></i><span data-zh>报告生成时间：2026年4月24日</span><span data-en>Report Generated: April 24, 2026</span>
+      </div>
+      <div style="font-size:12px;color:var(--text-muted);margin-top:12px;">
+        © Supinfor Ltd. All rights reserved.
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- end main-content -->
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+// Theme Management
+(function() {
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('themeBtn');
+  const icon = themeBtn.querySelector('i');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    const resolved = theme === 'system' ? getSystemTheme() : theme;
+    html.setAttribute('data-theme', resolved);
+    icon.className = resolved === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+  }
+
+  const saved = localStorage.getItem('theme') || 'system';
+  applyTheme(saved);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+    if ((localStorage.getItem('theme') || 'system') === 'system') applyTheme('system');
+  });
+
+  window.toggleTheme = function() {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', next);
+    applyTheme(next);
+  };
+})();
+
+// Sidebar Navigation
+window.toggleNav = function() {
+  document.getElementById('sidebarNav').classList.toggle('open');
+  document.getElementById('navOverlay').classList.toggle('open');
+};
+window.closeMobileNav = function() {
+  if (window.innerWidth < 1280) {
+    document.getElementById('sidebarNav').classList.remove('open');
+    document.getElementById('navOverlay').classList.remove('open');
+  }
+};
+
+// Active Nav Link on Scroll
+(function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-link[data-section]');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(l => l.classList.remove('active'));
+        const link = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    });
+  }, { rootMargin: '-20% 0px -70% 0px' });
+  sections.forEach(s => observer.observe(s));
+})();
+
+// Reveal on Scroll
+(function() {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+})();
+
+// Back to Top
+(function() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > window.innerHeight);
+  }, { passive: true });
+})();
+
+// Animate Bar Charts
+(function() {
+  const bars = document.querySelectorAll('.bar-fill');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const w = entry.target.getAttribute('data-width');
+        entry.target.style.width = w + '%';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  bars.forEach(b => observer.observe(b));
+})();
+
+// Language Toggle
+(function() {
+  const html = document.documentElement;
+  const btn = document.getElementById('langToggle');
+  const stored = localStorage.getItem('lang');
+  if (stored) {
+    html.setAttribute('data-lang', stored);
+    html.setAttribute('lang', stored === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = stored === 'en' ? '中' : 'EN';
+  }
+  btn.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang') || 'zh';
+    const next = current === 'zh' ? 'en' : 'zh';
+    html.setAttribute('data-lang', next);
+    html.setAttribute('lang', next === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = next === 'en' ? '中' : 'EN';
+    localStorage.setItem('lang', next);
+  });
+})();
+</script>
+</body>
+</html>

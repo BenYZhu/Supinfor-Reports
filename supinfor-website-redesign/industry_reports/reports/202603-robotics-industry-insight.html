@@ -1,0 +1,869 @@
+﻿<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>机器人行业洞察月报 2026-03 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #2563EB; --c-primary-light: #3b82f6; --c-primary-dark: #1D4ED8;
+  --c-accent: #F59E0B; --c-accent-light: #fbbf24;
+  --c-bg: #eff6ff; --c-surface: #ffffff; --c-surface-alt: #f0f7ff;
+  --c-border: #dbeafe; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #0c1220; --c-surface: #162035; --c-surface-alt: #1a2840;
+  --c-border: #1e3a5f; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #0c1220; --c-surface: #162035; --c-surface-alt: #1a2840;
+    --c-border: #1e3a5f; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#2563EB 0%,#1D4ED8 40%,#1e3a8a 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:160px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== DONUT CHART ========== */
+.donut-wrap{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;margin:1.5rem 0}
+.donut-chart{position:relative;width:140px;height:140px;flex-shrink:0}
+.donut-chart svg{transform:rotate(-90deg)}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-value{font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--c-primary)}
+.donut-sub{font-size:.65rem;color:var(--c-text-muted);text-align:center;max-width:100px}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+.table-wrap{overflow-x:auto;margin:1rem 0}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-robot"></i>
+      <span data-zh>机器人行业洞察月报</span>
+      <span data-en>Robotics Industry Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年3月刊 · Supinfor Ltd.</span>
+      <span data-en>March 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>机器人行业<br>洞察月报</span>
+      <span data-en>Robotics Industry<br>Monthly Insight</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>人形机器人商业化元年 · NVIDIA物理AI全栈平台崛起 · 中美竞争升级至国家安全层面</span>
+      <span data-en>Humanoid Robots Enter Commercial Era · NVIDIA Physical AI Platform Rises · US-China Competition Escalates to National Security</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">150</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">30</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">6</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">4</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、人形机器人商业化</span><span data-en>I. Humanoid Commercialization</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、NVIDIA物理AI平台</span><span data-en>II. NVIDIA Physical AI</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、工业机器人技术迭代</span><span data-en>III. Industrial Robot Tech</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、资本市场</span><span data-en>IV. Capital Markets</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、四足与医疗机器人</span><span data-en>V. Quadruped &amp; Medical</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、中美机器人竞争</span><span data-en>VI. US-China Competition</span></a>
+      <a href="#s7" class="toc-link"><span data-zh>七、AI训练与数据生态</span><span data-en>VII. AI Training &amp; Data</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>人形机器人从原型走向量产，2026年成为商业化元年</span><span data-en>Humanoid Robots Move from Prototype to Mass Production; 2026 Marks Commercial Debut</span></h3>
+      <p><span data-zh>特斯拉投入200亿美元、宇树科技IPO募资42亿元、Figure AI进入宝马产线、雷诺部署350台Calvin-40，头部企业同步推进量产与工厂落地，人形机器人正式进入规模化交付阶段。</span><span data-en>Tesla invests $20B, Unitree IPO raises ¥4.2B, Figure AI enters BMW production lines, Renault deploys 350 Calvin-40 units. Leading companies simultaneously advance mass production and factory deployment, marking the start of scaled humanoid robot delivery.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>NVIDIA构建物理AI全栈平台，成为机器人行业的"操作系统级"基础设施</span><span data-en>NVIDIA Builds Full-Stack Physical AI Platform, Becoming the "OS-Level" Infrastructure for Robotics</span></h3>
+      <p><span data-zh>GTC 2026发布Isaac GR00T模型、Jetson Thor芯片、Newton物理引擎，ABB/FANUC/KUKA/安川等全球头部企业集体接入，NVIDIA正在定义机器人行业的技术标准。</span><span data-en>GTC 2026 unveiled Isaac GR00T model, Jetson Thor chip, and Newton physics engine. ABB, FANUC, KUKA, Yaskawa and other global leaders collectively joined the platform. NVIDIA is defining the technical standards for the robotics industry.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>中美机器人竞争从市场层面升级至国家安全层面</span><span data-en>US-China Robot Competition Escalates from Market to National Security Level</span></h3>
+      <p><span data-zh>美国国会举行专题听证、提出《美国安全机器人法案》禁止联邦采购中国机器人，韩国对中日工业机器人征收反倾销关税，地缘政治风险正在重塑全球机器人供应链。</span><span data-en>US Congress held special hearings and proposed the American Secure Robotics Act to ban federal procurement of Chinese robots. South Korea imposed anti-dumping tariffs on Chinese and Japanese industrial robots. Geopolitical risks are reshaping the global robotics supply chain.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>资本市场进入收获期，行业并购与IPO密集落地</span><span data-en>Capital Markets Enter Harvest Phase; M&amp;A and IPOs Accelerate</span></h3>
+      <p><span data-zh>ABB以53.75亿美元将机器人业务出售给软银、宇树科技冲刺科创板、波士顿动力估值暴涨20倍预计2027年IPO、Mind Robotics完成5亿美元A轮，资本正在加速行业格局重塑。</span><span data-en>ABB sold its robotics business to SoftBank for $5.375B, Unitree sprints toward STAR Market IPO, Boston Dynamics valuation surged 20x ahead of projected 2027 IPO, Mind Robotics closed $500M Series A. Capital is accelerating industry restructuring.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>机器人安全漏洞与失控事件频发，行业合规框架亟待建立</span><span data-en>Robot Security Vulnerabilities and Runaway Incidents Surge; Compliance Framework Urgently Needed</span></h3>
+      <p><span data-zh>Unitree机器人被曝硬编码加密密钥漏洞可远程控制、海底捞机器人失控、澳门机器人惊吓老人，安全标准缺失已成为商业化落地的核心障碍。</span><span data-en>Unitree robots exposed with hardcoded AES key vulnerability enabling remote control, Haidilao robot ran out of control, Macau robot frightened elderly. The absence of safety standards has become a core obstacle to commercial deployment.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">6</span>
+    <div class="core-content">
+      <h3><span data-zh>零工经济与AI训练数据采集融合，为物理AI提供大规模真实世界数据</span><span data-en>Gig Economy Merges with AI Training Data Collection, Providing Large-Scale Real-World Data for Physical AI</span></h3>
+      <p><span data-zh>DoorDash利用200万配送员采集多模态数据、Uber推出类似平台，解决了实验室仿真数据无法覆盖真实环境变量的关键瓶颈。</span><span data-en>DoorDash leverages 2 million delivery workers to collect multimodal data; Uber launched a similar platform. This solves the critical bottleneck of lab simulation data failing to cover real-world environmental variables.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">$200亿</div>
+      <div class="lbl"><span data-zh>特斯拉Optimus投入</span><span data-en>Tesla Optimus Investment</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#b45309)">
+      <div class="val">$1.6万</div>
+      <div class="lbl"><span data-zh>宇树G1售价（美元）</span><span data-en>Unitree G1 Price (USD)</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">$53.75亿</div>
+      <div class="lbl"><span data-zh>ABB机器人业务出售价</span><span data-en>ABB Robotics Sale Price</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+      <div class="val">150条</div>
+      <div class="lbl"><span data-zh>本期资讯总量</span><span data-en>Total Articles This Issue</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: Humanoid Commercialization ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-person-walking"></i>
+    <h2><span data-zh>一、人形机器人商业化</span><span data-en>I. Humanoid Robot Commercialization</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>头部企业同步启动量产计划，2027年将迎来人形机器人产能爆发</span><span data-en>Leading Companies Launch Mass Production Plans Simultaneously; 2027 Will See Humanoid Robot Capacity Surge</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>特斯拉、宇树科技、雷诺、Figure AI等头部企业同步推进量产与工厂落地，UBS预测2026年全球工厂用人形机器人需求将达3万台，2027年将是产能爆发的关键节点。</span><span data-en><strong>Key Insight:</strong> Tesla, Unitree, Renault, Figure AI and other leading companies are simultaneously advancing mass production and factory deployment. UBS predicts global factory humanoid robot demand will reach 30,000 units in 2026, with 2027 being the critical inflection point for capacity explosion.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>特斯拉计划投入约200亿美元用于Optimus及AI基础设施建设，目标2027年年产50万台，暂停Model S/X生产以重新分配资源</span><span data-en>Tesla plans to invest ~$20B in Optimus and AI infrastructure, targeting 500,000 units/year by 2027, suspending Model S/X production to reallocate resources</span></li>
+      <li><span data-zh>宇树科技2025年营收17.08亿元（同比+335%），人形机器人出货超5500台（全球市占32.4%），科创板IPO拟募资42.02亿元</span><span data-en>Unitree 2025 revenue ¥1.708B (+335% YoY), humanoid robot shipments exceeded 5,500 units (32.4% global market share), STAR Market IPO plans to raise ¥4.202B</span></li>
+      <li><span data-zh>雷诺在法国Douai工厂部署350台Calvin-40人形机器人，目标降低30%单台车生产工时</span><span data-en>Renault deployed 350 Calvin-40 humanoid robots at its Douai factory in France, targeting a 30% reduction in per-vehicle production hours</span></li>
+      <li><span data-zh>Figure AI的Figure 02已在宝马工厂完成量产测试，十个月内搬运数十万件精密组件</span><span data-en>Figure AI's Figure 02 completed mass production testing at BMW factories, handling hundreds of thousands of precision components over ten months</span></li>
+      <li><span data-zh>UBS预测2026年全球工厂用人形机器人需求将达3万台</span><span data-en>UBS predicts global factory humanoid robot demand will reach 30,000 units in 2026</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Price Drop Bar Chart -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>人形机器人价格下降对比</span><span data-en>Humanoid Robot Price Decline Comparison</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>宇树G1 vs 2年前同类产品（美元）</span><span data-en>Unitree G1 vs. Comparable Product 2 Years Ago (USD)</span></h3>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <div class="bar-label"><span data-zh>2年前同类产品</span><span data-en>2 Years Ago</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#6366f1,#818cf8)">$533,000</div></div>
+      </div>
+      <div class="bar-row">
+        <div class="bar-label"><span data-zh>宇树G1（2026）</span><span data-en>Unitree G1 (2026)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:3%;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));min-width:60px">$16,000</div></div>
+      </div>
+    </div>
+    <p style="font-size:.78rem;color:var(--c-accent);font-weight:700;margin-top:.5rem;text-align:center"><span data-zh>价格降幅高达 -97%，人形机器人正式进入"平民化"时代</span><span data-en>Price dropped by -97%, humanoid robots officially enter the "mass market" era</span></p>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>人形机器人售价跌破2万美元，RaaS模式降低部署门槛</span><span data-en>Humanoid Robot Price Breaks Below $20,000; RaaS Model Lowers Deployment Barrier</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>宇树G1售价约1.6万美元，RaaS月费500美元，相比人类劳动力成本降低96%，韩国零售商已率先开设机器人销售专区，人形机器人正在从工厂走向消费市场。</span><span data-en><strong>Key Insight:</strong> Unitree G1 priced at ~$16,000, RaaS monthly fee $500, representing a 96% reduction compared to human labor costs. Korean retailers have pioneered robot sales sections. Humanoid robots are moving from factories to consumer markets.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>宇树G1售价约1.6万美元，RaaS月费500美元，相比人类劳动力成本降低96%</span><span data-en>Unitree G1 priced at ~$16,000, RaaS monthly fee $500, 96% lower than human labor costs</span></li>
+      <li><span data-zh>韩国易买得在首尔设立机器人销售专区，上线一个月收到数百笔订单</span><span data-en>South Korea's E-Mart established a robot sales section in Seoul, receiving hundreds of orders within one month of launch</span></li>
+      <li><span data-zh>乐天ON引入包括G1在内的12款机器人产品，覆盖教育、陪护等场景</span><span data-en>Lotte ON introduced 12 robot products including G1, covering education, companionship and other scenarios</span></li>
+      <li><span data-zh>马斯克预计Optimus长期售价将降至2-3万美元</span><span data-en>Musk expects Optimus long-term price to drop to $20,000-$30,000</span></li>
+      <li><span data-zh>Agility Robotics的Digit以RaaS模式与丰田签订供货合同</span><span data-en>Agility Robotics' Digit signed a supply contract with Toyota under the RaaS model</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Market Share Donut -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-pie"></i> <span data-zh>宇树科技全球人形机器人市占率</span><span data-en>Unitree Global Humanoid Robot Market Share</span></span>
+    <div class="donut-wrap">
+      <div class="donut-chart">
+        <svg width="140" height="140" viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-border)" stroke-width="16"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-primary)" stroke-width="16"
+            stroke-dasharray="109.8 229.2" stroke-linecap="round"/>
+          <circle cx="70" cy="70" r="54" fill="none" stroke="var(--c-accent)" stroke-width="16"
+            stroke-dasharray="229.2" stroke-dashoffset="-109.8" opacity=".25" stroke-linecap="round"/>
+        </svg>
+        <div class="donut-center">
+          <div class="donut-value">32.4%</div>
+          <div class="donut-sub"><span data-zh>全球市占率</span><span data-en>Global Share</span></div>
+        </div>
+      </div>
+      <div style="flex:1;min-width:180px">
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem">
+          <span style="width:12px;height:12px;border-radius:50%;background:var(--c-primary);display:inline-block;flex-shrink:0"></span>
+          <span style="font-size:.85rem;color:var(--c-text-secondary)"><span data-zh>宇树科技 32.4%（全球第一）</span><span data-en>Unitree 32.4% (Global #1)</span></span>
+        </div>
+        <div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.6rem">
+          <span style="width:12px;height:12px;border-radius:50%;background:color-mix(in srgb,var(--c-accent) 40%,var(--c-border));display:inline-block;flex-shrink:0"></span>
+          <span style="font-size:.85rem;color:var(--c-text-secondary)"><span data-zh>其他企业 67.6%</span><span data-en>Other Companies 67.6%</span></span>
+        </div>
+        <p style="font-size:.78rem;color:var(--c-text-muted);margin-top:.75rem"><span data-zh>2025年出货超5500台，连续两年全球出货量第一</span><span data-en>Shipped 5,500+ units in 2025, global #1 in shipments for two consecutive years</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.3</span><span data-en>Insight 1.3</span></span>
+    <h3><span data-zh>中国人形机器人企业加速全球布局，春晚效应推动品牌出海</span><span data-en>Chinese Humanoid Robot Companies Accelerate Global Expansion; Spring Festival Gala Effect Boosts Brand Overseas</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>宇树科技计划海外营收占比达50%，德国总理默茨亲赴杭州总部参观，中德签署人形机器人智能工厂合作文件，中国人形机器人企业正在以"技术+品牌"双轮驱动加速全球化。</span><span data-en><strong>Key Insight:</strong> Unitree targets 50% overseas revenue share. German Chancellor Merz personally visited Unitree's Hangzhou headquarters, and China-Germany signed a humanoid robot smart factory cooperation document. Chinese humanoid robot companies are accelerating globalization with a "technology + brand" dual-wheel drive.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>宇树科技计划海外营收占比达50%，已在马来西亚、意大利、德国开设体验中心</span><span data-en>Unitree targets 50% overseas revenue share, has opened experience centers in Malaysia, Italy, and Germany</span></li>
+      <li><span data-zh>Magic Atom在27个国家设立研发、展示与物流团队</span><span data-en>Magic Atom established R&D, exhibition and logistics teams in 27 countries</span></li>
+      <li><span data-zh>德国总理默茨2026年2月访问宇树科技杭州总部，中德签署人形机器人智能工厂合作文件</span><span data-en>German Chancellor Merz visited Unitree's Hangzhou headquarters in February 2026; China and Germany signed a humanoid robot smart factory cooperation document</span></li>
+      <li><span data-zh>河南郑州开出省内首家人形机器人4S店，春晚同款机器人租赁业务火爆</span><span data-en>Henan Zhengzhou opened the province's first humanoid robot 4S store; Spring Festival Gala robot rental business boomed</span></li>
+      <li><span data-zh>日本筑波大学附属医院引入宇树G1开展导诊与夜间巡检试点</span><span data-en>Japan's University of Tsukuba Hospital introduced Unitree G1 for patient guidance and night patrol pilot programs</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: NVIDIA Physical AI ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-microchip"></i>
+    <h2><span data-zh>二、NVIDIA物理AI平台</span><span data-en>II. NVIDIA Physical AI Platform</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>NVIDIA GTC 2026发布全栈物理AI工具链，头部企业集体接入</span><span data-en>NVIDIA GTC 2026 Releases Full-Stack Physical AI Toolchain; Leading Companies Collectively Join</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>NVIDIA在GTC 2026发布了覆盖芯片、模型、仿真、物理引擎的完整物理AI工具链，ABB、FANUC、KUKA、安川等20+家全球头部企业集体接入，NVIDIA正在成为机器人行业的"操作系统级"基础设施提供商。</span><span data-en><strong>Key Insight:</strong> NVIDIA released a complete physical AI toolchain at GTC 2026 covering chips, models, simulation, and physics engines. ABB, FANUC, KUKA, Yaskawa and 20+ other global leaders collectively joined. NVIDIA is becoming the "OS-level" infrastructure provider for the robotics industry.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>发布Jetson AGX Thor芯片（算力较前代Orin提升7倍）、Isaac GR00T视觉语言动作模型、Omniverse NuRec仿真平台</span><span data-en>Released Jetson AGX Thor chip (7x compute vs. previous Orin), Isaac GR00T vision-language-action model, Omniverse NuRec simulation platform</span></li>
+      <li><span data-zh>ABB、FANUC、KUKA、安川、优傲等20+家企业与NVIDIA达成合作</span><span data-en>ABB, FANUC, KUKA, Yaskawa, Universal Robots and 20+ companies reached cooperation agreements with NVIDIA</span></li>
+      <li><span data-zh>FANUC将ROBOGUIDE软件与NVIDIA Omniverse集成，构建物理级精准的工厂数字孪生</span><span data-en>FANUC integrated ROBOGUIDE software with NVIDIA Omniverse to build physically accurate factory digital twins</span></li>
+      <li><span data-zh>ABB推出RobotStudio HyperReality平台，模拟与真实性能相关性达99%，定位精度0.5毫米</span><span data-en>ABB launched RobotStudio HyperReality platform with 99% simulation-to-real performance correlation and 0.5mm positioning accuracy</span></li>
+      <li><span data-zh>Isaac Lab 3.0搭载Newton物理引擎，GR00T N2模型在陌生环境完成新任务的成功率是主流VLA模型的两倍以上</span><span data-en>Isaac Lab 3.0 features Newton physics engine; GR00T N2 model achieves 2x+ success rate vs. mainstream VLA models in unfamiliar environments</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>Skild AI等通用机器人智能平台崛起，"一脑多体"模式加速落地</span><span data-en>Skild AI and Universal Robot Intelligence Platforms Rise; "One Brain, Multiple Bodies" Model Accelerates</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Skild AI与NVIDIA、ABB、优傲机器人扩大合作，Skild Brain部署到多行业生产环境，软银集团已投资Skild AI，"一脑多体"的通用机器人智能平台模式正在成为行业新范式。</span><span data-en><strong>Key Insight:</strong> Skild AI expanded cooperation with NVIDIA, ABB, and Universal Robots. Skild Brain deployed to multi-industry production environments. SoftBank Group invested in Skild AI. The "one brain, multiple bodies" universal robot intelligence platform model is becoming the new industry paradigm.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Skild AI与NVIDIA、ABB、优傲机器人扩大合作，Skild Brain部署到多行业生产环境</span><span data-en>Skild AI expanded cooperation with NVIDIA, ABB, Universal Robots; Skild Brain deployed to multi-industry production environments</span></li>
+      <li><span data-zh>与富士康合作为NVIDIA Blackwell产线提供高精度双臂装配方案</span><span data-en>Partnered with Foxconn to provide high-precision dual-arm assembly solutions for NVIDIA Blackwell production lines</span></li>
+      <li><span data-zh>软银集团已投资Skild AI，布局AI驱动的工业机器人平台</span><span data-en>SoftBank Group invested in Skild AI, positioning in AI-driven industrial robot platforms</span></li>
+      <li><span data-zh>优傲机器人与Scale AI合作推出UR AI Trainer模仿学习系统</span><span data-en>Universal Robots partnered with Scale AI to launch UR AI Trainer imitation learning system</span></li>
+      <li><span data-zh>爱丁堡大学将GPT-4集成至Kinova Gen3机械臂，实现自然语言指令操控</span><span data-en>University of Edinburgh integrated GPT-4 into Kinova Gen3 robotic arm, enabling natural language instruction control</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: Industrial Robot Tech ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-industry"></i>
+    <h2><span data-zh>三、工业机器人技术迭代</span><span data-en>III. Industrial Robot Technology Iteration</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>库卡、发那科、安川集中发布新品，中等负载与AI集成成竞争焦点</span><span data-en>KUKA, FANUC, Yaskawa Launch New Products; Mid-Load and AI Integration Become Competitive Focus</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>三大工业机器人巨头集中发布新品，共同特征是中等负载能力提升与AI功能集成，行业竞争正从纯粹的机械性能转向"机械+AI"的综合能力竞争。</span><span data-en><strong>Key Insight:</strong> Three major industrial robot giants launched new products simultaneously. Common features include enhanced mid-load capacity and AI function integration. Industry competition is shifting from pure mechanical performance to comprehensive "mechanical + AI" capability competition.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>库卡KR CYBERTECH新增25kg/35kg负载型号，搭载KR C5 slim控制器与iiQKA.OS2系统，支持AI功能</span><span data-en>KUKA KR CYBERTECH added 25kg/35kg payload models with KR C5 slim controller and iiQKA.OS2 system, supporting AI functions</span></li>
+      <li><span data-zh>发那科SR-12iA/C SCARA机器人符合ISO Class 5洁净标准，负载12kg，重复定位精度±0.01mm</span><span data-en>FANUC SR-12iA/C SCARA robot meets ISO Class 5 cleanroom standards, 12kg payload, ±0.01mm repeatability</span></li>
+      <li><span data-zh>安川MOTOMAN GP10负载10kg，重复定位精度±0.015mm，集成Cat6A以太网</span><span data-en>Yaskawa MOTOMAN GP10: 10kg payload, ±0.015mm repeatability, integrated Cat6A Ethernet</span></li>
+      <li><span data-zh>KUKA KR TITAN ultra重载机器人负载达1500kg，臂展4200mm</span><span data-en>KUKA KR TITAN ultra heavy-duty robot: 1500kg payload, 4200mm reach</span></li>
+      <li><span data-zh>Mantis MR-1协作机器人最大速度达10m/s，符合ISO安全标准</span><span data-en>Mantis MR-1 collaborative robot: maximum speed 10m/s, compliant with ISO safety standards</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>库卡iiQKA.OS2发布，机器人操作系统竞争进入新阶段</span><span data-en>KUKA iiQKA.OS2 Released; Robot Operating System Competition Enters New Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>库卡iiQKA.OS2符合ISO 10218:2025最新安全标准，整合移动机器人与工业机器人控制，基于Web的可视化界面无需专用编程终端，标志着工业机器人操作系统正在向"开放、智能、易用"方向演进。</span><span data-en><strong>Key Insight:</strong> KUKA iiQKA.OS2 complies with the latest ISO 10218:2025 safety standards, integrates mobile and industrial robot control, and features a web-based visual interface requiring no dedicated programming terminal. This marks industrial robot OS evolution toward "open, intelligent, easy-to-use" direction.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>iiQKA.OS2符合ISO 10218:2025最新安全标准，整合移动机器人与工业机器人控制</span><span data-en>iiQKA.OS2 complies with ISO 10218:2025 latest safety standards, integrating mobile and industrial robot control</span></li>
+      <li><span data-zh>基于Web的iiQKA.UI可视化界面，无需专用编程终端</span><span data-en>Web-based iiQKA.UI visual interface requires no dedicated programming terminal</span></li>
+      <li><span data-zh>支持NVIDIA GPU实现AI视觉识别与环境感知</span><span data-en>Supports NVIDIA GPU for AI visual recognition and environmental perception</span></li>
+      <li><span data-zh>采用模块化设计，可根据企业规模定制适配</span><span data-en>Modular design allows customization based on enterprise scale</span></li>
+      <li><span data-zh>需搭配KR C5-2、KR C5 micro-2等新一代控制器</span><span data-en>Requires next-generation controllers such as KR C5-2 and KR C5 micro-2</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: Capital Markets ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chart-line"></i>
+    <h2><span data-zh>四、资本市场</span><span data-en>IV. Capital Markets</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>ABB以53.75亿美元出售机器人业务给软银，行业巨头战略分化</span><span data-en>ABB Sells Robotics Business to SoftBank for $5.375B; Industry Giants Strategically Diverge</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>ABB以53.75亿美元将机器人业务出售给软银，为ABB带来约24亿美元非经营性账面收益，ABB将资源集中到电气化、运动控制和过程自动化，而软银则通过此次收购构建"资本+算力+智能"的机器人生态闭环。</span><span data-en><strong>Key Insight:</strong> ABB sold its robotics business to SoftBank for $5.375B, generating ~$2.4B non-operating book gains for ABB. ABB will concentrate resources on electrification, motion control, and process automation, while SoftBank builds a "capital + compute + intelligence" robotics ecosystem through this acquisition.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>交易对价53.75亿美元，为ABB带来约24亿美元非经营性账面收益</span><span data-en>Transaction price $5.375B, generating ~$2.4B non-operating book gains for ABB</span></li>
+      <li><span data-zh>该业务板块拥有约7000名员工，2024年营收达23亿美元</span><span data-en>The business unit has ~7,000 employees and 2024 revenue of $2.3B</span></li>
+      <li><span data-zh>ABB将资源集中到电气化、运动控制和过程自动化</span><span data-en>ABB will concentrate resources on electrification, motion control, and process automation</span></li>
+      <li><span data-zh>软银同时投资了Skild AI，布局AI驱动的工业机器人平台</span><span data-en>SoftBank also invested in Skild AI, positioning in AI-driven industrial robot platforms</span></li>
+      <li><span data-zh>ABB还将投资超1亿美元在加拿大蒙特利尔扩建生产与研发基地</span><span data-en>ABB will also invest over $100M to expand production and R&D facilities in Montreal, Canada</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>宇树科技冲刺科创板，波士顿动力估值暴涨预计2027年IPO</span><span data-en>Unitree Sprints Toward STAR Market; Boston Dynamics Valuation Surges, IPO Expected in 2027</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>机器人行业IPO潮正在形成，宇树科技、波士顿动力、南京埃斯顿三家企业同步推进上市计划，Mind Robotics和RoboForce的融资数据显示一级市场热度持续高涨。</span><span data-en><strong>Key Insight:</strong> A robotics IPO wave is forming. Unitree, Boston Dynamics, and Nanjing Estun are simultaneously advancing listing plans. Financing data from Mind Robotics and RoboForce shows continued high enthusiasm in the primary market.</span></p>
+    </div>
+
+    <!-- IPO/Financing Table -->
+    <div class="table-wrap">
+      <table class="styled-table">
+        <thead><tr>
+          <th><span data-zh>企业</span><span data-en>Company</span></th>
+          <th><span data-zh>融资/估值</span><span data-en>Financing/Valuation</span></th>
+          <th><span data-zh>上市计划</span><span data-en>IPO Plan</span></th>
+          <th><span data-zh>关键指标</span><span data-en>Key Metrics</span></th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td><strong><span data-zh>宇树科技</span><span data-en>Unitree</span></strong></td>
+            <td><span data-zh>IPO募资42.02亿元</span><span data-en>IPO raise ¥4.202B</span></td>
+            <td><span data-zh>科创板（进行中）</span><span data-en>STAR Market (ongoing)</span></td>
+            <td><span data-zh>2025营收17.08亿元 +335%</span><span data-en>2025 revenue ¥1.708B +335%</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>波士顿动力</span><span data-en>Boston Dynamics</span></strong></td>
+            <td><span data-zh>估值约30万亿韩元</span><span data-en>Valuation ~₩30T</span></td>
+            <td><span data-zh>纳斯达克（预计2027年初）</span><span data-en>Nasdaq (expected early 2027)</span></td>
+            <td><span data-zh>最高估值可达100万亿韩元</span><span data-en>Max valuation up to ₩100T</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>南京埃斯顿</span><span data-en>Nanjing Estun</span></strong></td>
+            <td><span data-zh>募资14.87-16.45亿港元</span><span data-en>Raise HK$1.487-1.645B</span></td>
+            <td><span data-zh>港交所（2026年3月）</span><span data-en>HKEX (March 2026)</span></td>
+            <td><span data-zh>波兰工厂年产能1.5万台</span><span data-en>Poland factory 15,000 units/year</span></td>
+          </tr>
+          <tr>
+            <td><strong>Mind Robotics</strong></td>
+            <td><span data-zh>A轮5亿美元，估值约20亿美元</span><span data-en>Series A $500M, valuation ~$2B</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+          <tr>
+            <td><strong>RoboForce</strong></td>
+            <td><span data-zh>超额融资5200万美元，总融资6700万美元</span><span data-en>Oversubscribed $52M, total $67M</span></td>
+            <td>—</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.3</span><span data-en>Insight 4.3</span></span>
+    <h3><span data-zh>亚马逊收购Rivr、特斯拉启动Terafab，科技巨头加码机器人基础设施</span><span data-en>Amazon Acquires Rivr, Tesla Launches Terafab; Tech Giants Double Down on Robotics Infrastructure</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>科技巨头正在从"使用机器人"转向"构建机器人基础设施"，亚马逊收购Rivr、特斯拉启动Terafab芯片工厂、FANUC在美建设新工厂，机器人产业链的上游基础设施竞争正在加剧。</span><span data-en><strong>Key Insight:</strong> Tech giants are shifting from "using robots" to "building robotics infrastructure." Amazon acquired Rivr, Tesla launched Terafab chip factory, FANUC built new US factory. Competition in upstream robotics supply chain infrastructure is intensifying.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>亚马逊收购瑞士Rivr，此前已通过Industrial Innovation Fund向其投资10亿美元</span><span data-en>Amazon acquired Swiss Rivr, having previously invested $1B through its Industrial Innovation Fund</span></li>
+      <li><span data-zh>特斯拉启动Terafab项目，目标年产1000-2000亿颗2nm架构AI芯片</span><span data-en>Tesla launched Terafab project, targeting annual production of 100-200 billion 2nm AI chips</span></li>
+      <li><span data-zh>FANUC投资9000万美元在美国密歇根建设近84万平方英尺新工厂</span><span data-en>FANUC invested $90M to build a ~840,000 sq ft new factory in Michigan, USA</span></li>
+      <li><span data-zh>中国埃斯顿在波兰建立工厂，年产能1.5万台工业机器人</span><span data-en>China's Estun established a factory in Poland with annual capacity of 15,000 industrial robots</span></li>
+      <li><span data-zh>速腾聚创2025年机器人领域激光雷达销量超30万台（同比+11倍）</span><span data-en>RoboSense 2025 robotics LiDAR sales exceeded 300,000 units (11x YoY growth)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Quadruped & Medical ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-paw"></i>
+    <h2><span data-zh>五、四足机器人与医疗机器人</span><span data-en>V. Quadruped Robots &amp; Medical Robots</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>四足机器人在数据中心、建筑、电力等场景实现规模化部署</span><span data-en>Quadruped Robots Achieve Large-Scale Deployment in Data Centers, Construction, and Power Sectors</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>四足机器人已从实验室走向大规模商业部署，犹他州数据中心、建筑工地、韩国发电厂等场景均已实现规模化应用，单台Spot投资回收期约1.5-2年，商业模式已验证。</span><span data-en><strong>Key Insight:</strong> Quadruped robots have moved from labs to large-scale commercial deployment. Utah data centers, construction sites, and Korean power plants have all achieved scaled applications. Single Spot payback period is ~1.5-2 years, validating the business model.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>犹他州Novva数据中心已部署四足机器人完成150万平方英尺园区巡检</span><span data-en>Utah's Novva data center deployed quadruped robots for 1.5 million sq ft campus inspection</span></li>
+      <li><span data-zh>单台Spot售价17.5万-30万美元，投资回收期约1.5-2年</span><span data-en>Single Spot priced at $175,000-$300,000, payback period ~1.5-2 years</span></li>
+      <li><span data-zh>Foster + Partners用Spot进行工地扫描，对比设计模型与实际施工</span><span data-en>Foster + Partners uses Spot for construction site scanning, comparing design models with actual construction</span></li>
+      <li><span data-zh>韩国西部电力在金浦发电厂部署四足机器人，可替代37%的人工巡检</span><span data-en>Korea Western Power deployed quadruped robots at Gimpo Power Plant, replacing 37% of manual inspections</span></li>
+      <li><span data-zh>福特墨西哥工厂引入Spot用于设备巡检与安全监控</span><span data-en>Ford's Mexico factory introduced Spot for equipment inspection and safety monitoring</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>达芬奇手术机器人全球装机超11100台，翻新市场开辟新赛道</span><span data-en>Da Vinci Surgical Robot Global Installations Exceed 11,100; Refurbishment Market Opens New Track</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Intuitive Surgical 2025年全年营收101亿美元（+21%），全球安装da Vinci系统超11100台，约75%营收来自耗材和服务，高度粘性的商业模式使其成为医疗机器人领域的"护城河"典范。</span><span data-en><strong>Key Insight:</strong> Intuitive Surgical 2025 full-year revenue $10.1B (+21%), global da Vinci installations exceeded 11,100 units, ~75% revenue from consumables and services. The highly sticky business model makes it a "moat" exemplar in medical robotics.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Intuitive Surgical 2025年全年营收101亿美元（+21%），全球安装da Vinci系统超11100台</span><span data-en>Intuitive Surgical 2025 full-year revenue $10.1B (+21%), global da Vinci installations exceeded 11,100 units</span></li>
+      <li><span data-zh>全年完成超310万台手术，约75%营收来自耗材和服务</span><span data-en>Completed 3.1M+ procedures annually, ~75% revenue from consumables and services</span></li>
+      <li><span data-zh>Restore Robotics获FDA 510(k)认证，可翻新达芬奇Xi手术器械</span><span data-en>Restore Robotics received FDA 510(k) clearance to refurbish da Vinci Xi surgical instruments</span></li>
+      <li><span data-zh>北美手术机器人市场2026年约30.1亿美元，预计2032年达42.8亿美元（CAGR 6.04%）</span><span data-en>North American surgical robot market ~$3.01B in 2026, projected to reach $4.28B by 2032 (CAGR 6.04%)</span></li>
+      <li><span data-zh>日本筑波大学附属医院引入宇树G1开展导诊与夜间巡检试点</span><span data-en>Japan's University of Tsukuba Hospital introduced Unitree G1 for patient guidance and night patrol pilot programs</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: US-China Competition ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-gavel"></i>
+    <h2><span data-zh>六、中美机器人竞争</span><span data-en>VI. US-China Robotics Competition</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>美国国会立法禁止联邦采购中国机器人，供应链脱钩风险加剧</span><span data-en>US Congress Legislates to Ban Federal Procurement of Chinese Robots; Supply Chain Decoupling Risk Intensifies</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>《美国安全机器人法案》的提出标志着中美机器人竞争从市场层面升级至国家安全层面，2024年中国安装30万台工业机器人而美国仅3万台的巨大差距，正在引发美国政策层面的系统性应对。</span><span data-en><strong>Key Insight:</strong> The American Secure Robotics Act marks the escalation of US-China robotics competition from market to national security level. The massive gap — China installed 300,000 industrial robots in 2024 vs. only 30,000 in the US — is triggering systematic policy responses from the US government.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>《美国安全机器人法案》禁止联邦政府购买或使用中国等敌对国家制造的人形机器人</span><span data-en>American Secure Robotics Act prohibits federal government from purchasing or using humanoid robots made by China and other adversarial nations</span></li>
+      <li><span data-zh>美国众议院国土安全委员会多次举行专题听证，波士顿动力、Scale AI等出庭作证</span><span data-en>US House Homeland Security Committee held multiple special hearings; Boston Dynamics, Scale AI and others testified</span></li>
+      <li><span data-zh>2024年中国安装30万台工业机器人，美国仅3万台，中国本土机器人产量占比达60%</span><span data-en>China installed 300,000 industrial robots in 2024 vs. only 30,000 in the US; Chinese domestic robot production accounts for 60%</span></li>
+      <li><span data-zh>美国机器人产业价值约500亿美元，未来四年预计全美将销售数百万台机器人</span><span data-en>US robotics industry valued at ~$50B; millions of robots expected to be sold nationwide over the next four years</span></li>
+      <li><span data-zh>行业专家呼吁设立统一的联邦行业安全标准</span><span data-en>Industry experts call for establishing unified federal industry safety standards</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>韩国对中日工业机器人征收反倾销关税，贸易壁垒扩展至机器人领域</span><span data-en>South Korea Imposes Anti-Dumping Tariffs on Chinese and Japanese Industrial Robots; Trade Barriers Expand to Robotics</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>韩国对中日工业机器人征收反倾销关税，是继欧盟FSR调查之后，又一个将贸易保护主义工具延伸至机器人领域的案例，全球机器人贸易壁垒正在系统性升级。</span><span data-en><strong>Key Insight:</strong> South Korea's anti-dumping tariffs on Chinese and Japanese industrial robots represent another case — following the EU's FSR investigations — of extending trade protectionism tools to the robotics sector. Global robotics trade barriers are systematically escalating.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>韩国对日本4轴及以上垂直多关节工业机器人征收17.45%-18.64%反倾销关税</span><span data-en>South Korea imposed 17.45%-18.64% anti-dumping tariffs on Japanese 4-axis+ vertical articulated industrial robots</span></li>
+      <li><span data-zh>对中国同类产品征收15.96%-19.85%关税</span><span data-en>Imposed 15.96%-19.85% tariffs on similar Chinese products</span></li>
+      <li><span data-zh>此前已征收21.17%-43.6%的临时反倾销关税</span><span data-en>Previously imposed 21.17%-43.6% provisional anti-dumping tariffs</span></li>
+      <li><span data-zh>涉及企业包括Fanuc、Yaskawa、KUKA广东、ABB上海等</span><span data-en>Affected companies include Fanuc, Yaskawa, KUKA Guangdong, ABB Shanghai, and others</span></li>
+      <li><span data-zh>Teradyne Robotics在德国起诉中国Elite Robots侵犯软件版权</span><span data-en>Teradyne Robotics sued China's Elite Robots in Germany for software copyright infringement</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: AI Training & Data ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-database"></i>
+    <h2><span data-zh>七、机器人AI训练与数据生态</span><span data-en>VII. Robot AI Training &amp; Data Ecosystem</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.1</span><span data-en>Insight 7.1</span></span>
+    <h3><span data-zh>DoorDash和Uber利用配送员采集真实世界数据，填补仿真数据缺口</span><span data-en>DoorDash and Uber Leverage Delivery Workers to Collect Real-World Data, Filling Simulation Data Gap</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>DoorDash于2026年3月推出Tasks应用，利用200万配送员采集多模态数据，Uber推出类似任务平台，零工经济与AI训练数据采集的融合正在解决物理AI最核心的数据瓶颈——真实世界数据的规模化采集。</span><span data-en><strong>Key Insight:</strong> DoorDash launched the Tasks app in March 2026, leveraging 2 million delivery workers to collect multimodal data. Uber launched a similar task platform. The fusion of gig economy and AI training data collection is solving physical AI's most critical data bottleneck — large-scale collection of real-world data.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>DoorDash于2026年3月推出Tasks应用，利用200万配送员采集多模态数据</span><span data-en>DoorDash launched Tasks app in March 2026, leveraging 2 million delivery workers to collect multimodal data</span></li>
+      <li><span data-zh>Uber推出类似任务平台，收购Segments.ai完善多传感器标注能力</span><span data-en>Uber launched a similar task platform and acquired Segments.ai to enhance multi-sensor annotation capabilities</span></li>
+      <li><span data-zh>Universal Robots与Scale AI发布UR AI Trainer，通过领导者-跟随者模式采集同步数据</span><span data-en>Universal Robots and Scale AI released UR AI Trainer, collecting synchronized data through leader-follower mode</span></li>
+      <li><span data-zh>中国多地建立机器人训练中心，山东、河北等省份年生成数据量超百万条</span><span data-en>Multiple Chinese regions established robot training centers; Shandong, Hebei and other provinces generate over 1 million data entries annually</span></li>
+      <li><span data-zh>NVIDIA推出SOMA-X动作标准化框架，支持从数据采集到部署的全流程</span><span data-en>NVIDIA launched SOMA-X action standardization framework, supporting the full pipeline from data collection to deployment</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>机器人网络安全漏洞可被远程利用，威胁关键基础设施安全</span><span data-en>Robot Cybersecurity Vulnerabilities Exploitable Remotely, Threatening Critical Infrastructure Security</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>Unitree机器人被曝存在硬编码AES加密密钥漏洞（UniPwn），攻击者可在蓝牙范围内获取root权限远程控制机器人，且漏洞可像蠕虫一样在同型号机器人间传播。同时机器人会将运行数据传输至中国境内服务器。</span><span data-en>Unitree robots were found to have a hardcoded AES encryption key vulnerability (UniPwn). Attackers can gain root access and remotely control robots within Bluetooth range, and the vulnerability can spread worm-like between robots of the same model. Additionally, robots transmit operational data to servers within China.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>各国机器人网络安全认证标准出台进度、Unitree安全补丁发布情况、美国联邦机构中国机器人采购禁令立法进展</span><span data-en>Progress on national robot cybersecurity certification standards, Unitree security patch release status, US federal agency Chinese robot procurement ban legislation progress</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>商用服务机器人失控事件频发，紧急停机机制缺失</span><span data-en>Commercial Service Robot Runaway Incidents Surge; Emergency Stop Mechanisms Absent</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>美国加州海底捞AgiBot X2机器人失控撞翻餐桌、澳门Unitree G1惊吓老人，暴露两大核心问题：机器人未配备便捷物理紧急停机按钮、操作人员未接受标准化应急培训。</span><span data-en>California Haidilao's AgiBot X2 robot ran out of control and overturned a table; Macau's Unitree G1 frightened an elderly person. Two core issues exposed: robots lack convenient physical emergency stop buttons, and operators have not received standardized emergency training.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>各国商用机器人安全规范出台时间表、强制物理急停按钮标准制定进展、机器人保险产品开发情况</span><span data-en>National commercial robot safety regulation timelines, mandatory physical emergency stop button standard development progress, robot insurance product development status</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>特斯拉高管连续离职，Optimus量产时间线存在执行风险</span><span data-en>Tesla Executives Continuously Resign; Optimus Mass Production Timeline Faces Execution Risk</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>特斯拉两年内已有十余名资深高管离职，包括Optimus项目负责人Milan Kovac，同时公司面临全球电动汽车需求疲软、竞争加剧等挑战。</span><span data-en>Tesla has seen over ten senior executives resign within two years, including Optimus project lead Milan Kovac. The company also faces challenges including weakening global EV demand and intensifying competition.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>特斯拉2026年Q2-Q3 Optimus生产进度、新任项目负责人到位情况、Terafab芯片工厂产能爬坡节奏</span><span data-en>Tesla Q2-Q3 2026 Optimus production progress, new project lead appointment status, Terafab chip factory capacity ramp-up pace</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>人形机器人技术瓶颈尚未突破，续航与精细操作仍是硬伤</span><span data-en>Humanoid Robot Technical Bottlenecks Unresolved; Battery Life and Fine Motor Control Remain Weaknesses</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>当前人形机器人续航仅2-4小时、精细操作能力远不及人手、复杂环境适应能力不足，仅能在工厂等结构化环境中稳定作业。</span><span data-en>Current humanoid robots have only 2-4 hours of battery life, fine motor capabilities far inferior to human hands, and insufficient adaptability to complex environments. They can only operate stably in structured environments like factories.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>电池续航突破4小时的产品发布节奏、灵巧手技术进展（如Tesollo DG-5F-S的20自由度方案）、非结构化环境测试结果</span><span data-en>Product launch pace for battery life exceeding 4 hours, dexterous hand technology progress (e.g., Tesollo DG-5F-S 20-DOF solution), unstructured environment test results</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年4月22-23日</span><span data-en>April 22-23, 2026</span></div>
+      <div class="timeline-text"><span data-zh>第五届Robo Challenge在FANUC波兰新总部举办，关注欧洲工业机器人竞技与技术展示</span><span data-en>5th Robo Challenge held at FANUC's new Poland headquarters; watch European industrial robot competition and technology showcase</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q2</div>
+      <div class="timeline-text"><span data-zh>宇树科技科创板IPO审核进展，上海静安久光百货亚洲首家具身智能体验馆开业</span><span data-en>Unitree STAR Market IPO review progress; Asia's first embodied intelligence experience center opens at Shanghai Jing'an Jiuguang Department Store</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年4月</span><span data-en>April 2026</span></div>
+      <div class="timeline-text"><span data-zh>Foundation Future Industries的Phantom-01军事人形机器人量产版本发布，关注军用机器人商业化进展</span><span data-en>Foundation Future Industries' Phantom-01 military humanoid robot mass production version release; watch military robot commercialization progress</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 H2</div>
+      <div class="timeline-text"><span data-zh>Robotis乌兹别克斯坦工厂投产，执行器产能从30万台/年向300万台/年扩张，关注供应链产能瓶颈缓解情况</span><span data-en>Robotis Uzbekistan factory commences production; actuator capacity expands from 300,000 to 3 million units/year; watch supply chain capacity bottleneck relief</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年底</span><span data-en>End of 2026</span></div>
+      <div class="timeline-text"><span data-zh>NVIDIA GR00T N2下一代机器人基础模型正式发布，关注其在非结构化环境中的任务成功率提升</span><span data-en>NVIDIA GR00T N2 next-generation robot foundation model officially released; watch task success rate improvements in unstructured environments</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年3月的机器人行业呈现"三个加速"态势：人形机器人商业化加速（特斯拉200亿美元投入、宇树IPO、雷诺350台部署）、NVIDIA物理AI生态加速构建（全球头部企业集体接入）、中美竞争加速升级（国会立法、反倾销关税）。行业正从技术驱动转向资本与政策驱动，2026-2027年将是决定全球机器人产业格局的关键窗口期。</span><span data-en>The March 2026 robotics industry shows "three accelerations": humanoid robot commercialization accelerating (Tesla's $20B investment, Unitree IPO, Renault's 350-unit deployment), NVIDIA physical AI ecosystem accelerating (global leaders collectively joining), and US-China competition accelerating (congressional legislation, anti-dumping tariffs). The industry is shifting from technology-driven to capital and policy-driven. 2026-2027 will be the critical window determining the global robotics industry landscape.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>软银收购ABB机器人业务后，将与NVIDIA、Skild AI形成"资本+算力+智能"的闭环生态，对传统工业机器人企业构成降维打击</span><span data-en>After SoftBank acquires ABB's robotics business, it will form a "capital + compute + intelligence" closed-loop ecosystem with NVIDIA and Skild AI, posing a dimensional reduction threat to traditional industrial robot companies</span></li>
+        <li><span data-zh>中国企业在人形机器人出货量（宇树全球第一）和成本控制（售价仅为西方竞品的一半）上已建立显著优势，但面临美国立法限制和安全漏洞信任危机</span><span data-en>Chinese companies have established significant advantages in humanoid robot shipments (Unitree global #1) and cost control (prices half of Western competitors), but face US legislative restrictions and security vulnerability trust crises</span></li>
+        <li><span data-zh>远程操作技术使单个操作员可同时管理4-5台人形机器人，进一步降低使用成本，加速替代传统人力</span><span data-en>Remote operation technology allows a single operator to manage 4-5 humanoid robots simultaneously, further reducing usage costs and accelerating replacement of traditional labor</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>人形机器人OEM厂商目前仍处于早期阶段，尚未实现大规模盈利，投资需关注现金流消耗速度</span><span data-en>Humanoid robot OEM manufacturers are still in early stages, not yet achieving large-scale profitability; investors should monitor cash burn rate</span></li>
+        <li><span data-zh>美国《安全机器人法案》若通过，将直接影响中国机器人企业的北美市场准入</span><span data-en>If the American Secure Robotics Act passes, it will directly impact Chinese robot companies' North American market access</span></li>
+        <li><span data-zh>机器人安全事件可能引发监管收紧，增加合规成本和市场准入门槛</span><span data-en>Robot safety incidents may trigger regulatory tightening, increasing compliance costs and market entry barriers</span></li>
+        <li><span data-zh>韩国反倾销关税可能引发连锁效应，其他国家或跟进设置贸易壁垒</span><span data-en>South Korea's anti-dumping tariffs may trigger a chain reaction, with other countries potentially following suit with trade barriers</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>供应链布局：</span><span data-en>Supply Chain: </span></strong><span data-zh>鉴于中美脱钩风险加剧，中国机器人企业应在2026年Q3前完成东南亚（如马来西亚、越南）和欧洲（如波兰、匈牙利）的产能布局</span><span data-en>Given escalating US-China decoupling risks, Chinese robot companies should complete capacity deployment in Southeast Asia (Malaysia, Vietnam) and Europe (Poland, Hungary) by Q3 2026</span></li>
+        <li><strong><span data-zh>安全合规先行：</span><span data-en>Safety Compliance First: </span></strong><span data-zh>参考Simbe Robotics获得UL 3300认证的路径，中国企业应在2026年内完成国际安全认证（UL/CE/ISO）</span><span data-en>Following Simbe Robotics' UL 3300 certification path, Chinese companies should complete international safety certifications (UL/CE/ISO) within 2026</span></li>
+        <li><strong><span data-zh>NVIDIA生态接入：</span><span data-en>NVIDIA Ecosystem Integration: </span></strong><span data-zh>尚未接入NVIDIA物理AI平台的机器人企业应在2026年H2前完成Isaac Sim/GR00T的技术集成</span><span data-en>Robot companies not yet integrated with NVIDIA's physical AI platform should complete Isaac Sim/GR00T technical integration by H2 2026</span></li>
+        <li><strong><span data-zh>数据飞轮构建：</span><span data-en>Data Flywheel: </span></strong><span data-zh>借鉴DoorDash/Uber的零工数据采集模式，建立自有的真实世界数据采集网络</span><span data-en>Drawing on DoorDash/Uber's gig data collection model, establish proprietary real-world data collection networks</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月</span><span data-en>Published: April 2026</span><br>
+    <span data-zh>本报告基于机器人行业资讯月报2026-03编制，仅供参考，不构成投资建议。</span><span data-en>Based on Robotics Industry Monthly Report 2026-03. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

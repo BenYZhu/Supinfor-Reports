@@ -1,0 +1,1385 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大疆创新（DJI）品牌声誉分析报告 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        dark: { bg: '#0a0a0a', card: '#141414', border: '#1f1f1f' },
+        light: { bg: '#f3f4f6', card: '#ffffff' },
+        accent: { blue: '#3b82f6', red: '#dc2626', amber: '#f59e0b' },
+        text: { primary: '#ffffff', secondary: '#d1d5db', muted: '#6b7280' }
+      },
+      fontFamily: {
+        heading: ['Space Grotesk', 'JetBrains Mono', 'Noto Sans SC', 'sans-serif'],
+        body: ['Inter', 'Noto Sans SC', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace']
+      }
+    }
+  }
+}
+</script>
+<style>
+/* Language toggle */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+
+/* Dark mode (default) */
+[data-theme="dark"] { background-color: #0a0a0a; color: #d1d5db; }
+[data-theme="dark"] .card { background-color: #141414; border-color: #1f1f1f; }
+[data-theme="dark"] .sidebar { background-color: #0d0d0d; border-color: #1a1a1a; }
+[data-theme="dark"] .hero-section { background-color: #0a0a0a; }
+[data-theme="dark"] .text-heading { color: #ffffff; }
+[data-theme="dark"] .text-body { color: #d1d5db; }
+[data-theme="dark"] .text-muted { color: #6b7280; }
+[data-theme="dark"] .nav-link { color: #9ca3af; }
+[data-theme="dark"] .nav-link:hover, [data-theme="dark"] .nav-link.active { color: #ffffff; }
+[data-theme="dark"] .table-row:nth-child(even) { background-color: #1a1a1a; }
+[data-theme="dark"] .table-header { background-color: #1a1a1a; border-color: #2a2a2a; }
+[data-theme="dark"] .risk-card { border-color: #dc2626; background: linear-gradient(135deg, #141414 0%, #1a0a0a 100%); }
+[data-theme="dark"] .tip-box { background-color: #1a1a0a; border-color: #f59e0b; }
+[data-theme="dark"] .btn-theme { background-color: #1f1f1f; color: #d1d5db; }
+[data-theme="dark"] .btn-theme:hover { background-color: #2a2a2a; }
+
+/* Light mode */
+[data-theme="light"] { background-color: #f3f4f6; color: #374151; }
+[data-theme="light"] .card { background-color: #ffffff; border-color: #e5e7eb; }
+[data-theme="light"] .sidebar { background-color: #ffffff; border-color: #e5e7eb; }
+[data-theme="light"] .hero-section { background-color: #111827; color: #ffffff; }
+[data-theme="light"] .hero-section .text-body { color: #d1d5db; }
+[data-theme="light"] .text-heading { color: #111827; }
+[data-theme="light"] .text-body { color: #374151; }
+[data-theme="light"] .text-muted { color: #6b7280; }
+[data-theme="light"] .nav-link { color: #6b7280; }
+[data-theme="light"] .nav-link:hover, [data-theme="light"] .nav-link.active { color: #111827; }
+[data-theme="light"] .table-row:nth-child(even) { background-color: #f9fafb; }
+[data-theme="light"] .table-header { background-color: #f3f4f6; border-color: #e5e7eb; }
+[data-theme="light"] .risk-card { border-color: #dc2626; background: linear-gradient(135deg, #ffffff 0%, #fef2f2 100%); }
+[data-theme="light"] .tip-box { background-color: #fffbeb; border-color: #f59e0b; }
+[data-theme="light"] .btn-theme { background-color: #e5e7eb; color: #374151; }
+[data-theme="light"] .btn-theme:hover { background-color: #d1d5db; }
+
+/* Hero grid texture */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(59,130,246,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Animations */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+/* Bar chart animation */
+.bar-fill { transition: width 1s ease-out; }
+
+/* Sidebar active indicator */
+.nav-link.active { position: relative; }
+.nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: -1px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #3b82f6;
+  border-radius: 1px;
+}
+
+/* Tag colors */
+.tag-blue { background-color: rgba(59,130,246,0.15); color: #60a5fa; border: 1px solid rgba(59,130,246,0.3); }
+.tag-red { background-color: rgba(220,38,38,0.15); color: #f87171; border: 1px solid rgba(220,38,38,0.3); }
+.tag-amber { background-color: rgba(245,158,11,0.15); color: #fbbf24; border: 1px solid rgba(245,158,11,0.3); }
+
+[data-theme="light"] .tag-blue { background-color: rgba(59,130,246,0.1); color: #2563eb; border-color: rgba(59,130,246,0.3); }
+[data-theme="light"] .tag-red { background-color: rgba(220,38,38,0.1); color: #dc2626; border-color: rgba(220,38,38,0.3); }
+[data-theme="light"] .tag-amber { background-color: rgba(245,158,11,0.1); color: #d97706; border-color: rgba(245,158,11,0.3); }
+
+/* Percentage bar in tables */
+.pct-bar-bg { background-color: #1f1f1f; }
+[data-theme="light"] .pct-bar-bg { background-color: #e5e7eb; }
+
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
+
+/* Print */
+@media print { .sidebar, .btn-theme, #backToTop, .lang-switch { display: none !important; } .main-content { margin-left: 0 !important; } }
+
+/* Mobile sidebar */
+@media (max-width: 1023px) {
+  .sidebar { transform: translateX(-100%); transition: transform 0.3s ease; z-index: 50; position: fixed; top: 0; left: 0; height: 100vh; width: 280px; }
+  .sidebar.open { transform: translateX(0); }
+  .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+  .sidebar-overlay.open { display: block; }
+  .main-content { margin-left: 0 !important; }
+}
+
+/* Score badge */
+.score-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+</style>
+</head>
+<body class="font-body min-h-screen">
+
+<!-- Mobile sidebar overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- Sidebar -->
+<aside class="sidebar fixed top-0 left-0 h-screen w-64 border-r overflow-y-auto py-6 px-4 lg:translate-x-0" id="sidebar">
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="text-accent-blue font-mono font-bold text-sm">SUPINFOR</span>
+    </div>
+    <h2 class="font-heading font-bold text-heading text-sm mt-3">
+      <span data-zh>品牌声誉分析报告</span>
+      <span data-en>Brand Reputation Report</span>
+    </h2>
+    <p class="text-muted text-xs mt-1 font-mono">DJI · 2026.04</p>
+  </div>
+  <nav class="space-y-1" id="navLinks">
+    <a href="#hero" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span data-zh>概览</span><span data-en>Overview</span>
+    </a>
+    <a href="#section-1" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">01</span>
+      <span data-zh>品牌画像综述</span><span data-en>Brand Profile</span>
+    </a>
+    <a href="#section-2" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-blue text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">02</span>
+      <span data-zh>技术形象</span><span data-en>Tech Image</span>
+    </a>
+    <a href="#section-3" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">03</span>
+      <span data-zh>商业势能</span><span data-en>Business Momentum</span>
+    </a>
+    <a href="#section-4" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-blue text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">04</span>
+      <span data-zh>生态角色</span><span data-en>Ecosystem Role</span>
+    </a>
+    <a href="#section-5" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-red text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">05</span>
+      <span data-zh>风险轮廓</span><span data-en>Risk Profile</span>
+    </a>
+    <a href="#section-6" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">06</span>
+      <span data-zh>市场叙事</span><span data-en>Market Narrative</span>
+    </a>
+    <a href="#section-7" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">07</span>
+      <span data-zh>价值主张</span><span data-en>Value Proposition</span>
+    </a>
+    <a href="#section-8" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">08</span>
+      <span data-zh>维度交叉分析</span><span data-en>Cross Analysis</span>
+    </a>
+    <a href="#section-9" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">09</span>
+      <span data-zh>管理建议</span><span data-en>Recommendations</span>
+    </a>
+    <a href="#section-10" class="nav-link block py-2 px-3 text-sm rounded-md transition-colors border-l-2 border-transparent">
+      <span class="tag-amber text-xs px-1.5 py-0.5 rounded mr-1.5 font-mono">10</span>
+      <span data-zh>附录</span><span data-en>Appendix</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- Main Content -->
+<main class="main-content lg:ml-64">
+
+<!-- Top bar -->
+<div class="fixed top-0 right-0 left-0 lg:left-64 z-30 px-4 py-3 flex items-center justify-between" style="background:rgba(10,10,10,0.8);backdrop-filter:blur(12px);" id="topBar">
+  <button class="lg:hidden text-heading p-2" onclick="toggleSidebar()">
+    <i class="fas fa-bars"></i>
+  </button>
+  <div class="flex-1"></div>
+  <div class="flex items-center gap-2">
+    <!-- Language switch -->
+    <button class="lang-switch btn-theme px-3 py-1.5 rounded-md text-xs font-mono font-medium transition-colors" onclick="toggleLang()" title="Switch Language">
+      <span data-zh>EN</span><span data-en>中</span>
+    </button>
+    <!-- Theme switch -->
+    <button class="btn-theme px-3 py-1.5 rounded-md text-xs font-medium transition-colors" onclick="toggleTheme()" id="themeBtn" title="Toggle Theme">
+      <i class="fas fa-sun" id="themeIcon"></i>
+    </button>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero-section hero-grid min-h-screen flex items-center pt-16" id="hero">
+  <div class="max-w-5xl mx-auto px-6 py-20 w-full">
+    <div class="fade-in">
+      <p class="font-mono text-accent-blue text-sm tracking-widest mb-4">BRAND REPUTATION ANALYSIS</p>
+      <h1 class="font-heading text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+        <span data-zh>大疆创新</span><span data-en>DJI Innovation</span>
+        <span class="text-accent-blue">(DJI)</span>
+      </h1>
+      <p class="font-heading text-lg md:text-xl text-gray-400 mb-2">
+        <span data-zh>品牌声誉分析报告</span>
+        <span data-en>Brand Reputation Analysis Report</span>
+      </p>
+      <p class="font-mono text-xs text-gray-500 mb-12">2026.03.30 — 2026.04.29 · 30 Days · 200 Curated Articles</p>
+    </div>
+
+    <!-- One-line portrait -->
+    <div class="fade-in card border rounded-lg p-6 mb-12">
+      <p class="text-xs font-mono text-accent-blue mb-3 tracking-wider">
+        <span data-zh>一句话画像</span><span data-en>ONE-LINE PORTRAIT</span>
+      </p>
+      <p class="text-body text-base md:text-lg leading-relaxed">
+        <span data-zh>在本周期的媒体报道中，大疆初步呈现为<strong class="text-heading">一个技术统治力无可争议、但正面临中美双重监管夹击的全球消费级影像技术标杆</strong>，正通过产品线多元化（扫地机器人、储能、电动自行车驱动系统）和市场多元化（巴西农业、东南亚）对冲地缘风险。</span>
+        <span data-en>In this period's media coverage, DJI initially presents as <strong class="text-heading">a global consumer imaging technology benchmark with undisputed technological dominance, yet facing dual regulatory pressure from both China and the US</strong>, hedging geopolitical risks through product diversification (robot vacuums, energy storage, e-bike drive systems) and market diversification (Brazilian agriculture, Southeast Asia).</span>
+      </p>
+    </div>
+
+    <!-- Radar Bar Chart -->
+    <div class="fade-in">
+      <p class="text-xs font-mono text-gray-500 mb-4 tracking-wider">
+        <span data-zh>六维品牌声誉评分</span><span data-en>SIX-DIMENSION REPUTATION SCORES</span>
+      </p>
+      <div class="space-y-3" id="radarBars">
+        <!-- Tech Image 5.0 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>技术形象</span><span data-en>Tech Image</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-accent-blue flex items-center justify-end pr-3" data-width="100" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">5.0</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-muted hidden md:block">
+            <span data-zh>技术引领型</span><span data-en>Tech Leader</span>
+          </div>
+        </div>
+        <!-- Market Narrative 4.5 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>市场叙事</span><span data-en>Market Narrative</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-amber-500 flex items-center justify-end pr-3" data-width="90" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">4.5</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-muted hidden md:block">
+            <span data-zh>标杆+争议</span><span data-en>Benchmark+Debate</span>
+          </div>
+        </div>
+        <!-- Business Momentum 4.0 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>商业势能</span><span data-en>Business Momentum</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-amber-500 flex items-center justify-end pr-3" data-width="80" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">4.0</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-muted hidden md:block">
+            <span data-zh>多线扩张型</span><span data-en>Multi-line Expansion</span>
+          </div>
+        </div>
+        <!-- Ecosystem Role 4.0 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>生态角色</span><span data-en>Ecosystem Role</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-accent-blue flex items-center justify-end pr-3" data-width="80" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">4.0</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-muted hidden md:block">
+            <span data-zh>品类定义者</span><span data-en>Category Definer</span>
+          </div>
+        </div>
+        <!-- Value Proposition 4.0 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>价值主张</span><span data-en>Value Proposition</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-amber-500 flex items-center justify-end pr-3" data-width="80" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">4.0</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-muted hidden md:block">
+            <span data-zh>创作者赋能型</span><span data-en>Creator Empowerment</span>
+          </div>
+        </div>
+        <!-- Risk Profile 2.0 -->
+        <div class="flex items-center gap-4">
+          <div class="w-28 md:w-36 text-right text-sm font-medium">
+            <span data-zh>风险轮廓</span><span data-en>Risk Profile</span>
+          </div>
+          <div class="flex-1 h-8 rounded-md pct-bar-bg overflow-hidden relative">
+            <div class="bar-fill h-full rounded-md bg-red-600 flex items-center justify-end pr-3" data-width="40" style="width:0%">
+              <span class="text-white text-xs font-mono font-bold">2.0</span>
+            </div>
+          </div>
+          <div class="w-24 text-xs text-red-400 hidden md:block">
+            <span data-zh>地缘承压型</span><span data-en>Geo-Pressured</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Meta info -->
+    <div class="fade-in mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="card border rounded-lg p-4 text-center">
+        <p class="font-mono text-2xl font-bold text-accent-blue">200</p>
+        <p class="text-xs text-muted mt-1"><span data-zh>精选资讯</span><span data-en>Curated Articles</span></p>
+      </div>
+      <div class="card border rounded-lg p-4 text-center">
+        <p class="font-mono text-2xl font-bold text-accent-blue">1,077</p>
+        <p class="text-xs text-muted mt-1"><span data-zh>原始去重</span><span data-en>Deduplicated</span></p>
+      </div>
+      <div class="card border rounded-lg p-4 text-center">
+        <p class="font-mono text-2xl font-bold text-accent-blue">819</p>
+        <p class="text-xs text-muted mt-1"><span data-zh>带标签数据</span><span data-en>Tagged Data</span></p>
+      </div>
+      <div class="card border rounded-lg p-4 text-center">
+        <p class="font-mono text-2xl font-bold text-accent-blue">4.1:1</p>
+        <p class="text-xs text-muted mt-1"><span data-zh>压缩比</span><span data-en>Compression Ratio</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 1: Brand Profile Overview -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-1">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">01</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>品牌画像综述</span><span data-en>Brand Profile Overview</span>
+      </h2>
+    </div>
+
+    <!-- Reading tip -->
+    <div class="tip-box border-l-4 rounded-r-lg p-5 mb-8">
+      <div class="flex items-start gap-3">
+        <i class="fas fa-exclamation-triangle text-amber-500 mt-0.5"></i>
+        <div>
+          <p class="font-medium text-heading text-sm mb-1">
+            <span data-zh>阅读提示</span><span data-en>Reading Note</span>
+          </p>
+          <p class="text-body text-sm leading-relaxed">
+            <span data-zh>本报告基于30天的媒体数据，是品牌形象的短周期扫描快照。所有画像判断仅反映本周期内的媒体报道特征，不代表品牌的长期定位或历史积累。建议结合多个周期的持续监测，形成更完整的品牌画像认知。</span>
+            <span data-en>This report is based on 30 days of media data, serving as a short-cycle snapshot of brand image. All profile judgments only reflect media coverage characteristics within this period and do not represent the brand's long-term positioning or historical accumulation. It is recommended to combine continuous monitoring across multiple cycles for a more complete brand profile understanding.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8">
+      <p class="text-body leading-relaxed">
+        <span data-zh>本周期内，大疆在全球媒体中初步呈现出一个<strong class="text-heading">技术统治力与地缘政治压力并存</strong>的复杂品牌形象。一方面，品牌以极高的产品发布密度（Lito系列无人机、Osmo Pocket 4、Mic Mini 2、ROMO扫地机器人等）持续强化"消费级影像技术标杆"的定位；另一方面，北京无人机禁售令和美国FCC禁令构成了前所未有的双重监管压力，使品牌在"技术领先者"和"地缘风险承受者"之间形成了显著的形象张力。</span>
+        <span data-en>During this period, DJI initially presents a complex brand image in global media where <strong class="text-heading">technological dominance coexists with geopolitical pressure</strong>. On one hand, the brand continuously reinforces its positioning as "the benchmark for consumer-grade imaging technology" through an extremely high product launch density (Lito series drones, Osmo Pocket 4, Mic Mini 2, ROMO robot vacuum, etc.); on the other hand, Beijing's drone sales ban and the US FCC ban constitute unprecedented dual regulatory pressure, creating significant image tension between "technology leader" and "geopolitical risk bearer."</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 2: Tech Image -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-2">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-blue text-xs px-2 py-1 rounded font-mono font-medium">02</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>技术形象：技术引领型</span><span data-en>Tech Image: Technology Leader</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-accent-blue text-white">5.0</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：极高（新品发布149条+技术创新8条，占精选集78.5%）</span>
+        <span data-en>Signal Density: Very High (149 new product launches + 8 tech innovations, 78.5% of curated set)</span>
+      </div>
+    </div>
+
+    <!-- Core Findings -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-accent-blue text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">产品发布密度在消费电子行业中处于顶级水平</strong>：本周期内同时推出Lito系列无人机（2款）、Osmo Pocket 4、Osmo Mobile 8P、Mic Mini 2、DJI ROMO扫地机器人、Avinox M2/M2S电动自行车驱动系统、Power 1000 Mini储能电站等多条产品线新品</span><span data-en><strong class="text-heading">Product launch density is at the top level in the consumer electronics industry</strong>: Simultaneously launched Lito series drones (2 models), Osmo Pocket 4, Osmo Mobile 8P, Mic Mini 2, DJI ROMO robot vacuum, Avinox M2/M2S e-bike drive systems, Power 1000 Mini energy storage station, and other multi-line new products within this period</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">技术叙事以"首创"和"标杆"为主调</strong>：Osmo Pocket 4被多家媒体评为"口袋相机品类标杆"，Lito系列被定位为"入门无人机新标准"，ROMO扫地机器人以"双目鱼眼+固态激光雷达"区别于竞品</span><span data-en><strong class="text-heading">Technology narrative dominated by "first-of-its-kind" and "benchmark" themes</strong>: Osmo Pocket 4 rated as "pocket camera category benchmark" by multiple media outlets, Lito series positioned as "new standard for entry-level drones," ROMO robot vacuum differentiated from competitors with "binocular fisheye + solid-state LiDAR"</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">概念产品展示技术愿景</strong>：Saros Rover（可爬楼梯的扫地机器人概念来自合作方石头科技，但DJI ROMO的感知系统同样展示了跨品类技术迁移能力）</span><span data-en><strong class="text-heading">Concept products showcase technology vision</strong>: Saros Rover (stair-climbing robot vacuum concept from partner Roborock, but DJI ROMO's perception system also demonstrates cross-category technology migration capability)</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporting Evidence -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-accent-blue text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>Osmo Pocket 4台湾首周销量较前代暴增5倍，刷新品类纪录</span><span data-en>Osmo Pocket 4 first-week sales in Taiwan surged 5x over predecessor, setting category records</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>IDC数据：DJI在手持云台相机市场占62%份额</span><span data-en>IDC data: DJI holds 62% market share in handheld gimbal cameras</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>Lito X1搭载前置LiDAR+全向避障，在入门级无人机中属首创配置</span><span data-en>Lito X1 features front-facing LiDAR + omnidirectional obstacle avoidance, a first for entry-level drones</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>DJI ROMO搭载双目鱼眼+三广角激光雷达感知系统，区别于行业主流的单激光雷达方案</span><span data-en>DJI ROMO features binocular fisheye + triple wide-angle LiDAR perception system, differentiating from industry-standard single LiDAR solutions</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>Avinox M2S电动自行车驱动系统峰值功率1500W、扭矩150Nm，参数领先竞品</span><span data-en>Avinox M2S e-bike drive system peak power 1500W, torque 150Nm, leading competitor specifications</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>NAB Show 2026上DJI RS5和Osmo 360斩获多项行业大奖</span><span data-en>DJI RS5 and Osmo 360 won multiple industry awards at NAB Show 2026</span></li>
+      </ul>
+    </div>
+
+    <!-- Image Assessment -->
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#3b82f6;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-accent-blue text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>在本周期内，大疆的技术形象表现为无可争议的品类定义者。值得关注的是，品牌正在将无人机领域积累的核心技术（飞控、感知、影像处理）系统性地迁移到扫地机器人、电动自行车、储能等新品类，这种"技术平台化"策略如果持续，可能在未来重塑品牌的技术形象——从"无人机公司"变为"智能硬件平台"。不过，由于观察窗口有限，这一判断需要更长周期的数据验证。</span>
+        <span data-en>During this period, DJI's technology image presents as an undisputed category definer. Notably, the brand is systematically migrating core technologies accumulated in the drone field (flight control, perception, image processing) to new categories such as robot vacuums, e-bikes, and energy storage. If this "technology platformization" strategy continues, it may reshape the brand's technology image in the future — from "drone company" to "smart hardware platform." However, due to the limited observation window, this judgment requires longer-cycle data validation.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Business Momentum -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-3">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">03</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>商业势能：多线扩张型</span><span data-en>Business Momentum: Multi-line Expansion</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-amber-500 text-white">4.0</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：中（经营业绩1条、区域拓展相关信号散布在新品发布中）</span>
+        <span data-en>Signal Density: Medium (1 business performance article, regional expansion signals scattered in product launches)</span>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-amber-500 text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">产品线多元化加速</strong>：从无人机核心业务向手持影像、扫地机器人、储能电站、电动自行车驱动系统、农业无人机五个方向同步扩张</span><span data-en><strong class="text-heading">Product line diversification accelerating</strong>: Simultaneous expansion from core drone business into five directions — handheld imaging, robot vacuums, energy storage stations, e-bike drive systems, and agricultural drones</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">区域市场覆盖广泛</strong>：本周期内新品发布覆盖韩国、日本、马来西亚、印尼、巴西、欧洲多国、台湾、香港等市场</span><span data-en><strong class="text-heading">Broad regional market coverage</strong>: New product launches during this period covered Korea, Japan, Malaysia, Indonesia, Brazil, multiple European countries, Taiwan, and Hong Kong</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">农业业务在巴西快速增长</strong>：2025年大疆运输无人机任务量较2024年增8倍，巴西农用无人机从2021年约3000台增至2025年35000台</span><span data-en><strong class="text-heading">Agricultural business growing rapidly in Brazil</strong>: DJI transport drone missions in 2025 increased 8x over 2024; Brazilian agricultural drones grew from ~3,000 units in 2021 to 35,000 in 2025</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-amber-500 text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>Osmo Pocket 4台湾首周销量暴增5倍</span><span data-en>Osmo Pocket 4 first-week sales in Taiwan surged 5x</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>韩国乐天Hi Mart在全国50家门店开售DJI产品，相关品类销售额同比增100%</span><span data-en>Korea's Lotte Hi Mart launched DJI products in 50 nationwide stores, related category sales up 100% YoY</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>巴西分销商DronePro跃居该国农用无人机采购量第一（市场占比21.1%）</span><span data-en>Brazilian distributor DronePro became the country's #1 agricultural drone purchaser (21.1% market share)</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>DJI ROMO扫地机器人进入马来西亚市场</span><span data-en>DJI ROMO robot vacuum entered the Malaysian market</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>Avinox电动自行车驱动系统已与60余家OEM品牌合作</span><span data-en>Avinox e-bike drive system has partnered with 60+ OEM brands</span></li>
+      </ul>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#f59e0b;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-amber-500 text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>本周期内，大疆的商业势能呈现"多线并进"特征。但需注意，经营业绩类报道仅1条，财务数据信号不足，无法判断多线扩张是否带来了实际的营收增长。此外，美国市场的缺席（多款新品标注"暂未在美国发售"）是一个值得持续关注的信号——美国曾是大疆最重要的海外市场之一。这一维度的判断样本有限，建议在后续周期中重点跟踪财务数据和美国市场动态。</span>
+        <span data-en>During this period, DJI's business momentum shows "multi-line parallel advancement" characteristics. However, note that there was only 1 business performance report, with insufficient financial data signals to determine whether multi-line expansion has brought actual revenue growth. Additionally, the absence from the US market (multiple new products marked "not yet available in the US") is a signal worth continuous attention — the US was once one of DJI's most important overseas markets. The judgment sample for this dimension is limited; it is recommended to focus on tracking financial data and US market dynamics in subsequent cycles.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Ecosystem Role -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-4">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-blue text-xs px-2 py-1 rounded font-mono font-medium">04</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>生态角色：品类定义者</span><span data-en>Ecosystem Role: Category Definer</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-accent-blue text-white">4.0</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：中（销售合作1条、采购合作1条、研发合作1条，但大量新品评测中隐含生态信息）</span>
+        <span data-en>Signal Density: Medium (1 sales cooperation, 1 procurement cooperation, 1 R&D cooperation, but extensive ecosystem information implicit in product reviews)</span>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-accent-blue text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">影像创作生态闭环</strong>：Osmo Pocket 4 + Mic Mini 2 + Osmo Mobile 8P + DJI Mimo App构成完整的移动影像创作工具链</span><span data-en><strong class="text-heading">Imaging creation ecosystem closed loop</strong>: Osmo Pocket 4 + Mic Mini 2 + Osmo Mobile 8P + DJI Mimo App form a complete mobile imaging creation toolchain</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">OsmoAudio音频生态</strong>：Mic Mini 2可直连Osmo Pocket等设备，无需额外接收器，形成品牌内音视频协同</span><span data-en><strong class="text-heading">OsmoAudio audio ecosystem</strong>: Mic Mini 2 can directly connect to Osmo Pocket and other devices without additional receivers, forming intra-brand audio-video synergy</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">SkyPixel社区平台</strong>：第11届SkyPixel大赛吸引96国近9.5万份投稿，5,500万用户的创作者社区是品牌的重要生态资产</span><span data-en><strong class="text-heading">SkyPixel community platform</strong>: The 11th SkyPixel contest attracted nearly 95,000 submissions from 96 countries; the 55 million-user creator community is a vital brand ecosystem asset</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-accent-blue font-mono font-bold mt-0.5">04</span>
+          <p><span data-zh><strong class="text-heading">农业生态</strong>：SmartFarm平台连接无人机、数字管理系统和农业服务商</span><span data-en><strong class="text-heading">Agricultural ecosystem</strong>: SmartFarm platform connects drones, digital management systems, and agricultural service providers</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-accent-blue text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>DJI Mimo App被多家评测媒体称赞为"同类最佳编辑应用"</span><span data-en>DJI Mimo App praised by multiple review outlets as "best-in-class editing app"</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>SkyPixel社区累计收到超50万份赛事投稿</span><span data-en>SkyPixel community has received over 500,000 cumulative contest submissions</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>巴西农业生态：DJI Agriculture + SmartFarm + 本地分销商DronePro + 高校合作</span><span data-en>Brazilian agricultural ecosystem: DJI Agriculture + SmartFarm + local distributor DronePro + university partnerships</span></li>
+        <li class="flex gap-2"><span class="text-accent-blue mt-1">•</span><span data-zh>Avinox驱动系统兼容60+家OEM品牌，形成电动自行车生态</span><span data-en>Avinox drive system compatible with 60+ OEM brands, forming an e-bike ecosystem</span></li>
+      </ul>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#3b82f6;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-accent-blue text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>大疆在本周期内展现出"品类定义者"的生态角色——不仅定义产品标准，还通过App、社区、配件生态和合作伙伴网络构建了竞品难以复制的用户粘性。不过，合作类标签的信号密度较低（仅3条），生态角色的判断主要来自新品评测中的间接信息，建议在后续周期中关注更多合作动态。</span>
+        <span data-en>DJI demonstrates a "category definer" ecosystem role during this period — not only defining product standards but also building user stickiness that competitors find difficult to replicate through apps, communities, accessory ecosystems, and partner networks. However, the signal density for cooperation-related tags is low (only 3 articles), and the ecosystem role judgment mainly comes from indirect information in product reviews. It is recommended to monitor more cooperation dynamics in subsequent cycles.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 5: Risk Profile -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-5">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-red text-xs px-2 py-1 rounded font-mono font-medium">05</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>风险轮廓：地缘承压型（风险较高）</span><span data-en>Risk Profile: Geo-Pressured (Higher Risk)</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-red-600 text-white">2.0</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：高（监管调查7条+安全事故2条+法律诉讼1条+行政处罚1条+裁减人员2条，合计13条，占精选集6.5%）</span>
+        <span data-en>Signal Density: High (7 regulatory investigations + 2 safety incidents + 1 lawsuit + 1 administrative penalty + 2 layoffs, total 13, 6.5% of curated set)</span>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-red-500 text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-red-500 font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">北京禁售令冲击本土市场</strong>：5月1日起北京全域禁售消费级无人机及核心部件，DJI北京门店将撤下产品，部分门店销量已下降近50%</span><span data-en><strong class="text-heading">Beijing sales ban impacts domestic market</strong>: Starting May 1, Beijing-wide ban on sales of consumer drones and core components; DJI Beijing stores will remove products, some stores already seeing ~50% sales decline</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-red-500 font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">美国FCC禁令持续发酵</strong>：多款新品标注"暂未在美国发售"，DJI已起诉FCC，2026年或损失超15亿美元</span><span data-en><strong class="text-heading">US FCC ban continues to escalate</strong>: Multiple new products marked "not yet available in the US"; DJI has sued the FCC, potentially losing over $1.5 billion in 2026</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-red-500 font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">专利诉讼升级</strong>：大疆起诉影石创新6项核心技术侵权，涉及飞控、结构设计、影像处理等关键领域</span><span data-en><strong class="text-heading">Patent litigation escalation</strong>: DJI sued Insta360 for 6 core technology patent infringements, covering flight control, structural design, image processing, and other key areas</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-red-500 font-mono font-bold mt-0.5">04</span>
+          <p><span data-zh><strong class="text-heading">地缘叙事被放大</strong>：多篇报道将DJI定位为"中国技术威胁"，美国区块链替代方案的讨论将DJI作为反面案例</span><span data-en><strong class="text-heading">Geopolitical narrative amplified</strong>: Multiple reports position DJI as a "Chinese technology threat"; US blockchain alternative discussions use DJI as a negative case study</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-red-500 text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span data-zh>北京新规：全市设为管制空域，禁售、禁租、禁运无人机，违规可追究刑责</span><span data-en>Beijing new regulation: Entire city designated as controlled airspace; sales, rentals, and transport of drones prohibited; violations may result in criminal liability</span></li>
+        <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span data-zh>香港经销商透露企业销量下滑50%，二手平台无人机抛售激增</span><span data-en>Hong Kong dealers report 50% enterprise sales decline; surge in drone sell-offs on second-hand platforms</span></li>
+        <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span data-zh>美国市场：Lito系列、Mic Mini 2、Power 1000 Mini等多款新品均未在美发售</span><span data-en>US market: Lito series, Mic Mini 2, Power 1000 Mini, and other new products all not available in the US</span></li>
+        <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span data-zh>至少3篇报道讨论"区块链替代DJI"的美国无人机安全方案</span><span data-en>At least 3 reports discuss "blockchain alternatives to DJI" for US drone security solutions</span></li>
+        <li class="flex gap-2"><span class="text-red-500 mt-1">•</span><span data-zh>台湾纬创收购经纬航太，明确定位为"非红供应链"替代DJI</span><span data-en>Taiwan's Wistron acquired GEOSAT, explicitly positioned as "non-red supply chain" alternative to DJI</span></li>
+      </ul>
+    </div>
+
+    <div class="risk-card card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#dc2626;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-red-500 text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>本周期内，大疆面临的风险轮廓是所有六个维度中最突出的。中国国内（北京禁售令）和美国（FCC禁令）的双重监管压力，在媒体叙事中形成了"腹背受敌"的形象。需要特别指出的是，北京禁售令的影响可能被本周期的报道密度放大——这是一个刚发生的政策事件，短期内媒体关注度集中是正常的。其对品牌长期形象的实际影响，需要在后续周期中持续观察。</span>
+        <span data-en>During this period, DJI's risk profile is the most prominent among all six dimensions. The dual regulatory pressure from domestic China (Beijing sales ban) and the US (FCC ban) creates an "attacked from both sides" image in media narratives. It should be particularly noted that the impact of the Beijing sales ban may be amplified by the reporting density in this period — this is a newly occurred policy event, and concentrated short-term media attention is normal. Its actual impact on long-term brand image needs continuous observation in subsequent cycles.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 6: Market Narrative -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-6">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">06</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>市场叙事：标杆+争议并存</span><span data-en>Market Narrative: Benchmark + Controversy Coexist</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-amber-500 text-white">4.5</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：中高（行业分析5条+品牌比较2条+高管观点1条，加上大量评测中的对比叙事）</span>
+        <span data-en>Signal Density: Medium-High (5 industry analyses + 2 brand comparisons + 1 executive opinion, plus extensive comparative narratives in reviews)</span>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-amber-500 text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">"标杆"叙事占主导</strong>：绝大多数产品评测以DJI为基准对比竞品（"DJI替代方案""对标DJI Osmo Pocket""挑战DJI"）</span><span data-en><strong class="text-heading">"Benchmark" narrative dominates</strong>: The vast majority of product reviews use DJI as the baseline for competitor comparisons ("DJI alternatives," "benchmarking against DJI Osmo Pocket," "challenging DJI")</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">"争议"叙事在上升</strong>：地缘政治相关报道将DJI定位为"需要被替代的中国技术"，台湾、美国媒体尤为明显</span><span data-en><strong class="text-heading">"Controversy" narrative rising</strong>: Geopolitical reports position DJI as "Chinese technology that needs to be replaced," particularly prominent in Taiwanese and US media</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">竞品叙事活跃</strong>：影石Antigravity A1、Insta360 Luna Ultra、OPPO/vivo云台相机项目均以"挑战DJI"为核心叙事</span><span data-en><strong class="text-heading">Competitor narratives active</strong>: Insta360 Antigravity A1, Insta360 Luna Ultra, OPPO/vivo gimbal camera projects all use "challenging DJI" as their core narrative</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-amber-500 text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>The Verge、TechRadar、CNET等主流科技媒体的评测均以DJI产品为品类标杆</span><span data-en>Reviews from The Verge, TechRadar, CNET, and other mainstream tech media all use DJI products as category benchmarks</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>南华早报专题报道"DJI vs Insta360"竞争，将其定义为"中国硬件创新的良性竞争"</span><span data-en>South China Morning Post featured "DJI vs Insta360" competition, defining it as "healthy competition in Chinese hardware innovation"</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>台湾媒体报道纬创收购经纬航太时，明确使用"非红供应链"替代DJI的叙事框架</span><span data-en>Taiwanese media reporting on Wistron's acquisition of GEOSAT explicitly used the "non-red supply chain" narrative framework to replace DJI</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>多篇美国媒体报道讨论"后DJI时代"的无人机生态</span><span data-en>Multiple US media reports discuss the "post-DJI era" drone ecosystem</span></li>
+      </ul>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#f59e0b;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-amber-500 text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>大疆在本周期的市场叙事中呈现出一种独特的"双重标杆"地位——既是产品技术的标杆（竞品以超越DJI为目标），也是地缘风险的标杆（替代方案以脱离DJI为目标）。这种双重叙事在短期内可能加剧品牌形象的分裂，但从另一个角度看，"需要被替代"本身就是市场统治力的证明。这一叙事的演变方向值得持续关注。</span>
+        <span data-en>DJI presents a unique "dual benchmark" status in this period's market narrative — both a benchmark for product technology (competitors aim to surpass DJI) and a benchmark for geopolitical risk (alternatives aim to decouple from DJI). This dual narrative may exacerbate brand image fragmentation in the short term, but from another perspective, "needing to be replaced" is itself proof of market dominance. The evolution of this narrative is worth continuous attention.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 7: Value Proposition -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-7">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-2">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">07</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>价值主张：创作者赋能型</span><span data-en>Value Proposition: Creator Empowerment</span>
+      </h2>
+    </div>
+    <div class="flex items-center gap-4 mb-8 ml-11">
+      <div class="score-badge bg-amber-500 text-white">4.0</div>
+      <div class="text-sm text-muted">
+        <span data-zh>信号密度：中（营销活动10条+荣誉奖项相关信号）</span>
+        <span data-en>Signal Density: Medium (10 marketing activities + honor/award related signals)</span>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-crosshairs text-amber-500 text-sm"></i>
+        <span data-zh>核心发现</span><span data-en>Core Findings</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">01</span>
+          <p><span data-zh><strong class="text-heading">"让每个人都能创作"是核心价值叙事</strong>：Lito系列定位"航拍新手"、Osmo Pocket 4定位"口袋里的专业相机"、Mic Mini 2定位"人人可用的无线麦"</span><span data-en><strong class="text-heading">"Enabling everyone to create" is the core value narrative</strong>: Lito series positioned for "aerial photography beginners," Osmo Pocket 4 as "professional camera in your pocket," Mic Mini 2 as "wireless mic for everyone"</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">02</span>
+          <p><span data-zh><strong class="text-heading">SkyPixel大赛强化"创作者社区"身份</strong>：96国9.5万份投稿，将品牌与全球创作者文化深度绑定</span><span data-en><strong class="text-heading">SkyPixel contest reinforces "creator community" identity</strong>: 95,000 submissions from 96 countries, deeply binding the brand with global creator culture</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">03</span>
+          <p><span data-zh><strong class="text-heading">艺术跨界提升品牌调性</strong>：与插画师Victo Ngai合作推出Mic Mini 2限定磁吸前盖，将硬件产品转化为"可穿戴的艺术品"</span><span data-en><strong class="text-heading">Art crossover elevates brand tone</strong>: Collaborated with illustrator Victo Ngai to launch limited-edition Mic Mini 2 magnetic front covers, transforming hardware products into "wearable art"</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">04</span>
+          <p><span data-zh><strong class="text-heading">农业场景传递"技术普惠"价值</strong>：巴西农业无人机可节水省药30%，与当地创作者合作推广</span><span data-en><strong class="text-heading">Agricultural scenarios convey "technology for all" value</strong>: Brazilian agricultural drones can save 30% water and pesticides, promoted through collaboration with local creators</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-file-alt text-amber-500 text-sm"></i>
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <ul class="space-y-3 text-body text-sm leading-relaxed">
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>Osmo Pocket 4女性用户占比超50%，品牌主动适配非传统科技用户群体</span><span data-en>Osmo Pocket 4 female users exceed 50%, brand actively adapting to non-traditional tech user groups</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>Mic Mini 2起售价59欧元，刻意压低创作工具的入门门槛</span><span data-en>Mic Mini 2 starting at €59, deliberately lowering the entry barrier for creative tools</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>SkyPixel大赛获奖作品《Africa Unseen》使用35TB+8K素材，展示专业级创作能力</span><span data-en>SkyPixel contest winner "Africa Unseen" used 35TB+ 8K footage, showcasing professional-grade creative capability</span></li>
+        <li class="flex gap-2"><span class="text-amber-500 mt-1">•</span><span data-zh>韩国市场便携拍摄设备销售额同比增100%，DJI是主要受益者</span><span data-en>Korean market portable shooting equipment sales up 100% YoY, DJI is the primary beneficiary</span></li>
+      </ul>
+    </div>
+
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#f59e0b;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye text-amber-500 text-sm"></i>
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-body text-sm leading-relaxed">
+        <span data-zh>大疆在本周期内的价值主张清晰地围绕"创作者赋能"展开——从专业影视到日常vlog，从航拍到农业，品牌试图传递"技术让创作更简单"的核心信息。Victo Ngai联名和SkyPixel大赛表明品牌正在从"硬核科技"向"创作文化"延伸。不过，这一价值主张在地缘政治叙事的冲击下，可能在部分市场（尤其是美国）被弱化。</span>
+        <span data-en>DJI's value proposition during this period clearly revolves around "creator empowerment" — from professional filmmaking to daily vlogs, from aerial photography to agriculture, the brand attempts to convey the core message that "technology makes creation simpler." The Victo Ngai collaboration and SkyPixel contest indicate the brand is extending from "hardcore tech" to "creative culture." However, this value proposition may be weakened in some markets (especially the US) under the impact of geopolitical narratives.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Section 8: Cross-Dimension Analysis -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-8">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">08</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>维度交叉分析</span><span data-en>Cross-Dimension Analysis</span>
+      </h2>
+    </div>
+
+    <!-- Image Consistency -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-link text-accent-blue text-sm"></i>
+        <span data-zh>形象一致性</span><span data-en>Image Consistency</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <p>
+          <span data-zh><strong class="text-heading">技术形象 × 市场叙事 × 价值主张</strong>三个维度高度一致：技术引领支撑标杆地位，标杆地位强化创作者赋能的价值主张。这三个维度相互强化，构成了大疆品牌的核心资产。</span>
+          <span data-en><strong class="text-heading">Tech Image × Market Narrative × Value Proposition</strong> — three dimensions are highly consistent: technology leadership supports benchmark status, which reinforces the creator empowerment value proposition. These three dimensions mutually reinforce each other, forming DJI's core brand assets.</span>
+        </p>
+        <p>
+          <span data-zh><strong class="text-heading">商业势能 × 生态角色</strong>也呈现一致性：多线扩张（扫地机器人、储能、电动自行车）与品类定义者的生态构建能力相互支撑。</span>
+          <span data-en><strong class="text-heading">Business Momentum × Ecosystem Role</strong> also shows consistency: multi-line expansion (robot vacuums, energy storage, e-bikes) and the category definer's ecosystem building capability mutually support each other.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Image Fractures - Red border card -->
+    <div class="risk-card card border-2 rounded-lg p-6 md:p-8 mb-6">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-bolt text-red-500 text-sm"></i>
+        <span data-zh>形象裂缝</span><span data-en>Image Fractures</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <p>
+          <span data-zh><strong class="text-heading">技术形象（5分）× 风险轮廓（2分）</strong>之间存在显著裂缝：品牌在技术维度的统治力与在地缘政治维度的脆弱性形成强烈反差。这种裂缝在美国市场尤为突出——技术最强的产品无法在最大的海外市场销售。</span>
+          <span data-en><strong class="text-heading">Tech Image (5.0) × Risk Profile (2.0)</strong> — significant fracture exists: the brand's dominance in the technology dimension contrasts sharply with its vulnerability in the geopolitical dimension. This fracture is particularly prominent in the US market — the strongest technology products cannot be sold in the largest overseas market.</span>
+        </p>
+        <p>
+          <span data-zh><strong class="text-heading">商业势能（4分）× 风险轮廓（2分）</strong>也存在张力：多线扩张需要稳定的全球市场环境，但中美双重监管压力正在压缩可用市场空间。</span>
+          <span data-en><strong class="text-heading">Business Momentum (4.0) × Risk Profile (2.0)</strong> — tension also exists: multi-line expansion requires a stable global market environment, but dual China-US regulatory pressure is compressing available market space.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Image Blind Spots -->
+    <div class="card border rounded-lg p-6 md:p-8">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-eye-slash text-gray-500 text-sm"></i>
+        <span data-zh>形象盲区</span><span data-en>Image Blind Spots</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <p>
+          <span data-zh><strong class="text-heading">经营业绩维度信号极弱</strong>（仅1条）：作为非上市公司，大疆的财务数据不透明，媒体报道中几乎没有营收、利润等硬数据。这使得"商业势能"维度的判断主要依赖产品发布和市场动态等间接信号，可靠性有限。</span>
+          <span data-en><strong class="text-heading">Business performance dimension signal is extremely weak</strong> (only 1 article): As a private company, DJI's financial data is opaque, with almost no hard data on revenue, profit, etc. in media reports. This means the "Business Momentum" dimension judgment mainly relies on indirect signals such as product launches and market dynamics, with limited reliability.</span>
+        </p>
+        <p>
+          <span data-zh><strong class="text-heading">用户口碑维度信号不足</strong>：本周期数据以媒体评测和新闻报道为主，缺少用户社区、社交媒体等渠道的品牌感知数据。</span>
+          <span data-en><strong class="text-heading">User reputation dimension signal insufficient</strong>: This period's data is dominated by media reviews and news reports, lacking brand perception data from user communities, social media, and other channels.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 9: Recommendations -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-9">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">09</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>品牌声誉管理建议</span><span data-en>Brand Reputation Management Recommendations</span>
+      </h2>
+    </div>
+
+    <div class="tip-box border-l-4 rounded-r-lg p-5 mb-8">
+      <div class="flex items-start gap-3">
+        <i class="fas fa-info-circle text-amber-500 mt-0.5"></i>
+        <p class="text-body text-sm leading-relaxed">
+          <span data-zh>以下建议基于30天短周期扫描，仅供参考，建议结合更长周期数据和企业内部信息综合判断。</span>
+          <span data-en>The following recommendations are based on a 30-day short-cycle scan, for reference only. It is recommended to combine longer-cycle data and internal corporate information for comprehensive judgment.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- Strengthen -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-6 border-l-4" style="border-left-color:#22c55e;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-arrow-up text-green-500 text-sm"></i>
+        <span data-zh>值得强化的维度</span><span data-en>Dimensions Worth Strengthening</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-green-500 font-mono font-bold mt-0.5">1</span>
+          <p><span data-zh><strong class="text-heading">技术形象</strong>：当前最强维度，建议持续保持高密度产品发布节奏，尤其是跨品类技术迁移（无人机技术→扫地机器人、电动自行车）的叙事，有助于将品牌从"无人机公司"重新定义为"智能硬件平台"</span><span data-en><strong class="text-heading">Tech Image</strong>: Currently the strongest dimension. Recommend maintaining high-density product launch rhythm, especially the cross-category technology migration narrative (drone tech → robot vacuums, e-bikes), which helps redefine the brand from "drone company" to "smart hardware platform"</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-green-500 font-mono font-bold mt-0.5">2</span>
+          <p><span data-zh><strong class="text-heading">价值主张</strong>：SkyPixel社区和创作者文化是品牌的独特资产，值得持续投入，尤其在地缘政治叙事压力下，"创作者赋能"是一个超越国界的普世价值叙事</span><span data-en><strong class="text-heading">Value Proposition</strong>: SkyPixel community and creator culture are unique brand assets worth continued investment, especially under geopolitical narrative pressure — "creator empowerment" is a universal value narrative that transcends borders</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Monitor -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-6 border-l-4" style="border-left-color:#f59e0b;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-exclamation-triangle text-amber-500 text-sm"></i>
+        <span data-zh>值得关注的维度</span><span data-en>Dimensions Worth Monitoring</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">1</span>
+          <p><span data-zh><strong class="text-heading">风险轮廓</strong>：北京禁售令和美国FCC禁令的叠加效应需要密切监测。建议关注：(a) 其他中国城市是否跟进北京禁售政策；(b) 美国FCC诉讼进展；(c) "非红供应链"替代方案的实际市场渗透率</span><span data-en><strong class="text-heading">Risk Profile</strong>: The compounding effect of Beijing's sales ban and the US FCC ban requires close monitoring. Recommend watching: (a) whether other Chinese cities follow Beijing's ban policy; (b) US FCC lawsuit progress; (c) actual market penetration of "non-red supply chain" alternatives</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-amber-500 font-mono font-bold mt-0.5">2</span>
+          <p><span data-zh><strong class="text-heading">市场叙事</strong>："标杆+争议"的双重叙事如果持续分化，可能导致品牌在不同市场形成截然不同的形象。建议关注欧洲市场的叙事走向——欧洲目前是DJI最重要的"友好市场"</span><span data-en><strong class="text-heading">Market Narrative</strong>: If the "benchmark + controversy" dual narrative continues to diverge, it may lead to distinctly different brand images in different markets. Recommend monitoring European market narrative trends — Europe is currently DJI's most important "friendly market"</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Observe -->
+    <div class="card border rounded-lg p-6 md:p-8 border-l-4" style="border-left-color:#6b7280;">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-4 flex items-center gap-2">
+        <i class="fas fa-binoculars text-gray-500 text-sm"></i>
+        <span data-zh>值得观察的维度</span><span data-en>Dimensions Worth Observing</span>
+      </h3>
+      <div class="space-y-4 text-body text-sm leading-relaxed">
+        <div class="flex gap-3">
+          <span class="text-gray-500 font-mono font-bold mt-0.5">1</span>
+          <p><span data-zh><strong class="text-heading">商业势能</strong>：多线扩张的财务回报尚不明确，建议在后续周期中重点关注新品类（扫地机器人、储能）的实际销售数据</span><span data-en><strong class="text-heading">Business Momentum</strong>: Financial returns from multi-line expansion remain unclear. Recommend focusing on actual sales data for new categories (robot vacuums, energy storage) in subsequent cycles</span></p>
+        </div>
+        <div class="flex gap-3">
+          <span class="text-gray-500 font-mono font-bold mt-0.5">2</span>
+          <p><span data-zh><strong class="text-heading">生态角色</strong>：DJI ROMO扫地机器人进入一个已有强劲竞争者（石头科技、科沃斯、Dreame）的市场，其生态构建能力能否复制无人机领域的成功，值得持续观察</span><span data-en><strong class="text-heading">Ecosystem Role</strong>: DJI ROMO robot vacuum enters a market with strong existing competitors (Roborock, Ecovacs, Dreame). Whether its ecosystem building capability can replicate drone-field success is worth continuous observation</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section 10: Appendix -->
+<section class="max-w-5xl mx-auto px-6 py-16" id="section-10">
+  <div class="fade-in">
+    <div class="flex items-center gap-3 mb-8">
+      <span class="tag-amber text-xs px-2 py-1 rounded font-mono font-medium">10</span>
+      <h2 class="font-heading text-2xl md:text-3xl font-bold text-heading">
+        <span data-zh>附录</span><span data-en>Appendix</span>
+      </h2>
+    </div>
+
+    <!-- Tag Distribution Table -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-8">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-6 flex items-center gap-2">
+        <i class="fas fa-tags text-accent-blue text-sm"></i>
+        <span data-zh>标签分布（精选后）</span><span data-en>Tag Distribution (After Curation)</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="table-header border-b">
+              <th class="text-left py-3 px-4 font-medium text-heading">
+                <span data-zh>标签</span><span data-en>Tag</span>
+              </th>
+              <th class="text-right py-3 px-4 font-medium text-heading w-20">
+                <span data-zh>条数</span><span data-en>Count</span>
+              </th>
+              <th class="text-right py-3 px-4 font-medium text-heading w-20">
+                <span data-zh>占比</span><span data-en>Share</span>
+              </th>
+              <th class="py-3 px-4 font-medium text-heading w-48 hidden md:table-cell">
+                <span data-zh>分布</span><span data-en>Distribution</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>新品发布</span><span data-en>New Product Launch</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">149</td>
+              <td class="py-3 px-4 text-right font-mono">74.5%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-accent-blue bar-fill" data-width="74.5" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>营销活动</span><span data-en>Marketing Campaign</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">10</td>
+              <td class="py-3 px-4 text-right font-mono">5.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-amber-500 bar-fill" data-width="5" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>技术创新</span><span data-en>Tech Innovation</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">8</td>
+              <td class="py-3 px-4 text-right font-mono">4.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-accent-blue bar-fill" data-width="4" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>监管调查</span><span data-en>Regulatory Investigation</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">7</td>
+              <td class="py-3 px-4 text-right font-mono">3.5%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-red-600 bar-fill" data-width="3.5" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>行业分析</span><span data-en>Industry Analysis</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">5</td>
+              <td class="py-3 px-4 text-right font-mono">2.5%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-amber-500 bar-fill" data-width="2.5" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>行业会展</span><span data-en>Industry Exhibition</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">3</td>
+              <td class="py-3 px-4 text-right font-mono">1.5%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-amber-500 bar-fill" data-width="1.5" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>安全事故</span><span data-en>Safety Incident</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">2</td>
+              <td class="py-3 px-4 text-right font-mono">1.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-red-600 bar-fill" data-width="1" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>品牌比较</span><span data-en>Brand Comparison</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">2</td>
+              <td class="py-3 px-4 text-right font-mono">1.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-amber-500 bar-fill" data-width="1" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>裁减人员</span><span data-en>Layoffs</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">2</td>
+              <td class="py-3 px-4 text-right font-mono">1.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-red-600 bar-fill" data-width="1" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="py-3 px-4 font-medium text-heading">
+                <span data-zh>其他（11类）</span><span data-en>Others (11 types)</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">12</td>
+              <td class="py-3 px-4 text-right font-mono">6.0%</td>
+              <td class="py-3 px-4 hidden md:table-cell">
+                <div class="pct-bar-bg h-4 rounded-full overflow-hidden">
+                  <div class="h-full rounded-full bg-gray-500 bar-fill" data-width="6" style="width:0%"></div>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Six-Dimension Attribution Table -->
+    <div class="card border rounded-lg p-6 md:p-8 mb-8">
+      <h3 class="font-heading font-semibold text-heading text-lg mb-6 flex items-center gap-2">
+        <i class="fas fa-chart-pie text-accent-blue text-sm"></i>
+        <span data-zh>六维归属分布</span><span data-en>Six-Dimension Attribution Distribution</span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="table-header border-b">
+              <th class="text-left py-3 px-4 font-medium text-heading">
+                <span data-zh>维度</span><span data-en>Dimension</span>
+              </th>
+              <th class="text-right py-3 px-4 font-medium text-heading">
+                <span data-zh>归属资讯条数</span><span data-en>Attributed Articles</span>
+              </th>
+              <th class="text-left py-3 px-4 font-medium text-heading">
+                <span data-zh>信号密度</span><span data-en>Signal Density</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-accent-blue mr-2"></span>
+                <span data-zh>技术形象</span><span data-en>Tech Image</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~157</td>
+              <td class="py-3 px-4">
+                <span class="tag-blue text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>极高</span><span data-en>Very High</span>
+                </span>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+                <span data-zh>商业势能</span><span data-en>Business Momentum</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~20</td>
+              <td class="py-3 px-4">
+                <span class="tag-amber text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>中</span><span data-en>Medium</span>
+                </span>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-accent-blue mr-2"></span>
+                <span data-zh>生态角色</span><span data-en>Ecosystem Role</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~15</td>
+              <td class="py-3 px-4">
+                <span class="tag-amber text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>中</span><span data-en>Medium</span>
+                </span>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-red-600 mr-2"></span>
+                <span data-zh>风险轮廓</span><span data-en>Risk Profile</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~13</td>
+              <td class="py-3 px-4">
+                <span class="tag-red text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>中高</span><span data-en>Medium-High</span>
+                </span>
+              </td>
+            </tr>
+            <tr class="table-row border-b border-opacity-10" style="border-color:#2a2a2a;">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+                <span data-zh>市场叙事</span><span data-en>Market Narrative</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~15</td>
+              <td class="py-3 px-4">
+                <span class="tag-amber text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>中</span><span data-en>Medium</span>
+                </span>
+              </td>
+            </tr>
+            <tr class="table-row">
+              <td class="py-3 px-4 font-medium">
+                <span class="inline-block w-2 h-2 rounded-full bg-amber-500 mr-2"></span>
+                <span data-zh>价值主张</span><span data-en>Value Proposition</span>
+              </td>
+              <td class="py-3 px-4 text-right font-mono">~20</td>
+              <td class="py-3 px-4">
+                <span class="tag-amber text-xs px-2 py-0.5 rounded font-medium">
+                  <span data-zh>中</span><span data-en>Medium</span>
+                </span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-muted text-xs mt-4 italic">
+        <span data-zh>注：单条资讯可能归属多个维度，总数大于200。</span>
+        <span data-en>Note: A single article may be attributed to multiple dimensions, so the total exceeds 200.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="max-w-5xl mx-auto px-6 py-12 border-t" style="border-color:#1f1f1f;">
+  <div class="fade-in">
+    <p class="text-body text-sm leading-relaxed mb-4 italic">
+      <span data-zh>本报告基于30天内的公开媒体资讯整理分析，是品牌形象的短周期扫描快照，不代表品牌的长期积累或历史定位。品牌画像反映的是本周期内媒体报道中的品牌形象，可能与品牌自身定位存在偏差。建议持续监测跟踪，结合多个周期数据形成更完整的品牌声誉评估。</span>
+      <span data-en>This report is based on analysis of publicly available media information within 30 days, serving as a short-cycle snapshot of brand image. It does not represent the brand's long-term accumulation or historical positioning. The brand profile reflects the brand image in media coverage during this period, which may deviate from the brand's own positioning. Continuous monitoring and tracking is recommended, combining data from multiple cycles for a more complete brand reputation assessment.</span>
+    </p>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <span class="font-mono text-accent-blue font-bold text-sm">SUPINFOR</span>
+        <span class="text-muted text-xs">© 2026 Supinfor Ltd.</span>
+      </div>
+      <div class="text-muted text-xs font-mono">
+        <span data-zh>生成日期：2026年4月29日</span>
+        <span data-en>Generated: April 29, 2026</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- Back to Top -->
+<button id="backToTop" class="fixed bottom-6 right-6 w-10 h-10 rounded-full bg-accent-blue text-white flex items-center justify-center shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-600 z-50" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <i class="fas fa-arrow-up text-sm"></i>
+</button>
+
+<script>
+// Theme management
+function getSystemTheme() {
+  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  const icon = document.getElementById('themeIcon');
+  const topBar = document.getElementById('topBar');
+  if (theme === 'dark') {
+    icon.className = 'fas fa-sun';
+    topBar.style.background = 'rgba(10,10,10,0.8)';
+  } else {
+    icon.className = 'fas fa-moon';
+    topBar.style.background = 'rgba(243,244,246,0.8)';
+  }
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  localStorage.setItem('dji-report-theme', next);
+  applyTheme(next);
+}
+
+// Language management
+function applyLang(lang) {
+  document.documentElement.setAttribute('data-lang', lang);
+}
+
+function toggleLang() {
+  const current = document.documentElement.getAttribute('data-lang');
+  const next = current === 'zh' ? 'en' : 'zh';
+  localStorage.setItem('dji-report-lang', next);
+  applyLang(next);
+}
+
+// Sidebar toggle (mobile)
+function toggleSidebar() {
+  document.getElementById('sidebar').classList.toggle('open');
+  document.getElementById('sidebarOverlay').classList.toggle('open');
+}
+
+// Initialize theme
+(function() {
+  const savedTheme = localStorage.getItem('dji-report-theme');
+  const savedLang = localStorage.getItem('dji-report-lang');
+  applyTheme(savedTheme || getSystemTheme());
+  if (savedLang) applyLang(savedLang);
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('dji-report-theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+})();
+
+// IntersectionObserver for fade-in animations
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
+
+// IntersectionObserver for bar animations
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bars = entry.target.querySelectorAll('.bar-fill');
+      bars.forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width') + '%';
+        }, i * 100);
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('#radarBars').forEach(el => barObserver.observe(el));
+
+// Observe appendix table bars
+const tableBarObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const bars = entry.target.querySelectorAll('.bar-fill');
+      bars.forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width') + '%';
+        }, i * 80);
+      });
+      tableBarObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('#section-10 table').forEach(el => tableBarObserver.observe(el));
+
+// Active nav link tracking
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-link');
+
+const navObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      navLinks.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+sections.forEach(section => navObserver.observe(section));
+
+// Back to top button
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  backToTop.style.opacity = window.scrollY > 500 ? '1' : '0';
+  backToTop.style.pointerEvents = window.scrollY > 500 ? 'auto' : 'none';
+});
+
+// Close sidebar on nav click (mobile)
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 1024) {
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('open');
+    }
+  });
+});
+</script>
+</body>
+</html>

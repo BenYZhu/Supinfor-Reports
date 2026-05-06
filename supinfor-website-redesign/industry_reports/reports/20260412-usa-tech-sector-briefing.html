@@ -1,0 +1,1597 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美国科技领域速览 | 2026-04-06 — 2026-04-12</title>
+<meta name="description" content="Supinfor 美国科技领域速览周报，涵盖阿尔忒弥斯II任务、AI安全、产业竞争等核心议题">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700;900&family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        serif: ['Noto Serif SC', 'serif'],
+        display: ['Playfair Display', 'serif'],
+      },
+      colors: {
+        navy: { 900: '#0a1628', 800: '#111d35', 700: '#162040', 600: '#1e2d50' },
+        electric: { 500: '#3b82f6', 600: '#2563eb', 400: '#60a5fa' },
+        gold: { 500: '#f59e0b', 600: '#d97706', 400: '#fbbf24' },
+      }
+    }
+  }
+}
+</script>
+<style>
+/* ===== BASE & THEME ===== */
+:root {
+  --bg-primary: #f8fafc; --bg-secondary: #ffffff; --bg-card: #ffffff;
+  --text-primary: #0f172a; --text-secondary: #475569; --text-muted: #64748b;
+  --accent-blue: #2563eb; --accent-gold: #d97706; --accent-blue-light: #dbeafe;
+  --glow-blue: rgba(37, 99, 235, 0.3); --glow-gold: rgba(217, 119, 6, 0.3);
+  --border-color: #e2e8f0; --card-shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --hero-overlay: rgba(248,250,252,0.85);
+}
+.dark {
+  --bg-primary: #0a1628; --bg-secondary: #111d35; --bg-card: #162040;
+  --text-primary: #e2e8f0; --text-secondary: #94a3b8; --text-muted: #64748b;
+  --accent-blue: #3b82f6; --accent-gold: #f59e0b; --accent-blue-light: rgba(59,130,246,0.15);
+  --glow-blue: rgba(59, 130, 246, 0.5); --glow-gold: rgba(245, 158, 11, 0.5);
+  --border-color: #1e3a5f; --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --hero-overlay: rgba(10,22,40,0.75);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Serif SC', serif;
+  background: var(--bg-primary); color: var(--text-primary);
+  line-height: 1.8; transition: background 0.3s, color 0.3s;
+  overflow-x: hidden;
+}
+::selection { background: var(--accent-blue); color: #fff; }
+
+/* ===== STARFIELD ===== */
+.starfield { position: absolute; inset: 0; overflow: hidden; z-index: 0; }
+.star {
+  position: absolute; border-radius: 50%; background: #fff;
+  animation: twinkle var(--dur) ease-in-out infinite alternate;
+}
+@keyframes twinkle { 0% { opacity: var(--o1); transform: scale(1); } 100% { opacity: var(--o2); transform: scale(1.3); } }
+
+/* Light mode starfield adjustments */
+:root:not(.dark) .star { background: var(--accent-blue); }
+:root:not(.dark) .starfield { opacity: 0.15; }
+
+/* ===== GLOW EFFECTS ===== */
+.glow-text {
+  text-shadow: 0 0 20px var(--glow-blue), 0 0 40px var(--glow-blue);
+}
+.dark .glow-text { text-shadow: 0 0 30px var(--glow-blue), 0 0 60px var(--glow-blue); }
+.glow-gold { text-shadow: 0 0 20px var(--glow-gold), 0 0 40px var(--glow-gold); }
+.dark .glow-gold { text-shadow: 0 0 30px var(--glow-gold), 0 0 60px var(--glow-gold); }
+
+@keyframes pulse-glow {
+  0%, 100% { filter: brightness(1); }
+  50% { filter: brightness(1.15); }
+}
+.stat-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+.reveal-left { opacity: 0; transform: translateX(-30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+.reveal-left.revealed { opacity: 1; transform: translateX(0); }
+
+/* ===== NAVIGATION ===== */
+.nav-bar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: var(--bg-secondary); border-bottom: 1px solid var(--border-color);
+  backdrop-filter: blur(12px); transition: all 0.3s;
+}
+.dark .nav-bar { background: rgba(17,29,53,0.9); }
+:root:not(.dark) .nav-bar { background: rgba(255,255,255,0.9); }
+
+/* ===== TOC SIDEBAR ===== */
+.toc-sidebar {
+  position: fixed; top: 64px; left: 0; bottom: 0; width: 280px; z-index: 90;
+  background: var(--bg-secondary); border-right: 1px solid var(--border-color);
+  transform: translateX(-100%); transition: transform 0.3s ease;
+  overflow-y: auto; padding: 1.5rem 1rem;
+}
+.toc-sidebar.open { transform: translateX(0); }
+.toc-link {
+  display: block; padding: 0.5rem 0.75rem; margin: 0.15rem 0;
+  color: var(--text-secondary); text-decoration: none; font-size: 0.875rem;
+  border-radius: 0.375rem; transition: all 0.2s; border-left: 2px solid transparent;
+}
+.toc-link:hover, .toc-link.active {
+  color: var(--accent-blue); background: var(--accent-blue-light);
+  border-left-color: var(--accent-blue);
+}
+.toc-sub { padding-left: 1rem; font-size: 0.8125rem; }
+.toc-overlay {
+  position: fixed; inset: 0; z-index: 89; background: rgba(0,0,0,0.5);
+  display: none; cursor: pointer;
+}
+.toc-overlay.open { display: block; }
+
+/* ===== CARDS ===== */
+.card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: 1rem; padding: 1.5rem; box-shadow: var(--card-shadow);
+  transition: all 0.3s ease; position: relative; overflow: hidden;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(0,0,0,0.12); }
+.dark .card:hover { box-shadow: 0 8px 32px rgba(59,130,246,0.15); }
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--accent-blue), var(--accent-gold));
+  opacity: 0; transition: opacity 0.3s;
+}
+.card:hover::before { opacity: 1; }
+
+/* ===== STAT CARDS ===== */
+.stat-card {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 1rem; padding: 1.25rem; text-align: center;
+  backdrop-filter: blur(8px); transition: all 0.3s;
+}
+.stat-card:hover { background: rgba(255,255,255,0.12); border-color: var(--accent-blue); }
+:root:not(.dark) .stat-card {
+  background: rgba(255,255,255,0.85); border-color: var(--border-color);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+
+/* ===== TIMELINE ===== */
+.timeline { position: relative; padding-left: 2rem; }
+.timeline::before {
+  content: ''; position: absolute; left: 0.5rem; top: 0; bottom: 0;
+  width: 2px; background: linear-gradient(180deg, var(--accent-blue), var(--accent-gold));
+}
+.timeline-item { position: relative; margin-bottom: 1.5rem; padding-left: 1.5rem; }
+.timeline-dot {
+  position: absolute; left: -1.75rem; top: 0.5rem; width: 12px; height: 12px;
+  border-radius: 50%; background: var(--accent-blue); border: 2px solid var(--bg-primary);
+  box-shadow: 0 0 10px var(--glow-blue);
+}
+.timeline-item:last-child .timeline-dot { background: var(--accent-gold); box-shadow: 0 0 10px var(--glow-gold); }
+
+/* ===== RISK CARDS ===== */
+.risk-card {
+  border-left: 4px solid var(--accent-gold); background: var(--bg-card);
+  border-radius: 0 1rem 1rem 0; padding: 1.5rem; margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+.risk-card:hover { border-left-color: #ef4444; }
+
+/* ===== BAR CHART ===== */
+.bar-chart-item { display: flex; align-items: center; margin-bottom: 0.5rem; gap: 0.75rem; }
+.bar-label { min-width: 160px; font-size: 0.8125rem; text-align: right; color: var(--text-secondary); white-space: nowrap; }
+.bar-track { flex: 1; height: 24px; background: var(--accent-blue-light); border-radius: 4px; overflow: hidden; position: relative; }
+.bar-fill {
+  height: 100%; border-radius: 4px; transition: width 1s ease-out;
+  background: linear-gradient(90deg, var(--accent-blue), #6366f1);
+}
+.bar-value {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%);
+  font-size: 0.75rem; font-weight: 600; color: var(--text-primary);
+}
+
+/* ===== SECTION HEADERS ===== */
+.section-header {
+  display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+  padding-bottom: 1rem; border-bottom: 2px solid var(--border-color);
+}
+.section-num {
+  font-family: 'Playfair Display', serif; font-size: 3rem; font-weight: 900;
+  color: var(--accent-blue); line-height: 1; opacity: 0.3;
+}
+.section-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); }
+
+/* ===== OPPORTUNITY CARDS ===== */
+.opp-card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: 1rem; padding: 1.5rem; position: relative; overflow: hidden;
+  transition: all 0.3s;
+}
+.opp-card:hover { border-color: var(--accent-blue); transform: translateY(-2px); }
+.opp-badge {
+  display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px;
+  font-size: 0.75rem; font-weight: 600; background: var(--accent-blue-light);
+  color: var(--accent-blue); margin-bottom: 0.75rem;
+}
+
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 80;
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--accent-blue); color: #fff; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(59,130,246,0.4);
+  opacity: 0; transform: translateY(20px); transition: all 0.3s;
+  font-size: 1.25rem;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: var(--accent-gold); box-shadow: 0 4px 16px rgba(245,158,11,0.4); }
+
+/* ===== THEME TOGGLE ===== */
+.theme-toggle {
+  background: none; border: 1px solid var(--border-color); color: var(--text-primary);
+  width: 40px; height: 40px; border-radius: 0.5rem; cursor: pointer;
+  display: flex; align-items: center; justify-content: center; font-size: 1.1rem;
+  transition: all 0.2s;
+}
+.theme-toggle:hover { background: var(--accent-blue-light); border-color: var(--accent-blue); }
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 1024px) {
+  .toc-sidebar { transform: translateX(0); }
+  .main-content, #hero { margin-left: 280px; }
+  .toc-overlay { display: none !important; }
+}
+@media (max-width: 1023px) {
+  .main-content { margin-left: 0; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .stat-grid { grid-template-columns: 1fr !important; }
+  .hero-title { font-size: 2rem !important; }
+  .section-num { font-size: 2rem; }
+  .bar-label { min-width: 100px; font-size: 0.75rem; }
+}
+
+/* ===== MISC ===== */
+.gradient-text {
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-gold));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.finding-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent-blue);
+  color: #fff; font-weight: 700; font-size: 0.875rem; flex-shrink: 0;
+}
+.indicator-box {
+  background: var(--accent-blue-light); border-radius: 0.75rem;
+  padding: 1rem 1.25rem; margin-top: 1rem; font-size: 0.875rem;
+  border-left: 3px solid var(--accent-blue);
+}
+.tag {
+  display: inline-block; padding: 0.2rem 0.6rem; border-radius: 0.375rem;
+  font-size: 0.75rem; font-weight: 600; background: var(--accent-blue-light);
+  color: var(--accent-blue);
+}
+.lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;font-size:.82rem}
+.lang-toggle button{background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:.82rem;font-weight:500;transition:all .2s}
+.lang-toggle button.active{background:var(--accent,#3b82f6);color:#0A1628;font-weight:700}
+.lang-toggle button:hover:not(.active){background:rgba(59,130,246,.2)}
+[data-lang="zh"] .lang-en{display:none!important}
+[data-lang="en"] .lang-zh{display:none!important}
+</style>
+</head>
+<body>
+<!-- ===== NAVIGATION BAR ===== -->
+<nav class="nav-bar">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button id="tocToggle" class="theme-toggle lg:hidden" aria-label="切换目录">
+        <i class="fas fa-bars"></i>
+      </button>
+      <span class="font-bold text-sm sm:text-base" style="color:var(--text-primary)">
+        <i class="fas fa-satellite-dish mr-1" style="color:var(--accent-blue)"></i>
+        <span class="lang-zh">美国科技领域速览</span><span class="lang-en">U.S. Tech Sector Express</span>
+      </span>
+      <span class="hidden sm:inline text-xs px-2 py-0.5 rounded-full" style="background:var(--accent-blue-light);color:var(--accent-blue)">2026-04-06 — 2026-04-12</span>
+    </div>
+    <div class="flex items-center gap-2">
+      <div class="lang-toggle">
+        <button onclick="setLang('zh')" class="active">中</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="切换主题">
+        <i class="fas fa-moon" id="themeIcon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ===== TOC SIDEBAR ===== -->
+<div class="toc-overlay" id="tocOverlay"></div>
+<aside class="toc-sidebar" id="tocSidebar">
+  <div class="text-xs font-bold uppercase tracking-wider mb-4" style="color:var(--accent-blue)">
+    <i class="fas fa-list-ul mr-1"></i> <span class="lang-zh">目录导航</span><span class="lang-en">Navigation</span>
+  </div>
+  <a href="#hero" class="toc-link"><i class="fas fa-rocket mr-2"></i><span class="lang-zh">概览</span><span class="lang-en">Overview</span></a>
+  <a href="#section1" class="toc-link"><i class="fas fa-crosshairs mr-2"></i><span class="lang-zh">一、本周核心发现</span><span class="lang-en">I. Key Findings</span></a>
+  <a href="#section2" class="toc-link"><i class="fas fa-microscope mr-2"></i><span class="lang-zh">二、焦点事件深度解读</span><span class="lang-en">II. Focus Events</span></a>
+  <a href="#section2-1" class="toc-link toc-sub"><span class="lang-zh">2.1 阿尔忒弥斯II任务</span><span class="lang-en">2.1 Artemis II Mission</span></a>
+  <a href="#section2-2" class="toc-link toc-sub"><span class="lang-zh">2.2 Anthropic Mythos模型</span><span class="lang-en">2.2 Anthropic Mythos Model</span></a>
+  <a href="#section2-3" class="toc-link toc-sub"><span class="lang-zh">2.3 AI产业竞争</span><span class="lang-en">2.3 AI Industry Competition</span></a>
+  <a href="#section3" class="toc-link"><i class="fas fa-radar mr-2"></i><span class="lang-zh">三、重要动态扫描</span><span class="lang-en">III. Key Developments</span></a>
+  <a href="#section3-1" class="toc-link toc-sub"><span class="lang-zh">3.1 AI技术与模型进展</span><span class="lang-en">3.1 AI Tech & Models</span></a>
+  <a href="#section3-2" class="toc-link toc-sub"><span class="lang-zh">3.2 AI基础设施与能源</span><span class="lang-en">3.2 AI Infra & Energy</span></a>
+  <a href="#section3-3" class="toc-link toc-sub"><span class="lang-zh">3.3 AI安全与网络威胁</span><span class="lang-en">3.3 AI Security & Cyber</span></a>
+  <a href="#section3-4" class="toc-link toc-sub"><span class="lang-zh">3.4 科技企业战略与资本</span><span class="lang-en">3.4 Tech Strategy & Capital</span></a>
+  <a href="#section3-5" class="toc-link toc-sub"><span class="lang-zh">3.5 AI对就业与社会影响</span><span class="lang-en">3.5 AI & Jobs/Society</span></a>
+  <a href="#section4" class="toc-link"><i class="fas fa-chart-line mr-2"></i><span class="lang-zh">四、趋势研判</span><span class="lang-en">IV. Trends</span></a>
+  <a href="#section5" class="toc-link"><i class="fas fa-exclamation-triangle mr-2"></i><span class="lang-zh">五、风险警示</span><span class="lang-en">V. Risks</span></a>
+  <a href="#section6" class="toc-link"><i class="fas fa-lightbulb mr-2"></i><span class="lang-zh">六、技术应用机会</span><span class="lang-en">VI. Opportunities</span></a>
+  <a href="#section7" class="toc-link"><i class="fas fa-calendar-alt mr-2"></i><span class="lang-zh">七、下期关注</span><span class="lang-en">VII. Upcoming</span></a>
+  <a href="#appendix" class="toc-link"><i class="fas fa-database mr-2"></i><span class="lang-zh">附录</span><span class="lang-en">Appendix</span></a>
+</aside>
+
+<!-- ===== HERO SECTION ===== -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #0a1628 0%, #111d35 50%, #162040 100%);">
+  <div class="starfield" id="starfield"></div>
+  <div class="absolute inset-0" style="background: radial-gradient(ellipse at 30% 20%, rgba(59,130,246,0.15) 0%, transparent 60%), radial-gradient(ellipse at 70% 80%, rgba(245,158,11,0.1) 0%, transparent 60%);"></div>
+  <div class="relative z-10 max-w-6xl mx-auto px-4 py-32 text-center">
+    <div class="mb-6">
+      <span class="inline-block px-4 py-1.5 rounded-full text-sm font-semibold" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3);">
+        <i class="fas fa-satellite mr-1"></i> <span class="lang-zh">Supinfor 区域国别实时监测平台 · 科技栏目</span><span class="lang-en">Supinfor Country Monitoring Platform · Tech Column</span>
+      </span>
+    </div>
+    <h1 class="hero-title font-display text-5xl md:text-7xl font-black mb-4 text-white glow-text" style="letter-spacing:-0.02em;">
+      <span class="lang-zh">美国科技领域速览</span><span class="lang-en">U.S. Tech Sector Express</span>
+    </h1>
+    <p class="text-lg md:text-xl mb-2" style="color:#94a3b8;"><span class="lang-zh">报告周期：2026-04-06 — 2026-04-12</span><span class="lang-en">Reporting Period: Apr 6 – Apr 12, 2026</span></p>
+    <p class="text-sm mb-10" style="color:#64748b;"><span class="lang-zh">数据来源：Supinfor 区域国别实时监测平台（科技栏目，737条独立资讯）</span><span class="lang-en">Source: Supinfor Country Monitoring Platform (Tech Column, 737 unique items)</span></p>
+
+    <!-- STAT CARDS -->
+    <div class="stat-grid grid grid-cols-5 gap-4 max-w-5xl mx-auto" style="grid-template-columns: repeat(5, 1fr);">
+      <div class="stat-card stat-glow">
+        <div class="text-2xl md:text-3xl font-black mb-1 glow-text" style="color:#60a5fa;">252,756</div>
+        <div class="text-xs" style="color:#94a3b8;"><span class="lang-zh">英里</span><span class="lang-en">Miles</span></div>
+        <div class="text-xs mt-1" style="color:#64748b;"><span class="lang-zh">载人飞行最远距离纪录</span><span class="lang-en">Crewed spaceflight distance record</span></div>
+      </div>
+      <div class="stat-card stat-glow">
+        <div class="text-2xl md:text-3xl font-black mb-1 glow-gold" style="color:#fbbf24;"><span class="lang-zh">$3,800亿</span><span class="lang-en">$380B</span></div>
+        <div class="text-xs" style="color:#94a3b8;"><span class="lang-zh">美元</span><span class="lang-en">USD</span></div>
+        <div class="text-xs mt-1" style="color:#64748b;"><span class="lang-zh">Anthropic最新估值</span><span class="lang-en">Anthropic latest valuation</span></div>
+      </div>
+      <div class="stat-card stat-glow">
+        <div class="text-2xl md:text-3xl font-black mb-1 glow-text" style="color:#60a5fa;"><span class="lang-zh">$2,000亿</span><span class="lang-en">$200B</span></div>
+        <div class="text-xs" style="color:#94a3b8;"><span class="lang-zh">美元</span><span class="lang-en">USD</span></div>
+        <div class="text-xs mt-1" style="color:#64748b;"><span class="lang-zh">亚马逊2026年AI资本支出</span><span class="lang-en">Amazon 2026 AI capex</span></div>
+      </div>
+      <div class="stat-card stat-glow">
+        <div class="text-2xl md:text-3xl font-black mb-1 glow-gold" style="color:#fbbf24;"><span class="lang-zh">$150亿</span><span class="lang-en">$15B</span></div>
+        <div class="text-xs" style="color:#94a3b8;"><span class="lang-zh">美元</span><span class="lang-en">USD</span></div>
+        <div class="text-xs mt-1" style="color:#64748b;"><span class="lang-zh">AWS AI服务年化营收</span><span class="lang-en">AWS AI annualized revenue</span></div>
+      </div>
+      <div class="stat-card stat-glow">
+        <div class="text-2xl md:text-3xl font-black mb-1" style="color:#f87171;">60GW</div>
+        <div class="text-xs" style="color:#94a3b8;"><span class="lang-zh">供电缺口</span><span class="lang-en">Power gap</span></div>
+        <div class="text-xs mt-1" style="color:#64748b;"><span class="lang-zh">PJM电网未来十年缺口</span><span class="lang-en">PJM grid 10-year shortfall</span></div>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <a href="#section1" class="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-semibold transition-all" style="background:rgba(59,130,246,0.2);color:#60a5fa;border:1px solid rgba(59,130,246,0.3);">
+        <span><span class="lang-zh">开始阅读</span><span class="lang-en">Start Reading</span></span> <i class="fas fa-chevron-down animate-bounce"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MAIN CONTENT ===== -->
+<main class="main-content">
+
+<!-- ===== SECTION 1: 本周核心发现 ===== -->
+<section id="section1" class="py-16 md:py-24 px-4" style="background:var(--bg-primary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">01</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-crosshairs mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">本周核心发现</span><span class="lang-en">Key Findings This Week</span></h2>
+      </div>
+    </div>
+
+    <div class="space-y-4">
+      <!-- Finding 1 -->
+      <div class="card reveal" style="transition-delay:0.1s">
+        <div class="flex gap-4">
+          <span class="finding-num">1</span>
+          <div>
+            <p class="lang-zh" style="color:var(--text-primary);line-height:1.9"><strong>阿尔忒弥斯II任务圆满完成</strong>，四名宇航员完成人类54年来首次绕月飞行并安全溅落太平洋，创下距地球252,756英里的载人飞行新纪录，NASA后续计划2027年阿尔忒弥斯III轨道对接测试、2028年阿尔忒弥斯IV载人登月。</p>
+            <p class="lang-en" style="color:var(--text-primary);line-height:1.9"><strong>Artemis II mission successfully completed.</strong> Four astronauts completed humanity's first crewed lunar flyby in 54 years and safely splashed down in the Pacific Ocean, setting a new crewed spaceflight distance record of 252,756 miles from Earth. NASA plans the Artemis III orbital docking test in 2027 and the Artemis IV crewed lunar landing in 2028.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 2 -->
+      <div class="card reveal" style="transition-delay:0.2s">
+        <div class="flex gap-4">
+          <span class="finding-num">2</span>
+          <div>
+            <p class="lang-zh" style="color:var(--text-primary);line-height:1.9"><strong>Anthropic发布Mythos模型引发AI安全风暴</strong>，该模型可自主发现软件零日漏洞，美国财长贝森特与美联储主席鲍威尔紧急召集华尔街高管商讨网络安全应对，Anthropic仅向约50家关键基础设施企业限量开放。</p>
+            <p class="lang-en" style="color:var(--text-primary);line-height:1.9"><strong>Anthropic's Mythos model release triggers AI security storm.</strong> The model can autonomously discover zero-day software vulnerabilities. U.S. Treasury Secretary Bessent and Fed Chair Powell urgently convened Wall Street executives to discuss cybersecurity responses. Anthropic limited access to approximately 50 critical infrastructure companies.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 3 -->
+      <div class="card reveal" style="transition-delay:0.3s">
+        <div class="flex gap-4">
+          <span class="finding-num">3</span>
+          <div>
+            <p class="lang-zh" style="color:var(--text-primary);line-height:1.9"><strong>AI产业竞争格局加速重塑</strong>，Anthropic企业付费客户逼近OpenAI（30% vs 35%），Meta推出Muse Spark模型重返AI竞赛，美区AI应用榜前六中四款为AI产品。</p>
+            <p class="lang-en" style="color:var(--text-primary);line-height:1.9"><strong>AI industry competitive landscape rapidly reshaping.</strong> Anthropic's enterprise paying customers are closing in on OpenAI (30% vs 35%). Meta launched the Muse Spark model to re-enter the AI race. Four of the top six apps on the U.S. app chart are now AI products.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 4 -->
+      <div class="card reveal" style="transition-delay:0.4s">
+        <div class="flex gap-4">
+          <span class="finding-num">4</span>
+          <div>
+            <p class="lang-zh" style="color:var(--text-primary);line-height:1.9"><strong>AI数据中心建设遭遇社区与立法双重阻力</strong>，缅因州通过数据中心建设临时禁令，威斯康星州波蒂奇市成为全美首个通过公投限制AI数据中心开发的地区，PJM电网预计未来十年面临60GW供电缺口。</p>
+            <p class="lang-en" style="color:var(--text-primary);line-height:1.9"><strong>AI data center construction faces dual resistance from communities and legislation.</strong> Maine passed a temporary moratorium on data center construction. Portage, Wisconsin became the first U.S. community to restrict AI data center development via public referendum. The PJM grid projects a 60GW power shortfall over the next decade.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Finding 5 -->
+      <div class="card reveal" style="transition-delay:0.5s">
+        <div class="flex gap-4">
+          <span class="finding-num">5</span>
+          <div>
+            <p class="lang-zh" style="color:var(--text-primary);line-height:1.9"><strong>AI监管压力持续升级</strong>，佛州总检察长对OpenAI启动国安与儿童安全调查，xAI起诉科罗拉多州AI反歧视法案，联邦层面首例AI深度伪造儿童色情案定罪。</p>
+            <p class="lang-en" style="color:var(--text-primary);line-height:1.9"><strong>AI regulatory pressure continues to escalate.</strong> Florida's Attorney General launched a national security and child safety investigation into OpenAI. xAI sued over Colorado's AI anti-discrimination law. The first federal conviction under AI deepfake child exploitation laws was secured.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Key Numbers -->
+    <div class="mt-10 reveal" style="transition-delay:0.6s">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--accent-gold)"><i class="fas fa-chart-bar mr-2"></i><span class="lang-zh">本期关键数字</span><span class="lang-en">Key Numbers This Issue</span></h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+        <div class="card" style="border-left:3px solid var(--accent-blue)">
+          <div class="text-2xl font-black glow-text" style="color:var(--accent-blue)"><span class="lang-zh">252,756英里</span><span class="lang-en">252,756 Miles</span></div>
+          <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary)">阿尔忒弥斯II创下的人类载人飞行最远距离纪录</p>
+          <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary)">Record-breaking crewed spaceflight distance set by Artemis II</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent-gold)">
+          <div class="text-2xl font-black glow-gold" style="color:var(--accent-gold)"><span class="lang-zh">3,800亿美元</span><span class="lang-en">$380 Billion</span></div>
+          <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary)">Anthropic最新估值，Claude Code年化收入超25亿美元</p>
+          <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary)">Anthropic's latest valuation; Claude Code annualized revenue exceeds $2.5B</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent-blue)">
+          <div class="text-2xl font-black glow-text" style="color:var(--accent-blue)"><span class="lang-zh">2,000亿美元</span><span class="lang-en">$200 Billion</span></div>
+          <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary)">亚马逊2026年计划AI基础设施资本支出</p>
+          <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary)">Amazon's planned AI infrastructure capex for 2026</p>
+        </div>
+        <div class="card" style="border-left:3px solid var(--accent-gold)">
+          <div class="text-2xl font-black glow-gold" style="color:var(--accent-gold)"><span class="lang-zh">150亿美元</span><span class="lang-en">$15 Billion</span></div>
+          <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary)">AWS AI服务年化营收，自研芯片业务年化营收超200亿美元</p>
+          <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary)">AWS AI annualized revenue; in-house chip business annualized revenue exceeds $20B</p>
+        </div>
+        <div class="card" style="border-left:3px solid #ef4444">
+          <div class="text-2xl font-black" style="color:#ef4444">60GW</div>
+          <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary)">PJM电网预计未来十年因数据中心需求面临的供电缺口</p>
+          <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary)">PJM grid's projected power shortfall over the next decade due to data center demand</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: 焦点事件深度解读 ===== -->
+<section id="section2" class="py-16 md:py-24 px-4" style="background:var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">02</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-microscope mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">焦点事件深度解读</span><span class="lang-en">In-Depth Focus Events</span></h2>
+      </div>
+    </div>
+
+    <!-- 2.1 Artemis -->
+    <article id="section2-1" class="mb-16 reveal">
+      <h3 class="text-xl font-bold mb-6" style="color:var(--text-primary)">
+        <span class="tag mr-2">2.1</span> <span class="lang-zh">阿尔忒弥斯II任务：人类重返月球的里程碑</span><span class="lang-en">Artemis II Mission: A Milestone in Humanity's Return to the Moon</span>
+      </h3>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-route mr-1"></i> <span class="lang-zh">事件脉络</span><span class="lang-en">Event Timeline</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">4月1日，NASA太空发射系统（SLS）火箭搭载猎户座飞船"Integrity"号从肯尼迪航天中心发射，搭载指挥官Reid Wiseman、飞行员Victor Glover、任务专家Christina Koch及加拿大宇航员Jeremy Hansen四人。任务历时10天，完成绕月飞行，最远距地球252,756英里，打破阿波罗13号保持56年的纪录。4月10日晚，飞船以约25,000英里时速重返大气层，在圣迭戈附近太平洋成功溅落。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">On April 1, NASA's Space Launch System (SLS) rocket carrying the Orion spacecraft "Integrity" launched from Kennedy Space Center with Commander Reid Wiseman, Pilot Victor Glover, Mission Specialist Christina Koch, and Canadian astronaut Jeremy Hansen. The 10-day mission completed a lunar flyby, reaching a maximum distance of 252,756 miles from Earth, breaking the 56-year record held by Apollo 13. On the evening of April 10, the spacecraft re-entered the atmosphere at approximately 25,000 mph and successfully splashed down in the Pacific Ocean near San Diego.</p>
+      </div>
+
+      <!-- Artemis Timeline -->
+      <div class="card mb-6">
+        <h4 class="font-bold mb-4" style="color:var(--accent-gold)"><i class="fas fa-clock mr-1"></i> <span class="lang-zh">任务时间线</span><span class="lang-en">Mission Timeline</span></h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="text-sm font-bold" style="color:var(--accent-blue)"><span class="lang-zh">2026年4月1日</span><span class="lang-en">April 1, 2026</span></div>
+            <div class="text-sm" style="color:var(--text-primary)"><span class="lang-zh">SLS火箭搭载猎户座飞船"Integrity"号从肯尼迪航天中心发射升空</span><span class="lang-en">SLS rocket carrying Orion spacecraft "Integrity" launched from Kennedy Space Center</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="text-sm font-bold" style="color:var(--accent-blue)"><span class="lang-zh">任务期间（10天）</span><span class="lang-en">During Mission (10 days)</span></div>
+            <div class="text-sm" style="color:var(--text-primary)"><span class="lang-zh">完成绕月飞行，最远距地球252,756英里，打破阿波罗13号保持56年的纪录</span><span class="lang-en">Completed lunar flyby, reaching 252,756 miles from Earth, breaking Apollo 13's 56-year record</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="text-sm font-bold" style="color:var(--accent-blue)"><span class="lang-zh">2026年4月10日</span><span class="lang-en">April 10, 2026</span></div>
+            <div class="text-sm" style="color:var(--text-primary)"><span class="lang-zh">飞船以约25,000英里时速重返大气层，在圣迭戈附近太平洋成功溅落</span><span class="lang-en">Spacecraft re-entered atmosphere at ~25,000 mph, successfully splashing down in the Pacific near San Diego</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="text-sm font-bold" style="color:var(--accent-blue)"><span class="lang-zh">2027年（计划）</span><span class="lang-en">2027 (Planned)</span></div>
+            <div class="text-sm" style="color:var(--text-primary)"><span class="lang-zh">阿尔忒弥斯III——近地轨道对接测试</span><span class="lang-en">Artemis III — Near-Earth orbit docking test</span></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot" style="background:var(--accent-gold)"></div>
+            <div class="text-sm font-bold" style="color:var(--accent-gold)"><span class="lang-zh">2028年（计划）</span><span class="lang-en">2028 (Planned)</span></div>
+            <div class="text-sm" style="color:var(--text-primary)"><span class="lang-zh">阿尔忒弥斯IV——月球南极载人着陆</span><span class="lang-en">Artemis IV — Crewed landing at the lunar south pole</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-cogs mr-1"></i> <span class="lang-zh">技术验证与风险</span><span class="lang-en">Technical Validation & Risks</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">本次任务最大技术悬念在于猎户座飞船隔热罩。2022年阿尔忒弥斯I无人试飞时，Avcoat隔热材料因透气性不足出现超100处脱落。NASA未更换隔热罩，而是调整再入轨迹，缩短极端高温暴露时间。前NASA工程师Charles Camarda公开质疑该方案如同"俄罗斯轮盘"，但最终飞船安全溅落。此外，任务期间还出现太空马桶故障和服务舱推进系统阀门泄漏，后者需大规模重新设计才能用于后续任务。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">The biggest technical concern of this mission was the Orion spacecraft's heat shield. During the unmanned Artemis I test flight in 2022, the Avcoat heat shield material experienced over 100 instances of charring and loss due to insufficient breathability. NASA chose not to replace the heat shield but instead adjusted the re-entry trajectory to reduce extreme heat exposure time. Former NASA engineer Charles Camarda publicly criticized the approach as "Russian roulette," but the spacecraft ultimately splashed down safely. Additionally, a space toilet malfunction and a service module propulsion system valve leak occurred during the mission; the latter requires major redesign before use in subsequent missions.</p>
+      </div>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-road mr-1"></i> <span class="lang-zh">后续计划与挑战</span><span class="lang-en">Future Plans & Challenges</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">NASA计划2027年执行阿尔忒弥斯III（近地轨道对接测试），2028年阿尔忒弥斯IV实现月球南极着陆。SpaceX星舰和蓝色起源Blue Moon正竞争登月舱合同。然而，白宫最新预算提案拟削减NASA科学预算近50%、总预算减少23%，波音SLS火箭单次发射成本约40亿美元远超预算，独立分析师普遍认为2028年登月目标不现实。同时，中国登月方案更简洁，美中太空竞赛压力持续。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">NASA plans to execute Artemis III (near-Earth orbit docking test) in 2027 and achieve a lunar south pole landing with Artemis IV in 2028. SpaceX's Starship and Blue Origin's Blue Moon are competing for the lunar lander contract. However, the White House's latest budget proposal seeks to cut NASA's science budget by nearly 50% and total budget by 23%. Boeing's SLS rocket costs approximately $4 billion per launch, far exceeding budget. Independent analysts widely consider the 2028 lunar landing target unrealistic. Meanwhile, China's lunar landing approach is more streamlined, maintaining pressure in the U.S.-China space race.</p>
+      </div>
+
+      <div class="card">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-chart-pie mr-1"></i> <span class="lang-zh">影响评估</span><span class="lang-en">Impact Assessment</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">阿尔忒弥斯计划带动了广泛的产业链参与——仅密歇根州就有78家实体参与供应。该州正筹建太空创新枢纽，全球太空经济预计2035年达1.8万亿美元。但NASA面临人才流失、预算削减的现实困境，商业航天公司将在后续任务中扮演更重要角色。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">The Artemis program has driven broad supply chain participation — Michigan alone has 78 entities involved. The state is building a space innovation hub, and the global space economy is projected to reach $1.8 trillion by 2035. However, NASA faces real challenges of talent attrition and budget cuts, and commercial space companies will play an increasingly important role in subsequent missions.</p>
+      </div>
+    </article>
+
+    <!-- 2.2 Anthropic Mythos -->
+    <article id="section2-2" class="mb-16 reveal">
+      <h3 class="text-xl font-bold mb-6" style="color:var(--text-primary)">
+        <span class="tag mr-2">2.2</span> <span class="lang-zh">Anthropic Mythos模型：AI网络安全的"分水岭时刻"</span><span class="lang-en">Anthropic Mythos Model: A "Watershed Moment" for AI Cybersecurity</span>
+      </h3>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-route mr-1"></i> <span class="lang-zh">事件脉络</span><span class="lang-en">Event Overview</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">Anthropic本周发布Claude Mythos Preview模型，该通用AI模型可自主发现并利用主流操作系统和浏览器的零日漏洞，在测试中找出数千个此前未被发现的严重系统漏洞（部分存在长达27年）。因能力过强，Anthropic史上首次限制产品发布，仅通过"Project Glasswing"项目向亚马逊、苹果、谷歌、英伟达等约50家关键基础设施企业限量开放。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">Anthropic released the Claude Mythos Preview model this week. This general-purpose AI model can autonomously discover and exploit zero-day vulnerabilities in mainstream operating systems and browsers, identifying thousands of previously unknown critical system vulnerabilities during testing (some existing for up to 27 years). Due to its extraordinary capabilities, Anthropic restricted a product release for the first time in its history, offering limited access only to approximately 50 critical infrastructure companies including Amazon, Apple, Google, and NVIDIA through "Project Glasswing."</p>
+      </div>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-landmark mr-1"></i> <span class="lang-zh">政府紧急响应</span><span class="lang-en">Government Emergency Response</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">美国财长Scott Bessent与美联储主席Jerome Powell在华盛顿财政部召集花旗、摩根士丹利等系统性重要银行高管闭门会议，警示Mythos及同类AI产品带来的网络安全风险。副总统JD Vance也参与了与科技企业的协调。IMF总裁格奥尔基耶娃公开表示全球暂无能力保护国际货币体系免受此类AI威胁。加拿大央行同步召集金融监管机构讨论应对。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">U.S. Treasury Secretary Scott Bessent and Fed Chair Jerome Powell convened a closed-door meeting at the Treasury Department in Washington with executives from systemically important banks including Citi and Morgan Stanley, warning of cybersecurity risks posed by Mythos and similar AI products. Vice President JD Vance also participated in coordination with tech companies. IMF Managing Director Georgieva publicly stated that the world currently lacks the capacity to protect the international monetary system from such AI threats. The Bank of Canada simultaneously convened financial regulators to discuss responses.</p>
+      </div>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-chart-line mr-1"></i> <span class="lang-zh">市场冲击</span><span class="lang-en">Market Impact</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">Mythos发布引发软件股大幅抛售，标普500软件与服务指数周跌1.6%，年内跌幅扩至26%，高盛软件股篮子单周跌5%。Palantir因Michael Burry看空叠加Mythos竞争担忧，本周跌约13%。与此同时，Anthropic企业付费客户占比快速攀升至约30%，逼近OpenAI的35%，Claude下载量同期增三倍达2,100万。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">The Mythos release triggered a major sell-off in software stocks. The S&P 500 Software & Services Index fell 1.6% for the week, extending its year-to-date decline to 26%. Goldman Sachs' software stock basket dropped 5% in a single week. Palantir fell approximately 13% this week due to Michael Burry's short position combined with Mythos competition concerns. Meanwhile, Anthropic's enterprise paying customer share rapidly climbed to approximately 30%, closing in on OpenAI's 35%, while Claude downloads tripled to 21 million during the same period.</p>
+      </div>
+
+      <div class="card">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-layer-group mr-1"></i> <span class="lang-zh">深层影响</span><span class="lang-en">Deeper Implications</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">《华盛顿邮报》评论指出，Mythos意味着具备一定编码能力的普通人即可借此攻击美国大量数字基础设施。安全业界对威胁程度分歧巨大——支持者认为其实现了多阶段漏洞利用链开发能力，质疑者则认为只是现有AI能力的升级。但无论如何，该事件已推动AI网络安全从行业议题升级为国家安全议题。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">The Washington Post commented that Mythos means ordinary people with basic coding skills could use it to attack vast swaths of America's digital infrastructure. The security community is deeply divided on the threat level — supporters believe it has achieved multi-stage exploit chain development capability, while skeptics view it as merely an upgrade of existing AI capabilities. Regardless, the event has elevated AI cybersecurity from an industry issue to a national security issue.</p>
+      </div>
+    </article>
+
+    <!-- 2.3 AI Competition -->
+    <article id="section2-3" class="reveal">
+      <h3 class="text-xl font-bold mb-6" style="color:var(--text-primary)">
+        <span class="tag mr-2">2.3</span> <span class="lang-zh">AI产业竞争：三强争霸与监管围堵</span><span class="lang-en">AI Industry Competition: Three-Way Battle & Regulatory Siege</span>
+      </h3>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-chess mr-1"></i> <span class="lang-zh">竞争格局</span><span class="lang-en">Competitive Landscape</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">本周AI产业呈现三条主线并行。其一，Meta推出Muse Spark模型（Meta Superintelligence Labs首款产品），在部分基准测试中优于OpenAI和Google Gemini顶级产品，Meta AI美区日活达峰值，iOS下载量增87%，跃居应用商店免费榜第6。其二，Anthropic凭借Claude Code（年化收入超25亿美元）和Mythos持续抢占市场，估值达3,800亿美元。其三，OpenAI面临多线压力——马斯克变更诉讼策略要求撤销其营利化转型、佛州总检察长启动国安调查、版权侵权诉讼中专家证人表现不佳被法官批评。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">Three main threads ran in parallel in the AI industry this week. First, Meta launched the Muse Spark model (the first product from Meta Superintelligence Labs), outperforming top products from OpenAI and Google Gemini in some benchmarks. Meta AI's U.S. daily active users hit a peak, iOS downloads surged 87%, and it jumped to #6 on the App Store free chart. Second, Anthropic continued to capture market share with Claude Code (annualized revenue exceeding $2.5B) and Mythos, reaching a $380B valuation. Third, OpenAI faced pressure on multiple fronts — Musk changed his litigation strategy to demand reversal of its for-profit conversion, Florida's AG launched a national security investigation, and an expert witness performed poorly in a copyright infringement lawsuit, drawing criticism from the judge.</p>
+      </div>
+
+      <div class="card mb-6">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-dollar-sign mr-1"></i> <span class="lang-zh">企业AI投资加速</span><span class="lang-en">Enterprise AI Investment Accelerates</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">亚马逊CEO贾西在股东信中披露AWS AI年化营收150亿美元，自研芯片业务年化营收超200亿美元，2026年计划投入约2,000亿美元资本支出。亚马逊还将密西西比州数据中心投资从130亿提升至250亿美元，并暗示未来可能对外销售自研AI芯片，直接挑战英伟达。CoreWeave与Anthropic达成新合作，与Meta签订210亿美元AI算力协议，与OpenAI合同总价值提升至约224亿美元。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">Amazon CEO Jassy disclosed in his shareholder letter that AWS AI annualized revenue reached $15B, in-house chip business annualized revenue exceeded $20B, and the company plans approximately $200B in capital expenditure for 2026. Amazon also increased its Mississippi data center investment from $13B to $25B and hinted at potentially selling its proprietary AI chips externally, directly challenging NVIDIA. CoreWeave reached a new partnership with Anthropic, signed a $21B AI compute agreement with Meta, and increased its total contract value with OpenAI to approximately $22.4B.</p>
+      </div>
+
+      <div class="card">
+        <h4 class="font-bold mb-3" style="color:var(--accent-blue)"><i class="fas fa-gavel mr-1"></i> <span class="lang-zh">监管围堵</span><span class="lang-en">Regulatory Siege</span></h4>
+        <p class="lang-zh" style="color:var(--text-primary);line-height:1.9">佛州总检察长以国安风险和ChatGPT关联校园枪击案为由调查OpenAI；xAI起诉科罗拉多州AI反歧视法案，称其违反第一修正案；联邦层面《取下法案》实现首例AI深度伪造儿童色情定罪；美众议院外交事务委员会拟审议至少10项芯片出口管制法案。AI企业同时面临创新竞赛和合规压力的双重夹击。</p>
+        <p class="lang-en" style="color:var(--text-primary);line-height:1.9">Florida's AG investigated OpenAI citing national security risks and ChatGPT's connection to a school shooting. xAI sued over Colorado's AI anti-discrimination law, claiming it violates the First Amendment. At the federal level, the TAKE IT DOWN Act secured the first conviction for AI deepfake child exploitation. The House Foreign Affairs Committee plans to review at least 10 chip export control bills. AI companies face the dual squeeze of innovation competition and compliance pressure.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: 重要动态扫描 ===== -->
+<section id="section3" class="py-16 md:py-24 px-4" style="background:var(--bg-primary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">03</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-satellite mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">重要动态扫描</span><span class="lang-en">Key Developments Scan</span></h2>
+      </div>
+    </div>
+
+    <!-- 3.1 AI技术与模型进展 -->
+    <div id="section3-1" class="mb-12 reveal">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--text-primary)">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold mr-2" style="background:var(--accent-blue);color:#fff;">3.1</span>
+        <span class="lang-zh">AI技术与模型进展</span><span class="lang-en">AI Tech & Model Progress</span>
+      </h3>
+      <div class="space-y-3">
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-glasses mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">苹果研发AI智能眼镜</span><span class="lang-en">Apple Developing AI Smart Glasses</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">代号N50，计划2026年底或2027年初发布，主打日常拍摄、通话功能，搭配升级Siri，已开发至少4款风格，采用醋酸纤维材质。苹果前AI主管John Giannandrea因AI战略调整即将离职。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Codenamed N50, planned for release in late 2026 or early 2027. Features everyday photography and calling functions with an upgraded Siri. At least 4 styles have been developed using cellulose acetate material. Apple's former AI chief John Giannandrea is departing due to AI strategy changes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-search mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">谷歌AI概览准确率受质疑</span><span class="lang-en">Google AI Overview Accuracy Questioned</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">Oumi分析显示Gemini 2/3准确率分别为85%/91%，按搜索量计算每分钟生成数十万错误答案，且常错误引用来源，新闻机构指责其盗用内容无补偿。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Oumi analysis shows Gemini 2/3 accuracy at 85%/91% respectively. At search volume scale, this generates hundreds of thousands of incorrect answers per minute, often with misattributed sources. News organizations accuse it of content theft without compensation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fab fa-windows mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">微软缩减Windows Copilot推送</span><span class="lang-en">Microsoft Scales Back Windows Copilot Push</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">因用户反响不佳，移除记事本、截图工具等应用中的Copilot按钮，仅保留实用AI功能。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Due to poor user reception, Copilot buttons were removed from Notepad, Snipping Tool, and other apps, retaining only practical AI features.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fab fa-apple mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">苹果下架AI vibe coding应用</span><span class="lang-en">Apple Removes AI Vibe Coding Apps</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">近一个月下架Anything、Replit、Vibecode三款应用，违规点在于应用内下载未审核代码改变核心功能。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Three apps — Anything, Replit, and Vibecode — were removed in the past month for downloading unreviewed code within the app that altered core functionality.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 AI基础设施与能源 -->
+    <div id="section3-2" class="mb-12 reveal">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--text-primary)">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold mr-2" style="background:var(--accent-blue);color:#fff;">3.2</span>
+        <span class="lang-zh">AI基础设施与能源</span><span class="lang-en">AI Infrastructure & Energy</span>
+      </h3>
+      <div class="space-y-3">
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-bolt mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">PJM电网计划新增15GW供电</span><span class="lang-en">PJM Grid Plans 15GW Power Addition</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">为应对AI算力爆发引发的电力短缺，计划2024-2027年通过双边协商匹配数据中心与新建电厂，预计未来十年缺口达60GW。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">To address power shortages triggered by the AI compute explosion, PJM plans to match data centers with new power plants through bilateral negotiations from 2024-2027. The projected shortfall over the next decade is 60GW.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-ban mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">缅因州通过数据中心建设临时禁令</span><span class="lang-en">Maine Passes Temporary Data Center Construction Ban</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">禁止至2027年11月，同时设立委员会制定防护措施，全美至少十余个州已提出类似法案。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">The ban extends until November 2027, with a committee established to develop protective measures. At least a dozen states nationwide have proposed similar legislation.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-vote-yea mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">威斯康星州波蒂奇市公投限制数据中心</span><span class="lang-en">Portage, Wisconsin Votes to Restrict Data Centers</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">以66%支持率通过，要求超1,000万美元税收优惠需经选民批准，涉及OpenAI、Oracle合作的150亿美元AI园区项目。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Passed with 66% support, requiring voter approval for tax incentives exceeding $10 million. This affects the $15B AI campus project involving OpenAI and Oracle.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-atom mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">美国核管会出台Part 53新框架</span><span class="lang-en">NRC Introduces Part 53 New Framework</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">更具技术中立性，可缩短先进核电审批至18个月内，谷歌、亚马逊、微软等已投入巨资研发先进核电技术。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">More technology-neutral, potentially shortening advanced nuclear approval to within 18 months. Google, Amazon, Microsoft, and others have invested heavily in advanced nuclear technology R&D.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.3 AI安全与网络威胁 -->
+    <div id="section3-3" class="mb-12 reveal">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--text-primary)">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold mr-2" style="background:var(--accent-blue);color:#fff;">3.3</span>
+        <span class="lang-zh">AI安全与网络威胁</span><span class="lang-en">AI Security & Cyber Threats</span>
+      </h3>
+      <div class="space-y-3">
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-shield-alt mt-1" style="color:#ef4444"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">白宫多部门协调AI网络防御</span><span class="lang-en">White House Multi-Agency AI Cyber Defense Coordination</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">国家网络总监Sean Cairncross牵头排查关键系统弱点，联合科技政策办公室、国安委协调科技与金融行业。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">National Cyber Director Sean Cairncross leads the effort to identify critical system vulnerabilities, coordinating with the Office of Science and Technology Policy and NSC across the tech and financial sectors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-user-secret mt-1" style="color:#ef4444"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">伊朗关联黑客持续威胁</span><span class="lang-en">Iran-Linked Hackers Pose Ongoing Threat</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">FBI局长Kash Patel个人邮件遭Handala Hack Team攻击，美FBI/NSA/CISA联合警告伊朗黑客已潜入美重要工业部门PLC设备，停火后网络攻击风险可能上升。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">FBI Director Kash Patel's personal email was attacked by the Handala Hack Team. FBI/NSA/CISA jointly warned that Iranian hackers have infiltrated PLC devices in critical U.S. industrial sectors. Cyber attack risks may increase post-ceasefire.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-lock mt-1" style="color:#ef4444"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">明尼苏达州温诺娜县遭勒索软件攻击</span><span class="lang-en">Minnesota's Winona County Hit by Ransomware Attack</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">州长派国民警卫队支援，关键系统中断，该州网络安全报告显示针对政府的攻击频率与复杂度均在上升。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">The governor deployed the National Guard for support. Critical systems were disrupted. The state's cybersecurity report shows increasing frequency and sophistication of attacks targeting government systems.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-robot mt-1" style="color:#ef4444"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">亲伊朗团体利用AI制作宣传meme</span><span class="lang-en">Pro-Iran Groups Use AI to Create Propaganda Memes</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">高质量英文AI动画在社交平台获海量播放，结合美国流行文化精准打击，试图在美以冲突中塑造叙事。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">High-quality English-language AI animations gained massive views on social platforms, leveraging American pop culture for targeted messaging, attempting to shape narratives in the U.S.-Israel conflict.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.4 科技企业战略与资本动态 -->
+    <div id="section3-4" class="mb-12 reveal">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--text-primary)">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold mr-2" style="background:var(--accent-blue);color:#fff;">3.4</span>
+        <span class="lang-zh">科技企业战略与资本动态</span><span class="lang-en">Tech Corporate Strategy & Capital</span>
+      </h3>
+      <div class="space-y-3">
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-rocket mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">SpaceX秘密提交IPO申请</span><span class="lang-en">SpaceX Confidentially Files for IPO</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">目标估值最高2万亿美元，募资最高750亿美元，2025年营收185亿美元但净亏损50亿美元（主因xAI整合），xAI CFO Anthony Armstrong已离职。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Targeting a valuation of up to $2 trillion and raising up to $75B. 2025 revenue was $18.5B but with a $5B net loss (mainly due to xAI integration). xAI CFO Anthony Armstrong has departed.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-microchip mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">英特尔与谷歌深化合作</span><span class="lang-en">Intel and Google Deepen Partnership</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">谷歌将使用多代英特尔Xeon芯片为AI数据中心供电，延续近30年合作，英特尔借此抢占CPU市场份额。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Google will use multiple generations of Intel Xeon chips to power AI data centers, continuing a nearly 30-year partnership. Intel leverages this to capture CPU market share.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-satellite-dish mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">亚马逊Leo卫星网络推迟至2026年中期</span><span class="lang-en">Amazon Leo Satellite Network Delayed to Mid-2026</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">原名Project Kuiper，已有达美航空、AT&amp;T等客户承诺，将成为SpaceX星链主要竞品。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Formerly Project Kuiper, with committed customers including Delta Air Lines and AT&amp;T. It will become a major competitor to SpaceX's Starlink.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-battery-quarter mt-1" style="color:var(--accent-gold)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">电池回收初创Ascend Elements申请破产</span><span class="lang-en">Battery Recycling Startup Ascend Elements Files for Bankruptcy</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">曾募资超11亿美元，拜登政府3.16亿美元拨款被取消，气候科技投资多数流向地热、核能等少数领域。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Previously raised over $1.1B. The Biden administration's $316M grant was canceled. Climate tech investment is mostly flowing to a few sectors like geothermal and nuclear energy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.5 AI对就业与社会的影响 -->
+    <div id="section3-5" class="reveal">
+      <h3 class="text-lg font-bold mb-4" style="color:var(--text-primary)">
+        <span class="inline-flex items-center justify-center w-7 h-7 rounded-lg text-xs font-bold mr-2" style="background:var(--accent-blue);color:#fff;">3.5</span>
+        <span class="lang-zh">AI对就业与社会的影响</span><span class="lang-en">AI Impact on Jobs & Society</span>
+      </h3>
+      <div class="space-y-3">
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-briefcase mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">AI正在阻碍新岗位诞生而非摧毁现有岗位</span><span class="lang-en">AI Is Hindering New Job Creation Rather Than Destroying Existing Jobs</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">高盛研究显示AI每月净减约1.6万个岗位，主要影响经验不足的求职者，美国人对就业前景的悲观程度超2020年疫情峰值。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Goldman Sachs research shows AI is eliminating a net ~16,000 jobs per month, primarily affecting less experienced job seekers. American pessimism about employment prospects exceeds the 2020 pandemic peak.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-users mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">Z世代对AI好感度下滑</span><span class="lang-en">Gen Z's Favorability Toward AI Declines</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">盖洛普调研显示对AI抱有希望的受访者从27%降至18%，近半数职场年轻人认为AI风险大于收益。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Gallup research shows respondents hopeful about AI dropped from 27% to 18%. Nearly half of young workers believe AI risks outweigh benefits.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-robot mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">人形机器人进入汽配工厂</span><span class="lang-en">Humanoid Robots Enter Auto Parts Factories</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">南卡罗来纳州舍弗勒工厂使用人形机器人完成部分手工工作，企业称不会取代员工而是调配至其他岗位。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Schaeffler's South Carolina factory uses humanoid robots for some manual tasks. The company says it won't replace workers but reassign them to other positions.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex gap-3 items-start">
+            <i class="fas fa-car mt-1" style="color:var(--accent-blue)"></i>
+            <div>
+              <strong style="color:var(--text-primary)"><span class="lang-zh">Waymo与Waze合作检测路面坑洼</span><span class="lang-en">Waymo Partners with Waze to Detect Potholes</span></strong>
+              <p class="text-sm mt-1 lang-zh" style="color:var(--text-secondary);line-height:1.8">利用自动驾驶车队传感器数据，首批覆盖5城，已识别500处待修坑洼。</p>
+              <p class="text-sm mt-1 lang-en" style="color:var(--text-secondary);line-height:1.8">Using autonomous fleet sensor data, initially covering 5 cities, with 500 potholes identified for repair.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: 趋势研判 ===== -->
+<section id="section4" class="py-16 md:py-24 px-4" style="background:var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">04</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-chart-line mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">趋势研判</span><span class="lang-en">Trend Assessment</span></h2>
+      </div>
+    </div>
+
+    <div class="space-y-6">
+      <!-- Trend 1 -->
+      <div class="card reveal" style="transition-delay:0.1s">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold" style="background:var(--accent-blue);color:#fff;">1</span>
+          <h3 class="font-bold" style="color:var(--text-primary)"><span class="lang-zh">AI能力跃升正将网络安全从行业议题推升为国家安全议题</span><span class="lang-en">AI Capability Leap Is Elevating Cybersecurity from Industry Issue to National Security Issue</span></h3>
+        </div>
+        <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">Anthropic Mythos模型的发布标志着AI在网络攻防领域的能力出现质变——从辅助人类发现漏洞到自主完成多阶段漏洞利用链开发。美国财长、美联储主席亲自召集银行高管应对，IMF总裁公开警告全球金融体系防护不足，这在AI发展史上前所未有。2023年拜登政府首次将AI认定为金融稳定潜在风险，如今这一风险已从理论变为现实。未来AI安全将成为金融监管、国防政策和国际合作的核心议题。</p>
+        <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">The release of Anthropic's Mythos model marks a qualitative shift in AI's capabilities in cyber offense and defense — from assisting humans in finding vulnerabilities to autonomously developing multi-stage exploit chains. The U.S. Treasury Secretary and Fed Chair personally convened bank executives, and the IMF Managing Director publicly warned of inadequate global financial system protection — unprecedented in AI history. In 2023, the Biden administration first identified AI as a potential financial stability risk; that risk has now moved from theory to reality. AI security will become a core issue in financial regulation, defense policy, and international cooperation.</p>
+        <div class="indicator-box">
+          <strong style="color:var(--accent-blue)"><i class="fas fa-eye mr-1"></i> <span class="lang-zh">关键观察指标：</span><span class="lang-en">Key Indicators:</span></strong>
+          <span class="lang-zh" style="color:var(--text-secondary)">Mythos模型的正式发布范围扩展节奏；Project Glasswing参与企业数量变化；各国央行和金融监管机构的AI安全政策出台情况。</span>
+          <span class="lang-en" style="color:var(--text-secondary)">Pace of Mythos model's official release expansion; changes in Project Glasswing participant count; AI security policy developments from central banks and financial regulators worldwide.</span>
+        </div>
+      </div>
+
+      <!-- Trend 2 -->
+      <div class="card reveal" style="transition-delay:0.2s">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold" style="background:var(--accent-blue);color:#fff;">2</span>
+          <h3 class="font-bold" style="color:var(--text-primary)"><span class="lang-zh">AI基础设施建设正遭遇"社区否决权"浪潮</span><span class="lang-en">AI Infrastructure Construction Faces a Wave of "Community Vetoes"</span></h3>
+        </div>
+        <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">从缅因州立法禁令到威斯康星州公投限制，再到全美十余个州的类似提案，AI数据中心建设正面临系统性的社区阻力。核心矛盾在于：科技企业需要大规模算力扩张，但数据中心的高能耗（PJM预计未来十年缺口60GW）和对社区电价、环境的影响引发广泛反对。这一趋势可能推迟AI基础设施部署节奏，倒逼企业转向自备电力方案和先进核电等替代能源。</p>
+        <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">From Maine's legislative ban to Wisconsin's referendum restrictions to similar proposals in over a dozen states, AI data center construction faces systematic community resistance. The core conflict: tech companies need massive compute expansion, but data centers' high energy consumption (PJM projects a 60GW shortfall over the next decade) and impact on community electricity prices and the environment have triggered widespread opposition. This trend may delay AI infrastructure deployment and force companies toward self-supplied power solutions and alternative energy sources like advanced nuclear.</p>
+        <div class="indicator-box">
+          <strong style="color:var(--accent-blue)"><i class="fas fa-eye mr-1"></i> <span class="lang-zh">关键观察指标：</span><span class="lang-en">Key Indicators:</span></strong>
+          <span class="lang-zh" style="color:var(--text-secondary)">各州数据中心相关立法进展；PJM 5月底供电方案投票结果；先进核电Part 53框架下的审批申请数量。</span>
+          <span class="lang-en" style="color:var(--text-secondary)">State-level data center legislation progress; PJM late-May power supply plan vote results; number of approval applications under the advanced nuclear Part 53 framework.</span>
+        </div>
+      </div>
+
+      <!-- Trend 3 -->
+      <div class="card reveal" style="transition-delay:0.3s">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold" style="background:var(--accent-blue);color:#fff;">3</span>
+          <h3 class="font-bold" style="color:var(--text-primary)"><span class="lang-zh">AI企业竞争从模型能力转向生态控制</span><span class="lang-en">AI Competition Shifts from Model Capability to Ecosystem Control</span></h3>
+        </div>
+        <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">本周数据清晰显示，AI竞争已从单纯的模型性能比拼转向全栈生态控制。亚马逊计划对外销售自研AI芯片直接挑战英伟达，同时AWS AI营收达150亿美元；Meta通过Muse Spark+社交平台分发构建闭环；Anthropic凭借Claude Code切入开发者工作流。CoreWeave同时服务Meta（210亿美元）、OpenAI（224亿美元）和Anthropic，成为AI算力的关键中间层。控制芯片、算力、模型、分发渠道的全栈能力正成为竞争壁垒。</p>
+        <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">This week's data clearly shows AI competition has shifted from pure model performance benchmarking to full-stack ecosystem control. Amazon plans to sell proprietary AI chips externally, directly challenging NVIDIA, while AWS AI revenue reaches $15B. Meta builds a closed loop through Muse Spark + social platform distribution. Anthropic enters developer workflows via Claude Code. CoreWeave simultaneously serves Meta ($21B), OpenAI ($22.4B), and Anthropic, becoming a critical middleware layer for AI compute. Full-stack control over chips, compute, models, and distribution channels is becoming the competitive moat.</p>
+        <div class="indicator-box">
+          <strong style="color:var(--accent-blue)"><i class="fas fa-eye mr-1"></i> <span class="lang-zh">关键观察指标：</span><span class="lang-en">Key Indicators:</span></strong>
+          <span class="lang-zh" style="color:var(--text-secondary)">亚马逊自研芯片对外销售时间表；Meta AI月活增长与变现进展；CoreWeave IPO后的客户集中度变化。</span>
+          <span class="lang-en" style="color:var(--text-secondary)">Amazon's proprietary chip external sales timeline; Meta AI MAU growth and monetization progress; CoreWeave post-IPO customer concentration changes.</span>
+        </div>
+      </div>
+
+      <!-- Trend 4 -->
+      <div class="card reveal" style="transition-delay:0.4s">
+        <div class="flex items-center gap-2 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full text-sm font-bold" style="background:var(--accent-blue);color:#fff;">4</span>
+          <h3 class="font-bold" style="color:var(--text-primary)"><span class="lang-zh">AI监管呈现"联邦-州"博弈加剧态势</span><span class="lang-en">AI Regulation Shows Intensifying Federal-State Tensions</span></h3>
+        </div>
+        <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">佛州调查OpenAI、xAI起诉科州AI法案、联邦首例深度伪造定罪——三条线索指向同一趋势：美国AI监管正在联邦与州之间形成拉锯。特朗普政府主张宽松联邦框架，反对各州单独监管；但各州在儿童安全、算法歧视等领域积极立法。这种碎片化监管环境增加了AI企业的合规成本和不确定性，尤其对正筹备IPO的OpenAI构成额外压力。</p>
+        <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">Florida investigating OpenAI, xAI suing over Colorado's AI law, the first federal deepfake conviction — three threads point to the same trend: U.S. AI regulation is caught in a tug-of-war between federal and state levels. The Trump administration advocates a loose federal framework opposing individual state regulation, but states are actively legislating on child safety, algorithmic discrimination, and other areas. This fragmented regulatory environment increases compliance costs and uncertainty for AI companies, particularly adding pressure on OpenAI as it prepares for its IPO.</p>
+        <div class="indicator-box">
+          <strong style="color:var(--accent-blue)"><i class="fas fa-eye mr-1"></i> <span class="lang-zh">关键观察指标：</span><span class="lang-en">Key Indicators:</span></strong>
+          <span class="lang-zh" style="color:var(--text-secondary)">科罗拉多州AI法案6月30日生效前的司法裁决；佛州对OpenAI传票的具体内容；众议院4月22日芯片出口管制法案审议结果。</span>
+          <span class="lang-en" style="color:var(--text-secondary)">Judicial rulings before Colorado's AI law takes effect on June 30; specific content of Florida's subpoena to OpenAI; House April 22 chip export control bill review results.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: 风险警示 ===== -->
+<section id="section5" class="py-16 md:py-24 px-4" style="background:var(--bg-primary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">05</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-exclamation-triangle mr-2" style="color:var(--accent-gold)"></i><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2>
+      </div>
+    </div>
+
+    <!-- Risk 1 -->
+    <div class="risk-card reveal" style="transition-delay:0.1s">
+      <h3 class="font-bold mb-3" style="color:var(--text-primary)">
+        <span style="color:var(--accent-gold)">⚠️ <span class="lang-zh">风险一：</span><span class="lang-en">Risk 1:</span></span><span class="lang-zh">AI驱动的网络攻击能力扩散可能引发系统性金融风险</span><span class="lang-en">Proliferation of AI-Driven Cyber Attack Capabilities May Trigger Systemic Financial Risk</span>
+      </h3>
+      <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">Anthropic Mythos模型证明AI可自主发现并利用零日漏洞，且该能力将随模型迭代持续增强。尽管Anthropic采取限量发布策略，但AI能力扩散的趋势不可逆——OpenAI等竞品也将推出类似工具。伊朗关联黑客已在利用AI加速攻击，美FBI/NSA/CISA联合警告其已潜入工业控制系统。金融系统、能源基础设施和政府网络面临前所未有的攻击面扩大风险。</p>
+      <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">Anthropic's Mythos model proves AI can autonomously discover and exploit zero-day vulnerabilities, and this capability will continue to strengthen with model iterations. Despite Anthropic's limited release strategy, the trend of AI capability proliferation is irreversible — competitors like OpenAI will also release similar tools. Iran-linked hackers are already using AI to accelerate attacks, and FBI/NSA/CISA have jointly warned they have infiltrated industrial control systems. Financial systems, energy infrastructure, and government networks face unprecedented expansion of attack surfaces.</p>
+      <div class="indicator-box" style="border-left-color:var(--accent-gold)">
+        <strong style="color:var(--accent-gold)"><i class="fas fa-binoculars mr-1"></i> <span class="lang-zh">关注指标：</span><span class="lang-en">Watch Indicators:</span></strong>
+        <span class="lang-zh" style="color:var(--text-secondary)">Anthropic及竞品AI安全模型的发布节奏；美CISA关键基础设施安全公告频率；金融机构网络安全事件报告数量。</span>
+        <span class="lang-en" style="color:var(--text-secondary)">Release pace of Anthropic and competitor AI security models; frequency of CISA critical infrastructure security advisories; number of cybersecurity incident reports from financial institutions.</span>
+      </div>
+    </div>
+
+    <!-- Risk 2 -->
+    <div class="risk-card reveal" style="transition-delay:0.2s">
+      <h3 class="font-bold mb-3" style="color:var(--text-primary)">
+        <span style="color:var(--accent-gold)">⚠️ <span class="lang-zh">风险二：</span><span class="lang-en">Risk 2:</span></span><span class="lang-zh">AI基础设施电力缺口可能制约美国AI产业发展速度</span><span class="lang-en">AI Infrastructure Power Gap May Constrain U.S. AI Industry Growth</span>
+      </h3>
+      <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">PJM电网预计2027年夏季出现多GW供电缺口，未来十年缺口或达60GW（相当于60座大型核反应堆）。同时社区抵制和立法限制正在收紧数据中心选址空间。亚马逊、Meta等企业2026年合计资本支出超3,000亿美元，但电力供应可能成为瓶颈。若电力问题无法解决，美国AI算力扩张将被迫放缓，可能在与中国的AI竞赛中失去基础设施优势。</p>
+      <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">The PJM grid projects a multi-GW power shortfall by summer 2027, potentially reaching 60GW over the next decade (equivalent to 60 large nuclear reactors). Community resistance and legislative restrictions are simultaneously tightening data center siting options. Amazon, Meta, and other companies plan combined capex exceeding $300B in 2026, but power supply may become the bottleneck. If power issues remain unresolved, U.S. AI compute expansion will be forced to slow, potentially losing infrastructure advantage in the AI race with China.</p>
+      <div class="indicator-box" style="border-left-color:var(--accent-gold)">
+        <strong style="color:var(--accent-gold)"><i class="fas fa-binoculars mr-1"></i> <span class="lang-zh">关注指标：</span><span class="lang-en">Watch Indicators:</span></strong>
+        <span class="lang-zh" style="color:var(--text-secondary)">PJM 6月FERC审批结果；各州数据中心禁令/限制法案进展；科技企业自备电力项目（核电、天然气）的审批进度。</span>
+        <span class="lang-en" style="color:var(--text-secondary)">PJM June FERC approval results; state-level data center ban/restriction legislation progress; approval progress of tech companies' self-supplied power projects (nuclear, natural gas).</span>
+      </div>
+    </div>
+
+    <!-- Risk 3 -->
+    <div class="risk-card reveal" style="transition-delay:0.3s">
+      <h3 class="font-bold mb-3" style="color:var(--text-primary)">
+        <span style="color:var(--accent-gold)">⚠️ <span class="lang-zh">风险三：</span><span class="lang-en">Risk 3:</span></span><span class="lang-zh">碎片化AI监管环境增加企业合规不确定性</span><span class="lang-en">Fragmented AI Regulatory Environment Increases Corporate Compliance Uncertainty</span>
+      </h3>
+      <p class="lang-zh" style="color:var(--text-secondary);line-height:1.9">佛州调查OpenAI、科州AI反歧视法案、联邦深度伪造立法、众议院芯片出口管制——多条监管线索同时推进，且联邦与州之间缺乏协调。对于正筹备IPO的OpenAI（目标估值最高1万亿美元）和刚完成巨额融资的Anthropic，监管不确定性直接影响估值和业务规划。马斯克变更对OpenAI的诉讼策略（要求撤销营利化转型）更增添了行业治理的不确定性。</p>
+      <p class="lang-en" style="color:var(--text-secondary);line-height:1.9">Florida investigating OpenAI, Colorado's AI anti-discrimination law, federal deepfake legislation, House chip export controls — multiple regulatory threads advancing simultaneously with little federal-state coordination. For OpenAI (targeting up to $1T valuation for its IPO) and Anthropic (having just completed massive fundraising), regulatory uncertainty directly impacts valuations and business planning. Musk's changed litigation strategy against OpenAI (demanding reversal of its for-profit conversion) adds further governance uncertainty to the industry.</p>
+      <div class="indicator-box" style="border-left-color:var(--accent-gold)">
+        <strong style="color:var(--accent-gold)"><i class="fas fa-binoculars mr-1"></i> <span class="lang-zh">关注指标：</span><span class="lang-en">Watch Indicators:</span></strong>
+        <span class="lang-zh" style="color:var(--text-secondary)">OpenAI IPO时间表及监管审查进展；科州AI法案司法裁决；联邦层面AI统一监管框架的立法动向。</span>
+        <span class="lang-en" style="color:var(--text-secondary)">OpenAI IPO timeline and regulatory review progress; Colorado AI law judicial rulings; federal-level unified AI regulatory framework legislative developments.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: 技术应用机会 ===== -->
+<section id="section6" class="py-16 md:py-24 px-4" style="background:var(--bg-secondary);">
+  <div class="max-w-5xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">06</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-lightbulb mr-2" style="color:var(--accent-gold)"></i><span class="lang-zh">技术应用机会</span><span class="lang-en">Tech Application Opportunities</span></h2>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <!-- Opportunity 1 -->
+      <div class="opp-card reveal" style="transition-delay:0.05s">
+        <span class="opp-badge"><i class="fas fa-shield-alt mr-1"></i> <span class="lang-zh">AI网络安全防御</span><span class="lang-en">AI Cybersecurity Defense</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">Mythos推动防御需求爆发，Project Glasswing联合50家企业</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Mythos drives explosive defense demand; Project Glasswing unites 50 companies</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">白宫多部门协调，金融监管推动</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">White House multi-agency coordination, financial regulatory push</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026年下半年需求集中释放</span><span class="lang-en">Demand surge expected H2 2026</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 2 -->
+      <div class="opp-card reveal" style="transition-delay:0.1s">
+        <span class="opp-badge"><i class="fas fa-atom mr-1"></i> <span class="lang-zh">先进核电/数据中心能源</span><span class="lang-en">Advanced Nuclear/Data Center Energy</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">Part 53新框架缩短审批至18个月，谷歌/亚马逊/微软已投入</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Part 53 framework shortens approval to 18 months; Google/Amazon/Microsoft already investing</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">核管会新规支持，数据中心电力缺口倒逼</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">NRC new regulations support; data center power gap drives urgency</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026-2028年项目审批窗口</span><span class="lang-en">2026-2028 project approval window</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 3 -->
+      <div class="opp-card reveal" style="transition-delay:0.15s">
+        <span class="opp-badge"><i class="fas fa-microchip mr-1"></i> <span class="lang-zh">AI芯片自研与供应链</span><span class="lang-en">AI Chip R&D & Supply Chain</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">亚马逊暗示对外销售自研芯片，英特尔与谷歌深化合作</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Amazon hints at selling proprietary chips externally; Intel deepens Google partnership</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">AWS芯片业务年化200亿美元，英伟达替代需求</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">AWS chip business annualized at $20B; NVIDIA substitution demand</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026-2027年供应链重构期</span><span class="lang-en">2026-2027 supply chain restructuring</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 4 -->
+      <div class="opp-card reveal" style="transition-delay:0.2s">
+        <span class="opp-badge"><i class="fas fa-rocket mr-1"></i> <span class="lang-zh">太空产业链</span><span class="lang-en">Space Industry Chain</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">阿尔忒弥斯计划带动广泛供应链，全球太空经济2035年达1.8万亿</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Artemis program drives broad supply chain; global space economy projected at $1.8T by 2035</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">NASA后续任务、商业航天合同</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">NASA follow-up missions, commercial space contracts</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026-2028年任务密集期</span><span class="lang-en">2026-2028 mission-intensive period</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 5 -->
+      <div class="opp-card reveal" style="transition-delay:0.25s">
+        <span class="opp-badge"><i class="fas fa-car mr-1"></i> <span class="lang-zh">自动驾驶城市服务</span><span class="lang-en">Autonomous Driving Urban Services</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">Waymo与Waze合作路面检测，配送机器人扩张</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Waymo-Waze road surface detection partnership; delivery robot expansion</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">城市基础设施数据需求，Uber平台整合</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Urban infrastructure data demand; Uber platform integration</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">已启动试点，2026年扩展</span><span class="lang-en">Pilots launched, expanding in 2026</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 6 -->
+      <div class="opp-card reveal" style="transition-delay:0.3s">
+        <span class="opp-badge"><i class="fas fa-balance-scale mr-1"></i> <span class="lang-zh">AI合规与治理工具</span><span class="lang-en">AI Compliance & Governance Tools</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">多州AI立法推动企业合规需求，儿童安全审查趋严</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Multi-state AI legislation drives enterprise compliance demand; child safety reviews tightening</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">联邦/州双层监管框架形成中</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Federal/state dual-layer regulatory framework taking shape</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026年下半年需求上升</span><span class="lang-en">Demand rising H2 2026</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 7 -->
+      <div class="opp-card reveal" style="transition-delay:0.35s">
+        <span class="opp-badge"><i class="fas fa-fighter-jet mr-1"></i> <span class="lang-zh">军事AI与国防科技</span><span class="lang-en">Military AI & Defense Tech</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">Palantir Maven系统获正式项目地位，AI融入作战体系</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Palantir Maven system gains official program status; AI integrated into combat systems</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">五角大楼合同，特朗普政府国防AI政策</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Pentagon contracts; Trump administration defense AI policy</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">持续性机会</span><span class="lang-en">Ongoing opportunity</span></span>
+        </div>
+      </div>
+
+      <!-- Opportunity 8 -->
+      <div class="opp-card reveal" style="transition-delay:0.4s">
+        <span class="opp-badge"><i class="fas fa-satellite mr-1"></i> <span class="lang-zh">卫星互联网</span><span class="lang-en">Satellite Internet</span></span>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">机会信号</span><span class="lang-en">Opportunity Signal</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">亚马逊Leo计划2026年中期上线，达美/AT&amp;T等已签约</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Amazon Leo planned for mid-2026 launch; Delta/AT&amp;T and others already signed</p>
+        <h4 class="font-bold mb-2" style="color:var(--text-primary)"><span class="lang-zh">政策/资金支撑</span><span class="lang-en">Policy/Funding Support</span></h4>
+        <p class="text-sm mb-3 lang-zh" style="color:var(--text-secondary);line-height:1.8">亚马逊资本支持，FCC许可</p>
+        <p class="text-sm mb-3 lang-en" style="color:var(--text-secondary);line-height:1.8">Amazon capital backing; FCC licensing</p>
+        <div class="flex items-center gap-2 mt-auto">
+          <i class="fas fa-clock text-xs" style="color:var(--accent-gold)"></i>
+          <span class="text-xs font-semibold" style="color:var(--accent-gold)"><span class="lang-zh">2026年中期发射窗口</span><span class="lang-en">Mid-2026 launch window</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: 下期关注 ===== -->
+<section id="section7" class="py-16 md:py-24 px-4" style="background:var(--bg-primary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num">07</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-calendar-alt mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">下期关注</span><span class="lang-en">Upcoming Watch</span></h2>
+      </div>
+    </div>
+
+    <div class="timeline reveal">
+      <!-- Item 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <div class="text-sm font-bold mb-1" style="color:var(--accent-blue)">
+            <i class="fas fa-calendar-day mr-1"></i> <span class="lang-zh">4月22日</span><span class="lang-en">April 22</span>
+          </div>
+          <p class="text-sm lang-zh" style="color:var(--text-primary);line-height:1.8">美众议院外交事务委员会审议至少10项芯片出口管制法案（含STRIDE Act、MATCH Act），可能扩大对华芯片设备出口限制，影响ASML等企业。</p>
+          <p class="text-sm lang-en" style="color:var(--text-primary);line-height:1.8">U.S. House Foreign Affairs Committee reviews at least 10 chip export control bills (including STRIDE Act, MATCH Act), potentially expanding chip equipment export restrictions to China, affecting companies like ASML.</p>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <div class="text-sm font-bold mb-1" style="color:var(--accent-blue)">
+            <i class="fas fa-calendar-day mr-1"></i> <span class="lang-zh">5月11日</span><span class="lang-en">May 11</span>
+          </div>
+          <p class="text-sm lang-zh" style="color:var(--text-primary);line-height:1.8">Palantir发布2026财年一季报，市场预期营收15.4亿美元（同比增74.2%），将检验AI竞争加剧下的增长韧性。</p>
+          <p class="text-sm lang-en" style="color:var(--text-primary);line-height:1.8">Palantir releases FY2026 Q1 earnings. Market expects revenue of $1.54B (up 74.2% YoY), testing growth resilience amid intensifying AI competition.</p>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <div class="text-sm font-bold mb-1" style="color:var(--accent-blue)">
+            <i class="fas fa-calendar-day mr-1"></i> <span class="lang-zh">5月底</span><span class="lang-en">Late May</span>
+          </div>
+          <p class="text-sm lang-zh" style="color:var(--text-primary);line-height:1.8">PJM电网15GW新增供电方案投票，6月初提交FERC审批，直接影响美东数据中心扩张节奏。</p>
+          <p class="text-sm lang-en" style="color:var(--text-primary);line-height:1.8">PJM grid votes on 15GW power addition plan, submitting to FERC for approval in early June. Directly impacts the pace of data center expansion in the eastern U.S.</p>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="card">
+          <div class="text-sm font-bold mb-1" style="color:var(--accent-blue)">
+            <i class="fas fa-calendar-day mr-1"></i> <span class="lang-zh">6月30日前</span><span class="lang-en">Before June 30</span>
+          </div>
+          <p class="text-sm lang-zh" style="color:var(--text-primary);line-height:1.8">科罗拉多州AI反歧视法案生效日，xAI诉讼的司法裁决将影响全美AI监管走向。</p>
+          <p class="text-sm lang-en" style="color:var(--text-primary);line-height:1.8">Colorado's AI anti-discrimination law takes effect. The judicial ruling on xAI's lawsuit will influence the direction of AI regulation nationwide.</p>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:var(--accent-gold);box-shadow:0 0 10px var(--glow-gold)"></div>
+        <div class="card">
+          <div class="text-sm font-bold mb-1" style="color:var(--accent-gold)">
+            <i class="fas fa-calendar-day mr-1"></i> <span class="lang-zh">2026年6月</span><span class="lang-en">June 2026</span>
+          </div>
+          <p class="text-sm lang-zh" style="color:var(--text-primary);line-height:1.8">SpaceX最早IPO窗口，目标估值2万亿美元，将成为年度最大科技IPO事件。</p>
+          <p class="text-sm lang-en" style="color:var(--text-primary);line-height:1.8">SpaceX's earliest IPO window, targeting a $2 trillion valuation. Set to become the year's largest tech IPO event.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== APPENDIX ===== -->
+<section id="appendix" class="py-16 md:py-24 px-4" style="background:var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto">
+    <div class="section-header reveal-left">
+      <span class="section-num" style="font-size:2rem">附</span>
+      <div>
+        <h2 class="section-title"><i class="fas fa-database mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">附录</span><span class="lang-en">Appendix</span></h2>
+      </div>
+    </div>
+
+    <!-- Data Statistics -->
+    <div class="card mb-8 reveal">
+      <h3 class="font-bold mb-4" style="color:var(--text-primary)"><i class="fas fa-table mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">数据统计</span><span class="lang-en">Data Statistics</span></h3>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm" style="border-collapse:collapse">
+          <thead>
+            <tr style="border-bottom:2px solid var(--border-color)">
+              <th class="text-left py-3 px-4 font-bold" style="color:var(--text-primary)"><span class="lang-zh">栏目</span><span class="lang-en">Column</span></th>
+              <th class="text-left py-3 px-4 font-bold" style="color:var(--text-primary)"><span class="lang-zh">命中数量</span><span class="lang-en">Hit Count</span></th>
+              <th class="text-left py-3 px-4 font-bold" style="color:var(--text-primary)"><span class="lang-zh">占比</span><span class="lang-en">Share</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--border-color)">
+              <td class="py-3 px-4" style="color:var(--text-primary)"><span class="lang-zh">科技</span><span class="lang-en">Technology</span></td>
+              <td class="py-3 px-4" style="color:var(--accent-blue);font-weight:700">739</td>
+              <td class="py-3 px-4" style="color:var(--accent-gold);font-weight:700">100%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="text-sm mt-4 px-4 py-2 rounded-lg" style="background:var(--accent-blue-light);color:var(--text-secondary)">
+        <i class="fas fa-info-circle mr-1" style="color:var(--accent-blue)"></i> <span class="lang-zh">去重后有效资讯：737条</span><span class="lang-en">Effective items after deduplication: 737</span>
+      </p>
+    </div>
+
+    <!-- Media Sources Bar Chart -->
+    <div class="card reveal">
+      <h3 class="font-bold mb-6" style="color:var(--text-primary)"><i class="fas fa-chart-bar mr-2" style="color:var(--accent-blue)"></i><span class="lang-zh">主要信源分布</span><span class="lang-en">Major Source Distribution</span></h3>
+
+      <div class="space-y-2" id="mediaChart">
+        <!-- CBS NEWS -->
+        <div class="bar-chart-item">
+          <span class="bar-label">CBS NEWS</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="100" style="width:0%"></div>
+            <span class="bar-value">~120+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国主流电视新闻</span><span class="lang-en">U.S. mainstream TV news</span></span>
+        </div>
+        <!-- NBC News -->
+        <div class="bar-chart-item">
+          <span class="bar-label">NBC News</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="33" style="width:0%"></div>
+            <span class="bar-value">~40+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国主流电视新闻</span><span class="lang-en">U.S. mainstream TV news</span></span>
+        </div>
+        <!-- Bloomberg -->
+        <div class="bar-chart-item">
+          <span class="bar-label">Bloomberg</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="21" style="width:0%"></div>
+            <span class="bar-value">~25+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">国际财经媒体</span><span class="lang-en">Intl. financial media</span></span>
+        </div>
+        <!-- USA TODAY -->
+        <div class="bar-chart-item">
+          <span class="bar-label">USA TODAY</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="21" style="width:0%"></div>
+            <span class="bar-value">~25+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国大众媒体</span><span class="lang-en">U.S. mass media</span></span>
+        </div>
+        <!-- New York Post -->
+        <div class="bar-chart-item">
+          <span class="bar-label">New York Post</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="17" style="width:0%"></div>
+            <span class="bar-value">~20+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国大众媒体</span><span class="lang-en">U.S. mass media</span></span>
+        </div>
+        <!-- Fortune -->
+        <div class="bar-chart-item">
+          <span class="bar-label">Fortune</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="17" style="width:0%"></div>
+            <span class="bar-value">~20+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国商业媒体</span><span class="lang-en">U.S. business media</span></span>
+        </div>
+        <!-- CNBC -->
+        <div class="bar-chart-item">
+          <span class="bar-label">CNBC</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="13" style="width:0%"></div>
+            <span class="bar-value">~15+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国财经媒体</span><span class="lang-en">U.S. financial media</span></span>
+        </div>
+        <!-- AP -->
+        <div class="bar-chart-item">
+          <span class="bar-label">AP</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="13" style="width:0%"></div>
+            <span class="bar-value">~15+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">国际通讯社</span><span class="lang-en">Intl. news agency</span></span>
+        </div>
+        <!-- CNN -->
+        <div class="bar-chart-item">
+          <span class="bar-label">CNN</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="8" style="width:0%"></div>
+            <span class="bar-value">~10+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国主流电视新闻</span><span class="lang-en">U.S. mainstream TV news</span></span>
+        </div>
+        <!-- BBC -->
+        <div class="bar-chart-item">
+          <span class="bar-label">BBC</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="8" style="width:0%"></div>
+            <span class="bar-value">~10+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">国际公共媒体</span><span class="lang-en">Intl. public media</span></span>
+        </div>
+        <!-- WSJ -->
+        <div class="bar-chart-item">
+          <span class="bar-label">WSJ</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="8" style="width:0%"></div>
+            <span class="bar-value">~10+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国财经媒体</span><span class="lang-en">U.S. financial media</span></span>
+        </div>
+        <!-- Business Insider -->
+        <div class="bar-chart-item">
+          <span class="bar-label">Business Insider</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="13" style="width:0%"></div>
+            <span class="bar-value">~15+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国科技商业媒体</span><span class="lang-en">U.S. tech business media</span></span>
+        </div>
+        <!-- The Verge / TechCrunch / CNET -->
+        <div class="bar-chart-item">
+          <span class="bar-label">The Verge / TechCrunch / CNET</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="13" style="width:0%"></div>
+            <span class="bar-value">~15+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国科技媒体</span><span class="lang-en">U.S. tech media</span></span>
+        </div>
+        <!-- FT中文网 / 联合早报 / 华尔街日报中文 -->
+        <div class="bar-chart-item">
+          <span class="bar-label"><span class="lang-zh">FT中文网 / 联合早报 / 华尔街日报中文</span><span class="lang-en">FT Chinese / Zaobao / WSJ Chinese</span></span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="8" style="width:0%"></div>
+            <span class="bar-value">~10+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">中文财经媒体</span><span class="lang-en">Chinese financial media</span></span>
+        </div>
+        <!-- Fox News -->
+        <div class="bar-chart-item">
+          <span class="bar-label">Fox News</span>
+          <div class="bar-track">
+            <div class="bar-fill" data-width="8" style="width:0%"></div>
+            <span class="bar-value">~10+</span>
+          </div>
+          <span class="text-xs" style="color:var(--text-muted);min-width:100px"><span class="lang-zh">美国保守派媒体</span><span class="lang-en">U.S. conservative media</span></span>
+        </div>
+      </div>
+
+      <p class="text-sm mt-6 px-4 py-2 rounded-lg" style="background:var(--accent-blue-light);color:var(--text-secondary)">
+        <i class="fas fa-info-circle mr-1" style="color:var(--accent-blue)"></i> <span class="lang-zh">本周报道高度集中于阿尔忒弥斯II任务（占比超60%），其次为Anthropic Mythos模型与AI产业竞争动态。</span><span class="lang-en">This week's coverage was highly concentrated on the Artemis II mission (over 60%), followed by the Anthropic Mythos model and AI industry competition dynamics.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AUTHOR INFO ===== -->
+<section class="py-12 px-4" style="background:var(--bg-primary);border-top:1px solid var(--border-color);">
+  <div class="max-w-4xl mx-auto text-center reveal">
+    <div class="inline-flex items-center gap-3 mb-4">
+      <div class="w-12 h-12 rounded-full flex items-center justify-center" style="background:linear-gradient(135deg, var(--accent-blue), var(--accent-gold));">
+        <i class="fas fa-building text-white text-lg"></i>
+      </div>
+      <div class="text-left">
+        <div class="font-bold" style="color:var(--text-primary)">Supinfor Ltd.</div>
+        <div class="text-sm" style="color:var(--text-secondary)"><span class="lang-zh">2026年4月24日</span><span class="lang-en">April 24, 2026</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="py-8 px-4" style="background:var(--bg-secondary);border-top:1px solid var(--border-color);">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="text-xs mb-1" style="color:var(--text-muted)"><em><span class="lang-zh">本报告基于 Supinfor 区域国别实时监测平台编制，仅供参考，不构成投资建议。</span><span class="lang-en">This report is compiled based on the Supinfor Country Monitoring Platform and is for reference only. It does not constitute investment advice.</span></em></p>
+    <p class="text-xs mb-1" style="color:var(--text-muted)"><em><span class="lang-zh">数据截止时间：2026-04-12 23:59:59 (UTC+8)</span><span class="lang-en">Data cutoff: 2026-04-12 23:59:59 (UTC+8)</span></em></p>
+    <p class="text-xs" style="color:var(--text-muted)"><em>© Supinfor Ltd.</em></p>
+  </div>
+</footer>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-to-top" id="backToTop" aria-label="返回顶部">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+</main>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== THEME MANAGEMENT =====
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      themeIcon.className = 'fas fa-sun';
+    } else {
+      html.classList.remove('dark');
+      themeIcon.className = 'fas fa-moon';
+    }
+  }
+
+  // Initialize theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(getSystemTheme());
+  }
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = html.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  });
+
+  // ===== STARFIELD =====
+  const starfield = document.getElementById('starfield');
+  if (starfield) {
+    for (let i = 0; i < 80; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 3 + 1;
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.setProperty('--dur', (Math.random() * 3 + 2) + 's');
+      star.style.setProperty('--o1', Math.random() * 0.5 + 0.2);
+      star.style.setProperty('--o2', Math.random() * 0.5 + 0.5);
+      star.style.animationDelay = Math.random() * 5 + 's';
+      starfield.appendChild(star);
+    }
+  }
+
+  // ===== TOC SIDEBAR =====
+  const tocToggle = document.getElementById('tocToggle');
+  const tocSidebar = document.getElementById('tocSidebar');
+  const tocOverlay = document.getElementById('tocOverlay');
+
+  function closeToc() {
+    tocSidebar.classList.remove('open');
+    tocOverlay.classList.remove('open');
+  }
+
+  tocToggle.addEventListener('click', () => {
+    tocSidebar.classList.toggle('open');
+    tocOverlay.classList.toggle('open');
+  });
+
+  tocOverlay.addEventListener('click', closeToc);
+
+  // Close TOC on link click (mobile)
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) closeToc();
+    });
+  });
+
+  // Active TOC link on scroll
+  const sections = document.querySelectorAll('section[id], article[id], div[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  function updateActiveToc() {
+    let current = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120) current = section.id;
+    });
+    tocLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+    });
+  }
+
+  // ===== SCROLL REVEAL =====
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  document.querySelectorAll('.reveal, .reveal-left').forEach(el => {
+    revealObserver.observe(el);
+  });
+
+  // ===== BAR CHART ANIMATION =====
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = entry.target.querySelectorAll('.bar-fill');
+        bars.forEach((bar, i) => {
+          setTimeout(() => {
+            bar.style.width = bar.dataset.width + '%';
+          }, i * 80);
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const mediaChart = document.getElementById('mediaChart');
+  if (mediaChart) barObserver.observe(mediaChart);
+
+  // ===== BACK TO TOP =====
+  const backToTop = document.getElementById('backToTop');
+
+  function handleScroll() {
+    updateActiveToc();
+    if (window.scrollY > 300) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Initial call
+  handleScroll();
+
+})();
+
+function setLang(lang){document.documentElement.setAttribute('data-lang',lang);document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');localStorage.setItem('lang',lang);document.querySelectorAll('.lang-toggle button').forEach(btn=>{btn.classList.toggle('active',(lang==='zh'&&btn.textContent==='中')||(lang==='en'&&btn.textContent==='EN'))})}
+(function(){const s=localStorage.getItem('lang')||'zh';setLang(s)})();
+</script>
+</body>
+</html>

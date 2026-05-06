@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VinFast 商业情报分析报告 2026.04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ===== CSS Variables ===== */
+:root {
+  --bg-primary: #f0f2f5;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --bg-hero: linear-gradient(135deg, #0a1628 0%, #132744 40%, #1a3a5c 100%);
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --accent-green: #00c853;
+  --accent-green-bg: rgba(0, 200, 83, 0.1);
+  --accent-orange: #ff9100;
+  --accent-orange-bg: rgba(255, 145, 0, 0.1);
+  --accent-red: #ff1744;
+  --accent-red-bg: rgba(255, 23, 68, 0.08);
+  --border-color: #e2e8f0;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e2e8f0;
+  --table-header-bg: #f7fafc;
+  --table-row-hover: #f0f4f8;
+  --kpi-bg: rgba(255,255,255,0.12);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --bar-bg: #e2e8f0;
+  --code-bg: #f1f5f9;
+  --nav-active: #00c853;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0a1628;
+  --bg-secondary: #0f1f38;
+  --bg-card: #132744;
+  --text-primary: #e8ecf1;
+  --text-secondary: #a0aec0;
+  --text-muted: #718096;
+  --accent-green: #00e676;
+  --accent-green-bg: rgba(0, 230, 118, 0.12);
+  --accent-orange: #ff9100;
+  --accent-orange-bg: rgba(255, 145, 0, 0.12);
+  --accent-red: #ff5252;
+  --accent-red-bg: rgba(255, 82, 82, 0.1);
+  --border-color: #1e3a5f;
+  --sidebar-bg: #0d1a30;
+  --sidebar-border: #1e3a5f;
+  --table-header-bg: #0f2440;
+  --table-row-hover: #162d4a;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+  --bar-bg: #1e3a5f;
+  --code-bg: #0f2440;
+  --nav-active: #00e676;
+}
+
+/* ===== Bilingual Toggle ===== */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* ===== Base Styles ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', 'Inter', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: 280px; background: var(--sidebar-bg);
+  border-right: 1px solid var(--sidebar-border);
+  z-index: 100; overflow-y: auto;
+  padding: 24px 0; transition: transform 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+.sidebar-logo {
+  padding: 0 24px 20px; border-bottom: 1px solid var(--border-color);
+  margin-bottom: 16px;
+}
+.sidebar-logo h2 { font-size: 1.1rem; color: var(--accent-green); letter-spacing: 0.5px; }
+.sidebar-logo p { font-size: 0.75rem; color: var(--text-muted); margin-top: 4px; }
+.sidebar nav { padding: 0 12px; }
+.sidebar nav a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; margin: 2px 0;
+  border-radius: 8px; font-size: 0.85rem;
+  color: var(--text-secondary); text-decoration: none;
+  transition: all 0.2s;
+}
+.sidebar nav a:hover, .sidebar nav a.active {
+  background: var(--accent-green-bg); color: var(--nav-active);
+}
+.sidebar nav a .nav-icon { width: 20px; text-align: center; font-size: 0.8rem; }
+
+/* ===== Main Content ===== */
+.main-content { margin-left: 280px; }
+
+/* ===== Top Bar ===== */
+.top-bar {
+  position: fixed; top: 0; right: 0; left: 280px;
+  height: 56px; background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 0 24px; z-index: 90; gap: 8px;
+  backdrop-filter: blur(10px);
+  transition: left 0.3s;
+}
+.top-btn {
+  width: 40px; height: 40px; border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card); color: var(--text-secondary);
+  cursor: pointer; display: flex; align-items: center;
+  justify-content: center; font-size: 1rem;
+  transition: all 0.2s;
+}
+.top-btn:hover { border-color: var(--accent-green); color: var(--accent-green); }
+.lang-btn { font-size: 0.8rem; font-weight: 600; width: auto; padding: 0 12px; gap: 6px; }
+.hamburger { display: none; }
+
+/* ===== Hero Section ===== */
+.hero {
+  background: var(--bg-hero);
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 100px 40px 60px; position: relative; overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(0,230,118,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(255,145,0,0.06) 0%, transparent 50%);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(0,230,118,0.15); border: 1px solid rgba(0,230,118,0.3);
+  border-radius: 50px; padding: 6px 18px; font-size: 0.8rem;
+  color: #00e676; margin-bottom: 24px; position: relative;
+}
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  color: #ffffff; margin-bottom: 16px; position: relative;
+  letter-spacing: -0.5px;
+}
+.hero h1 .accent { color: #00e676; }
+.hero-meta {
+  color: rgba(255,255,255,0.6); font-size: 0.9rem;
+  margin-bottom: 48px; position: relative;
+  max-width: 700px; line-height: 1.8;
+}
+.hero-meta strong { color: rgba(255,255,255,0.85); }
+
+/* KPI Cards */
+.kpi-grid {
+  display: grid; grid-template-columns: repeat(5, 1fr);
+  gap: 16px; width: 100%; max-width: 1200px;
+  position: relative;
+}
+.kpi-card {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px; padding: 24px 16px;
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.kpi-card:hover { transform: translateY(-4px); border-color: rgba(0,230,118,0.4); }
+.kpi-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.kpi-value { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: #ffffff; line-height: 1.2; }
+.kpi-value .green { color: #00e676; }
+.kpi-value .orange { color: #ff9100; }
+.kpi-change { font-size: 0.8rem; margin-top: 8px; }
+.kpi-change.up { color: #00e676; }
+.kpi-change.down { color: #ff5252; }
+.kpi-sub { font-size: 0.75rem; color: rgba(255,255,255,0.45); margin-top: 4px; }
+
+/* ===== Section Styles ===== */
+.content-section {
+  padding: 80px 48px 40px;
+  max-width: 1100px;
+}
+.section-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px; padding-bottom: 16px;
+  border-bottom: 2px solid var(--border-color);
+}
+.section-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--accent-green); background: var(--accent-green-bg);
+  padding: 4px 12px; border-radius: 6px;
+  letter-spacing: 1px;
+}
+.section-title { font-size: 1.6rem; color: var(--text-primary); }
+
+/* ===== Cards ===== */
+.card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: 16px; padding: 28px;
+  margin-bottom: 20px; box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.75rem; font-weight: 600;
+  padding: 4px 12px; border-radius: 6px;
+  margin-bottom: 12px;
+}
+.tag-green { background: var(--accent-green-bg); color: var(--accent-green); }
+.tag-orange { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.tag-red { background: var(--accent-red-bg); color: var(--accent-red); }
+.card h3 { font-size: 1.2rem; margin-bottom: 12px; color: var(--text-primary); }
+.card p, .card li { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; }
+.card ul { padding-left: 20px; margin: 12px 0; }
+.card li { margin-bottom: 8px; }
+.card li strong { color: var(--text-primary); }
+
+/* Insight box */
+.insight-box {
+  background: var(--accent-green-bg);
+  border-left: 3px solid var(--accent-green);
+  border-radius: 0 10px 10px 0;
+  padding: 16px 20px; margin-top: 16px;
+  font-size: 0.9rem; color: var(--text-secondary);
+}
+.insight-box strong { color: var(--accent-green); }
+
+/* ===== Bar Chart ===== */
+.bar-chart { margin: 20px 0; }
+.bar-row {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 10px;
+}
+.bar-label { width: 90px; font-size: 0.85rem; font-weight: 500; text-align: right; color: var(--text-secondary); flex-shrink: 0; }
+.bar-track { flex: 1; height: 28px; background: var(--bar-bg); border-radius: 6px; overflow: hidden; position: relative; }
+.bar-fill {
+  height: 100%; border-radius: 6px;
+  background: linear-gradient(90deg, var(--accent-green), #00c853);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 10px; font-size: 0.75rem; font-weight: 700;
+  color: #fff; transition: width 1s ease;
+  min-width: 40px;
+}
+.bar-fill.orange { background: linear-gradient(90deg, var(--accent-orange), #ffab40); }
+.bar-fill.dim { background: linear-gradient(90deg, #546e7a, #78909c); }
+
+/* ===== Tables ===== */
+.styled-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: 12px; overflow: hidden;
+  border: 1px solid var(--border-color);
+  font-size: 0.88rem; margin: 20px 0;
+}
+.styled-table thead th {
+  background: var(--table-header-bg);
+  padding: 14px 16px; text-align: left;
+  font-weight: 600; color: var(--text-primary);
+  border-bottom: 2px solid var(--border-color);
+  font-size: 0.82rem; text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.styled-table tbody td {
+  padding: 12px 16px; border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary); vertical-align: top;
+}
+.styled-table tbody tr:last-child td { border-bottom: none; }
+.styled-table tbody tr:hover { background: var(--table-row-hover); }
+.market-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 0.75rem; font-weight: 600;
+}
+.market-tag.id { background: rgba(255,145,0,0.15); color: var(--accent-orange); }
+.market-tag.ph { background: rgba(0,200,83,0.15); color: var(--accent-green); }
+.market-tag.vn { background: rgba(244,67,54,0.15); color: #ef5350; }
+.market-tag.eu { background: rgba(33,150,243,0.15); color: #42a5f5; }
+.market-tag.me { background: rgba(156,39,176,0.15); color: #ab47bc; }
+.market-tag.global { background: rgba(96,125,139,0.15); color: #78909c; }
+.market-tag.mx { background: rgba(255,193,7,0.15); color: #ffc107; }
+.market-tag.multi { background: rgba(0,200,83,0.1); color: var(--accent-green); }
+
+/* Position indicators */
+.pos-1 { color: #00e676; font-weight: 700; }
+.pos-rising { color: var(--accent-orange); font-weight: 600; }
+.pos-4 { color: var(--text-secondary); }
+.pos-niche { color: var(--text-muted); }
+
+/* ===== Risk Cards ===== */
+.risk-card { border-left: 4px solid; }
+.risk-high { border-left-color: var(--accent-red); }
+.risk-medium { border-left-color: var(--accent-orange); }
+.risk-low { border-left-color: #ffc107; }
+.risk-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; padding: 3px 10px; border-radius: 4px;
+  margin-bottom: 12px;
+}
+.risk-badge.high { background: var(--accent-red-bg); color: var(--accent-red); }
+.risk-badge.medium { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.risk-badge.low { background: rgba(255,193,7,0.15); color: #ffc107; }
+
+/* ===== Forward Look ===== */
+.forward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 16px; }
+.forward-card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-radius: 14px; padding: 20px 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+  box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;
+}
+.forward-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.forward-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--accent-green); flex-shrink: 0;
+  width: 36px; height: 36px; display: flex;
+  align-items: center; justify-content: center;
+  background: var(--accent-green-bg); border-radius: 10px;
+}
+.forward-card h4 { font-size: 0.95rem; color: var(--text-primary); margin-bottom: 6px; }
+.forward-card p { font-size: 0.85rem; color: var(--text-muted); }
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 40px 48px; border-top: 1px solid var(--border-color);
+  text-align: center; color: var(--text-muted); font-size: 0.82rem;
+}
+.site-footer .brand { color: var(--accent-green); font-weight: 600; }
+
+/* ===== Back to Top ===== */
+.back-to-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 48px; height: 48px; border-radius: 14px;
+  background: var(--accent-green); color: #fff;
+  border: none; cursor: pointer; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,230,118,0.3);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 200;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: #00c853; }
+
+/* ===== Animations ===== */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+  .top-bar { left: 0; }
+  .hamburger { display: flex; }
+  .content-section { padding: 80px 24px 40px; }
+  .kpi-grid { grid-template-columns: repeat(3, 1fr); }
+  .hero { padding: 100px 24px 60px; }
+}
+@media (max-width: 640px) {
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .kpi-card { padding: 16px 12px; }
+  .kpi-value { font-size: 1.3rem; }
+  .forward-grid { grid-template-columns: 1fr; }
+  .styled-table { font-size: 0.78rem; }
+  .styled-table thead th, .styled-table tbody td { padding: 8px 10px; }
+  .content-section { padding: 70px 16px 30px; }
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5); z-index: 99;
+}
+.sidebar-overlay.active { display: block; }
+
+/* Signal density special */
+.signal-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 6px;
+  font-size: 0.78rem; font-weight: 600;
+}
+.signal-extreme { background: rgba(255,23,68,0.12); color: var(--accent-red); }
+.signal-high { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.signal-medium { background: var(--accent-green-bg); color: var(--accent-green); }
+
+/* Milestone timeline */
+.milestone-card { position: relative; padding-left: 24px; }
+.milestone-card::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: var(--accent-green); box-shadow: 0 0 0 4px var(--accent-green-bg);
+}
+</style>
+</head>
+<body>
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <h2><i class="fa-solid fa-bolt"></i> VinFast</h2>
+    <p><span data-zh>商业情报分析报告</span><span data-en>Business Intelligence Report</span></p>
+  </div>
+  <nav>
+    <a href="#hero" class="active">
+      <span class="nav-icon"><i class="fa-solid fa-house"></i></span>
+      <span data-zh>概览</span><span data-en>Overview</span>
+    </a>
+    <a href="#sec-summary">
+      <span class="nav-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+      <span data-zh>一、执行摘要</span><span data-en>I. Executive Summary</span>
+    </a>
+    <a href="#sec-trends">
+      <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+      <span data-zh>二、趋势识别</span><span data-en>II. Trend Identification</span>
+    </a>
+    <a href="#sec-milestones">
+      <span class="nav-icon"><i class="fa-solid fa-flag-checkered"></i></span>
+      <span data-zh>三、里程碑事件</span><span data-en>III. Milestones</span>
+    </a>
+    <a href="#sec-partnerships">
+      <span class="nav-icon"><i class="fa-solid fa-handshake"></i></span>
+      <span data-zh>四、合作与联盟</span><span data-en>IV. Partnerships</span>
+    </a>
+    <a href="#sec-risks">
+      <span class="nav-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <span data-zh>五、风险预警</span><span data-en>V. Risk Alerts</span>
+    </a>
+    <a href="#sec-competition">
+      <span class="nav-icon"><i class="fa-solid fa-chess"></i></span>
+      <span data-zh>六、竞争格局</span><span data-en>VI. Competition</span>
+    </a>
+    <a href="#sec-outlook">
+      <span class="nav-icon"><i class="fa-solid fa-binoculars"></i></span>
+      <span data-zh>七、前瞻</span><span data-en>VII. Outlook</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- Top Bar -->
+<div class="top-bar" id="topBar">
+  <button class="top-btn hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div style="flex:1"></div>
+  <button class="top-btn lang-btn" id="langBtn" aria-label="Toggle language">
+    <i class="fa-solid fa-language"></i>
+    <span id="langLabel">EN</span>
+  </button>
+  <button class="top-btn" id="themeBtn" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon" id="themeIcon"></i>
+  </button>
+</div>
+
+<!-- Main Content -->
+<main class="main-content">
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-badge">
+    <i class="fa-solid fa-satellite-dish"></i>
+    <span data-zh>全球商情速递 · Supinfor</span><span data-en>Global Business Intelligence · Supinfor</span>
+  </div>
+  <h1>
+    <span data-zh>VinFast <span class="accent">商业情报</span>分析报告</span>
+    <span data-en>VinFast <span class="accent">Business Intelligence</span> Report</span>
+  </h1>
+  <div class="hero-meta">
+    <span data-zh><strong>周期</strong>：2026年3月30日 — 4月29日（30天）<br><strong>数据来源</strong>：全球商情速递平台（Supinfor），筛选国际知名 / 国家主流 / 区域重点新闻媒体<br><strong>样本量</strong>：596条去重资讯 &nbsp;|&nbsp; <strong>分析机构</strong>：Supinfor Ltd. &nbsp;|&nbsp; <strong>生成日期</strong>：2026年4月29日</span>
+    <span data-en><strong>Period</strong>: Mar 30 – Apr 29, 2026 (30 days)<br><strong>Data Source</strong>: Supinfor Global Business Express — curated from internationally renowned, nationally mainstream, and regionally key media outlets<br><strong>Sample Size</strong>: 596 deduplicated articles &nbsp;|&nbsp; <strong>Analyst</strong>: Supinfor Ltd. &nbsp;|&nbsp; <strong>Date</strong>: April 29, 2026</span>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card reveal">
+      <div class="kpi-label"><span data-zh>Q1 全球交付</span><span data-en>Q1 Global Deliveries</span></div>
+      <div class="kpi-value">58,577 <span class="green" style="font-size:0.9rem"><span data-zh>辆</span><span data-en>units</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-arrow-up"></i> +61% YoY</div>
+      <div class="kpi-sub"><span data-zh>电动两轮车 143,136 辆 (+219%)</span><span data-en>E-two-wheelers: 143,136 (+219%)</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-1">
+      <div class="kpi-label"><span data-zh>越南3月交付</span><span data-en>Vietnam Mar Deliveries</span></div>
+      <div class="kpi-value">27,609 <span class="green" style="font-size:0.9rem"><span data-zh>辆</span><span data-en>units</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-arrow-up"></i> +127% YoY</div>
+      <div class="kpi-sub"><span data-zh>单日订单峰值 3,520 台</span><span data-en>Peak daily orders: 3,520</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-2">
+      <div class="kpi-label"><span data-zh>菲律宾 Q1 BEV</span><span data-en>Philippines Q1 BEV</span></div>
+      <div class="kpi-value">#1 <span class="green" style="font-size:1rem">1,171</span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-crown"></i> <span data-zh>市占率 >50%</span><span data-en>Market share >50%</span></div>
+      <div class="kpi-sub"><span data-zh>超越特斯拉登顶</span><span data-en>Surpassed Tesla for #1</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-3">
+      <div class="kpi-label"><span data-zh>2026 全年目标</span><span data-en>2026 Annual Target</span></div>
+      <div class="kpi-value"><span class="green">30</span><span style="font-size:1rem"><span data-zh>万辆</span><span data-en>0K EVs</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-plus"></i> <span data-zh>100万辆电动摩托</span><span data-en>1M e-motorcycles</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-4">
+      <div class="kpi-label"><span data-zh>累计亏损</span><span data-en>Cumulative Loss</span></div>
+      <div class="kpi-value"><span class="orange">$14.5</span><span style="font-size:1rem">B</span></div>
+      <div class="kpi-change down"><i class="fa-solid fa-clock"></i> <span data-zh>盈亏平衡推迟至2027</span><span data-en>Breakeven delayed to 2027</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 1: EXECUTIVE SUMMARY ==================== -->
+<section class="content-section" id="sec-summary">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title"><span data-zh>执行摘要</span><span data-en>Executive Summary</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <p><span data-zh>本周期内，VinFast 的全球媒体曝光呈现三个显著特征：<strong>东南亚扩张全面提速</strong>、<strong>地缘冲突意外助推电动车需求</strong>、<strong>印尼铁路事故构成品牌危机</strong>。公司正处于从"越南本土冠军"向"新兴市场多国玩家"转型的关键窗口期，战略重心已明确从欧美收缩至亚洲与中东。</span><span data-en>During this period, VinFast's global media exposure exhibited three defining characteristics: <strong>accelerated Southeast Asian expansion</strong>, <strong>geopolitical conflict unexpectedly boosting EV demand</strong>, and <strong>the Indonesia railway accident posing a brand crisis</strong>. The company is at a critical juncture in its transformation from "Vietnam's domestic champion" to a "multi-country emerging market player," with its strategic focus clearly shifting from the West to Asia and the Middle East.</span></p>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-camera" style="color:var(--accent-green);margin-right:8px"></i><span data-zh>核心数据快照</span><span data-en>Key Data Snapshot</span></h3>
+    <ul>
+      <li><span data-zh>2026年Q1全球交付 <strong>58,577 辆</strong>电动车，同比增 <strong>61%</strong>；电动两轮车交付 <strong>143,136 辆</strong>，同比增 <strong>219%</strong></span><span data-en>Q1 2026 global deliveries: <strong>58,577 EVs</strong>, up <strong>61%</strong> YoY; e-two-wheelers: <strong>143,136 units</strong>, up <strong>219%</strong> YoY</span></li>
+      <li><span data-zh>越南本土3月交付 <strong>27,609 辆</strong>，同比增 <strong>127%</strong>，单日订单峰值 <strong>3,520 台</strong></span><span data-en>Vietnam domestic March deliveries: <strong>27,609 units</strong>, up <strong>127%</strong> YoY, peak daily orders: <strong>3,520</strong></span></li>
+      <li><span data-zh>菲律宾Q1纯电车销量登顶（<strong>1,171辆</strong>，市占率超<strong>50%</strong>），超越特斯拉</span><span data-en>Philippines Q1 BEV sales ranked #1 (<strong>1,171 units</strong>, market share over <strong>50%</strong>), surpassing Tesla</span></li>
+      <li><span data-zh>2026年全年目标：<strong>30万辆</strong>电动车 + <strong>100万辆</strong>电动摩托</span><span data-en>2026 full-year target: <strong>300,000 EVs</strong> + <strong>1 million e-motorcycles</strong></span></li>
+      <li><span data-zh>累计亏损至2025年底达 <strong>145 亿美元</strong>，盈亏平衡目标推迟至 <strong>2027 年</strong></span><span data-en>Cumulative losses through end of 2025 reached <strong>$14.5 billion</strong>; breakeven target postponed to <strong>2027</strong></span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2: TREND IDENTIFICATION ==================== -->
+<section class="content-section" id="sec-trends">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title"><span data-zh>趋势识别：正在发展或不断强化的方向</span><span data-en>Trend Identification: Emerging &amp; Strengthening Directions</span></h2>
+  </div>
+
+  <!-- Trend 1 -->
+  <div class="card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-globe"></i> <span data-zh>趋势 1</span><span data-en>Trend 1</span></div>
+    <h3><span data-zh>战略重心从欧美向亚洲与中东大幅转移</span><span data-en>Strategic Focus Shifts Dramatically from West to Asia &amp; Middle East</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-extreme"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：极高</span><span data-en>Signal Density: Extreme</span></span>
+    </div>
+
+    <!-- Signal Density Bar Chart -->
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>印尼</span><span data-en>Indonesia</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%">344</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>印度</span><span data-en>India</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:69.8%">240</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>菲律宾</span><span data-en>Philippines</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:54.7%">188</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>中东</span><span data-en>Middle East</span></span>
+        <div class="bar-track"><div class="bar-fill orange" style="width:20.6%">71</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>欧洲</span><span data-en>Europe</span></span>
+        <div class="bar-track"><div class="bar-fill dim" style="width:8.7%">30</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>美国</span><span data-en>USA</span></span>
+        <div class="bar-track"><div class="bar-fill dim" style="width:4.9%">17</div></div>
+      </div>
+    </div>
+
+    <p><span data-zh>VinFast 已完成战略转向。本周期内，公司在印尼、菲律宾、印度三国同步推进工厂建设、经销商网络扩张、新车型发布和金融合作，形成"三国齐发"态势：</span><span data-en>VinFast has completed its strategic pivot. During this period, the company simultaneously advanced factory construction, dealer network expansion, new model launches, and financial partnerships across Indonesia, the Philippines, and India — a "three-country simultaneous push":</span></p>
+    <ul>
+      <li><span data-zh><strong>印尼</strong>：签署1.9亿美元银团贷款建设苏邦工厂（BNI牵头）；与BCA签署经销商融资协议；宣布6月推出Evo、Feliz II、Viper三款电动摩托；VF3两个月交付400台；V-GREEN与Prime Group签署10万个充电站MOU（12亿美元）</span><span data-en><strong>Indonesia</strong>: Signed a $190M syndicated loan for the Subang factory (led by BNI); signed dealer financing agreement with BCA; announced June launch of Evo, Feliz II, and Viper e-motorcycles; VF3 delivered 400 units in two months; V-GREEN signed a 100,000 charging station MOU with Prime Group ($1.2B)</span></li>
+      <li><span data-zh><strong>菲律宾</strong>：Q1纯电车销量登顶；与14家摩托经销商签约；与Motech签署63家授权服务中心MOU；加入CAMPI行业商会；推出网约车租赁方案</span><span data-en><strong>Philippines</strong>: Q1 BEV sales ranked #1; signed with 14 motorcycle dealers; signed MOU with Motech for 63 authorized service centers; joined CAMPI industry association; launched ride-hailing lease program</span></li>
+      <li><span data-zh><strong>印度</strong>：发布VF MPV 7（第三款车型）；计划引入三款电动踏板车；FY26电动乘用车销量2,390辆，超越特斯拉</span><span data-en><strong>India</strong>: Launched VF MPV 7 (third model); plans to introduce three e-scooters; FY26 EV passenger car sales of 2,390 units, surpassing Tesla</span></li>
+      <li><span data-zh><strong>中东</strong>：在阿曼开设首家展厅；与EDC合作拓展电动车生态；保加利亚总统访问海防工厂邀请合作</span><span data-en><strong>Middle East</strong>: Opened first showroom in Oman; partnered with EDC to expand EV ecosystem; Bulgarian president visited Hai Phong factory to invite cooperation</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-lightbulb"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>这不是试探性布局，而是系统性的多市场同步渗透。VinFast正在复制越南本土的"生态打法"——先铺充电/换电网络和经销商，再推车型——到每一个目标市场。美国北卡工厂缩减规模推迟至2028年投产，进一步印证欧美市场已降为次要优先级。</span>
+      <span data-en>This is not exploratory positioning but a systematic, multi-market simultaneous penetration. VinFast is replicating its domestic Vietnamese "ecosystem playbook" — first deploying charging/swapping networks and dealers, then pushing vehicle models — in every target market. The downsizing and delay of the North Carolina factory to 2028 further confirms that Western markets have been deprioritized.</span>
+    </div>
+  </div>
+
+  <!-- Trend 2 -->
+  <div class="card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-motorcycle"></i> <span data-zh>趋势 2</span><span data-en>Trend 2</span></div>
+    <h3><span data-zh>电动两轮车成为第二增长曲线</span><span data-en>Electric Two-Wheelers Emerge as the Second Growth Curve</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-high"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：高（摩托139次、换电88次、两轮36次）</span><span data-en>Signal Density: High (motorcycle 139, battery swap 88, two-wheeler 36)</span></span>
+    </div>
+    <p><span data-zh>VinFast 正将电动摩托作为打开东南亚大众市场的"尖刀产品"：</span><span data-en>VinFast is positioning e-motorcycles as the "spearhead product" to penetrate Southeast Asian mass markets:</span></p>
+    <ul>
+      <li><span data-zh>越南本土3月交付超<strong>9.3万辆</strong>电动摩托，创历史新高，Evo和Feliz为爆款</span><span data-en>Vietnam domestic March deliveries exceeded <strong>93,000 e-motorcycles</strong>, a record high, with Evo and Feliz as bestsellers</span></li>
+      <li><span data-zh>印尼6月首发三款电动摩托，针对本地路况做了动力升级，配套V-Green换电站</span><span data-en>Indonesia June debut of three e-motorcycles, with power upgrades for local road conditions, paired with V-Green battery swap stations</span></li>
+      <li><span data-zh>菲律宾与14家经销商签约，6月推出可换电型号</span><span data-en>Philippines signed with 14 dealers, launching swappable-battery models in June</span></li>
+      <li><span data-zh>印度计划2026下半年或2027年推出三款电动踏板车</span><span data-en>India plans to launch three e-scooters in H2 2026 or 2027</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-lightbulb"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>东南亚是全球最大的两轮车市场（印尼年销600万辆、越南年销数百万辆），电动摩托的单价低、决策门槛低、充电/换电基建投入相对可控。VinFast以此切入可以快速建立品牌认知和用户基盘，为后续四轮车销售铺路。这是一个被低估的战略维度。</span>
+      <span data-en>Southeast Asia is the world's largest two-wheeler market (Indonesia: 6M units/year, Vietnam: millions/year). E-motorcycles have low unit prices, low decision thresholds, and relatively manageable charging/swapping infrastructure costs. VinFast can use this entry point to rapidly build brand awareness and a user base, paving the way for subsequent four-wheeler sales. This is an underestimated strategic dimension.</span>
+    </div>
+  </div>
+
+  <!-- Trend 3 -->
+  <div class="card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-car-side"></i> <span data-zh>趋势 3</span><span data-en>Trend 3</span></div>
+    <h3><span data-zh>Green SM 出行平台从业务单元升级为战略支柱</span><span data-en>Green SM Mobility Platform Elevated from Business Unit to Strategic Pillar</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-medium"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：中高（Green SM 52次、GSM 34次、IPO 22次）</span><span data-en>Signal Density: Medium-High (Green SM 52, GSM 34, IPO 22)</span></span>
+    </div>
+    <p><span data-zh>Green SM（GSM）的战略地位在本周期内显著提升：</span><span data-en>Green SM (GSM)'s strategic importance rose significantly during this period:</span></p>
+    <ul>
+      <li><span data-zh>范日旺在年度股东大会上宣布 Green SM 计划 <strong>2028年下半年IPO</strong>，Pre-IPO 将在2-3个月内启动，顾问估值约<strong>200亿美元</strong></span><span data-en>Pham Nhat Vuong announced at the AGM that Green SM plans an <strong>IPO in H2 2028</strong>, with Pre-IPO launching within 2-3 months; advisor valuation approximately <strong>$20 billion</strong></span></li>
+      <li><span data-zh>已进入越南、印尼、老挝、菲律宾四国，运营超<strong>18.6万辆</strong>电动车及电单车</span><span data-en>Now operating in four countries — Vietnam, Indonesia, Laos, Philippines — with over <strong>186,000 EVs and e-bikes</strong></span></li>
+      <li><span data-zh>在印尼、菲律宾推出网约车司机租赁方案，降低电动车使用门槛</span><span data-en>Launched ride-hailing driver lease programs in Indonesia and the Philippines, lowering EV adoption barriers</span></li>
+      <li><span data-zh>越南市场已占四轮网约车市场过半份额</span><span data-en>Already holds over half of Vietnam's four-wheel ride-hailing market</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-lightbulb"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>Green SM 扮演三重角色——消化VinFast产能的"内部大客户"、在新市场培养用户习惯的"体验入口"、以及未来通过IPO回笼资金的"融资工具"。200亿美元的估值预期如果成立，将极大缓解VinFast的资金压力。但这也意味着Green SM的运营质量直接关系到VinFast的品牌声誉（见印尼事故分析）。</span>
+      <span data-en>Green SM plays a triple role — an "internal major customer" absorbing VinFast's production capacity, an "experience gateway" cultivating user habits in new markets, and a "financing vehicle" to recoup funds through a future IPO. If the $20B valuation expectation materializes, it would significantly ease VinFast's financial pressure. However, this also means Green SM's operational quality directly impacts VinFast's brand reputation (see Indonesia accident analysis).</span>
+    </div>
+  </div>
+
+  <!-- Trend 4 -->
+  <div class="card reveal">
+    <div class="card-tag tag-orange"><i class="fa-solid fa-oil-well"></i> <span data-zh>趋势 4</span><span data-en>Trend 4</span></div>
+    <h3><span data-zh>地缘冲突意外加速电动车需求</span><span data-en>Geopolitical Conflict Unexpectedly Accelerates EV Demand</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-extreme"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：极高（本周期内最密集的单一叙事主题，超过40条相关报道）</span><span data-en>Signal Density: Extreme (the most concentrated single narrative this period, 40+ related reports)</span></span>
+    </div>
+    <p><span data-zh>中东战争（美以对伊朗冲突）推高全球油价超50%，东南亚因高度依赖原油进口受冲击严重：</span><span data-en>The Middle East conflict (US-Israel vs. Iran) pushed global oil prices up over 50%, severely impacting Southeast Asia due to its heavy reliance on crude oil imports:</span></p>
+    <ul>
+      <li><span data-zh>越南VinFast 3月门店销量同比增<strong>127%</strong>，超五成客户从燃油车转购电动车</span><span data-en>VinFast Vietnam March showroom sales up <strong>127%</strong> YoY, with over half of customers switching from ICE vehicles to EVs</span></li>
+      <li><span data-zh>菲律宾宣布进入能源紧急状态，电动车销量激增</span><span data-en>Philippines declared an energy emergency; EV sales surged</span></li>
+      <li><span data-zh>泰国曼谷车展比亚迪展台人流暴增</span><span data-en>BYD booth traffic surged at the Bangkok Motor Show in Thailand</span></li>
+      <li><span data-zh>澳洲电动车销量单月涨<strong>51%</strong></span><span data-en>Australian EV sales jumped <strong>51%</strong> in a single month</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-lightbulb"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>这是一个结构性的外部利好。与1973年和1979年石油危机催生日本节能车崛起类似，当前的能源冲击正在永久性地加速电动车adoption。VinFast作为东南亚本土最大的纯电车企，是这一趋势的直接受益者。但需注意，如果油价回落，部分需求可能回撤。</span>
+      <span data-en>This is a structural external tailwind. Similar to how the 1973 and 1979 oil crises catalyzed the rise of Japanese fuel-efficient cars, the current energy shock is permanently accelerating EV adoption. As Southeast Asia's largest homegrown pure-EV automaker, VinFast is a direct beneficiary. However, if oil prices retreat, some demand may pull back.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: MILESTONES ==================== -->
+<section class="content-section" id="sec-milestones">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title"><span data-zh>里程碑事件：转折点与关键节点</span><span data-en>Milestones: Turning Points &amp; Key Nodes</span></h2>
+  </div>
+
+  <!-- Milestone 1 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-bolt"></i> <span data-zh>里程碑 1</span><span data-en>Milestone 1</span></div>
+    <h3><span data-zh>范日旺明确"永不回归燃油车"+ 探索增程技术</span><span data-en>Pham Nhat Vuong Declares "Never Returning to ICE" + Exploring EREV Technology</span></h3>
+    <p><span data-zh>范日旺在2026年年度股东大会上做出两个关键表态：</span><span data-en>Pham Nhat Vuong made two key statements at the 2026 AGM:</span></p>
+    <ul>
+      <li><span data-zh>VinFast 将永远不再生产燃油车</span><span data-en>VinFast will never produce ICE vehicles again</span></li>
+      <li><span data-zh>正在研究将EREV（增程式电动车）技术应用于VF 8、VF 9新款</span><span data-en>Currently researching the application of EREV (Extended-Range Electric Vehicle) technology to new VF 8 and VF 9 models</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>这看似矛盾，实则是务实的技术路线调整。纯电定位不变，但通过增程技术解决续航和补能焦虑，扩大潜在用户群。越南市场目前几乎没有增程车型，VinFast若率先推出，可填补市场空白。</span>
+      <span data-en>This may seem contradictory but is actually a pragmatic technology roadmap adjustment. The pure-EV positioning remains unchanged, but EREV technology addresses range and charging anxiety, expanding the potential customer base. Vietnam currently has virtually no EREV models; if VinFast launches first, it can fill a market gap.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 2 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-chart-pie"></i> <span data-zh>里程碑 2</span><span data-en>Milestone 2</span></div>
+    <h3><span data-zh>Vingroup 2026年利润目标翻三倍</span><span data-en>Vingroup Targets 3x Profit Growth in 2026</span></h3>
+    <p><span data-zh>Vingroup 2025年营收33.18万亿越盾、净利1.1万亿越盾均创历史新高。2026年目标：营收48.5万亿越盾（+46%），净利3.5万亿越盾（+200%）。全额留存利润用于扩张，不分红。</span><span data-en>Vingroup's 2025 revenue of VND 33.18 trillion and net profit of VND 1.1 trillion both hit record highs. 2026 targets: revenue VND 48.5 trillion (+46%), net profit VND 3.5 trillion (+200%). All profits retained for expansion, no dividends.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>母公司的财务健康是VinFast持续"烧钱扩张"的底气。Vinhomes地产业务营收大增315%、净利增866%，为集团提供了充足的现金流支撑。</span>
+      <span data-en>The parent company's financial health underpins VinFast's continued "burn-for-scale" expansion. Vinhomes' real estate revenue surged 315% and net profit grew 866%, providing ample cash flow support for the group.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 3 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-trophy"></i> <span data-zh>里程碑 3</span><span data-en>Milestone 3</span></div>
+    <h3><span data-zh>VinFast 越南市占率突破40%</span><span data-en>VinFast Vietnam Market Share Breaks 40%</span></h3>
+    <p><span data-zh>2026年Q1，VinFast汽车销量达65,161台，占越南整体汽车市场约40%份额，为越南30多年来单一车企最高市占率。3月单月首次超越丰田登顶。</span><span data-en>In Q1 2026, VinFast auto sales reached 65,161 units, capturing approximately 40% of Vietnam's total auto market — the highest single-brand market share in Vietnam in over 30 years. In March, it surpassed Toyota for the first time to claim the top spot.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>这标志着VinFast已从"挑战者"变为越南汽车市场的"绝对领导者"，打破了日韩品牌数十年的垄断格局。越南本土的统治地位为其海外扩张提供了稳定的收入基本盘和品牌背书。</span>
+      <span data-en>This marks VinFast's transformation from "challenger" to "absolute leader" in Vietnam's auto market, breaking decades of Japanese and Korean brand dominance. Its domestic dominance provides a stable revenue base and brand endorsement for overseas expansion.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 4 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-layer-group"></i> <span data-zh>里程碑 4</span><span data-en>Milestone 4</span></div>
+    <h3><span data-zh>品牌架构重组——三大产品线成型</span><span data-en>Brand Architecture Restructured — Three Product Lines Formed</span></h3>
+    <p><span data-zh>VinFast完成品牌战略梳理，形成三大汽车产品线：</span><span data-en>VinFast completed its brand strategy restructuring, forming three automotive product lines:</span></p>
+    <ul>
+      <li><span data-zh><strong>Lac Hong</strong>：高端豪华线</span><span data-en><strong>Lac Hong</strong>: Premium luxury line</span></li>
+      <li><span data-zh><strong>VF系列</strong>：大众乘用线</span><span data-en><strong>VF Series</strong>: Mass-market passenger line</span></li>
+      <li><span data-zh><strong>Green品牌</strong>：商用mobility线（含Limo Green、Herio Green等）</span><span data-en><strong>Green Brand</strong>: Commercial mobility line (including Limo Green, Herio Green, etc.)</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>从单一品牌走向多品牌矩阵，是VinFast从"电动车制造商"向"出行生态平台"升级的标志。Green品牌直接服务于GSM出行平台，形成产品-平台闭环。</span>
+      <span data-en>Moving from a single brand to a multi-brand matrix marks VinFast's upgrade from "EV manufacturer" to "mobility ecosystem platform." The Green brand directly serves the GSM mobility platform, creating a product-platform closed loop.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: PARTNERSHIPS ==================== -->
+<section class="content-section" id="sec-partnerships">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title"><span data-zh>合作与联盟分析：机会与风险</span><span data-en>Partnership &amp; Alliance Analysis: Opportunities &amp; Risks</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-handshake" style="color:var(--accent-green);margin-right:8px"></i><span data-zh>关键合作一览</span><span data-en>Key Partnership Overview</span></h3>
+    <div style="overflow-x:auto">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th><span data-zh>合作方</span><span data-en>Partner</span></th>
+            <th><span data-zh>领域</span><span data-en>Domain</span></th>
+            <th><span data-zh>市场</span><span data-en>Market</span></th>
+            <th><span data-zh>性质</span><span data-en>Nature</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td><strong>BNI<span data-zh>（印尼国家银行）</span><span data-en> (Bank Negara Indonesia)</span></strong></td>
+            <td><span data-zh>银团贷款1.9亿美元 + 战略MOU</span><span data-en>$190M syndicated loan + strategic MOU</span></td>
+            <td><span class="market-tag id"><span data-zh>印尼</span><span data-en>Indonesia</span></span></td>
+            <td><span data-zh>金融+产能</span><span data-en>Finance + Capacity</span></td>
+          </tr>
+          <!-- Row 2 -->
+          <tr>
+            <td><strong>BCA<span data-zh>（印尼头部私人银行）</span><span data-en> (Bank Central Asia)</span></strong></td>
+            <td><span data-zh>经销商融资</span><span data-en>Dealer financing</span></td>
+            <td><span class="market-tag id"><span data-zh>印尼</span><span data-en>Indonesia</span></span></td>
+            <td><span data-zh>金融渠道</span><span data-en>Financial Channel</span></td>
+          </tr>
+          <!-- Row 3 -->
+          <tr>
+            <td><strong>Prime Group<span data-zh>（阿联酋）</span><span data-en> (UAE)</span></strong></td>
+            <td><span data-zh>10万个充电站（12亿美元）</span><span data-en>100,000 charging stations ($1.2B)</span></td>
+            <td><span class="market-tag id"><span data-zh>印尼</span><span data-en>Indonesia</span></span></td>
+            <td><span data-zh>充电基建</span><span data-en>Charging Infra</span></td>
+          </tr>
+          <!-- Row 4 -->
+          <tr>
+            <td><strong>eTreego<span data-zh>（台湾）</span><span data-en> (Taiwan)</span></strong></td>
+            <td><span data-zh>10万台充电端口</span><span data-en>100,000 charging ports</span></td>
+            <td><span class="market-tag multi"><span data-zh>印尼/菲/越</span><span data-en>ID/PH/VN</span></span></td>
+            <td><span data-zh>充电基建</span><span data-en>Charging Infra</span></td>
+          </tr>
+          <!-- Row 5 -->
+          <tr>
+            <td><strong>Lippo Karawaci</strong></td>
+            <td><span data-zh>地产网络+绿色交通</span><span data-en>Real estate network + green transport</span></td>
+            <td><span class="market-tag id"><span data-zh>印尼</span><span data-en>Indonesia</span></span></td>
+            <td><span data-zh>生态合作</span><span data-en>Ecosystem</span></td>
+          </tr>
+          <!-- Row 6 -->
+          <tr>
+            <td><strong><span data-zh>博世</span><span data-en>Bosch</span></strong></td>
+            <td><span data-zh>欧洲30国70万充电桩接入</span><span data-en>Access to 700K chargers across 30 European countries</span></td>
+            <td><span class="market-tag eu"><span data-zh>欧洲</span><span data-en>Europe</span></span></td>
+            <td><span data-zh>充电网络</span><span data-en>Charging Network</span></td>
+          </tr>
+          <!-- Row 7 -->
+          <tr>
+            <td><strong>Motech</strong></td>
+            <td><span data-zh>63家授权服务中心</span><span data-en>63 authorized service centers</span></td>
+            <td><span class="market-tag ph"><span data-zh>菲律宾</span><span data-en>Philippines</span></span></td>
+            <td><span data-zh>售后网络</span><span data-en>After-sales Network</span></td>
+          </tr>
+          <!-- Row 8 -->
+          <tr>
+            <td><strong>Otoklix</strong></td>
+            <td><span data-zh>150家售后服务网点</span><span data-en>150 after-sales service outlets</span></td>
+            <td><span class="market-tag id"><span data-zh>印尼</span><span data-en>Indonesia</span></span></td>
+            <td><span data-zh>售后网络</span><span data-en>After-sales Network</span></td>
+          </tr>
+          <!-- Row 9 -->
+          <tr>
+            <td><strong>Maybank / BDO</strong></td>
+            <td><span data-zh>购车金融方案</span><span data-en>Vehicle purchase financing</span></td>
+            <td><span class="market-tag ph"><span data-zh>菲律宾</span><span data-en>Philippines</span></span></td>
+            <td><span data-zh>金融渠道</span><span data-en>Financial Channel</span></td>
+          </tr>
+          <!-- Row 10 -->
+          <tr>
+            <td><strong>MERALCO</strong></td>
+            <td><span data-zh>充电站布局</span><span data-en>Charging station deployment</span></td>
+            <td><span class="market-tag ph"><span data-zh>菲律宾</span><span data-en>Philippines</span></span></td>
+            <td><span data-zh>充电基建</span><span data-en>Charging Infra</span></td>
+          </tr>
+          <!-- Row 11 -->
+          <tr>
+            <td><strong>JTA Investment Qatar</strong></td>
+            <td><span data-zh>至少10亿美元战略投资</span><span data-en>At least $1B strategic investment</span></td>
+            <td><span class="market-tag me"><span data-zh>中东</span><span data-en>Middle East</span></span></td>
+            <td><span data-zh>资本合作</span><span data-en>Capital Partnership</span></td>
+          </tr>
+          <!-- Row 12 -->
+          <tr>
+            <td><strong>Tensor</strong></td>
+            <td><span data-zh>自动驾驶合作</span><span data-en>Autonomous driving collaboration</span></td>
+            <td><span class="market-tag global"><span data-zh>全球</span><span data-en>Global</span></span></td>
+            <td><span data-zh>技术研发</span><span data-en>Tech R&amp;D</span></td>
+          </tr>
+          <!-- Row 13 -->
+          <tr>
+            <td><strong><span data-zh>墨西哥Durango司机工会</span><span data-en>Mexico Durango Drivers' Union</span></strong></td>
+            <td><span data-zh>3000台VF5 + 300台电动巴士</span><span data-en>3,000 VF5 + 300 electric buses</span></td>
+            <td><span class="market-tag mx"><span data-zh>墨西哥</span><span data-en>Mexico</span></span></td>
+            <td><span data-zh>采购订单</span><span data-en>Procurement Order</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- Opportunity Analysis -->
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-circle-check" style="color:var(--accent-green);margin-right:8px"></i><span data-zh>机会判断</span><span data-en>Opportunity Assessment</span></h3>
+    <p><span data-zh>VinFast的合作策略呈现清晰的"本地化生态构建"逻辑——在每个目标市场，同步推进金融（银行合作降低购车门槛）、基建（充电/换电网络）、售后（本地服务商认证）三条线。这种"三位一体"的打法比单纯卖车更具壁垒。</span><span data-en>VinFast's partnership strategy demonstrates a clear "localized ecosystem building" logic — in each target market, simultaneously advancing finance (bank partnerships to lower purchase barriers), infrastructure (charging/swapping networks), and after-sales (local service provider certification). This "trinity" approach creates stronger barriers than simply selling cars.</span></p>
+    <p style="margin-top:12px"><span data-zh>V-GREEN与Prime Group的10万充电站合作（12亿美元）如果落地，将使VinFast在印尼拥有远超竞争对手的充电网络优势，形成类似越南本土的"基建护城河"。</span><span data-en>If the V-GREEN and Prime Group 100,000 charging station partnership ($1.2B) materializes, it would give VinFast a charging network advantage in Indonesia far exceeding competitors, creating an "infrastructure moat" similar to its domestic Vietnamese model.</span></p>
+  </div>
+
+  <!-- Risk Analysis -->
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-circle-exclamation" style="color:var(--accent-orange);margin-right:8px"></i><span data-zh>风险判断</span><span data-en>Risk Assessment</span></h3>
+    <ul>
+      <li><span data-zh><strong>合作落地风险</strong>：多个MOU尚处于意向阶段，12亿美元充电站投资的实际执行进度存在不确定性</span><span data-en><strong>Execution Risk</strong>: Multiple MOUs remain at the intent stage; the actual execution progress of the $1.2B charging station investment is uncertain</span></li>
+      <li><span data-zh><strong>资金链风险</strong>：多市场同步扩张对资金需求极大，VinFast 2025年净亏损38.7亿美元，依赖母公司Vingroup持续输血（范日旺累计注资超55万亿越盾）</span><span data-en><strong>Cash Flow Risk</strong>: Multi-market simultaneous expansion requires enormous capital; VinFast's 2025 net loss was $3.87B, relying on continued support from parent Vingroup (Pham Nhat Vuong's cumulative injection exceeds VND 55 trillion)</span></li>
+      <li><span data-zh><strong>Green SM品牌连带风险</strong>：印尼铁路事故暴露了出行平台运营与车辆品牌声誉的强关联性</span><span data-en><strong>Green SM Brand Contagion Risk</strong>: The Indonesia railway accident exposed the strong linkage between mobility platform operations and vehicle brand reputation</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== SECTION 5: RISK ALERTS ==================== -->
+<section class="content-section" id="sec-risks">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <h2 class="section-title"><span data-zh>风险预警：需要重点关注的信号</span><span data-en>Risk Alerts: Signals Requiring Close Attention</span></h2>
+  </div>
+
+  <!-- Risk 1 -->
+  <div class="card risk-card risk-high reveal">
+    <div class="risk-badge high"><i class="fa-solid fa-circle-exclamation"></i> <span data-zh>高优先级</span><span data-en>HIGH PRIORITY</span></div>
+    <h3><span data-zh>风险1：印尼铁路事故——品牌声誉的压力测试</span><span data-en>Risk 1: Indonesia Railway Accident — Brand Reputation Stress Test</span></h3>
+    <p style="margin-bottom:12px"><span data-zh><strong>事件</strong>：2026年4月27日晚，雅加达东部Bekasi Timur站，一辆Green SM运营的VinFast VF e34电动出租车在铁路道口因电气故障断电锁死，无法移动。途经的KRL通勤列车撞上该车后停车，随后被后方Argo Bromo Anggrek长途列车追尾。事故造成至少14-15人死亡、数十人受伤。</span><span data-en><strong>Incident</strong>: On the evening of April 27, 2026, at Bekasi Timur station in eastern Jakarta, a Green SM-operated VinFast VF e34 electric taxi stalled at a railway crossing due to an electrical fault, becoming immobilized. A passing KRL commuter train struck the vehicle and stopped, then was rear-ended by the following Argo Bromo Anggrek long-distance train. The accident caused at least 14-15 deaths and dozens of injuries.</span></p>
+    <h4 style="margin-bottom:8px;font-size:0.95rem"><span data-zh>影响评估：</span><span data-en>Impact Assessment:</span></h4>
+    <ul>
+      <li><span data-zh>本周期内该事件产生超过15条主流媒体报道，是VinFast本月最大的负面事件</span><span data-en>The incident generated over 15 mainstream media reports this period, making it VinFast's largest negative event this month</span></li>
+      <li><span data-zh>引发印尼社会对电动出租车安全性的广泛质疑</span><span data-en>Triggered widespread public questioning of electric taxi safety in Indonesia</span></li>
+      <li><span data-zh>暴露了电动车断电后电子换挡系统锁死的行业通病（非VinFast独有）</span><span data-en>Exposed the industry-wide issue of electronic shift systems locking up after EV power loss (not unique to VinFast)</span></li>
+      <li><span data-zh>VinFast印尼CEO和Green SM均发表声明配合调查，但舆论压力持续</span><span data-en>VinFast Indonesia CEO and Green SM both issued statements cooperating with investigations, but public pressure continues</span></li>
+    </ul>
+    <div class="insight-box" style="border-left-color:var(--accent-red);background:var(--accent-red-bg)">
+      <strong><i class="fa-solid fa-shield-halved"></i> <span data-zh>风险研判</span><span data-en>Risk Assessment</span>：</strong>
+      <span data-zh>虽然电动车断电锁死是行业共性问题，但事故发生在VinFast正大力拓展印尼市场的关键时期，可能影响消费者信心和监管态度。需密切关注：(1) 印尼国家交通安全委员会的调查结论；(2) 是否引发针对电动出租车的监管收紧；(3) 对VinFast印尼销量和品牌认知的实际影响。</span>
+      <span data-en>Although EV power-loss lockup is an industry-wide issue, the accident occurred at a critical time when VinFast is aggressively expanding in Indonesia, potentially impacting consumer confidence and regulatory attitudes. Key areas to monitor: (1) Indonesia's National Transportation Safety Committee investigation findings; (2) whether it triggers tighter regulations on electric taxis; (3) actual impact on VinFast's Indonesia sales and brand perception.</span>
+    </div>
+  </div>
+
+  <!-- Risk 2 -->
+  <div class="card risk-card risk-medium reveal">
+    <div class="risk-badge medium"><i class="fa-solid fa-triangle-exclamation"></i> <span data-zh>中高优先级</span><span data-en>MEDIUM-HIGH</span></div>
+    <h3><span data-zh>风险2：持续亏损与盈利时间表再度推迟</span><span data-en>Risk 2: Persistent Losses &amp; Profitability Timeline Delayed Again</span></h3>
+    <ul>
+      <li><span data-zh>2025年净亏损<strong>38.7亿美元</strong>，累计亏损<strong>145亿美元</strong></span><span data-en>2025 net loss of <strong>$3.87 billion</strong>, cumulative losses of <strong>$14.5 billion</strong></span></li>
+      <li><span data-zh>盈亏平衡目标从2024年→2025年→2027年，已两次推迟</span><span data-en>Breakeven target postponed twice: 2024 → 2025 → 2027</span></li>
+      <li><span data-zh>多市场同步扩张（印尼建厂、印度建厂、充电网络投资）持续消耗现金</span><span data-en>Multi-market simultaneous expansion (Indonesia factory, India factory, charging network investment) continues to consume cash</span></li>
+    </ul>
+    <div class="insight-box" style="border-left-color:var(--accent-orange);background:var(--accent-orange-bg)">
+      <strong><i class="fa-solid fa-shield-halved"></i> <span data-zh>风险研判</span><span data-en>Risk Assessment</span>：</strong>
+      <span data-zh>VinFast的"先亏损换规模"策略在母公司Vingroup财务健康时可以维持，但如果越南房地产市场（Vinhomes为主要利润来源）出现波动，或Green SM IPO不及预期，资金链可能承压。Chardan Capital给出5.5美元目标价（买入），但Weiss Ratings给出卖出评级，市场分歧明显。</span>
+      <span data-en>VinFast's "lose money for scale" strategy is sustainable while parent Vingroup remains financially healthy, but if Vietnam's real estate market (Vinhomes is the primary profit source) fluctuates, or the Green SM IPO underperforms expectations, the cash chain could come under pressure. Chardan Capital set a $5.5 target price (Buy), while Weiss Ratings issued a Sell rating — a clear market divergence.</span>
+    </div>
+  </div>
+
+  <!-- Risk 3 -->
+  <div class="card risk-card risk-low reveal">
+    <div class="risk-badge low"><i class="fa-solid fa-info-circle"></i> <span data-zh>中优先级</span><span data-en>MEDIUM</span></div>
+    <h3><span data-zh>风险3：印尼电动车税收优惠到期</span><span data-en>Risk 3: Indonesia EV Tax Incentives Expiring</span></h3>
+    <p><span data-zh>印尼2026年实施第11号内政部规章，电动车机动车税豁免正式终止。VinFast VF3等入门车型年度持有成本从约19.3万盾升至330.1万盾。虽然绝对金额仍可控，但政策红利消退可能影响价格敏感型消费者的购买决策。</span><span data-en>Indonesia's 2026 implementation of Ministry of Home Affairs Regulation No. 11 officially terminates EV motor vehicle tax exemptions. Annual ownership costs for entry-level models like the VinFast VF3 rise from approximately IDR 193,000 to IDR 3,301,000. While the absolute amount remains manageable, the fading policy dividend may affect purchase decisions among price-sensitive consumers.</span></p>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6: COMPETITION ==================== -->
+<section class="content-section" id="sec-competition">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
+    <h2 class="section-title"><span data-zh>竞争格局速览</span><span data-en>Competitive Landscape Overview</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <div style="overflow-x:auto">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th><span data-zh>维度</span><span data-en>Dimension</span></th>
+            <th><span data-zh>VinFast的位置</span><span data-en>VinFast's Position</span></th>
+            <th><span data-zh>主要竞争对手</span><span data-en>Key Competitors</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Row 1 -->
+          <tr>
+            <td><span data-zh>越南汽车市场</span><span data-en>Vietnam Auto Market</span></td>
+            <td><span class="pos-1"><i class="fa-solid fa-crown" style="font-size:0.75rem"></i> <span data-zh>第一（市占率~40%）</span><span data-en>#1 (market share ~40%)</span></span></td>
+            <td><span data-zh>丰田、现代、起亚</span><span data-en>Toyota, Hyundai, Kia</span></td>
+          </tr>
+          <!-- Row 2 -->
+          <tr>
+            <td><span data-zh>越南电动摩托</span><span data-en>Vietnam E-Motorcycle</span></td>
+            <td><span class="pos-1"><i class="fa-solid fa-crown" style="font-size:0.75rem"></i> <span data-zh>第一（市占率~56%）</span><span data-en>#1 (market share ~56%)</span></span></td>
+            <td><span data-zh>本田（仅1.4%）、Dat Bike</span><span data-en>Honda (only 1.4%), Dat Bike</span></td>
+          </tr>
+          <!-- Row 3 -->
+          <tr>
+            <td><span data-zh>菲律宾BEV</span><span data-en>Philippines BEV</span></td>
+            <td><span class="pos-1"><i class="fa-solid fa-crown" style="font-size:0.75rem"></i> <span data-zh>第一（Q1市占率>50%）</span><span data-en>#1 (Q1 market share >50%)</span></span></td>
+            <td><span data-zh>特斯拉、MG、BYD</span><span data-en>Tesla, MG, BYD</span></td>
+          </tr>
+          <!-- Row 4 -->
+          <tr>
+            <td><span data-zh>印尼电动车</span><span data-en>Indonesia EV</span></td>
+            <td><span class="pos-rising"><i class="fa-solid fa-arrow-trend-up" style="font-size:0.75rem"></i> <span data-zh>快速上升中</span><span data-en>Rapidly Rising</span></span></td>
+            <td><span data-zh>BYD、五菱、Changan</span><span data-en>BYD, Wuling, Changan</span></td>
+          </tr>
+          <!-- Row 5 -->
+          <tr>
+            <td><span data-zh>印度电动车</span><span data-en>India EV</span></td>
+            <td><span class="pos-4"><span data-zh>第四（FY26销量2,390辆）</span><span data-en>#4 (FY26 sales: 2,390 units)</span></span></td>
+            <td><span data-zh>Tata、JSW MG、马恒达</span><span data-en>Tata, JSW MG, Mahindra</span></td>
+          </tr>
+          <!-- Row 6 -->
+          <tr>
+            <td><span data-zh>全球EV</span><span data-en>Global EV</span></td>
+            <td><span class="pos-niche"><span data-zh>小众玩家</span><span data-en>Niche Player</span></span></td>
+            <td><span data-zh>特斯拉、BYD、现代起亚</span><span data-en>Tesla, BYD, Hyundai-Kia</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-eye" style="color:var(--accent-green);margin-right:8px"></i><span data-zh>竞争观察</span><span data-en>Competitive Observation</span></h3>
+    <p><span data-zh>在越南和菲律宾，VinFast已建立明显领先优势。在印尼，面临中国品牌（BYD、五菱、Changan）的激烈竞争，但VinFast的生态打法（充电网络+出行平台+本地建厂）形成差异化。在印度，仍处于早期阶段，但已超越特斯拉。</span><span data-en>In Vietnam and the Philippines, VinFast has established a clear leading advantage. In Indonesia, it faces fierce competition from Chinese brands (BYD, Wuling, Changan), but VinFast's ecosystem approach (charging network + mobility platform + local manufacturing) creates differentiation. In India, it remains in the early stage but has already surpassed Tesla.</span></p>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7: FORWARD LOOK ==================== -->
+<section class="content-section" id="sec-outlook">
+  <div class="section-header reveal">
+    <span class="section-num">07</span>
+    <h2 class="section-title"><span data-zh>前瞻：未来30-90天关注要点</span><span data-en>Outlook: Key Focus Areas for the Next 30-90 Days</span></h2>
+  </div>
+
+  <div class="forward-grid">
+    <!-- Item 1 -->
+    <div class="forward-card reveal">
+      <div class="forward-num">1</div>
+      <div>
+        <h4><span data-zh>印尼铁路事故调查结论</span><span data-en>Indonesia Railway Accident Investigation Findings</span></h4>
+        <p><span data-zh>是否引发监管政策变化，对Green SM印尼业务的实际影响</span><span data-en>Whether it triggers regulatory policy changes and the actual impact on Green SM's Indonesia operations</span></p>
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="forward-card reveal reveal-delay-1">
+      <div class="forward-num">2</div>
+      <div>
+        <h4><span data-zh>Green SM Pre-IPO启动</span><span data-en>Green SM Pre-IPO Launch</span></h4>
+        <p><span data-zh>范日旺称2-3个月内启动，预计5-7月有实质进展</span><span data-en>Pham Nhat Vuong stated launch within 2-3 months; substantive progress expected May-July</span></p>
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div class="forward-card reveal reveal-delay-2">
+      <div class="forward-num">3</div>
+      <div>
+        <h4><span data-zh>2026年Q1财报（6月8日发布）</span><span data-en>Q1 2026 Earnings (June 8 Release)</span></h4>
+        <p><span data-zh>营收增速、亏损幅度、现金流状况</span><span data-en>Revenue growth rate, loss magnitude, cash flow status</span></p>
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div class="forward-card reveal reveal-delay-3">
+      <div class="forward-num">4</div>
+      <div>
+        <h4><span data-zh>印尼电动摩托6月首发</span><span data-en>Indonesia E-Motorcycle June Debut</span></h4>
+        <p><span data-zh>三款车型的定价策略和市场反响</span><span data-en>Pricing strategy and market reception of three models</span></p>
+      </div>
+    </div>
+    <!-- Item 5 -->
+    <div class="forward-card reveal">
+      <div class="forward-num">5</div>
+      <div>
+        <h4><span data-zh>VF MPV 7印度市场表现</span><span data-en>VF MPV 7 India Market Performance</span></h4>
+        <p><span data-zh>作为第三款车型能否打开家用MPV市场</span><span data-en>Whether the third model can open the family MPV market</span></p>
+      </div>
+    </div>
+    <!-- Item 6 -->
+    <div class="forward-card reveal reveal-delay-1">
+      <div class="forward-num">6</div>
+      <div>
+        <h4><span data-zh>增程技术（EREV）进展</span><span data-en>EREV Technology Progress</span></h4>
+        <p><span data-zh>VF 8/VF 9增程版的研发时间表</span><span data-en>R&amp;D timeline for VF 8/VF 9 extended-range versions</span></p>
+      </div>
+    </div>
+    <!-- Item 7 -->
+    <div class="forward-card reveal reveal-delay-2">
+      <div class="forward-num">7</div>
+      <div>
+        <h4><span data-zh>油价走势</span><span data-en>Oil Price Trajectory</span></h4>
+        <p><span data-zh>中东局势对全球电动车需求的持续影响</span><span data-en>Ongoing impact of Middle East tensions on global EV demand</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <p style="margin-bottom:8px;font-style:italic;color:var(--text-muted)">
+    <span data-zh>本报告基于公开媒体资讯整理分析，不构成投资建议。</span>
+    <span data-en>This report is based on publicly available media information and does not constitute investment advice.</span>
+  </p>
+  <p>
+    <span data-zh>© 2026 <span class="brand">Supinfor Ltd.</span> &nbsp;|&nbsp; 生成日期：2026年4月29日</span>
+    <span data-en>© 2026 <span class="brand">Supinfor Ltd.</span> &nbsp;|&nbsp; Generated: April 29, 2026</span>
+  </p>
+</footer>
+
+</main><!-- end main-content -->
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Management =====
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('themeBtn');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'auto') {
+      html.setAttribute('data-theme', getSystemTheme());
+    } else {
+      html.setAttribute('data-theme', theme);
+    }
+    updateThemeIcon();
+  }
+
+  function updateThemeIcon() {
+    const current = html.getAttribute('data-theme');
+    themeIcon.className = current === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  }
+
+  let themePref = localStorage.getItem('theme-pref') || 'auto';
+  applyTheme(themePref);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+    if (themePref === 'auto') applyTheme('auto');
+  });
+
+  themeBtn.addEventListener('click', function() {
+    const current = html.getAttribute('data-theme');
+    themePref = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme-pref', themePref);
+    applyTheme(themePref);
+  });
+
+  // ===== Language Management =====
+  const langBtn = document.getElementById('langBtn');
+  const langLabel = document.getElementById('langLabel');
+
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    langLabel.textContent = lang === 'zh' ? 'EN' : '中';
+  }
+
+  let langPref = localStorage.getItem('lang-pref') || 'zh';
+  applyLang(langPref);
+
+  langBtn.addEventListener('click', function() {
+    langPref = langPref === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('lang-pref', langPref);
+    applyLang(langPref);
+  });
+
+  // ===== Sidebar Toggle (Mobile) =====
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const hamburger = document.getElementById('hamburgerBtn');
+
+  function toggleSidebar() {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+  }
+
+  hamburger.addEventListener('click', toggleSidebar);
+  overlay.addEventListener('click', toggleSidebar);
+
+  // Close sidebar on nav click (mobile)
+  sidebar.querySelectorAll('nav a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (window.innerWidth <= 1024) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+      }
+    });
+  });
+
+  // ===== Active Nav Highlight =====
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.sidebar nav a');
+
+  function updateActiveNav() {
+    let current = '';
+    sections.forEach(function(section) {
+      var top = section.offsetTop - 120;
+      if (window.scrollY >= top) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+  // ===== Back to Top =====
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== IntersectionObserver Scroll Animations =====
+  var revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    // Fallback: show all
+    revealElements.forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  // ===== Bar Chart Animation =====
+  var barFills = document.querySelectorAll('.bar-fill');
+  barFills.forEach(function(bar) {
+    var targetWidth = bar.style.width;
+    bar.style.width = '0%';
+    if ('IntersectionObserver' in window) {
+      var barObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.style.width = targetWidth;
+            }, 200);
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      barObserver.observe(bar);
+    } else {
+      bar.style.width = targetWidth;
+    }
+  });
+
+})();
+</script>
+</body>
+</html>

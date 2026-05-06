@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德国能源矿业行业动态速览 | 2026.03.23-29</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Serif+SC:wght@400;600;700;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f0f1a;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #16213e;
+            --bg-card-hover: #1a2744;
+            --text-primary: #e8e8f0;
+            --text-secondary: #a0a0b8;
+            --text-muted: #6b6b80;
+            --accent-orange: #f59e0b;
+            --accent-red: #ef4444;
+            --accent-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-purple: #8b5cf6;
+            --border-color: rgba(255,255,255,0.06);
+            --border-accent: rgba(245,158,11,0.3);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+            --shadow-card: 0 4px 20px rgba(0,0,0,0.3);
+            --gradient-hero: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 40%, #16213e 100%);
+            --gradient-orange: linear-gradient(135deg, #f59e0b, #d97706);
+            --gradient-red: linear-gradient(135deg, #ef4444, #dc2626);
+            --noise: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        }
+
+        [data-theme="light"] {
+            --bg-primary: #f8f9fc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --border-color: rgba(0,0,0,0.08);
+            --border-accent: rgba(245,158,11,0.4);
+            --shadow-lg: 0 20px 60px rgba(0,0,0,0.08);
+            --shadow-card: 0 4px 20px rgba(0,0,0,0.06);
+            --gradient-hero: linear-gradient(135deg, #f8f9fc 0%, #eef2ff 40%, #fef3c7 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', 'Noto Serif SC', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: var(--noise);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            background: rgba(15,15,26,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        [data-theme="light"] .nav {
+            background: rgba(248,249,252,0.9);
+        }
+
+        .nav-brand {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-orange);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .nav-controls {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .nav-btn {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .nav-btn:hover {
+            border-color: var(--accent-orange);
+            color: var(--accent-orange);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 8rem 2rem 4rem;
+            background: var(--gradient-hero);
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%; right: -20%;
+            width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(245,158,11,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 1rem;
+            background: rgba(245,158,11,0.1);
+            border: 1px solid rgba(245,158,11,0.3);
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-orange);
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+
+        .hero-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent-orange) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            max-width: 600px;
+        }
+
+        /* KPI Cards */
+        .kpi-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+
+        .kpi-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .kpi-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--border-accent);
+            box-shadow: var(--shadow-card);
+        }
+
+        .kpi-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+        }
+
+        .kpi-card:nth-child(1)::before { background: var(--gradient-orange); }
+        .kpi-card:nth-child(2)::before { background: var(--gradient-red); }
+        .kpi-card:nth-child(3)::before { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+        .kpi-card:nth-child(4)::before { background: linear-gradient(135deg, #8b5cf6, #6d28d9); }
+
+        .kpi-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+
+        .kpi-value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            line-height: 1.2;
+        }
+
+        .kpi-change {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .kpi-change.negative {
+            color: var(--accent-red);
+            background: rgba(239,68,68,0.1);
+        }
+
+        .kpi-change.positive {
+            color: var(--accent-green);
+            background: rgba(16,185,129,0.1);
+        }
+
+        .kpi-change.warning {
+            color: var(--accent-orange);
+            background: rgba(245,158,11,0.1);
+        }
+
+        /* Main Content */
+        .main-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Section Headers */
+        .section-header {
+            margin-bottom: 2.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .section-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-orange);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        /* Core Findings */
+        .findings-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .finding-item {
+            display: flex;
+            gap: 1rem;
+            padding: 1.25rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            align-items: flex-start;
+        }
+
+        .finding-item:hover {
+            border-color: var(--border-accent);
+            transform: translateX(4px);
+        }
+
+        .finding-num {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent-orange);
+            opacity: 0.6;
+            min-width: 2rem;
+            line-height: 1.4;
+        }
+
+        .finding-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Section spacing */
+        .content-section {
+            margin-bottom: 5rem;
+        }
+
+        /* Focus Event Cards */
+        .focus-event {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .focus-event::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 4px; height: 100%;
+            background: var(--gradient-orange);
+        }
+
+        .focus-event-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            padding-left: 1rem;
+        }
+
+        .focus-event-body h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--accent-orange);
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        .focus-event-body p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        .focus-event-body ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .focus-event-body ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .focus-event-body ul li::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 0.7rem;
+            width: 6px; height: 6px;
+            background: var(--accent-orange);
+            border-radius: 50%;
+        }
+
+        /* Dynamic Scan Cards */
+        .scan-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .scan-category-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .scan-category-title i {
+            color: var(--accent-orange);
+            font-size: 1rem;
+        }
+
+        .scan-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .scan-item {
+            padding: 1rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            transition: all 0.2s ease;
+        }
+
+        .scan-item:hover {
+            border-color: var(--border-accent);
+        }
+
+        .scan-item strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+
+        /* Risk Cards */
+        .risk-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(239,68,68,0.2);
+            border-left: 4px solid var(--accent-red);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .risk-card:hover {
+            border-color: rgba(239,68,68,0.4);
+            box-shadow: 0 0 30px rgba(239,68,68,0.05);
+        }
+
+        .risk-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .risk-title i {
+            color: var(--accent-red);
+            font-size: 0.85rem;
+        }
+
+        .risk-body {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .risk-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            background: rgba(239,68,68,0.08);
+            border: 1px solid rgba(239,68,68,0.15);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-red);
+            font-weight: 500;
+        }
+
+        /* Trend Cards */
+        .trend-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(59,130,246,0.2);
+            border-left: 4px solid var(--accent-blue);
+            border-radius: 12px;
+            padding: 1.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .trend-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .trend-body {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .trend-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.4rem 0.75rem;
+            background: rgba(59,130,246,0.08);
+            border: 1px solid rgba(59,130,246,0.15);
+            border-radius: 6px;
+            font-size: 0.8rem;
+            color: var(--accent-blue);
+            font-weight: 500;
+        }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+            margin: 1.5rem 0;
+        }
+
+        .data-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: var(--bg-card);
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--border-color);
+            color: var(--text-secondary);
+        }
+
+        .data-table tr:hover td {
+            background: var(--bg-card);
+        }
+
+        .bar-cell {
+            position: relative;
+        }
+
+        .bar-bg {
+            position: absolute;
+            top: 50%; left: 1rem;
+            transform: translateY(-50%);
+            height: 6px;
+            background: rgba(245,158,11,0.2);
+            border-radius: 3px;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: var(--gradient-orange);
+            border-radius: 3px;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 4rem;
+        }
+
+        .footer-brand {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-orange);
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Back to top */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem; right: 2rem;
+            width: 44px; height: 44px;
+            background: var(--accent-orange);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 999;
+            box-shadow: 0 4px 15px rgba(245,158,11,0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero { padding: 6rem 1.25rem 3rem; min-height: auto; }
+            .hero-title { font-size: 2rem; }
+            .kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+            @media (min-width: 769px) and (max-width: 1024px) {
+                .kpi-grid { grid-template-columns: repeat(4, 1fr); }
+            }
+            .kpi-value { font-size: 1.5rem; }
+            .main-content { padding: 2rem 1.25rem; }
+            .focus-event { padding: 1.5rem; }
+            .nav { padding: 0.75rem 1.25rem; }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Sources list */
+        .sources-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .source-tag {
+            padding: 0.3rem 0.7rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;font-size:.82rem}
+        .lang-toggle button{background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:.82rem;font-weight:500;transition:all .2s}
+        .lang-toggle button.active{background:var(--accent-orange,#f59e0b);color:#0A1628;font-weight:700}
+        .lang-toggle button:hover:not(.active){background:rgba(245,158,11,.2)}
+        [data-lang="zh"] .lang-en{display:none!important}
+        [data-lang="en"] .lang-zh{display:none!important}
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-brand"><span class="lang-zh">SUPINFOR ENERGY MONITOR</span><span class="lang-en">SUPINFOR ENERGY MONITOR</span></div>
+        <div class="nav-controls">
+            <div class="lang-toggle">
+                <button class="active" onclick="setLang('zh')">中</button>
+                <button onclick="setLang('en')">EN</button>
+            </div>
+            <button class="nav-btn" id="themeToggle" title="切换主题">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-bolt"></i>
+                <span class="lang-zh">行业动态速览 · 2026年第13周</span><span class="lang-en">Industry Briefing · Week 13, 2026</span>
+            </div>
+            <h1 class="hero-title"><span class="lang-zh">德国能源矿业<br>行业动态速览</span><span class="lang-en">Germany Energy &amp; Mining<br>Industry Briefing</span></h1>
+            <p class="hero-subtitle"><span class="lang-zh">报告周期：2026-03-23 — 2026-03-29 · 覆盖11个栏目 · 396条独立资讯 · Supinfor 区域国别实时监测平台</span><span class="lang-en">Reporting Period: 2026-03-23 — 2026-03-29 · 11 Categories · 396 Independent Sources · Supinfor Country &amp; Regional Monitoring Platform</span></p>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-label"><span class="lang-zh">布伦特原油</span><span class="lang-en">BRENT CRUDE</span></div>
+                    <div class="kpi-value">$104</div>
+                    <div class="kpi-change negative"><i class="fas fa-arrow-up"></i> <span class="lang-zh">重回百元</span><span class="lang-en">Back above $100</span></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label"><span class="lang-zh">消费者信心指数</span><span class="lang-en">CONSUMER CONFIDENCE</span></div>
+                    <div class="kpi-value">-28.0</div>
+                    <div class="kpi-change negative"><i class="fas fa-arrow-down"></i> <span class="lang-zh">两年最低</span><span class="lang-en">2-year low</span></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label"><span class="lang-zh">民众不满率</span><span class="lang-en">PUBLIC DISSATISFACTION</span></div>
+                    <div class="kpi-value">80%</div>
+                    <div class="kpi-change warning"><i class="fas fa-exclamation-triangle"></i> <span class="lang-zh">措施不足</span><span class="lang-en">Insufficient measures</span></div>
+                </div>
+                <div class="kpi-card">
+                    <div class="kpi-label"><span class="lang-zh">潜在经济损失</span><span class="lang-en">POTENTIAL ECONOMIC LOSS</span></div>
+                    <div class="kpi-value">€400<span class="lang-zh">亿</span><span class="lang-en">B</span></div>
+                    <div class="kpi-change negative"><i class="fas fa-chart-line"></i> <span class="lang-zh">两年累计</span><span class="lang-en">2-year cumulative</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+        <!-- Section 1: Core Findings -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 01</div>
+                <h2 class="section-title"><span class="lang-zh">本周核心发现</span><span class="lang-en">Key Findings This Week</span></h2>
+            </div>
+            <ol class="findings-list">
+                <li class="finding-item">
+                    <span class="finding-num">01</span>
+                    <span class="finding-text"><span class="lang-zh">伊朗战争持续推高国际油气价格，德国燃油价格逼近2022年俄乌冲突时的历史高位，九成民众预计未来数月生活成本上升，消费者信心指数跌至两年最低。</span><span class="lang-en">The Iran war continues to push up international oil and gas prices. German fuel prices are approaching the historic highs seen during the 2022 Russia-Ukraine conflict. Ninety percent of citizens expect living costs to rise in the coming months, and the consumer confidence index has fallen to a two-year low.</span></span>
+                </li>
+                <li class="finding-item">
+                    <span class="finding-num">02</span>
+                    <span class="finding-text"><span class="lang-zh">德国联邦议院和参议院紧急通过燃油价格管控法案（加油站每日仅可12点上调一次油价），但80%民众认为措施不足，后续超额利润税、能源税减免等方案仍在博弈中。</span><span class="lang-en">The Bundestag and Bundesrat urgently passed a fuel price control bill (gas stations may only raise prices once daily at noon), but 80% of citizens consider the measures insufficient. Windfall profit taxes and energy tax relief proposals remain under debate.</span></span>
+                </li>
+                <li class="finding-item">
+                    <span class="finding-num">03</span>
+                    <span class="finding-text"><span class="lang-zh">总理默茨公开质疑2038年煤电退出时间表，称可能延长燃煤电厂运行时间，引发绿党强烈反对，能源政策路线之争再度激化。</span><span class="lang-en">Chancellor Merz publicly questioned the 2038 coal phase-out timeline, suggesting coal-fired power plants may need to operate longer. This triggered strong opposition from the Greens, reigniting the energy policy debate.</span></span>
+                </li>
+                <li class="finding-item">
+                    <span class="finding-num">04</span>
+                    <span class="finding-text"><span class="lang-zh">联邦经济部长赖希的可再生能源法改革方案遭多方批评，约90个县区、450亿欧元在建风光项目面临扩张停滞风险，石荷州能源部长直斥其为"扩张刹车"。</span><span class="lang-en">Federal Economy Minister Reiche's renewable energy law reform has drawn widespread criticism. Approximately 90 counties and €45 billion in wind and solar projects under construction face expansion stagnation risks. Schleswig-Holstein's energy minister called it an "expansion brake."</span></span>
+                </li>
+                <li class="finding-item">
+                    <span class="finding-num">05</span>
+                    <span class="finding-text"><span class="lang-zh">德国联邦宪法保卫局罕见向能源行业发布安全预警，明确指出极左翼袭击、俄罗斯网络攻击和外国投资渗透三大威胁。</span><span class="lang-en">Germany's Federal Office for the Protection of the Constitution issued a rare security warning to the energy sector, identifying three major threats: far-left attacks, Russian cyberattacks, and foreign investment infiltration.</span></span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Section 2: Focus Events -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 02</div>
+                <h2 class="section-title"><span class="lang-zh">焦点事件深度解读</span><span class="lang-en">In-Depth Focus Events</span></h2>
+            </div>
+
+            <!-- Focus Event 1 -->
+            <div class="focus-event">
+                <h3 class="focus-event-title"><i class="fas fa-fire" style="color:var(--accent-red);margin-right:0.5rem;"></i><span class="lang-zh">伊朗战争引发能源价格危机：德国经济面临"雪上加霜"</span><span class="lang-en">Iran War Triggers Energy Price Crisis: Germany's Economy Under Mounting Pressure</span></h3>
+                <div class="focus-event-body lang-zh">
+                    <h4>事件脉络</h4>
+                    <p>2月底美以对伊朗发动军事打击后，伊朗革命卫队封锁霍尔木兹海峡，全球约五分之一的石油和液化天然气运输受阻。布伦特原油价格重回每桶104美元以上，德国柴油价格一度逼近2022年3月的历史峰值（差距仅3.3欧分/升），E10汽油较危机前上涨近30欧分/升。</p>
+
+                    <h4>各方立场与博弈</h4>
+                    <ul>
+                        <li><strong>联邦政府：</strong>推出"燃油价格套餐"，核心为加油站每日仅可在12点上调一次油价（参考奥地利模式），违规罚款最高10万欧元，同时强化联邦卡特尔局权限。经济部长赖希表态支持临时上调通勤补贴。</li>
+                        <li><strong>联邦州：</strong>多州认为措施力度不足，要求设置燃油价格上限、征收石油企业超额利润税、下调能源税。萨克森-安哈尔特州长批评联邦卡特尔局"若继续按现有方式工作则无存在必要"。</li>
+                        <li><strong>社民党：</strong>提议效仿卢森堡设置燃油价格上限，通过对能源巨头征收暴利税补贴通勤者。</li>
+                        <li><strong>经济学家：</strong>基尔世界经济研究所所长舒拉里克反对燃油价格上限，认为应让市场传导信号；DIW能源专家肯弗特则指出德国正处于"根本性化石能源危机"。</li>
+                        <li><strong>民众：</strong>ZDF民调显示80%民众认为政府措施不足，73%支持临时下调燃油税，58%认为高油价是重大个人负担。</li>
+                    </ul>
+
+                    <h4>影响评估</h4>
+                    <ul>
+                        <li>联邦经济部长赖希警告，若冲突持续，德国或在4月底至5月出现燃油短缺，高能源成本或致德国经济两年损失约400亿欧元。</li>
+                        <li>德国4月消费者信心指数降至-28.0（两年最低），60%消费者预期能源价格将长期高企。</li>
+                        <li>农业领域柴油和化肥成本暴涨，食品终端价格面临上涨压力。</li>
+                        <li>捷克边境加油站因德国人跨境加油已出现燃油售罄。</li>
+                    </ul>
+
+                    <h4>后续走向研判</h4>
+                    <p>联合政府的燃油价格专项工作组将在4月10日前完成七项新减负措施的审核，包括超额利润税、提高通勤补贴、降低能源税或机动车税、试点燃油折扣、重启备用燃煤电厂等。若伊朗冲突持续超过夏季，德国经济增速或降至0.2%，通胀可能短期升至6%。</p>
+                </div>
+                <div class="focus-event-body lang-en">
+                    <h4>Event Timeline</h4>
+                    <p>Following the US-Israeli military strikes on Iran in late February, Iran's Revolutionary Guard blockaded the Strait of Hormuz, disrupting roughly one-fifth of global oil and LNG shipments. Brent crude surged back above $104/barrel. German diesel prices briefly approached the March 2022 historic peak (gap of only 3.3 euro cents/liter), while E10 gasoline rose nearly 30 euro cents/liter from pre-crisis levels.</p>
+
+                    <h4>Stakeholder Positions</h4>
+                    <ul>
+                        <li><strong>Federal Government:</strong> Introduced a "fuel price package" — gas stations may only raise prices once daily at noon (modeled on Austria), with fines up to €100,000 for violations. The Federal Cartel Office's powers were also strengthened. Economy Minister Reiche expressed support for temporarily raising commuter allowances.</li>
+                        <li><strong>Federal States:</strong> Multiple states consider the measures insufficient, demanding fuel price caps, windfall profit taxes on oil companies, and energy tax reductions. Saxony-Anhalt's Minister-President criticized the Federal Cartel Office as "unnecessary if it continues working as before."</li>
+                        <li><strong>SPD:</strong> Proposed fuel price caps following Luxembourg's model, funded by windfall taxes on energy giants to subsidize commuters.</li>
+                        <li><strong>Economists:</strong> Kiel Institute President Schularick opposes fuel price caps, arguing markets should transmit price signals. DIW energy expert Kemfert noted Germany is in a "fundamental fossil energy crisis."</li>
+                        <li><strong>Public:</strong> ZDF polls show 80% of citizens consider government measures insufficient, 73% support temporary fuel tax cuts, and 58% view high fuel prices as a significant personal burden.</li>
+                    </ul>
+
+                    <h4>Impact Assessment</h4>
+                    <ul>
+                        <li>Economy Minister Reiche warned that if the conflict persists, Germany could face fuel shortages by late April to May. High energy costs could cost the German economy approximately €40 billion over two years.</li>
+                        <li>Germany's April consumer confidence index fell to -28.0 (two-year low), with 60% of consumers expecting energy prices to remain elevated long-term.</li>
+                        <li>Soaring diesel and fertilizer costs in agriculture are putting upward pressure on food prices.</li>
+                        <li>Czech border gas stations have already sold out due to Germans crossing the border to refuel.</li>
+                    </ul>
+
+                    <h4>Outlook</h4>
+                    <p>The coalition's fuel price task force will complete review of seven new relief measures by April 10, including windfall profit taxes, increased commuter allowances, energy or vehicle tax reductions, pilot fuel discounts, and restarting reserve coal-fired power plants. If the Iran conflict extends beyond summer, Germany's GDP growth could drop to 0.2%, with inflation potentially spiking to 6% short-term.</p>
+                </div>
+            </div>
+
+            <!-- Focus Event 2 -->
+            <div class="focus-event">
+                <h3 class="focus-event-title"><i class="fas fa-industry" style="color:var(--accent-orange);margin-right:0.5rem;"></i><span class="lang-zh">煤电退出之争：默茨质疑2038时间表，能源政策路线分裂</span><span class="lang-en">Coal Phase-Out Dispute: Merz Questions 2038 Timeline, Energy Policy Divided</span></h3>
+                <div class="focus-event-body lang-zh">
+                    <h4>事件脉络</h4>
+                    <p>3月28日，总理默茨在F.A.Z.2026大会上公开表示，面对能源价格上涨和供电短缺风险，可能需要延长运行中燃煤电厂的使用时间，不再坚持"不切实际的退出计划"。他同时呼吁加快建设燃气电厂，长期寄望核聚变技术，明确反对重启核电。</p>
+
+                    <h4>各方立场</h4>
+                    <ul>
+                        <li><strong>默茨（基民盟）：</strong>不愿"仅因过往决议就动摇能源供应核心"，强调需保障德国工业核心竞争力。</li>
+                        <li><strong>绿党：</strong>联邦议院绿党能源政策发言人凯尔纳批评此举"既不环保也成本高昂"，指出德国煤电发电量已降至1914年以来最低，退出已由市场驱动。勃兰登堡绿党主席批评默茨"破坏国家行动可靠性"。</li>
+                        <li><strong>能源集团Leag：</strong>按约定2038年前关闭所有燃煤电厂，可获约17.5亿欧元补偿，绿党称若政策被破坏则补偿不再合理。</li>
+                    </ul>
+
+                    <h4>影响评估</h4>
+                    <p>这一表态标志着德国能源政策的重大不确定性信号。煤电退出时间表的动摇将影响能源企业的投资规划、碳市场预期以及德国在欧盟气候政策中的信誉。同时，默茨对核聚变的支持（联邦研究部计划2029年前投入24亿欧元）和对小型模块化核反应堆研究的开放态度，预示着德国能源结构讨论将进入新阶段。</p>
+                </div>
+                <div class="focus-event-body lang-en">
+                    <h4>Event Timeline</h4>
+                    <p>On March 28, Chancellor Merz publicly stated at the F.A.Z. 2026 conference that, facing rising energy prices and power supply risks, coal-fired power plants may need to operate longer, abandoning "unrealistic phase-out plans." He also called for accelerating gas-fired power plant construction, expressed long-term hopes for nuclear fusion, and explicitly opposed restarting nuclear power.</p>
+
+                    <h4>Stakeholder Positions</h4>
+                    <ul>
+                        <li><strong>Merz (CDU):</strong> Unwilling to "undermine the core of energy supply merely because of past resolutions," emphasizing the need to safeguard Germany's industrial competitiveness.</li>
+                        <li><strong>Greens:</strong> Bundestag Green energy spokesperson Kellner criticized the move as "neither environmentally friendly nor cost-effective," noting German coal power generation has fallen to its lowest since 1914, with the phase-out already market-driven. Brandenburg's Green party chair accused Merz of "undermining the reliability of state action."</li>
+                        <li><strong>Energy group Leag:</strong> Under existing agreements, Leag would receive approximately €1.75 billion in compensation for closing all coal plants by 2038. The Greens argue compensation is no longer justified if the policy is undermined.</li>
+                    </ul>
+
+                    <h4>Impact Assessment</h4>
+                    <p>This statement signals major uncertainty in German energy policy. Wavering on the coal phase-out timeline will affect energy companies' investment planning, carbon market expectations, and Germany's credibility in EU climate policy. Meanwhile, Merz's support for nuclear fusion (the Federal Research Ministry plans to invest €2.4 billion by 2029) and openness to small modular reactor research suggest Germany's energy mix debate is entering a new phase.</p>
+                </div>
+            </div>
+
+            <!-- Focus Event 3 -->
+            <div class="focus-event">
+                <h3 class="focus-event-title"><i class="fas fa-wind" style="color:var(--accent-blue);margin-right:0.5rem;"></i><span class="lang-zh">可再生能源法改革争议：90个县区、450亿欧元项目面临停滞</span><span class="lang-en">Renewable Energy Law Reform Controversy: 90 Counties, €45B in Projects at Risk</span></h3>
+                <div class="focus-event-body lang-zh">
+                    <h4>事件脉络</h4>
+                    <p>联邦经济部长赖希拟通过两项新法案修改能源转型规则：取消户用太阳能固定上网电价，要求新光伏电站自行售电；推出"电网接入包"，其中核心的Redispatch-Vorbehalt将使电网容量受限地区的可再生能源扩建失去吸引力。</p>
+
+                    <h4>影响范围</h4>
+                    <p>据enervis评估，德国约90个县区将受影响，当地在建前的风电光伏项目总值达450亿欧元，面临扩张停滞风险。石勒苏益格-荷尔斯泰因州能源部长戈德施密特直斥该计划为"扩张刹车"，认为其不符合当前化石能源危机下的能源安全需求。</p>
+                    <p>Green Planet Energy认为应加快电网数字化、利用过剩绿电生产绿氢或供热，而非将电网问题归咎于可再生能源。</p>
+                </div>
+                <div class="focus-event-body lang-en">
+                    <h4>Event Timeline</h4>
+                    <p>Federal Economy Minister Reiche plans to amend energy transition rules through two new bills: eliminating fixed feed-in tariffs for residential solar and requiring new PV installations to sell electricity independently; and introducing a "grid access package," whose core Redispatch-Vorbehalt provision would make renewable energy expansion unattractive in grid-constrained areas.</p>
+
+                    <h4>Scope of Impact</h4>
+                    <p>According to enervis analysis, approximately 90 German counties would be affected, with pre-construction wind and solar projects worth €45 billion facing expansion stagnation risks. Schleswig-Holstein's Energy Minister Goldschmidt called the plan an "expansion brake," arguing it contradicts energy security needs amid the current fossil fuel crisis.</p>
+                    <p>Green Planet Energy argues for accelerating grid digitalization and using surplus green electricity to produce green hydrogen or district heating, rather than blaming renewable energy for grid problems.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Industry Scan -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 03</div>
+                <h2 class="section-title"><span class="lang-zh">行业动态扫描</span><span class="lang-en">Industry Dynamics Scan</span></h2>
+            </div>
+
+            <div class="scan-category">
+                <h3 class="scan-category-title"><i class="fas fa-gas-pump"></i> <span class="lang-zh">燃油市场与价格管控</span><span class="lang-en">Fuel Market &amp; Price Controls</span></h3>
+                <div class="scan-items lang-zh">
+                    <div class="scan-item">德国联邦议院和参议院在一周内紧急通过燃油价格管控法案，联邦总统签署后即将生效，规定加油站每日仅可在12点上调油价，降价不受限，违规最高罚<strong>10万欧元</strong>。</div>
+                    <div class="scan-item">ADAC数据显示复活节前燃油价格小幅回落，柴油较周一高点降<strong>7.6欧分</strong>，但仍远高于危机前水平。</div>
+                    <div class="scan-item">联邦卡特尔局局长表示暂未发现石油企业滥用市场地位的证据，但德国柴油批发价与原油价格出现<strong>脱钩现象</strong>。</div>
+                    <div class="scan-item">欧盟数据显示德国燃油涨幅已从初期领先邻国回落至中游水平，波兰则采取了更激进的降税和限价措施。</div>
+                </div>
+                <div class="scan-items lang-en">
+                    <div class="scan-item">The Bundestag and Bundesrat urgently passed a fuel price control bill within one week. After presidential signature, gas stations may only raise prices at noon, with no restrictions on price cuts. Maximum fine: <strong>€100,000</strong>.</div>
+                    <div class="scan-item">ADAC data shows fuel prices slightly retreated before Easter, with diesel dropping <strong>7.6 euro cents</strong> from Monday's peak, but still far above pre-crisis levels.</div>
+                    <div class="scan-item">The Federal Cartel Office president stated no evidence of oil companies abusing market dominance has been found, but German diesel wholesale prices have shown <strong>decoupling</strong> from crude oil prices.</div>
+                    <div class="scan-item">EU data shows Germany's fuel price increases have fallen from leading neighboring countries to mid-range levels. Poland has adopted more aggressive tax cuts and price cap measures.</div>
+                </div>
+            </div>
+
+            <div class="scan-category">
+                <h3 class="scan-category-title"><i class="fas fa-solar-panel"></i> <span class="lang-zh">可再生能源与电网建设</span><span class="lang-en">Renewable Energy &amp; Grid Infrastructure</span></h3>
+                <div class="scan-items lang-zh">
+                    <div class="scan-item"><strong>海上风电：</strong>联邦海事局批准RWE在北海建设60台风机（总装机<strong>900兆瓦</strong>），2027年春开工，2029年全面投运，挪威主权基金持股49%。</div>
+                    <div class="scan-item"><strong>HVDC技术：</strong>Pfisterer在温特巴赫投资<strong>3000万欧元</strong>建设32米高的高压直流输电资质认证中心，2027年投用，服务全球能源转型。</div>
+                    <div class="scan-item"><strong>南德天然气管道：</strong>SEL项目在Waiblingen完成53吨重Düker安装，总长250公里管道2026年秋起供气，未来可运输氢气。</div>
+                    <div class="scan-item"><strong>智能电表：</strong>联邦网络局对77家未达20%安装配额的电网运营商启动罚款程序，德国智能电表普及率仅<strong>5.5%</strong>，远落后于欧洲多数国家80%以上的水平。</div>
+                    <div class="scan-item"><strong>跨境供热：</strong>德波城市格尔利茨与兹戈热莱茨的"United Heat"项目动工，总投资约<strong>2亿欧元</strong>，计划2030年实现供热完全转为可再生能源。</div>
+                </div>
+                <div class="scan-items lang-en">
+                    <div class="scan-item"><strong>Offshore Wind:</strong> The Federal Maritime Agency approved RWE to build 60 turbines in the North Sea (total capacity <strong>900 MW</strong>), with construction starting spring 2027 and full operation by 2029. Norway's sovereign wealth fund holds a 49% stake.</div>
+                    <div class="scan-item"><strong>HVDC Technology:</strong> Pfisterer is investing <strong>€30 million</strong> in a 32-meter-tall HVDC qualification center in Winterbach, operational by 2027, serving the global energy transition.</div>
+                    <div class="scan-item"><strong>Southern Germany Gas Pipeline:</strong> The SEL project completed installation of a 53-ton Düker in Waiblingen. The 250 km pipeline will begin gas supply in autumn 2026 and can transport hydrogen in the future.</div>
+                    <div class="scan-item"><strong>Smart Meters:</strong> The Federal Network Agency initiated penalty proceedings against 77 grid operators that failed to meet the 20% installation quota. Germany's smart meter penetration is only <strong>5.5%</strong>, far behind most European countries at over 80%.</div>
+                    <div class="scan-item"><strong>Cross-Border Heating:</strong> The German-Polish "United Heat" project between Görlitz and Zgorzelec broke ground, with total investment of approximately <strong>€200 million</strong>, aiming for fully renewable heating by 2030.</div>
+                </div>
+            </div>
+
+            <div class="scan-category">
+                <h3 class="scan-category-title"><i class="fas fa-flask"></i> <span class="lang-zh">传统能源与化工产业</span><span class="lang-en">Traditional Energy &amp; Chemical Industry</span></h3>
+                <div class="scan-items lang-zh">
+                    <div class="scan-item"><strong>化学议程2045：</strong>联邦政府推出50页国家化学议程，计划大幅扩大电价补偿（追溯至2025年生效）、推进欧盟碳交易改革、简化化学品法规，帮扶深陷战后最严重危机的化工行业。</div>
+                    <div class="scan-item"><strong>Domo Chemicals破产：</strong>比利时企业Domo三家德国子公司破产，萨克森-安哈尔特州出资维持危化设施运营至3月底，目前仍未找到投资者。</div>
+                    <div class="scan-item"><strong>蒂森克虏伯电工钢：</strong>因亚洲低价进口冲击（欧盟进口量自2022年增三倍），计划6-9月关停法国工厂，约<strong>600名员工</strong>受影响。</div>
+                    <div class="scan-item"><strong>巴斯夫：</strong>推进出售法兰克福赫希斯特工业园生产装置，与ProChem InnoTec签署协议，交易预计明年一季度末完成。</div>
+                </div>
+                <div class="scan-items lang-en">
+                    <div class="scan-item"><strong>Chemical Agenda 2045:</strong> The federal government released a 50-page national chemical agenda, planning to significantly expand electricity price compensation (retroactive to 2025), advance EU carbon trading reform, and simplify chemical regulations to support the chemical industry in its worst post-war crisis.</div>
+                    <div class="scan-item"><strong>Domo Chemicals Bankruptcy:</strong> Belgian company Domo's three German subsidiaries filed for bankruptcy. Saxony-Anhalt funded continued operation of hazardous facilities through end of March; no investor has been found yet.</div>
+                    <div class="scan-item"><strong>ThyssenKrupp Electrical Steel:</strong> Due to low-cost Asian imports (EU imports tripled since 2022), plans to shut down its French plant from June to September, affecting approximately <strong>600 employees</strong>.</div>
+                    <div class="scan-item"><strong>BASF:</strong> Advancing the sale of production facilities at Frankfurt's Höchst Industrial Park, signing an agreement with ProChem InnoTec. The transaction is expected to close by end of Q1 next year.</div>
+                </div>
+            </div>
+
+            <div class="scan-category">
+                <h3 class="scan-category-title"><i class="fas fa-gavel"></i> <span class="lang-zh">能源政策与气候保护</span><span class="lang-en">Energy Policy &amp; Climate Protection</span></h3>
+                <div class="scan-items lang-zh">
+                    <div class="scan-item"><strong>天然气退出法案：</strong>联邦内阁通过《能源经济法》修正案，允许天然气网络运营商在无气候友好用途时停用网络，用户不再享有基本用气权，目标2045年气候中和。</div>
+                    <div class="scan-item"><strong>气候保护计划：</strong>环境部长施耐德推出新气候保护方案（67项措施），但政府专家顾问团认为无法实现2030及2040年目标，律师计划起诉联邦政府。</div>
+                    <div class="scan-item"><strong>供暖法改革：</strong>现政府拟放宽供暖法案，允许新安装油气壁挂炉，业内反应分裂。</div>
+                    <div class="scan-item"><strong>联邦州能源部长会议：</strong>多数部长呼吁降低全用户电力税，批评联邦经济部长能源政策"过时"，要求扩大可再生能源投资。</div>
+                </div>
+                <div class="scan-items lang-en">
+                    <div class="scan-item"><strong>Natural Gas Phase-Out Bill:</strong> The federal cabinet passed an amendment to the Energy Industry Act, allowing gas network operators to decommission networks when no climate-friendly use exists. Users will no longer have a basic right to gas supply, targeting climate neutrality by 2045.</div>
+                    <div class="scan-item"><strong>Climate Protection Plan:</strong> Environment Minister Schneider introduced a new climate protection plan (67 measures), but the government's expert advisory council considers the 2030 and 2040 targets unachievable. Lawyers plan to sue the federal government.</div>
+                    <div class="scan-item"><strong>Heating Law Reform:</strong> The current government plans to relax the heating law, allowing new installation of oil and gas boilers. Industry reactions are divided.</div>
+                    <div class="scan-item"><strong>State Energy Ministers' Conference:</strong> Most ministers called for reducing electricity taxes for all users, criticized the Federal Economy Minister's energy policy as "outdated," and demanded expanded renewable energy investment.</div>
+                </div>
+            </div>
+
+            <div class="scan-category">
+                <h3 class="scan-category-title"><i class="fas fa-chart-line"></i> <span class="lang-zh">资本市场与企业动态</span><span class="lang-en">Capital Markets &amp; Corporate Developments</span></h3>
+                <div class="scan-items lang-zh">
+                    <div class="scan-item">布伦特原油重回<strong>104美元/桶</strong>，DAX指数承压下跌1.8%，10年期德债收益率升至<strong>3.06%</strong>（2011年以来高位）。</div>
+                    <div class="scan-item">安联通过<strong>10亿欧元</strong>基础设施基金入股德国第二大电网运营商Amprion，首期投资4亿欧元。</div>
+                    <div class="scan-item">KfW德国基金拟用<strong>300亿欧元</strong>国资撬动千亿私人投资，聚焦能源基建与绿色技术。</div>
+                    <div class="scan-item">泵阀制造商KSB因中东战争面临能源与物流成本上升，股价下跌近<strong>8%</strong>。</div>
+                </div>
+                <div class="scan-items lang-en">
+                    <div class="scan-item">Brent crude returned to <strong>$104/barrel</strong>, the DAX index fell 1.8% under pressure, and 10-year German bond yields rose to <strong>3.06%</strong> (highest since 2011).</div>
+                    <div class="scan-item">Allianz acquired a stake in Germany's second-largest grid operator Amprion through a <strong>€1 billion</strong> infrastructure fund, with an initial investment of €400 million.</div>
+                    <div class="scan-item">KfW's Germany Fund plans to leverage <strong>€30 billion</strong> in public capital to mobilize hundreds of billions in private investment, focusing on energy infrastructure and green technology.</div>
+                    <div class="scan-item">Pump and valve manufacturer KSB faces rising energy and logistics costs due to the Middle East war, with its stock price dropping nearly <strong>8%</strong>.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Risk Alerts -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 04</div>
+                <h2 class="section-title"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2>
+            </div>
+
+            <div class="risk-card">
+                <h4 class="risk-title"><i class="fas fa-exclamation-circle"></i> <span class="lang-zh">燃油供应短缺风险</span><span class="lang-en">Fuel Supply Shortage Risk</span></h4>
+                <p class="risk-body"><span class="lang-zh">联邦经济部长赖希明确警告，若伊朗冲突持续，德国或在4月底至5月出现燃油短缺。壳牌CEO也表示若霍尔木兹海峡持续受阻，欧洲4月或现柴油、汽油供应紧张。捷克边境加油站已出现售罄现象。</span><span class="lang-en">Federal Economy Minister Reiche explicitly warned that if the Iran conflict persists, Germany could face fuel shortages by late April to May. Shell's CEO also stated that if the Strait of Hormuz remains blocked, Europe could see diesel and gasoline supply tightness in April. Czech border gas stations have already sold out.</span></p>
+                <span class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：霍尔木兹海峡通航状态、IEA原油储备释放进展、德国战略石油储备动用情况</span><span class="lang-en">Watch: Strait of Hormuz navigation status, IEA oil reserve release progress, Germany's strategic petroleum reserve deployment</span></span>
+            </div>
+
+            <div class="risk-card">
+                <h4 class="risk-title"><i class="fas fa-exclamation-circle"></i> <span class="lang-zh">通胀回升与经济衰退叠加风险</span><span class="lang-en">Inflation Resurgence &amp; Recession Overlap Risk</span></h4>
+                <p class="risk-body"><span class="lang-zh">多位经济学家预计，若伊朗冲突持续，德国通胀或短期升至6%，经济增速降至0.2%，可能陷入第四年衰退。GfK消费信心指数大跌3.2点至-28.0，60%消费者预期能源价格将长期高企。</span><span class="lang-en">Multiple economists forecast that if the Iran conflict continues, German inflation could spike to 6% short-term, GDP growth could drop to 0.2%, potentially entering a fourth year of recession. The GfK consumer confidence index plunged 3.2 points to -28.0, with 60% of consumers expecting energy prices to remain elevated long-term.</span></p>
+                <span class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：月度CPI数据、ECB利率决议、德国GDP季度数据、消费者信心指数</span><span class="lang-en">Watch: Monthly CPI data, ECB interest rate decisions, German quarterly GDP, consumer confidence index</span></span>
+            </div>
+
+            <div class="risk-card">
+                <h4 class="risk-title"><i class="fas fa-exclamation-circle"></i> <span class="lang-zh">能源政策不确定性加剧投资风险</span><span class="lang-en">Energy Policy Uncertainty Heightens Investment Risk</span></h4>
+                <p class="risk-body"><span class="lang-zh">默茨质疑煤电退出时间表、赖希的可再生能源法改革引发450亿欧元项目停滞风险、供暖法放宽等政策信号相互矛盾，企业难以做出长期投资决策。</span><span class="lang-en">Merz questioning the coal phase-out timeline, Reiche's renewable energy law reform risking €45 billion in project stagnation, and the relaxation of heating laws send contradictory policy signals, making it difficult for companies to make long-term investment decisions.</span></p>
+                <span class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：可再生能源法修订案进展、Redispatch-Vorbehalt实施细则、煤电退出立法动态</span><span class="lang-en">Watch: Renewable energy law amendment progress, Redispatch-Vorbehalt implementation details, coal phase-out legislative developments</span></span>
+            </div>
+
+            <div class="risk-card">
+                <h4 class="risk-title"><i class="fas fa-exclamation-circle"></i> <span class="lang-zh">能源基础设施安全威胁升级</span><span class="lang-en">Escalating Energy Infrastructure Security Threats</span></h4>
+                <p class="risk-body"><span class="lang-zh">联邦宪法保卫局罕见发布行业预警，明确指出极左翼"Switch Off"运动将能源企业列为攻击目标，俄罗斯"Berserk Bear"组织针对能源行业的网络攻击能力，以及外国投资渗透风险。此前柏林已发生输电塔纵火事件导致5万户停电。</span><span class="lang-en">The Federal Office for the Protection of the Constitution issued a rare industry warning, identifying the far-left "Switch Off" movement targeting energy companies, Russia's "Berserk Bear" group's cyberattack capabilities against the energy sector, and foreign investment infiltration risks. A previous arson attack on a Berlin transmission tower had caused power outages for 50,000 households.</span></p>
+                <span class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：能源基础设施安全事件频率、联邦网络安全局预警等级、外资审查案例</span><span class="lang-en">Watch: Energy infrastructure security incident frequency, Federal Cybersecurity Agency alert levels, foreign investment review cases</span></span>
+            </div>
+        </section>
+
+        <!-- Section 5: Trends -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 05</div>
+                <h2 class="section-title"><span class="lang-zh">趋势研判</span><span class="lang-en">Trend Analysis</span></h2>
+            </div>
+
+            <div class="trend-card">
+                <h4 class="trend-title"><span class="lang-zh">德国正经历第二次"能源主权觉醒"，政策将加速向多元化转型</span><span class="lang-en">Germany's Second "Energy Sovereignty Awakening" — Policy Accelerating Toward Diversification</span></h4>
+                <p class="trend-body"><span class="lang-zh">2022年俄气危机后德国快速建成LNG终端，此次伊朗战争再次暴露对中东石油的依赖。ZDF分析指出"危机能催生平时难以推行的决策"。联邦政府已在讨论加大本土天然气开发、重启备用煤电厂、加速电气化等措施。预计未来半年内将出台更系统性的能源安全战略。</span><span class="lang-en">After the 2022 Russian gas crisis, Germany rapidly built LNG terminals. The Iran war has once again exposed dependence on Middle Eastern oil. ZDF analysis noted that "crises can catalyze decisions that are difficult to push through in normal times." The federal government is already discussing expanding domestic natural gas development, restarting reserve coal plants, and accelerating electrification. A more systematic energy security strategy is expected within the next six months.</span></p>
+                <span class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键指标：本土天然气开发政策进展、LNG长期合同签署、战略石油储备规模调整</span><span class="lang-en">Key Indicators: Domestic gas development policy progress, LNG long-term contract signings, strategic petroleum reserve adjustments</span></span>
+            </div>
+
+            <div class="trend-card">
+                <h4 class="trend-title"><span class="lang-zh">燃油价格管控将从"透明化"走向"实质性干预"</span><span class="lang-en">Fuel Price Controls Shifting from "Transparency" to "Substantive Intervention"</span></h4>
+                <p class="trend-body"><span class="lang-zh">当前通过的法案仅为第一步（提升价格透明度），但80%民众不满、多州施压、社民党推动的超额利润税和价格上限方案仍在议程上。若油价持续高企，政府将被迫推出更激进的财政减负措施。</span><span class="lang-en">The current bill is only the first step (improving price transparency), but with 80% public dissatisfaction, pressure from multiple states, and the SPD pushing windfall profit taxes and price caps still on the agenda. If oil prices remain elevated, the government will be forced to introduce more aggressive fiscal relief measures.</span></p>
+                <span class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键指标：4月10日燃油专项工作组审核结果、超额利润税立法进展、能源税临时减免方案</span><span class="lang-en">Key Indicators: April 10 fuel task force review results, windfall profit tax legislative progress, temporary energy tax relief proposals</span></span>
+            </div>
+
+            <div class="trend-card">
+                <h4 class="trend-title"><span class="lang-zh">可再生能源扩张面临"政策刹车"与"市场加速"的矛盾</span><span class="lang-en">Renewable Energy Expansion Faces "Policy Brake" vs. "Market Acceleration" Contradiction</span></h4>
+                <p class="trend-body"><span class="lang-zh">一方面赖希的改革方案可能抑制风光项目扩张，另一方面化石能源价格暴涨正加速电动化和可再生能源的经济性优势。联邦政府500亿欧元Wallbox补贴、RWE北海风电获批等信号表明，资本仍在加速流入清洁能源领域。</span><span class="lang-en">On one hand, Reiche's reform may suppress wind and solar expansion; on the other, soaring fossil fuel prices are accelerating the economic advantages of electrification and renewables. The federal government's €50 billion Wallbox subsidy and RWE's North Sea wind farm approval signal that capital continues to flow into clean energy at an accelerating pace.</span></p>
+                <span class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键指标：可再生能源法修订最终版本、风光项目招标结果、电动车销量与充电设施建设速度</span><span class="lang-en">Key Indicators: Final renewable energy law revision, wind/solar project tender results, EV sales and charging infrastructure deployment pace</span></span>
+            </div>
+
+            <div class="trend-card">
+                <h4 class="trend-title"><span class="lang-zh">化工行业危机倒逼产业政策转型</span><span class="lang-en">Chemical Industry Crisis Forcing Industrial Policy Transformation</span></h4>
+                <p class="trend-body"><span class="lang-zh">化学议程2045的出台标志着联邦政府首次系统性回应化工行业困境。电价补偿扩大、碳交易改革、法规简化等措施若落地，将为能源密集型产业提供喘息空间，但根本性竞争力恢复仍取决于能源成本能否回归合理区间。</span><span class="lang-en">The release of Chemical Agenda 2045 marks the federal government's first systematic response to the chemical industry's predicament. If measures such as expanded electricity price compensation, carbon trading reform, and regulatory simplification are implemented, they will provide breathing room for energy-intensive industries. However, fundamental competitiveness recovery still depends on whether energy costs can return to reasonable levels.</span></p>
+                <span class="trend-indicator"><i class="fas fa-binoculars"></i> <span class="lang-zh">关键指标：工业电价补偿落地时间、欧盟碳边境调节机制进展、化工企业产能利用率</span><span class="lang-en">Key Indicators: Industrial electricity compensation implementation timeline, EU CBAM progress, chemical industry capacity utilization rates</span></span>
+            </div>
+        </section>
+
+        <!-- Section 6: Appendix -->
+        <section class="content-section fade-in">
+            <div class="section-header">
+                <div class="section-num">Section 06</div>
+                <h2 class="section-title"><span class="lang-zh">附录</span><span class="lang-en">Appendix</span></h2>
+            </div>
+
+            <h3 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin-bottom:1rem;"><span class="lang-zh">数据统计</span><span class="lang-en">Data Statistics</span></h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th><span class="lang-zh">栏目</span><span class="lang-en">Category</span></th>
+                        <th><span class="lang-zh">命中数量</span><span class="lang-en">Hits</span></th>
+                        <th><span class="lang-zh">占比</span><span class="lang-en">Share</span></th>
+                        <th style="width:30%;"><span class="lang-zh">分布</span><span class="lang-en">Distribution</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><span class="lang-zh">经济</span><span class="lang-en">Economy</span></td><td>255</td><td>28.7%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:100%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">民生</span><span class="lang-en">Livelihood</span></td><td>241</td><td>27.2%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:94%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">政治</span><span class="lang-en">Politics</span></td><td>126</td><td>14.2%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:49%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">环保</span><span class="lang-en">Environment</span></td><td>110</td><td>12.4%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:43%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">产业</span><span class="lang-en">Industry</span></td><td>97</td><td>10.9%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:38%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">科技</span><span class="lang-en">Technology</span></td><td>19</td><td>2.1%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:7%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">国防</span><span class="lang-en">Defense</span></td><td>17</td><td>1.9%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:7%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">外交</span><span class="lang-en">Diplomacy</span></td><td>7</td><td>0.8%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:3%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">教育</span><span class="lang-en">Education</span></td><td>6</td><td>0.7%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:2%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">人文</span><span class="lang-en">Humanities</span></td><td>6</td><td>0.7%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:2%;"></div></div></td></tr>
+                    <tr><td><span class="lang-zh">医疗</span><span class="lang-en">Healthcare</span></td><td>3</td><td>0.3%</td><td class="bar-cell"><div class="bar-bg" style="width:calc(100% - 2rem);"><div class="bar-fill" style="width:1%;"></div></div></td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.8rem;color:var(--text-muted);margin-top:0.75rem;"><span class="lang-zh">注：上表为各类别内容提及"德国能源矿业行业"原始命中量（含跨栏目重复），URL去重后实际独立资讯为396条。</span><span class="lang-en">Note: The table above shows raw hit counts for "Germany Energy &amp; Mining Industry" mentions by category (including cross-category duplicates). After URL deduplication, the actual number of independent sources is 396.</span></p>
+
+            <h3 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin:2rem 0 1rem;"><span class="lang-zh">主要信源</span><span class="lang-en">Primary Sources</span></h3>
+            <div class="sources-list">
+                <span class="source-tag">TAGESSPIEGEL</span>
+                <span class="source-tag">STERN</span>
+                <span class="source-tag">Merkur</span>
+                <span class="source-tag">Frankfurter Rundschau</span>
+                <span class="source-tag">ZEIT ONLINE</span>
+                <span class="source-tag">t-online</span>
+                <span class="source-tag">ZDFheute</span>
+                <span class="source-tag">BILD</span>
+                <span class="source-tag">Börsen·Zeitung</span>
+                <span class="source-tag">WirtschaftsWoche</span>
+                <span class="source-tag"><span class="lang-zh">明镜周刊</span><span class="lang-en">Der Spiegel</span></span>
+                <span class="source-tag">noz</span>
+                <span class="source-tag">HNA</span>
+                <span class="source-tag">Stuttgarter Nachrichten</span>
+                <span class="source-tag">Hamburger Abendblatt</span>
+                <span class="source-tag">RHEINISCHE POST</span>
+                <span class="source-tag">taz</span>
+                <span class="source-tag"><span class="lang-zh">DW 德国之声</span><span class="lang-en">DW (Deutsche Welle)</span></span>
+                <span class="source-tag">Süddeutsche Zeitung</span>
+                <span class="source-tag">NBC NEWS</span>
+                <span class="source-tag">WSJ</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-brand">SUPINFOR LTD.</div>
+        <p class="footer-info">
+            <span class="lang-zh">本报告基于 Supinfor 区域国别实时监测平台编制，仅供参考，不构成投资建议。<br>
+            数据截止时间：2026-03-29 22:03:00 (UTC+8)<br>
+            发布日期：2026年4月27日</span>
+            <span class="lang-en">This report is compiled based on the Supinfor Country &amp; Regional Real-Time Monitoring Platform. For reference only; does not constitute investment advice.<br>
+            Data cutoff: 2026-03-29 22:03:00 (UTC+8)<br>
+            Publication date: April 27, 2026</span>
+        </p>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+
+        function setTheme(theme) {
+            html.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeToggle.innerHTML = theme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            setTheme(current === 'dark' ? 'light' : 'dark');
+        });
+
+        // Load saved theme or use system preference
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            setTheme(savedTheme);
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+            setTheme('light');
+        }
+
+        // Back to Top
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('visible', window.scrollY > 500);
+        });
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll Animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        function setLang(lang){document.documentElement.setAttribute('data-lang',lang);document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');localStorage.setItem('lang',lang);document.querySelectorAll('.lang-toggle button').forEach(btn=>{btn.classList.toggle('active',(lang==='zh'&&btn.textContent==='中')||(lang==='en'&&btn.textContent==='EN'))})}
+        (function(){const s=localStorage.getItem('lang')||'zh';setLang(s)})();
+    </script>
+</body>
+</html>

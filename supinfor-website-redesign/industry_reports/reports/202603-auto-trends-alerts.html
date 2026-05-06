@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汽车制造行业趋势与风险速览 — 2026年3月</title>
+<meta name="author" content="Supinfor Ltd.">
+<meta name="description" content="汽车制造行业47家企业2026年3月趋势与风险速览">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"Noto Sans SC"', 'system-ui', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'monospace'],
+      },
+      colors: {
+        graphite: { 50:'#f0f0f5', 100:'#e0e0ea', 200:'#c1c1d5', 300:'#9a9ab5', 400:'#6e6e8f', 500:'#4a4a6a', 600:'#2d2d4a', 700:'#1a1a2e', 800:'#12122a', 900:'#0a0a1a' },
+        emerald: { DEFAULT:'#16a085', light:'#1abc9c', dark:'#0e7c67', 50:'#e8f8f5', 100:'#d1f2eb' },
+        coral: { DEFAULT:'#e74c3c', light:'#ff6b6b', dark:'#c0392b', 50:'#fdecea', 100:'#fadbd8' },
+        steel: { DEFAULT:'#2980b9', light:'#3498db', dark:'#1f6f9f', 50:'#ebf5fb', 100:'#d6eaf8' },
+      }
+    }
+  }
+}
+</script>
+<style>
+/* Base & Theme */
+:root {
+  --bg-primary: #f0f0f5;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #4a4a6a;
+  --text-muted: #6e6e8f;
+  --border-color: #e0e0ea;
+  --shadow: 0 4px 24px rgba(0,0,0,0.06);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.1);
+}
+.dark {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #12122a;
+  --bg-card: #1a1a2e;
+  --text-primary: #e0e0ea;
+  --text-secondary: #9a9ab5;
+  --text-muted: #6e6e8f;
+  --border-color: #2d2d4a;
+  --shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.5);
+}
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Noto Sans SC', system-ui, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+.font-mono { font-family: 'JetBrains Mono', monospace; }
+.bg-card { background: var(--bg-card); }
+.bg-secondary { background: var(--bg-secondary); }
+.text-secondary { color: var(--text-secondary); }
+.text-muted { color: var(--text-muted); }
+.border-theme { border-color: var(--border-color); }
+.shadow-theme { box-shadow: var(--shadow); }
+.shadow-lg-theme { box-shadow: var(--shadow-lg); }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* Hero gradient */
+.hero-gradient {
+  background: linear-gradient(135deg, #1a1a2e 0%, #0e7c67 50%, #1f6f9f 100%);
+  position: relative;
+  overflow: hidden;
+}
+.hero-gradient::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 80%, rgba(22,160,133,0.3) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(41,128,185,0.3) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(231,76,60,0.1) 0%, transparent 50%);
+}
+.hero-gradient * { position: relative; z-index: 1; }
+
+/* Stat card pulse */
+.stat-card { transition: transform 0.3s, box-shadow 0.3s; }
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.2); }
+
+/* Donut chart */
+.donut-chart {
+  width: 220px; height: 220px; border-radius: 50%;
+  background: conic-gradient(
+    #16a085 0% 59%,
+    #2980b9 59% 71.3%,
+    #e67e22 71.3% 79.3%,
+    #9b59b6 79.3% 87.2%,
+    #f39c12 87.2% 90.2%,
+    #1abc9c 90.2% 92.9%,
+    #3498db 92.9% 95.6%,
+    #e74c3c 95.6% 97.3%,
+    #95a5a6 97.3% 98.9%,
+    #7f8c8d 98.9% 99.7%,
+    #bdc3c7 99.7% 100%
+  );
+  position: relative;
+}
+.donut-chart::after {
+  content: '';
+  position: absolute;
+  inset: 35%;
+  border-radius: 50%;
+  background: var(--bg-card);
+}
+.donut-center {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* Risk stacked bar */
+.risk-bar-segment { transition: width 0.8s ease; }
+
+/* Heat map colors */
+.heat-0 { background: transparent; }
+.heat-low { background: rgba(231,76,60,0.15); }
+.heat-med { background: rgba(231,76,60,0.35); }
+.heat-high { background: rgba(231,76,60,0.55); color: #fff; }
+.heat-max { background: rgba(231,76,60,0.8); color: #fff; font-weight: 700; }
+.dark .heat-low { background: rgba(231,76,60,0.2); }
+.dark .heat-med { background: rgba(231,76,60,0.4); }
+.dark .heat-high { background: rgba(231,76,60,0.6); color: #fff; }
+.dark .heat-max { background: rgba(231,76,60,0.85); color: #fff; }
+
+/* Horizontal bar chart */
+.h-bar { height: 28px; border-radius: 4px; transition: width 1s ease; background: linear-gradient(90deg, #16a085, #1abc9c); }
+
+/* TOC */
+.toc-link { transition: color 0.2s, padding-left 0.2s; }
+.toc-link:hover, .toc-link.active { color: #16a085; padding-left: 8px; }
+
+/* Back to top */
+#backToTop { transition: opacity 0.3s, transform 0.3s; }
+#backToTop.hidden { opacity: 0; transform: translateY(20px); pointer-events: none; }
+
+/* Table styles */
+.data-table { border-collapse: separate; border-spacing: 0; }
+.data-table th { background: var(--bg-secondary); position: sticky; top: 0; z-index: 2; }
+.data-table th, .data-table td { padding: 10px 14px; border-bottom: 1px solid var(--border-color); text-align: left; white-space: nowrap; }
+.data-table tbody tr { transition: background 0.2s; }
+.data-table tbody tr:hover { background: rgba(22,160,133,0.06); }
+.dark .data-table tbody tr:hover { background: rgba(22,160,133,0.1); }
+
+/* Pressure cards */
+.pressure-card { border-left: 4px solid; }
+.pressure-card.coral-border { border-color: #e74c3c; }
+.pressure-card.blue-border { border-color: #2980b9; }
+.pressure-card.green-border { border-color: #16a085; }
+
+/* Nav */
+.nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+
+/* Sidebar TOC */
+@media (min-width: 1280px) {
+  .sidebar-toc {
+    position: fixed; left: 0; top: 64px; bottom: 0; width: 260px;
+    overflow-y: auto; padding: 24px 16px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    z-index: 30;
+  }
+  .main-content { margin-left: 260px; }
+}
+@media (max-width: 1279px) {
+  .sidebar-toc {
+    position: fixed; left: -300px; top: 64px; bottom: 0; width: 280px;
+    overflow-y: auto; padding: 24px 16px;
+    background: var(--bg-secondary);
+    border-right: 1px solid var(--border-color);
+    z-index: 40;
+    transition: left 0.3s;
+  }
+  .sidebar-toc.open { left: 0; }
+  .toc-overlay {
+    position: fixed; inset: 0; top: 64px; background: rgba(0,0,0,0.5);
+    z-index: 35; display: none;
+  }
+  .toc-overlay.open { display: block; }
+}
+
+/* Company detail card */
+.company-detail { border-left: 3px solid #16a085; }
+.company-detail.risk { border-left-color: #e74c3c; }
+.tag-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-size: 0.75rem; font-weight: 500;
+}
+.tag-trend { background: rgba(22,160,133,0.15); color: #16a085; }
+.tag-risk { background: rgba(231,76,60,0.15); color: #e74c3c; }
+.dark .tag-trend { background: rgba(22,160,133,0.25); color: #1abc9c; }
+.dark .tag-risk { background: rgba(231,76,60,0.25); color: #ff6b6b; }
+
+/* Section header */
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  padding-bottom: 12px; margin-bottom: 24px;
+  border-bottom: 2px solid var(--border-color);
+}
+.section-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; color: #fff;
+}
+
+/* Appendix table row coloring */
+.appendix-row-pressure { background: rgba(231,76,60,0.06); }
+.dark .appendix-row-pressure { background: rgba(231,76,60,0.1); }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 nav-blur border-b border-theme" style="background: rgba(26,26,46,0.85);">
+  <div class="max-w-screen-2xl mx-auto px-4 h-16 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <button id="tocToggle" class="xl:hidden text-white/80 hover:text-white p-2" aria-label="Toggle menu">
+        <i class="fas fa-bars text-lg"></i>
+      </button>
+      <div class="flex items-center gap-2">
+        <i class="fas fa-chart-line text-emerald text-lg"></i>
+        <span class="text-white font-semibold text-sm sm:text-base">汽车制造行业趋势与风险速览</span>
+        <span class="hidden sm:inline text-white/50 text-sm font-mono">2026.03</span>
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <span class="hidden md:inline text-white/40 text-xs font-mono">Supinfor Ltd.</span>
+      <button id="themeToggle" class="text-white/80 hover:text-white p-2 rounded-lg hover:bg-white/10 transition" aria-label="Toggle theme">
+        <i class="fas fa-moon text-lg" id="themeIcon"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- TOC Overlay -->
+<div class="toc-overlay" id="tocOverlay"></div>
+
+<!-- Sidebar TOC -->
+<aside class="sidebar-toc" id="sidebarToc">
+  <div class="text-xs font-semibold uppercase tracking-wider text-muted mb-4">目录导航</div>
+  <nav class="flex flex-col gap-1 text-sm">
+    <a href="#summary" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-clipboard-list w-5 text-center mr-1 opacity-50"></i>执行摘要</a>
+    <a href="#section1" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-arrow-trend-up w-5 text-center mr-1 opacity-50"></i>行业发展态势</a>
+    <a href="#trend-tags" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">趋势标签分布</a>
+    <a href="#trend-top10" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">趋势活跃企业 Top 10</a>
+    <a href="#trend-details" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">重点企业趋势动态</a>
+    <a href="#trend-analysis" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">趋势分析</a>
+    <a href="#section2" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-triangle-exclamation w-5 text-center mr-1 opacity-50"></i>风险预警</a>
+    <a href="#risk-tags" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">风险标签分布</a>
+    <a href="#risk-top10" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">风险暴露企业 Top 10</a>
+    <a href="#risk-matrix" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">风险矩阵</a>
+    <a href="#risk-details" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">重点企业风险事件</a>
+    <a href="#risk-analysis" class="toc-link py-1.5 pl-5 text-secondary hover:text-emerald text-xs">风险分析</a>
+    <a href="#section3" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-code-compare w-5 text-center mr-1 opacity-50"></i>交叉分析</a>
+    <a href="#section4" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-lightbulb w-5 text-center mr-1 opacity-50"></i>战略建议</a>
+    <a href="#appendix" class="toc-link py-1.5 text-secondary hover:text-emerald"><i class="fas fa-database w-5 text-center mr-1 opacity-50"></i>附录：企业完整数据</a>
+  </nav>
+</aside>
+
+<!-- Main Content -->
+<div class="main-content">
+
+<!-- Hero Section -->
+<header class="hero-gradient pt-24 pb-16 px-4">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="inline-block px-4 py-1.5 rounded-full bg-white/10 text-white/80 text-xs font-mono mb-6 backdrop-blur">
+      <i class="fas fa-calendar-alt mr-1"></i> 2026年3月 · 月度定期报告
+    </div>
+    <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-4 leading-tight">
+      汽车制造行业<br class="sm:hidden">趋势与风险速览
+    </h1>
+    <p class="text-white/60 text-sm sm:text-base max-w-2xl mx-auto mb-10">
+      基于 Supinfor 全球商情速递平台，覆盖47家企业、87,919条资讯的深度行业洞察
+    </p>
+
+    <!-- Hero Stat Cards -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+      <div class="stat-card bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-white font-mono">47</div>
+        <div class="text-white/60 text-xs mt-1"><i class="fas fa-building mr-1"></i>监测企业</div>
+      </div>
+      <div class="stat-card bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-white font-mono">87,919</div>
+        <div class="text-white/60 text-xs mt-1"><i class="fas fa-newspaper mr-1"></i>资讯总量</div>
+      </div>
+      <div class="stat-card bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-emerald font-mono">10:1</div>
+        <div class="text-white/60 text-xs mt-1"><i class="fas fa-scale-balanced mr-1"></i>趋势风险比</div>
+      </div>
+      <div class="stat-card bg-white/10 backdrop-blur rounded-xl p-5 text-center border border-white/10">
+        <div class="text-3xl sm:text-4xl font-black text-coral font-mono">5</div>
+        <div class="text-white/60 text-xs mt-1"><i class="fas fa-exclamation-triangle mr-1"></i>承压企业</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- Executive Summary -->
+<section id="summary" class="max-w-6xl mx-auto px-4 py-12 reveal">
+  <div class="section-header">
+    <div class="section-icon bg-steel"><i class="fas fa-clipboard-list"></i></div>
+    <h2 class="text-xl font-bold">执行摘要</h2>
+  </div>
+  <p class="text-secondary mb-6 leading-relaxed">本报告基于汽车制造行业47家企业在2026年3月的87,919条资讯（趋势79,946条、风险7,973条），趋势/风险比为10:1。</p>
+  <div class="grid md:grid-cols-2 gap-6">
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="w-2 h-2 rounded-full bg-emerald"></span>
+        <h3 class="font-semibold text-emerald">本月核心趋势信号</h3>
+      </div>
+      <ul class="space-y-3 text-sm text-secondary">
+        <li class="flex gap-2"><i class="fas fa-caret-right text-emerald mt-1 flex-shrink-0"></i><span>趋势资讯最集中的标签为「新品发布」（1202条），新品发布活动密集</span></li>
+        <li class="flex gap-2"><i class="fas fa-caret-right text-emerald mt-1 flex-shrink-0"></i><span>趋势资讯量最大的企业为宝马（5730条）</span></li>
+        <li class="flex gap-2"><i class="fas fa-caret-right text-emerald mt-1 flex-shrink-0"></i><span>资讯活跃度前三：宝马、丰田汽车、比亚迪汽车</span></li>
+      </ul>
+    </div>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="w-2 h-2 rounded-full bg-coral"></span>
+        <h3 class="font-semibold text-coral">本月核心风险信号</h3>
+      </div>
+      <ul class="space-y-3 text-sm text-secondary">
+        <li class="flex gap-2"><i class="fas fa-caret-right text-coral mt-1 flex-shrink-0"></i><span>风险资讯最集中的标签为「安全事故」（613条）</span></li>
+        <li class="flex gap-2"><i class="fas fa-caret-right text-coral mt-1 flex-shrink-0"></i><span>风险暴露最大的企业为特斯拉（1123条）</span></li>
+        <li class="flex gap-2"><i class="fas fa-caret-right text-coral mt-1 flex-shrink-0"></i><span>趋势/风险比偏低（&lt;6:1）的企业：特斯拉、福特汽车、通用汽车、克莱斯勒集团、吉姆西</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 1: 行业发展态势 ==================== -->
+<section id="section1" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="section-header reveal">
+    <div class="section-icon bg-emerald"><i class="fas fa-arrow-trend-up"></i></div>
+    <h2 class="text-xl font-bold">第一部分：行业发展态势</h2>
+  </div>
+
+  <!-- 1.1 趋势标签分布 -->
+  <div id="trend-tags" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-emerald font-mono mr-2">1.1</span>趋势标签分布</h3>
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <!-- Donut Chart -->
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme flex flex-col items-center">
+        <div class="donut-chart mb-6">
+          <div class="donut-center">
+            <div class="text-center">
+              <div class="font-mono font-bold text-lg" style="color:var(--text-primary)">2,037</div>
+              <div class="text-xs text-muted">趋势标签总量</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 gap-x-6 gap-y-2 text-xs w-full max-w-sm">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#16a085"></span><span>新品发布 59.0%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#2980b9"></span><span>经营业绩 12.3%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#e67e22"></span><span>技术创新 8.0%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#9b59b6"></span><span>区域拓展 7.9%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#f39c12"></span><span>扩大投资 3.0%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#1abc9c"></span><span>荣誉奖项 2.7%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#3498db"></span><span>研发合作 2.7%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#e74c3c"></span><span>销售合作 1.7%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#95a5a6"></span><span>采购合作 1.6%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#7f8c8d"></span><span>重大项目 0.8%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#bdc3c7"></span><span>扩充人员 0.4%</span></div>
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="bg-card rounded-xl shadow-theme border border-theme overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="data-table w-full text-sm">
+            <thead>
+              <tr>
+                <th class="font-semibold">标签</th>
+                <th class="font-semibold text-right font-mono">资讯量</th>
+                <th class="font-semibold text-right font-mono">占比</th>
+                <th class="font-semibold" style="min-width:120px">分布</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tag-badge tag-trend">新品发布</span></td><td class="text-right font-mono font-semibold">1,202</td><td class="text-right font-mono">59.0%</td><td><div class="h-bar" style="width:59%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">经营业绩</span></td><td class="text-right font-mono font-semibold">251</td><td class="text-right font-mono">12.3%</td><td><div class="h-bar" style="width:20.9%;background:linear-gradient(90deg,#2980b9,#3498db)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">技术创新</span></td><td class="text-right font-mono font-semibold">162</td><td class="text-right font-mono">8.0%</td><td><div class="h-bar" style="width:13.5%;background:linear-gradient(90deg,#e67e22,#f39c12)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">区域拓展</span></td><td class="text-right font-mono font-semibold">160</td><td class="text-right font-mono">7.9%</td><td><div class="h-bar" style="width:13.3%;background:linear-gradient(90deg,#9b59b6,#8e44ad)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">扩大投资</span></td><td class="text-right font-mono font-semibold">61</td><td class="text-right font-mono">3.0%</td><td><div class="h-bar" style="width:5.1%;background:linear-gradient(90deg,#f39c12,#f1c40f)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">荣誉奖项</span></td><td class="text-right font-mono font-semibold">56</td><td class="text-right font-mono">2.7%</td><td><div class="h-bar" style="width:4.7%;background:linear-gradient(90deg,#1abc9c,#16a085)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">研发合作</span></td><td class="text-right font-mono font-semibold">54</td><td class="text-right font-mono">2.7%</td><td><div class="h-bar" style="width:4.5%;background:linear-gradient(90deg,#3498db,#2980b9)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">销售合作</span></td><td class="text-right font-mono font-semibold">35</td><td class="text-right font-mono">1.7%</td><td><div class="h-bar" style="width:2.9%;background:linear-gradient(90deg,#e74c3c,#c0392b)"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">采购合作</span></td><td class="text-right font-mono font-semibold">32</td><td class="text-right font-mono">1.6%</td><td><div class="h-bar" style="width:2.7%;background:#95a5a6"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">重大项目</span></td><td class="text-right font-mono font-semibold">16</td><td class="text-right font-mono">0.8%</td><td><div class="h-bar" style="width:1.3%;background:#7f8c8d"></div></td></tr>
+              <tr><td><span class="tag-badge tag-trend">扩充人员</span></td><td class="text-right font-mono font-semibold">8</td><td class="text-right font-mono">0.4%</td><td><div class="h-bar" style="width:0.7%;background:#bdc3c7"></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.2 趋势活跃企业 Top 10 -->
+  <div id="trend-top10" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-emerald font-mono mr-2">1.2</span>趋势活跃企业 Top 10</h3>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">1</span><span class="w-24 text-sm font-medium truncate">宝马</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:100%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">5,730</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,扩大投资</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">2</span><span class="w-24 text-sm font-medium truncate">比亚迪汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:97.3%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">5,573</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,区域拓展</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">3</span><span class="w-24 text-sm font-medium truncate">丰田汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:94.7%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">5,428</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,技术创新</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">4</span><span class="w-24 text-sm font-medium truncate">大众汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:80.7%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,624</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,技术创新</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">5</span><span class="w-24 text-sm font-medium truncate">特斯拉</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:79.7%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,568</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,经营业绩</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">6</span><span class="w-24 text-sm font-medium truncate">现代汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:78.3%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,484</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,技术创新</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">7</span><span class="w-24 text-sm font-medium truncate">本田汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:76.8%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,401</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,扩大投资</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">8</span><span class="w-24 text-sm font-medium truncate">梅赛迪斯奔驰</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:72.4%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,151</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,技术创新</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">9</span><span class="w-24 text-sm font-medium truncate">奥迪公司</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:71.8%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">4,112</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,技术创新</span></div>
+        <div class="flex items-center gap-3"><span class="font-mono text-xs text-muted w-6 text-right">10</span><span class="w-24 text-sm font-medium truncate">福特汽车</span><div class="flex-1 h-7 bg-gray-100 dark:bg-graphite-600 rounded overflow-hidden relative"><div class="h-full rounded" style="width:59.5%;background:linear-gradient(90deg,#16a085,#1abc9c)"></div><span class="absolute right-2 top-1/2 -translate-y-1/2 font-mono text-xs font-bold" style="color:var(--text-primary)">3,409</span></div><span class="text-xs text-muted w-32 hidden sm:block truncate">新品发布,研发合作</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.3 重点企业趋势动态 -->
+  <div id="trend-details" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-emerald font-mono mr-2">1.3</span>重点企业趋势动态</h3>
+
+    <!-- 宝马 -->
+    <div class="company-detail bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">宝马</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald">趋势量 5,730</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-trend mb-1">经营业绩</span>
+          <p class="mt-1">2025年宝马集团在拉美高端车市整体下滑0.6%的背景下实现增长，BMW和MINI均有销量提升。BMW交付45930台（增7.1%），市场份额30.8%；MINI交付7587台（增18.9%），份额5.1%。 宝马多款车型贡献超55%总销量，X1、X3、3系、X5表现突出。电动车型销量创历史新高达5008台（增13.1%），同时保留多种动力选项。M和M Performance车型销量增30%，高端车型增22%。 宝马在巴西、墨西哥有工业和工程业务，2025年在拉美交付近9.9万台个人充电桩，2026年将推出超15款车型及特别版，含Neue Klasse的BMW iX3。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">扩大投资</span>
+          <p class="mt-1">宝马雷根斯堡工厂是欧洲核心战略工业基地，2019年起持续降本，以数字化为核心，用AI实现漆面自动化处理与质检，2025年起成品车可自主从总装线驶往装载区。 2025年该厂超15万辆车为纯电或插混车型，X1产量超26.6万辆、X2超9万辆；5.5万辆留德，半数销往欧洲其他国家，超10万辆出口至欧洲外，日均产超1400辆，每57秒一台车。 该厂自80年代起持续扩张，1986年投产3系(E30)，初始日产400辆、提供3500个岗位，1991年、1999年、2005年年产量先后破10万、20万、30万，1995年总产量破百万，2025年将迎来第900万辆下线。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">荣誉奖项</span>
+          <p class="mt-1">Oliver Zipse获世界汽车大奖评委会授予2026年度世界汽车人物。他1991年加入宝马，2019年起任宝马集团董事会主席，带领宝马经历技术与战略转型，推行开放的电动化、数字化、可持续化技术路线，同时坚守品牌辨识度与盈利性。其履职期间推动的Neue Klasse项目获认可，奖项也属于全体宝马员工。 该奖项由98位国际汽车行业资深记者投票选出，评选依据是候选人对全球汽车行业的年度贡献。2026年候选者包括Oliver Zipse、David Craig与Tisha Johnson，往届获奖者涵盖Stella Li、Adrian Newey等汽车行业高管。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 丰田汽车 -->
+    <div class="company-detail bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">丰田汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald">趋势量 5,428</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-trend mb-1">区域拓展</span>
+          <p class="mt-1">丰田阿根廷2025年扎泰厂产量约17.8万台，创历史生产纪录，80%产量用于出口，本土销量创历史纪录，Hilux连续20年领跑中型皮卡市场，本土丰田车存量超百万台，混动车型销量超4.6万台，联网服务、延保业务及Kinto业务均有增长。 2026年丰田阿根廷计划推出陆巡300 GR Sport、Yariss Cross、bZ4X纯电车型、新RAV4插混、陆巡300插混，GR Corolla将推迟至2027年推出，品牌重点布局全品类电气化车型。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">采购合作</span>
+          <p class="mt-1">丰田阿根廷与CESVI阿根廷签署非排他合作框架，将围绕汽车报废后的回收拆解、循环经济项目开展技术信息交换、流程分析与改进机会识别工作，契合丰田全球环保方针。双方合作将助力丰田阿根廷推进已有五年的循环经济项目，目前其已产出15个循环经济模式汽配产品。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">新品发布</span>
+          <p class="mt-1">2026款丰田C-HR+是纯电SUV，基于e-TNGA平台打造，轴距比混动版C-HR长11厘米，提供三种动力版本，WLTP续航最高609km。它加入丰田欧洲电动SUV阵容，与bZ4X、Urban Cruiser组成电动系列，西班牙3月已开始交付，起售价35375欧元，可享Auto+计划补贴。 试驾版本搭载四驱系统，加速0-100km/h约5.2秒，底盘调校舒适，内饰与bZ4X相似，配备小仪表屏和大中控屏。四驱版续航546km，前驱版续航更高，快充10%-80%约半小时。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 比亚迪汽车 -->
+    <div class="company-detail bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">比亚迪汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald">趋势量 5,573</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-trend mb-1">新品发布</span>
+          <p class="mt-1">印尼市场推出纯电MPV车型Wuling Darion EV，可与更早上市的BYD M6竞争。二者同为纯电MPV，均搭载单电机。消费者会对比二者配置与价格，价格更低更具优势。 Wuling Darion EV作为市场新玩家，推出EX、CE两个版本，技术规格一致。EX为高配版售价4.59亿印尼盾，CE售价3.99亿印尼盾。 BYD M6在印尼推出3个版本，各版本间存在技术规格差异。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">经营业绩</span>
+          <p class="mt-1">2025年全球汽车工业格局生变，Stellantis集团财报确认最终销量排名。丰田、大众、现代、通用、Stellantis稳居前五，中国车企表现亮眼：比亚迪跃至第六，全球电动车销量首超特斯拉；上汽、吉利排名也有所提升，日产跌出前十。中国汽车市场全球占比达35.6%，新能源车置换占比近六成，海外销量同步增长。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">采购合作</span>
+          <p class="mt-1">比亚迪巴西公司宣布向Dahruj Rent a Car出售2000台车辆，助力其布局电动化租赁市场，双方还将聚焦订阅制车型。该合作是比亚迪在巴西租赁市场的重要进展，此前比亚迪已向Localiza售出1万台车辆，意在向巴西市场传递电动车已脱离小众圈层的信号。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 特斯拉 -->
+    <div class="company-detail bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">特斯拉</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald">趋势量 4,568</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-trend mb-1">区域拓展</span>
+          <p class="mt-1">特斯拉在瑞典纳卡启用8座新超级充电桩，使该站充电桩从12台增至20台。借助Megapack电池，该站克服了Sekos与瑞典电工联盟的安装封锁。这是瑞典第五座使用Megapack扩建的超充站，今年以来特斯拉已在多地新增共44座超充。特斯拉称将继续用Megapack拓展更多超充站，春季还将新增站点应对夏季出行需求，瑞典每座超充站年可减少约6万吨碳排放。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">新品发布</span>
+          <p class="mt-1">Segway推出AT10系列全地形车，含LE、W等版本，基于统一双座长平台打造，LE为实用款，售108万卢布；W为高配款，售133万卢布，2025年开售。品牌定位全地形车领域特斯拉，依托自研技术革新行业架构。 该系列打破传统全地形车动力布局，将发动机后移并整合变速箱与后桥减速器，省去一套传动轴，减重并减少传动损耗。搭载自研横置双缸DOHC发动机，优化振动、油耗与维护难度，同时优化重心提升操控性。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">经营业绩</span>
+          <p class="mt-1">特斯拉将于周四公布2025年一季度全球交付量，彭博共识预期交付364645辆，同比增约9%，但2024年总交付量因转产Model Y下滑。 特斯拉美国销量因电动车联邦税 credits取消下滑，欧洲市场遇挫，伊隆·马斯克在白宫的角色引发负面抗议，大众、比亚迪等加剧竞争影响其竞争力。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 大众汽车 -->
+    <div class="company-detail bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">大众汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald/10 text-emerald">趋势量 4,624</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-trend mb-1">新品发布</span>
+          <p class="mt-1">德国《明镜》周刊称大众集团以技术问题为借口推迟Scout电动越野品牌商用车型发售。该品牌原计划今年投产，现推迟至2027年，大众已在南卡罗来纳州工厂投入超30亿美元，且因技术问题追加供应商园区投资，未获州补贴。Scout已获超15万份预订，85%偏好增程式混动车型。 Scout车型包括Traveller SUV和Terra皮卡，原型车2024年亮相，量产版在车展展出。纯电版续航约560公里，增程版Harvester续航805公里，采用大众MEB平台800V架构，支持350kW快充与双向充电，功率或达800马力以上。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">扩充人员</span>
+          <p class="mt-1">布拉迪斯拉发大众虽面临地缘政治、不可预测法规、能源与物流成本上涨、美国关税及本土税费加重等压力，仍保持稳定业绩。工厂计划通过提升自身效率推进变革，上半年已节省固定成本1600万欧元，同时将调整车型阵容并大规模扩招关键岗位人员。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-trend mb-1">研发合作</span>
+          <p class="mt-1">Rivian是美国纯电车企，以R1T、R1S打开知名度，后推出更紧凑亲民的R2、R3系列，R2复刻R1S设计，续航超300英里，快充30分钟内完成，还将适配更多驾驶辅助；R3更紧凑且瞄准欧洲市场，另有运动版R3X。R2北美2026年交付，欧版2027年推出，R3或2028年及之后登陆欧洲。 大众向Rivian投资超30亿美元，另有最多58亿美元期权，双方将共同开发电动架构与软件，首款搭载Rivian技术的大众车型为ID.1，奥迪也将在2028年采用相关技术，该合作助力Rivian融资并推进欧洲市场扩张。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 1.4 趋势分析 -->
+  <div id="trend-analysis" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-emerald font-mono mr-2">1.4</span>趋势分析</h3>
+    <div class="space-y-4">
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#16a085">
+        <h4 class="font-semibold mb-2 text-emerald">新品发布密集，电动化产品矩阵加速扩充。</h4>
+        <p class="text-sm text-secondary leading-relaxed">新品发布占趋势资讯的59%，几乎所有头部企业的首要标签都是新品发布。比亚迪在印尼、菲律宾、英国、西班牙等市场同步推出多款车型；丰田推出C-HR+纯电SUV和bZ系列；大众Scout品牌获超15万份预订。行业正从"单一爆款"转向"全价位、全市场覆盖"的产品矩阵竞争。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#2980b9">
+        <h4 class="font-semibold mb-2 text-steel">区域拓展加速，中国车企海外布局进入深水区。</h4>
+        <p class="text-sm text-secondary leading-relaxed">比亚迪在巴西与租车公司签约2000台、西班牙3年累计4万辆、马来西亚推进CKD工厂；奇瑞进入印尼右舵市场；长安在巴西启用自动化产线；蔚来在哥斯达黎加开设美洲首家NIO House。中国车企的海外扩张已从"出口卖车"升级为"本地化生产+渠道建设+售后网络"的全链路布局。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#e67e22">
+        <h4 class="font-semibold mb-2" style="color:#e67e22">技术创新聚焦电池与智驾。</h4>
+        <p class="text-sm text-secondary leading-relaxed">比亚迪刀片电池2.0实现5分钟快充至70%；现代计划采用双电池化学体系降低成本；丰田加入戴姆勒-沃尔沃氢燃料电池联盟；长安获批L4级Robotaxi测试牌照。电池快充和自动驾驶是本月技术创新的两大焦点。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#9b59b6">
+        <h4 class="font-semibold mb-2" style="color:#9b59b6">跨界合作成为常态。</h4>
+        <p class="text-sm text-secondary leading-relaxed">福特与吉利推进欧洲产能合作谈判；大众向Rivian投资超30亿美元共同开发电动架构；比亚迪与Uber签约10万辆全球合作。传统车企与新势力之间的边界正在模糊，合作比竞争更频繁。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2: 风险预警 ==================== -->
+<section id="section2" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="section-header reveal">
+    <div class="section-icon bg-coral"><i class="fas fa-triangle-exclamation"></i></div>
+    <h2 class="text-xl font-bold">第二部分：风险预警</h2>
+  </div>
+
+  <!-- 2.1 风险标签分布 -->
+  <div id="risk-tags" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-coral font-mono mr-2">2.1</span>风险标签分布</h3>
+    <div class="grid lg:grid-cols-2 gap-8 items-start">
+      <!-- Stacked Bar -->
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+        <div class="mb-4 text-sm font-semibold text-muted">风险标签占比分布</div>
+        <div class="w-full h-10 rounded-lg overflow-hidden flex mb-4">
+          <div class="risk-bar-segment h-full flex items-center justify-center text-white text-xs font-mono font-bold" style="width:43.1%;background:#e74c3c" title="安全事故 43.1%">43.1%</div>
+          <div class="risk-bar-segment h-full flex items-center justify-center text-white text-xs font-mono font-bold" style="width:26.3%;background:#e67e22" title="监管调查 26.3%">26.3%</div>
+          <div class="risk-bar-segment h-full flex items-center justify-center text-white text-xs font-mono font-bold" style="width:12.7%;background:#9b59b6" title="裁减人员 12.7%">12.7%</div>
+          <div class="risk-bar-segment h-full flex items-center justify-center text-white text-xs font-mono font-bold" style="width:10.2%;background:#2980b9" title="法律诉讼 10.2%">10.2%</div>
+          <div class="risk-bar-segment h-full flex items-center justify-center text-white text-xs font-mono" style="width:6%;background:#1abc9c" title="劳资冲突 6%">6%</div>
+          <div class="risk-bar-segment h-full" style="width:1.6%;background:#95a5a6" title="行政处罚 1.6%"></div>
+        </div>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs">
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#e74c3c"></span><span>安全事故 43.1%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#e67e22"></span><span>监管调查 26.3%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#9b59b6"></span><span>裁减人员 12.7%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#2980b9"></span><span>法律诉讼 10.2%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#1abc9c"></span><span>劳资冲突 6.0%</span></div>
+          <div class="flex items-center gap-2"><span class="w-3 h-3 rounded-sm flex-shrink-0" style="background:#95a5a6"></span><span>行政处罚 1.6%</span></div>
+        </div>
+      </div>
+      <!-- Table -->
+      <div class="bg-card rounded-xl shadow-theme border border-theme overflow-hidden">
+        <div class="overflow-x-auto">
+          <table class="data-table w-full text-sm">
+            <thead>
+              <tr>
+                <th class="font-semibold">标签</th>
+                <th class="font-semibold text-right font-mono">资讯量</th>
+                <th class="font-semibold text-right font-mono">占比</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><span class="tag-badge tag-risk">安全事故</span></td><td class="text-right font-mono font-semibold">613</td><td class="text-right font-mono">43.1%</td></tr>
+              <tr><td><span class="tag-badge tag-risk">监管调查</span></td><td class="text-right font-mono font-semibold">374</td><td class="text-right font-mono">26.3%</td></tr>
+              <tr><td><span class="tag-badge tag-risk">裁减人员</span></td><td class="text-right font-mono font-semibold">181</td><td class="text-right font-mono">12.7%</td></tr>
+              <tr><td><span class="tag-badge tag-risk">法律诉讼</span></td><td class="text-right font-mono font-semibold">145</td><td class="text-right font-mono">10.2%</td></tr>
+              <tr><td><span class="tag-badge tag-risk">劳资冲突</span></td><td class="text-right font-mono font-semibold">85</td><td class="text-right font-mono">6.0%</td></tr>
+              <tr><td><span class="tag-badge tag-risk">行政处罚</span></td><td class="text-right font-mono font-semibold">23</td><td class="text-right font-mono">1.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.2 风险暴露企业 Top 10 -->
+  <div id="risk-top10" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-coral font-mono mr-2">2.2</span>风险暴露企业 Top 10</h3>
+    <div class="bg-card rounded-xl shadow-theme border border-theme overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="data-table w-full text-sm">
+          <thead>
+            <tr>
+              <th class="font-semibold w-12">排名</th>
+              <th class="font-semibold">企业</th>
+              <th class="font-semibold text-right font-mono">风险量</th>
+              <th class="font-semibold">主要标签</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="font-mono text-coral font-bold">1</td><td class="font-medium">特斯拉</td><td class="text-right font-mono font-bold text-coral">1,123</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">2</td><td class="font-medium">福特汽车</td><td class="text-right font-mono font-bold text-coral">867</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">3</td><td class="font-medium">大众汽车</td><td class="text-right font-mono font-bold text-coral">768</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">4</td><td class="font-medium">现代汽车</td><td class="text-right font-mono font-bold text-coral">642</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">5</td><td class="font-medium">通用汽车</td><td class="text-right font-mono font-bold text-coral">570</td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">6</td><td class="font-medium">宝马</td><td class="text-right font-mono font-bold text-coral">564</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">7</td><td class="font-medium">梅赛迪斯奔驰</td><td class="text-right font-mono font-bold text-coral">523</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">8</td><td class="font-medium">丰田汽车</td><td class="text-right font-mono font-bold text-coral">472</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">9</td><td class="font-medium">奥迪公司</td><td class="text-right font-mono font-bold text-coral">398</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+            <tr><td class="font-mono text-coral font-bold">10</td><td class="font-medium">本田汽车</td><td class="text-right font-mono font-bold text-coral">348</td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.3 风险标签×企业矩阵 -->
+  <div id="risk-matrix" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-coral font-mono mr-2">2.3</span>风险标签×企业矩阵（Top 15）</h3>
+    <div class="bg-card rounded-xl shadow-theme border border-theme overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="data-table w-full text-sm text-center" id="heatmapTable">
+          <thead>
+            <tr>
+              <th class="font-semibold text-left">企业</th>
+              <th class="font-semibold font-mono">安全事故</th>
+              <th class="font-semibold font-mono">监管调查</th>
+              <th class="font-semibold font-mono">裁减人员</th>
+              <th class="font-semibold font-mono">法律诉讼</th>
+              <th class="font-semibold font-mono">劳资冲突</th>
+              <th class="font-semibold font-mono">行政处罚</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="text-left font-medium">特斯拉</td><td class="font-mono heat-high">27</td><td class="font-mono heat-high">21</td><td class="font-mono heat-0">-</td><td class="font-mono heat-low">2</td><td class="font-mono heat-0">-</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">福特汽车</td><td class="font-mono heat-max">32</td><td class="font-mono heat-med">11</td><td class="font-mono heat-low">1</td><td class="font-mono heat-0">-</td><td class="font-mono heat-low">5</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">大众汽车</td><td class="font-mono heat-high">29</td><td class="font-mono heat-low">3</td><td class="font-mono heat-low">10</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">3</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">现代汽车</td><td class="font-mono heat-max">41</td><td class="font-mono heat-low">7</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">1</td><td class="font-mono heat-0">-</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">通用汽车</td><td class="font-mono heat-low">8</td><td class="font-mono heat-low">1</td><td class="font-mono heat-high">29</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">8</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">宝马</td><td class="font-mono heat-high">24</td><td class="font-mono heat-med">15</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">8</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">梅赛迪斯奔驰</td><td class="font-mono heat-high">25</td><td class="font-mono heat-med">18</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">6</td><td class="font-mono heat-0">-</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">丰田汽车</td><td class="font-mono heat-max">45</td><td class="font-mono heat-low">2</td><td class="font-mono heat-0">-</td><td class="font-mono heat-0">-</td><td class="font-mono heat-low">2</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">奥迪公司</td><td class="font-mono heat-high">27</td><td class="font-mono heat-low">6</td><td class="font-mono heat-med">11</td><td class="font-mono heat-low">2</td><td class="font-mono heat-low">4</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">本田汽车</td><td class="font-mono heat-max">33</td><td class="font-mono heat-low">9</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">3</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">比亚迪汽车</td><td class="font-mono heat-low">4</td><td class="font-mono heat-high">28</td><td class="font-mono heat-0">-</td><td class="font-mono heat-0">-</td><td class="font-mono heat-low">1</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">日产汽车</td><td class="font-mono heat-high">22</td><td class="font-mono heat-med">11</td><td class="font-mono heat-med">14</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">马自达</td><td class="font-mono heat-med">13</td><td class="font-mono heat-med">17</td><td class="font-mono heat-low">1</td><td class="font-mono heat-med">17</td><td class="font-mono heat-low">2</td><td class="font-mono heat-0">-</td></tr>
+            <tr><td class="text-left font-medium">菲亚特汽车</td><td class="font-mono heat-max">34</td><td class="font-mono heat-low">6</td><td class="font-mono heat-low">1</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">1</td></tr>
+            <tr><td class="text-left font-medium">吉利汽车</td><td class="font-mono heat-med">12</td><td class="font-mono heat-med">19</td><td class="font-mono heat-med">14</td><td class="font-mono heat-low">4</td><td class="font-mono heat-low">1</td><td class="font-mono heat-0">-</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="px-4 py-3 text-xs text-muted flex items-center gap-4 border-t border-theme">
+        <span>热力色标：</span>
+        <span class="flex items-center gap-1"><span class="w-4 h-4 rounded heat-0 border border-theme inline-block"></span> 0/-</span>
+        <span class="flex items-center gap-1"><span class="w-4 h-4 rounded heat-low inline-block"></span> 1-10</span>
+        <span class="flex items-center gap-1"><span class="w-4 h-4 rounded heat-med inline-block"></span> 11-20</span>
+        <span class="flex items-center gap-1"><span class="w-4 h-4 rounded heat-high inline-block"></span> 21-30</span>
+        <span class="flex items-center gap-1"><span class="w-4 h-4 rounded heat-max inline-block"></span> 31+</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.4 重点企业风险事件 -->
+  <div id="risk-details" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-coral font-mono mr-2">2.4</span>重点企业风险事件</h3>
+
+    <!-- 特斯拉 风险 -->
+    <div class="company-detail risk bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">特斯拉</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-coral/10 text-coral">风险量 1,123</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-risk mb-1">安全事故</span>
+          <p class="mt-1">瑞士卢塞恩州里肯巴赫的一家高端汽车经销商遭三名年轻男子袭击，他们先破坏特斯拉车窗进入车库，偷走豪车钥匙，用奔驰当撞车工具开走保时捷718 Spyder RS。但特斯拉检测到可疑活动后录制了全过程并通知车主，警方根据线索拦截保时捷并抓获窃贼。 特斯拉车辆可在检测到可疑活动时拍摄周边环境，此次事件中其摄像头记录下窃贼作案全过程，成为指证窃贼的关键证据，帮助警方快速破案。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">监管调查</span>
+          <p class="mt-1">泰格·伍兹在佛罗里达发生翻车事故后因酒驾被捕，马斯克认同投资人观点，认为即便酒驾，使用FSD也比分心驾驶更安全，或可避免该事故。 FSD正被NHTSA调查，或召回百万辆特斯拉；1月又添5起事故，服务上线至今共14起。投资人Ross Gerber与CPUC均认为FSD实际仅为L2级，并非真正的Robotaxi。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">法律诉讼</span>
+          <p class="mt-1">特斯拉FSD被官方归类为SAE 2级自动驾驶，仅能辅助完成部分常规驾驶任务，驾驶员需全程监控并随时接管，需承担全部驾驶责任。 目前已有竞争对手将类似自动驾驶服务商业化落地，而特斯拉FSD暂未实现合法完全自动驾驶。欧洲ADAS 2.0虽可短时间理想条件下自动驾驶，但仍依赖驾驶员随时接管。 用户Ricky称因视力下降，在眼科医生推荐下购买赛博卡车，其表示FSD让车辆在三条路线自动驾驶一个半小时，自己未碰方向盘。但视频无证据佐证真实性。 美国NHTSA正针对超320万辆装配FSD的车辆展开调查，已涉及超80起FSD相关交通违法事件，特斯拉被指拖延提供事故数据，还面临车主起诉FSD导致事故的诉讼。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 福特汽车 风险 -->
+    <div class="company-detail risk bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">福特汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-coral/10 text-coral">风险量 867</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-risk mb-1">监管调查</span>
+          <p class="mt-1">英国部分20年以上老旧车型因车辆消费税（VED）上涨，年税费占车辆价值25%-50%，甚至超车辆本身价值，导致报废量激增。Car.co.uk数据显示，Land Rover Freelander报废量2024-2025年涨550%，VW Golf R32等车型报废率也大幅上升。 针对20-39年车龄车辆的减税请愿已获近5万签名，但英国财政部表示暂无降低该类车辆VED的计划，称车辆税收入将用于道路维护等公共服务。 研究显示，保留老旧车辆上路比报废换新车更环保，新车制造碳排放可达17吨，延长老车使用年限可降低单位里程的总排放。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">安全事故</span>
+          <p class="mt-1">福特将召回2018、2019款1.5排量EcoSport共21007台，需前往经销商处刷新发动机控制模块（PCM）软件，修复同步带张紧轮断裂导致发动机突然熄火的安全隐患，该服务耗时约20分钟。 涉事车辆包括2017.5.2-2018.2.5生产的2018款EcoSport（底盘号78598043至J8699424），以及2018.1.23-2018.4.4生产的2019款EcoSport（底盘号K8695003至K8716214），车主可通过0800 703 03673或福特官网查询详情。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">行政处罚</span>
+          <p class="mt-1">因澳洲市场F-150多次召回，福特全面 overhaul本地再制造流程、强化质量管控以重建客户信任。整改包括细化转换流程、增加检查环节、简化部件采购，改用美原厂转向系统与车灯供应商，暂停销售并全面验证流程，2025年曾因澳标外灯问题停售，2025年11月恢复销售，2025年12月销量强劲。 F-150澳洲版2023年上市，召回问题含美规原版燃油泄漏起火风险、后轮轮毂螺栓问题，本地右驾改装导致的澳标外灯不合规，还曾下调车辆总质量限制450kg并提供补偿。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 大众汽车 风险 -->
+    <div class="company-detail risk bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">大众汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-coral/10 text-coral">风险量 768</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-risk mb-1">监管调查</span>
+          <p class="mt-1">现今道路上汽车比1970年清洁99%，美国空气质量显著提升，洛杉矶空气铅含量暴跌。催化转化器是核心环保技术，其普及离不开加州率先推行更严格的汽车排放标准。 1970年《清洁空气法》出台后，加州获EPA豁免率先实施更严标准，迫使车企研发适配的催化技术，凭借最大汽车市场的影响力推动该技术全球普及，减少了数十亿顿污染排放。 特朗普政府攻击加州减排权限，撤销其相关豁免权并起诉其零排放车辆 mandate，加州正探索替代方案以延续汽车清洁化进程。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">安全事故</span>
+          <p class="mt-1">大众针对全球约10万辆电动车发起大范围召回，因检测到高压电池模组可能存在异常，存在过热风险，覆盖基于MEB平台的ID.3、ID.4、ID.5、ID.Buzz及CUPRA Born车型，生产时间为2022-2024年。 召回分两阶段处理：先通过软件升级精准监控电池状态，若仍发现异常则更换故障模组。车辆可通过仪表盘提示和续航下降预警提前发现问题，目前无实际故障或事故报告。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">法律诉讼</span>
+          <p class="mt-1">本次为英国法律史上最大规模集体诉讼，160万英国司机起诉14家车企2009年后销售的柴油车安装非法作弊装置。案件将在高等法院进行三周终审，夏季将出判决，若车企败诉将启动赔偿审判。5家车企作为核心被告，包括奔驰、福特等。 英国交通部正联合DVSA调查2010-2018年生产的欧5、欧6柴油车，涉及110款车型。工党议员呼吁加速执法，曾有9岁儿童因空气污染离世的案例引发对尾气污染的关注。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 现代汽车 风险 -->
+    <div class="company-detail risk bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">现代汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-coral/10 text-coral">风险量 642</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-risk mb-1">监管调查</span>
+          <p class="mt-1">法兰克福检察院通过调查，对国际车企开出巨额罚单并追缴违法所得，展现了柴油尾气丑闻的严重程度。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">安全事故</span>
+          <p class="mt-1">现代汽车针对2017至2022款i30 N性能掀背车发起召回，共涉及7293台车辆，原因是高压燃油泵的燃油控制阀存在制造缺陷，可能导致多余汽油进入泵体，引发发动机熄火、行驶中突然失速，增加事故伤亡风险。 澳洲现代公司将书面通知受影响车主，免费为车辆检查更换燃油泵叶轮，车主可通过客服电话、专属召回网站或就近经销商进行预约检修。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">法律诉讼</span>
+          <p class="mt-1">圣彼得堡前现代汽车厂拖欠一名萨拉托夫女车主800余万卢布债务。该车主2016年在此购车，因车辆质量问题维权获车款全额赔偿，后又就随车加装配件索赔，2023年法院判厂方赔付配件款、违约金及每日逾期费，截至2024年3月欠款连罚息超860万卢布。 现代曾在俄罗斯注册Hyundai BlueDrive商标，注册类别为第12类，涵盖乘用车、货车、巴士及相关零部件、发动机等。</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 通用汽车 风险 -->
+    <div class="company-detail risk bg-card rounded-xl p-6 shadow-theme border border-theme mb-4">
+      <div class="flex items-center gap-3 mb-4">
+        <h4 class="font-bold text-base">通用汽车</h4>
+        <span class="font-mono text-xs px-2 py-0.5 rounded bg-coral/10 text-coral">风险量 570</span>
+      </div>
+      <div class="space-y-4 text-sm text-secondary leading-relaxed">
+        <div>
+          <span class="tag-badge tag-risk mb-1">裁减人员</span>
+          <p class="mt-1">韩国通用受车用半导体供应短缺影响，下月1-15日暂停生产探界者的富平1工厂运营，此前该工厂已减半运行；生产Trax等车型的富平2工厂本月及下月均半开工。生产Spark的昌原工厂本月中旬起停工进行设备改造，下月继续施工，明年末将投产新CUV车型。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">安全事故</span>
+          <p class="mt-1">本栏目汇总全球顶级汽车新闻，聚焦影响美国人出行的重要事件，当日内容包括美国油价破4美元、通用暂停Factory Zero工厂生产、特朗普政府对华电动车边境政策及NHTSA调查日产皮卡燃油泄漏问题。 美国普通汽油均价达4.018美元，较一个月前上涨超1美元，原油价格突破102美元/桶，油价上涨将对消费者认知产生显著影响。 通用汽车暂停生产Silverado EV、Hummer EV等车型的底特律电动车工厂生产，直至4月13日，约1300名工人临时停工，因电动车市场需求疲软。 美国驻加拿大大使称不会允许中国电动车经加拿大进入美国市场，理由是车辆数据收集传输存在安全顾虑。</p>
+        </div>
+        <div>
+          <span class="tag-badge tag-risk mb-1">劳资冲突</span>
+          <p class="mt-1">GM韩国投资落地依托韩国GM的研产一体结构、1600余家合作商生态，以及本土三星、SK等半导体与电池企业集群，可缩短新车开发周期、稳定质量，获取电动化协同效应。 韩国GM虽具备产业优势，但仍面临反复的劳资冲突风险，叠加《黄信封法》实施，或引发新的劳资矛盾，影响投资落地效果。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2.5 风险分析 -->
+  <div id="risk-analysis" class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-coral font-mono mr-2">2.5</span>风险分析</h3>
+    <div class="space-y-4">
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#e74c3c">
+        <h4 class="font-semibold mb-2 text-coral">安全事故是最大风险类别（43%），电池安全和大规模召回是核心议题。</h4>
+        <p class="text-sm text-secondary leading-relaxed">大众全球召回约10万辆电动车（电池过热风险）、沃尔沃/吉利召回4万辆EX30（电池成本约1.95亿美元）、丰田在华召回56万辆SUV、奇瑞印尼高速起火。电池安全问题跨品牌、跨供应商出现，表明这是全行业的供应链品控挑战。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#e67e22">
+        <h4 class="font-semibold mb-2" style="color:#e67e22">监管调查集中在贸易壁垒和市场准入（26%）。</h4>
+        <p class="text-sm text-secondary leading-relaxed">马来西亚对中国车企CKD项目设置产量配额和售价门槛；日本以电池本土化为标准重构EV补贴；巴西进口关税阶梯式恢复至35%；澳大利亚总理公开警告中国车企售后问题；美国五大汽车组织联名要求封堵中国车。全球多市场同步收紧是3月最具系统性的风险信号。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#9b59b6">
+        <h4 class="font-semibold mb-2" style="color:#9b59b6">裁减人员集中在欧美传统车企（13%）。</h4>
+        <p class="text-sm text-secondary leading-relaxed">大众宣布2030年前裁员5万人（利润暴跌44%）；通用汽车Factory Zero工厂临时解雇1300人；奥迪营业利润率降至5.1%。欧美车企正经历电动化转型的"阵痛期"——传统产能萎缩、新产能尚未盈利。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#2980b9">
+        <h4 class="font-semibold mb-2 text-steel">法律诉讼涉及专利和排放两大领域（10%）。</h4>
+        <p class="text-sm text-secondary leading-relaxed">吉利在巴西遭通信标准必要专利禁令；英国160万司机起诉14家车企柴油排放作弊；长城广告抄袭路虎引发全球批评。知识产权风险正成为中国车企海外扩张的新障碍。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: 交叉分析 ==================== -->
+<section id="section3" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="section-header reveal">
+    <div class="section-icon bg-steel"><i class="fas fa-code-compare"></i></div>
+    <h2 class="text-xl font-bold">第三部分：交叉分析</h2>
+  </div>
+
+  <!-- 3.1 企业竞争格局 -->
+  <div class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-steel font-mono mr-2">3.1</span>企业竞争格局</h3>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+      <div class="pressure-card coral-border bg-card rounded-xl p-5 shadow-theme">
+        <div class="text-xs font-semibold text-coral mb-2"><i class="fas fa-arrow-down mr-1"></i>承压者</div>
+        <div class="font-bold mb-1">特斯拉</div>
+        <div class="text-xs text-secondary space-y-1">
+          <div>趋势 <span class="font-mono font-semibold text-emerald">4,568</span></div>
+          <div>风险 <span class="font-mono font-semibold text-coral">1,123</span></div>
+          <div>比值 <span class="font-mono font-bold text-coral">4.1:1</span></div>
+        </div>
+      </div>
+      <div class="pressure-card coral-border bg-card rounded-xl p-5 shadow-theme">
+        <div class="text-xs font-semibold text-coral mb-2"><i class="fas fa-arrow-down mr-1"></i>承压者</div>
+        <div class="font-bold mb-1">福特汽车</div>
+        <div class="text-xs text-secondary space-y-1">
+          <div>趋势 <span class="font-mono font-semibold text-emerald">3,409</span></div>
+          <div>风险 <span class="font-mono font-semibold text-coral">867</span></div>
+          <div>比值 <span class="font-mono font-bold text-coral">3.9:1</span></div>
+        </div>
+      </div>
+      <div class="pressure-card coral-border bg-card rounded-xl p-5 shadow-theme">
+        <div class="text-xs font-semibold text-coral mb-2"><i class="fas fa-arrow-down mr-1"></i>承压者</div>
+        <div class="font-bold mb-1">通用汽车</div>
+        <div class="text-xs text-secondary space-y-1">
+          <div>趋势 <span class="font-mono font-semibold text-emerald">1,898</span></div>
+          <div>风险 <span class="font-mono font-semibold text-coral">570</span></div>
+          <div>比值 <span class="font-mono font-bold text-coral">3.3:1</span></div>
+        </div>
+      </div>
+      <div class="pressure-card coral-border bg-card rounded-xl p-5 shadow-theme">
+        <div class="text-xs font-semibold text-coral mb-2"><i class="fas fa-arrow-down mr-1"></i>承压者</div>
+        <div class="font-bold mb-1">克莱斯勒集团</div>
+        <div class="text-xs text-secondary space-y-1">
+          <div>趋势 <span class="font-mono font-semibold text-emerald">332</span></div>
+          <div>风险 <span class="font-mono font-semibold text-coral">75</span></div>
+          <div>比值 <span class="font-mono font-bold text-coral">4.4:1</span></div>
+        </div>
+      </div>
+      <div class="pressure-card coral-border bg-card rounded-xl p-5 shadow-theme">
+        <div class="text-xs font-semibold text-coral mb-2"><i class="fas fa-arrow-down mr-1"></i>承压者</div>
+        <div class="font-bold mb-1">吉姆西</div>
+        <div class="text-xs text-secondary space-y-1">
+          <div>趋势 <span class="font-mono font-semibold text-emerald">280</span></div>
+          <div>风险 <span class="font-mono font-semibold text-coral">48</span></div>
+          <div>比值 <span class="font-mono font-bold text-coral">5.8:1</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3.2 交叉分析 -->
+  <div class="mb-12 reveal">
+    <h3 class="text-lg font-semibold mb-6"><span class="text-steel font-mono mr-2">3.2</span>交叉分析</h3>
+    <div class="space-y-4">
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#e74c3c">
+        <h4 class="font-semibold mb-2">中国车企：高趋势、低风险，但监管调查是隐患。</h4>
+        <p class="text-sm text-secondary leading-relaxed">比亚迪（19:1）、吉利（34:1）、奇瑞（35:1）、小鹏（65:1）趋势/风险比远高于行业平均，正面动态远多于负面。但风险标签高度集中在"监管调查"——这不是产品质量问题，而是海外市场准入的政策性风险，且正在多个市场同步升级。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#2980b9">
+        <h4 class="font-semibold mb-2">美国车企：趋势/风险比最低，转型压力最大。</h4>
+        <p class="text-sm text-secondary leading-relaxed">特斯拉（4:1）、福特（4:1）、通用（3:1）是承压最明显的一组。特斯拉风险集中在安全事故和FSD监管；通用风险集中在裁员和产能调整；福特在安全召回和质量管控上承压。美国车企整体处于电动化转型的"深水区"。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#16a085">
+        <h4 class="font-semibold mb-2">欧洲车企：趋势活跃但裁员阴影笼罩。</h4>
+        <p class="text-sm text-secondary leading-relaxed">宝马（10:1）、奔驰（8:1）、奥迪（10:1）趋势活跃度高，新品发布和技术创新密集，但大众（6:1）拖低了欧洲阵营整体表现。裁减人员和劳资冲突是欧洲车企特有的风险标签，反映电动化转型对传统产能和就业结构的冲击。</p>
+      </div>
+      <div class="bg-card rounded-xl p-6 shadow-theme border border-theme border-l-4" style="border-left-color:#9b59b6">
+        <h4 class="font-semibold mb-2">零部件供应商承压传导。</h4>
+        <p class="text-sm text-secondary leading-relaxed">博世（7:1）、采埃孚（5:1）的风险标签以"裁减人员"和"劳资冲突"为主，说明电动化转型的冲击正从整车厂传导到供应链企业。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: 战略建议 ==================== -->
+<section id="section4" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="section-header reveal">
+    <div class="section-icon" style="background:linear-gradient(135deg,#16a085,#2980b9)"><i class="fas fa-lightbulb"></i></div>
+    <h2 class="text-xl font-bold">第四部分：战略建议</h2>
+  </div>
+  <div class="space-y-4 reveal">
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald">1</span>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">中国车企出海需将售后服务网络建设提升到与销量增长同等优先级。</h4>
+          <p class="text-sm text-secondary leading-relaxed">澳大利亚总理公开警告、越南市场退潮、墨西哥经销商被处罚——多个市场同时出现售后短板信号。销量扩张速度远超服务网络建设速度，这个缺口如果不尽快弥合，将从个别投诉演变为系统性品牌危机。</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald">2</span>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">关注"电池本土化"作为新型非关税壁垒的趋势。</h4>
+          <p class="text-sm text-secondary leading-relaxed">日本以电池产地为标准调整EV补贴、英国补贴优先欧洲产车、马来西亚要求CKD项目本地化率——"在哪里造电池"正在成为比"造什么车"更重要的市场准入条件。</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald">3</span>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">欧美传统车企的转型阵痛将持续，关注其产能调整带来的合作机会。</h4>
+          <p class="text-sm text-secondary leading-relaxed">大众裁员5万、福特停产F-150 Lightning、通用暂停Factory Zero——这些是电动化转型的结构性调整。福特-吉利欧洲产能合作谈判是一个信号：传统车企的闲置产能可能成为中国车企规避关税、进入欧美市场的跳板。</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald">4</span>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">电池安全和自动驾驶安全是全行业的信任底线。</h4>
+          <p class="text-sm text-secondary leading-relaxed">大众10万辆召回、沃尔沃4万辆召回、福特Blue Cruise致命事故——安全问题不分中外品牌，任何一家企业的重大安全事件都会波及整个电动车行业的消费者信任。</p>
+        </div>
+      </div>
+    </div>
+    <div class="bg-card rounded-xl p-6 shadow-theme border border-theme">
+      <div class="flex gap-4">
+        <div class="flex-shrink-0 w-10 h-10 rounded-full bg-emerald/10 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald">5</span>
+        </div>
+        <div>
+          <h4 class="font-semibold mb-2">持续跟踪通信标准必要专利对中国车企的影响。</h4>
+          <p class="text-sm text-secondary leading-relaxed">吉利在巴西遭Avanci平台专利禁令是预警信号——随着智能网联汽车对通信技术的依赖加深，专利许可成本将成为不可忽视的出海成本项。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== APPENDIX ==================== -->
+<section id="appendix" class="max-w-6xl mx-auto px-4 py-12">
+  <div class="section-header reveal">
+    <div class="section-icon" style="background:linear-gradient(135deg,#4a4a6a,#2d2d4a)"><i class="fas fa-database"></i></div>
+    <h2 class="text-xl font-bold">附录：企业完整数据</h2>
+    <span class="text-xs text-muted font-mono ml-auto">47家企业</span>
+  </div>
+  <div class="bg-card rounded-xl shadow-theme border border-theme overflow-hidden reveal">
+    <div class="overflow-x-auto">
+      <table class="data-table w-full text-sm" id="appendixTable">
+        <thead>
+          <tr>
+            <th class="font-semibold">#</th>
+            <th class="font-semibold">企业</th>
+            <th class="font-semibold text-right font-mono">趋势量</th>
+            <th class="font-semibold text-right font-mono">风险量</th>
+            <th class="font-semibold text-right font-mono">比值</th>
+            <th class="font-semibold">主要趋势</th>
+            <th class="font-semibold">主要风险</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="font-mono text-muted">1</td><td class="font-medium">宝马</td><td class="text-right font-mono">5,730</td><td class="text-right font-mono">564</td><td class="text-right font-mono font-semibold">10:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">扩大投资</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">2</td><td class="font-medium">丰田汽车</td><td class="text-right font-mono">5,428</td><td class="text-right font-mono">472</td><td class="text-right font-mono font-semibold">12:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">3</td><td class="font-medium">比亚迪汽车</td><td class="text-right font-mono">5,573</td><td class="text-right font-mono">289</td><td class="text-right font-mono font-semibold">19:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr class="appendix-row-pressure"><td class="font-mono text-muted">4</td><td class="font-medium">特斯拉</td><td class="text-right font-mono">4,568</td><td class="text-right font-mono text-coral font-semibold">1,123</td><td class="text-right font-mono font-bold text-coral">4:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">5</td><td class="font-medium">大众汽车</td><td class="text-right font-mono">4,624</td><td class="text-right font-mono">768</td><td class="text-right font-mono font-semibold">6:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+          <tr><td class="font-mono text-muted">6</td><td class="font-medium">现代汽车</td><td class="text-right font-mono">4,484</td><td class="text-right font-mono">642</td><td class="text-right font-mono font-semibold">7:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">7</td><td class="font-medium">本田汽车</td><td class="text-right font-mono">4,401</td><td class="text-right font-mono">348</td><td class="text-right font-mono font-semibold">13:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">扩大投资</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">8</td><td class="font-medium">梅赛迪斯奔驰</td><td class="text-right font-mono">4,151</td><td class="text-right font-mono">523</td><td class="text-right font-mono font-semibold">8:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">9</td><td class="font-medium">奥迪公司</td><td class="text-right font-mono">4,112</td><td class="text-right font-mono">398</td><td class="text-right font-mono font-semibold">10:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+          <tr class="appendix-row-pressure"><td class="font-mono text-muted">10</td><td class="font-medium">福特汽车</td><td class="text-right font-mono">3,409</td><td class="text-right font-mono text-coral font-semibold">867</td><td class="text-right font-mono font-bold text-coral">4:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">研发合作</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">11</td><td class="font-medium">吉利汽车</td><td class="text-right font-mono">2,908</td><td class="text-right font-mono">86</td><td class="text-right font-mono font-semibold">34:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+          <tr><td class="font-mono text-muted">12</td><td class="font-medium">日产汽车</td><td class="text-right font-mono">2,434</td><td class="text-right font-mono">119</td><td class="text-right font-mono font-semibold">20:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+          <tr><td class="font-mono text-muted">13</td><td class="font-medium">铃木公司</td><td class="text-right font-mono">2,474</td><td class="text-right font-mono">77</td><td class="text-right font-mono font-semibold">32:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">销售合作</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr class="appendix-row-pressure"><td class="font-mono text-muted">14</td><td class="font-medium">通用汽车</td><td class="text-right font-mono">1,898</td><td class="text-right font-mono text-coral font-semibold">570</td><td class="text-right font-mono font-bold text-coral">3:1</td><td><span class="tag-badge tag-trend">经营业绩</span> <span class="tag-badge tag-trend">扩大投资</span></td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">15</td><td class="font-medium">奇瑞汽车</td><td class="text-right font-mono">2,200</td><td class="text-right font-mono">62</td><td class="text-right font-mono font-semibold">35:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">16</td><td class="font-medium">马自达</td><td class="text-right font-mono">2,078</td><td class="text-right font-mono">110</td><td class="text-right font-mono font-semibold">19:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">荣誉奖项</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">法律诉讼</span></td></tr>
+          <tr><td class="font-mono text-muted">17</td><td class="font-medium">三菱汽车</td><td class="text-right font-mono">1,775</td><td class="text-right font-mono">80</td><td class="text-right font-mono font-semibold">22:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">18</td><td class="font-medium">上汽名爵</td><td class="text-right font-mono">1,714</td><td class="text-right font-mono">64</td><td class="text-right font-mono font-semibold">27:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">19</td><td class="font-medium">VinFast</td><td class="text-right font-mono">1,583</td><td class="text-right font-mono">6</td><td class="text-right font-mono font-semibold">264:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">裁减人员</span></td></tr>
+          <tr><td class="font-mono text-muted">20</td><td class="font-medium">菲亚特汽车</td><td class="text-right font-mono">1,434</td><td class="text-right font-mono">91</td><td class="text-right font-mono font-semibold">16:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">荣誉奖项</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">21</td><td class="font-medium">小米汽车</td><td class="text-right font-mono">1,264</td><td class="text-right font-mono">55</td><td class="text-right font-mono font-semibold">23:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">法律诉讼</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">22</td><td class="font-medium">长城汽车</td><td class="text-right font-mono">1,207</td><td class="text-right font-mono">48</td><td class="text-right font-mono font-semibold">25:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">法律诉讼</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">23</td><td class="font-medium">雪铁龙汽车</td><td class="text-right font-mono">1,158</td><td class="text-right font-mono">83</td><td class="text-right font-mono font-semibold">14:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">荣誉奖项</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">24</td><td class="font-medium">塔塔汽车</td><td class="text-right font-mono">1,105</td><td class="text-right font-mono">48</td><td class="text-right font-mono font-semibold">23:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">荣誉奖项</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">25</td><td class="font-medium">小鹏汽车</td><td class="text-right font-mono">1,042</td><td class="text-right font-mono">16</td><td class="text-right font-mono font-semibold">65:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">26</td><td class="font-medium">广汽集团</td><td class="text-right font-mono">993</td><td class="text-right font-mono">21</td><td class="text-right font-mono font-semibold">47:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">27</td><td class="font-medium">长安汽车</td><td class="text-right font-mono">873</td><td class="text-right font-mono">19</td><td class="text-right font-mono font-semibold">46:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr><td class="font-mono text-muted">28</td><td class="font-medium">蔚来汽车</td><td class="text-right font-mono">806</td><td class="text-right font-mono">32</td><td class="text-right font-mono font-semibold">25:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">法律诉讼</span></td></tr>
+          <tr><td class="font-mono text-muted">29</td><td class="font-medium">劳斯莱斯汽车</td><td class="text-right font-mono">670</td><td class="text-right font-mono">34</td><td class="text-right font-mono font-semibold">20:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">研发合作</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">30</td><td class="font-medium">博世公司（汽车零件）</td><td class="text-right font-mono">602</td><td class="text-right font-mono">86</td><td class="text-right font-mono font-semibold">7:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">劳资冲突</span></td></tr>
+          <tr><td class="font-mono text-muted">31</td><td class="font-medium">上汽集团</td><td class="text-right font-mono">536</td><td class="text-right font-mono">7</td><td class="text-right font-mono font-semibold">77:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">32</td><td class="font-medium">戴姆勒卡车</td><td class="text-right font-mono">382</td><td class="text-right font-mono">29</td><td class="text-right font-mono font-semibold">13:1</td><td><span class="tag-badge tag-trend">研发合作</span> <span class="tag-badge tag-trend">扩大投资</span></td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">劳资冲突</span></td></tr>
+          <tr class="appendix-row-pressure"><td class="font-mono text-muted">33</td><td class="font-medium">克莱斯勒集团</td><td class="text-right font-mono">332</td><td class="text-right font-mono text-coral font-semibold">75</td><td class="text-right font-mono font-bold text-coral">4:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">34</td><td class="font-medium">北汽集团</td><td class="text-right font-mono">397</td><td class="text-right font-mono">3</td><td class="text-right font-mono font-semibold">132:1</td><td><span class="tag-badge tag-trend">技术创新</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">35</td><td class="font-medium">五菱汽车</td><td class="text-right font-mono">343</td><td class="text-right font-mono">6</td><td class="text-right font-mono font-semibold">57:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">监管调查</span> <span class="tag-badge tag-risk">安全事故</span></td></tr>
+          <tr class="appendix-row-pressure"><td class="font-mono text-muted">36</td><td class="font-medium">吉姆西</td><td class="text-right font-mono">280</td><td class="text-right font-mono text-coral font-semibold">48</td><td class="text-right font-mono font-bold text-coral">6:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">荣誉奖项</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">劳资冲突</span></td></tr>
+          <tr><td class="font-mono text-muted">37</td><td class="font-medium">中国一汽</td><td class="text-right font-mono">263</td><td class="text-right font-mono">50</td><td class="text-right font-mono font-semibold">5:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">38</td><td class="font-medium">江淮汽车</td><td class="text-right font-mono">297</td><td class="text-right font-mono">11</td><td class="text-right font-mono font-semibold">27:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td><span class="tag-badge tag-risk">安全事故</span> <span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">39</td><td class="font-medium">采埃孚公司</td><td class="text-right font-mono">212</td><td class="text-right font-mono">40</td><td class="text-right font-mono font-semibold">5:1</td><td><span class="tag-badge tag-trend">经营业绩</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">裁减人员</span> <span class="tag-badge tag-risk">劳资冲突</span></td></tr>
+          <tr><td class="font-mono text-muted">40</td><td class="font-medium">丰田阿斯特拉汽车</td><td class="text-right font-mono">48</td><td class="text-right font-mono">0</td><td class="text-right font-mono font-semibold">48:0</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td class="text-muted">-</td></tr>
+          <tr><td class="font-mono text-muted">41</td><td class="font-medium">春风动力</td><td class="text-right font-mono">38</td><td class="text-right font-mono">0</td><td class="text-right font-mono font-semibold">38:0</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">区域拓展</span></td><td class="text-muted">-</td></tr>
+          <tr><td class="font-mono text-muted">42</td><td class="font-medium">阿斯特拉国际</td><td class="text-right font-mono">37</td><td class="text-right font-mono">0</td><td class="text-right font-mono font-semibold">37:0</td><td><span class="tag-badge tag-trend">经营业绩</span> <span class="tag-badge tag-trend">新品发布</span></td><td class="text-muted">-</td></tr>
+          <tr><td class="font-mono text-muted">43</td><td class="font-medium">阿斯特拉大发汽车</td><td class="text-right font-mono">33</td><td class="text-right font-mono">1</td><td class="text-right font-mono font-semibold">33:1</td><td><span class="tag-badge tag-trend">经营业绩</span> <span class="tag-badge tag-trend">新品发布</span></td><td><span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">44</td><td class="font-medium">三菱汽车克拉马尤达</td><td class="text-right font-mono">27</td><td class="text-right font-mono">1</td><td class="text-right font-mono font-semibold">27:1</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td><span class="tag-badge tag-risk">监管调查</span></td></tr>
+          <tr><td class="font-mono text-muted">45</td><td class="font-medium">大陆集团</td><td class="text-right font-mono">19</td><td class="text-right font-mono">1</td><td class="text-right font-mono font-semibold">19:1</td><td><span class="tag-badge tag-trend">经营业绩</span> <span class="tag-badge tag-trend">技术创新</span></td><td><span class="tag-badge tag-risk">法律诉讼</span></td></tr>
+          <tr><td class="font-mono text-muted">46</td><td class="font-medium">联合拖拉机</td><td class="text-right font-mono">3</td><td class="text-right font-mono">0</td><td class="text-right font-mono font-semibold">3:0</td><td><span class="tag-badge tag-trend">新品发布</span> <span class="tag-badge tag-trend">经营业绩</span></td><td class="text-muted">-</td></tr>
+          <tr><td class="font-mono text-muted">47</td><td class="font-medium">图纳斯瑞登</td><td class="text-right font-mono">1</td><td class="text-right font-mono">0</td><td class="text-right font-mono font-semibold">1:0</td><td><span class="tag-badge tag-trend">新品发布</span></td><td class="text-muted">-</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Author & Footer -->
+<footer class="max-w-6xl mx-auto px-4 py-12 border-t border-theme">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+    <div class="flex items-center gap-3">
+      <div class="w-10 h-10 rounded-full bg-gradient-to-br from-emerald to-steel flex items-center justify-center text-white font-bold text-sm">S</div>
+      <div>
+        <div class="font-semibold text-sm">Supinfor Ltd.</div>
+        <div class="text-xs text-muted">全球商情速递平台</div>
+      </div>
+    </div>
+    <div class="text-xs text-muted font-mono">
+      <i class="fas fa-calendar-alt mr-1"></i> 生成日期：2026-04-20
+    </div>
+  </div>
+  <div class="text-center text-xs text-muted leading-relaxed">
+    <p>数据来源：Supinfor全球商情速递平台 | 生成日期：2026-04-20</p>
+    <p class="mt-1">本报告由 Supinfor 平台自动生成，仅供参考，不构成投资建议。</p>
+  </div>
+</footer>
+
+</div><!-- end main-content -->
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="hidden fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-emerald text-white shadow-lg flex items-center justify-center hover:bg-emerald-dark transition" aria-label="返回顶部">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- JavaScript -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== Theme Toggle =====
+  const html = document.documentElement;
+  const themeToggle = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+      themeIcon.className = 'fas fa-sun text-lg';
+    } else {
+      html.classList.remove('dark');
+      themeIcon.className = 'fas fa-moon text-lg';
+    }
+  }
+
+  // Init theme
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    applyTheme(savedTheme);
+  } else {
+    applyTheme(getSystemTheme());
+  }
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  themeToggle.addEventListener('click', () => {
+    const isDark = html.classList.contains('dark');
+    const newTheme = isDark ? 'light' : 'dark';
+    localStorage.setItem('theme', newTheme);
+    applyTheme(newTheme);
+  });
+
+  // ===== TOC Toggle (Mobile) =====
+  const tocToggle = document.getElementById('tocToggle');
+  const sidebarToc = document.getElementById('sidebarToc');
+  const tocOverlay = document.getElementById('tocOverlay');
+
+  function closeToc() {
+    sidebarToc.classList.remove('open');
+    tocOverlay.classList.remove('open');
+  }
+
+  tocToggle.addEventListener('click', () => {
+    sidebarToc.classList.toggle('open');
+    tocOverlay.classList.toggle('open');
+  });
+
+  tocOverlay.addEventListener('click', closeToc);
+
+  // Close TOC on link click (mobile)
+  sidebarToc.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1280) closeToc();
+    });
+  });
+
+  // ===== Active TOC Highlight =====
+  const tocLinks = document.querySelectorAll('.toc-link');
+  const sections = [];
+  tocLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      const el = document.querySelector(href);
+      if (el) sections.push({ el, link });
+    }
+  });
+
+  function updateActiveToc() {
+    let current = null;
+    const scrollY = window.scrollY + 100;
+    for (let i = sections.length - 1; i >= 0; i--) {
+      if (sections[i].el.offsetTop <= scrollY) {
+        current = sections[i];
+        break;
+      }
+    }
+    tocLinks.forEach(l => l.classList.remove('active'));
+    if (current) current.link.classList.add('active');
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+
+  // ===== Back to Top =====
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.remove('hidden');
+    } else {
+      backToTop.classList.add('hidden');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== IntersectionObserver Reveal =====
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // ===== Smooth scroll for anchor links =====
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        const offset = 80;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+</body>
+</html>

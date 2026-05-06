@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>德国国别洞察月报</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root {
+  --bg-primary: #F0F2F5;
+  --bg-secondary: #FFFFFF;
+  --bg-hero: #0A1628;
+  --text-primary: #1A1A2E;
+  --text-secondary: #4A4A6A;
+  --text-muted: #8888A0;
+  --accent-gold: #D4A843;
+  --accent-gold-light: #F0D78C;
+  --accent-red: #E63946;
+  --accent-red-light: #FFE0E3;
+  --accent-blue: #2563EB;
+  --accent-blue-light: #DBEAFE;
+  --accent-green: #059669;
+  --accent-green-light: #D1FAE5;
+  --border-color: #E2E4E8;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --card-shadow-hover: 0 8px 30px rgba(0,0,0,0.12);
+  --hero-gradient: linear-gradient(135deg, #0A1628 0%, #1A2744 50%, #0D1B30 100%);
+  --section-gradient: linear-gradient(180deg, #F0F2F5 0%, #FFFFFF 100%);
+}
+[data-theme="dark"] {
+  --bg-primary: #0D1117;
+  --bg-secondary: #161B22;
+  --bg-hero: #010409;
+  --text-primary: #E6EDF3;
+  --text-secondary: #A0AEC0;
+  --text-muted: #6B7280;
+  --accent-gold: #F0D78C;
+  --accent-gold-light: #3D3520;
+  --accent-red: #FF6B7A;
+  --accent-red-light: #3D1520;
+  --accent-blue: #58A6FF;
+  --accent-blue-light: #152238;
+  --accent-green: #3FB950;
+  --accent-green-light: #15302A;
+  --border-color: #30363D;
+  --card-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  --card-shadow-hover: 0 8px 30px rgba(0,0,0,0.5);
+  --hero-gradient: linear-gradient(135deg, #010409 0%, #0D1117 50%, #010409 100%);
+  --section-gradient: linear-gradient(180deg, #0D1117 0%, #161B22 100%);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  font-size: 16px;
+}
+/* ===== NAV ===== */
+.top-nav {
+  position: fixed; top:0; left:0; right:0; z-index:1000;
+  background: rgba(10,22,40,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(212,168,67,0.15);
+  padding: 0 2rem;
+  height: 56px;
+  display: flex; align-items: center; justify-content: space-between;
+  transition: all 0.3s;
+}
+.nav-brand { color: var(--accent-gold); font-weight: 700; font-size: 0.95rem; letter-spacing: 0.5px; }
+.nav-right { display: flex; align-items: center; gap: 1rem; }
+.nav-toc-btn, .theme-toggle {
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  color: #E6EDF3; border-radius: 8px; padding: 6px 14px; cursor: pointer;
+  font-size: 0.85rem; transition: all 0.2s;
+}
+.nav-toc-btn:hover, .theme-toggle:hover { background: rgba(212,168,67,0.2); border-color: var(--accent-gold); }
+/* ===== HERO ===== */
+.hero {
+  background: var(--hero-gradient);
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 80px 2rem 60px;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 50%, rgba(212,168,67,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(37,99,235,0.05) 0%, transparent 50%);
+}
+.hero::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 120px;
+  background: linear-gradient(to top, var(--bg-primary), transparent);
+}
+.hero-inner { position: relative; z-index: 2; max-width: 900px; text-align: center; }
+.hero-badge {
+  display: inline-block; background: rgba(212,168,67,0.15); border: 1px solid rgba(212,168,67,0.3);
+  color: var(--accent-gold); padding: 6px 20px; border-radius: 50px;
+  font-size: 0.8rem; font-weight: 500; letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+.hero-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900; color: #FFFFFF;
+  line-height: 1.2; margin-bottom: 1rem;
+}
+.hero-title .gold { color: var(--accent-gold); }
+.hero-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  color: rgba(255,255,255,0.6); font-weight: 300;
+  margin-bottom: 3rem;
+}
+.hero-stats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem; max-width: 700px; margin: 0 auto;
+}
+.hero-stat {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px; padding: 1.2rem 1rem;
+}
+.hero-stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem; font-weight: 900; color: var(--accent-gold);
+  white-space: nowrap;
+}
+.hero-stat-label { font-size: 0.75rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+/* ===== TOC PANEL ===== */
+.toc-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.5);
+  z-index: 2000; opacity: 0; pointer-events: none; transition: opacity 0.3s;
+}
+.toc-overlay.active { opacity: 1; pointer-events: auto; }
+.toc-panel {
+  position: fixed; top: 0; right: -400px; width: 380px; max-width: 90vw;
+  height: 100vh; background: var(--bg-secondary); z-index: 2001;
+  box-shadow: -4px 0 30px rgba(0,0,0,0.2); transition: right 0.35s ease;
+  overflow-y: auto; padding: 2rem;
+}
+.toc-panel.active { right: 0; }
+.toc-panel h3 {
+  font-family: 'Noto Serif SC', serif; font-size: 1.2rem;
+  margin-bottom: 1.5rem; color: var(--text-primary);
+  border-bottom: 2px solid var(--accent-gold); padding-bottom: 0.5rem;
+}
+.toc-close {
+  position: absolute; top: 1rem; right: 1rem; background: none; border: none;
+  font-size: 1.5rem; color: var(--text-muted); cursor: pointer;
+}
+.toc-list { list-style: none; }
+.toc-list li { margin-bottom: 0.3rem; }
+.toc-list a {
+  display: block; padding: 8px 12px; border-radius: 8px;
+  color: var(--text-secondary); text-decoration: none; font-size: 0.9rem;
+  transition: all 0.2s;
+}
+.toc-list a:hover { background: var(--accent-gold-light); color: var(--accent-gold); }
+.toc-list .toc-h2 { font-weight: 700; color: var(--text-primary); }
+.toc-list .toc-h3 { padding-left: 2rem; font-size: 0.82rem; }
+/* ===== MAIN CONTENT ===== */
+.main-content { max-width: 900px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+/* ===== SECTION ===== */
+.section { margin-bottom: 4rem; }
+.section-header {
+  display: flex; align-items: center; gap: 1rem;
+  margin-bottom: 2rem; padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border-color);
+}
+.section-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem; font-weight: 900; color: var(--accent-gold);
+  line-height: 1;
+}
+.section-title {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.6rem; font-weight: 700; color: var(--text-primary);
+}
+/* ===== INSIGHT CARD ===== */
+.insight-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+  transition: all 0.3s;
+}
+.insight-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
+.insight-card h4 {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.15rem; font-weight: 700; color: var(--text-primary);
+  margin-bottom: 1rem; line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent-gold);
+}
+.insight-card p {
+  color: var(--text-secondary); font-size: 0.95rem; line-height: 1.9;
+  text-align: justify;
+}
+/* ===== SUMMARY CARDS ===== */
+.summary-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap: 1rem; margin-bottom: 3rem;
+}
+.summary-card {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 14px; padding: 1.5rem; box-shadow: var(--card-shadow);
+  display: flex; gap: 1rem; align-items: flex-start;
+  transition: all 0.3s;
+}
+.summary-card:hover { box-shadow: var(--card-shadow-hover); transform: translateY(-2px); }
+.summary-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem; font-weight: 900; color: var(--accent-gold);
+  min-width: 36px;
+}
+.summary-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7; }
+.summary-text strong { color: var(--text-primary); }
+/* ===== RISK CARD ===== */
+.risk-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-red);
+  border-left: 4px solid var(--accent-red);
+  border-radius: 14px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--card-shadow);
+}
+.risk-card h4 {
+  color: var(--accent-red); font-size: 1.1rem; font-weight: 700;
+  margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem;
+}
+.risk-label {
+  display: inline-block; font-size: 0.75rem; font-weight: 700;
+  padding: 2px 10px; border-radius: 4px; margin-bottom: 0.5rem;
+}
+.risk-label-desc { background: var(--accent-red-light); color: var(--accent-red); }
+.risk-label-impact { background: var(--accent-blue-light); color: var(--accent-blue); }
+.risk-label-watch { background: var(--accent-green-light); color: var(--accent-green); }
+.risk-card p { color: var(--text-secondary); font-size: 0.92rem; line-height: 1.8; margin-bottom: 0.8rem; }
+/* ===== WATCH / CONCLUSION ===== */
+.watch-list { list-style: none; counter-reset: watch; }
+.watch-list li {
+  counter-increment: watch;
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1rem;
+  box-shadow: var(--card-shadow); font-size: 0.93rem; color: var(--text-secondary);
+  line-height: 1.8; position: relative; padding-left: 3.5rem;
+}
+.watch-list li::before {
+  content: counter(watch);
+  position: absolute; left: 1.2rem; top: 1.2rem;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 900; color: var(--accent-gold);
+}
+.watch-list li strong { color: var(--text-primary); }
+.conclusion-box {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 16px; padding: 2.5rem; box-shadow: var(--card-shadow);
+  margin-bottom: 2rem;
+}
+.conclusion-box p {
+  color: var(--text-secondary); font-size: 0.95rem; line-height: 2;
+  text-align: justify; margin-bottom: 1rem;
+}
+.advice-list { list-style: none; counter-reset: advice; }
+.advice-list li {
+  counter-increment: advice; position: relative;
+  padding: 1rem 1rem 1rem 3rem; margin-bottom: 0.8rem;
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 10px; font-size: 0.92rem; color: var(--text-secondary); line-height: 1.8;
+}
+.advice-list li::before {
+  content: counter(advice);
+  position: absolute; left: 0.8rem; top: 1rem;
+  background: var(--accent-gold); color: #fff; width: 24px; height: 24px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700;
+}
+.advice-list li strong { color: var(--text-primary); }
+/* ===== DATA VIZ ===== */
+.stat-cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem; margin: 2rem 0;
+}
+.stat-card {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 14px; padding: 1.5rem; text-align: center;
+  box-shadow: var(--card-shadow);
+}
+.stat-card .stat-value {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem; font-weight: 900; color: var(--accent-gold);
+  white-space: nowrap;
+}
+.stat-card .stat-value.red { color: var(--accent-red); }
+.stat-card .stat-label { font-size: 0.78rem; color: var(--text-muted); margin-top: 4px; }
+.bar-chart { margin: 1.5rem 0; }
+.bar-item { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 0.6rem; }
+.bar-label { min-width: 120px; font-size: 0.82rem; color: var(--text-secondary); text-align: right; }
+.bar-track { flex: 1; height: 28px; background: var(--border-color); border-radius: 14px; overflow: visible; position: relative; }
+.bar-fill { height: 100%; border-radius: 14px; transition: width 1s ease; position: relative; }
+.bar-fill::after { content: attr(data-value); position: absolute; right: -4px; top: 50%; transform: translate(100%, -50%); font-size: 0.85rem; font-weight: 700; color: var(--text-secondary); white-space: nowrap; padding-left: 8px; }
+.bar-fill.gold { background: linear-gradient(90deg, var(--accent-gold), #E8C56A); }
+.bar-fill.red { background: linear-gradient(90deg, var(--accent-red), #FF8A94); }
+.bar-fill.blue { background: linear-gradient(90deg, var(--accent-blue), #7CB3FF); }
+.bar-fill.green { background: linear-gradient(90deg, var(--accent-green), #6EE7A0); }
+/* ===== FOOTER ===== */
+.footer-author {
+  background: var(--bg-secondary); border: 1px solid var(--border-color);
+  border-radius: 16px; padding: 2rem; text-align: center;
+  margin: 3rem 0 2rem; box-shadow: var(--card-shadow);
+}
+.footer-author .author-name {
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--accent-gold);
+}
+.footer-author .author-date { font-size: 0.85rem; color: var(--text-muted); margin-top: 4px; }
+.footer-author .author-note { font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem; font-style: italic; }
+.site-footer {
+  text-align: center; padding: 2rem; font-size: 0.8rem; color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+/* ===== BACK TO TOP ===== */
+.back-to-top {
+  position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--accent-gold); color: #fff; border: none;
+  font-size: 1.2rem; cursor: pointer; box-shadow: 0 4px 15px rgba(212,168,67,0.4);
+  opacity: 0; transform: translateY(20px); transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+/* ===== LANGUAGE TOGGLE ===== */
+.lang-toggle {
+  display: flex; align-items: center; gap: 0;
+  background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px; overflow: hidden; font-size: 0.82rem;
+}
+.lang-toggle button {
+  background: none; border: none; color: #E6EDF3; padding: 6px 14px;
+  cursor: pointer; font-size: 0.82rem; font-weight: 500; transition: all 0.2s;
+}
+.lang-toggle button.active {
+  background: var(--accent-gold); color: #0A1628; font-weight: 700;
+}
+.lang-toggle button:hover:not(.active) { background: rgba(212,168,67,0.2); }
+[data-lang="zh"] .lang-en { display: none !important; }
+[data-lang="en"] .lang-zh { display: none !important; }
+/* ===== ANIMATIONS ===== */
+.reveal { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero { min-height: 90vh; padding: 80px 1.2rem 40px; }
+  .hero-stats { grid-template-columns: repeat(2, 1fr); gap: 0.8rem; }
+  .main-content { padding: 2rem 1rem 3rem; }
+  .summary-grid { grid-template-columns: 1fr; }
+  .stat-cards { grid-template-columns: repeat(2, 1fr); }
+  .section-num { font-size: 2rem; }
+  .section-title { font-size: 1.3rem; }
+  .bar-label { min-width: 80px; font-size: 0.75rem; }
+}
+</style>
+</head>
+<body>
+<!-- NAV -->
+<nav class="top-nav">
+  <div class="nav-brand"><i class="fas fa-globe-europe"></i> Supinfor 区域国别洞察</div>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="active" onclick="setLang('zh')">中</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+    <button class="nav-toc-btn" onclick="toggleToc()"><i class="fas fa-list"></i> <span class="lang-zh">目录</span><span class="lang-en">TOC</span></button>
+    <button class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></button>
+  </div>
+</nav>
+
+<!-- TOC -->
+<div class="toc-overlay" onclick="toggleToc()"></div>
+<div class="toc-panel">
+  <button class="toc-close" onclick="toggleToc()">&times;</button>
+  <h3><i class="fas fa-bookmark"></i> <span class="lang-zh">报告目录</span><span class="lang-en">Table of Contents</span></h3>
+  <ul class="toc-list lang-zh">
+    <li><a href="#summary" class="toc-h2">核心洞察摘要</a></li>
+    <li><a href="#s1" class="toc-h2">一、国内政治与政党博弈</a></li>
+    <li><a href="#s1-1" class="toc-h3">1.1 黑红联盟执政协调困难</a></li>
+    <li><a href="#s1-2" class="toc-h3">1.2 地方选举竞争激烈</a></li>
+    <li><a href="#s1-3" class="toc-h3">1.3 极端政治势力活动抬头</a></li>
+    <li><a href="#s1-4" class="toc-h3">1.4 气候政策引发社会信任危机</a></li>
+    <li><a href="#s2" class="toc-h2">二、气候与能源政策</a></li>
+    <li><a href="#s2-1" class="toc-h3">2.1 供暖法改革引发方向之争</a></li>
+    <li><a href="#s2-2" class="toc-h3">2.2 联邦气候保护计划面临挑战</a></li>
+    <li><a href="#s2-3" class="toc-h3">2.3 核电政策争论再起</a></li>
+    <li><a href="#s2-4" class="toc-h3">2.4 可再生能源遭遇政策逆风</a></li>
+    <li><a href="#s2-5" class="toc-h3">2.5 地方能源转型实践</a></li>
+    <li><a href="#s3" class="toc-h2">三、经济形势与财政挑战</a></li>
+    <li><a href="#s3-1" class="toc-h3">3.1 5000亿特别基金遭挪用</a></li>
+    <li><a href="#s3-2" class="toc-h3">3.2 联邦财政结构性紧缩</a></li>
+    <li><a href="#s3-3" class="toc-h3">3.3 经济增长停滞</a></li>
+    <li><a href="#s3-4" class="toc-h3">3.4 伊朗危机冲击能源市场</a></li>
+    <li><a href="#s4" class="toc-h2">四、产业转型与竞争力</a></li>
+    <li><a href="#s4-1" class="toc-h3">4.1 汽车产业转型阵痛</a></li>
+    <li><a href="#s4-2" class="toc-h3">4.2 化工产业深度危机</a></li>
+    <li><a href="#s4-3" class="toc-h3">4.3 可再生能源产业矛盾</a></li>
+    <li><a href="#s4-4" class="toc-h3">4.4 氢能产业布局加速</a></li>
+    <li><a href="#s4-5" class="toc-h3">4.5 纺织法案与快时尚治理</a></li>
+    <li><a href="#s5" class="toc-h2">五、能源供应安全与地缘影响</a></li>
+    <li><a href="#s6" class="toc-h2">六、科技创新与基础设施</a></li>
+    <li><a href="#s7" class="toc-h2">七、欧盟政策与国际关系</a></li>
+    <li><a href="#s8" class="toc-h2">八、社会民生与环境保护</a></li>
+    <li><a href="#risks" class="toc-h2">风险警示</a></li>
+    <li><a href="#watch" class="toc-h2">下期关注</a></li>
+    <li><a href="#conclusion" class="toc-h2">全文总结</a></li>
+    <li><a href="#advice" class="toc-h2">中资企业建议</a></li>
+  </ul>
+  <ul class="toc-list lang-en">
+    <li><a href="#summary" class="toc-h2">Executive Summary</a></li>
+    <li><a href="#s1" class="toc-h2">I. Domestic Politics</a></li>
+    <li><a href="#s1-1" class="toc-h3">1.1 Coalition Coordination Difficulties</a></li>
+    <li><a href="#s1-2" class="toc-h3">1.2 Intense State Elections</a></li>
+    <li><a href="#s1-3" class="toc-h3">1.3 Rise of Extremist Forces</a></li>
+    <li><a href="#s1-4" class="toc-h3">1.4 Climate Policy Trust Crisis</a></li>
+    <li><a href="#s2" class="toc-h2">II. Climate &amp; Energy Policy</a></li>
+    <li><a href="#s2-1" class="toc-h3">2.1 Heating Law Reform Dispute</a></li>
+    <li><a href="#s2-2" class="toc-h3">2.2 Federal Climate Plan Challenges</a></li>
+    <li><a href="#s2-3" class="toc-h3">2.3 Nuclear Power Debate Resurfaces</a></li>
+    <li><a href="#s2-4" class="toc-h3">2.4 Renewables Face Policy Headwinds</a></li>
+    <li><a href="#s2-5" class="toc-h3">2.5 Local Energy Transition Practices</a></li>
+    <li><a href="#s3" class="toc-h2">III. Economy &amp; Fiscal Challenges</a></li>
+    <li><a href="#s3-1" class="toc-h3">3.1 €500B Special Fund Misappropriated</a></li>
+    <li><a href="#s3-2" class="toc-h3">3.2 Structural Fiscal Austerity</a></li>
+    <li><a href="#s3-3" class="toc-h3">3.3 Economic Stagnation</a></li>
+    <li><a href="#s3-4" class="toc-h3">3.4 Iran Crisis Hits Energy Markets</a></li>
+    <li><a href="#s4" class="toc-h2">IV. Industrial Transformation</a></li>
+    <li><a href="#s4-1" class="toc-h3">4.1 Auto Industry Transition Pains</a></li>
+    <li><a href="#s4-2" class="toc-h3">4.2 Chemical Industry Deep Crisis</a></li>
+    <li><a href="#s4-3" class="toc-h3">4.3 Renewable Energy Contradictions</a></li>
+    <li><a href="#s4-4" class="toc-h3">4.4 Hydrogen Industry Acceleration</a></li>
+    <li><a href="#s4-5" class="toc-h3">4.5 Textile Law &amp; Fast Fashion</a></li>
+    <li><a href="#s5" class="toc-h2">V. Energy Security &amp; Geopolitics</a></li>
+    <li><a href="#s6" class="toc-h2">VI. Tech Innovation &amp; Infrastructure</a></li>
+    <li><a href="#s7" class="toc-h2">VII. EU Policy &amp; International Relations</a></li>
+    <li><a href="#s8" class="toc-h2">VIII. Society &amp; Environment</a></li>
+    <li><a href="#risks" class="toc-h2">Risk Alerts</a></li>
+    <li><a href="#watch" class="toc-h2">Upcoming Watch</a></li>
+    <li><a href="#conclusion" class="toc-h2">Conclusion</a></li>
+    <li><a href="#advice" class="toc-h2">Recommendations for Chinese Enterprises</a></li>
+  </ul>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Supinfor Country Insight Report</div>
+    <h1 class="hero-title lang-zh"><span class="gold">德国</span>国别洞察月报</h1>
+    <h1 class="hero-title lang-en"><span class="gold">Germany</span> Country Insight Monthly</h1>
+    <p class="hero-subtitle lang-zh">报告期：2026年3月 &nbsp;|&nbsp; 基于320条资讯的深度分析</p>
+    <p class="hero-subtitle lang-en">Reporting Period: March 2026 &nbsp;|&nbsp; In-depth analysis based on 320 news items</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="hero-stat-value">8</div><div class="hero-stat-label lang-zh">主题章节</div><div class="hero-stat-label lang-en">Chapters</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">31</div><div class="hero-stat-label lang-zh">深度洞察</div><div class="hero-stat-label lang-en">Key Insights</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">5</div><div class="hero-stat-label lang-zh">风险警示</div><div class="hero-stat-label lang-en">Risk Alerts</div></div>
+      <div class="hero-stat"><div class="hero-stat-value">8</div><div class="hero-stat-label lang-zh">企业建议</div><div class="hero-stat-label lang-en">Recommendations</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="main-content">
+
+<!-- ===== 核心洞察摘要 ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <div class="section-num"><i class="fas fa-star"></i></div>
+    <div class="section-title lang-zh">核心洞察摘要</div>
+    <div class="section-title lang-en">Executive Summary</div>
+  </div>
+
+  <!-- KEY DATA VIZ -->
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-value red">0.1%</div><div class="stat-label lang-zh">2025年碳排放降幅（四年最低）</div><div class="stat-label lang-en">2025 CO₂ reduction (4-year low)</div></div>
+    <div class="stat-card"><div class="stat-value red">-44%</div><div class="stat-label lang-zh">大众集团利润变化</div><div class="stat-label lang-en">VW Group profit change</div></div>
+    <div class="stat-card"><div class="stat-value">2.84万亿€</div><div class="stat-label lang-zh">国家债务总额</div><div class="stat-label lang-en">National debt total</div></div>
+    <div class="stat-card"><div class="stat-value red">22%</div><div class="stat-label lang-zh">天然气储备填充率</div><div class="stat-label lang-en">Gas reserve fill rate</div></div>
+  </div>
+
+  <div class="summary-grid lang-zh">
+    <div class="summary-card"><div class="summary-num">1</div><div class="summary-text"><strong>执政联盟内部分歧严重，气候与能源政策推进受阻</strong>：黑红联盟在供暖法改革、气候保护计划、核电政策等核心议题上存在深层矛盾，政策协调效率低下，多项改革陷入僵局。</div></div>
+    <div class="summary-card"><div class="summary-num">2</div><div class="summary-text"><strong>5000亿特别基金遭大规模挪用，基建投资名不副实</strong>：多家研究机构测算显示，2025年超85%的特别基金资金被用于填补预算缺口而非新增投资，实际基建投入仅能覆盖通胀。</div></div>
+    <div class="summary-card"><div class="summary-num">3</div><div class="summary-text"><strong>能源转型政策出现系统性倒退风险</strong>：联邦经济部长赖歇推动取消小型光伏补贴、放松供暖法、向可再生能源企业转嫁电网成本，引发行业强烈反对。</div></div>
+    <div class="summary-card"><div class="summary-num">4</div><div class="summary-text"><strong>伊朗危机推高能源价格，暴露德国能源供应脆弱性</strong>：全球油气价格大幅上涨，德国燃油价格涨幅约30%，天然气储备水平偏低，能源密集型产业经营压力骤增。</div></div>
+    <div class="summary-card"><div class="summary-num">5</div><div class="summary-text"><strong>汽车产业转型阵痛加剧</strong>：大众利润下滑44%、计划裁员5万人，插混车型实际排放远超标称值，政策层面围绕排放标准放宽展开激烈争论。</div></div>
+    <div class="summary-card"><div class="summary-num">6</div><div class="summary-text"><strong>德国化工产业陷入深度危机</strong>：高能源成本与国际竞争双重挤压下，东德化工基地出现企业破产潮，绿党提出"2045化工议程"试图挽救行业。</div></div>
+    <div class="summary-card"><div class="summary-num">7</div><div class="summary-text"><strong>地方选举折射政治极化趋势</strong>：多州选举中AfD支持率维持高位，主流政党在气候、能源等议题上的分歧进一步加深社会裂痕。</div></div>
+    <div class="summary-card"><div class="summary-num">8</div><div class="summary-text"><strong>关键技术供应链对外依赖度高企</strong>：光伏组件88%来自中国进口，本土产能连续两年暴跌，电池原材料高度依赖刚果、印尼等国。</div></div>
+  </div>
+  <div class="summary-grid lang-en">
+    <div class="summary-card"><div class="summary-num">1</div><div class="summary-text"><strong>Severe coalition divisions stall climate and energy policy</strong>: The CDU/CSU-SPD coalition faces deep disagreements on heating law reform, climate protection plans, and nuclear policy, resulting in legislative gridlock.</div></div>
+    <div class="summary-card"><div class="summary-num">2</div><div class="summary-text"><strong>€500 billion special fund largely misappropriated</strong>: Research institutes estimate over 85% of the fund was used to plug budget gaps rather than new investment; actual infrastructure spending barely covers inflation.</div></div>
+    <div class="summary-card"><div class="summary-num">3</div><div class="summary-text"><strong>Systemic risk of energy transition policy reversal</strong>: Economy Minister Reiche pushes to cancel small-scale solar subsidies, relax the heating law, and shift grid costs to renewable energy companies, triggering strong industry opposition.</div></div>
+    <div class="summary-card"><div class="summary-num">4</div><div class="summary-text"><strong>Iran crisis exposes energy supply vulnerability</strong>: Global oil and gas prices surge sharply; German fuel prices rise ~30%, gas reserves remain low, and energy-intensive industries face mounting pressure.</div></div>
+    <div class="summary-card"><div class="summary-num">5</div><div class="summary-text"><strong>Auto industry transition pains intensify</strong>: VW profits drop 44% with 50,000 planned layoffs; plug-in hybrid real-world emissions far exceed rated values; fierce debate over relaxing emission standards.</div></div>
+    <div class="summary-card"><div class="summary-num">6</div><div class="summary-text"><strong>Chemical industry in deep crisis</strong>: Squeezed by high energy costs and global competition, East German chemical hubs see a wave of bankruptcies; the Greens propose a "Chemistry Agenda 2045" rescue plan.</div></div>
+    <div class="summary-card"><div class="summary-num">7</div><div class="summary-text"><strong>State elections reflect political polarization</strong>: AfD maintains high poll numbers across multiple states; mainstream party divisions on climate and energy deepen social rifts.</div></div>
+    <div class="summary-card"><div class="summary-num">8</div><div class="summary-text"><strong>Critical supply chain dependency remains high</strong>: 88% of solar modules imported from China, domestic production plummets for two consecutive years, battery raw materials heavily dependent on Congo and Indonesia.</div></div>
+  </div>
+
+  <!-- 光伏进口来源条形图 -->
+  <h4 style="font-family:'Noto Serif SC',serif; font-size:1rem; margin:2rem 0 1rem; color:var(--text-primary);"><i class="fas fa-chart-bar" style="color:var(--accent-gold);"></i> <span class="lang-zh">德国光伏组件进口来源占比（2025年）</span><span class="lang-en">Germany Solar Module Import Sources (2025)</span></h4>
+  <div class="bar-chart">
+    <div class="bar-item"><div class="bar-label">中国</div><div class="bar-track"><div class="bar-fill gold" style="width:88%" data-value="88%"></div></div></div>
+    <div class="bar-item"><div class="bar-label">荷兰</div><div class="bar-track"><div class="bar-fill blue" style="width:5.2%" data-value="5.2%"></div></div></div>
+    <div class="bar-item"><div class="bar-label">其他</div><div class="bar-track"><div class="bar-fill green" style="width:6.8%" data-value="6.8%"></div></div></div>
+  </div>
+</section>
+
+<!-- ===== 一、国内政治与政党博弈 ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header"><div class="section-num">一</div><div class="section-title lang-zh">国内政治与政党博弈</div><div class="section-title lang-en">Domestic Politics &amp; Party Dynamics</div></div>
+
+  <div id="s1-1" class="insight-card lang-zh">
+    <h4>1.1 黑红联盟执政协调困难，多项核心政策陷入僵局</h4>
+    <p>2026年3月，德国联邦执政联盟（CDU/CSU与SPD）的内部分歧进一步显性化。在气候政策层面，联邦环境部长施奈德（SPD）推进的新气候保护计划遭到经济部、交通部等多个部门的拖延甚至反对，经济部长赖歇（CDU）提出的多项政策与气候目标直接相悖，总理默茨甚至公开质疑欧盟碳排放交易体系。在预算层面，财政部长克林贝尔警告2027年联邦预算缺口将超200亿欧元，未来数年可能扩大至每年600亿欧元，但联盟内各方在社保、养老金、医疗等领域的削减方案上未能达成共识。供暖法改革更是引发联盟内激烈争论，CDU/CSU推动废除强制安装热泵的规定，SPD则担忧租户供暖成本上升。联邦联合委员会会议讨论了预算、气候、选举法等多项议题，但未达成任何具体决议，凸显了执政效率的低下。</p>
+  </div>
+  <div id="s1-1" class="insight-card lang-en">
+    <h4>1.1 Coalition Coordination Difficulties — Multiple Core Policies in Gridlock</h4>
+    <p>In March 2026, internal divisions within Germany's governing coalition (CDU/CSU and SPD) became increasingly visible. On climate policy, the new climate protection plan pushed by Environment Minister Schneider (SPD) faced delays and opposition from the Economy and Transport ministries. Economy Minister Reiche (CDU) proposed policies directly contradicting climate targets, and Chancellor Merz publicly questioned the EU emissions trading system. On the budget front, Finance Minister Klingbeil warned that the 2027 federal budget gap would exceed €20 billion and could expand to €60 billion annually in coming years, but coalition partners failed to agree on cuts to social security, pensions, and healthcare. The heating law reform triggered fierce intra-coalition debate, with CDU/CSU pushing to abolish mandatory heat pump installation while SPD worried about rising tenant heating costs. The Federal Coalition Committee discussed budget, climate, and electoral law issues but reached no concrete decisions, highlighting governance inefficiency.</p>
+  </div>
+
+  <div id="s1-2" class="insight-card lang-zh">
+    <h4>1.2 地方选举竞争激烈，政治极化趋势加深</h4>
+    <p>德国多个联邦州面临选举或选后组阁的政治博弈。莱茵兰-普法尔茨州议会选举中，CDU以微弱优势领先SPD，AfD支持率达19%，FDP可能无法跨过5%门槛，27%的选民尚未做出决定。巴登-符腾堡州选举后，新任州长Özdemir面临气候保护组织的强硬诉求。萨克森-安哈尔特州左翼党将社会公平作为核心竞选议题，梅克伦堡-前波美拉尼亚州AfD民调支持率高达35%-37%位列第一。这些选举动态反映出德国政治版图的持续碎片化，传统大党的整合能力下降，极右翼势力的影响力在地方层面持续扩大。</p>
+  </div>
+  <div id="s1-2" class="insight-card lang-en">
+    <h4>1.2 Intense State Elections Deepen Political Polarization</h4>
+    <p>Multiple German states face elections or post-election coalition negotiations. In Rhineland-Palatinate, CDU holds a slim lead over SPD, AfD polls at 19%, FDP may fail to clear the 5% threshold, and 27% of voters remain undecided. In Baden-Württemberg, new Minister-President Özdemir faces tough demands from climate protection groups. In Saxony-Anhalt, the Left Party campaigns on social justice; in Mecklenburg-Vorpommern, AfD leads polls at 35-37%. These dynamics reflect continued fragmentation of Germany's political landscape, declining integrative capacity of mainstream parties, and expanding far-right influence at the state level.</p>
+  </div>
+
+  <!-- AfD支持率条形图 -->
+  <h4 style="font-family:'Noto Serif SC',serif; font-size:0.95rem; margin:1.5rem 0 0.8rem; color:var(--text-primary);"><i class="fas fa-poll" style="color:var(--accent-red);"></i> <span class="lang-zh">AfD各州民调支持率</span><span class="lang-en">AfD Poll Ratings by State</span></h4>
+  <div class="bar-chart">
+    <div class="bar-item"><div class="bar-label">梅前州</div><div class="bar-track"><div class="bar-fill red" style="width:36%" data-value="35-37%"></div></div></div>
+    <div class="bar-item"><div class="bar-label">莱法州</div><div class="bar-track"><div class="bar-fill red" style="width:19%" data-value="19%"></div></div></div>
+  </div>
+
+  <div id="s1-3" class="insight-card lang-zh">
+    <h4>1.3 极端政治势力活动抬头，社会安全面临挑战</h4>
+    <p>德国国内极端政治势力活动呈现抬头趋势。极左翼方面，勃兰登堡州发生沥青厂纵火案，疑似极左翼组织通过网络平台宣称负责，此前柏林还发生过极左翼破坏高压电缆导致4.5万户家庭停电的事件。极右翼方面，AfD在多个州的民调中保持高位，在巴伐利亚州新狩猎法表决中与执政党联合投票，其政策主张包括结束碳排放定价、停止可再生能源补贴、恢复与俄罗斯能源合作等。环保激进组织"最后一代"成员因在汉堡机场的粘贴行动面临刑事审判。这些极端势力的活跃不仅威胁社会安全，也加剧了政策讨论的极化程度。</p>
+  </div>
+  <div id="s1-3" class="insight-card lang-en">
+    <h4>1.3 Rise of Extremist Forces Challenges Social Security</h4>
+    <p>Extremist political activity is on the rise in Germany. On the far left, an arson attack on an asphalt plant in Brandenburg was claimed by a suspected far-left group online; previously in Berlin, far-left sabotage of high-voltage cables caused blackouts for 45,000 households. On the far right, AfD maintains high poll numbers across multiple states and voted alongside the ruling party on Bavaria's new hunting law. AfD policy positions include ending carbon pricing, stopping renewable energy subsidies, and restoring energy cooperation with Russia. Members of the radical environmental group "Last Generation" face criminal trial for gluing actions at Hamburg Airport. These extremist activities not only threaten social security but also intensify policy polarization.</p>
+  </div>
+
+  <div id="s1-4" class="insight-card lang-zh">
+    <h4>1.4 气候政策引发社会信任危机</h4>
+    <p>德国的气候政策反复已引发广泛的社会信任危机。供暖法改革草案的出台与撤回、气候保护计划的多次推迟、2025年碳排放仅下降0.1%的惨淡成绩，都在侵蚀公众对政府气候承诺的信心。司法层面，德国环境援助组织（DUH）此前因气候计划减排不足起诉政府并胜诉，左翼党议员公开打赌新计划将再次被法院驳回。民众对能源价格上涨和供暖成本上升的担忧加剧，政府气候政策的公信力持续下降，形成了"政策越改越乱、信任越来越低"的恶性循环。</p>
+  </div>
+  <div id="s1-4" class="insight-card lang-en">
+    <h4>1.4 Climate Policy Triggers Social Trust Crisis</h4>
+    <p>Germany's repeated climate policy reversals have triggered a widespread trust crisis. The introduction and withdrawal of heating law reform drafts, multiple delays to the climate protection plan, and the dismal 0.1% carbon emission reduction in 2025 are all eroding public confidence in government climate commitments. On the judicial front, Deutsche Umwelthilfe (DUH) previously sued the government over insufficient emission reductions and won; Left Party MPs publicly bet the new plan will again be struck down by courts. Public anxiety over rising energy prices and heating costs is intensifying, and government climate policy credibility continues to decline, creating a vicious cycle of "more policy changes, less trust."</p>
+  </div>
+</section>
+
+<!-- ===== 二、气候与能源政策 ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header"><div class="section-num">二</div><div class="section-title lang-zh">气候与能源政策</div><div class="section-title lang-en">Climate &amp; Energy Policy</div></div>
+
+  <div id="s2-1" class="insight-card lang-zh">
+    <h4>2.1 供暖法改革引发气候政策方向之争</h4>
+    <p>德国黑红联盟计划对原红绿灯政府推动的供暖法进行重大改革，核心变化是取消新建建筑必须使用65%以上可再生能源供暖的强制要求，改为2029年起新建油气锅炉可混合使用清洁能源。绿党提出十点应对计划，包括阶梯式节能改造补贴、"三分之一模式"成本分摊机制等。Öko-Institut的研究显示，供暖法改革将额外增加3000至3300万吨二氧化碳排放。建筑专家纳格勒的研究则提供了另一视角：过度的建筑保温改造成本效益很低，实际住户行为比建筑保温标准更影响能源消耗。这场争论的本质是德国能源转型路径的根本分歧。</p>
+  </div>
+  <div id="s2-1" class="insight-card lang-en">
+    <h4>2.1 Heating Law Reform Sparks Fundamental Policy Dispute</h4>
+    <p>Germany's CDU/CSU-SPD coalition plans major reforms to the heating law originally pushed by the traffic-light government. The core change abolishes the requirement for new buildings to use 65%+ renewable energy for heating, instead allowing new oil/gas boilers from 2029 with clean energy blending. The Greens proposed a ten-point response including tiered retrofit subsidies and a "one-third model" cost-sharing mechanism. Research by Öko-Institut shows the reform would add 30-33 million tonnes of additional CO₂ emissions. Building expert Nagler offers another perspective: excessive building insulation retrofits have poor cost-effectiveness, and actual occupant behavior affects energy consumption more than insulation standards. This debate fundamentally reflects Germany's deep divisions over the energy transition pathway.</p>
+  </div>
+
+  <div id="s2-2" class="insight-card lang-zh">
+    <h4>2.2 联邦气候保护计划面临多重挑战</h4>
+    <p>德国2025年温室气体排放仅下降0.1%，为四年来最小降幅，且主要源于经济疲软而非政策推动。交通与建筑部门排放不降反升，距离2030年较1990年减排65%的目标仍有约2500万吨的缺口。按照欧盟减排规则，德国若无法完成2030年目标，将面临最高340亿欧元的碳配额违规罚款。联邦环境部长施奈德需在2026年3月底前提交新的气候保护计划，但面临经济部、交通部等多个部门的阻力。</p>
+  </div>
+  <div id="s2-2" class="insight-card lang-en">
+    <h4>2.2 Federal Climate Protection Plan Faces Multiple Challenges</h4>
+    <p>Germany's 2025 greenhouse gas emissions fell only 0.1% — the smallest decline in four years — driven mainly by economic weakness rather than policy. Transport and building sector emissions actually rose, leaving a gap of approximately 25 million tonnes to the 2030 target of 65% reduction from 1990 levels. Under EU reduction rules, failure to meet the 2030 target could result in fines up to €34 billion. Environment Minister Schneider must submit a new climate protection plan by end of March 2026, but faces resistance from the Economy and Transport ministries.</p>
+  </div>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-value red">340亿€</div><div class="stat-label lang-zh">潜在欧盟罚款上限</div><div class="stat-label lang-en">Potential EU fine ceiling</div></div>
+    <div class="stat-card"><div class="stat-value">2500万吨</div><div class="stat-label lang-zh">2030年减排缺口</div><div class="stat-label lang-en">2030 emission gap</div></div>
+    <div class="stat-card"><div class="stat-value red">+3300万吨</div><div class="stat-label lang-zh">供暖法改革额外排放</div><div class="stat-label lang-en">Extra emissions from heating reform</div></div>
+  </div>
+
+  <div id="s2-3" class="insight-card lang-zh">
+    <h4>2.3 核电政策争论再起但回归无望</h4>
+    <p>围绕核电的争论在2026年3月再度升温。欧盟委员会主席冯德莱恩称欧盟放弃核电是"战略错误"，巴伐利亚州州长索德积极推动小型模块化反应堆（SMR）试点，计划投资至多4亿欧元建造核聚变示范反应堆。但联邦环境部长施奈德坚决反对核电回归，总理默茨明确表示德国核电回归已不可逆。专家指出SMR发电成本是太阳能的1.5倍，商业化至少需9年；物理学家莱施指出核聚变商业化至少需到2050年。这场争论更多是政治姿态的表达，短期内不会改变德国的能源政策方向。</p>
+  </div>
+  <div id="s2-3" class="insight-card lang-en">
+    <h4>2.3 Nuclear Power Debate Resurfaces but Return Unlikely</h4>
+    <p>The nuclear power debate heated up again in March 2026. EU Commission President von der Leyen called the EU's nuclear exit a "strategic mistake"; Bavaria's Minister-President Söder actively promotes small modular reactor (SMR) pilots, planning up to €400 million for a fusion demonstration reactor. However, Environment Minister Schneider firmly opposes nuclear return, and Chancellor Merz states Germany's nuclear exit is irreversible. Experts note SMR electricity costs 1.5x solar, with commercialization at least 9 years away; physicist Lesch says fusion commercialization won't happen before 2050. This debate is more political posturing than substantive policy shift.</p>
+  </div>
+
+  <div id="s2-4" class="insight-card lang-zh">
+    <h4>2.4 可再生能源扩张遭遇政策性逆风</h4>
+    <p>联邦经济部长赖歇推出的一系列政策对可再生能源行业构成系统性压力。一是计划取消小型屋顶光伏系统的上网电价补贴，行业协会警告光伏需求将从每年5GW暴跌至2GW以下，近10万个就业岗位面临流失。二是"网络法案"草案要求可再生能源投资者承担部分电网扩建成本。三是"Redispatch预留条款"规定容量受限区域的新建风电光伏项目需自行承担弃电损失，约90个县区、总价值450亿欧元的项目将受影响。2025年德国光伏新增装机增速已放缓至17.6%（前两年超27%），本土光伏模组产量暴跌60.6%。</p>
+  </div>
+  <div id="s2-4" class="insight-card lang-en">
+    <h4>2.4 Renewable Energy Expansion Faces Policy Headwinds</h4>
+    <p>Economy Minister Reiche's policy package creates systemic pressure on the renewable energy sector. First, plans to cancel feed-in tariff subsidies for small rooftop solar — industry associations warn solar demand could plunge from 5GW to below 2GW annually, threatening nearly 100,000 jobs. Second, the "Network Act" draft requires renewable investors to bear part of grid expansion costs. Third, the "Redispatch Reserve Clause" requires new wind and solar projects in capacity-constrained areas to absorb curtailment losses, affecting approximately 90 counties and €45 billion in projects. Germany's 2025 solar installation growth already slowed to 17.6% (from 27%+ in prior years), with domestic module production plummeting 60.6%.</p>
+  </div>
+
+  <div id="s2-5" class="insight-card lang-zh">
+    <h4>2.5 地方层面能源转型实践呈现多元化格局</h4>
+    <p>与联邦层面的政策争议形成对比，德国地方层面的能源转型实践呈现积极多元的态势。慕尼黑附近盖瑟布尔巴赫的地热钻井项目已完成1780米深度，预计2027年春季投入使用。萨克森-安哈尔特州的VSB风电场完成老旧机组升级，新机组年发电量达原来的10倍；勃兰登堡州365米全球最高风电项目恢复施工。德累斯顿推出服务器废热供暖项目，年产2400万度绿色热能。明斯特市公交车队已拥有97台电动公交，柴油消耗从年40万升降至4万升。费尔德海姆村实现了能源完全自给。这些案例表明，能源转型在技术和经济层面已具备可行性。</p>
+  </div>
+  <div id="s2-5" class="insight-card lang-en">
+    <h4>2.5 Local Energy Transition Practices Show Diverse Progress</h4>
+    <p>In contrast to federal-level policy disputes, local energy transition practices across Germany show positive and diverse momentum. A geothermal drilling project near Munich has reached 1,780 meters depth, expected operational by spring 2027. In Saxony-Anhalt, VSB wind farm completed turbine upgrades with new units generating 10x the original output; Brandenburg's 365-meter world's tallest wind turbine project resumed construction. Dresden launched a server waste heat district heating project producing 24 million kWh of green heat annually. Münster's bus fleet now has 97 electric buses, reducing diesel consumption from 400,000 to 40,000 liters per year. The village of Feldheim achieved complete energy self-sufficiency. These cases demonstrate the technical and economic viability of the energy transition.</p>
+  </div>
+</section>
+
+<!-- ===== 三、经济形势与财政挑战 ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header"><div class="section-num">三</div><div class="section-title lang-zh">经济形势与财政挑战</div><div class="section-title lang-en">Economy &amp; Fiscal Challenges</div></div>
+
+  <div class="stat-cards">
+    <div class="stat-card"><div class="stat-value">5000亿€</div><div class="stat-label lang-zh">特别基金总额</div><div class="stat-label lang-en">Special fund total</div></div>
+    <div class="stat-card"><div class="stat-value red">85%+</div><div class="stat-label lang-zh">被挪用比例</div><div class="stat-label lang-en">Misappropriated share</div></div>
+    <div class="stat-card"><div class="stat-value red">200亿€</div><div class="stat-label lang-zh">2027年预算缺口</div><div class="stat-label lang-en">2027 budget gap</div></div>
+    <div class="stat-card"><div class="stat-value">63.5%</div><div class="stat-label lang-zh">政府债务率</div><div class="stat-label lang-en">Govt debt-to-GDP ratio</div></div>
+  </div>
+
+  <div id="s3-1" class="insight-card lang-zh">
+    <h4>3.1 5000亿特别基金遭大规模挪用，投资承诺落空</h4>
+    <p>2025年3月德国联邦议会通过的5000亿欧元基础设施与气候中性特别基金（SVIK），本应成为德国基建与绿色转型的强力引擎，但一年后的审计结果令人失望。IFO经济研究所测算显示约95%的资金被挪用于填补预算缺口，德国经济研究所（IW）的数据为86%，其中120亿欧元被用于替代原本由核心预算承担的支出。实际2025年联邦总投资仅较2024年名义增长约20亿欧元，仅够抵消通胀。气候与转型基金的实际支出较计划减少83亿欧元，对各州的拨款也因官僚问题推迟至2026年。</p>
+  </div>
+  <div id="s3-1" class="insight-card lang-en">
+    <h4>3.1 €500 Billion Special Fund Largely Misappropriated</h4>
+    <p>The €500 billion Infrastructure and Climate Neutrality Special Fund (SVIK), passed by the Bundestag in March 2025, was meant to be a powerful engine for infrastructure and green transition. However, audit results one year later are disappointing. IFO Institute estimates ~95% of funds were diverted to plug budget gaps; IW Institute puts the figure at 86%, with €12 billion replacing expenditures originally covered by the core budget. Actual 2025 federal investment grew only ~€2 billion nominally over 2024, barely covering inflation. Climate and Transition Fund actual spending fell €8.3 billion short of plan, and disbursements to states were delayed to 2026 due to bureaucratic issues.</p>
+  </div>
+
+  <div id="s3-2" class="insight-card lang-zh">
+    <h4>3.2 联邦财政面临结构性紧缩压力</h4>
+    <p>联邦财政部长克林贝尔指出，2027年德国联邦预算将面临110至200亿欧元的缺口，到2028年缺口将扩大至每年600亿欧元。2025年德国国家债务总额增加1440亿欧元至2.84万亿欧元，政府债务率升至63.5%，加上需承担约1180亿欧元的欧盟共同债务（占GDP的2.6%），财政可持续性压力显著加大。不来梅等地方政府也面临收入低于预期的困境，需依靠储备金和贷款维持预算。</p>
+  </div>
+  <div id="s3-2" class="insight-card lang-en">
+    <h4>3.2 Federal Finances Face Structural Austerity Pressure</h4>
+    <p>Finance Minister Klingbeil warns the 2027 federal budget faces a gap of €11-20 billion, expanding to €60 billion annually by 2028. In 2025, national debt rose €144 billion to €2.84 trillion, with the debt-to-GDP ratio reaching 63.5%. Adding approximately €118 billion in EU joint debt obligations (2.6% of GDP), fiscal sustainability pressure has significantly increased. State governments like Bremen also face revenue shortfalls, relying on reserves and loans to maintain budgets.</p>
+  </div>
+
+  <div id="s3-3" class="insight-card lang-zh">
+    <h4>3.3 经济增长停滞与内需不足并存</h4>
+    <p>2025年德国经济几乎零增长，工业部门累计流失16万个就业岗位，企业倒闭数量增加。东部和北部联邦州的电力消费同比下降0.7TWh，反映出经济活动的疲软。2025年温室气体排放仅下降0.1%，且主要源于经济疲软而非主动减排，这一"被动达标"的现象恰恰说明了经济基本面的脆弱。伊朗危机引发的能源价格上涨进一步加剧了企业经营困难，经济顾问团预计若冲突持续2-3个月，德国通胀率可能上升1个百分点，GDP增速将被拖累0.2-0.3个百分点。</p>
+  </div>
+  <div id="s3-3" class="insight-card lang-en">
+    <h4>3.3 Economic Stagnation Coexists with Weak Domestic Demand</h4>
+    <p>Germany's 2025 economy saw near-zero growth, with the industrial sector losing 160,000 jobs and rising business insolvencies. Electricity consumption in eastern and northern states fell 0.7 TWh year-on-year, reflecting weak economic activity. The mere 0.1% greenhouse gas reduction in 2025, driven by economic weakness rather than active policy, illustrates the fragile economic fundamentals. Energy price increases triggered by the Iran crisis further exacerbate business difficulties. The Council of Economic Advisors estimates that if the conflict persists 2-3 months, German inflation could rise 1 percentage point and GDP growth could be dragged down 0.2-0.3 percentage points.</p>
+  </div>
+
+  <div id="s3-4" class="insight-card lang-zh">
+    <h4>3.4 伊朗危机冲击能源市场，政府应对措施争议不断</h4>
+    <p>受伊朗危机影响，全球原油和天然气价格大幅上涨，德国燃油价格涨幅约30%，欧洲天然气价格暴涨超50%。联邦政府出台的应对措施包括：要求加油站每日仅可上调油价一次、动用国家石油储备稳定市场。但这些措施遭到广泛批评。各方提出了截然不同的应对方案：OECD建议将补贴定向给低收入家庭；DGB呼吁征收超额利润税；DUH建议推行无车周日和高速限速；绿党要求降低电力税并加速可再生能源转型。</p>
+  </div>
+  <div id="s3-4" class="insight-card lang-en">
+    <h4>3.4 Iran Crisis Hits Energy Markets; Government Response Draws Criticism</h4>
+    <p>The Iran crisis drove sharp increases in global oil and gas prices, with German fuel prices rising ~30% and European gas prices surging over 50%. Federal government measures include limiting gas stations to one daily price increase and tapping strategic oil reserves. These measures face widespread criticism. Stakeholders propose divergent responses: OECD recommends targeting subsidies to low-income households; DGB calls for windfall profit taxes; DUH suggests car-free Sundays and highway speed limits; the Greens demand lower electricity taxes and accelerated renewable energy transition.</p>
+  </div>
+
+  <!-- 能源价格变化 -->
+  <h4 style="font-family:'Noto Serif SC',serif; font-size:0.95rem; margin:1.5rem 0 0.8rem; color:var(--text-primary);"><i class="fas fa-gas-pump" style="color:var(--accent-red);"></i> <span class="lang-zh">伊朗危机后能源价格涨幅</span><span class="lang-en">Energy Price Increases After Iran Crisis</span></h4>
+  <div class="bar-chart">
+    <div class="bar-item"><div class="bar-label">天然气</div><div class="bar-track"><div class="bar-fill red" style="width:50%" data-value="+50%"></div></div></div>
+    <div class="bar-item"><div class="bar-label">燃油</div><div class="bar-track"><div class="bar-fill red" style="width:30%" data-value="+30%"></div></div></div>
+  </div>
+</section>
+
+<!-- ===== 四、产业转型与竞争力 ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header"><div class="section-num">四</div><div class="section-title lang-zh">产业转型与竞争力</div><div class="section-title lang-en">Industrial Transformation &amp; Competitiveness</div></div>
+
+  <div id="s4-1" class="insight-card lang-zh">
+    <h4>4.1 汽车产业转型阵痛加剧，电动化路线面临多重博弈</h4>
+    <p>德国汽车产业正经历深刻的转型阵痛。大众集团2025年利润下滑44%至69亿欧元，计划裁员5万人；奔驰利润跌幅近半，宝马利润下滑3%。前大众CEO迪斯指出全球汽车行业20年的黄金增长期已结束，德国禁止自动驾驶路测导致企业将研发转移至海外。政策层面，CDU/CSU要求将欧盟新车减排比例从90%下调至80%。插混车型实际油耗比官方认证值高约300%，引发类似"柴油门"的质疑。积极信号方面，受燃油价格上涨影响，电动车配置咨询占比从55%升至63%，联邦政府恢复了1500-6000欧元的电动车购买补贴。巴伐利亚州SPD提出5亿欧元电动车补贴计划，仅限欧洲生产车型。</p>
+  </div>
+  <div id="s4-1" class="insight-card lang-en">
+    <h4>4.1 Auto Industry Transition Pains Intensify; EV Strategy Faces Multiple Challenges</h4>
+    <p>Germany's auto industry is undergoing profound transformation pains. VW Group's 2025 profits fell 44% to €6.9 billion, with plans to cut 50,000 jobs; Mercedes profits dropped nearly half, and BMW profits declined 3%. Former VW CEO Diess noted the global auto industry's 20-year golden growth era has ended, and Germany's ban on autonomous driving road tests is pushing R&amp;D overseas. On policy, CDU/CSU demands reducing the EU new car emission reduction target from 90% to 80%. Plug-in hybrid real-world fuel consumption exceeds official ratings by ~300%, raising "Dieselgate"-like concerns. On the positive side, rising fuel prices pushed EV configuration inquiries from 55% to 63%, and the federal government reinstated €1,500-6,000 EV purchase subsidies. Bavaria's SPD proposed a €500 million EV subsidy plan limited to European-manufactured vehicles.</p>
+  </div>
+
+  <!-- 车企利润变化 -->
+  <h4 style="font-family:'Noto Serif SC',serif; font-size:0.95rem; margin:1.5rem 0 0.8rem; color:var(--text-primary);"><i class="fas fa-car" style="color:var(--accent-gold);"></i> <span class="lang-zh">2025年德国主要车企利润变化</span><span class="lang-en">2025 Profit Changes of Major German Automakers</span></h4>
+  <div class="bar-chart">
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">大众</span><span class="lang-en">VW</span></div><div class="bar-track"><div class="bar-fill red" style="width:44%" data-value="-44%"></div></div></div>
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">奔驰</span><span class="lang-en">Mercedes</span></div><div class="bar-track"><div class="bar-fill red" style="width:48%" data-value="~-50%"></div></div></div>
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">宝马</span><span class="lang-en">BMW</span></div><div class="bar-track"><div class="bar-fill blue" style="width:3%" data-value="-3%"></div></div></div>
+  </div>
+
+  <div id="s4-2" class="insight-card lang-zh">
+    <h4>4.2 化工产业陷入深度危机，转型路径艰难探索</h4>
+    <p>德国化工行业正面临近年来最严重的危机。高能源成本、全球供应链紊乱和国际竞争压力导致产能持续外迁，仅2025年工业领域就减少16万个就业岗位。东德化工基地受冲击尤为严重：Domo化工在莱纳的子公司破产，涉及约600名员工；陶氏化学关停Böhlen和Schkopau工厂。绿党提出"Chemieagenda 2045"，要求设立补贴性工业电价、征收碳边境税、投资碳捕获与封存基础设施。联邦政府为莱比锡的"转型化学中心"提供11亿欧元资助。IG BCE工会警告若不采取有效措施，基础化工领域可能出现"不可控的连锁危机"。</p>
+  </div>
+  <div id="s4-2" class="insight-card lang-en">
+    <h4>4.2 Chemical Industry in Deep Crisis; Transformation Path Under Difficult Exploration</h4>
+    <p>Germany's chemical industry faces its most severe crisis in recent years. High energy costs, global supply chain disruptions, and international competition are driving continued capacity relocation, with the industrial sector losing 160,000 jobs in 2025 alone. East German chemical hubs are hit hardest: Domo Chemicals' Leuna subsidiary went bankrupt, affecting ~600 employees; Dow Chemical shut down its Böhlen and Schkopau plants. The Greens proposed "Chemieagenda 2045," calling for subsidized industrial electricity rates, carbon border taxes, and investment in carbon capture and storage infrastructure. The federal government provided €1.1 billion for Leipzig's "Transformation Chemistry Center." The IG BCE union warns that without effective measures, the basic chemicals sector could face an "uncontrollable chain crisis."</p>
+  </div>
+
+  <div id="s4-3" class="insight-card lang-zh">
+    <h4>4.3 可再生能源产业发展与政策矛盾并存</h4>
+    <p>德国可再生能源产业在技术进步和项目推进方面取得显著进展，但政策环境的不确定性构成主要障碍。风电领域，2026年3月陆上风电拍卖超额两倍认购，平均中标电价降至5.54欧分/度（2018年以来最低），RWE获得900MW北海海上风电项目审批。但全国仅三分之一获批项目能获得补贴，电网接入排队可能延至2032年。光伏领域，2025年新增装机增速放缓至17.6%，本土模组产量暴跌60.6%，88%的组件依赖中国进口。联邦经济部的政策调整被行业协会称为"对能源转型的正面攻击"。</p>
+  </div>
+  <div id="s4-3" class="insight-card lang-en">
+    <h4>4.3 Renewable Energy Industry: Progress and Policy Contradictions Coexist</h4>
+    <p>Germany's renewable energy industry has made significant progress in technology and project development, but policy uncertainty remains the main obstacle. In wind power, the March 2026 onshore wind auction was 2x oversubscribed, with average winning prices falling to 5.54 ct/kWh (lowest since 2018); RWE received approval for a 900MW North Sea offshore wind project. However, only one-third of approved projects nationwide can receive subsidies, and grid connection queues may extend to 2032. In solar, 2025 new installation growth slowed to 17.6%, domestic module production plummeted 60.6%, and 88% of modules are imported from China. The Federal Economy Ministry's policy adjustments were called "a frontal attack on the energy transition" by industry associations.</p>
+  </div>
+
+  <div id="s4-4" class="insight-card lang-zh">
+    <h4>4.4 氢能产业布局加速，技术突破与基础设施并进</h4>
+    <p>德国在氢能领域的布局呈现加速态势。汉堡市正打造欧洲氢能枢纽，汉堡能源网络公司已完成18公里管道建设，计划2031/32年扩展至60公里。汉堡能源公司计划在Moorburg电厂建设100MW电解槽，年产1万吨绿氢。技术突破方面，MAN Energy Solutions完成全球首次100%氢气驱动大型船用发动机测试；卡尔斯鲁厄理工学院研发的无压缩机氢气涡轮机实现超5分钟稳定运行；弗劳恩霍夫研究所开发的纳米多孔陶瓷膜可节省90%的气体干燥能源。PCK炼油厂获2.45亿欧元资助建设绿氢生产项目。</p>
+  </div>
+  <div id="s4-4" class="insight-card lang-en">
+    <h4>4.4 Hydrogen Industry Accelerates with Technology Breakthroughs and Infrastructure</h4>
+    <p>Germany's hydrogen sector is accelerating. Hamburg is building a European hydrogen hub — Hamburg Energie Netzwerke has completed 18 km of pipeline, planning expansion to 60 km by 2031/32. Hamburg Energie plans a 100MW electrolyzer at the Moorburg power plant, producing 10,000 tonnes of green hydrogen annually. On technology breakthroughs, MAN Energy Solutions completed the world's first 100% hydrogen-powered large marine engine test; KIT developed a compressor-free hydrogen gas turbine achieving 5+ minutes of stable operation; Fraunhofer Institute's nanoporous ceramic membrane technology saves up to 90% of gas drying energy. The PCK refinery received €245 million in funding for a green hydrogen production project.</p>
+  </div>
+
+  <div id="s4-5" class="insight-card lang-zh">
+    <h4>4.5 纺织法案与快时尚治理开辟产业监管新领域</h4>
+    <p>联邦环境部长施奈德提出的新纺织法案要求所有在德国市场销售服装的制造商（包括进口商）必须加入制造商责任组织，承担旧衣物的收集、分类、回收和处理成本，设定70%的旧衣回收配额，缴费金额与产品环保性能挂钩。德国民众每年产生的纺织垃圾从2013年到2023年增长了55%，达约17.5万吨。纺织工业协会担忧本土中小企业被迫为全球快时尚平台买单；DUH批评法案缺乏明确环保标准。这一立法尝试对在德经营的纺织和服装企业将产生直接影响。</p>
+  </div>
+  <div id="s4-5" class="insight-card lang-en">
+    <h4>4.5 Textile Law and Fast Fashion Governance Open New Regulatory Frontiers</h4>
+    <p>The new textile law proposed by Environment Minister Schneider requires all clothing manufacturers (including importers) selling in the German market to join a producer responsibility organization, bearing costs for collection, sorting, recycling, and disposal of used garments, with a 70% recycling quota and fees linked to product environmental performance. German textile waste grew 55% from 2013 to 2023, reaching approximately 175,000 tonnes. The textile industry association worries domestic SMEs will be forced to pay for global fast fashion platforms; DUH criticizes the law for lacking clear environmental standards. This legislative initiative will directly impact textile and apparel companies operating in Germany.</p>
+  </div>
+</section>
+
+<!-- ===== 五、能源供应安全与地缘影响 ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header"><div class="section-num">五</div><div class="section-title lang-zh">能源供应安全与地缘影响</div><div class="section-title lang-en">Energy Security &amp; Geopolitical Impact</div></div>
+
+  <div class="insight-card lang-zh">
+    <h4>5.1 天然气供应安全面临结构性挑战</h4>
+    <p>德国天然气几乎全部依赖进口，伊朗危机暴露了这一结构性脆弱性。当前天然气存储设施填充率仅约22%，远低于欧盟要求的供暖季前90%的目标。联邦经济部长赖歇正研究建立战略天然气储备，同时呼吁企业与阿尔及利亚、阿塞拜疆、阿根廷等国签订中长期供应合同，推动欧盟甲烷法规的灵活执行。但绿党批评此举是为美国页岩气利益集团背书。德国当前约80%的LNG进口来自美国，而特朗普政府已取消多项甲烷排放保护规定。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>5.1 Natural Gas Supply Security Faces Structural Challenges</h4>
+    <p>Germany relies almost entirely on gas imports, and the Iran crisis has exposed this structural vulnerability. Current gas storage fill rates stand at only ~22%, far below the EU's 90% pre-heating-season target. Economy Minister Reiche is studying the establishment of strategic gas reserves while urging companies to sign medium- to long-term supply contracts with Algeria, Azerbaijan, and Argentina, and pushing for flexible implementation of EU methane regulations. The Greens criticize this as endorsing US shale gas interests. Currently ~80% of Germany's LNG imports come from the US, where the Trump administration has rolled back multiple methane emission protections.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>5.2 页岩气开采禁令松动引发激烈辩论</h4>
+    <p>联邦经济部长赖歇的顾问团队建议认真评估通过水力压裂技术扩大国内天然气开采，CDU经济理事会公开支持，FDP副主席库比基呼吁解除开采禁令。支持者指出德国境内天然气储量在3200亿至20300亿立方米之间。但绿党副议长维尔林登批评水力压裂会释放大量甲烷并可能污染地下水，联邦环境署也对此表示担忧。德国此前的页岩气开采禁令未按法律要求在2021年完成评估，长期搁置导致政策空间受限。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>5.2 Loosening of Fracking Ban Sparks Fierce Debate</h4>
+    <p>Economy Minister Reiche's advisory team recommends seriously evaluating expanded domestic gas extraction through hydraulic fracturing. The CDU Economic Council publicly supports this, and FDP Vice Chair Kubicki calls for lifting the fracking ban. Proponents note Germany's domestic gas reserves range from 320 to 2,030 billion cubic meters. However, Green Party Vice President Verlinden criticizes fracking for releasing large amounts of methane and potentially contaminating groundwater; the Federal Environment Agency also expressed concerns. Germany's previous fracking ban was not reviewed as legally required by 2021, and the prolonged shelving has constrained policy options.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>5.3 中东冲突对德国经济的多维冲击</h4>
+    <p>2026年中东局势升级对德国经济产生了多维度冲击。能源层面，德国95号汽油和柴油价格较冲突前上涨约30%。物流层面，航运企业被迫绕行霍尔木兹海峡。供应链层面，中东化肥供应中断推高了德国食品生产成本。经济顾问团预计欧元区通胀率可能从2%升至约3.5%，欧洲央行今年可能加息总计0.5个百分点。东部铸造厂负责人表示能源成本已严重威胁企业生存。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>5.3 Middle East Conflict's Multi-Dimensional Impact on Germany's Economy</h4>
+    <p>The 2026 Middle East escalation has hit Germany's economy on multiple fronts. On energy, German E5 gasoline and diesel prices rose ~30% compared to pre-conflict levels. On logistics, shipping companies are forced to reroute around the Strait of Hormuz. On supply chains, disrupted Middle Eastern fertilizer supplies have driven up German food production costs. The Council of Economic Advisors estimates eurozone inflation could rise from 2% to ~3.5%, and the ECB may raise rates by a total of 0.5 percentage points this year. An eastern German foundry manager stated that energy costs are seriously threatening business survival.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>5.4 电网建设滞后成为能源转型核心瓶颈</h4>
+    <p>德国电网建设的严重滞后已成为制约能源转型的核心瓶颈。2009年的电网扩建计划仅完成19%，智能电表普及率仅为2%。联邦政府通过KfW以33亿欧元收购Tennet德国25.1%的股权，该公司计划未来五年每年投入约130亿欧元用于电网升级。50Hertz自2025年4月起改为按项目成熟度分配并网名额。Pfisterer公司投资3000万欧元建设高压直流输电测试中心。吕讷堡地区的电网数字化试点项目已完成300个变电站的数字化改造。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>5.4 Grid Construction Delays Become Core Bottleneck for Energy Transition</h4>
+    <p>Severe delays in Germany's grid construction have become the core bottleneck constraining the energy transition. The 2009 grid expansion plan is only 19% complete, and smart meter penetration stands at just 2%. The federal government acquired 25.1% of Tennet Germany through KfW for €3.3 billion; the company plans to invest ~€13 billion annually over the next five years in grid upgrades. 50Hertz switched to project-maturity-based grid connection allocation from April 2025. Pfisterer invested €30 million in a high-voltage DC transmission test center. The Lüneburg region's grid digitalization pilot has completed digital upgrades of 300 substations.</p>
+  </div>
+
+  <!-- 电网建设进度 -->
+  <h4 style="font-family:'Noto Serif SC',serif; font-size:0.95rem; margin:1.5rem 0 0.8rem; color:var(--text-primary);"><i class="fas fa-bolt" style="color:var(--accent-gold);"></i> <span class="lang-zh">德国电网与能源基础设施关键指标</span><span class="lang-en">Key Indicators: Germany's Grid &amp; Energy Infrastructure</span></h4>
+  <div class="bar-chart">
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">电网扩建完成率</span><span class="lang-en">Grid expansion</span></div><div class="bar-track"><div class="bar-fill red" style="width:19%" data-value="19%"></div></div></div>
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">智能电表普及率</span><span class="lang-en">Smart meters</span></div><div class="bar-track"><div class="bar-fill red" style="width:2%" data-value="2%"></div></div></div>
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">天然气储备填充率</span><span class="lang-en">Gas reserve fill</span></div><div class="bar-track"><div class="bar-fill red" style="width:22%" data-value="22%"></div></div></div>
+    <div class="bar-item"><div class="bar-label"><span class="lang-zh">可再生能源电力占比</span><span class="lang-en">Renewable share</span></div><div class="bar-track"><div class="bar-fill green" style="width:75%" data-value="75%"></div></div></div>
+  </div>
+</section>
+
+<!-- ===== 六、科技创新与基础设施 ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header"><div class="section-num">六</div><div class="section-title lang-zh">科技创新与基础设施</div><div class="section-title lang-en">Tech Innovation &amp; Infrastructure</div></div>
+
+  <div class="insight-card lang-zh">
+    <h4>6.1 氢能技术多点突破，从实验室走向产业化</h4>
+    <p>德国在氢能技术领域取得多项重要突破。MAN Energy Solutions完成全球首次100%氢气驱动大型船用发动机测试。卡尔斯鲁厄理工学院研发的无压缩机氢气燃气轮机实现超5分钟稳定运行并首次完成电力输出，远超此前NASA的纪录。弗劳恩霍夫研究所开发的纳米多孔陶瓷膜技术可节省最多90%的气体干燥能源。Oberammergau的Quantal Hydro International开发新型光反应器，可在低于400摄氏度下生产绿氢。这些技术突破覆盖了氢能的生产、输送、应用全链条。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>6.1 Multiple Hydrogen Technology Breakthroughs: From Lab to Industrialization</h4>
+    <p>Germany has achieved several important breakthroughs in hydrogen technology. MAN Energy Solutions completed the world's first 100% hydrogen-powered large marine engine test. KIT's compressor-free hydrogen gas turbine achieved 5+ minutes of stable operation and first-ever power output, far surpassing NASA's previous record. Fraunhofer Institute's nanoporous ceramic membrane technology saves up to 90% of gas drying energy. Quantal Hydro International in Oberammergau developed a novel photoreactor capable of producing green hydrogen below 400°C. These breakthroughs span the entire hydrogen value chain — production, transport, and application.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>6.2 基础设施建设加速但资金与环保约束并存</h4>
+    <p>威廉港雅德韦瑟港计划扩建多用途码头（造价7-10亿欧元），同时计划2027年开工建设德国最大的LNG进口终端（总造价6.5亿欧元）。北威州A516高速桥梁首次使用40米长、121吨重的巨型预制构件，工期从2年缩短至7个月。南德天然气管道完成关键跨河施工，未来可转换输送氢气。但环保约束也在增加：柏林泰格尔机场园区因保护云雀栖息地，补偿成本高达700万欧元。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>6.2 Infrastructure Construction Accelerates Amid Funding and Environmental Constraints</h4>
+    <p>Wilhelmshaven's JadeWeserPort plans to expand its multi-purpose terminal (€700M-1B), and construction of Germany's largest LNG import terminal (€650M total) is planned to begin in 2027. In North Rhine-Westphalia, the A516 highway bridge used 40-meter, 121-tonne prefabricated segments for the first time, cutting construction time from 2 years to 7 months. A southern German gas pipeline completed critical river-crossing construction, with future conversion to hydrogen transport. However, environmental constraints are also increasing: Berlin's Tegel airport campus faces €7 million in compensation costs for protecting skylark habitats.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>6.3 数字化与AI产业布局引发资源争议</h4>
+    <p>微软计划在莱茵兰工业区投资32亿欧元建设AI超算数据中心，承诺使用100%可再生能源供电，但环保组织BUND NRW质疑其水资源消耗和实际可再生能源供应的可持续性。50Hertz数据显示当前已有17个数据中心项目申请电网并网。萨尔州推出"Saarland 3D"数字孪生平台，辅助可持续建设规划。吕讷堡地区的电网数字化试点通过数字孪生系统实现电网实时监控。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>6.3 Digitalization and AI Industry Expansion Spark Resource Debates</h4>
+    <p>Microsoft plans to invest €3.2 billion in an AI supercomputing data center in the Rhineland industrial zone, pledging 100% renewable energy supply. However, environmental group BUND NRW questions its water consumption and the sustainability of actual renewable energy supply. 50Hertz data shows 17 data center projects have already applied for grid connection. Saarland launched the "Saarland 3D" digital twin platform to support sustainable construction planning. The Lüneburg region's grid digitalization pilot uses a digital twin system for real-time grid monitoring.</p>
+  </div>
+</section>
+
+<!-- ===== 七、欧盟政策与国际关系 ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header"><div class="section-num">七</div><div class="section-title lang-zh">欧盟政策与国际关系</div><div class="section-title lang-en">EU Policy &amp; International Relations</div></div>
+
+  <div class="insight-card lang-zh">
+    <h4>7.1 欧盟政策调整对德国产业形成多重压力</h4>
+    <p>欧盟多项政策调整给德国带来显著影响。农业领域，GAP改革计划对大型农业企业实施补贴封顶，梅克伦堡-前波美拉尼亚州每年将损失超1.6亿欧元补贴。产业领域，欧盟排放交易系统的收紧遭到化工行业强烈反对。碳边境调节机制（CBAM）对德国高碳产品出口带来额外成本压力。欧盟汽车排放标准谈判中，德国内部分歧严重。渔业领域，欧盟要求2030年前将30%海域划为保护区，沿海渔民团体强烈反对。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>7.1 EU Policy Adjustments Create Multiple Pressures on German Industry</h4>
+    <p>Multiple EU policy adjustments are significantly impacting Germany. In agriculture, the CAP reform plan caps subsidies for large agricultural enterprises — Mecklenburg-Vorpommern stands to lose over €160 million in annual subsidies. In industry, tightening of the EU Emissions Trading System faces strong opposition from the chemical sector. The Carbon Border Adjustment Mechanism (CBAM) adds cost pressure to German high-carbon product exports. Germany is deeply divided internally on EU car emission standard negotiations. In fisheries, the EU's requirement to designate 30% of marine areas as protected zones by 2030 faces strong opposition from coastal fishing communities.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>7.2 德国钢铁行业在绿色转型与公平竞争间寻求平衡</h4>
+    <p>萨尔茨吉特钢铁集团正推进高炉向氢基直接还原冶炼的转型，联邦与下萨克森州提供总计13亿欧元财政补贴。但乔治斯马里恩胡特钢铁厂作为德国首家完成电炉转型的企业，指责欧盟对新转型企业的补贴政策造成市场不公，已起诉欧盟委员会。总理默茨提出将通过保护性关税帮助钢铁行业应对外部竞争。这一案例折射出绿色转型中先行者与后来者之间的公平竞争问题。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>7.2 German Steel Industry Seeks Balance Between Green Transition and Fair Competition</h4>
+    <p>Salzgitter Steel Group is advancing the transition from blast furnaces to hydrogen-based direct reduction, with €1.3 billion in combined federal and Lower Saxony subsidies. However, Georgsmarienhütte — Germany's first steelmaker to complete the electric arc furnace transition — accuses the EU's subsidy policy for newly transitioning companies of creating market unfairness and has sued the European Commission. Chancellor Merz proposed protective tariffs to help the steel industry cope with external competition. This case highlights the fair competition dilemma between early movers and latecomers in the green transition.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>7.3 光伏供应链对华依赖度持续高企</h4>
+    <p>2025年德国88%的进口光伏组件来自中国，本土光伏模组生产连续两年大幅下滑，2025年前三季度产量较2024年同期缩水60.6%。进口总额同比下滑7.8%至18亿欧元，出口总额暴跌30.1%至3.58亿欧元。在电池原材料领域，钴约70%来自刚果（金），镍主要来自印尼与俄罗斯，欧洲电池循环经济体系预计到2050年才能完善。这种高度对外依赖的供应链结构构成显著的战略风险。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>7.3 Solar Supply Chain Dependency on China Remains Critically High</h4>
+    <p>In 2025, 88% of Germany's imported solar modules came from China, with domestic module production declining sharply for two consecutive years — Q1-Q3 2025 output shrank 60.6% year-on-year. Import value fell 7.8% to €1.8 billion, while export value plummeted 30.1% to €358 million. In battery raw materials, ~70% of cobalt comes from the DRC, nickel primarily from Indonesia and Russia, and the European battery circular economy is not expected to mature until 2050. This highly externally dependent supply chain structure poses significant strategic risk.</p>
+  </div>
+</section>
+
+<!-- ===== 八、社会民生与环境保护 ===== -->
+<section id="s8" class="section reveal">
+  <div class="section-header"><div class="section-num">八</div><div class="section-title lang-zh">社会民生与环境保护</div><div class="section-title lang-en">Society, Livelihood &amp; Environment</div></div>
+
+  <div class="insight-card lang-zh">
+    <h4>8.1 能源价格上涨加剧社会公平压力</h4>
+    <p>伊朗危机引发的能源价格上涨对德国社会公平构成直接冲击。燃油价格涨幅约30%，低收入家庭和农村地区依赖私家车出行的民众首当其冲。石勒苏益格-荷尔斯泰因州的社会联盟批评州政府气候中和目标缺乏社会补偿机制。萨克森-安哈尔特州左翼党提出免费供暖费用核查、社会咨询热线等措施。DGB提出征收超额利润税、将通勤补贴提高至每公里17欧分、向每人发放150欧元能源成本补贴等方案。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>8.1 Rising Energy Prices Intensify Social Equity Pressures</h4>
+    <p>Energy price increases triggered by the Iran crisis directly impact social equity in Germany. Fuel prices rose ~30%, hitting low-income households and rural residents dependent on private cars hardest. Schleswig-Holstein's social alliance criticizes the state government's climate neutrality target for lacking social compensation mechanisms. Saxony-Anhalt's Left Party proposed free heating cost audits and social counseling hotlines. The DGB proposed windfall profit taxes, raising commuter allowances to 17 cents per kilometer, and a €150 per-person energy cost subsidy.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>8.2 自然保护与经济发展的冲突加剧</h4>
+    <p>德国多地出现自然保护与经济发展项目的直接冲突。威廉港计划在自然保护区建设能源园区，欧盟委员会已因德国未落实鸟类保护指令启动违约程序。巴伐利亚州索道扩建项目因濒危黑松鸡栖息地遭诉讼。柏林泰格尔机场园区因54处云雀栖息地需建设补偿性栖息地，总耗资约700万欧元。巴伐利亚州通过新狩猎法放宽对狼的猎杀限制，遭到绿党和环保组织强烈批评。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>8.2 Conflicts Between Nature Conservation and Economic Development Intensify</h4>
+    <p>Direct conflicts between nature conservation and economic development projects are emerging across Germany. Wilhelmshaven plans to build an energy park in a nature reserve; the European Commission has initiated infringement proceedings over Germany's failure to implement the Birds Directive. A Bavarian cable car expansion project faces litigation over endangered black grouse habitat. Berlin's Tegel airport campus must build compensatory habitats for 54 skylark nesting sites at a cost of ~€7 million. Bavaria passed a new hunting law relaxing restrictions on wolf culling, drawing strong criticism from the Greens and environmental organizations.</p>
+  </div>
+
+  <div class="insight-card lang-zh">
+    <h4>8.3 住房与城市建设聚焦可持续发展</h4>
+    <p>斯图加特Neckarpark的Q5项目投资约3300万欧元建造103套公租房，采用太阳能、地热能、废水余热等本地可再生能源。祖尔皮奇市计划投资约1000万欧元用于市政建筑节能改造。联邦交通部推出5亿欧元多户住宅充电设施补贴计划，要求至少20%停车位完成电气化改造。Lidl在慕尼黑附近建设木质结构环保超市，配备电动汽车快充桩。可持续建设理念正在从政策倡导转向实际落地。</p>
+  </div>
+  <div class="insight-card lang-en">
+    <h4>8.3 Housing and Urban Development Focus on Sustainability</h4>
+    <p>Stuttgart's Neckarpark Q5 project invests ~€33 million to build 103 social housing units using local renewable energy sources including solar, geothermal, and wastewater heat recovery. The city of Zülpich plans ~€10 million for municipal building energy efficiency retrofits. The Federal Transport Ministry launched a €500 million multi-unit residential EV charging subsidy program, requiring at least 20% of parking spaces to be electrified. Lidl is building a timber-frame eco-supermarket near Munich with EV fast-charging stations. Sustainable construction is transitioning from policy advocacy to practical implementation.</p>
+  </div>
+</section>
+
+<!-- ===== 风险警示 ===== -->
+<section id="risks" class="section reveal">
+  <div class="section-header"><div class="section-num"><i class="fas fa-exclamation-triangle" style="color:var(--accent-red)"></i></div><div class="section-title lang-zh">风险警示</div><div class="section-title lang-en">Risk Alerts</div></div>
+
+  <div class="lang-zh">
+  <div class="risk-card">
+    <h4><i class="fas fa-fire"></i> 风险一：能源供应安全风险持续升级</h4>
+    <p><span class="risk-label risk-label-desc">风险描述</span></p>
+    <p>伊朗危机推高全球能源价格，德国天然气储备填充率仅22%，远低于欧盟要求的90%目标。德国约95%的天然气依赖进口，80%的LNG来自美国，供应来源集中度高。若中东冲突持续或扩大，霍尔木兹海峡封锁风险将影响全球20%的油气运输。</p>
+    <p><span class="risk-label risk-label-impact">影响评估</span></p>
+    <p>能源密集型产业经营成本骤增，部分中小企业面临生存危机。通胀率可能上升1个百分点，GDP增速被拖累0.2-0.3个百分点。冬季储气困难可能引发供暖危机。</p>
+    <p><span class="risk-label risk-label-watch">建议关注</span></p>
+    <p>中东局势演变、欧盟天然气储备政策执行情况、德国战略天然气储备机制建设进展。</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-solar-panel"></i> 风险二：能源转型政策逆转引发投资信心危机</h4>
+    <p><span class="risk-label risk-label-desc">风险描述</span></p>
+    <p>联邦经济部长赖歇推动取消小型光伏补贴、放松供暖法、向可再生能源企业转嫁电网成本，构成对能源转型的系统性逆风。行业协会警告光伏需求可能暴跌60%，约90个县区总价值450亿欧元的可再生能源项目面临停滞。</p>
+    <p><span class="risk-label risk-label-impact">影响评估</span></p>
+    <p>可再生能源行业投资信心受损，近10万个光伏相关就业岗位面临流失风险。德国若无法完成2030年减排目标，将面临最高340亿欧元的欧盟罚款。</p>
+    <p><span class="risk-label risk-label-watch">建议关注</span></p>
+    <p>联邦经济部"网络法案"最终版本、小型光伏补贴政策走向、2026年气候保护计划的具体措施。</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-coins"></i> 风险三：财政可持续性压力加大</h4>
+    <p><span class="risk-label risk-label-desc">风险描述</span></p>
+    <p>2025年国家债务增加1440亿欧元至2.84万亿欧元，债务率升至63.5%。5000亿特别基金超85%被挪用填补预算缺口。2027年预算缺口预计110-200亿欧元，未来数年可能扩大至每年600亿欧元。</p>
+    <p><span class="risk-label risk-label-impact">影响评估</span></p>
+    <p>财政紧缩将压缩公共投资空间，基建、教育、科研等领域的资金保障面临挑战。社保、养老金改革可能引发社会不满。</p>
+    <p><span class="risk-label risk-label-watch">建议关注</span></p>
+    <p>2027年联邦预算编制进展、社保改革方案、地方政府财政状况。</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-link"></i> 风险四：关键产业供应链对外依赖风险</h4>
+    <p><span class="risk-label risk-label-desc">风险描述</span></p>
+    <p>光伏组件88%来自中国进口，本土产能连续两年暴跌。电池原材料中钴70%来自刚果（金）、镍主要来自印尼和俄罗斯。欧洲电池循环经济体系预计2050年才能完善。</p>
+    <p><span class="risk-label risk-label-impact">影响评估</span></p>
+    <p>地缘政治紧张可能导致供应链中断，影响能源转型和产业升级进程。供应链伦理风险可能引发监管和声誉风险。</p>
+    <p><span class="risk-label risk-label-watch">建议关注</span></p>
+    <p>欧盟关键原材料法案执行情况、中欧贸易关系变化、德国本土光伏和电池产能建设进展。</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-users"></i> 风险五：政治极化与社会分裂风险</h4>
+    <p><span class="risk-label risk-label-desc">风险描述</span></p>
+    <p>AfD在多州民调中保持高位（梅前州35-37%），极左翼暴力事件频发，气候政策引发广泛社会分裂。政策反复导致市场和民众预期混乱。</p>
+    <p><span class="risk-label risk-label-impact">影响评估</span></p>
+    <p>政治极化加剧政策制定的难度和不确定性，影响营商环境的稳定性。极端势力的壮大可能改变未来选举格局和政策方向。</p>
+    <p><span class="risk-label risk-label-watch">建议关注</span></p>
+    <p>2026年各州选举结果、AfD政策主张的演变、社会抗议活动的频率和规模。</p>
+  </div>
+  </div>
+
+  <div class="lang-en">
+  <div class="risk-card">
+    <h4><i class="fas fa-fire"></i> Risk 1: Energy Supply Security Risk Continues to Escalate</h4>
+    <p><span class="risk-label risk-label-desc">Risk Description</span></p>
+    <p>The Iran crisis has pushed global energy prices higher. Germany's gas reserve fill rate stands at only 22%, far below the EU's 90% target. Approximately 95% of Germany's natural gas is imported, with 80% of LNG from the US — a highly concentrated supply source. If the Middle East conflict persists or escalates, the risk of a Strait of Hormuz blockade could affect 20% of global oil and gas transport.</p>
+    <p><span class="risk-label risk-label-impact">Impact Assessment</span></p>
+    <p>Energy-intensive industries face sharply rising operating costs; some SMEs face existential threats. Inflation could rise by 1 percentage point, dragging GDP growth down 0.2-0.3 pp. Winter gas storage difficulties could trigger a heating crisis.</p>
+    <p><span class="risk-label risk-label-watch">Recommended Watch</span></p>
+    <p>Middle East situation developments, EU gas reserve policy implementation, progress on Germany's strategic gas reserve mechanism.</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-solar-panel"></i> Risk 2: Energy Transition Policy Reversal Triggers Investment Confidence Crisis</h4>
+    <p><span class="risk-label risk-label-desc">Risk Description</span></p>
+    <p>Economy Minister Reiche's push to cancel small-scale solar subsidies, relax the heating law, and shift grid costs to renewable energy companies creates systemic headwinds for the energy transition. Industry associations warn solar demand could plunge 60%, with ~90 counties and €45 billion in renewable projects at risk of stalling.</p>
+    <p><span class="risk-label risk-label-impact">Impact Assessment</span></p>
+    <p>Renewable energy investment confidence is damaged, with nearly 100,000 solar-related jobs at risk. If Germany fails to meet its 2030 emission targets, it faces EU fines of up to €34 billion.</p>
+    <p><span class="risk-label risk-label-watch">Recommended Watch</span></p>
+    <p>Final version of the Federal Economy Ministry's "Network Act," small-scale solar subsidy policy direction, specific measures in the 2026 climate protection plan.</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-coins"></i> Risk 3: Fiscal Sustainability Pressure Intensifies</h4>
+    <p><span class="risk-label risk-label-desc">Risk Description</span></p>
+    <p>National debt rose €144 billion in 2025 to €2.84 trillion, with the debt ratio reaching 63.5%. Over 85% of the €500 billion special fund was diverted to plug budget gaps. The 2027 budget gap is projected at €11-20 billion, potentially expanding to €60 billion annually in coming years.</p>
+    <p><span class="risk-label risk-label-impact">Impact Assessment</span></p>
+    <p>Fiscal austerity will squeeze public investment capacity, challenging funding for infrastructure, education, and research. Social security and pension reforms may trigger public discontent.</p>
+    <p><span class="risk-label risk-label-watch">Recommended Watch</span></p>
+    <p>2027 federal budget preparation progress, social security reform proposals, state government fiscal conditions.</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-link"></i> Risk 4: Critical Industry Supply Chain External Dependency</h4>
+    <p><span class="risk-label risk-label-desc">Risk Description</span></p>
+    <p>88% of solar modules are imported from China, with domestic production plummeting for two consecutive years. In battery raw materials, 70% of cobalt comes from the DRC, nickel primarily from Indonesia and Russia. The European battery circular economy is not expected to mature until 2050.</p>
+    <p><span class="risk-label risk-label-impact">Impact Assessment</span></p>
+    <p>Geopolitical tensions could cause supply chain disruptions, affecting the energy transition and industrial upgrading. Supply chain ethical risks may trigger regulatory and reputational risks.</p>
+    <p><span class="risk-label risk-label-watch">Recommended Watch</span></p>
+    <p>EU Critical Raw Materials Act implementation, changes in China-EU trade relations, progress on domestic German solar and battery production capacity.</p>
+  </div>
+
+  <div class="risk-card">
+    <h4><i class="fas fa-users"></i> Risk 5: Political Polarization and Social Division</h4>
+    <p><span class="risk-label risk-label-desc">Risk Description</span></p>
+    <p>AfD maintains high poll numbers across multiple states (35-37% in Mecklenburg-Vorpommern), far-left violence incidents are frequent, and climate policy has triggered widespread social division. Policy reversals create confusion in market and public expectations.</p>
+    <p><span class="risk-label risk-label-impact">Impact Assessment</span></p>
+    <p>Political polarization increases the difficulty and uncertainty of policymaking, affecting business environment stability. The growth of extremist forces could reshape future election outcomes and policy directions.</p>
+    <p><span class="risk-label risk-label-watch">Recommended Watch</span></p>
+    <p>2026 state election results, evolution of AfD policy positions, frequency and scale of social protests.</p>
+  </div>
+  </div>
+</section>
+
+<!-- ===== 下期关注 ===== -->
+<section id="watch" class="section reveal">
+  <div class="section-header"><div class="section-num"><i class="fas fa-binoculars" style="color:var(--accent-blue)"></i></div><div class="section-title lang-zh">下期关注</div><div class="section-title lang-en">Upcoming Watch</div></div>
+  <ol class="watch-list lang-zh">
+    <li><strong>2026年气候保护计划的最终方案与各方反应</strong>：联邦政府需在3月底前提交新的气候保护计划，该计划的具体措施、减排力度以及能否通过司法审查，将决定德国未来数年的气候政策走向。</li>
+    <li><strong>供暖法改革立法进程与市场影响</strong>：供暖法改革草案的最终版本及其对建筑领域能源转型的实际影响，包括热泵市场需求变化、天然气网络转型计划的调整等。</li>
+    <li><strong>联邦经济部"网络法案"与光伏补贴政策走向</strong>：赖歇推动的电网成本分摊方案和小型光伏补贴取消计划的立法进展，将直接影响德国可再生能源行业的投资信心和扩张速度。</li>
+    <li><strong>中东局势演变与德国能源供应安全</strong>：伊朗危机的后续发展、全球能源价格走势、德国天然气储备建设进展，以及联邦政府的能源危机应对措施。</li>
+    <li><strong>多州选举结果与政治格局变化</strong>：莱茵兰-普法尔茨州选举结果、萨克森-安哈尔特州和梅克伦堡-前波美拉尼亚州的选前态势，AfD的实际得票率及其对联邦政治的影响。</li>
+  </ol>
+  <ol class="watch-list lang-en">
+    <li><strong>Final 2026 Climate Protection Plan and stakeholder reactions</strong>: The federal government must submit a new climate protection plan by end of March. Its specific measures, emission reduction ambition, and ability to withstand judicial review will determine Germany's climate policy direction for years to come.</li>
+    <li><strong>Heating law reform legislative progress and market impact</strong>: The final version of the heating law reform draft and its real-world impact on building sector energy transition, including changes in heat pump market demand and adjustments to gas network transformation plans.</li>
+    <li><strong>Federal Economy Ministry "Network Act" and solar subsidy policy direction</strong>: Legislative progress on Reiche's grid cost-sharing scheme and small-scale solar subsidy cancellation will directly affect investment confidence and expansion pace in Germany's renewable energy sector.</li>
+    <li><strong>Middle East situation and German energy supply security</strong>: Further developments in the Iran crisis, global energy price trends, progress on German gas reserve construction, and federal government energy crisis response measures.</li>
+    <li><strong>Multi-state election results and political landscape shifts</strong>: Rhineland-Palatinate election results, pre-election dynamics in Saxony-Anhalt and Mecklenburg-Vorpommern, AfD's actual vote share and its impact on federal politics.</li>
+  </ol>
+</section>
+
+<!-- ===== 全文总结 ===== -->
+<section id="conclusion" class="section reveal">
+  <div class="section-header"><div class="section-num"><i class="fas fa-file-alt" style="color:var(--accent-gold)"></i></div><div class="section-title lang-zh">全文总结</div><div class="section-title lang-en">Conclusion</div></div>
+  <div class="conclusion-box lang-zh">
+    <p>2026年3月的德国正处于多重转型压力的交汇点。政治层面，黑红联盟的执政协调困难已从个别议题的分歧演变为系统性的政策僵局，气候保护、预算整顿、供暖法改革等核心议题均未能取得实质性突破。联邦联合委员会会议"讨论多项议题但未达成任何决议"的结果，是当前执政效率低下的缩影。与此同时，AfD在地方选举中的持续高位表现和极端势力的活跃，正在加速德国政治版图的碎片化。</p>
+    <p>经济层面，德国面临增长停滞与结构性挑战的双重困境。2025年经济几乎零增长，工业部门流失16万个就业岗位，5000亿特别基金超85%被挪用填补预算缺口而非用于新增投资。2027年联邦预算缺口预计高达200亿欧元，未来可能扩大至每年600亿欧元。伊朗危机引发的能源价格上涨进一步加剧了企业经营困难，能源密集型产业首当其冲。</p>
+    <p>能源转型是本期报告最突出的主题。一方面，德国在可再生能源技术、氢能研发、地方能源实践等方面取得了显著进展——陆上风电拍卖超额认购、氢能技术多点突破、地方层面的创新项目层出不穷。另一方面，联邦层面的政策环境正在发生令人担忧的转向：经济部长赖歇推动取消光伏补贴、放松供暖法、向可再生能源企业转嫁电网成本，被行业协会称为"对能源转型的正面攻击"。</p>
+    <p>产业层面，汽车、化工两大支柱产业的转型阵痛持续加深。大众利润下滑44%、计划裁员5万人，插混车型实际排放远超标称值引发信任危机。化工行业在东德地区出现企业破产潮，产能外迁风险上升。光伏产业对中国供应链的依赖度高达88%，本土产能连续两年暴跌。</p>
+    <p>值得关注的积极信号包括：氢能产业布局加速，汉堡正打造欧洲氢能枢纽；电动车市场需求因燃油价格上涨而显著提升；地方层面的能源转型实践展现出强大的创新活力；80%的德国民众认为绿色环保技术是经济未来的重要支柱。</p>
+    <p style="font-weight:700; color:var(--text-primary);">总体而言，2026年3月的德国呈现出"技术进步与政策倒退并存、地方创新与联邦僵局共存、转型共识与路径分歧交织"的复杂图景。短期内，政策不确定性和能源价格波动将继续主导市场情绪；中长期看，德国的产业基础、技术实力和社会共识仍为其转型提供了坚实支撑，但政策协调能力和执行效率将是决定转型成败的关键变量。</p>
+  </div>
+  <div class="conclusion-box lang-en">
+    <p>In March 2026, Germany stands at the intersection of multiple transformation pressures. Politically, the CDU/CSU-SPD coalition's coordination difficulties have evolved from disagreements on individual issues into systemic policy gridlock — no substantive breakthroughs on climate protection, budget consolidation, or heating law reform. The Federal Coalition Committee's outcome of "discussing multiple topics but reaching no decisions" epitomizes the current governance inefficiency. Meanwhile, AfD's sustained strong performance in state elections and the activity of extremist forces are accelerating the fragmentation of Germany's political landscape.</p>
+    <p>Economically, Germany faces the dual challenge of stagnant growth and structural headwinds. The 2025 economy saw near-zero growth, the industrial sector lost 160,000 jobs, and over 85% of the €500 billion special fund was diverted to plug budget gaps rather than fund new investment. The 2027 federal budget gap is projected at up to €20 billion, potentially expanding to €60 billion annually. Energy price increases triggered by the Iran crisis further exacerbate business difficulties, with energy-intensive industries bearing the brunt.</p>
+    <p>The energy transition is this report's most prominent theme. On one hand, Germany has made significant progress in renewable energy technology, hydrogen R&amp;D, and local energy practices — onshore wind auctions oversubscribed, hydrogen technology breakthroughs on multiple fronts, and innovative local projects proliferating. On the other hand, the federal policy environment is taking a worrying turn: Economy Minister Reiche's push to cancel solar subsidies, relax the heating law, and shift grid costs to renewable companies has been called "a frontal attack on the energy transition" by industry associations.</p>
+    <p>In industry, the transformation pains of the two pillar sectors — automotive and chemicals — continue to deepen. VW profits fell 44% with 50,000 planned layoffs; plug-in hybrid real-world emissions far exceeding rated values have triggered a trust crisis. The chemical industry in eastern Germany is seeing a wave of bankruptcies, with rising risk of capacity relocation. The solar industry's dependency on Chinese supply chains stands at 88%, with domestic production plummeting for two consecutive years.</p>
+    <p>Positive signals worth noting include: accelerating hydrogen industry development with Hamburg building a European hydrogen hub; EV market demand rising significantly due to fuel price increases; local energy transition practices demonstrating strong innovative vitality; and 80% of Germans viewing green technology as a crucial pillar of the economic future.</p>
+    <p style="font-weight:700; color:var(--text-primary);">Overall, March 2026 Germany presents a complex picture of "technological progress coexisting with policy regression, local innovation coexisting with federal gridlock, and transition consensus intertwined with pathway disagreements." In the short term, policy uncertainty and energy price volatility will continue to dominate market sentiment; in the medium to long term, Germany's industrial base, technological strength, and social consensus still provide solid support for its transformation — but policy coordination capacity and execution efficiency will be the critical variables determining the transition's success or failure.</p>
+  </div>
+</section>
+
+<!-- ===== 中资企业建议 ===== -->
+<section id="advice" class="section reveal">
+  <div class="section-header"><div class="section-num"><i class="fas fa-briefcase" style="color:var(--accent-gold)"></i></div><div class="section-title lang-zh">中资企业建议</div><div class="section-title lang-en">Recommendations for Chinese Enterprises</div></div>
+  <ol class="advice-list lang-zh">
+    <li><strong>密切跟踪能源政策变化，评估合规成本影响</strong>：供暖法改革、光伏补贴调整、电网成本分摊等政策变化将直接影响能源相关领域的投资回报。建议在德中资企业建立政策跟踪机制，及时评估政策变化对经营成本和市场需求的影响。</li>
+    <li><strong>关注光伏供应链政策风险，做好应对预案</strong>：德国88%的光伏组件来自中国，巴伐利亚州SPD已提出电动车补贴仅限欧洲生产车型的方案。未来不排除在光伏、电池等领域出台类似的本土化要求。建议关注欧盟关键原材料法案和供应链尽职调查法规的执行动态。</li>
+    <li><strong>把握氢能产业合作机遇</strong>：德国在氢能技术研发和基础设施建设方面投入巨大，汉堡、巴登-符腾堡等地正积极推进氢能项目。中资企业可关注氢能设备、电解槽、燃料电池等领域的技术合作和市场进入机会。</li>
+    <li><strong>审慎评估化工行业投资机会</strong>：德国化工行业正经历深度调整，东德地区出现企业破产和产能关闭。这既是风险也可能是机遇——部分优质资产可能以较低价格出售。但需充分评估能源成本、环保合规和劳动力等长期经营因素。</li>
+    <li><strong>重视ESG合规与碳边境调节机制</strong>：欧盟CBAM的实施将对中国出口德国的高碳产品产生直接影响。建议相关企业提前布局碳足迹核算和减排措施，避免因碳关税导致竞争力下降。纺织法案等新监管框架也要求企业关注产品全生命周期的环境责任。</li>
+    <li><strong>关注电动汽车市场机遇与政策壁垒</strong>：德国电动车市场需求因燃油价格上涨而显著提升，联邦政府恢复了购车补贴。但巴伐利亚州SPD提出的补贴方案明确排除中国生产的电动车，未来可能出现更多本土化要求。建议中国车企加快在欧洲的本地化生产布局。</li>
+    <li><strong>利用德国基建投资窗口期</strong>：尽管特别基金被大量挪用，但德国在电网升级、港口扩建、交通基础设施等领域仍有大量投资需求。威廉港LNG终端、Tennet电网升级等项目为基建相关企业提供了参与机会。</li>
+    <li><strong>建立地缘政治风险预警机制</strong>：伊朗危机对德国经济的冲击表明，地缘政治风险可能通过能源价格、供应链中断等渠道快速传导。建议在德中资企业建立系统性的地缘政治风险监测和应急响应机制，确保供应链韧性。</li>
+  </ol>
+  <ol class="advice-list lang-en">
+    <li><strong>Closely track energy policy changes and assess compliance cost impacts</strong>: Policy changes in heating law reform, solar subsidy adjustments, and grid cost allocation will directly affect investment returns in energy-related sectors. Chinese enterprises in Germany should establish policy monitoring mechanisms to promptly assess the impact of policy changes on operating costs and market demand.</li>
+    <li><strong>Monitor solar supply chain policy risks and prepare contingency plans</strong>: 88% of Germany's solar modules come from China, and Bavaria's SPD has already proposed EV subsidies limited to European-manufactured vehicles. Similar localization requirements in solar and battery sectors cannot be ruled out. Monitor the implementation of the EU Critical Raw Materials Act and supply chain due diligence regulations.</li>
+    <li><strong>Seize hydrogen industry cooperation opportunities</strong>: Germany is investing heavily in hydrogen technology R&amp;D and infrastructure, with Hamburg, Baden-Württemberg, and other regions actively advancing hydrogen projects. Chinese enterprises can explore technology cooperation and market entry opportunities in hydrogen equipment, electrolyzers, and fuel cells.</li>
+    <li><strong>Prudently evaluate chemical industry investment opportunities</strong>: Germany's chemical industry is undergoing deep restructuring, with bankruptcies and capacity closures in eastern Germany. This presents both risks and potential opportunities — some quality assets may be available at lower prices. However, thorough assessment of energy costs, environmental compliance, and labor factors is essential.</li>
+    <li><strong>Prioritize ESG compliance and the Carbon Border Adjustment Mechanism</strong>: The EU CBAM will directly impact high-carbon Chinese exports to Germany. Companies should proactively develop carbon footprint accounting and emission reduction measures to avoid competitiveness losses from carbon tariffs. New regulatory frameworks like the textile law also require attention to full product lifecycle environmental responsibility.</li>
+    <li><strong>Monitor EV market opportunities and policy barriers</strong>: German EV market demand has risen significantly due to fuel price increases, and the federal government has reinstated purchase subsidies. However, Bavaria's SPD subsidy proposal explicitly excludes Chinese-manufactured EVs, and more localization requirements may emerge. Chinese automakers should accelerate European localized production strategies.</li>
+    <li><strong>Leverage Germany's infrastructure investment window</strong>: Despite significant fund diversion, Germany still has substantial investment needs in grid upgrades, port expansion, and transport infrastructure. Projects like the Wilhelmshaven LNG terminal and Tennet grid upgrades offer participation opportunities for infrastructure-related companies.</li>
+    <li><strong>Establish geopolitical risk early warning mechanisms</strong>: The Iran crisis's impact on Germany's economy demonstrates that geopolitical risks can rapidly transmit through energy prices and supply chain disruptions. Chinese enterprises in Germany should build systematic geopolitical risk monitoring and emergency response mechanisms to ensure supply chain resilience.</li>
+  </ol>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<div class="footer-author">
+  <div class="author-name"><i class="fas fa-building"></i> Supinfor Ltd.</div>
+  <div class="author-date lang-zh">发布日期：2026年4月24日</div>
+  <div class="author-date lang-en">Published: April 24, 2026</div>
+  <div class="author-note lang-zh">本报告基于2026年3月德国区域国别资讯汇总编制，报告内容仅供参考，不构成投资建议。</div>
+  <div class="author-note lang-en">This report is compiled from Germany country intelligence summaries for March 2026. Content is for reference only and does not constitute investment advice.</div>
+</div>
+
+</main>
+
+<footer class="site-footer">
+  <p>&copy; 2026 Supinfor Ltd. All rights reserved.</p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-chevron-up"></i></button>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.querySelector('.theme-toggle i').className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+}
+(function() {
+  const saved = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  document.documentElement.setAttribute('data-theme', saved);
+  if (saved === 'dark') document.querySelector('.theme-toggle i').className = 'fas fa-sun';
+})();
+
+// TOC toggle
+function toggleToc() {
+  document.querySelector('.toc-overlay').classList.toggle('active');
+  document.querySelector('.toc-panel').classList.toggle('active');
+}
+document.querySelectorAll('.toc-list a').forEach(a => {
+  a.addEventListener('click', () => toggleToc());
+});
+
+// Back to top
+const btt = document.querySelector('.back-to-top');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('visible', window.scrollY > 600);
+});
+
+// Scroll reveal
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.08 });
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Animate bars on scroll
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.bar-fill').forEach(bar => {
+        const w = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = w; }, 100);
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.bar-chart').forEach(el => barObserver.observe(el));
+
+// Language toggle
+function setLang(lang) {
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+  localStorage.setItem('lang', lang);
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', (lang === 'zh' && btn.textContent === '中') || (lang === 'en' && btn.textContent === 'EN'));
+  });
+}
+(function() {
+  const savedLang = localStorage.getItem('lang') || 'zh';
+  setLang(savedLang);
+})();
+</script>
+</body>
+</html>

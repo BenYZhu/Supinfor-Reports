@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html data-lang="zh" lang="zh" class="">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴西金融服务行业动态速览 | Brazil Financial Services Weekly</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      fontFamily: {
+        display: ['Playfair Display', 'serif'],
+        sans: ['Inter', 'Noto Sans SC', 'system-ui', 'sans-serif'],
+        mono: ['JetBrains Mono', 'monospace'],
+      },
+      colors: {
+        brand: { DEFAULT: '#6366f1', light: '#818cf8', dark: '#4f46e5' },
+        ink: { DEFAULT: '#0c0f1a', light: '#141829' },
+      }
+    }
+  }
+}
+</script>
+<style>
+  /* Language toggle */
+  [data-lang="zh"] [data-en] { display: none !important; }
+  [data-lang="en"] [data-zh] { display: none !important; }
+
+  /* Scroll reveal */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s cubic-bezier(.22,1,.36,1), transform 0.7s cubic-bezier(.22,1,.36,1); }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Hero grid background */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(99,102,241,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,102,241,0.06) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .dark .hero-grid {
+    background-image:
+      linear-gradient(rgba(99,102,241,0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(99,102,241,0.1) 1px, transparent 1px);
+  }
+
+  /* Card hover */
+  .card-hover { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .card-hover:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.1); }
+  .dark .card-hover:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+
+  /* Pulse dot */
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .pulse-dot { animation: pulse-dot 2s ease-in-out infinite; }
+
+  /* Scroll indicator */
+  @keyframes bounce-down { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+  .scroll-indicator { animation: bounce-down 2s ease-in-out infinite; }
+
+  /* Counter animation */
+  .counter { font-variant-numeric: tabular-nums; }
+
+  /* Smooth scroll */
+  html { scroll-behavior: smooth; }
+
+  /* Back to top */
+  .back-to-top { transition: opacity 0.3s, transform 0.3s; }
+
+  /* Risk border */
+  .risk-high { border-left: 4px solid #f43f5e; }
+  .risk-medium { border-left: 4px solid #f59e0b; }
+  .risk-watch { border-left: 4px solid #71717a; }
+
+  /* Timeline */
+  .timeline-line { position: relative; }
+  .timeline-line::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #f43f5e, #f59e0b, #6366f1);
+  }
+</style>
+</head>
+<body class="bg-white text-zinc-800 font-sans antialiased">
+
+<!-- ============ FIXED NAV ============ -->
+<nav id="navbar" class="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/80 dark:bg-ink/80 border-b border-zinc-200 dark:border-zinc-800 transition-colors duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg bg-brand flex items-center justify-center">
+          <i class="fa-solid fa-chart-line text-white text-sm"></i>
+        </div>
+        <span class="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100">Supinfor</span>
+      </div>
+      <!-- Section links (hidden on mobile) -->
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#overview" class="text-zinc-600 dark:text-zinc-400 hover:text-brand dark:hover:text-brand transition-colors">
+          <span data-zh>概览</span><span data-en>Overview</span>
+        </a>
+        <a href="#focus" class="text-zinc-600 dark:text-zinc-400 hover:text-brand dark:hover:text-brand transition-colors">
+          <span data-zh>焦点</span><span data-en>Focus</span>
+        </a>
+        <a href="#scan" class="text-zinc-600 dark:text-zinc-400 hover:text-brand dark:hover:text-brand transition-colors">
+          <span data-zh>动态</span><span data-en>Scan</span>
+        </a>
+        <a href="#risk" class="text-zinc-600 dark:text-zinc-400 hover:text-brand dark:hover:text-brand transition-colors">
+          <span data-zh>风险</span><span data-en>Risk</span>
+        </a>
+        <a href="#trend" class="text-zinc-600 dark:text-zinc-400 hover:text-brand dark:hover:text-brand transition-colors">
+          <span data-zh>趋势</span><span data-en>Trend</span>
+        </a>
+      </div>
+      <!-- Right controls -->
+      <div class="flex items-center gap-2">
+        <!-- Language toggle -->
+        <button id="langToggle" onclick="toggleLang()" class="px-3 py-1.5 rounded-lg text-sm font-semibold bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+          EN
+        </button>
+        <!-- Theme toggle -->
+        <button id="themeToggle" onclick="toggleTheme()" class="w-9 h-9 rounded-lg flex items-center justify-center bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors">
+          <i class="fa-solid fa-moon text-sm dark:hidden"></i>
+          <i class="fa-solid fa-sun text-sm hidden dark:inline"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden hero-grid">
+  <!-- Gradient orbs -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-400/20 dark:bg-indigo-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-1/3 right-1/4 w-80 h-80 bg-amber-400/15 dark:bg-amber-500/10 rounded-full blur-3xl"></div>
+  <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-rose-400/15 dark:bg-rose-500/10 rounded-full blur-3xl"></div>
+
+  <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+    <!-- Pill badge -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand/10 dark:bg-brand/20 text-brand text-sm font-medium mb-6">
+      <span class="w-2 h-2 rounded-full bg-brand pulse-dot"></span>
+      <span data-zh>行业动态速览 · 2026年3月23日 – 3月29日</span>
+      <span data-en>Industry Weekly · Mar 23 – Mar 29, 2026</span>
+    </div>
+
+    <!-- Small caps -->
+    <p class="uppercase tracking-[0.3em] text-xs text-zinc-500 dark:text-zinc-400 font-medium mb-4">
+      Brazil · Financial Services
+    </p>
+
+    <!-- Title -->
+    <h1 class="font-display text-5xl sm:text-6xl lg:text-7xl font-bold text-zinc-900 dark:text-zinc-100 leading-tight mb-6">
+      <span data-zh>巴西金融服务<br>行业动态速览</span>
+      <span data-en>Brazil Financial Services<br>Industry Weekly</span>
+    </h1>
+
+    <!-- Italic quote -->
+    <p class="font-display italic text-lg sm:text-xl text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto mb-12">
+      <span data-zh>"Master丑闻发酵 → Coaf规则突变 → INSS调查收官 → 油价冲击利率 → BRB危机救助"</span>
+      <span data-en>"Master scandal deepens → Coaf rules shift → INSS probe concludes → Oil shocks rates → BRB crisis rescue"</span>
+    </p>
+
+    <!-- 3 stat cards -->
+    <div class="grid grid-cols-3 gap-4 sm:gap-6 max-w-lg mx-auto mb-16">
+      <div class="bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-zinc-200/50 dark:border-zinc-700/50">
+        <div class="font-mono text-3xl sm:text-4xl font-bold text-brand counter" data-target="978">0</div>
+        <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+          <span data-zh>篇资讯</span><span data-en>Articles</span>
+        </div>
+      </div>
+      <div class="bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-zinc-200/50 dark:border-zinc-700/50">
+        <div class="font-mono text-3xl sm:text-4xl font-bold text-amber-500 counter" data-target="11">0</div>
+        <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+          <span data-zh>个栏目</span><span data-en>Channels</span>
+        </div>
+      </div>
+      <div class="bg-white/60 dark:bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-zinc-200/50 dark:border-zinc-700/50">
+        <div class="font-mono text-3xl sm:text-4xl font-bold text-emerald-500 counter" data-target="7">0</div>
+        <div class="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+          <span data-zh>天监测</span><span data-en>Days</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="scroll-indicator text-zinc-400 dark:text-zinc-500">
+      <i class="fa-solid fa-chevron-down text-lg"></i>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORE FINDINGS ============ -->
+<section id="overview" class="py-24 px-4 bg-zinc-50 dark:bg-ink-light">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-brand font-semibold mb-3">
+        <span data-zh>本周核心发现</span><span data-en>Core Findings</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>五大关键洞察</span><span data-en>Five Key Insights</span>
+      </h2>
+    </div>
+
+    <div class="grid gap-6">
+      <!-- Finding 1 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-rose-500/10 dark:bg-rose-500/20 flex items-center justify-center">
+          <span class="font-mono font-bold text-rose-500 text-lg">1</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>Master银行丑闻持续发酵</span>
+            <span data-en>Master Bank Scandal Escalates</span>
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <span data-zh>联邦警方"合规零行动"第二阶段推进，揭露超<strong class="text-zinc-900 dark:text-zinc-200">122亿雷亚尔</strong>虚假信贷欺诈，前银行家Daniel Vorcaro正协商污点协议，丑闻波及三权——行政、立法、司法均有涉案人员。</span>
+            <span data-en>Federal Police advance "Compliance Zero" Phase 2, uncovering over <strong class="text-zinc-900 dark:text-zinc-200">BRL 12.2 billion</strong> in fictitious credit fraud. Former banker Daniel Vorcaro is negotiating a plea bargain, with the scandal reaching all three branches of government — executive, legislative, and judiciary.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Finding 2 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-amber-500/10 dark:bg-amber-500/20 flex items-center justify-center">
+          <span class="font-mono font-bold text-amber-500 text-lg">2</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>金融情报监管规则突变</span>
+            <span data-en>Financial Intelligence Rules Abruptly Changed</span>
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <span data-zh>STF大法官Moraes限制Coaf金融情报报告（RIFs）共享范围，仅允许在正式刑事调查中使用，可能削弱Master案等重大金融犯罪的证据链，引发司法不稳定担忧。</span>
+            <span data-en>STF Justice Moraes restricts Coaf financial intelligence report (RIFs) sharing, allowing use only in formal criminal investigations. This may weaken the evidence chain in major financial crimes like the Master case, raising concerns about judicial instability.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Finding 3 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-indigo-500/10 dark:bg-indigo-500/20 flex items-center justify-center">
+          <span class="font-mono font-bold text-indigo-500 text-lg">3</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>INSS社保欺诈调查收官</span>
+            <span data-en>INSS Social Security Fraud Probe Concludes</span>
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <span data-zh>国会混合调查委员会（CPMI）提交超<strong class="text-zinc-900 dark:text-zinc-200">4000页</strong>最终报告，涉<strong class="text-zinc-900 dark:text-zinc-200">216人</strong>起诉请求，揭露<strong class="text-zinc-900 dark:text-zinc-200">390亿雷亚尔</strong>洗钱网络，但最终未通过任何报告即解散。</span>
+            <span data-en>The Congressional Joint Investigation Committee (CPMI) submitted a <strong class="text-zinc-900 dark:text-zinc-200">4,000+ page</strong> final report, requesting prosecution of <strong class="text-zinc-900 dark:text-zinc-200">216 individuals</strong> and uncovering a <strong class="text-zinc-900 dark:text-zinc-200">BRL 39 billion</strong> money laundering network, but dissolved without passing any report.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Finding 4 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-sky-500/10 dark:bg-sky-500/20 flex items-center justify-center">
+          <span class="font-mono font-bold text-sky-500 text-lg">4</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>油价冲击重塑利率预期</span>
+            <span data-en>Oil Price Shock Reshapes Rate Expectations</span>
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <span data-zh>中东战争推高油价至<strong class="text-zinc-900 dark:text-zinc-200">100美元</strong>以上，XP和Banco Inter上调2026年通胀预测至<strong class="text-zinc-900 dark:text-zinc-200">4.3%-4.5%</strong>，Selic降息周期预期收窄，年末利率预期上调至<strong class="text-zinc-900 dark:text-zinc-200">12.5%-12.75%</strong>。</span>
+            <span data-en>Middle East conflict pushes oil above <strong class="text-zinc-900 dark:text-zinc-200">$100</strong>. XP and Banco Inter raise 2026 inflation forecasts to <strong class="text-zinc-900 dark:text-zinc-200">4.3%–4.5%</strong>. Selic rate cut cycle narrows, with year-end rate expectations raised to <strong class="text-zinc-900 dark:text-zinc-200">12.5%–12.75%</strong>.</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Finding 5 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl p-6 sm:p-8 border border-zinc-200 dark:border-zinc-800 flex gap-5">
+        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center">
+          <span class="font-mono font-bold text-emerald-500 text-lg">5</span>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>BRB银行危机救助进行时</span>
+            <span data-en>BRB Bank Crisis Rescue Underway</span>
+          </h3>
+          <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+            <span data-zh>联邦区政府通过公共不动产注资方案救助BRB，法院围绕环保地块使用权展开博弈，银行同时推进"<strong class="text-zinc-900 dark:text-zinc-200">FlamengoBank</strong>"数字银行计划以恢复流动性。</span>
+            <span data-en>The Federal District government rescues BRB through public real estate capital injection. Courts debate environmental land use rights while the bank advances its "<strong class="text-zinc-900 dark:text-zinc-200">FlamengoBank</strong>" digital banking plan to restore liquidity.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOCUS EVENTS ============ -->
+<section id="focus" class="py-24 px-4 bg-white dark:bg-ink">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-brand font-semibold mb-3">
+        <span data-zh>焦点事件深度解读</span><span data-en>Focus Events Deep Dive</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>三大焦点事件</span><span data-en>Three Key Events</span>
+      </h2>
+    </div>
+
+    <!-- ===== EVENT 1: Master Bank ===== -->
+    <article class="reveal mb-20">
+      <div class="bg-zinc-50 dark:bg-zinc-900/40 rounded-3xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <!-- Header -->
+        <div class="p-6 sm:p-10 border-b border-zinc-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full bg-rose-500/10 text-rose-500 text-xs font-bold uppercase tracking-wider">
+              <span data-zh>高影响</span><span data-en>High Impact</span>
+            </span>
+            <span class="text-zinc-400 dark:text-zinc-500 text-sm">2.1</span>
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>Master银行丑闻：巴西金融系统的系统性危机</span>
+            <span data-en>Master Bank Scandal: A Systemic Crisis in Brazil's Financial System</span>
+          </h3>
+        </div>
+
+        <div class="p-6 sm:p-10">
+          <!-- Timeline -->
+          <div class="mb-10">
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-6">
+              <span data-zh>事件脉络</span><span data-en>Event Timeline</span>
+            </h4>
+            <div class="flex items-center justify-between gap-2 overflow-x-auto pb-2">
+              <div class="flex-shrink-0 text-center">
+                <div class="w-14 h-14 rounded-full bg-zinc-200 dark:bg-zinc-700 flex items-center justify-center mx-auto mb-2">
+                  <span class="font-mono text-xs font-bold text-zinc-600 dark:text-zinc-300">2025.03</span>
+                </div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 max-w-[120px]">
+                  <span data-zh>BRB宣布收购Master 58%股份</span>
+                  <span data-en>BRB announces 58% Master acquisition</span>
+                </p>
+              </div>
+              <div class="flex-1 h-0.5 bg-gradient-to-r from-zinc-300 to-amber-400 dark:from-zinc-600 dark:to-amber-500 min-w-[40px]"></div>
+              <div class="flex-shrink-0 text-center">
+                <div class="w-14 h-14 rounded-full bg-amber-100 dark:bg-amber-900/40 flex items-center justify-center mx-auto mb-2">
+                  <span class="font-mono text-xs font-bold text-amber-600 dark:text-amber-400">2026.03</span>
+                </div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 max-w-[120px]">
+                  <span data-zh>央行否决交易，警方启动行动</span>
+                  <span data-en>Central Bank vetoes deal, police launch operation</span>
+                </p>
+              </div>
+              <div class="flex-1 h-0.5 bg-gradient-to-r from-amber-400 to-rose-500 dark:from-amber-500 dark:to-rose-500 min-w-[40px]"></div>
+              <div class="flex-shrink-0 text-center">
+                <div class="w-14 h-14 rounded-full bg-rose-100 dark:bg-rose-900/40 flex items-center justify-center mx-auto mb-2">
+                  <span class="font-mono text-xs font-bold text-rose-600 dark:text-rose-400"><span data-zh>本周</span><span data-en>This Wk</span></span>
+                </div>
+                <p class="text-xs text-zinc-500 dark:text-zinc-400 max-w-[120px]">
+                  <span data-zh>第二阶段推进，42份搜查令</span>
+                  <span data-en>Phase 2 advances, 42 search warrants</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Narrative -->
+          <div class="prose prose-zinc dark:prose-invert max-w-none mb-8">
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>2025年3月，巴西利亚银行（BRB）宣布收购Master银行58%股份，获联邦区州长Ibaneis Rocha支持。一年后，巴西央行否决该交易，联邦警方随即启动"合规零行动"（Compliance Zero），揭开了巴西近年来最大的金融欺诈案。</span>
+              <span data-en>In March 2025, Banco de Brasília (BRB) announced the acquisition of 58% of Master Bank, backed by Federal District Governor Ibaneis Rocha. A year later, Brazil's Central Bank vetoed the deal, and Federal Police launched "Compliance Zero," uncovering Brazil's largest financial fraud case in recent years.</span>
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>本周，联邦警方推进行动第二阶段，出动42份搜查令覆盖5个州，调查有组织犯罪、金融机构欺诈管理及洗钱罪。然而行动遭遇多重阻碍——多个目标地点提前被清空，核心人物Daniel Vorcaro等人的住所物品被仓促转移，显示存在严重的信息泄露问题。</span>
+              <span data-en>This week, Federal Police advanced Phase 2, deploying 42 search warrants across 5 states, investigating organized crime, fraudulent management of financial institutions, and money laundering. However, the operation faced multiple obstacles — several target locations had been pre-emptively cleared, and belongings at residences of key figures including Daniel Vorcaro were hastily removed, indicating serious information leaks.</span>
+            </p>
+          </div>
+
+          <!-- 4 Metric cards -->
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
+            <span data-zh>丑闻规模与波及面</span><span data-en>Scandal Scale &amp; Impact</span>
+          </h4>
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-rose-500 mb-1">122<span class="text-base">亿</span></div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>虚假信贷 (BRL)</span><span data-en>Fictitious Credit (BRL)</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-amber-500 mb-1">410<span class="text-base">亿</span></div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>FGC赔付 (BRL)</span><span data-en>FGC Payout (BRL)</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-indigo-500 mb-1">160<span class="text-base">万+</span></div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>受影响客户</span><span data-en>Affected Clients</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-sky-500 mb-1">66<span class="text-base">亿</span></div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>BRB坏账 (BRL)</span><span data-en>BRB Bad Debt (BRL)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Political impact -->
+          <div class="mb-8">
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>Master银行被揭露存在超122亿雷亚尔的虚假信贷欺诈，银行被清算后波及超160万客户，巴西存款保险基金（FGC）需支付约410亿雷亚尔赔偿。BRB因购入这些虚假信贷资产，产生至少66亿雷亚尔坏账，央行预计总亏损达50亿雷亚尔。</span>
+              <span data-en>Master Bank was found to have over BRL 12.2 billion in fictitious credit fraud. After liquidation, over 1.6 million clients were affected, and Brazil's Deposit Insurance Fund (FGC) must pay approximately BRL 41 billion in compensation. BRB, having purchased these fictitious credit assets, incurred at least BRL 6.6 billion in bad debt, with the Central Bank estimating total losses at BRL 5 billion.</span>
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">
+              <span data-zh>丑闻的政治波及面极广：</span>
+              <span data-en>The scandal's political reach is extensive:</span>
+            </p>
+            <div class="grid sm:grid-cols-3 gap-4 mb-4">
+              <div class="bg-white dark:bg-zinc-800/40 rounded-xl p-4 border border-zinc-200 dark:border-zinc-700">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="fa-solid fa-landmark text-rose-500 text-sm"></i>
+                  <span class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">
+                    <span data-zh>行政权</span><span data-en>Executive</span>
+                  </span>
+                </div>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <span data-zh>联邦区州长Ibaneis Rocha因丑闻辞职参选参议员，但竞选前景因此严重受损</span>
+                  <span data-en>Federal District Governor Ibaneis Rocha resigned to run for Senate, but his campaign prospects are severely damaged</span>
+                </p>
+              </div>
+              <div class="bg-white dark:bg-zinc-800/40 rounded-xl p-4 border border-zinc-200 dark:border-zinc-700">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="fa-solid fa-gavel text-amber-500 text-sm"></i>
+                  <span class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">
+                    <span data-zh>司法权</span><span data-en>Judiciary</span>
+                  </span>
+                </div>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <span data-zh>STF大法官Toffoli、Moraes及其家属被指与Vorcaro存在不当往来，Moraes妻子与Master银行签有1.29亿雷亚尔合同</span>
+                  <span data-en>STF Justices Toffoli, Moraes and their families are alleged to have improper ties with Vorcaro. Moraes' wife had a BRL 129 million contract with Master Bank</span>
+                </p>
+              </div>
+              <div class="bg-white dark:bg-zinc-800/40 rounded-xl p-4 border border-zinc-200 dark:border-zinc-700">
+                <div class="flex items-center gap-2 mb-2">
+                  <i class="fa-solid fa-building-columns text-indigo-500 text-sm"></i>
+                  <span class="font-semibold text-sm text-zinc-900 dark:text-zinc-100">
+                    <span data-zh>立法权</span><span data-en>Legislature</span>
+                  </span>
+                </div>
+                <p class="text-xs text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                  <span data-zh>多名现任议员被INSS调查委员会点名，Centrão派系议员曾推动利于Master的法案</span>
+                  <span data-en>Multiple sitting lawmakers named by INSS committee. Centrão faction legislators pushed legislation favorable to Master</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Vorcaro plea bargain -->
+          <div class="mb-8">
+            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+              <span data-zh>Vorcaro污点协议的博弈</span><span data-en>Vorcaro Plea Bargain Dynamics</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <span data-zh>前银行家Daniel Vorcaro已签署保密协议，进入与联邦总检察院的污点协议谈判第一阶段。但检警持谨慎态度，要求其提供实质性证据而非仅口头陈述，避免重蹈"拉瓦贾托"（Lava Jato）案覆辙。Vorcaro希望通过协议洗脱组织犯罪罪名，其后续供述可能进一步撼动巴西政商格局。</span>
+              <span data-en>Former banker Daniel Vorcaro has signed a confidentiality agreement, entering the first phase of plea bargain negotiations with the Federal Prosecutor's Office. However, prosecutors are cautious, demanding substantive evidence rather than mere verbal statements, to avoid repeating the pitfalls of the "Lava Jato" case. Vorcaro hopes to clear organized crime charges through the deal, and his subsequent testimony could further shake Brazil's political-business landscape.</span>
+            </p>
+          </div>
+
+          <!-- Insight box -->
+          <div class="bg-brand/5 dark:bg-brand/10 border border-brand/20 rounded-xl p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fa-solid fa-lightbulb text-brand"></i>
+              <span class="font-semibold text-sm text-brand">
+                <span data-zh>洞察</span><span data-en>Insight</span>
+              </span>
+            </div>
+            <p class="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+              <span data-zh>Master案已超越单一金融欺诈事件，演变为巴西金融监管体系的系统性危机。它暴露了央行内部监管失效（两名高层官员被指收受贿赂充当Vorcaro私人顾问）、存款保险机制的脆弱性（FGC面临410亿雷亚尔赔付压力），以及政商关系的深度纠缠。巴西拟推行央行敏感岗位任期制、设立部门层级委员会制衡等改革，但在2026大选年，改革推进将面临巨大政治阻力。</span>
+              <span data-en>The Master case has transcended a single financial fraud event, evolving into a systemic crisis of Brazil's financial regulatory system. It exposes internal regulatory failure at the Central Bank (two senior officials allegedly bribed to serve as Vorcaro's private consultants), the fragility of the deposit insurance mechanism (FGC facing BRL 41 billion in payouts), and deep political-business entanglement. Brazil plans reforms including term limits for sensitive Central Bank positions and departmental committee checks, but in the 2026 election year, reform progress will face enormous political resistance.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== EVENT 2: Coaf Restrictions ===== -->
+    <article class="reveal mb-20">
+      <div class="bg-zinc-50 dark:bg-zinc-900/40 rounded-3xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <!-- Header -->
+        <div class="p-6 sm:p-10 border-b border-zinc-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full bg-rose-500/10 text-rose-500 text-xs font-bold uppercase tracking-wider">
+              <span data-zh>高影响</span><span data-en>High Impact</span>
+            </span>
+            <span class="text-zinc-400 dark:text-zinc-500 text-sm">2.2</span>
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>Coaf金融情报报告限制：反腐工具遭削弱</span>
+            <span data-en>Coaf Financial Intelligence Restrictions: Anti-Corruption Tool Weakened</span>
+          </h3>
+        </div>
+
+        <div class="p-6 sm:p-10">
+          <!-- Event summary -->
+          <div class="mb-8">
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
+              <span data-zh>事件概要</span><span data-en>Event Summary</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>3月27日，STF大法官Alexandre de Moraes发布临时裁决，对巴西金融活动控制委员会（Coaf）的金融情报报告（RIFs）共享施加严格限制。新规要求：仅在正式刑事调查启动后才可申请RIFs；需明确被调查主体身份；报告内容须与调查主题严格相关；禁止"钓鱼取证"式的泛泛调查。该限制同时适用于国会调查委员会（CPIs/CPMIs），且对已提交的不合规报告具有追溯效力。</span>
+              <span data-en>On March 27, STF Justice Alexandre de Moraes issued an interim ruling imposing strict restrictions on sharing of Financial Intelligence Reports (RIFs) by Brazil's Financial Activities Control Council (Coaf). New rules require: RIFs may only be requested after formal criminal investigations are opened; the identity of investigated subjects must be specified; report content must be strictly relevant to the investigation topic; and "fishing expedition" style broad investigations are prohibited. These restrictions also apply to Congressional Investigation Committees (CPIs/CPMIs) and have retroactive effect on previously submitted non-compliant reports.</span>
+            </p>
+          </div>
+
+          <!-- 114% growth stat -->
+          <div class="flex items-center justify-center mb-8">
+            <div class="bg-white dark:bg-zinc-800/60 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-700 text-center max-w-xs">
+              <div class="font-mono text-4xl font-bold text-amber-500 mb-2">114%</div>
+              <p class="text-sm text-zinc-500 dark:text-zinc-400">
+                <span data-zh>2021年以来各州警方申请Coaf报告增长率<br>(6,375 → 13,667份)</span>
+                <span data-en>Growth in state police Coaf report requests since 2021<br>(6,375 → 13,667)</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Controversy -->
+          <div class="mb-8">
+            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+              <span data-zh>争议焦点</span><span data-en>Key Controversy</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>Moraes称此举旨在遏制RIFs被滥用为"施压、恐吓与敲诈"工具，指出当前存在"RIFs流行病"。但反腐机构和检察官强烈反对——圣保罗州检察官、反贪机构主席Roberto Livianu认为，限制报告使用将加重白领犯罪的有罪不罚现象。数据显示，2021年以来各州警方申请Coaf报告的数量增长114%，从6375份升至2024年的13667份。</span>
+              <span data-en>Moraes claims the move aims to curb the misuse of RIFs as tools for "pressure, intimidation, and extortion," pointing to a current "RIFs epidemic." However, anti-corruption agencies and prosecutors strongly oppose the ruling — São Paulo state prosecutor and anti-corruption agency head Roberto Livianu argues that restricting report use will worsen impunity for white-collar crime. Data shows state police requests for Coaf reports grew 114% since 2021, from 6,375 to 13,667 in 2024.</span>
+            </p>
+          </div>
+
+          <!-- Impact on Master case -->
+          <div class="mb-8">
+            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+              <span data-zh>对Master案的潜在影响</span><span data-en>Potential Impact on Master Case</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed">
+              <span data-zh>新规可能导致Master案中已提交的RIFs被认定为非法证据，进而影响案件推进。有联邦检察院人士认为，Moraes此举意在规避针对STF大法官亲属与Master银行关联的调查。值得注意的是，Moraes本人7个月前曾支持无需司法授权即可共享RIFs的立场，此次被指"颠覆过往立场"。</span>
+              <span data-en>The new rules may cause RIFs already submitted in the Master case to be deemed illegal evidence, thereby impeding case progress. Some Federal Prosecutor's Office sources believe Moraes' move aims to shield investigations into STF justices' family ties with Master Bank. Notably, Moraes himself supported sharing RIFs without judicial authorization just 7 months ago, and is now accused of "reversing his previous position."</span>
+            </p>
+          </div>
+
+          <!-- Insight box -->
+          <div class="bg-brand/5 dark:bg-brand/10 border border-brand/20 rounded-xl p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fa-solid fa-lightbulb text-brand"></i>
+              <span class="font-semibold text-sm text-brand">
+                <span data-zh>洞察</span><span data-en>Insight</span>
+              </span>
+            </div>
+            <p class="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+              <span data-zh>这一裁决在Master案调查关键期出台，时机敏感。它折射出巴西司法系统在金融犯罪调查工具使用上的深层分歧——反腐效率与公民权利保护之间的平衡尚未找到共识。对金融行业而言，这意味着巴西反洗钱执法力度可能出现阶段性减弱，合规环境的不确定性上升。</span>
+              <span data-en>This ruling comes at a critical juncture in the Master case investigation, making its timing highly sensitive. It reflects deep divisions within Brazil's judicial system over the use of financial crime investigation tools — the balance between anti-corruption efficiency and civil rights protection remains unresolved. For the financial industry, this signals a potential phase of weakened anti-money laundering enforcement and rising compliance uncertainty.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ===== EVENT 3: INSS Fraud ===== -->
+    <article class="reveal mb-8">
+      <div class="bg-zinc-50 dark:bg-zinc-900/40 rounded-3xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <!-- Header -->
+        <div class="p-6 sm:p-10 border-b border-zinc-200 dark:border-zinc-800">
+          <div class="flex flex-wrap items-center gap-3 mb-4">
+            <span class="px-3 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-bold uppercase tracking-wider">
+              <span data-zh>中影响</span><span data-en>Medium Impact</span>
+            </span>
+            <span class="text-zinc-400 dark:text-zinc-500 text-sm">2.3</span>
+          </div>
+          <h3 class="font-display text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-zinc-100 mb-2">
+            <span data-zh>INSS社保欺诈调查：390亿雷亚尔洗钱网络浮出水面</span>
+            <span data-en>INSS Social Security Fraud: BRL 39 Billion Money Laundering Network Exposed</span>
+          </h3>
+        </div>
+
+        <div class="p-6 sm:p-10">
+          <!-- 3 Metric cards -->
+          <div class="grid grid-cols-3 gap-4 mb-8">
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-rose-500 mb-1">390<span class="text-base">亿</span></div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>洗钱金额 (BRL)</span><span data-en>Laundered (BRL)</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-amber-500 mb-1">216</div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>起诉请求</span><span data-en>Indictments</span>
+              </div>
+            </div>
+            <div class="bg-white dark:bg-zinc-800/60 rounded-xl p-5 border border-zinc-200 dark:border-zinc-700 text-center">
+              <div class="font-mono text-2xl font-bold text-indigo-500 mb-1">41</div>
+              <div class="text-xs text-zinc-500 dark:text-zinc-400">
+                <span data-zh>空壳公司</span><span data-en>Shell Companies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event narrative -->
+          <div class="mb-8">
+            <h4 class="text-sm font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-4">
+              <span data-zh>事件脉络</span><span data-en>Event Timeline</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>INSS国会混合调查委员会（CPMI）在本周迎来最终时刻。报告员Alfredo Gaspar提交超4000页最终报告，揭露了由41家空壳公司组成的洗钱网络，2018至2025年间资金流转至少390亿雷亚尔，关联腐败、洗钱、跨国犯罪组织（包括PCC和Hezbollah），还涉及加密货币交易。</span>
+              <span data-en>The INSS Congressional Joint Investigation Committee (CPMI) reached its final moment this week. Rapporteur Alfredo Gaspar submitted a 4,000+ page final report, revealing a money laundering network of 41 shell companies that moved at least BRL 39 billion between 2018 and 2025, linked to corruption, money laundering, transnational criminal organizations (including PCC and Hezbollah), and cryptocurrency transactions.</span>
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>报告请求起诉216人，包括Master银行总裁Daniel Vorcaro、卢拉之子Lulinha、多名前部长和现任议员。欺诈手段为未经授权扣除社保人员的协会会费、违规办理薪俸信贷，受害者多为低收入退休及抚恤人员。</span>
+              <span data-en>The report requested prosecution of 216 individuals, including Master Bank president Daniel Vorcaro, Lula's son Lulinha, multiple former ministers and sitting lawmakers. The fraud involved unauthorized deduction of association fees from social security recipients and irregular payroll credit processing, with victims predominantly low-income retirees and pension recipients.</span>
+            </p>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+              <span data-zh>然而，委员会最终以19票反对12票支持的结果否决了该报告，政府派提交的替代文本也未获表决，委员会未通过任何报告即解散——这在巴西国会历史上极为罕见。</span>
+              <span data-en>However, the committee ultimately rejected the report by a vote of 19 to 12. The government faction's alternative text also failed to reach a vote, and the committee dissolved without passing any report — an extremely rare occurrence in Brazilian congressional history.</span>
+            </p>
+          </div>
+
+          <!-- Political dynamics -->
+          <div class="mb-8">
+            <h4 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-3">
+              <span data-zh>政治博弈</span><span data-en>Political Dynamics</span>
+            </h4>
+            <p class="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-3">
+              <span data-zh>该调查已完全沦为2026大选的政治工具：</span>
+              <span data-en>The investigation has become entirely a political tool for the 2026 elections:</span>
+            </p>
+            <ul class="space-y-2 text-zinc-600 dark:text-zinc-400 text-sm">
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle text-[4px] mt-2 text-rose-400 flex-shrink-0"></i>
+                <span>
+                  <span data-zh>反对派报告将卢拉之子Lulinha列为核心目标，请求预防性逮捕</span>
+                  <span data-en>Opposition report targets Lula's son Lulinha as a core subject, requesting preventive arrest</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle text-[4px] mt-2 text-amber-400 flex-shrink-0"></i>
+                <span>
+                  <span data-zh>政府派替代报告则将矛头指向博索纳罗父子，称其为"犯罪组织领导者"</span>
+                  <span data-en>Government faction's alternative report targets the Bolsonaro family, labeling them "criminal organization leaders"</span>
+                </span>
+              </li>
+              <li class="flex items-start gap-2">
+                <i class="fa-solid fa-circle text-[4px] mt-2 text-indigo-400 flex-shrink-0"></i>
+                <span>
+                  <span data-zh>双方均试图将Master银行丑闻与对方阵营绑定</span>
+                  <span data-en>Both sides attempt to tie the Master Bank scandal to the opposing camp</span>
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Insight box -->
+          <div class="bg-brand/5 dark:bg-brand/10 border border-brand/20 rounded-xl p-6">
+            <div class="flex items-center gap-2 mb-3">
+              <i class="fa-solid fa-lightbulb text-brand"></i>
+              <span class="font-semibold text-sm text-brand">
+                <span data-zh>洞察</span><span data-en>Insight</span>
+              </span>
+            </div>
+            <p class="text-zinc-700 dark:text-zinc-300 text-sm leading-relaxed">
+              <span data-zh>尽管CPMI未产生正式结论，但其揭露的390亿雷亚尔洗钱网络和INSS系统漏洞是真实的。卢拉政府已向430万受害者退还29亿雷亚尔，并延长申诉期限至6月20日。该案后续将由联邦警察和检察院继续推进，但在大选年的政治化环境下，司法进程可能被进一步拖延。</span>
+              <span data-en>Although the CPMI produced no formal conclusions, the BRL 39 billion money laundering network and INSS system vulnerabilities it exposed are real. The Lula government has refunded BRL 2.9 billion to 4.3 million victims and extended the appeal deadline to June 20. The case will continue to be pursued by Federal Police and prosecutors, but in the politicized environment of an election year, judicial proceedings may be further delayed.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ============ INDUSTRY SCAN ============ -->
+<section id="scan" class="py-24 px-4 bg-zinc-50 dark:bg-ink-light">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-brand font-semibold mb-3">
+        <span data-zh>行业动态扫描</span><span data-en>Industry Scan</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>全景速览</span><span data-en>Panoramic Overview</span>
+      </h2>
+    </div>
+
+    <!-- 2x2 Grid -->
+    <div class="grid md:grid-cols-2 gap-6 mb-12">
+
+      <!-- Card 1: Macro Economy -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <div class="p-6 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-sky-500/10 dark:bg-sky-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-chart-pie text-sky-500"></i>
+          </div>
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            <span data-zh>3.1 宏观经济与货币政策</span>
+            <span data-en>3.1 Macro Economy &amp; Monetary Policy</span>
+          </h3>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-oil-well text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">油价冲击重塑预期</strong>：中东战争推高油价突破100美元，XP上调2026年通胀预测至4.5%（原3.8%），Banco Inter上调至4.3%，Selic年末预期分别上调至12.75%和12.5%，降息周期明显收窄</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Oil price shock reshapes expectations</strong>: Middle East conflict pushes oil above $100. XP raises 2026 inflation forecast to 4.5% (from 3.8%), Banco Inter to 4.3%. Year-end Selic expectations raised to 12.75% and 12.5% respectively, significantly narrowing the rate cut cycle</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-arrow-trend-up text-rose-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">3月IPCA-15通胀超预期</strong>：环比涨0.44%（预期0.29%），12个月累计3.90%，仍在央行目标区间内但趋势上行</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">March IPCA-15 inflation beats expectations</strong>: MoM +0.44% (expected 0.29%), 12-month cumulative 3.90%, still within Central Bank target range but trending upward</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-university text-indigo-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">央行货币政策报告</strong>：上调2027年三季度通胀预期至3.3%，称中东冲突加剧通胀风险，行长Galípolo表示2025年保守性货币政策为当前冲击留出了应对空间</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Central Bank monetary policy report</strong>: Raises Q3 2027 inflation forecast to 3.3%, citing Middle East conflict as aggravating inflation risk. Governor Galípolo states 2025's conservative monetary policy has created room to respond to current shocks</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-money-bill-wave text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">公共债务高企</strong>：巴西公共债务占GDP的91.4%（IMF口径），为南美第三高，高利率环境下债务压力持续加大</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">High public debt</strong>: Brazil's public debt at 91.4% of GDP (IMF measure), third highest in South America, with debt pressure intensifying in the high-rate environment</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 2: Credit Policy -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <div class="p-6 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-emerald-500/10 dark:bg-emerald-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-file-contract text-emerald-500"></i>
+          </div>
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            <span data-zh>3.2 信贷政策与金融监管</span>
+            <span data-en>3.2 Credit Policy &amp; Financial Regulation</span>
+          </h3>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-hand-holding-dollar text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">小额信贷法案签署</strong>：卢拉签署第15364号法案，允许经营机构将最多20%的定向小额信贷债务余额额度用于微型金融，否决了差异化利率和非营利机构特殊条件两项条款</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Microcredit bill signed</strong>: Lula signs Law 15364, allowing institutions to allocate up to 20% of directed microcredit debt balance for microfinance, vetoing provisions for differentiated rates and special conditions for non-profits</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-credit-card text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">循环贷改革酝酿</strong>：卢拉计划调整信用卡循环贷规则以降低成本，当前月利率达14.81%，巴西家庭将29%收入用于还债</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Revolving credit reform brewing</strong>: Lula plans to adjust credit card revolving loan rules to reduce costs. Current monthly rate reaches 14.81%, with Brazilian households spending 29% of income on debt repayment</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-ban text-rose-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">逃税惯犯新规</strong>：联邦政府出台新规明确"逃税惯犯"认定标准，打击以逃税为经营模式的企业，适用于燃油、烟草等全经济领域</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Habitual tax evader rules</strong>: Federal government issues new rules defining "habitual tax evader" criteria, targeting businesses using tax evasion as a business model, applicable across all economic sectors including fuel and tobacco</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-triangle-exclamation text-rose-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">Entrepay被清算</strong>：巴西央行裁定支付企业Entrepay进入庭外清算，巴帕拉州银行和东北银行已终止合作，大量小商户投诉该公司扣留销售款项</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Entrepay liquidated</strong>: Central Bank orders payment company Entrepay into extrajudicial liquidation. Pará State Bank and Nordeste Bank have terminated partnerships, with numerous small merchants complaining about withheld sales proceeds</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3: BRB Crisis -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <div class="p-6 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-rose-500/10 dark:bg-rose-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-building text-rose-500"></i>
+          </div>
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            <span data-zh>3.3 BRB银行危机与救助</span>
+            <span data-en>3.3 BRB Bank Crisis &amp; Rescue</span>
+          </h3>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-house-chimney text-indigo-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">公共不动产注资方案</strong>：联邦区通过第7845号法案，将闲置公共不动产注入BRB，通过不动产投资基金（FII）实现资产变现，其中一块716公顷环保地块估值23亿雷亚尔引发法院博弈</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Public real estate capital injection</strong>: Federal District passes Law 7845, injecting idle public real estate into BRB via Real Estate Investment Funds (FII). A 716-hectare environmental land parcel valued at BRL 2.3 billion triggers court disputes</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-futbol text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">FlamengoBank计划</strong>：BRB计划联合弗拉门戈俱乐部推出独立运营的数字银行，依托弗拉门戈21%的巴西足球球迷基数获客</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">FlamengoBank plan</strong>: BRB plans to launch an independently operated digital bank with Flamengo football club, leveraging Flamengo's 21% share of Brazilian football fans for customer acquisition</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-file-invoice-dollar text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">赞助合同争议</strong>：BRB在危机中以4260万雷亚尔续约弗拉门戈赞助至2027年，遭议员质疑并被申请暂停，联邦区审计法院介入审查</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Sponsorship contract dispute</strong>: BRB renewed Flamengo sponsorship for BRL 42.6 million through 2027 amid crisis, drawing lawmaker criticism and suspension requests. Federal District Audit Court intervenes for review</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 4: Government/Election -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+        <div class="p-6 border-b border-zinc-100 dark:border-zinc-800 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-amber-500/10 dark:bg-amber-500/20 flex items-center justify-center">
+            <i class="fa-solid fa-landmark-dome text-amber-500"></i>
+          </div>
+          <h3 class="font-semibold text-zinc-900 dark:text-zinc-100">
+            <span data-zh>3.4–3.5 政府工业信贷与大选</span>
+            <span data-en>3.4–3.5 Government Industrial Credit &amp; Elections</span>
+          </h3>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-4 text-sm text-zinc-600 dark:text-zinc-400">
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-industry text-sky-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">出口企业信贷</strong>：卢拉政府通过BNDES释放150亿雷亚尔信贷额度，救助受国际局势影响的工业出口商，资金来自出口保障基金盈余</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Export enterprise credit</strong>: Lula government releases BRL 15 billion credit line through BNDES to assist industrial exporters affected by international conditions, funded by Export Guarantee Fund surplus</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-leaf text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">工业4.0与绿色资本</strong>：BNDES新增100亿雷亚尔信贷，其中70亿用于工业4.0设备更新，30亿用于绿色机械采购，平均利率6.5%</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Industry 4.0 &amp; green capital</strong>: BNDES adds BRL 10 billion in credit — BRL 7 billion for Industry 4.0 equipment upgrades, BRL 3 billion for green machinery procurement, at an average rate of 6.5%</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-person-booth text-indigo-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">选举不确定性上升</strong>：XP政治分析师建议投资者构建多元化投资组合应对不同选举场景，而非押注单一结果</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Rising election uncertainty</strong>: XP political analysts advise investors to build diversified portfolios for different election scenarios rather than betting on a single outcome</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-user-tie text-zinc-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">财政部长更替</strong>：Dário Durigan接任阿达德出任财政部长，需应对中东战争引发的油价通胀、公共债务高企、国会选举季阻力等多重挑战</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">Finance Minister change</strong>: Dário Durigan succeeds Haddad as Finance Minister, facing multiple challenges including oil-driven inflation from Middle East conflict, high public debt, and congressional election-season resistance</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-3">
+              <i class="fa-solid fa-flag-usa text-rose-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh><strong class="text-zinc-900 dark:text-zinc-200">美国拟将巴西黑帮列为恐怖组织</strong>：经博索纳罗之子游说，特朗普政府评估将PCC和红色司令部列为恐怖组织，可能触发金融制裁，卢拉政府担忧波及巴西金融机构</span>
+                <span data-en><strong class="text-zinc-900 dark:text-zinc-200">US may designate Brazilian gangs as terrorist organizations</strong>: Following lobbying by Bolsonaro's son, the Trump administration evaluates designating PCC and Comando Vermelho as terrorist organizations, potentially triggering financial sanctions. Lula government fears impact on Brazilian financial institutions</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart.js horizontal bar chart -->
+    <div class="reveal bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8">
+      <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-6">
+        <span data-zh>栏目分布（11个栏目，978条独立资讯）</span>
+        <span data-en>Channel Distribution (11 Channels, 978 Articles)</span>
+      </h3>
+      <div class="relative" style="height: 380px;">
+        <canvas id="channelChart"></canvas>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ RISK ALERTS ============ -->
+<section id="risk" class="py-24 px-4 bg-white dark:bg-ink">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-rose-500 font-semibold mb-3">
+        <span data-zh>风险警示</span><span data-en>Risk Alerts</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>四大风险关注</span><span data-en>Four Key Risks</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Risk 1: High -->
+      <div class="reveal card-hover risk-high bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="px-2.5 py-1 rounded-full bg-rose-500/10 text-rose-500 text-xs font-bold uppercase">
+            <span data-zh>高风险</span><span data-en>High</span>
+          </span>
+          <span class="text-zinc-400 dark:text-zinc-500 text-sm">4.1</span>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>Master案证据链断裂风险</span>
+          <span data-en>Master Case Evidence Chain Disruption Risk</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+          <span data-zh>Moraes对Coaf报告的限制可能导致Master案关键证据被认定无效，削弱检方起诉能力。若Vorcaro污点协议谈判破裂或证据不足，涉案政商人物可能脱罪，进一步损害巴西金融监管公信力。</span>
+          <span data-en>Moraes' restrictions on Coaf reports may invalidate key evidence in the Master case, weakening prosecution capabilities. If Vorcaro's plea bargain negotiations collapse or evidence proves insufficient, implicated political and business figures may escape justice, further damaging Brazil's financial regulatory credibility.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关注指标</span><span data-en>Watch Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-rose-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>STF全体会议对RIFs使用规则的最终裁决</span>
+                <span data-en>STF plenary ruling on RIFs usage rules</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-rose-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>Vorcaro污点协议谈判进展</span>
+                <span data-en>Vorcaro plea bargain negotiation progress</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-rose-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>联邦检察院对Master案的正式起诉时间表</span>
+                <span data-en>Federal Prosecutor's formal indictment timeline for Master case</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Risk 2: Medium -->
+      <div class="reveal card-hover risk-medium bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-bold uppercase">
+            <span data-zh>中风险</span><span data-en>Medium</span>
+          </span>
+          <span class="text-zinc-400 dark:text-zinc-500 text-sm">4.2</span>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>油价冲击下的滞胀风险</span>
+          <span data-en>Stagflation Risk from Oil Price Shock</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+          <span data-zh>油价突破100美元叠加巴西公共债务占GDP 91.4%的高位，央行面临通胀上行与经济放缓的两难。降息周期收窄将推高企业融资成本，抑制投资和消费。</span>
+          <span data-en>Oil prices above $100 combined with Brazil's public debt at 91.4% of GDP puts the Central Bank in a dilemma between rising inflation and economic slowdown. A narrower rate cut cycle will raise corporate financing costs, suppressing investment and consumption.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关注指标</span><span data-en>Watch Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>4月Copom会议降息幅度（市场预期仅0.25个百分点）</span>
+                <span data-en>April Copom meeting rate cut magnitude (market expects only 0.25pp)</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>月度IPCA走势</span>
+                <span data-en>Monthly IPCA trend</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>柴油补贴政策是否延长</span>
+                <span data-en>Whether diesel subsidy policy will be extended</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Risk 3: Medium -->
+      <div class="reveal card-hover risk-medium bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 text-xs font-bold uppercase">
+            <span data-zh>中风险</span><span data-en>Medium</span>
+          </span>
+          <span class="text-zinc-400 dark:text-zinc-500 text-sm">4.3</span>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>BRB银行流动性风险</span>
+          <span data-en>BRB Bank Liquidity Risk</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+          <span data-zh>BRB面临至少66亿雷亚尔坏账，公共不动产注资方案的法律争议尚未解决，环保地块使用权可能被再次冻结。若救助方案受阻，BRB可能面临更严重的流动性危机。</span>
+          <span data-en>BRB faces at least BRL 6.6 billion in bad debt. Legal disputes over the public real estate capital injection remain unresolved, and environmental land use rights may be frozen again. If the rescue plan is blocked, BRB could face a more severe liquidity crisis.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关注指标</span><span data-en>Watch Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>联邦区审计法院对BRB赞助合同的审查结论</span>
+                <span data-en>Federal District Audit Court review of BRB sponsorship contract</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>不动产投资基金（FII）的实际融资进展</span>
+                <span data-en>Real Estate Investment Fund (FII) actual financing progress</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-amber-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>Caixa是否最终收购BRB资产包</span>
+                <span data-en>Whether Caixa will ultimately acquire BRB asset package</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Risk 4: Watch -->
+      <div class="reveal card-hover risk-watch bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl p-6 border border-zinc-200 dark:border-zinc-800">
+        <div class="flex items-center gap-3 mb-4">
+          <span class="px-2.5 py-1 rounded-full bg-zinc-500/10 text-zinc-500 text-xs font-bold uppercase">
+            <span data-zh>关注</span><span data-en>Watch</span>
+          </span>
+          <span class="text-zinc-400 dark:text-zinc-500 text-sm">4.4</span>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>大选年政策不确定性</span>
+          <span data-en>Election Year Policy Uncertainty</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-4">
+          <span data-zh>2026大选已全面影响金融监管和经济政策走向。INSS调查的政治化、Coaf规则的突变、财政部长更替，均增加了政策连续性风险。</span>
+          <span data-en>The 2026 elections are comprehensively affecting financial regulation and economic policy direction. The politicization of the INSS investigation, abrupt Coaf rule changes, and Finance Minister replacement all increase policy continuity risk.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关注指标</span><span data-en>Watch Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-zinc-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>新财政部长Durigan的首批政策信号</span>
+                <span data-en>New Finance Minister Durigan's initial policy signals</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-zinc-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>国会对150亿雷亚尔出口信贷临时政令的审批进展</span>
+                <span data-en>Congressional approval progress on BRL 15 billion export credit provisional decree</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-eye text-zinc-400 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>各候选人经济政策纲领</span>
+                <span data-en>Candidates' economic policy platforms</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TREND OUTLOOK ============ -->
+<section id="trend" class="py-24 px-4 bg-zinc-50 dark:bg-ink-light">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-brand font-semibold mb-3">
+        <span data-zh>趋势研判</span><span data-en>Trend Outlook</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>三大趋势展望</span><span data-en>Three Key Trends</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Trend 1 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-shield-halved text-white text-lg"></i>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>5.1 巴西金融监管体系面临重构压力</span>
+          <span data-en>5.1 Brazil's Financial Regulatory System Faces Restructuring Pressure</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
+          <span data-zh>Master案暴露的央行内部监管失效、Coaf规则争议、FGC赔付压力，共同指向巴西金融监管体系的结构性缺陷。央行敏感岗位任期制、部门层级委员会制衡、行政自治法案等改革已被提上议程，但大选年的政治博弈将延缓改革进程。</span>
+          <span data-en>The Master case exposed internal regulatory failures at the Central Bank, Coaf rule disputes, and FGC payout pressure, all pointing to structural deficiencies in Brazil's financial regulatory system. Reforms including term limits for sensitive Central Bank positions, departmental committee checks, and administrative autonomy legislation are on the agenda, but election-year political dynamics will delay reform progress.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关键观察指标</span><span data-en>Key Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-brand mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>央行监管现代化法案的国会审议进展</span>
+                <span data-en>Congressional progress on Central Bank regulatory modernization bill</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-brand mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>FGC资金充足率变化</span>
+                <span data-en>FGC capital adequacy ratio changes</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trend 2 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-arrow-up-right-dots text-white text-lg"></i>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>5.2 高利率环境将持续更久</span>
+          <span data-en>5.2 High Interest Rate Environment Will Persist Longer</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
+          <span data-zh>油价冲击叠加财政赤字扩大，Selic降息周期明显收窄。市场已从年初预期的年末12.0%上调至12.5%-12.75%，高利率环境对信贷密集型行业（房地产、消费金融）的压制将持续。</span>
+          <span data-en>Oil price shocks combined with expanding fiscal deficits have significantly narrowed the Selic rate cut cycle. Markets have raised year-end expectations from 12.0% at the start of the year to 12.5%–12.75%. The high-rate environment will continue to suppress credit-intensive sectors (real estate, consumer finance).</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关键观察指标</span><span data-en>Key Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>4月Copom决议及前瞻指引</span>
+                <span data-en>April Copom decision and forward guidance</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>巴西央行季度通胀报告</span>
+                <span data-en>Central Bank quarterly inflation report</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-amber-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>国际油价走势</span>
+                <span data-en>International oil price trends</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trend 3 -->
+      <div class="reveal card-hover bg-white dark:bg-zinc-900/60 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center mb-5">
+          <i class="fa-solid fa-mobile-screen-button text-white text-lg"></i>
+        </div>
+        <h3 class="font-semibold text-lg text-zinc-900 dark:text-zinc-100 mb-3">
+          <span data-zh>5.3 数字金融与传统银行的边界重塑</span>
+          <span data-en>5.3 Reshaping Boundaries Between Digital and Traditional Banking</span>
+        </h3>
+        <p class="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed mb-5">
+          <span data-zh>BRB的"FlamengoBank"计划、Entrepay被清算、小额信贷法案签署，反映出巴西金融服务行业正经历数字化转型与监管收紧的双重压力。传统银行网点持续减少，但数字渠道的风控和消费者保护问题日益突出。</span>
+          <span data-en>BRB's "FlamengoBank" plan, Entrepay's liquidation, and the microcredit bill signing reflect Brazil's financial services industry experiencing dual pressures of digital transformation and regulatory tightening. Traditional bank branches continue to decline, but risk control and consumer protection issues in digital channels are increasingly prominent.</span>
+        </p>
+        <div class="border-t border-zinc-200 dark:border-zinc-700 pt-4">
+          <p class="text-xs font-semibold uppercase tracking-wider text-zinc-500 dark:text-zinc-400 mb-2">
+            <span data-zh>关键观察指标</span><span data-en>Key Indicators</span>
+          </p>
+          <ul class="text-xs text-zinc-500 dark:text-zinc-400 space-y-1">
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>央行对支付机构的监管执法频率</span>
+                <span data-en>Central Bank enforcement frequency against payment institutions</span>
+              </span>
+            </li>
+            <li class="flex items-start gap-2">
+              <i class="fa-solid fa-crosshairs text-emerald-500 mt-0.5 flex-shrink-0"></i>
+              <span>
+                <span data-zh>数字银行不良贷款率变化</span>
+                <span data-en>Digital bank non-performing loan rate changes</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ APPENDIX ============ -->
+<section id="appendix" class="py-24 px-4 bg-white dark:bg-ink">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16 reveal">
+      <p class="uppercase tracking-[0.2em] text-xs text-brand font-semibold mb-3">
+        <span data-zh>附录</span><span data-en>Appendix</span>
+      </p>
+      <h2 class="font-display text-3xl sm:text-4xl font-bold text-zinc-900 dark:text-zinc-100">
+        <span data-zh>数据与来源</span><span data-en>Data &amp; Sources</span>
+      </h2>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- Left: Data table -->
+      <div class="reveal">
+        <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+          <span data-zh>数据统计</span><span data-en>Data Statistics</span>
+        </h3>
+        <div class="bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl border border-zinc-200 dark:border-zinc-800 overflow-hidden">
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="border-b border-zinc-200 dark:border-zinc-700">
+                <th class="text-left px-5 py-3 font-semibold text-zinc-900 dark:text-zinc-100">
+                  <span data-zh>栏目</span><span data-en>Channel</span>
+                </th>
+                <th class="text-right px-5 py-3 font-semibold text-zinc-900 dark:text-zinc-100">
+                  <span data-zh>命中数量</span><span data-en>Hits</span>
+                </th>
+                <th class="text-right px-5 py-3 font-semibold text-zinc-900 dark:text-zinc-100">
+                  <span data-zh>占比</span><span data-en>Share</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-zinc-100 dark:divide-zinc-800">
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>经济</span><span data-en>Economy</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">670</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">43.2%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>民生</span><span data-en>Livelihood</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">327</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">21.1%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>政治</span><span data-en>Politics</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">291</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">18.7%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>产业</span><span data-en>Industry</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">95</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">6.1%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>医疗</span><span data-en>Healthcare</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">33</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">2.1%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>外交</span><span data-en>Diplomacy</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">22</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">1.4%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>教育</span><span data-en>Education</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">22</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">1.4%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>人文</span><span data-en>Culture</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">17</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">1.1%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>环保</span><span data-en>Environment</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">16</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">1.0%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>科技</span><span data-en>Technology</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">9</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">0.6%</td>
+              </tr>
+              <tr class="hover:bg-zinc-100/50 dark:hover:bg-zinc-800/30 transition-colors">
+                <td class="px-5 py-3 text-zinc-700 dark:text-zinc-300"><span data-zh>国防</span><span data-en>Defense</span></td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-700 dark:text-zinc-300">2</td>
+                <td class="px-5 py-3 text-right font-mono text-zinc-500 dark:text-zinc-400">0.1%</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr class="border-t-2 border-zinc-300 dark:border-zinc-600 bg-zinc-100/50 dark:bg-zinc-800/30">
+                <td class="px-5 py-3 font-bold text-zinc-900 dark:text-zinc-100">
+                  <span data-zh>合计</span><span data-en>Total</span>
+                </td>
+                <td class="px-5 py-3 text-right font-mono font-bold text-zinc-900 dark:text-zinc-100">1,504</td>
+                <td class="px-5 py-3 text-right font-mono font-bold text-zinc-900 dark:text-zinc-100">100%</td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+        <p class="text-xs text-zinc-500 dark:text-zinc-400 mt-3 italic">
+          <span data-zh>注：上表为原始命中量（去重前），URL去重后为978条独立资讯。</span>
+          <span data-en>Note: The above table shows raw hit counts (before deduplication). After URL deduplication: 978 unique articles.</span>
+        </p>
+      </div>
+
+      <!-- Right: Sources + Metadata -->
+      <div class="reveal">
+        <h3 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+          <span data-zh>主要信源</span><span data-en>Primary Sources</span>
+        </h3>
+        <div class="flex flex-wrap gap-2 mb-8">
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Valor Econômico</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Folha de S.Paulo</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">O GLOBO</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Estadão</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">InfoMoney</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">CNN Brasil</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Poder360</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Brasil 247</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Isto É Dinheiro</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">CartaCapital</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Correio Braziliense</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Money Times</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">O TEMPO</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">Veja</span>
+          <span class="px-3 py-1.5 rounded-full bg-zinc-100 dark:bg-zinc-800 text-xs font-medium text-zinc-700 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">g1</span>
+        </div>
+
+        <!-- Report metadata -->
+        <div class="bg-zinc-50 dark:bg-zinc-900/40 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6">
+          <h4 class="font-semibold text-zinc-900 dark:text-zinc-100 mb-4">
+            <span data-zh>报告信息</span><span data-en>Report Information</span>
+          </h4>
+          <dl class="space-y-3 text-sm">
+            <div class="flex justify-between">
+              <dt class="text-zinc-500 dark:text-zinc-400">
+                <span data-zh>报告周期</span><span data-en>Report Period</span>
+              </dt>
+              <dd class="font-mono text-zinc-700 dark:text-zinc-300">2026-03-23 — 2026-03-29</dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500 dark:text-zinc-400">
+                <span data-zh>数据来源</span><span data-en>Data Source</span>
+              </dt>
+              <dd class="text-zinc-700 dark:text-zinc-300 text-right max-w-[60%]">
+                <span data-zh>Supinfor 区域国别实时监测平台</span>
+                <span data-en>Supinfor Regional Real-time Monitoring Platform</span>
+              </dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500 dark:text-zinc-400">
+                <span data-zh>覆盖范围</span><span data-en>Coverage</span>
+              </dt>
+              <dd class="font-mono text-zinc-700 dark:text-zinc-300">
+                <span data-zh>11个栏目，978条独立资讯</span>
+                <span data-en>11 channels, 978 articles</span>
+              </dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500 dark:text-zinc-400">
+                <span data-zh>筛选条件</span><span data-en>Filter</span>
+              </dt>
+              <dd class="text-zinc-700 dark:text-zinc-300">
+                <span data-zh>金融服务行业</span>
+                <span data-en>Financial Services</span>
+              </dd>
+            </div>
+            <div class="flex justify-between">
+              <dt class="text-zinc-500 dark:text-zinc-400">
+                <span data-zh>数据截止</span><span data-en>Data Cutoff</span>
+              </dt>
+              <dd class="font-mono text-zinc-700 dark:text-zinc-300">2026-03-29 23:59:59 (UTC+8)</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="py-12 px-4 bg-zinc-100 dark:bg-ink-light border-t border-zinc-200 dark:border-zinc-800">
+  <div class="max-w-6xl mx-auto text-center">
+    <div class="flex items-center justify-center gap-3 mb-4">
+      <div class="w-8 h-8 rounded-lg bg-brand flex items-center justify-center">
+        <i class="fa-solid fa-chart-line text-white text-xs"></i>
+      </div>
+      <span class="font-display font-bold text-lg text-zinc-900 dark:text-zinc-100">Supinfor</span>
+    </div>
+    <p class="text-sm text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto mb-4">
+      <span data-zh>本报告基于 Supinfor 区域国别实时监测平台编制，仅供参考，不构成投资建议。</span>
+      <span data-en>This report is compiled based on the Supinfor Regional Real-time Monitoring Platform. For reference only, not investment advice.</span>
+    </p>
+    <p class="text-xs text-zinc-400 dark:text-zinc-500">
+      <span data-zh>出品方：Supinfor Ltd. · © 2026 保留所有权利</span>
+      <span data-en>Published by Supinfor Ltd. · © 2026 All Rights Reserved</span>
+    </p>
+  </div>
+</footer>
+
+<!-- ============ BACK TO TOP ============ -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" class="back-to-top fixed bottom-8 right-8 w-12 h-12 rounded-full bg-brand text-white shadow-lg flex items-center justify-center opacity-0 pointer-events-none z-50 hover:bg-brand-dark transition-colors">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+// ===== THEME =====
+function setTheme(t) {
+  document.documentElement.classList.toggle('dark', t === 'dark');
+  document.body.className = t === 'dark'
+    ? 'bg-[#0c0f1a] text-zinc-200 font-sans antialiased'
+    : 'bg-white text-zinc-800 font-sans antialiased';
+  localStorage.setItem('theme', t);
+  updateChartTheme(t);
+}
+
+function toggleTheme() {
+  const isDark = document.documentElement.classList.contains('dark');
+  setTheme(isDark ? 'light' : 'dark');
+}
+
+// ===== LANGUAGE =====
+function setLang(lang) {
+  document.documentElement.setAttribute('data-lang', lang);
+  document.documentElement.setAttribute('lang', lang);
+  document.getElementById('langToggle').textContent = lang === 'zh' ? 'EN' : '中';
+  localStorage.setItem('lang', lang);
+  updateChartLang(lang);
+}
+
+function toggleLang() {
+  const current = document.documentElement.getAttribute('data-lang');
+  setLang(current === 'zh' ? 'en' : 'zh');
+}
+
+// ===== CHART =====
+let channelChart = null;
+
+const chartLabelsZh = ['经济', '民生', '政治', '产业', '医疗', '外交', '教育', '人文', '环保', '科技', '国防'];
+const chartLabelsEn = ['Economy', 'Livelihood', 'Politics', 'Industry', 'Healthcare', 'Diplomacy', 'Education', 'Culture', 'Environment', 'Technology', 'Defense'];
+const chartData = [670, 327, 291, 95, 33, 22, 22, 17, 16, 9, 2];
+const chartColors = [
+  '#6366f1', '#f59e0b', '#f43f5e', '#10b981', '#0ea5e9',
+  '#8b5cf6', '#ec4899', '#14b8a6', '#22c55e', '#f97316', '#64748b'
+];
+
+function createChart() {
+  const ctx = document.getElementById('channelChart');
+  if (!ctx) return;
+  const isDark = document.documentElement.classList.contains('dark');
+  const lang = document.documentElement.getAttribute('data-lang') || 'zh';
+  const labels = lang === 'zh' ? chartLabelsZh : chartLabelsEn;
+  const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+  const textColor = isDark ? '#a1a1aa' : '#71717a';
+
+  channelChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: labels,
+      datasets: [{
+        data: chartData,
+        backgroundColor: chartColors,
+        borderRadius: 6,
+        borderSkipped: false,
+        barThickness: 22,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: isDark ? '#27272a' : '#fff',
+          titleColor: isDark ? '#f4f4f5' : '#18181b',
+          bodyColor: isDark ? '#a1a1aa' : '#52525b',
+          borderColor: isDark ? '#3f3f46' : '#e4e4e7',
+          borderWidth: 1,
+          cornerRadius: 8,
+          padding: 12,
+          callbacks: {
+            label: function(context) {
+              const total = 1504;
+              const pct = ((context.raw / total) * 100).toFixed(1);
+              return `${context.raw} (${pct}%)`;
+            }
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: gridColor, drawBorder: false },
+          ticks: { color: textColor, font: { family: 'JetBrains Mono', size: 11 } },
+        },
+        y: {
+          grid: { display: false },
+          ticks: { color: textColor, font: { family: 'Inter, Noto Sans SC', size: 12 } },
+        }
+      }
+    }
+  });
+}
+
+function updateChartTheme(theme) {
+  if (!channelChart) return;
+  const isDark = theme === 'dark';
+  const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.06)';
+  const textColor = isDark ? '#a1a1aa' : '#71717a';
+  channelChart.options.scales.x.grid.color = gridColor;
+  channelChart.options.scales.x.ticks.color = textColor;
+  channelChart.options.scales.y.ticks.color = textColor;
+  channelChart.options.plugins.tooltip.backgroundColor = isDark ? '#27272a' : '#fff';
+  channelChart.options.plugins.tooltip.titleColor = isDark ? '#f4f4f5' : '#18181b';
+  channelChart.options.plugins.tooltip.bodyColor = isDark ? '#a1a1aa' : '#52525b';
+  channelChart.options.plugins.tooltip.borderColor = isDark ? '#3f3f46' : '#e4e4e7';
+  channelChart.update();
+}
+
+function updateChartLang(lang) {
+  if (!channelChart) return;
+  channelChart.data.labels = lang === 'zh' ? chartLabelsZh : chartLabelsEn;
+  channelChart.update();
+}
+
+// ===== COUNTER ANIMATION =====
+function animateCounters() {
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const target = parseInt(counter.getAttribute('data-target'));
+    const duration = 2000;
+    const start = performance.now();
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      counter.textContent = Math.round(eased * target);
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// ===== SCROLL REVEAL =====
+function initScrollReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+}
+
+// ===== COUNTER OBSERVER =====
+function initCounterObserver() {
+  const heroStats = document.querySelector('#hero');
+  if (!heroStats) return;
+  let counted = false;
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counted) {
+        counted = true;
+        animateCounters();
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+  observer.observe(heroStats);
+}
+
+// ===== BACK TO TOP =====
+function initBackToTop() {
+  const btn = document.getElementById('backToTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.classList.remove('opacity-0', 'pointer-events-none');
+      btn.classList.add('opacity-100', 'pointer-events-auto');
+    } else {
+      btn.classList.add('opacity-0', 'pointer-events-none');
+      btn.classList.remove('opacity-100', 'pointer-events-auto');
+    }
+  });
+}
+
+// ===== INIT =====
+document.addEventListener('DOMContentLoaded', () => {
+  // Restore theme
+  const savedTheme = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  setTheme(savedTheme);
+
+  // Restore language
+  const savedLang = localStorage.getItem('lang') || 'zh';
+  setLang(savedLang);
+
+  // Init chart
+  createChart();
+
+  // Init interactions
+  initScrollReveal();
+  initCounterObserver();
+  initBackToTop();
+});
+</script>
+</body>
+</html>

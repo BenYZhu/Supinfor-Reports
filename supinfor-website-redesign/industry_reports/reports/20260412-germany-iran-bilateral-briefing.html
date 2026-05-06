@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>德国与伊朗双边动态速览 | Germany-Iran Bilateral Brief</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #f59e0b;
+            --accent-light: #fbbf24;
+            --accent-dim: rgba(245,158,11,0.15);
+            --red: #ef4444;
+            --red-dim: rgba(239,68,68,0.15);
+            --yellow: #eab308;
+            --yellow-dim: rgba(234,179,8,0.15);
+            --green: #22c55e;
+            --green-dim: rgba(34,197,94,0.15);
+            --blue: #3b82f6;
+            --blue-dim: rgba(59,130,246,0.15);
+            --border: #334155;
+            --shadow: 0 4px 24px rgba(0,0,0,0.3);
+        }
+        [data-theme="light"] {
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --text-muted: #94a3b8;
+            --accent: #d97706;
+            --accent-light: #f59e0b;
+            --accent-dim: rgba(217,119,6,0.08);
+            --red-dim: rgba(239,68,68,0.08);
+            --yellow-dim: rgba(234,179,8,0.08);
+            --green-dim: rgba(34,197,94,0.08);
+            --blue-dim: rgba(59,130,246,0.08);
+            --border: #e2e8f0;
+            --shadow: 0 4px 24px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Serif SC', serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.8;
+            transition: background 0.3s, color 0.3s;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        /* Navigation */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(15,23,42,0.9); backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border); padding: 12px 24px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        [data-theme="light"] .nav { background: rgba(248,250,252,0.9); }
+        .nav-title { font-size: 14px; font-weight: 700; color: var(--accent); letter-spacing: 1px; }
+        .nav-controls { display: flex; gap: 12px; }
+        .nav-btn {
+            background: var(--bg-card); border: 1px solid var(--border);
+            color: var(--text-secondary); padding: 6px 12px; border-radius: 6px;
+            cursor: pointer; font-size: 13px; transition: all 0.2s;
+        }
+        .nav-btn:hover { color: var(--accent); border-color: var(--accent); }
+        /* Hero */
+        .hero {
+            margin-top: 60px; padding: 80px 0 60px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            border-bottom: 1px solid var(--border); position: relative; overflow: hidden;
+        }
+        .hero::before {
+            content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(245,158,11,0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-badge {
+            display: inline-block; background: var(--accent-dim); color: var(--accent);
+            padding: 4px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+            letter-spacing: 1px; margin-bottom: 20px; border: 1px solid rgba(245,158,11,0.3);
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', 'Noto Serif SC', serif;
+            font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 900;
+            line-height: 1.2; margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            font-size: 16px; color: var(--text-secondary); max-width: 700px; margin-bottom: 40px;
+        }
+        .stat-grid {
+            display: grid; grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        .stat-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 28px 20px 24px; text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative; overflow: hidden;
+        }
+        .stat-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            opacity: 0; transition: opacity 0.3s;
+        }
+        .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+        .stat-card:hover::before { opacity: 1; }
+        .stat-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 40px; height: 40px; border-radius: 10px;
+            margin-bottom: 12px; font-size: 16px;
+        }
+        .stat-icon.amber { background: var(--accent-dim); color: var(--accent); }
+        .stat-icon.blue { background: var(--blue-dim); color: var(--blue); }
+        .stat-icon.green { background: var(--green-dim); color: var(--green); }
+        .stat-icon.red { background: var(--red-dim); color: var(--red); }
+        .stat-number {
+            font-size: 36px; font-weight: 900; color: var(--accent); display: block;
+            line-height: 1.1;
+        }
+        .stat-label { font-size: 13px; color: var(--text-muted); margin-top: 8px; letter-spacing: 0.5px; }
+        /* Sections */
+        .section { padding: 60px 0; border-bottom: 1px solid var(--border); }
+        .section-header {
+            display: flex; align-items: center; gap: 12px; margin-bottom: 32px;
+        }
+        .section-num {
+            background: var(--accent); color: var(--bg-primary); width: 32px; height: 32px;
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 14px; font-weight: 700; flex-shrink: 0;
+        }
+        .section-title { font-size: 22px; font-weight: 700; }
+        /* Table */
+        .data-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+        .data-table th {
+            background: var(--accent-dim); color: var(--accent); padding: 12px 16px;
+            text-align: left; font-weight: 600; border-bottom: 2px solid var(--accent);
+        }
+        .data-table td {
+            padding: 10px 16px; border-bottom: 1px solid var(--border);
+            color: var(--text-secondary);
+        }
+        .data-table tr:hover td { background: var(--bg-card-hover); }
+        /* Bar Chart */
+        .bar-chart { margin: 24px 0; }
+        .bar-item { display: flex; align-items: center; margin-bottom: 10px; gap: 12px; }
+        .bar-label { width: 60px; font-size: 13px; color: var(--text-secondary); text-align: right; flex-shrink: 0; }
+        .bar-track { flex: 1; height: 28px; background: var(--bg-card); border-radius: 6px; overflow: hidden; position: relative; }
+        .bar-fill {
+            height: 100%; border-radius: 6px; display: flex; align-items: center;
+            padding-left: 10px; font-size: 12px; font-weight: 600; color: var(--bg-primary);
+            transition: width 1s ease;
+        }
+        .bar-value { font-size: 13px; color: var(--text-muted); width: 40px; text-align: right; flex-shrink: 0; }
+        /* Event Cards */
+        .event-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 28px; margin-bottom: 24px;
+            transition: box-shadow 0.2s;
+        }
+        .event-card:hover { box-shadow: var(--shadow); }
+        .event-level {
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 11px; font-weight: 700; margin-bottom: 12px;
+        }
+        .level-red { background: var(--red-dim); color: var(--red); }
+        .level-yellow { background: var(--yellow-dim); color: var(--yellow); }
+        .level-green { background: var(--green-dim); color: var(--green); }
+        .event-title { font-size: 18px; font-weight: 700; margin-bottom: 12px; line-height: 1.4; }
+        .event-summary { color: var(--text-secondary); margin-bottom: 16px; font-size: 15px; }
+        .event-details { margin-bottom: 16px; }
+        .event-details li {
+            color: var(--text-secondary); font-size: 14px; margin-bottom: 6px;
+            padding-left: 16px; position: relative;
+        }
+        .event-details li::before {
+            content: ''; position: absolute; left: 0; top: 10px;
+            width: 6px; height: 6px; background: var(--accent); border-radius: 50%;
+        }
+        .insight-box {
+            background: var(--accent-dim); border-left: 3px solid var(--accent);
+            padding: 16px 20px; border-radius: 0 8px 8px 0; margin-top: 16px;
+        }
+        .insight-box .insight-label {
+            font-size: 12px; font-weight: 700; color: var(--accent);
+            margin-bottom: 6px; letter-spacing: 1px;
+        }
+        .insight-box p { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+        /* Trend Cards */
+        .trend-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: 12px; padding: 28px; margin-bottom: 24px;
+        }
+        .trend-title { font-size: 17px; font-weight: 700; margin-bottom: 12px; }
+        .trend-body { color: var(--text-secondary); font-size: 14px; line-height: 1.8; margin-bottom: 16px; }
+        .trend-judgment {
+            background: var(--blue-dim); border-left: 3px solid var(--blue);
+            padding: 12px 16px; border-radius: 0 8px 8px 0;
+        }
+        .trend-judgment p { font-size: 14px; color: var(--text-secondary); }
+        /* Risk Cards */
+        .risk-card {
+            background: var(--bg-card); border: 1px solid var(--border);
+            border-left: 4px solid var(--red); border-radius: 12px;
+            padding: 24px; margin-bottom: 20px;
+        }
+        .risk-title { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: var(--red); }
+        .risk-body { color: var(--text-secondary); font-size: 14px; line-height: 1.7; }
+        /* Highlight Table */
+        .highlight-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14px; }
+        .highlight-table th {
+            background: var(--green-dim); color: var(--green); padding: 12px 16px;
+            text-align: left; font-weight: 600;
+        }
+        .highlight-table td { padding: 12px 16px; border-bottom: 1px solid var(--border); color: var(--text-secondary); }
+        /* Watch List */
+        .watch-item {
+            display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border);
+        }
+        .watch-num {
+            background: var(--accent-dim); color: var(--accent); width: 28px; height: 28px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 13px; font-weight: 700; flex-shrink: 0;
+        }
+        .watch-content { flex: 1; }
+        .watch-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+        .watch-desc { font-size: 13px; color: var(--text-secondary); }
+        /* Footer */
+        .footer {
+            padding: 40px 0; text-align: center; color: var(--text-muted); font-size: 13px;
+        }
+        .footer-author { margin-bottom: 12px; color: var(--text-secondary); font-weight: 600; }
+        /* TOC Sidebar */
+        .toc-toggle {
+            position: fixed; left: 16px; top: 80px; z-index: 999;
+            background: var(--bg-card); border: 1px solid var(--border);
+            color: var(--accent); width: 36px; height: 36px; border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            cursor: pointer; font-size: 14px;
+        }
+        .toc-panel {
+            position: fixed; left: -280px; top: 60px; bottom: 0; width: 260px;
+            background: var(--bg-secondary); border-right: 1px solid var(--border);
+            padding: 24px 16px; overflow-y: auto; z-index: 998;
+            transition: left 0.3s ease;
+        }
+        .toc-panel.open { left: 0; }
+        .toc-panel a {
+            display: block; padding: 8px 12px; color: var(--text-secondary);
+            text-decoration: none; font-size: 13px; border-radius: 6px;
+            margin-bottom: 4px; transition: all 0.2s;
+        }
+        .toc-panel a:hover { background: var(--accent-dim); color: var(--accent); }
+        /* Back to top */
+        .back-top {
+            position: fixed; bottom: 24px; right: 24px; z-index: 999;
+            background: var(--accent); color: var(--bg-primary); width: 40px; height: 40px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            cursor: pointer; opacity: 0; transition: opacity 0.3s; font-size: 16px;
+            box-shadow: 0 4px 12px rgba(245,158,11,0.3);
+        }
+        .back-top.visible { opacity: 1; }
+        /* Animations */
+        .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stat-grid { grid-template-columns: repeat(2, 1fr); }
+            .hero { padding: 60px 0 40px; }
+            .section { padding: 40px 0; }
+            .event-card, .trend-card, .risk-card { padding: 20px; }
+            .toc-toggle { display: none; }
+            .data-table { font-size: 12px; }
+            .data-table th, .data-table td { padding: 8px; }
+        }
+        /* ===== LANGUAGE TOGGLE ===== */
+        .lang-toggle { display:flex;align-items:center;gap:0;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.12);border-radius:8px;overflow:hidden;font-size:0.82rem; }
+        .lang-toggle button { background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:0.82rem;font-weight:500;transition:all 0.2s; }
+        .lang-toggle button.active { background:var(--accent);color:#0A1628;font-weight:700; }
+        .lang-toggle button:hover:not(.active) { background:rgba(245,158,11,0.2); }
+        [data-lang="zh"] .lang-en { display:none !important; }
+        [data-lang="en"] .lang-zh { display:none !important; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-title"><i class="fas fa-globe-asia"></i> SUPINFOR INTELLIGENCE</div>
+        <div class="nav-controls">
+            <div class="lang-toggle">
+                <button class="active" onclick="setLang('zh')">中</button>
+                <button onclick="setLang('en')">EN</button>
+            </div>
+            <button class="nav-btn" id="themeToggle"><i class="fas fa-sun"></i></button>
+        </div>
+    </nav>
+
+    <!-- TOC -->
+    <button class="toc-toggle" id="tocToggle"><i class="fas fa-list"></i></button>
+    <div class="toc-panel" id="tocPanel">
+        <a href="#overview" class="lang-zh">一、本期总览</a>
+        <a href="#overview" class="lang-en">1. Overview</a>
+        <a href="#events" class="lang-zh">二、本期重要事件</a>
+        <a href="#events" class="lang-en">2. Key Events</a>
+        <a href="#trends" class="lang-zh">三、趋势观察</a>
+        <a href="#trends" class="lang-en">3. Trend Watch</a>
+        <a href="#risks" class="lang-zh">四、风险警示</a>
+        <a href="#risks" class="lang-en">4. Risk Alerts</a>
+        <a href="#highlights" class="lang-zh">五、合作亮点</a>
+        <a href="#highlights" class="lang-en">5. Cooperation Highlights</a>
+        <a href="#watchlist" class="lang-zh">六、下周关注点</a>
+        <a href="#watchlist" class="lang-en">6. Next Week Watch</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">BILATERAL INTELLIGENCE BRIEF</span>
+            <h1><span class="lang-zh">德国与伊朗双边动态速览</span><span class="lang-en">Germany–Iran Bilateral Brief</span></h1>
+            <p class="hero-subtitle"><span class="lang-zh">报告周期：2026-03-30 — 2026-04-12 ｜ 数据来源：Supinfor 区域国别实时监测平台（德国全栏目 × 伊朗关联标签）</span><span class="lang-en">Period: 2026-03-30 — 2026-04-12 ｜ Source: Supinfor Country Intelligence Platform (Germany full coverage × Iran-related tags)</span></p>
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-icon amber"><i class="fas fa-filter"></i></div>
+                    <span class="stat-number">342</span>
+                    <span class="stat-label"><span class="lang-zh">去重后数据量</span><span class="lang-en">Deduplicated Items</span></span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon blue"><i class="fas fa-calendar-week"></i></div>
+                    <span class="stat-number">14<small style="font-size:16px"><span class="lang-zh">天</span><span class="lang-en">d</span></small></span>
+                    <span class="stat-label"><span class="lang-zh">报告周期</span><span class="lang-en">Reporting Period</span></span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon green"><i class="fas fa-layer-group"></i></div>
+                    <span class="stat-number">8</span>
+                    <span class="stat-label"><span class="lang-zh">覆盖栏目</span><span class="lang-en">Categories Covered</span></span>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon red"><i class="fas fa-database"></i></div>
+                    <span class="stat-number">683</span>
+                    <span class="stat-label"><span class="lang-zh">原始数据量</span><span class="lang-en">Raw Data Volume</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: Overview -->
+    <section class="section" id="overview">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">一</span><span class="lang-en">1</span></div>
+                <h2 class="section-title"><span class="lang-zh">本期总览：德国与伊朗关联度评估</span><span class="lang-en">Overview: Germany–Iran Relevance Assessment</span></h2>
+            </div>
+            <div class="reveal">
+                <p class="lang-zh" style="color:var(--text-secondary);font-size:15px;margin-bottom:24px;line-height:1.9;">本报告周期恰逢美以对伊朗军事行动爆发后的第一个月（2月28日开战），伊朗冲突已全面渗透德国政治议程与经济运行。霍尔木兹海峡被实际封锁导致全球约五分之一油气运输受阻，德国燃油价格创历史新高，通胀率跃升至2.7%，经济增长预期被腰斩。4月8日美伊达成两周停火协议后，油价短暂回落，但4月12日伊斯兰堡和谈失败、美国宣布海军封锁海峡，局势再度紧张。德国在此期间经历了从被动承受经济冲击到主动介入外交斡旋的转变。</p>
+                <p class="lang-en" style="color:var(--text-secondary);font-size:15px;margin-bottom:24px;line-height:1.9;">This reporting period coincides with the first month after the US-Israeli military operation against Iran (launched February 28). The Iran conflict has fully permeated Germany's political agenda and economic performance. The de facto blockade of the Strait of Hormuz disrupted roughly one-fifth of global oil and gas shipments, pushing German fuel prices to historic highs, inflation to 2.7%, and halving growth forecasts. After a two-week ceasefire was reached on April 8, oil prices briefly retreated, but the collapse of Islamabad peace talks on April 12 and the US announcement of a naval blockade reignited tensions. During this period, Germany shifted from passively absorbing economic shocks to actively engaging in diplomatic mediation.</p>
+            </div>
+
+            <!-- Bar Chart: Channel Distribution -->
+            <div class="reveal" style="margin-bottom:32px;">
+                <h3 style="font-size:15px;font-weight:600;margin-bottom:16px;color:var(--text-secondary);"><i class="fas fa-chart-bar" style="color:var(--accent);margin-right:8px;"></i><span class="lang-zh">栏目分布（去重后 342 条）</span><span class="lang-en">Category Distribution (342 deduplicated items)</span></h3>
+                <div class="bar-chart">
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">经济</span><span class="lang-en">Econ</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:58.8%;background:var(--accent);">58.8%</div></div>
+                        <span class="bar-value">201</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">政治</span><span class="lang-en">Politics</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:28.9%;background:var(--blue);">28.9%</div></div>
+                        <span class="bar-value">99</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">外交</span><span class="lang-en">Diplo</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:4.4%;background:var(--green);"></div></div>
+                        <span class="bar-value">15</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">民生</span><span class="lang-en">Society</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:3.8%;background:#a78bfa;"></div></div>
+                        <span class="bar-value">13</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">产业</span><span class="lang-en">Industry</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:2%;background:#f472b6;"></div></div>
+                        <span class="bar-value">7</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">国防</span><span class="lang-en">Defense</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0.6%;background:#6ee7b7;"></div></div>
+                        <span class="bar-value">2</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">环保</span><span class="lang-en">Environ</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0.6%;background:#67e8f9;"></div></div>
+                        <span class="bar-value">2</span>
+                    </div>
+                    <div class="bar-item">
+                        <span class="bar-label"><span class="lang-zh">医疗</span><span class="lang-en">Health</span></span>
+                        <div class="bar-track"><div class="bar-fill" style="width:0.6%;background:#fda4af;"></div></div>
+                        <span class="bar-value">2</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detail Table -->
+            <div class="reveal" style="overflow-x:auto;">
+                <table class="data-table">
+                    <thead>
+                        <tr class="lang-zh"><th>栏目</th><th>第一批（3/30-4/5）</th><th>第二批（4/6-4/12）</th><th>合计</th><th>占比</th><th>关联特征</th></tr>
+                        <tr class="lang-en"><th>Category</th><th>Batch 1 (3/30-4/5)</th><th>Batch 2 (4/6-4/12)</th><th>Total</th><th>Share</th><th>Key Themes</th></tr>
+                    </thead>
+                    <tbody class="lang-zh">
+                        <tr><td>政治</td><td>36</td><td>63</td><td>99</td><td>28.9%</td><td>国内政策辩论、和平游行、国际法争议、政府外交表态</td></tr>
+                        <tr><td>经济</td><td>126</td><td>75</td><td>201</td><td>58.8%</td><td>燃油价格、通胀、经济预测、行业冲击、纾困政策</td></tr>
+                        <tr><td>外交</td><td>3</td><td>12</td><td>15</td><td>4.4%</td><td>默茨重启对伊对话、霍尔木兹海峡安保、美德关系</td></tr>
+                        <tr><td>产业</td><td>2</td><td>5</td><td>7</td><td>2.0%</td><td>LNG进口、航空旅游、邮轮航线调整</td></tr>
+                        <tr><td>国防</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>自主无人机采购、伊朗恐怖威胁评估</td></tr>
+                        <tr><td>民生</td><td>5</td><td>8</td><td>13</td><td>3.8%</td><td>巧克力涨价、加油站体验、亲伊朗示威</td></tr>
+                        <tr><td>环保</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>民众能源转型态度</td></tr>
+                        <tr><td>医疗</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>医保改革压力、氦气供应风险</td></tr>
+                    </tbody>
+                    <tbody class="lang-en">
+                        <tr><td>Politics</td><td>36</td><td>63</td><td>99</td><td>28.9%</td><td>Domestic policy debate, peace marches, international law disputes, government diplomatic statements</td></tr>
+                        <tr><td>Economy</td><td>126</td><td>75</td><td>201</td><td>58.8%</td><td>Fuel prices, inflation, economic forecasts, industry impact, relief policies</td></tr>
+                        <tr><td>Diplomacy</td><td>3</td><td>12</td><td>15</td><td>4.4%</td><td>Merz reopens Iran dialogue, Hormuz Strait security, US-Germany relations</td></tr>
+                        <tr><td>Industry</td><td>2</td><td>5</td><td>7</td><td>2.0%</td><td>LNG imports, aviation &amp; tourism, cruise route adjustments</td></tr>
+                        <tr><td>Defense</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>Autonomous drone procurement, Iran terror threat assessment</td></tr>
+                        <tr><td>Society</td><td>5</td><td>8</td><td>13</td><td>3.8%</td><td>Chocolate price hikes, gas station experience, pro-Iran protests</td></tr>
+                        <tr><td>Environment</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>Public attitudes toward energy transition</td></tr>
+                        <tr><td>Healthcare</td><td>1</td><td>1</td><td>2</td><td>0.6%</td><td>Health insurance reform pressure, helium supply risk</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="insight-box reveal">
+                <div class="insight-label"><span class="lang-zh">核心判断</span><span class="lang-en">Core Assessment</span></div>
+                <p class="lang-zh">德国与伊朗的关联在本期呈现"经济主导、政治升温、外交破冰"的格局。经济栏目占比近六成，反映伊朗冲突对德国的冲击主要通过能源价格链条传导；政治栏目占比近三成且第二周大幅增长（36→63），标志着伊朗议题从经济层面上升为核心政治议题；外交栏目从3条跃升至12条，对应默茨政府从旁观转向主动介入的外交转向。</p>
+                <p class="lang-en">Germany–Iran linkages in this period display a pattern of "economy-led, politics heating up, diplomacy breaking ice." The economy category accounts for nearly 60%, reflecting that the Iran conflict's impact on Germany is transmitted primarily through the energy price chain. The politics category accounts for nearly 30% and surged in the second week (36→63), signaling that the Iran issue has escalated from an economic matter to a core political agenda item. Diplomacy items jumped from 3 to 12, corresponding to the Merz government's shift from bystander to active mediator.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Events -->
+    <section class="section" id="events">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">二</span><span class="lang-en">2</span></div>
+                <h2 class="section-title"><span class="lang-zh">本期重要事件</span><span class="lang-en">Key Events</span></h2>
+            </div>
+
+            <!-- Event 1 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-red">🔴 高影响</span>
+                <h3 class="event-title">事件一：德国经济增长预期被腰斩，伊朗冲突成最大拖累</h3>
+                <p class="event-summary">4月1日，德国五大经济研究所联合发布春季预测，将2026年GDP增速从半年前的1.3%大幅下调至0.6%，2027年从1.4%降至0.9%。通胀率预计升至2.8%-2.9%。</p>
+                <ul class="event-details">
+                    <li>霍尔木兹海峡封锁导致全球每日石油供应减少约1000万桶</li>
+                    <li>德国3月通胀率跃升至2.7%，能源价格同比涨7.2%，其中取暖油涨44.4%、燃料涨20%</li>
+                    <li>Ifo调查显示近90%德国工业企业认为伊朗冲突将影响业务，78%提及能源涨价</li>
+                    <li>失业率预计升至6.4%，就业市场复苏滞后</li>
+                    <li>经济学家Isabella Weber警告通胀可能升至4%-5%</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>这是继2022年俄乌冲突后，德国经济第二次遭受地缘政治引发的能源价格冲击。不同的是，此次冲击叠加了德国经济本身的结构性疲软（工业长期低迷、人口老龄化），恢复弹性更弱。研究机构明确反对2022年式的普惠补贴，主张定向转移支付，这意味着政策工具箱已收窄。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-red">🔴 High Impact</span>
+                <h3 class="event-title">Event 1: Germany's Growth Forecast Halved — Iran Conflict the Biggest Drag</h3>
+                <p class="event-summary">On April 1, Germany's five leading economic institutes jointly released their spring forecast, slashing the 2026 GDP growth rate from 1.3% (six months ago) to 0.6%, and the 2027 rate from 1.4% to 0.9%. Inflation is projected to rise to 2.8%–2.9%.</p>
+                <ul class="event-details">
+                    <li>The Strait of Hormuz blockade reduced global daily oil supply by approximately 10 million barrels</li>
+                    <li>Germany's March inflation jumped to 2.7%; energy prices rose 7.2% YoY, with heating oil up 44.4% and fuel up 20%</li>
+                    <li>An Ifo survey showed nearly 90% of German industrial firms expect the Iran conflict to affect their business; 78% cited energy price hikes</li>
+                    <li>Unemployment is projected to rise to 6.4%, with labor market recovery lagging</li>
+                    <li>Economist Isabella Weber warned inflation could reach 4%–5%</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>This is the second time since the 2022 Russia-Ukraine conflict that Germany's economy has been hit by a geopolitically driven energy price shock. The difference is that this shock compounds Germany's existing structural weaknesses (prolonged industrial malaise, aging population), leaving less resilience for recovery. Research institutes explicitly oppose 2022-style universal subsidies, advocating targeted transfers instead — signaling a narrower policy toolkit.</p>
+                </div>
+            </div>
+
+            <!-- Event 2 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-red">🔴 高影响</span>
+                <h3 class="event-title">事件二：默茨政府外交转向——重启对伊直接对话</h3>
+                <p class="event-summary">4月9日，德国总理默茨在柏林召开临时新闻发布会，宣布联邦政府将恢复与伊朗的直接外交对话，配合美伊在伊斯兰堡的和平谈判，并承诺在达成和平协议后参与霍尔木兹海峡安保。</p>
+                <ul class="event-details">
+                    <li>默茨批评特朗普对伊朗的威胁"毫无分寸"，但同时为其辩护称这是"战略修辞"</li>
+                    <li>德方参与海峡安保需满足三个前提：联合国安理会授权、可行方案、联邦议院决议</li>
+                    <li>默茨强烈批评以色列在黎巴嫩的军事行动，称其可能"破坏整个和平进程"</li>
+                    <li>德国已与法国、意大利等多国发布联合声明，讨论欧洲联合护航方案</li>
+                    <li>德国海军具备扫雷、防空能力，可能派遣332型扫雷艇或黑森号护卫舰</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>这标志着默茨政府从"这不是我们的战争"立场转向主动外交介入。驱动力是双重的：一方面能源危机的国内政治压力迫使政府展示行动力；另一方面，特朗普对北约盟友的不满（批评德国等国未支持美以行动）迫使德国在跨大西洋关系中寻找平衡点。默茨试图在不分裂北约的前提下，走出一条独立于美国的欧洲外交路线。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-red">🔴 High Impact</span>
+                <h3 class="event-title">Event 2: Merz Government's Diplomatic Pivot — Reopening Direct Dialogue with Iran</h3>
+                <p class="event-summary">On April 9, Chancellor Merz held an impromptu press conference in Berlin, announcing that the federal government would resume direct diplomatic dialogue with Iran, support the US-Iran peace talks in Islamabad, and commit to participating in Strait of Hormuz security operations once a peace agreement is reached.</p>
+                <ul class="event-details">
+                    <li>Merz criticized Trump's threats against Iran as "utterly disproportionate," while simultaneously defending them as "strategic rhetoric"</li>
+                    <li>German participation in strait security requires three preconditions: UN Security Council mandate, a viable plan, and Bundestag approval</li>
+                    <li>Merz sharply criticized Israel's military operations in Lebanon, saying they could "undermine the entire peace process"</li>
+                    <li>Germany has issued joint statements with France, Italy, and others, discussing a European joint escort plan</li>
+                    <li>The German Navy has mine-clearing and air-defense capabilities; Type 332 minesweepers or the frigate Hessen may be deployed</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>This marks the Merz government's shift from "this is not our war" to active diplomatic engagement. The drivers are twofold: domestic political pressure from the energy crisis forces the government to demonstrate action, while Trump's dissatisfaction with NATO allies (criticizing Germany and others for not supporting US-Israeli operations) compels Germany to find a balance in transatlantic relations. Merz is attempting to chart a European diplomatic course independent of the US without fracturing NATO.</p>
+                </div>
+            </div>
+
+            <!-- Event 3 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-red">🔴 高影响</span>
+                <h3 class="event-title">事件三：燃油价格创历史新高，"12点规则"效果不彰</h3>
+                <p class="event-summary">4月1日起德国实施"奥地利模式"燃油定价新规（每日仅可在12点上调油价），但实施首周柴油价格反而创下历史新高（2.44欧元/升），E10汽油也逼近历史峰值。</p>
+                <ul class="event-details">
+                    <li>柴油日均价4月2日达2.327欧元/升，超2022年3月纪录；复活节期间进一步攀升至2.44欧元/升</li>
+                    <li>ADAC批评石油企业借新规在中午窗口大幅涨价，当日涨幅达7-8欧分</li>
+                    <li>联邦卡特尔局获更多执法权限，要求企业证明涨价合理性</li>
+                    <li>布伦特原油期货一度涨至111美元/桶</li>
+                    <li>4月8日停火后油价短暂回落，柴油单日降7.3欧分，但仍远高于战前水平</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>12点规则的失效暴露了价格管制在供给侧冲击面前的局限性——当国际原油价格持续走高时，限制调价频次无法改变价格水平。石油企业的行为模式（集中在12点大幅涨价）表明市场存在寡头定价特征，ADAC测算石油公司3月单日额外获利达2500万欧元。这为后续超额利润税的政治讨论提供了事实基础。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-red">🔴 High Impact</span>
+                <h3 class="event-title">Event 3: Fuel Prices Hit All-Time Highs — "12 O'Clock Rule" Falls Short</h3>
+                <p class="event-summary">Starting April 1, Germany implemented the "Austrian model" fuel pricing rule (prices may only be raised once daily at noon), yet diesel prices hit a record high (€2.44/liter) in the first week, and E10 petrol neared its all-time peak.</p>
+                <ul class="event-details">
+                    <li>Average daily diesel price reached €2.327/liter on April 2, surpassing the March 2022 record; it climbed further to €2.44/liter over Easter</li>
+                    <li>ADAC criticized oil companies for exploiting the noon window with sharp hikes of 7–8 cents per day</li>
+                    <li>The Federal Cartel Office gained expanded enforcement powers, requiring companies to justify price increases</li>
+                    <li>Brent crude futures briefly surged to $111/barrel</li>
+                    <li>After the April 8 ceasefire, oil prices briefly retreated — diesel fell 7.3 cents in one day — but remained far above pre-war levels</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>The failure of the 12 o'clock rule exposes the limits of price regulation in the face of supply-side shocks — restricting the frequency of price adjustments cannot change the price level when international crude keeps rising. The behavior pattern of oil companies (concentrating large hikes at noon) indicates oligopolistic pricing; ADAC estimates oil companies earned an extra €25 million per day in March. This provides a factual basis for the subsequent political debate on windfall profit taxes.</p>
+                </div>
+            </div>
+
+            <!-- Event 4 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-yellow">🟡 中影响</span>
+                <h3 class="event-title">事件四：联合政府内部就纾困方案激烈博弈</h3>
+                <p class="event-summary">黑红联合政府（CDU/CSU + SPD）围绕如何缓解能源价格冲击展开持续博弈，双方在超额利润税、燃油价格上限、通勤补贴等核心议题上分歧严重。</p>
+                <ul class="event-details">
+                    <li>CDU/经济部长Reiche：支持提高通勤税抵扣额，反对超额利润税和价格上限，称其"昂贵、无效且违宪"</li>
+                    <li>SPD/副总理Klingbeil：主张燃油价格灵活上限 + 超额利润税筹资 + 出行补贴（Mobilitätsprämie）</li>
+                    <li>4月10日Klingbeil召开能源价格危机峰会，邀请工商界和工会代表</li>
+                    <li>4月11日联合政府宣布临时下调汽柴油能源税（每升约降17欧分，为期两个月），并计划发放1000欧元免税危机奖金</li>
+                    <li>资金来源拟通过提高烟草税和对石油企业征收超额利润税填补</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>纾困方案的博弈折射出联合政府的深层矛盾：CDU倾向市场化手段（让价格信号发挥作用），SPD倾向直接干预（价格上限+再分配）。最终方案是妥协产物——临时降税满足了SPD的即时减负诉求，超额利润税则是CDU的重大让步。这一博弈模式可能在冲突持续期间反复上演。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-yellow">🟡 Medium Impact</span>
+                <h3 class="event-title">Event 4: Coalition Government Locked in Fierce Debate over Relief Package</h3>
+                <p class="event-summary">The CDU/CSU–SPD grand coalition engaged in sustained negotiations over how to mitigate the energy price shock, with deep disagreements on windfall profit taxes, fuel price caps, and commuter subsidies.</p>
+                <ul class="event-details">
+                    <li>CDU / Economy Minister Reiche: supports raising the commuter tax deduction, opposes windfall profit taxes and price caps, calling them "expensive, ineffective, and unconstitutional"</li>
+                    <li>SPD / Vice-Chancellor Klingbeil: advocates a flexible fuel price cap + windfall profit tax funding + a mobility premium (Mobilitätsprämie)</li>
+                    <li>On April 10, Klingbeil convened an energy price crisis summit with business and union representatives</li>
+                    <li>On April 11, the coalition announced a temporary reduction in fuel energy taxes (~17 cents/liter for two months) and plans for a €1,000 tax-free crisis bonus</li>
+                    <li>Funding is to come from higher tobacco taxes and a windfall profit tax on oil companies</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>The relief package battle reflects the coalition's deep-seated tensions: CDU favors market-based mechanisms (letting price signals work), while SPD favors direct intervention (price caps + redistribution). The final package is a compromise — the temporary tax cut meets SPD's demand for immediate relief, while the windfall profit tax represents a major CDU concession. This pattern of negotiation is likely to recur as long as the conflict persists.</p>
+                </div>
+            </div>
+
+            <!-- Event 5 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-yellow">🟡 中影响</span>
+                <h3 class="event-title">事件五：德国化工行业供应链告急</h3>
+                <p class="event-summary">德国化学工业协会（VCI）发出供应短缺预警，环己烷、乙二醇、三聚氰胺、甲醇等关键化工原料因霍尔木兹海峡封锁面临断供风险。</p>
+                <ul class="event-details">
+                    <li>化工行业Ifo景气指数3月降至-25.0点，就业预期创历史新低</li>
+                    <li>上述原料用于尼龙、胶粘剂生产及作为溶剂，冲击德国制造业与消费</li>
+                    <li>亚洲供应商启动不可抗力条款停供，欧洲本土产能不足以填补缺口</li>
+                    <li>莱纳化工园险些关停，最终由新公司接手保住436个岗位</li>
+                    <li>德法电力价差创纪录——5月德国电价约为法国四倍（法国依赖核电，德国依赖化石燃料）</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>化工行业是德国制造业的上游基础，其困境将通过产业链向汽车、电子、建筑等下游传导。德法电力价差的扩大尤其值得关注——这不仅是短期冲击，更暴露了德国2023年关闭核电站后的结构性能源脆弱性。如果冲突持续，德国工业的竞争力劣势将进一步固化。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-yellow">🟡 Medium Impact</span>
+                <h3 class="event-title">Event 5: Germany's Chemical Industry Faces Supply Chain Emergency</h3>
+                <p class="event-summary">The German Chemical Industry Association (VCI) issued a supply shortage warning: key feedstocks including cyclohexane, ethylene glycol, melamine, and methanol face disruption risks due to the Strait of Hormuz blockade.</p>
+                <ul class="event-details">
+                    <li>The chemical sector's Ifo business climate index fell to –25.0 in March; employment expectations hit a record low</li>
+                    <li>These feedstocks are used in nylon and adhesive production and as solvents, impacting German manufacturing and consumption</li>
+                    <li>Asian suppliers invoked force majeure clauses, and European domestic capacity is insufficient to fill the gap</li>
+                    <li>The Leuna chemical park narrowly avoided shutdown; a new company took over, saving 436 jobs</li>
+                    <li>The Germany-France electricity price gap hit a record — May German power prices were roughly four times France's (France relies on nuclear, Germany on fossil fuels)</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>The chemical industry is the upstream foundation of German manufacturing; its distress will propagate down the supply chain to automotive, electronics, and construction sectors. The widening Germany-France power price gap is particularly noteworthy — it is not just a short-term shock but exposes Germany's structural energy vulnerability after shutting down its nuclear plants in 2023. If the conflict persists, Germany's industrial competitiveness disadvantage will become further entrenched.</p>
+                </div>
+            </div>
+
+            <!-- Event 6 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-yellow">🟡 中影响</span>
+                <h3 class="event-title">事件六：复活节和平游行与亲伊朗示威并行</h3>
+                <p class="event-summary">复活节期间德国全国举办超124场和平游行，预计7万人参与，核心议题包括伊朗战争、加沙冲突和乌克兰战争。同时柏林出现多次亲伊朗示威活动。</p>
+                <ul class="event-details">
+                    <li>柏林复活节游行约1000-1600人参与，现场可见伊朗国旗和巴勒斯坦支持者</li>
+                    <li>游行诉求包括反对联邦国防军扩军、恢复征兵制、反对援乌援以武器</li>
+                    <li>4月5日和4月6日柏林分别有500-700人举行反美反以抗议</li>
+                    <li>4月10日约150人在柏林市政厅前举行亲伊朗集会，展示已故哈梅内伊画像</li>
+                    <li>和平运动被批评立场片面——未明确俄罗斯为侵略者，仅批判以色列却不提哈马斯</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>伊朗冲突正在重塑德国国内的政治动员格局。传统和平运动（源自冷战时期反核运动）与新兴的亲伊朗/亲巴勒斯坦示威形成了不稳定的合流。后者的出现——特别是展示哈梅内伊画像和重现处决场景——引发了安全关切，与欧洲多国出现的反犹袭击形成呼应。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-yellow">🟡 Medium Impact</span>
+                <h3 class="event-title">Event 6: Easter Peace Marches and Pro-Iran Protests Run in Parallel</h3>
+                <p class="event-summary">Over Easter, more than 124 peace marches were held across Germany with an estimated 70,000 participants. Core issues included the Iran war, the Gaza conflict, and the Ukraine war. Simultaneously, multiple pro-Iran demonstrations took place in Berlin.</p>
+                <ul class="event-details">
+                    <li>The Berlin Easter march drew 1,000–1,600 participants; Iranian flags and Palestinian supporters were visible</li>
+                    <li>Demands included opposition to Bundeswehr expansion, reinstatement of conscription, and halting arms supplies to Ukraine and Israel</li>
+                    <li>On April 5 and 6, 500–700 people held anti-US and anti-Israel protests in Berlin</li>
+                    <li>On April 10, about 150 people rallied outside Berlin City Hall in a pro-Iran gathering, displaying portraits of the late Khamenei</li>
+                    <li>The peace movement was criticized for one-sidedness — failing to name Russia as the aggressor and criticizing Israel while ignoring Hamas</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>The Iran conflict is reshaping Germany's domestic political mobilization landscape. The traditional peace movement (rooted in Cold War-era anti-nuclear activism) and the emerging pro-Iran/pro-Palestinian protests have formed an unstable convergence. The latter — particularly the display of Khamenei portraits and reenactment of execution scenes — has raised security concerns, echoing anti-Semitic attacks seen across multiple European countries.</p>
+                </div>
+            </div>
+
+            <!-- Event 7 -->
+            <div class="event-card reveal lang-zh">
+                <span class="event-level level-green">🟢 值得关注</span>
+                <h3 class="event-title">事件七：伊斯兰堡和谈失败，美国宣布海军封锁</h3>
+                <p class="event-summary">4月12日，美国副总统万斯从伊斯兰堡经停拉姆施泰因空军基地返美，确认美伊和谈未达成永久和平协议，伊朗未承诺长期放弃核武研发。随后特朗普宣布美国海军封锁霍尔木兹海峡。</p>
+                <ul class="event-details">
+                    <li>万斯称美方留下了最终提案，但伊朗未接受</li>
+                    <li>此前4月8日达成的两周停火协议已到期</li>
+                    <li>和谈失败后燃油价格走势将取决于周末后原油市场反应</li>
+                    <li>德国ADAC已向联邦卡特尔局提出控诉，指责石油公司未充分降价</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">洞察</div>
+                    <p>和谈失败意味着德国面临的能源冲击将从"临时性"转为"持续性"。此前市场对停火的乐观预期已部分计入资产价格（DAX周涨2.74%），和谈破裂可能引发新一轮抛售。对德国政府而言，此前宣布的临时降税措施（为期两个月）可能需要延长，财政压力将进一步加大。</p>
+                </div>
+            </div>
+            <div class="event-card reveal lang-en">
+                <span class="event-level level-green">🟢 Noteworthy</span>
+                <h3 class="event-title">Event 7: Islamabad Peace Talks Collapse — US Announces Naval Blockade</h3>
+                <p class="event-summary">On April 12, US Vice President Vance stopped at Ramstein Air Base en route home from Islamabad, confirming that the US-Iran talks failed to produce a permanent peace agreement and that Iran did not commit to long-term abandonment of nuclear weapons development. Trump subsequently announced a US naval blockade of the Strait of Hormuz.</p>
+                <ul class="event-details">
+                    <li>Vance said the US left a final proposal on the table, but Iran did not accept it</li>
+                    <li>The two-week ceasefire agreement reached on April 8 had already expired</li>
+                    <li>Post-collapse fuel price trends will depend on crude oil market reactions after the weekend</li>
+                    <li>Germany's ADAC filed a complaint with the Federal Cartel Office, accusing oil companies of not passing on price reductions</li>
+                </ul>
+                <div class="insight-box">
+                    <div class="insight-label">Insight</div>
+                    <p>The collapse of talks means Germany's energy shock will shift from "temporary" to "sustained." Markets had already partially priced in ceasefire optimism (DAX rose 2.74% for the week); the breakdown may trigger a new round of sell-offs. For the German government, the previously announced temporary tax cuts (two months) may need to be extended, further increasing fiscal pressure.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Trends -->
+    <section class="section" id="trends">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">三</span><span class="lang-en">3</span></div>
+                <h2 class="section-title"><span class="lang-zh">趋势观察</span><span class="lang-en">Trend Watch</span></h2>
+            </div>
+
+            <div class="trend-card reveal lang-zh">
+                <h3 class="trend-title"><i class="fas fa-arrow-trend-up" style="color:var(--accent);margin-right:8px;"></i>趋势一：能源价格冲击正从燃油端向全产业链扩散</h3>
+                <p class="trend-body">3月底至4月初，冲击主要集中在加油站燃油价格。但到4月中旬，传导链条已明显延伸：化工原料短缺（VCI预警）、化肥价格上涨36%（农业承压）、铝价因卡塔尔减产上涨10%、取暖油涨44.4%、新签天然气合同涨21%、巧克力因运输成本涨19.3%、芦笋种植户每10天多承担5000欧元柴油成本。多家经济研究所警告，若冲突持续至夏季，将出现"第二轮通胀效应"——能源成本通过工资-价格螺旋传导至服务业和食品价格。</p>
+                <div class="trend-judgment">
+                    <p><strong>趋势判断：</strong>德国通胀率短期内将突破3%，若冲突持续半年以上，可能触及4%-5%，欧洲央行面临加息压力，将进一步抑制经济复苏。</p>
+                </div>
+            </div>
+            <div class="trend-card reveal lang-en">
+                <h3 class="trend-title"><i class="fas fa-arrow-trend-up" style="color:var(--accent);margin-right:8px;"></i>Trend 1: Energy Price Shock Spreading from Fuel to the Entire Supply Chain</h3>
+                <p class="trend-body">From late March to early April, the shock was concentrated at gas station fuel prices. By mid-April, the transmission chain had visibly extended: chemical feedstock shortages (VCI warning), fertilizer prices up 36% (agriculture under pressure), aluminum prices up 10% due to Qatari production cuts, heating oil up 44.4%, new gas contracts up 21%, chocolate up 19.3% on transport costs, and asparagus farmers bearing an extra €5,000 in diesel costs every 10 days. Multiple economic institutes warn that if the conflict continues into summer, a "second-round inflation effect" will emerge — energy costs feeding through wage-price spirals into services and food prices.</p>
+                <div class="trend-judgment">
+                    <p><strong>Trend Assessment:</strong> Germany's inflation rate will breach 3% in the short term; if the conflict lasts more than six months, it could reach 4%–5%, putting the ECB under pressure to raise rates and further dampening economic recovery.</p>
+                </div>
+            </div>
+
+            <div class="trend-card reveal lang-zh">
+                <h3 class="trend-title"><i class="fas fa-bolt" style="color:var(--accent);margin-right:8px;"></i>趋势二：伊朗冲突加速德国能源转型辩论</h3>
+                <p class="trend-body">高油价正在改变消费者行为和政策讨论方向。Mobile.de数据显示伊朗冲突爆发后电动车需求涨至三倍，3月电动车新注册量增幅超66%。超89%民众支持加快摆脱能源进口依赖，但实际行动保守（仅28.5%房主愿装热泵）。同时，沉寂多年的页岩气开采（Fracking）重回舆论焦点，德国地下蕴藏320-20300亿立方米非常规天然气。政界也在讨论是否重启储备煤电厂以应对德法电力价差创纪录的局面。</p>
+                <div class="trend-judgment">
+                    <p><strong>趋势判断：</strong>短期内电动车渗透率将加速提升，但页岩气和煤电重启面临环保政策和政治阻力，难以在本轮危机中落地。能源转型的"口号"与"行动"之间的落差将持续存在。</p>
+                </div>
+            </div>
+            <div class="trend-card reveal lang-en">
+                <h3 class="trend-title"><i class="fas fa-bolt" style="color:var(--accent);margin-right:8px;"></i>Trend 2: Iran Conflict Accelerates Germany's Energy Transition Debate</h3>
+                <p class="trend-body">High oil prices are changing consumer behavior and policy discussions. Mobile.de data shows EV demand tripled after the Iran conflict erupted; March EV registrations surged over 66%. More than 89% of citizens support accelerating independence from energy imports, yet actual action remains conservative (only 28.5% of homeowners are willing to install heat pumps). Meanwhile, shale gas extraction (fracking), dormant for years, has returned to public debate — Germany's subsurface holds an estimated 32–2,030 billion cubic meters of unconventional natural gas. Politicians are also discussing whether to restart reserve coal-fired plants to address the record Germany-France electricity price gap.</p>
+                <div class="trend-judgment">
+                    <p><strong>Trend Assessment:</strong> EV penetration will accelerate in the short term, but shale gas and coal plant restarts face environmental policy and political resistance, making them unlikely to materialize during this crisis. The gap between energy transition "rhetoric" and "action" will persist.</p>
+                </div>
+            </div>
+
+            <div class="trend-card reveal lang-zh">
+                <h3 class="trend-title"><i class="fas fa-handshake" style="color:var(--accent);margin-right:8px;"></i>趋势三：德国在中东外交中从旁观者转向参与者</h3>
+                <p class="trend-body">从3月底"这不是我们的战争"到4月9日宣布重启对伊对话、承诺参与海峡安保，默茨政府完成了显著的外交转向。驱动因素包括：国内能源危机的政治压力、特朗普对北约盟友的施压、法国牵头的欧洲联合护航倡议。德国还联合奥地利、意大利等国致信欧盟，提议对能源企业征收超额利润税。</p>
+                <div class="trend-judgment">
+                    <p><strong>趋势判断：</strong>德国的中东外交参与将持续深化，但受制于联邦议院授权机制和国内反战情绪，实际军事贡献将以低风险任务（扫雷、侦察）为主。更重要的变化是德国开始构建独立于美国的欧洲中东政策框架。</p>
+                </div>
+            </div>
+            <div class="trend-card reveal lang-en">
+                <h3 class="trend-title"><i class="fas fa-handshake" style="color:var(--accent);margin-right:8px;"></i>Trend 3: Germany Shifts from Bystander to Participant in Middle East Diplomacy</h3>
+                <p class="trend-body">From "this is not our war" in late March to announcing the reopening of Iran dialogue and committing to strait security on April 9, the Merz government completed a notable diplomatic pivot. Driving factors include: domestic political pressure from the energy crisis, Trump's pressure on NATO allies, and France's initiative for a European joint escort mission. Germany also co-signed a letter to the EU with Austria, Italy, and others proposing a windfall profit tax on energy companies.</p>
+                <div class="trend-judgment">
+                    <p><strong>Trend Assessment:</strong> Germany's Middle East diplomatic engagement will continue to deepen, but constrained by the Bundestag authorization mechanism and domestic anti-war sentiment, actual military contributions will focus on low-risk tasks (mine-clearing, reconnaissance). The more significant shift is Germany beginning to build a European Middle East policy framework independent of the US.</p>
+                </div>
+            </div>
+
+            <div class="trend-card reveal lang-zh">
+                <h3 class="trend-title"><i class="fas fa-shield-halved" style="color:var(--accent);margin-right:8px;"></i>趋势四：伊朗相关安全威胁在德国升级</h3>
+                <p class="trend-body">慕尼黑一家以色列餐厅遭袭击（4月10日），疑与伊朗革命卫队关联组织"HAYI"有关，该组织此前已在英国、比利时、荷兰发动反犹袭击。北威州内政部评估伊朗间谍活动与国家恐怖袭击威胁为"极高"。德国安全部门正讨论加强犹太机构防护。</p>
+                <div class="trend-judgment">
+                    <p><strong>趋势判断：</strong>随着德国在伊朗问题上的外交介入加深，以及拉姆施泰因空军基地在美军对伊行动中的角色争议，德国本土面临的伊朗相关安全威胁将持续上升。</p>
+                </div>
+            </div>
+            <div class="trend-card reveal lang-en">
+                <h3 class="trend-title"><i class="fas fa-shield-halved" style="color:var(--accent);margin-right:8px;"></i>Trend 4: Iran-Related Security Threats Escalating in Germany</h3>
+                <p class="trend-body">An Israeli restaurant in Munich was attacked on April 10, suspected to be linked to "HAYI," an organization associated with Iran's Revolutionary Guard Corps that had previously carried out anti-Semitic attacks in the UK, Belgium, and the Netherlands. North Rhine-Westphalia's Interior Ministry assessed the threat of Iranian espionage and state-sponsored terrorism as "very high." German security agencies are discussing enhanced protection for Jewish institutions.</p>
+                <div class="trend-judgment">
+                    <p><strong>Trend Assessment:</strong> As Germany deepens its diplomatic involvement on the Iran issue and controversy grows over Ramstein Air Base's role in US military operations against Iran, Iran-related security threats on German soil will continue to rise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Risks -->
+    <section class="section" id="risks">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">四</span><span class="lang-en">4</span></div>
+                <h2 class="section-title"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2>
+            </div>
+
+            <div class="risk-card reveal lang-zh">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险一：和谈失败后能源供应可能出现实质性短缺</h3>
+                <p class="risk-body">伊斯兰堡和谈失败、美国宣布海军封锁海峡，意味着霍尔木兹海峡通航短期内无法恢复。若封锁持续至夏季，全球战略石油储备可能在数月内耗尽（伊福研究所警告），德国虽然对波斯湾石油直接依赖仅约5%，但全球油价传导效应将持续推高国内能源成本。德国医药行业已警告氦气等关键原料可能短缺，影响药品质量检测。</p>
+            </div>
+            <div class="risk-card reveal lang-en">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> Risk 1: Substantive Energy Supply Shortages Possible After Talks Collapse</h3>
+                <p class="risk-body">The failure of the Islamabad talks and the US announcement of a naval blockade mean that navigation through the Strait of Hormuz cannot resume in the short term. If the blockade continues into summer, global strategic petroleum reserves could be depleted within months (Ifo Institute warning). Although Germany's direct dependence on Persian Gulf oil is only about 5%, the global oil price transmission effect will continue to push up domestic energy costs. Germany's pharmaceutical industry has already warned of potential shortages of critical materials such as helium, affecting drug quality testing.</p>
+            </div>
+
+            <div class="risk-card reveal lang-zh">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险二：联合政府纾困政策分歧可能演变为执政危机</h3>
+                <p class="risk-body">CDU与SPD在能源纾困路径上的根本分歧（市场化 vs 干预主义）尚未真正弥合。临时降税方案仅为期两个月，若冲突持续，双方将不得不再次谈判。最新民调显示仅15%民众满意当前联合政府，超八成民众不满政府应对物价上涨的举措。若油价再度飙升而政府无力应对，可能动摇执政联盟稳定性。</p>
+            </div>
+            <div class="risk-card reveal lang-en">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> Risk 2: Coalition Relief Policy Disagreements May Escalate into a Governing Crisis</h3>
+                <p class="risk-body">The fundamental divide between CDU and SPD on energy relief approaches (market-based vs. interventionist) has not been truly bridged. The temporary tax cut is only for two months; if the conflict continues, both sides will have to negotiate again. The latest polls show only 15% of citizens are satisfied with the current coalition, and over 80% are dissatisfied with the government's response to rising prices. If oil prices surge again and the government cannot respond, it could destabilize the governing alliance.</p>
+            </div>
+
+            <div class="risk-card reveal lang-zh">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险三：伊朗代理人在欧洲的恐怖袭击风险上升</h3>
+                <p class="risk-body">欧洲多国已发生疑似伊朗指使的反犹袭击，德国虽暂未受袭但已提升警戒。袭击者多为被招募的青少年，手法专业，目标明确（犹太机构、以色列商业场所）。随着德国在伊朗问题上的外交角色加重，以及拉姆施泰因基地的敏感性，德国成为报复目标的概率在上升。</p>
+            </div>
+            <div class="risk-card reveal lang-en">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> Risk 3: Rising Risk of Iran-Proxy Terrorist Attacks in Europe</h3>
+                <p class="risk-body">Suspected Iran-directed anti-Semitic attacks have already occurred in multiple European countries. While Germany has not yet been targeted, it has raised its alert level. Attackers are often recruited teenagers using professional methods with clear targets (Jewish institutions, Israeli commercial venues). As Germany's diplomatic role on the Iran issue deepens and given the sensitivity of Ramstein Air Base, the probability of Germany becoming a retaliation target is rising.</p>
+            </div>
+
+            <div class="risk-card reveal lang-zh">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> 风险四：通胀传导可能触发工资-价格螺旋</h3>
+                <p class="risk-body">德国企业涨价意愿已升至2023年3月来新高（Ifo指数25.3点），超两成企业计划提价。若能源成本持续高企，企业将把成本转嫁至终端价格，进而推动工资谈判要求上调，形成工资-价格螺旋。欧洲央行可能被迫加息，进一步抑制投资和消费，德国经济陷入"滞胀"风险。</p>
+            </div>
+            <div class="risk-card reveal lang-en">
+                <h3 class="risk-title"><i class="fas fa-triangle-exclamation"></i> Risk 4: Inflation Transmission May Trigger a Wage-Price Spiral</h3>
+                <p class="risk-body">German firms' willingness to raise prices has reached its highest level since March 2023 (Ifo index at 25.3 points), with over 20% of companies planning price increases. If energy costs remain elevated, businesses will pass costs on to end prices, which in turn will drive wage negotiation demands upward, creating a wage-price spiral. The ECB may be forced to raise interest rates, further suppressing investment and consumption, pushing Germany's economy toward "stagflation" risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Highlights -->
+    <section class="section" id="highlights">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">五</span><span class="lang-en">5</span></div>
+                <h2 class="section-title"><span class="lang-zh">合作亮点</span><span class="lang-en">Cooperation Highlights</span></h2>
+            </div>
+            <div class="reveal lang-zh" style="overflow-x:auto;">
+                <table class="highlight-table">
+                    <thead>
+                        <tr><th>领域</th><th>亮点</th><th>意义</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>外交对话</td><td>默茨宣布重启与伊朗直接对话，配合美伊和谈</td><td>德国首次在伊朗问题上展现独立外交主动性，有助于构建欧洲中东政策框架</td></tr>
+                        <tr><td>欧洲能源协调</td><td>德国联合奥意葡西致信欧盟，提议对能源企业征收超额利润税</td><td>推动欧盟层面统一应对机制，避免各国补贴竞赛</td></tr>
+                        <tr><td>海峡安保</td><td>德国承诺参与霍尔木兹海峡安保，与法意等国协调</td><td>欧洲联合护航方案成型，减少对美国安全依赖</td></tr>
+                        <tr><td>能源供应多元化</td><td>联邦能源企业Sefe启动2027-2036年中期天然气采购招标，拓展阿尔及利亚、阿塞拜疆供气</td><td>降低对单一来源依赖，增强供应韧性</td></tr>
+                        <tr><td>LNG基础设施</td><td>一季度德国LNG码头接卸量创季度新高（25TWh），伊朗冲突未影响码头运营</td><td>2022年后建设的LNG基础设施在本轮危机中发挥了缓冲作用</td></tr>
+                        <tr><td>民主价值</td><td>法兰克福颁发保罗教堂民主奖给伊朗裔活动家玛希·阿利内贾德</td><td>在外交接触伊朗政权的同时，保持对伊朗人权问题的关注</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="reveal lang-en" style="overflow-x:auto;">
+                <table class="highlight-table">
+                    <thead>
+                        <tr><th>Area</th><th>Highlight</th><th>Significance</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Diplomatic Dialogue</td><td>Merz announced reopening direct dialogue with Iran, in coordination with US-Iran talks</td><td>Germany's first display of independent diplomatic initiative on the Iran issue, contributing to a European Middle East policy framework</td></tr>
+                        <tr><td>European Energy Coordination</td><td>Germany co-signed a letter to the EU with Austria, Italy, Portugal, and Spain proposing a windfall profit tax on energy companies</td><td>Promotes a unified EU-level response mechanism, preventing a subsidy race among member states</td></tr>
+                        <tr><td>Strait Security</td><td>Germany committed to participating in Strait of Hormuz security, coordinating with France, Italy, and others</td><td>A European joint escort plan takes shape, reducing dependence on US security</td></tr>
+                        <tr><td>Energy Supply Diversification</td><td>Federal energy company Sefe launched a 2027–2036 mid-term gas procurement tender, expanding supply from Algeria and Azerbaijan</td><td>Reduces single-source dependence and strengthens supply resilience</td></tr>
+                        <tr><td>LNG Infrastructure</td><td>Q1 German LNG terminal throughput hit a quarterly record (25 TWh); the Iran conflict did not affect terminal operations</td><td>LNG infrastructure built after 2022 served as a buffer in this crisis</td></tr>
+                        <tr><td>Democratic Values</td><td>Frankfurt awarded the Paulskirche Democracy Prize to Iranian-born activist Masih Alinejad</td><td>Maintains focus on Iran's human rights issues while engaging diplomatically with the Iranian regime</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: Watch List -->
+    <section class="section" id="watchlist">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-num"><span class="lang-zh">六</span><span class="lang-en">6</span></div>
+                <h2 class="section-title"><span class="lang-zh">下周关注点</span><span class="lang-en">Next Week Watch</span></h2>
+            </div>
+            <div class="reveal">
+                <div class="watch-item lang-zh">
+                    <div class="watch-num">1</div>
+                    <div class="watch-content">
+                        <div class="watch-title">原油市场对和谈失败的反应（4月13日起）</div>
+                        <div class="watch-desc">伊斯兰堡和谈破裂后首个交易日，布伦特原油价格走势将决定德国燃油价格的短期方向，若突破110美元/桶将触发新一轮涨价潮。</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-en">
+                    <div class="watch-num">1</div>
+                    <div class="watch-content">
+                        <div class="watch-title">Crude Oil Market Reaction to Talks Collapse (from April 13)</div>
+                        <div class="watch-desc">On the first trading day after the Islamabad talks broke down, Brent crude price movements will determine the short-term direction of German fuel prices; a breach of $110/barrel would trigger a new wave of price hikes.</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-zh">
+                    <div class="watch-num">2</div>
+                    <div class="watch-content">
+                        <div class="watch-title">联合政府联盟委员会会议（4月13日）</div>
+                        <div class="watch-desc">CDU与SPD将就能源纾困方案的细节进行最终协商，临时降税的实施时间表和超额利润税的具体设计是焦点。</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-en">
+                    <div class="watch-num">2</div>
+                    <div class="watch-content">
+                        <div class="watch-title">Coalition Committee Meeting (April 13)</div>
+                        <div class="watch-desc">CDU and SPD will hold final negotiations on the details of the energy relief package; the implementation timeline for the temporary tax cut and the specific design of the windfall profit tax are the focal points.</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-zh">
+                    <div class="watch-num">3</div>
+                    <div class="watch-content">
+                        <div class="watch-title">美国海军封锁霍尔木兹海峡的实际执行</div>
+                        <div class="watch-desc">特朗普宣布的海军封锁如何落地，将直接影响全球油气运输和价格预期。</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-en">
+                    <div class="watch-num">3</div>
+                    <div class="watch-content">
+                        <div class="watch-title">Actual Implementation of the US Naval Blockade of the Strait of Hormuz</div>
+                        <div class="watch-desc">How Trump's announced naval blockade is executed will directly affect global oil and gas shipping and price expectations.</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-zh">
+                    <div class="watch-num">4</div>
+                    <div class="watch-content">
+                        <div class="watch-title">以色列在黎巴嫩的军事行动走向</div>
+                        <div class="watch-desc">默茨已公开批评以色列行动可能破坏和平进程，若以方继续升级，将增加德国外交斡旋的难度。</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-en">
+                    <div class="watch-num">4</div>
+                    <div class="watch-content">
+                        <div class="watch-title">Trajectory of Israel's Military Operations in Lebanon</div>
+                        <div class="watch-desc">Merz has publicly criticized Israel's actions as potentially undermining the peace process; further escalation by Israel would increase the difficulty of Germany's diplomatic mediation.</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-zh">
+                    <div class="watch-num">5</div>
+                    <div class="watch-content">
+                        <div class="watch-title">德国联邦卡特尔局对石油企业的调查进展</div>
+                        <div class="watch-desc">ADAC已正式提出控诉，卡特尔局是否认定石油企业存在不当定价行为，将影响超额利润税的政治可行性。</div>
+                    </div>
+                </div>
+                <div class="watch-item lang-en">
+                    <div class="watch-num">5</div>
+                    <div class="watch-content">
+                        <div class="watch-title">Progress of the Federal Cartel Office Investigation into Oil Companies</div>
+                        <div class="watch-desc">ADAC has formally filed a complaint; whether the Cartel Office finds improper pricing behavior by oil companies will affect the political feasibility of the windfall profit tax.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-author"><i class="fas fa-building" style="margin-right:6px;"></i>Supinfor Ltd. · 2026-04-24</div>
+            <p><span class="lang-zh">本报告基于 Supinfor 区域国别实时监测数据编制，仅供参考，不构成投资或决策建议。</span><span class="lang-en">This report is compiled from Supinfor's real-time country intelligence data and is for reference only. It does not constitute investment or decision-making advice.</span></p>
+            <p style="margin-top:8px;">© Supinfor Ltd.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-top" id="backTop"><i class="fas fa-arrow-up"></i></button>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        const savedTheme = localStorage.getItem('theme') || 
+            (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        html.setAttribute('data-theme', savedTheme);
+        updateThemeIcon();
+
+        themeToggle.addEventListener('click', () => {
+            const current = html.getAttribute('data-theme');
+            const next = current === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', next);
+            localStorage.setItem('theme', next);
+            updateThemeIcon();
+        });
+
+        function updateThemeIcon() {
+            const isDark = html.getAttribute('data-theme') === 'dark';
+            themeToggle.innerHTML = isDark ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+        }
+
+        // TOC Toggle
+        const tocToggle = document.getElementById('tocToggle');
+        const tocPanel = document.getElementById('tocPanel');
+        tocToggle.addEventListener('click', () => tocPanel.classList.toggle('open'));
+        tocPanel.querySelectorAll('a').forEach(a => {
+            a.addEventListener('click', () => tocPanel.classList.remove('open'));
+        });
+
+        // Back to Top
+        const backTop = document.getElementById('backTop');
+        window.addEventListener('scroll', () => {
+            backTop.classList.toggle('visible', window.scrollY > 400);
+        });
+        backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Scroll Reveal
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, i) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => entry.target.classList.add('visible'), i * 80);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.querySelector(a.getAttribute('href'));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Language Toggle
+        function setLang(lang) {
+            document.documentElement.setAttribute('data-lang', lang);
+            document.documentElement.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+            localStorage.setItem('lang', lang);
+            document.querySelectorAll('.lang-toggle button').forEach(btn => {
+                btn.classList.toggle('active', (lang === 'zh' && btn.textContent === '中') || (lang === 'en' && btn.textContent === 'EN'));
+            });
+        }
+        (function() { const savedLang = localStorage.getItem('lang') || 'zh'; setLang(savedLang); })();
+    </script>
+</body>
+</html>

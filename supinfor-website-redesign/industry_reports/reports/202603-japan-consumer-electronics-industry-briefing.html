@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>日本消费电子行业行业动态速览（3月23日-3月29日）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&family=Orbitron:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root { --bg-primary: #0a0f1e; --bg-secondary: #111827; --bg-card: #1a2236; --bg-card-hover: #1e2a42; --text-primary: #e2e8f0; --text-secondary: #94a3b8; --text-muted: #64748b; --accent-blue: #3b82f6; --accent-cyan: #06b6d4; --accent-teal: #14b8a6; --accent-amber: #f59e0b; --accent-red: #ef4444; --accent-orange: #f97316; --accent-green: #22c55e; --border-color: rgba(59,130,246,0.2); --glow-blue: rgba(59,130,246,0.15); --glow-amber: rgba(245,158,11,0.15); }
+[data-theme="light"] { --bg-primary: #f8fafc; --bg-secondary: #f1f5f9; --bg-card: #ffffff; --bg-card-hover: #f8fafc; --text-primary: #1e293b; --text-secondary: #475569; --text-muted: #94a3b8; --border-color: rgba(59,130,246,0.15); --glow-blue: rgba(59,130,246,0.08); --glow-amber: rgba(245,158,11,0.08); }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Noto Sans SC', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.8; transition: background 0.3s, color 0.3s; overflow-x: hidden; }
+.font-orbitron { font-family: 'Orbitron', sans-serif; }
+/* Circuit board pattern */
+.circuit-bg { position: relative; overflow: hidden; }
+.circuit-bg::before { content: ''; position: absolute; inset: 0; opacity: 0.06; background-image: linear-gradient(var(--accent-blue) 1px, transparent 1px), linear-gradient(90deg, var(--accent-blue) 1px, transparent 1px), linear-gradient(var(--accent-blue) 0.5px, transparent 0.5px), linear-gradient(90deg, var(--accent-blue) 0.5px, transparent 0.5px); background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px; pointer-events: none; }
+[data-theme="light"] .circuit-bg::before { opacity: 0.04; }
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--accent-blue); border-radius: 3px; }
+/* Animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+/* Card styles */
+.card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; transition: all 0.3s ease; }
+.card:hover { background: var(--bg-card-hover); border-color: var(--accent-blue); box-shadow: 0 0 20px var(--glow-blue); }
+/* Stat card */
+.stat-card { background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary)); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.5rem; text-align: center; transition: all 0.3s ease; position: relative; overflow: hidden; }
+.stat-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent-blue), var(--accent-cyan)); }
+.stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px var(--glow-blue); border-color: var(--accent-blue); }
+
+/* Tag styles */
+.tag-fact { background: rgba(59,130,246,0.15); color: var(--accent-blue); border: 1px solid rgba(59,130,246,0.3); padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 500; }
+.tag-analysis { background: rgba(245,158,11,0.15); color: var(--accent-amber); border: 1px solid rgba(245,158,11,0.3); padding: 2px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 500; }
+/* Accordion */
+.accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease; }
+.accordion-content.open { max-height: 5000px; }
+.accordion-toggle .chevron { transition: transform 0.3s ease; }
+.accordion-toggle.open .chevron { transform: rotate(180deg); }
+/* Bar chart */
+.bar-chart-item { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+.bar-label { min-width: 60px; text-align: right; font-size: 0.875rem; color: var(--text-secondary); }
+.bar-track { flex: 1; height: 28px; background: rgba(59,130,246,0.08); border-radius: 6px; overflow: hidden; position: relative; }
+.bar-fill { height: 100%; border-radius: 6px; display: flex; align-items: center; padding-left: 10px; font-size: 0.75rem; font-weight: 500; color: white; transition: width 1.5s ease; }
+.bar-value { min-width: 80px; font-size: 0.8rem; color: var(--text-secondary); text-align: left; }
+/* Risk bar */
+.risk-bar-track { height: 8px; background: rgba(239,68,68,0.1); border-radius: 4px; overflow: hidden; }
+.risk-bar-fill { height: 100%; border-radius: 4px; transition: width 1.5s ease; }
+/* Star rating */
+.star-filled { color: var(--accent-amber); }
+.star-empty { color: var(--text-muted); opacity: 0.3; }
+/* TOC */
+.toc-sidebar { position: fixed; left: 0; top: 0; bottom: 0; width: 260px; background: var(--bg-secondary); border-right: 1px solid var(--border-color); padding: 80px 16px 24px; overflow-y: auto; z-index: 40; transform: translateX(-100%); transition: transform 0.3s ease; }
+.toc-sidebar.open { transform: translateX(0); }
+.toc-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 35; display: none; }
+.toc-overlay.open { display: block; }
+.toc-link { display: block; padding: 8px 12px; color: var(--text-secondary); text-decoration: none; font-size: 0.85rem; border-radius: 6px; transition: all 0.2s; border-left: 2px solid transparent; }
+.toc-link:hover, .toc-link.active { color: var(--accent-blue); background: var(--glow-blue); border-left-color: var(--accent-blue); }
+/* Back to top */
+.back-to-top { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: var(--accent-blue); color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; opacity: 0; transform: translateY(20px); transition: all 0.3s; z-index: 50; box-shadow: 0 4px 15px rgba(59,130,246,0.4); }
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,130,246,0.6); }
+/* Theme toggle */
+.theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 50; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.theme-toggle:hover { border-color: var(--accent-blue); box-shadow: 0 0 15px var(--glow-blue); }
+/* TOC toggle */
+.toc-toggle { position: fixed; top: 20px; left: 20px; z-index: 50; width: 44px; height: 44px; border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border-color); color: var(--text-primary); cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+.toc-toggle:hover { border-color: var(--accent-blue); box-shadow: 0 0 15px var(--glow-blue); }
+/* Section heading */
+.section-heading { display: flex; align-items: center; gap: 16px; margin-bottom: 2rem; }
+.section-num { font-family: 'Orbitron', sans-serif; font-size: 0.75rem; color: var(--accent-blue); letter-spacing: 2px; text-transform: uppercase; }
+.section-line { flex: 1; height: 1px; background: linear-gradient(90deg, var(--accent-blue), transparent); }
+/* Finding card */
+.finding-card { position: relative; padding: 1.25rem 1.5rem; border-radius: 10px; background: var(--bg-card); border: 1px solid var(--border-color); transition: all 0.3s; }
+.finding-card:hover { border-color: var(--accent-blue); box-shadow: 0 0 20px var(--glow-blue); }
+.finding-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; border-radius: 4px 0 0 4px; }
+.finding-card:nth-child(1)::before { background: var(--accent-red); }
+.finding-card:nth-child(2)::before { background: var(--accent-blue); }
+.finding-card:nth-child(3)::before { background: var(--accent-amber); }
+.finding-card:nth-child(4)::before { background: var(--accent-cyan); }
+.finding-card:nth-child(5)::before { background: var(--accent-green); }
+.finding-num { font-family: 'Orbitron', sans-serif; font-size: 2rem; font-weight: 900; opacity: 0.1; position: absolute; top: 8px; right: 16px; }
+/* Focus event card */
+.focus-card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; transition: all 0.3s; }
+.focus-card:hover { border-color: var(--accent-blue); box-shadow: 0 0 25px var(--glow-blue); }
+.focus-header { padding: 1.5rem; border-bottom: 1px solid var(--border-color); }
+.focus-body { padding: 1.5rem; }
+.focus-section { margin-bottom: 1.5rem; }
+.focus-section:last-child { margin-bottom: 0; }
+.focus-section-title { font-size: 0.85rem; font-weight: 700; color: var(--accent-blue); margin-bottom: 0.5rem; display: flex; align-items: center; gap: 8px; }
+/* Risk card */
+.risk-card { background: var(--bg-card); border: 1px solid rgba(239,68,68,0.2); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+.risk-card:hover { border-color: rgba(239,68,68,0.5); box-shadow: 0 0 20px rgba(239,68,68,0.1); }
+/* Trend card */
+.trend-card { background: var(--bg-card); border: 1px solid rgba(20,184,166,0.2); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+.trend-card:hover { border-color: rgba(20,184,166,0.5); box-shadow: 0 0 20px rgba(20,184,166,0.1); }
+/* Table */
+.styled-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.styled-table th { background: rgba(59,130,246,0.1); color: var(--accent-blue); font-weight: 600; padding: 12px 16px; text-align: left; font-size: 0.85rem; border-bottom: 2px solid var(--accent-blue); }
+.styled-table td { padding: 10px 16px; border-bottom: 1px solid var(--border-color); font-size: 0.85rem; color: var(--text-secondary); }
+.styled-table tr:hover td { background: var(--glow-blue); }
+@media (min-width: 1024px) {
+  .toc-sidebar { transform: translateX(0); }
+  .main-content { margin-left: 260px; }
+  .toc-toggle { display: none; }
+}
+@media (max-width: 1023px) {
+  .main-content { margin-left: 0; }
+}
+[data-lang="zh"] [data-en] { display: none; }
+[data-lang="en"] [data-zh] { display: none; }
+</style>
+</head>
+<body>
+<!-- Theme Toggle -->
+<button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题">
+  <i class="fas fa-moon" id="themeIcon"></i>
+</button>
+
+<!-- Language Toggle -->
+<button id="langToggle" aria-label="Switch Language" style="position:fixed;top:20px;right:72px;z-index:50;width:44px;height:44px;border-radius:50%;background:var(--bg-card);border:1px solid var(--border-color);color:var(--text-primary);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s;font-size:12px;font-weight:700;">EN</button>
+
+<!-- TOC Toggle (mobile) -->
+<button class="toc-toggle" onclick="toggleTOC()" aria-label="目录">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- TOC Overlay -->
+<div class="toc-overlay" id="tocOverlay" onclick="toggleTOC()"></div>
+
+<!-- TOC Sidebar -->
+<nav class="toc-sidebar" id="tocSidebar">
+  <div style="margin-bottom:16px;">
+    <span class="font-orbitron" style="font-size:0.7rem;color:var(--accent-blue);letter-spacing:3px;">CONTENTS</span>
+  </div>
+  <a href="#hero" class="toc-link"><span data-zh>概览</span><span data-en>Overview</span></a>
+  <a href="#findings" class="toc-link"><span data-zh>一、核心发现</span><span data-en>1. Key Findings</span></a>
+  <a href="#focus" class="toc-link"><span data-zh>二、焦点事件深度解读</span><span data-en>2. Focus Events In-Depth</span></a>
+  <a href="#focus1" class="toc-link" style="padding-left:24px;font-size:0.8rem;"><span data-zh>焦点一：PS5全球涨价</span><span data-en>Focus 1: PS5 Global Price Hike</span></a>
+  <a href="#focus2" class="toc-link" style="padding-left:24px;font-size:0.8rem;"><span data-zh>焦点二：产业整合潮</span><span data-en>Focus 2: Industry Consolidation Wave</span></a>
+  <a href="#focus3" class="toc-link" style="padding-left:24px;font-size:0.8rem;"><span data-zh>焦点三：AI服务渗透</span><span data-en>Focus 3: AI Service Penetration</span></a>
+  <a href="#dynamics" class="toc-link"><span data-zh>三、行业动态扫描</span><span data-en>3. Industry Dynamics Scan</span></a>
+  <a href="#risks" class="toc-link"><span data-zh>四、风险警示</span><span data-en>4. Risk Alerts</span></a>
+  <a href="#trends" class="toc-link"><span data-zh>五、趋势研判</span><span data-en>5. Trend Analysis</span></a>
+  <a href="#appendix" class="toc-link"><span data-zh>六、附录</span><span data-en>6. Appendix</span></a>
+</nav>
+
+<!-- Main Content -->
+<div class="main-content">
+
+<!-- ==================== HERO SECTION ==================== -->
+<section id="hero" class="circuit-bg" style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#0a0f1e 0%,#0f172a 40%,#1e1b4b 100%);padding:2rem;">
+  <div style="max-width:1100px;width:100%;text-align:center;">
+    <div class="reveal" style="margin-bottom:1rem;">
+      <span class="font-orbitron" style="font-size:0.7rem;letter-spacing:4px;color:var(--accent-cyan);text-transform:uppercase;">Supinfor Industry Intelligence</span>
+    </div>
+    <h1 class="reveal reveal-delay-1" style="font-size:clamp(1.8rem,4vw,3rem);font-weight:900;color:#fff;line-height:1.3;margin-bottom:0.75rem;">
+      <span data-zh>日本消费电子行业<br><span style="background:linear-gradient(90deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">行业动态速览</span></span><span data-en>Japan Consumer Electronics<br><span style="background:linear-gradient(90deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Industry Dynamics Overview</span></span>
+    </h1>
+    <p class="reveal reveal-delay-2 font-orbitron" style="font-size:1rem;color:var(--accent-blue);margin-bottom:1.5rem;letter-spacing:2px;"><span data-zh>2026年3月23日 — 3月29日</span><span data-en>March 23 — March 29, 2026</span></p>
+    <p class="reveal reveal-delay-3" style="font-size:0.95rem;color:#94a3b8;max-width:700px;margin:0 auto 3rem;line-height:1.8;">
+      <span data-zh>基于 Supinfor 区域国别实时监测平台，覆盖11个栏目、227条独立资讯的深度分析</span><span data-en>In-depth analysis based on the Supinfor regional real-time monitoring platform, covering 11 categories and 227 independent news items</span>
+    </p>
+
+    <!-- Stat Cards -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;max-width:900px;margin:0 auto;">
+      <div class="stat-card reveal reveal-delay-1">
+        <div class="font-orbitron" style="font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#ef4444,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent;" data-count="23" data-suffix="%">0%</div>
+        <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem;"><span data-zh>PS5标准版涨幅</span><span data-en>PS5 Standard Edition Price Increase</span></div>
+      </div>
+      <div class="stat-card reveal reveal-delay-2">
+        <div class="font-orbitron" style="font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;" data-count="-12.5" data-suffix="%" data-decimal="1">0%</div>
+        <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem;"><span data-zh>2月PC出货量同比</span><span data-en>Feb PC Shipments YoY</span></div>
+      </div>
+      <div class="stat-card reveal reveal-delay-3">
+        <div class="font-orbitron" style="font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#f59e0b,#ef4444);-webkit-background-clip:text;-webkit-text-fill-color:transparent;" data-count="66" data-prefix="+" data-suffix="%">0%</div>
+        <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem;"><span data-zh>移动锂电池火灾同比</span><span data-en>Mobile Li-Battery Fires YoY</span></div>
+      </div>
+      <div class="stat-card reveal reveal-delay-4">
+        <div class="font-orbitron" style="font-size:2.5rem;font-weight:900;background:linear-gradient(135deg,#14b8a6,#22c55e);-webkit-background-clip:text;-webkit-text-fill-color:transparent;" data-count="227" data-suffix="条">0</div>
+        <div style="font-size:0.8rem;color:var(--text-secondary);margin-top:0.5rem;"><span data-zh>监测资讯总量</span><span data-en>Total Monitored News Items</span></div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:3rem;">
+      <a href="#findings" style="color:var(--accent-blue);text-decoration:none;font-size:0.85rem;display:inline-flex;align-items:center;gap:8px;">
+        <span><span data-zh>开始阅读</span><span data-en>Start Reading</span></span>
+        <i class="fas fa-chevron-down" style="animation:bounce 2s infinite;"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 1: 核心发现 ==================== -->
+<section id="findings" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 01</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><span data-zh>核心发现</span><span data-en>Key Findings</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:1rem;">
+    <div class="finding-card reveal">
+      <div class="finding-num">01</div>
+      <p style="font-size:0.9rem;line-height:1.9;padding-right:2rem;"><span data-zh>索尼PS5启动第四轮涨价，标准型号较首发价累计上涨超4万日元（涨幅约23%），半导体内存成本上涨与中东地缘冲突引发的氦气供应紧张是核心推手，游戏主机行业正面临"成本转嫁—销量萎缩—生态增长受阻"的恶性循环风险。</span><span data-en>Sony launched its fourth round of PS5 price increases, with the standard model now over ¥40,000 above its launch price (approximately 23% increase). Rising semiconductor memory costs and helium supply tensions triggered by Middle East geopolitical conflicts are the core drivers. The gaming console industry faces a vicious cycle risk of "cost pass-through → declining sales → stalled ecosystem growth."</span></p>
+    </div>
+    <div class="finding-card reveal reveal-delay-1">
+      <div class="finding-num">02</div>
+      <p style="font-size:0.9rem;line-height:1.9;padding-right:2rem;"><span data-zh>日本半导体与电子产业掀起新一轮整合潮：三菱电机、东芝、罗姆启动功率半导体统合谈判，OKI与日立合并ATM事业，行业正从"各自为战"转向"抱团取暖"，背景是EV需求低迷与无现金化加速双重冲击。</span><span data-en>Japan's semiconductor and electronics industry is experiencing a new wave of consolidation: Mitsubishi Electric, Toshiba, and Rohm have initiated power semiconductor integration negotiations, while OKI and Hitachi are merging their ATM businesses. The industry is shifting from "going it alone" to "strength in unity," driven by the dual impact of sluggish EV demand and accelerating cashless adoption.</span></p>
+    </div>
+    <div class="finding-card reveal reveal-delay-2">
+      <div class="finding-num">03</div>
+      <p style="font-size:0.9rem;line-height:1.9;padding-right:2rem;"><span data-zh>2月日本PC出货量同比暴跌12.5%至60.4万台，GIGA学校计划换机需求透支效应显现，移动笔记本降幅高达23.1%，消费电子终端市场进入后疫情时代的深度调整期。</span><span data-en>Japan's February PC shipments plunged 12.5% YoY to 604,000 units. The demand exhaustion effect from the GIGA School Program device replacement cycle is now evident, with mobile notebook shipments dropping 23.1%. The consumer electronics terminal market has entered a deep post-pandemic adjustment period.</span></p>
+    </div>
+    <div class="finding-card reveal reveal-delay-3">
+      <div class="finding-num">04</div>
+      <p style="font-size:0.9rem;line-height:1.9;padding-right:2rem;"><span data-zh>AI与数字化服务在零售、翻译、客服等场景加速落地：7-Eleven「7NOW」覆盖1.5万家门店、全家测试14语言实时翻译、TOPPAN推出AI翻译显示器，消费电子行业的增长引擎正从硬件销售转向AI赋能的服务生态。</span><span data-en>AI and digital services are accelerating deployment across retail, translation, and customer service scenarios: 7-Eleven's "7NOW" covers 15,000 stores, FamilyMart is testing 14-language real-time translation, and TOPPAN has launched an AI translation display. The growth engine of the consumer electronics industry is shifting from hardware sales to an AI-empowered service ecosystem.</span></p>
+    </div>
+    <div class="finding-card reveal reveal-delay-4">
+      <div class="finding-num">05</div>
+      <p style="font-size:0.9rem;line-height:1.9;padding-right:2rem;"><span data-zh>移动锂电池火灾同比激增66%至482件，安全监管收紧信号明确，消费电子企业面临产品安全合规成本上升与品牌声誉风险的双重压力。</span><span data-en>Mobile lithium battery fires surged 66% YoY to 482 incidents, sending a clear signal of tightening safety regulations. Consumer electronics companies face dual pressures of rising product safety compliance costs and brand reputation risks.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 2: 焦点事件深度解读 ==================== -->
+<section id="focus" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 02</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><span data-zh>焦点事件深度解读</span><span data-en>Focus Events In-Depth Analysis</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- Focus Event 1 -->
+  <div id="focus1" class="focus-card reveal" style="margin-bottom:2rem;">
+    <div class="focus-header" style="background:linear-gradient(135deg,rgba(239,68,68,0.08),rgba(245,158,11,0.08));">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <span class="font-orbitron" style="font-size:0.7rem;color:var(--accent-red);letter-spacing:2px;">FOCUS 01</span>
+        <span class="tag-fact"><i class="fas fa-gamepad" style="margin-right:4px;"></i><span data-zh>游戏主机</span><span data-en>Gaming Console</span></span>
+      </div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-top:0.75rem;line-height:1.5;"><span data-zh>索尼PS5全球涨价——消费电子硬件定价逻辑正在被改写</span><span data-en>Sony PS5 Global Price Hike — The Pricing Logic of Consumer Electronics Hardware Is Being Rewritten</span></h3>
+    </div>
+    <div class="focus-body">
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-fact"><span data-zh>事实</span><span data-en>Fact</span></span> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>索尼互动娱乐（SIE）宣布自4月2日起全球上调PS5全线产品售价。日本国内标准型号涨约23%至97,980日元，数字版同步涨至89,980日元，PS5 Pro首次涨价约15%至137,980日元，仅2025年发售的无光驱日语专用型号维持55,000日元。这是日本国内自2024年9月以来的第四次涨价，标准型号较2020年首发价已累计上涨超4万日元。</span><span data-en>Sony Interactive Entertainment (SIE) announced a global price increase for the entire PS5 product line effective April 2. The standard model in Japan rose approximately 23% to ¥97,980, the Digital Edition to ¥89,980, and the PS5 Pro saw its first price increase of approximately 15% to ¥137,980. Only the disc-less Japanese-language exclusive model released in 2025 remains at ¥55,000. This marks the fourth price increase in Japan since September 2024, with the standard model now over ¥40,000 above its 2020 launch price.</span></p>
+      </div>
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>深层驱动力分析</span><span data-en>Underlying Drivers Analysis</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>官方以"全球严峻经济环境长期化"为由，但未明确说明具体涨价理由。日经新闻分析指出，AI普及导致半导体内存需求激增、价格高企是核心成本压力。与此同时，The Guardian报道揭示了另一条成本传导链：伊朗袭击卡塔尔天然气出口设施，导致全球氦气供应减产14%——卡塔尔供应全球三分之一的氦气，而氦气是半导体制造的必需原料，这将进一步推高芯片价格。</span><span data-en>The official reason cited is "the prolonged severe global economic environment," without specifying exact causes. Nikkei analysis points to surging semiconductor memory demand driven by AI proliferation and elevated prices as the core cost pressure. Meanwhile, The Guardian revealed another cost transmission chain: Iran's attack on Qatar's natural gas export facilities reduced global helium supply by 14% — Qatar supplies one-third of the world's helium, and helium is an essential material for semiconductor manufacturing, which will further drive up chip prices.</span></p>
+      </div>
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>这意味着什么</span><span data-en>What This Means</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>索尼的涨价决策折射出消费电子硬件定价逻辑的根本性转变：过去主机厂商惯用"硬件亏损、软件回收"的商业模式，如今半导体成本的结构性上涨正在瓦解这一模式。索尼游戏业务占集团总营业利益超三成，但股价自2025年11月以来已下跌33%，市场对其业绩前景的担忧持续加深。</span><span data-en>Sony's price increase decision reflects a fundamental shift in consumer electronics hardware pricing logic: console manufacturers traditionally relied on a "sell hardware at a loss, recoup through software" business model, but the structural rise in semiconductor costs is now dismantling this model. Sony's gaming business accounts for over 30% of the group's total operating profit, yet its stock price has fallen 33% since November 2025, with deepening market concerns about its earnings outlook.</span></p>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-top:0.75rem;"><span data-zh>日经分析进一步指出了一个两难困境：涨价短期内或改善硬件收益率，但可能抑制主机销量，进而阻碍PlayStation Plus订阅服务与live服务的用户增长。参考历史数据，2022年四季度PS5销量曾同比下降16%，分析师普遍认为本轮涨价将进一步抑制2026年游戏市场整体增长。</span><span data-en>Nikkei analysis further highlights a dilemma: while price increases may improve hardware profitability in the short term, they could suppress console sales and consequently hinder user growth for PlayStation Plus subscriptions and live services. Historical data shows PS5 sales declined 16% YoY in Q4 2022, and analysts widely believe this round of price increases will further dampen overall gaming market growth in 2026.</span></p>
+      </div>
+      <div class="focus-section" style="background:rgba(245,158,11,0.05);border-left:3px solid var(--accent-amber);padding:1rem;border-radius:0 8px 8px 0;">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>行业影响判断</span><span data-en>Industry Impact Assessment</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>PS5的连续涨价不是孤立事件，而是半导体成本上涨向消费终端传导的标志性信号。任天堂Switch 2、微软Xbox等竞品的定价策略将面临同样的成本压力，整个游戏主机乃至消费电子硬件行业可能进入一个"高成本、高售价、低增量"的新常态。</span><span data-en>The consecutive PS5 price increases are not an isolated event but a landmark signal of semiconductor cost increases being passed through to consumer terminals. Competitors such as Nintendo Switch 2 and Microsoft Xbox will face the same cost pressures in their pricing strategies. The entire gaming console and broader consumer electronics hardware industry may be entering a new normal of "high costs, high prices, and low growth."</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Focus Event 2 -->
+  <div id="focus2" class="focus-card reveal" style="margin-bottom:2rem;">
+    <div class="focus-header" style="background:linear-gradient(135deg,rgba(59,130,246,0.08),rgba(6,182,212,0.08));">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <span class="font-orbitron" style="font-size:0.7rem;color:var(--accent-blue);letter-spacing:2px;">FOCUS 02</span>
+        <span class="tag-fact"><i class="fas fa-microchip" style="margin-right:4px;"></i><span data-zh>半导体</span><span data-en>Semiconductor</span></span>
+      </div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-top:0.75rem;line-height:1.5;"><span data-zh>日本半导体与电子产业整合潮——从"各自为战"到"日之丸联合"</span><span data-en>Japan's Semiconductor &amp; Electronics Industry Consolidation Wave — From "Going It Alone" to "Hinomaru Alliance"</span></h3>
+    </div>
+    <div class="focus-body">
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-fact"><span data-zh>事实</span><span data-en>Fact</span></span> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>本周日本电子产业出现密集的整合动作。最受关注的是三菱电机、东芝、罗姆三社启动功率半导体事业统合谈判，目标是打造全球第二大功率半导体联合体（"日之丸联合"）。与此同时，OKI与日立宣布整合ATM事业（OKI出资60%、日立40%，10月启动），日本ATM生产将集中为仅1家企业。全家便利店也宣布与七银行签约，将旗下1.6万台门店ATM全部替换为七银行最新设备。</span><span data-en>This week saw intensive consolidation moves in Japan's electronics industry. The most notable is the initiation of power semiconductor business integration negotiations among Mitsubishi Electric, Toshiba, and Rohm, aiming to create the world's second-largest power semiconductor consortium (the "Hinomaru Alliance"). Simultaneously, OKI and Hitachi announced the integration of their ATM businesses (OKI 60%, Hitachi 40%, launching in October), consolidating Japan's ATM production to just one entity. FamilyMart also announced a contract with Seven Bank to replace all 16,000 in-store ATMs with Seven Bank's latest equipment.</span></p>
+      </div>
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-fact"><span data-zh>事实</span><span data-en>Fact</span></span> <span data-zh>整合背景</span><span data-en>Consolidation Background</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>功率半导体方面，EV需求低迷叠加丰田集团旗下电装对罗姆的收购动作，使得中小规模厂商独立生存空间急剧收窄。ATM领域则是无现金支付普及的直接冲击——ATM利用量持续下降，但QR码对应等新功能投资需求不减，单一企业难以承担转型成本。</span><span data-en>In power semiconductors, sluggish EV demand combined with DENSO's (Toyota Group) acquisition moves on Rohm have drastically narrowed the survival space for small and mid-sized manufacturers. In the ATM sector, the direct impact of cashless payment adoption is evident — ATM usage continues to decline, yet investment demands for new features like QR code support remain unabated, making it difficult for individual companies to bear transformation costs alone.</span></p>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-top:0.75rem;"><span data-zh>此外，Kioxia（铠侠）股价受美国存储相关股下跌波及持续走低，NAND闪存市场承压明显。美光科技正与JDI谈判收购千叶茂原LCD工厂，计划将其转用于芯片封装测试后端工序，显示出半导体产能向后端工序转移的趋势。</span><span data-en>Additionally, Kioxia's stock price continues to decline, affected by falling U.S. memory-related stocks, with the NAND flash market under significant pressure. Micron Technology is negotiating with JDI to acquire the Chiba Mobara LCD factory, planning to repurpose it for chip packaging and testing back-end processes, indicating a trend of semiconductor capacity shifting toward back-end operations.</span></p>
+      </div>
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>这意味着什么</span><span data-en>What This Means</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>日本电子产业正经历一轮以"生存"为核心驱动力的整合潮。与过去以"扩张"为目标的并购不同，本轮整合的特征是：需求端萎缩（EV低迷、ATM减少）→ 产能过剩 → 抱团降本 → 集中资源应对下一轮技术竞争。对消费电子行业而言，功率半导体整合将影响电源管理芯片的供应格局，ATM整合则加速了无现金支付基础设施的升级，两者都将重塑消费电子产品的上游供应链和下游使用场景。</span><span data-en>Japan's electronics industry is undergoing a consolidation wave driven primarily by "survival." Unlike past M&amp;A activities aimed at "expansion," this round is characterized by: demand contraction (sluggish EV, declining ATM usage) → overcapacity → consolidation for cost reduction → concentrating resources for the next round of technological competition. For the consumer electronics industry, power semiconductor consolidation will reshape the supply landscape for power management chips, while ATM consolidation accelerates cashless payment infrastructure upgrades — both will reshape the upstream supply chain and downstream usage scenarios for consumer electronics products.</span></p>
+      </div>
+      <div class="focus-section" style="background:rgba(59,130,246,0.05);border-left:3px solid var(--accent-blue);padding:1rem;border-radius:0 8px 8px 0;">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>行业影响判断</span><span data-en>Industry Impact Assessment</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>功率半导体"日之丸联合"若成功，将形成与英飞凌、安森美抗衡的亚洲第一梯队力量，对消费电子电源管理、充电技术等领域产生深远影响。但整合过程中的组织磨合、技术路线统一等挑战不容忽视。</span><span data-en>If the power semiconductor "Hinomaru Alliance" succeeds, it will create an Asian first-tier force capable of competing with Infineon and onsemi, with far-reaching implications for consumer electronics power management and charging technologies. However, challenges such as organizational integration and technology roadmap alignment during the consolidation process should not be underestimated.</span></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Focus Event 3 -->
+  <div id="focus3" class="focus-card reveal">
+    <div class="focus-header" style="background:linear-gradient(135deg,rgba(20,184,166,0.08),rgba(34,197,94,0.08));">
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+        <span class="font-orbitron" style="font-size:0.7rem;color:var(--accent-teal);letter-spacing:2px;">FOCUS 03</span>
+        <span class="tag-fact"><i class="fas fa-robot" style="margin-right:4px;"></i><span data-zh>AI服务</span><span data-en>AI Services</span></span>
+      </div>
+      <h3 style="font-size:1.2rem;font-weight:700;margin-top:0.75rem;line-height:1.5;"><span data-zh>AI服务在消费场景的爆发式渗透</span><span data-en>Explosive Penetration of AI Services in Consumer Scenarios</span></h3>
+    </div>
+    <div class="focus-body">
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-fact"><span data-zh>事实</span><span data-en>Fact</span></span> <span data-zh>事件概述</span><span data-en>Event Overview</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>本周AI与数字化服务在日本消费场景的落地案例密集涌现。7-Eleven宣布4月1日起推出手机点餐服务「7NOW」，覆盖约1.5万家门店（全店7成），用户可通过APP下单支付、到店取餐，目标将炸物等品类销售额提升2成。全家便利店在东京部分门店测试14种语言实时翻译系统，通过收银台透明屏幕实现自然交流，还能为听障人士提供文字翻译。TOPPAN推出小型化AI翻译显示器UCDisplay Air，支持14语言，售价99万日元。JINS银座旗舰店引入多语言生成AI分析顾客面部推荐产品。此外，佐渡汽船引入AI电话应答服务，freee推出AI自动明细提取功能，鸟贵族母公司计划两年投入4亿日元推进DX战略。</span><span data-en>This week saw a surge of AI and digital service deployment cases in Japanese consumer scenarios. 7-Eleven announced the launch of its mobile ordering service "7NOW" from April 1, covering approximately 15,000 stores (70% of all stores), allowing users to order and pay via app for in-store pickup, targeting a 20% increase in fried food category sales. FamilyMart is testing a 14-language real-time translation system at select Tokyo stores, enabling natural communication through transparent checkout screens and providing text translation for hearing-impaired customers. TOPPAN launched the compact AI translation display UCDisplay Air, supporting 14 languages at ¥990,000. JINS' Ginza flagship store introduced multilingual generative AI for facial analysis-based product recommendations. Additionally, Sado Kisen introduced AI phone answering services, freee launched AI automatic transaction detail extraction, and Torikizoku's parent company plans to invest ¥400 million over two years in its DX strategy.</span></p>
+      </div>
+      <div class="focus-section">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>这意味着什么</span><span data-en>What This Means</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>AI正在从"技术概念"快速转化为"消费场景基础设施"。值得注意的是，本周的AI落地案例集中在三个方向：一是零售效率提升（7-Eleven手机点餐），二是跨语言服务（全家翻译系统、TOPPAN翻译显示器），三是个性化推荐（JINS面部分析）。这三个方向恰好对应了日本消费市场的三大结构性需求：劳动力短缺下的效率提升、入境游客激增下的多语言服务、消费升级下的个性化体验。</span><span data-en>AI is rapidly transforming from a "technology concept" into "consumer scenario infrastructure." Notably, this week's AI deployment cases concentrated in three directions: retail efficiency improvement (7-Eleven mobile ordering), cross-language services (FamilyMart translation system, TOPPAN translation display), and personalized recommendations (JINS facial analysis). These three directions precisely correspond to three structural demands in Japan's consumer market: efficiency improvement amid labor shortages, multilingual services amid surging inbound tourism, and personalized experiences amid consumption upgrading.</span></p>
+      </div>
+      <div class="focus-section" style="background:rgba(20,184,166,0.05);border-left:3px solid var(--accent-teal);padding:1rem;border-radius:0 8px 8px 0;">
+        <div class="focus-section-title"><span class="tag-analysis"><span data-zh>分析观点</span><span data-en>Analysis</span></span> <span data-zh>行业影响判断</span><span data-en>Industry Impact Assessment</span></div>
+        <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>对消费电子企业而言，AI不再只是产品内置功能（如手机AI助手），而是正在成为连接硬件与服务的"中间层"。未来消费电子的竞争力将越来越取决于AI服务生态的丰富度，而非单纯的硬件参数。</span><span data-en>For consumer electronics companies, AI is no longer just a built-in product feature (such as smartphone AI assistants) but is becoming the "middleware" connecting hardware and services. The competitiveness of consumer electronics will increasingly depend on the richness of the AI service ecosystem rather than hardware specifications alone.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 3: 行业动态扫描 ==================== -->
+<section id="dynamics" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 03</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><span data-zh>行业动态扫描</span><span data-en>Industry Dynamics Scan</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:1rem;">
+    <!-- 3.1 终端市场 -->
+    <div class="card reveal" style="overflow:hidden;">
+      <button class="accordion-toggle" onclick="toggleAccordion(this)" style="width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:between;gap:12px;color:var(--text-primary);text-align:left;">
+        <i class="fas fa-chart-line" style="color:var(--accent-blue);font-size:1.1rem;min-width:24px;"></i>
+        <span style="flex:1;font-size:1rem;font-weight:700;"><span data-zh>3.1 终端市场：PC出货量深度下滑，新生活商战格局分化</span><span data-en>3.1 Terminal Market: Deep PC Shipment Decline, Diverging "New Life" Sales Campaign Landscape</span></span>
+        <i class="fas fa-chevron-down chevron" style="color:var(--text-muted);font-size:0.8rem;"></i>
+      </button>
+      <div class="accordion-content">
+        <div style="padding:0 1.5rem 1.5rem;">
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-bottom:1rem;"><span data-zh>日本2月PC出货量同比下降12.5%至60.4万台，出货金额降11.9%至766亿日元。笔记本PC占出货九成，同比降12.9%，其中移动笔记本降幅高达23.1%，主因是去年GIGA学校计划大规模换机需求透支了市场。这一数据表明，日本PC市场正处于后疫情时代需求正常化的深度调整期，短期内难以恢复增长。</span><span data-en>Japan's February PC shipments declined 12.5% YoY to 604,000 units, with shipment value down 11.9% to ¥76.6 billion. Notebooks accounted for 90% of shipments, declining 12.9% YoY, with mobile notebooks dropping as much as 23.1%, primarily due to last year's GIGA School Program mass device replacement exhausting market demand. This data indicates that Japan's PC market is in a deep post-pandemic demand normalization adjustment period, with growth unlikely to recover in the short term.</span></p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>与此同时，春季"新生活商战"正在展开。K's电器等家电量贩店加大新生活商品陈列力度，无印良品举办3月20-30日的会员周间活动（10%折扣），山田电机与相机北村在池袋开设首家合作门店经营中古相机。体组成计市场持续扩容，欧姆龙、百利达、宜丽客等品牌竞相拓展功能。零售端呈现"新品疲软、中古活跃、健康品类增长"的结构性分化。</span><span data-en>Meanwhile, the spring "New Life Sales Campaign" (Shin-Seikatsu Shōsen) is underway. Electronics retailers like K's Denki are expanding new-life product displays, MUJI held a member week event from March 20-30 (10% discount), and Yamada Denki partnered with Camera Kitamura to open their first joint store in Ikebukuro selling pre-owned cameras. The body composition monitor market continues to expand, with brands like OMRON, Tanita, and ELECOM competing to add features. The retail landscape shows structural divergence: "sluggish new products, active pre-owned market, and growing health categories."</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.2 产品与配件 -->
+    <div class="card reveal reveal-delay-1" style="overflow:hidden;">
+      <button class="accordion-toggle" onclick="toggleAccordion(this)" style="width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:between;gap:12px;color:var(--text-primary);text-align:left;">
+        <i class="fas fa-headphones" style="color:var(--accent-cyan);font-size:1.1rem;min-width:24px;"></i>
+        <span style="flex:1;font-size:1rem;font-weight:700;"><span data-zh>3.2 产品与配件：无人机、电竞外设、平价音频多点开花</span><span data-en>3.2 Products &amp; Accessories: Drones, Esports Peripherals, and Budget Audio Blooming</span></span>
+        <i class="fas fa-chevron-down chevron" style="color:var(--text-muted);font-size:0.8rem;"></i>
+      </button>
+      <div class="accordion-content">
+        <div style="padding:0 1.5rem 1.5rem;">
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>消费电子新品方面，DJI发布Avata 360无人机，支持8K拍摄与全方向障碍检测，标志着消费级无人机进入360度影像时代。Razer推出EVA-2号机联名电竞系列（鼠标、键盘等），IP联名策略持续深化。堂吉诃德推出5000日元以下的开放式无线耳机，进一步拉低平价音频门槛。Happy Hacking Keyboard推出移动办公桌面产品，瞄准远程办公场景。富士胶片23款产品获2026 iF设计奖，彰显日本消费电子在工业设计领域的持续竞争力。</span><span data-en>In new consumer electronics products, DJI released the Avata 360 drone with 8K shooting and omnidirectional obstacle detection, marking the entry of consumer drones into the 360-degree imaging era. Razer launched an EVA Unit-02 collaboration esports series (mouse, keyboard, etc.), deepening its IP collaboration strategy. Don Quijote introduced open-ear wireless earbuds priced under ¥5,000, further lowering the budget audio threshold. Happy Hacking Keyboard launched mobile office desktop products targeting remote work scenarios. Fujifilm won 2026 iF Design Awards for 23 products, demonstrating Japan's sustained competitiveness in consumer electronics industrial design.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.3 企业动态 -->
+    <div class="card reveal reveal-delay-2" style="overflow:hidden;">
+      <button class="accordion-toggle" onclick="toggleAccordion(this)" style="width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:between;gap:12px;color:var(--text-primary);text-align:left;">
+        <i class="fas fa-building" style="color:var(--accent-amber);font-size:1.1rem;min-width:24px;"></i>
+        <span style="flex:1;font-size:1rem;font-weight:700;"><span data-zh>3.3 企业动态：索尼多线布局，传统巨头加速转型</span><span data-en>3.3 Corporate Developments: Sony's Multi-Front Strategy, Legacy Giants Accelerating Transformation</span></span>
+        <i class="fas fa-chevron-down chevron" style="color:var(--text-muted);font-size:0.8rem;"></i>
+      </button>
+      <div class="accordion-content">
+        <div style="padding:0 1.5rem 1.5rem;">
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-bottom:1rem;"><span data-zh>索尼集团本周动态丰富。除PS5涨价外，2026年春斗结果显示主任级月增薪24,000日元（5.4%），半导体子公司月增27,000日元（6.1%），新人起薪统一上调1万日元，大学毕业生月起薪超333,000日元——半导体人才争夺战的激烈程度可见一斑。文化娱乐方面，YOASOBI数字分身沉浸式音乐活动在索尼本社举办，展示了索尼在虚实融合娱乐领域的技术储备。wena智能手表项目被augment AI接手后推出wena X，众筹4分钟达1000万日元、5日破3亿日元，证明了小众硬件通过AI赋能仍有市场空间。</span><span data-en>Sony Group had an eventful week. Beyond the PS5 price increase, 2026 Shuntō (spring wage negotiation) results showed manager-level monthly salary increases of ¥24,000 (5.4%), semiconductor subsidiary increases of ¥27,000 (6.1%), and a uniform ¥10,000 increase in starting salaries, with university graduate monthly starting pay exceeding ¥333,000 — illustrating the intensity of the semiconductor talent war. In entertainment, a YOASOBI digital avatar immersive music event was held at Sony headquarters, showcasing Sony's technology reserves in virtual-real convergence entertainment. The wena smartwatch project, taken over by augment AI, launched wena X, reaching ¥10 million in crowdfunding within 4 minutes and surpassing ¥300 million in 5 days, proving that niche hardware still has market potential through AI empowerment.</span></p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>其他企业方面，精工爱普生子公司更名为"爱普生日本"，加速从硬件制造向DX服务转型。西铁城实现增收增利四连冠，北美钟表市场表现强劲。雅萌在京都开设日本首家长设门店，美容家电品牌加速线下布局。雅马哈推出在线音乐学习服务，目标2028年3月期达1.5万用户、15亿日元营收，传统乐器企业向数字服务延伸。</span><span data-en>Among other companies, Seiko Epson's subsidiary was renamed "Epson Japan," accelerating its transformation from hardware manufacturing to DX services. Citizen achieved its fourth consecutive year of revenue and profit growth, with strong performance in the North American watch market. YA-MAN opened its first permanent store in Japan in Kyoto, as beauty electronics brands accelerate offline expansion. Yamaha launched an online music learning service, targeting 15,000 users and ¥1.5 billion in revenue by March 2028, as the traditional instrument maker extends into digital services.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.4 电信与基础设施 -->
+    <div class="card reveal reveal-delay-3" style="overflow:hidden;">
+      <button class="accordion-toggle" onclick="toggleAccordion(this)" style="width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:between;gap:12px;color:var(--text-primary);text-align:left;">
+        <i class="fas fa-tower-cell" style="color:var(--accent-teal);font-size:1.1rem;min-width:24px;"></i>
+        <span style="flex:1;font-size:1rem;font-weight:700;"><span data-zh>3.4 电信与基础设施：135年服务终结，无现金化加速</span><span data-en>3.4 Telecom &amp; Infrastructure: End of 135-Year Services, Cashless Acceleration</span></span>
+        <i class="fas fa-chevron-down chevron" style="color:var(--text-muted);font-size:0.8rem;"></i>
+      </button>
+      <div class="accordion-content">
+        <div style="padding:0 1.5rem 1.5rem;">
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;margin-bottom:1rem;"><span data-zh>NTT东西日本于3月末正式终止104号码查询服务及纸质电话簿《タウンページ》发行，两项服务均始于1890年，有135年历史。2024年度104使用量仅约1000万次，较峰值12.8亿次暴跌超99%，智能手机的普及彻底改变了信息查询方式。KDDI则因子公司不正会计问题（涉及约2460亿日元架空计上），决定撤退互联网广告代理事业，企业治理风险对业务布局的冲击值得警惕。</span><span data-en>NTT East and West Japan officially terminated the 104 directory assistance service and the print telephone directory "Town Page" at the end of March — both services dating back to 1890, with 135 years of history. The 104 service saw only about 10 million uses in FY2024, a plunge of over 99% from its peak of 1.28 billion, as smartphone proliferation completely transformed information lookup methods. KDDI decided to withdraw from the internet advertising agency business due to accounting irregularities at a subsidiary (involving approximately ¥246 billion in fictitious bookings), highlighting the impact of corporate governance risks on business strategy.</span></p>
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>全家便利店与七银行签约替换1.6万台ATM的举措，标志着日本无现金支付基础设施进入新一轮升级周期。新设备不仅支持现金存取，还能为无现金支付充值，体现了"现金与无现金并存"的日本特色过渡路径。东京站100周年纪念Suica约210万张未使用将于3月31日统一失效，也从侧面反映了IC卡向手机支付迁移的大趋势。</span><span data-en>FamilyMart's contract with Seven Bank to replace 16,000 ATMs marks a new upgrade cycle for Japan's cashless payment infrastructure. The new equipment supports not only cash deposits and withdrawals but also cashless payment top-ups, reflecting Japan's distinctive transition path of "cash and cashless coexistence." The expiration of approximately 2.1 million unused Tokyo Station 100th Anniversary commemorative Suica cards on March 31 also reflects the broader trend of IC card migration to mobile payments.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3.5 安全与监管 -->
+    <div class="card reveal reveal-delay-4" style="overflow:hidden;">
+      <button class="accordion-toggle" onclick="toggleAccordion(this)" style="width:100%;padding:1.25rem 1.5rem;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:between;gap:12px;color:var(--text-primary);text-align:left;">
+        <i class="fas fa-shield-halved" style="color:var(--accent-red);font-size:1.1rem;min-width:24px;"></i>
+        <span style="flex:1;font-size:1rem;font-weight:700;"><span data-zh>3.5 安全与监管：锂电池火灾激增，校园设备安全事件</span><span data-en>3.5 Safety &amp; Regulation: Lithium Battery Fires Surge, Campus Device Safety Incidents</span></span>
+        <i class="fas fa-chevron-down chevron" style="color:var(--text-muted);font-size:0.8rem;"></i>
+      </button>
+      <div class="accordion-content">
+        <div style="padding:0 1.5rem 1.5rem;">
+          <p style="font-size:0.88rem;color:var(--text-secondary);line-height:1.9;"><span data-zh>2025年移动锂电池火灾达482件，同比激增66%；含锂电池在内的电池火灾共1,297件，同比增32%。主因包括外部冲击、高温使用保管及产品缺陷，消防厅已呼吁民众提高危险认知。世田谷区学校配备的Belkin平板键盘壳发生4起冒烟事件，校园消费电子设备安全问题浮出水面。爱知县丰明市智能手机使用条例调研显示，超六成幼儿3岁前接触数字设备，超两成中学生日均使用超4小时，数字设备使用低龄化趋势引发社会关注。此外，任天堂Switch违规改装售卖案4人被送检，知识产权保护执法力度加强。</span><span data-en>Mobile lithium battery fires reached 482 cases in 2025, surging 66% YoY; total battery fires including lithium batteries reached 1,297 cases, up 32% YoY. Primary causes include external impact, high-temperature use and storage, and product defects, with the Fire and Disaster Management Agency calling for increased public awareness. Four smoking incidents involving Belkin tablet keyboard cases at schools in Setagaya Ward brought campus consumer electronics device safety issues to the forefront. A smartphone usage ordinance survey in Toyoake City, Aichi Prefecture, revealed that over 60% of toddlers are exposed to digital devices before age 3, and over 20% of middle school students use them more than 4 hours daily, raising social concerns about the trend of younger digital device usage. Additionally, four individuals were referred to prosecutors for illegally modifying and selling Nintendo Switch consoles, signaling strengthened intellectual property protection enforcement.</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 4: 风险警示 ==================== -->
+<section id="risks" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 04</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><i class="fas fa-triangle-exclamation" style="color:var(--accent-amber);margin-right:8px;"></i><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+    <div class="section-line" style="background:linear-gradient(90deg,var(--accent-red),transparent);"></div>
+  </div>
+
+  <div style="display:grid;gap:1.5rem;">
+    <!-- Risk 1 -->
+    <div class="risk-card reveal">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(239,68,68,0.15);color:var(--accent-red);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><span data-zh>高风险</span><span data-en>High Risk</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>风险一：半导体成本上涨的持续传导风险</span><span data-en>Risk 1: Persistent Pass-Through Risk of Rising Semiconductor Costs</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>风险等级</span><span data-en>Risk Level</span></span>
+          <span class="font-orbitron" style="font-size:0.75rem;color:var(--accent-red);">90%</span>
+        </div>
+        <div class="risk-bar-track"><div class="risk-bar-fill" style="width:0%;background:linear-gradient(90deg,#ef4444,#f97316);" data-width="90%"></div></div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-red);margin-bottom:0.5rem;"><i class="fas fa-exclamation-circle" style="margin-right:6px;"></i><span data-zh>风险描述</span><span data-en>Risk Description</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>AI普及推动半导体内存需求激增，叠加中东地缘冲突导致氦气供应减产14%（卡塔尔占全球氦气供应三分之一），半导体制造成本面临双重上行压力。索尼PS5已四次涨价，Kioxia股价持续下跌，NAND闪存市场承压。</span><span data-en>AI proliferation is driving surging semiconductor memory demand, compounded by Middle East geopolitical conflicts reducing helium supply by 14% (Qatar accounts for one-third of global helium supply), creating dual upward pressure on semiconductor manufacturing costs. Sony has raised PS5 prices four times, Kioxia's stock continues to decline, and the NAND flash market remains under pressure.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-amber);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>NAND/DRAM现货价格走势、氦气国际市场报价、霍尔木兹海峡局势、主要半导体厂商财报中的成本项变化。</span><span data-en>NAND/DRAM spot price trends, international helium market prices, Strait of Hormuz situation, and cost item changes in major semiconductor manufacturers' financial reports.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-orange);margin-bottom:0.5rem;"><i class="fas fa-bolt" style="margin-right:6px;"></i><span data-zh>潜在影响</span><span data-en>Potential Impact</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消费电子终端产品全面涨价风险上升，尤其是游戏主机、PC、智能手机等内存密集型产品。企业需评估供应链中对中东氦气的依赖度，并关注替代供应源的开发进展。</span><span data-en>The risk of across-the-board price increases for consumer electronics terminal products is rising, especially for memory-intensive products such as gaming consoles, PCs, and smartphones. Companies need to assess their supply chain dependence on Middle Eastern helium and monitor the development of alternative supply sources.</span></p>
+      </div>
+    </div>
+
+    <!-- Risk 2 -->
+    <div class="risk-card reveal reveal-delay-1">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(249,115,22,0.15);color:var(--accent-orange);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><span data-zh>中高风险</span><span data-en>Medium-High Risk</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>风险二：锂电池安全监管收紧风险</span><span data-en>Risk 2: Tightening Lithium Battery Safety Regulation Risk</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>风险等级</span><span data-en>Risk Level</span></span>
+          <span class="font-orbitron" style="font-size:0.75rem;color:var(--accent-orange);">75%</span>
+        </div>
+        <div class="risk-bar-track"><div class="risk-bar-fill" style="width:0%;background:linear-gradient(90deg,#f97316,#f59e0b);" data-width="75%"></div></div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-red);margin-bottom:0.5rem;"><i class="fas fa-exclamation-circle" style="margin-right:6px;"></i><span data-zh>风险描述</span><span data-en>Risk Description</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>移动锂电池火灾同比增66%至482件，消防厅已发出警示。Belkin平板键盘壳在学校发生冒烟事件，校园场景的安全敏感度极高。</span><span data-en>Mobile lithium battery fires increased 66% YoY to 482 cases, with the Fire and Disaster Management Agency issuing warnings. Belkin tablet keyboard cases experienced smoking incidents at schools, where safety sensitivity is extremely high.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-amber);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消防厅/经产省新规动向、PSE认证标准修订、校园设备采购安全标准变化、产品召回公告频率。</span><span data-en>Fire and Disaster Management Agency / METI new regulation developments, PSE certification standard revisions, changes in campus device procurement safety standards, and product recall announcement frequency.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-orange);margin-bottom:0.5rem;"><i class="fas fa-bolt" style="margin-right:6px;"></i><span data-zh>潜在影响</span><span data-en>Potential Impact</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消费电子企业面临产品安全合规成本上升、召回风险增大、品牌声誉损失等多重压力。尤其是充电宝、无线耳机、平板配件等品类，可能成为监管重点。</span><span data-en>Consumer electronics companies face multiple pressures including rising product safety compliance costs, increased recall risks, and brand reputation damage. Categories such as power banks, wireless earbuds, and tablet accessories may become regulatory focus areas.</span></p>
+      </div>
+    </div>
+
+    <!-- Risk 3 -->
+    <div class="risk-card reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(249,115,22,0.15);color:var(--accent-orange);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><span data-zh>中高风险</span><span data-en>Medium-High Risk</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>风险三：日本股市技术性回调对消费电子投资的抑制</span><span data-en>Risk 3: Japanese Stock Market Technical Correction Dampening Consumer Electronics Investment</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>风险等级</span><span data-en>Risk Level</span></span>
+          <span class="font-orbitron" style="font-size:0.75rem;color:var(--accent-orange);">70%</span>
+        </div>
+        <div class="risk-bar-track"><div class="risk-bar-fill" style="width:0%;background:linear-gradient(90deg,#f97316,#f59e0b);" data-width="70%"></div></div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-red);margin-bottom:0.5rem;"><i class="fas fa-exclamation-circle" style="margin-right:6px;"></i><span data-zh>风险描述</span><span data-en>Risk Description</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>东京证交所Topix下跌3.4%，较2月高点回调超10%进入技术性回调区间，日经225跌3.5%，电子、机械板块领跌。特朗普对伊朗霍尔木兹海峡的威胁推升风险厌恶情绪。</span><span data-en>The Tokyo Stock Exchange TOPIX fell 3.4%, entering technical correction territory with a decline of over 10% from its February high. The Nikkei 225 dropped 3.5%, with electronics and machinery sectors leading the decline. Trump's threats regarding Iran and the Strait of Hormuz have elevated risk aversion sentiment.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-amber);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>日经225电子板块指数、外资净买入/卖出额、日元汇率波动、VIX恐慌指数。</span><span data-en>Nikkei 225 electronics sector index, foreign investor net buying/selling, JPY exchange rate fluctuations, and VIX fear index.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-orange);margin-bottom:0.5rem;"><i class="fas fa-bolt" style="margin-right:6px;"></i><span data-zh>潜在影响</span><span data-en>Potential Impact</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>股市下行可能抑制消费电子企业的资本开支意愿和并购活动，同时影响消费者信心和高价电子产品的购买意愿。索尼股价自2025年11月以来已下跌33%，若市场持续低迷，可能影响其在游戏、半导体等领域的投资节奏。</span><span data-en>A declining stock market may suppress consumer electronics companies' capital expenditure willingness and M&amp;A activity, while also affecting consumer confidence and willingness to purchase high-priced electronics. Sony's stock price has fallen 33% since November 2025; if the market continues to languish, it could impact its investment pace in gaming, semiconductors, and other areas.</span></p>
+      </div>
+    </div>
+
+    <!-- Risk 4 -->
+    <div class="risk-card reveal reveal-delay-3">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(245,158,11,0.15);color:var(--accent-amber);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><span data-zh>中风险</span><span data-en>Medium Risk</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>风险四：PC市场需求透支后的库存风险</span><span data-en>Risk 4: Inventory Risk Following PC Market Demand Exhaustion</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+          <span style="font-size:0.75rem;color:var(--text-muted);"><span data-zh>风险等级</span><span data-en>Risk Level</span></span>
+          <span class="font-orbitron" style="font-size:0.75rem;color:var(--accent-amber);">60%</span>
+        </div>
+        <div class="risk-bar-track"><div class="risk-bar-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#eab308);" data-width="60%"></div></div>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-red);margin-bottom:0.5rem;"><i class="fas fa-exclamation-circle" style="margin-right:6px;"></i><span data-zh>风险描述</span><span data-en>Risk Description</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>2月PC出货量同比降12.5%，移动笔记本降23.1%，GIGA学校计划换机需求耗尽后市场缺乏新增长点。</span><span data-en>February PC shipments declined 12.5% YoY, with mobile notebooks down 23.1%. After the GIGA School Program replacement demand was exhausted, the market lacks new growth drivers.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-amber);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>月度PC出货量趋势、渠道库存水位、Windows更新周期对换机需求的拉动效果、企业IT投资预算变化。</span><span data-en>Monthly PC shipment trends, channel inventory levels, Windows update cycle impact on replacement demand, and changes in corporate IT investment budgets.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-orange);margin-bottom:0.5rem;"><i class="fas fa-bolt" style="margin-right:6px;"></i><span data-zh>潜在影响</span><span data-en>Potential Impact</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>PC厂商和零售渠道面临库存积压风险，可能引发价格战，进一步压缩利润空间。</span><span data-en>PC manufacturers and retail channels face inventory buildup risks, potentially triggering price wars that further compress profit margins.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 5: 趋势研判 ==================== -->
+<section id="trends" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 05</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><i class="fas fa-arrow-trend-up" style="color:var(--accent-teal);margin-right:8px;"></i><span data-zh>趋势研判</span><span data-en>Trend Analysis</span></h2>
+    <div class="section-line" style="background:linear-gradient(90deg,var(--accent-teal),transparent);"></div>
+  </div>
+
+  <div style="display:grid;gap:1.5rem;">
+    <!-- Trend 1 -->
+    <div class="trend-card reveal">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(20,184,166,0.15);color:var(--accent-teal);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><i class="fas fa-robot" style="margin-right:4px;"></i><span data-zh>AI转型</span><span data-en>AI Transformation</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>趋势一：消费电子行业从"硬件驱动"向"AI服务驱动"加速转型</span><span data-en>Trend 1: Consumer Electronics Industry Accelerating Shift from "Hardware-Driven" to "AI Service-Driven"</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-cyan);margin-bottom:0.5rem;"><i class="fas fa-database" style="margin-right:6px;"></i><span data-zh>研判依据</span><span data-en>Assessment Basis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>本周7-Eleven「7NOW」覆盖1.5万家门店、全家14语言翻译系统、TOPPAN AI翻译显示器、JINS生成AI推荐、佐渡汽船AI电话应答、freee AI明细提取等多个案例密集出现，显示AI服务在消费场景的渗透已从"试点"进入"规模化部署"阶段。鸟贵族母公司计划两年投入4亿日元DX战略，传统企业的数字化投资意愿显著增强。</span><span data-en>This week saw a cluster of cases including 7-Eleven's "7NOW" covering 15,000 stores, FamilyMart's 14-language translation system, TOPPAN's AI translation display, JINS' generative AI recommendations, Sado Kisen's AI phone answering, and freee's AI transaction detail extraction, indicating that AI service penetration in consumer scenarios has moved from "pilot" to "scaled deployment" stage. Torikizoku's parent company plans to invest ¥400 million over two years in its DX strategy, showing significantly strengthened digital investment willingness among traditional enterprises.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-teal);margin-bottom:0.5rem;"><i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>分析观点</span><span data-en>Analysis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消费电子企业的竞争维度正在从"硬件参数"扩展到"AI服务生态"。wena X众筹5日破3亿日元的案例表明，即使是小众硬件，通过AI赋能也能激活市场需求。未来2-3年，AI将成为消费电子产品差异化竞争的核心要素。</span><span data-en>The competitive dimension for consumer electronics companies is expanding from "hardware specifications" to "AI service ecosystem." The wena X crowdfunding case, surpassing ¥300 million in 5 days, demonstrates that even niche hardware can activate market demand through AI empowerment. Over the next 2-3 years, AI will become the core differentiating factor in consumer electronics competition.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-blue);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>企业DX投资额、AI功能搭载率、服务收入占比变化。</span><span data-en>Corporate DX investment amounts, AI feature adoption rates, and changes in service revenue share.</span></p>
+      </div>
+    </div>
+
+    <!-- Trend 2 -->
+    <div class="trend-card reveal reveal-delay-1">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(59,130,246,0.15);color:var(--accent-blue);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><i class="fas fa-handshake" style="margin-right:4px;"></i><span data-zh>产业整合</span><span data-en>Industry Consolidation</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>趋势二：日本电子产业整合将从半导体向终端制造延伸</span><span data-en>Trend 2: Japan's Electronics Industry Consolidation Will Extend from Semiconductors to Terminal Manufacturing</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-cyan);margin-bottom:0.5rem;"><i class="fas fa-database" style="margin-right:6px;"></i><span data-zh>研判依据</span><span data-en>Assessment Basis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>功率半导体三社统合、ATM事业二社合并、美光收购JDI工厂等事件表明，整合浪潮已覆盖半导体、金融终端、显示面板等多个环节。背景是EV需求低迷、无现金化加速、NAND市场承压等多重结构性变化。</span><span data-en>Events including the three-company power semiconductor integration, two-company ATM business merger, and Micron's acquisition of JDI's factory indicate that the consolidation wave has already covered semiconductors, financial terminals, display panels, and other segments. The backdrop includes sluggish EV demand, accelerating cashless adoption, and NAND market pressure among multiple structural changes.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-teal);margin-bottom:0.5rem;"><i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>分析观点</span><span data-en>Analysis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>当前整合集中在上游和中游环节，但随着PC出货量持续下滑（2月同比降12.5%）、消费电子终端市场增长乏力，下游终端制造商的整合压力也在积聚。日本消费电子产业可能在未来1-2年出现更多跨企业、跨品类的业务整合案例。</span><span data-en>Current consolidation is concentrated in upstream and midstream segments, but as PC shipments continue to decline (down 12.5% YoY in February) and consumer electronics terminal market growth stagnates, consolidation pressure on downstream terminal manufacturers is also building. Japan's consumer electronics industry may see more cross-company, cross-category business consolidation cases in the next 1-2 years.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-blue);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>主要电子企业的事业重组公告、跨企业合资/统合谈判动态、产能利用率变化。</span><span data-en>Major electronics companies' business restructuring announcements, cross-company joint venture/integration negotiation developments, and capacity utilization rate changes.</span></p>
+      </div>
+    </div>
+
+    <!-- Trend 3 -->
+    <div class="trend-card reveal reveal-delay-2">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(34,197,94,0.15);color:var(--accent-green);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><i class="fas fa-plane-arrival" style="margin-right:4px;"></i><span data-zh>入境需求</span><span data-en>Inbound Demand</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>趋势三：入境游客需求正在重塑消费电子零售与服务形态</span><span data-en>Trend 3: Inbound Tourist Demand Is Reshaping Consumer Electronics Retail and Service Models</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-cyan);margin-bottom:0.5rem;"><i class="fas fa-database" style="margin-right:6px;"></i><span data-zh>研判依据</span><span data-en>Assessment Basis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>全家14语言翻译系统、TOPPAN多语言AI翻译显示器、JINS多语言生成AI、三井不动产酒店导入256语言医疗通译服务、CHARGESPOT共享充电宝覆盖东急线51站、Visa成为KCON JAPAN 2026官方支付合作伙伴——多条资讯交叉印证，入境游客需求正在驱动消费电子零售和服务的多语言化、无现金化升级。</span><span data-en>FamilyMart's 14-language translation system, TOPPAN's multilingual AI translation display, JINS' multilingual generative AI, Mitsui Fudosan hotels introducing 256-language medical interpretation services, CHARGESPOT shared power banks covering 51 Tokyu Line stations, and Visa becoming the official payment partner for KCON JAPAN 2026 — multiple news items cross-validate that inbound tourist demand is driving multilingual and cashless upgrades in consumer electronics retail and services.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-teal);margin-bottom:0.5rem;"><i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>分析观点</span><span data-en>Analysis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>日本消费电子零售正在从"面向日本消费者"转向"面向全球游客"。这一转型不仅带来翻译设备、支付终端等硬件需求，更催生了AI翻译、跨境支付、共享充电等服务生态。对消费电子企业而言，"入境游客友好型"产品和服务将成为新的增长点。</span><span data-en>Japan's consumer electronics retail is shifting from "serving Japanese consumers" to "serving global tourists." This transformation not only creates hardware demand for translation devices and payment terminals but also spawns service ecosystems including AI translation, cross-border payments, and shared charging. For consumer electronics companies, "inbound tourist-friendly" products and services will become a new growth driver.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-blue);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>入境游客消费额、免税店电子产品销售额、多语言服务设备出货量、跨境支付交易额。</span><span data-en>Inbound tourist spending, duty-free electronics sales, multilingual service device shipments, and cross-border payment transaction volumes.</span></p>
+      </div>
+    </div>
+
+    <!-- Trend 4 -->
+    <div class="trend-card reveal reveal-delay-3">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1rem;">
+        <span style="background:rgba(6,182,212,0.15);color:var(--accent-cyan);padding:4px 12px;border-radius:20px;font-size:0.75rem;font-weight:700;"><i class="fas fa-shield-halved" style="margin-right:4px;"></i><span data-zh>安全监管</span><span data-en>Safety Regulation</span></span>
+        <h3 style="font-size:1.05rem;font-weight:700;"><span data-zh>趋势四：消费电子安全监管进入新周期</span><span data-en>Trend 4: Consumer Electronics Safety Regulation Entering a New Cycle</span></h3>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-cyan);margin-bottom:0.5rem;"><i class="fas fa-database" style="margin-right:6px;"></i><span data-zh>研判依据</span><span data-en>Assessment Basis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>锂电池火灾同比增66%（482件）、Belkin平板键盘壳校园冒烟事件、任天堂Switch违规改装案送检、コロプラ推出图像保护应用应对AI训练盗用——安全议题从产品物理安全扩展到数字安全和知识产权保护。</span><span data-en>Lithium battery fires up 66% YoY (482 cases), Belkin tablet keyboard case smoking incidents at schools, Nintendo Switch illegal modification case referrals to prosecutors, and COLOPL launching an image protection app against AI training misuse — safety issues are expanding from physical product safety to digital safety and intellectual property protection.</span></p>
+      </div>
+      <div style="margin-bottom:1rem;">
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-teal);margin-bottom:0.5rem;"><i class="fas fa-lightbulb" style="margin-right:6px;"></i><span data-zh>分析观点</span><span data-en>Analysis</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消费电子安全监管正在从"事后召回"转向"事前预防"，从"物理安全"扩展到"数字安全"。企业需要建立覆盖产品全生命周期的安全管理体系，包括电池安全、数据保护、AI伦理、知识产权等多个维度。</span><span data-en>Consumer electronics safety regulation is shifting from "post-incident recall" to "preventive measures," expanding from "physical safety" to "digital safety." Companies need to establish safety management systems covering the entire product lifecycle, including battery safety, data protection, AI ethics, and intellectual property across multiple dimensions.</span></p>
+      </div>
+      <div>
+        <p style="font-size:0.85rem;font-weight:600;color:var(--accent-blue);margin-bottom:0.5rem;"><i class="fas fa-eye" style="margin-right:6px;"></i><span data-zh>关注指标</span><span data-en>Key Indicators to Watch</span></p>
+        <p style="font-size:0.85rem;color:var(--text-secondary);line-height:1.8;"><span data-zh>消防厅/经产省安全标准修订动态、产品召回件数、AI相关法规进展、知识产权诉讼案件数。</span><span data-en>Fire and Disaster Management Agency / METI safety standard revision developments, product recall counts, AI-related regulatory progress, and intellectual property litigation case numbers.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CHAPTER 6: 附录 ==================== -->
+<section id="appendix" style="max-width:900px;margin:0 auto;padding:4rem 1.5rem;">
+  <div class="section-heading reveal">
+    <span class="section-num">Chapter 06</span>
+    <h2 style="font-size:1.5rem;font-weight:900;"><i class="fas fa-chart-bar" style="color:var(--accent-blue);margin-right:8px;"></i><span data-zh>附录</span><span data-en>Appendix</span></h2>
+    <div class="section-line"></div>
+  </div>
+
+  <!-- 6.1 栏目命中量分布 -->
+  <div class="card reveal" style="padding:2rem;margin-bottom:2rem;">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:0.5rem;"><span data-zh>6.1 栏目命中量分布</span><span data-en>6.1 Category Hit Distribution</span></h3>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-bottom:1.5rem;"><span data-zh>注：单条资讯可能同时命中多个栏目，因此占比合计超过100%。总独立资讯数为227条。</span><span data-en>Note: A single news item may hit multiple categories, so percentages total more than 100%. Total independent news items: 227.</span></p>
+
+    <div class="bar-chart" id="barChart">
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>产业</span><span data-en>Industry</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#3b82f6,#06b6d4);" data-width="100%"><span data-zh>119条</span><span data-en>119</span></div></div>
+        <div class="bar-value">52.4%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>民生</span><span data-en>Livelihood</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#3b82f6,#14b8a6);" data-width="67.2%"><span data-zh>80条</span><span data-en>80</span></div></div>
+        <div class="bar-value">35.2%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>经济</span><span data-en>Economy</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#06b6d4,#14b8a6);" data-width="46.2%"><span data-zh>55条</span><span data-en>55</span></div></div>
+        <div class="bar-value">24.2%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>科技</span><span data-en>Tech</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#14b8a6,#22c55e);" data-width="42.9%"><span data-zh>51条</span><span data-en>51</span></div></div>
+        <div class="bar-value">22.5%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>人文</span><span data-en>Culture</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#22c55e,#84cc16);" data-width="23.5%"><span data-zh>28条</span><span data-en>28</span></div></div>
+        <div class="bar-value">12.3%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>医疗</span><span data-en>Medical</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#8b5cf6,#a78bfa);" data-width="14.3%"><span data-zh>17条</span><span data-en>17</span></div></div>
+        <div class="bar-value">7.5%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>环保</span><span data-en>Environ.</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#10b981,#34d399);" data-width="12.6%"><span data-zh>15条</span><span data-en>15</span></div></div>
+        <div class="bar-value">6.6%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>教育</span><span data-en>Education</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#f59e0b,#fbbf24);" data-width="8.4%"><span data-zh>10条</span><span data-en>10</span></div></div>
+        <div class="bar-value">4.4%</div>
+      </div>
+      <div class="bar-chart-item">
+        <div class="bar-label"><span data-zh>政治</span><span data-en>Politics</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:0%;background:linear-gradient(90deg,#ef4444,#f87171);" data-width="3.4%"><span data-zh>4条</span><span data-en>4</span></div></div>
+        <div class="bar-value">1.8%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6.2 主要信源 -->
+  <div class="card reveal" style="padding:2rem;margin-bottom:2rem;overflow-x:auto;">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;"><span data-zh>6.2 主要信源</span><span data-en>6.2 Primary Sources</span></h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th style="width:30%;"><span data-zh>信源类型</span><span data-en>Source Type</span></th>
+          <th><span data-zh>代表媒体</span><span data-en>Representative Media</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本全国性财经媒体</span><span data-en>Japan National Financial Media</span></td>
+          <td><span data-zh>日本経済新聞、DIAMOND online</span><span data-en>Nikkei Shimbun, DIAMOND online</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本全国性综合媒体</span><span data-en>Japan National General Media</span></td>
+          <td><span data-zh>朝日新聞、每日新聞、中日新聞、東京新聞</span><span data-en>Asahi Shimbun, Mainichi Shimbun, Chunichi Shimbun, Tokyo Shimbun</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本地方媒体</span><span data-en>Japan Regional Media</span></td>
+          <td><span data-zh>北海道新聞、新潟日報、沖縄タイムス、茨城新聞、熊本日日新聞、山陰中央新報、京都新聞、上毛新聞、信濃毎日新聞、秋田魁新報、福島民友、山陽新聞、下野新聞</span><span data-en>Hokkaido Shimbun, Niigata Nippo, Okinawa Times, Ibaraki Shimbun, Kumamoto Nichinichi Shimbun, San-in Chuo Shimpo, Kyoto Shimbun, Jomo Shimbun, Shinano Mainichi Shimbun, Akita Sakigake Shimpo, Fukushima Minyu, Sanyo Shimbun, Shimotsuke Shimbun</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本科技/产业媒体</span><span data-en>Japan Tech/Industry Media</span></td>
+          <td>ITmedia, BCN Retail, TechFactory</td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>国际媒体</span><span data-en>International Media</span></td>
+          <td>The Guardian (UK), Nikkei Asia</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 6.3 核心事件簇索引 -->
+  <div class="card reveal" style="padding:2rem;overflow-x:auto;">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.5rem;"><span data-zh>6.3 核心事件簇索引</span><span data-en>6.3 Core Event Cluster Index</span></h3>
+    <table class="styled-table">
+      <thead>
+        <tr>
+          <th><span data-zh>事件簇</span><span data-en>Event Cluster</span></th>
+          <th style="text-align:center;"><span data-zh>相关报道数（约）</span><span data-en>Related Reports (approx.)</span></th>
+          <th style="text-align:center;"><span data-zh>热度评级</span><span data-en>Heat Rating</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>索尼PS5全球涨价</span><span data-en>Sony PS5 Global Price Hike</span></td>
+          <td style="text-align:center;"><span data-zh>15条</span><span data-en>15</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>半导体/电子产业整合潮</span><span data-en>Semiconductor/Electronics Industry Consolidation</span></td>
+          <td style="text-align:center;"><span data-zh>20条</span><span data-en>20</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★★★</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>AI与数字化服务渗透</span><span data-en>AI &amp; Digital Service Penetration</span></td>
+          <td style="text-align:center;"><span data-zh>8条</span><span data-en>8</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★★</span><span class="star-empty">☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本PC出货量下滑</span><span data-en>Japan PC Shipment Decline</span></td>
+          <td style="text-align:center;"><span data-zh>4条</span><span data-en>4</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★★</span><span class="star-empty">☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>锂电池安全问题</span><span data-en>Lithium Battery Safety Issues</span></td>
+          <td style="text-align:center;"><span data-zh>4条</span><span data-en>4</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>消费电子零售与新生活商战</span><span data-en>CE Retail &amp; New Life Sales Campaign</span></td>
+          <td style="text-align:center;"><span data-zh>6条</span><span data-en>6</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>NTT/电信服务终止与转型</span><span data-en>NTT/Telecom Service Termination &amp; Transformation</span></td>
+          <td style="text-align:center;"><span data-zh>5条</span><span data-en>5</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>消费电子产品与配件</span><span data-en>Consumer Electronics Products &amp; Accessories</span></td>
+          <td style="text-align:center;"><span data-zh>8条</span><span data-en>8</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>日本股市与宏观环境</span><span data-en>Japan Stock Market &amp; Macro Environment</span></td>
+          <td style="text-align:center;"><span data-zh>5条</span><span data-en>5</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+        <tr>
+          <td style="font-weight:600;color:var(--text-primary);"><span data-zh>索尼集团综合动态</span><span data-en>Sony Group Comprehensive Developments</span></td>
+          <td style="text-align:center;"><span data-zh>6条</span><span data-en>6</span></td>
+          <td style="text-align:center;"><span class="star-filled">★★★</span><span class="star-empty">☆☆</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer style="max-width:900px;margin:0 auto;padding:3rem 1.5rem 2rem;border-top:1px solid var(--border-color);">
+  <div class="reveal" style="text-align:center;">
+    <div style="background:var(--bg-card);border:1px solid var(--border-color);border-radius:12px;padding:2rem;margin-bottom:2rem;">
+      <p style="font-size:0.8rem;color:var(--text-muted);line-height:1.8;margin-bottom:1rem;">
+        <i class="fas fa-info-circle" style="margin-right:6px;color:var(--accent-blue);"></i>
+        <strong><span data-zh>免责声明</span><span data-en>Disclaimer</span></strong><span data-zh>：本报告基于Supinfor区域国别实时监测平台采集的公开资讯编制，所有趋势研判和分析观点仅供参考，不构成投资建议。报告中标注为"分析观点"的内容为基于现有数据的推断性判断，实际情况可能因市场变化而有所不同。</span><span data-en>: This report is compiled based on publicly available information collected by the Supinfor regional real-time monitoring platform. All trend assessments and analytical opinions are for reference only and do not constitute investment advice. Content labeled as "Analysis" represents inferential judgments based on available data; actual conditions may differ due to market changes.</span>
+      </p>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:1rem;">
+      <div style="width:40px;height:1px;background:var(--border-color);"></div>
+      <span class="font-orbitron" style="font-size:0.65rem;letter-spacing:3px;color:var(--accent-blue);">SUPINFOR LTD.</span>
+      <div style="width:40px;height:1px;background:var(--border-color);"></div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--text-muted);"><span data-zh>出品方：Supinfor Ltd.</span><span data-en>Produced by: Supinfor Ltd.</span></p>
+    <p style="font-size:0.8rem;color:var(--text-muted);"><span data-zh>发布日期：2026年3月29日</span><span data-en>Publication Date: March 29, 2026</span></p>
+    <p style="font-size:0.75rem;color:var(--text-muted);margin-top:1rem;opacity:0.6;"><span data-zh>报告周期：2026-03-23 — 2026-03-29</span><span data-en>Report Period: 2026-03-23 — 2026-03-29</span></p>
+  </div>
+</footer>
+
+</div><!-- end main-content -->
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="返回顶部">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+// ==================== Theme Toggle ====================
+function toggleTheme() {
+  const html = document.documentElement;
+  const icon = document.getElementById('themeIcon');
+  if (html.getAttribute('data-theme') === 'dark') {
+    html.setAttribute('data-theme', 'light');
+    icon.className = 'fas fa-sun';
+    localStorage.setItem('theme', 'light');
+  } else {
+    html.setAttribute('data-theme', 'dark');
+    icon.className = 'fas fa-moon';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+// Restore theme
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    document.getElementById('themeIcon').className = 'fas fa-sun';
+  }
+})();
+
+// ==================== TOC Toggle ====================
+function toggleTOC() {
+  document.getElementById('tocSidebar').classList.toggle('open');
+  document.getElementById('tocOverlay').classList.toggle('open');
+}
+
+// Close TOC on link click (mobile)
+document.querySelectorAll('.toc-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 1024) {
+      document.getElementById('tocSidebar').classList.remove('open');
+      document.getElementById('tocOverlay').classList.remove('open');
+    }
+  });
+});
+
+// ==================== Accordion ====================
+function toggleAccordion(btn) {
+  const content = btn.nextElementSibling;
+  const isOpen = content.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.accordion-content').forEach(c => c.classList.remove('open'));
+  document.querySelectorAll('.accordion-toggle').forEach(t => t.classList.remove('open'));
+  // Toggle current
+  if (!isOpen) {
+    content.classList.add('open');
+    btn.classList.add('open');
+  }
+}
+
+// ==================== IntersectionObserver for Reveal ====================
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// ==================== Counting Animation ====================
+function animateCount(el) {
+  const target = parseFloat(el.getAttribute('data-count'));
+  const suffix = el.getAttribute('data-suffix') || '';
+  const prefix = el.getAttribute('data-prefix') || '';
+  const decimal = parseInt(el.getAttribute('data-decimal')) || 0;
+  const duration = 2000;
+  const start = performance.now();
+
+  function update(now) {
+    const elapsed = now - start;
+    const progress = Math.min(elapsed / duration, 1);
+    // Ease out cubic
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const current = target * eased;
+
+    if (decimal > 0) {
+      el.textContent = prefix + current.toFixed(decimal) + suffix;
+    } else {
+      el.textContent = prefix + Math.round(current) + suffix;
+    }
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    } else {
+      if (decimal > 0) {
+        el.textContent = prefix + target.toFixed(decimal) + suffix;
+      } else {
+        el.textContent = prefix + target + suffix;
+      }
+    }
+  }
+  requestAnimationFrame(update);
+}
+
+// Observe stat cards for counting
+const countObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const countEl = entry.target.querySelector('[data-count]');
+      if (countEl) animateCount(countEl);
+      countObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-card').forEach(card => countObserver.observe(card));
+
+// ==================== Bar Chart Animation ====================
+const barObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.bar-fill[data-width]').forEach((bar, i) => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width');
+        }, i * 100);
+      });
+      barObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+const barChart = document.getElementById('barChart');
+if (barChart) barObserver.observe(barChart);
+
+// ==================== Risk Bar Animation ====================
+const riskBarObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.risk-bar-fill[data-width]').forEach(bar => {
+        setTimeout(() => {
+          bar.style.width = bar.getAttribute('data-width');
+        }, 300);
+      });
+      riskBarObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.risk-card').forEach(card => riskBarObserver.observe(card));
+
+// ==================== Back to Top ====================
+const backToTopBtn = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 500) {
+    backToTopBtn.classList.add('visible');
+  } else {
+    backToTopBtn.classList.remove('visible');
+  }
+});
+
+// ==================== Smooth Scroll ====================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ==================== Active TOC Highlight ====================
+const sections = document.querySelectorAll('section[id]');
+const tocLinks = document.querySelectorAll('.toc-link');
+
+const tocObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + entry.target.id) {
+          link.classList.add('active');
+        }
+      });
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-80px 0px -60% 0px' });
+
+sections.forEach(section => tocObserver.observe(section));
+
+// ==================== Bounce Animation Keyframes ====================
+const style = document.createElement('style');
+style.textContent = '@keyframes bounce{0%,20%,50%,80%,100%{transform:translateY(0)}40%{transform:translateY(-6px)}60%{transform:translateY(-3px)}}';
+document.head.appendChild(style);
+
+// ==================== Language Toggle ====================
+(function() {
+  const html = document.documentElement;
+  const btn = document.getElementById('langToggle');
+  const stored = localStorage.getItem('lang');
+  if (stored) {
+    html.setAttribute('data-lang', stored);
+    html.setAttribute('lang', stored === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = stored === 'en' ? '中' : 'EN';
+  }
+  btn.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang') || 'zh';
+    const next = current === 'zh' ? 'en' : 'zh';
+    html.setAttribute('data-lang', next);
+    html.setAttribute('lang', next === 'en' ? 'en' : 'zh-CN');
+    btn.textContent = next === 'en' ? '中' : 'EN';
+    localStorage.setItem('lang', next);
+  });
+})();
+</script>
+</body>
+</html>

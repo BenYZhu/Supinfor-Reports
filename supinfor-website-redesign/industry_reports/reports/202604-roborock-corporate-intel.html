@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>石头科技（Roborock）商业情报分析报告 | Roborock Business Intelligence Report</title>
+<meta name="description" content="石头科技（Roborock）商业情报分析报告 2026年4月 — Supinfor Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config={darkMode:'class',theme:{extend:{fontFamily:{heading:['"Plus Jakarta Sans"','"Noto Sans SC"','sans-serif'],body:['"Noto Sans SC"','"Plus Jakarta Sans"','sans-serif']},colors:{mint:{50:'#ecfdf5',100:'#d1fae5',200:'#a7f3d0',300:'#6ee7b7',400:'#34d399',500:'#10b981',600:'#059669',700:'#047857'},slate:{50:'#f8fafc',100:'#f1f5f9',200:'#e2e8f0',300:'#cbd5e1',400:'#94a3b8',500:'#64748b',600:'#475569',700:'#334155',800:'#1e293b',900:'#0f172a',950:'#020617'}}}}}
+</script>
+<style>
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'Noto Sans SC','Plus Jakarta Sans',sans-serif;background:#fafaf9;color:#334155;line-height:1.7;transition:background .3s,color .3s}
+html.dark body{background:#0f172a;color:#cbd5e1}
+.sidebar{position:fixed;left:0;top:0;bottom:0;width:280px;background:#fff;border-right:1px solid #e2e8f0;z-index:40;overflow-y:auto;padding:24px 0;transition:transform .3s ease,background .3s,border-color .3s}
+.dark .sidebar{background:#1e293b;border-right-color:#334155}
+.sidebar-logo{padding:0 24px 20px;border-bottom:1px solid #e2e8f0;margin-bottom:16px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.15rem;color:#0f172a}
+.dark .sidebar-logo{color:#f1f5f9;border-bottom-color:#334155}
+.sidebar-logo span{color:#10b981}
+.dark .sidebar-logo span{color:#34d399}
+.nav-item{display:flex;align-items:center;gap:10px;padding:10px 24px;font-size:.875rem;color:#64748b;text-decoration:none;transition:all .2s;border-left:3px solid transparent}
+.nav-item:hover,.nav-item.active{color:#10b981;background:#ecfdf5;border-left-color:#10b981}
+.dark .nav-item:hover,.dark .nav-item.active{color:#34d399;background:rgba(52,211,153,.08);border-left-color:#34d399}
+.nav-item i{width:18px;text-align:center;font-size:.8rem}
+.main-content{margin-left:280px;padding:0;transition:margin-left .3s}
+.top-bar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid #e2e8f0;padding:12px 32px;display:flex;justify-content:flex-end;align-items:center;gap:12px;transition:background .3s,border-color .3s}
+.dark .top-bar{background:rgba(15,23,42,.85);border-bottom-color:#334155}
+.ctrl-btn{display:flex;align-items:center;gap:6px;padding:6px 14px;border-radius:9999px;border:1px solid #e2e8f0;background:#fff;color:#64748b;font-size:.8rem;cursor:pointer;transition:all .2s;font-family:inherit}
+.ctrl-btn:hover{border-color:#10b981;color:#10b981}
+.dark .ctrl-btn{background:#1e293b;border-color:#334155;color:#94a3b8}
+.dark .ctrl-btn:hover{border-color:#34d399;color:#34d399}
+.hero{background:linear-gradient(135deg,#0f172a 0%,#1e293b 40%,#065f46 80%,#10b981 100%);padding:72px 48px 56px;color:#fff;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;right:-20%;width:600px;height:600px;background:radial-gradient(circle,rgba(16,185,129,.15) 0%,transparent 70%);border-radius:50%}
+.hero::after{content:'';position:absolute;bottom:-30%;left:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(52,211,153,.1) 0%,transparent 70%);border-radius:50%}
+.hero-content{position:relative;z-index:2;max-width:1100px;margin:0 auto}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(16,185,129,.15);border:1px solid rgba(16,185,129,.3);padding:5px 14px;border-radius:9999px;font-size:.78rem;color:#6ee7b7;margin-bottom:20px;backdrop-filter:blur(4px)}
+.hero h1{font-family:'Plus Jakarta Sans','Noto Sans SC',sans-serif;font-size:2.5rem;font-weight:800;line-height:1.2;margin-bottom:8px}
+.hero .subtitle{font-size:1.05rem;color:#94a3b8;margin-bottom:32px;max-width:700px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:20px;font-size:.8rem;color:#94a3b8;margin-bottom:36px}
+.hero-meta span{display:flex;align-items:center;gap:6px}
+.hero-meta i{color:#34d399}
+.kpi-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.kpi-card{background:rgba(255,255,255,.07);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:20px;text-align:center;transition:transform .3s,background .3s}
+.kpi-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+.kpi-icon{width:40px;height:40px;border-radius:12px;background:rgba(16,185,129,.15);display:flex;align-items:center;justify-content:center;margin:0 auto 12px;color:#34d399;font-size:1rem}
+.kpi-value{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.6rem;font-weight:800;color:#fff;line-height:1.2}
+.kpi-label{font-size:.75rem;color:#94a3b8;margin-top:4px}
+.section{padding:48px 48px;max-width:1200px;margin:0 auto}
+.section-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+.section-icon{width:40px;height:40px;border-radius:12px;background:#ecfdf5;display:flex;align-items:center;justify-content:center;color:#10b981;font-size:1rem;flex-shrink:0}
+.dark .section-icon{background:rgba(52,211,153,.1);color:#34d399}
+.section-title{font-family:'Plus Jakarta Sans','Noto Sans SC',sans-serif;font-size:1.5rem;font-weight:700;color:#0f172a}
+.dark .section-title{color:#f1f5f9}
+.card{background:#fff;border-radius:16px;box-shadow:0 1px 3px rgba(0,0,0,.04),0 4px 12px rgba(0,0,0,.03);padding:28px;margin-bottom:20px;border:1px solid #f1f5f9;transition:transform .2s,box-shadow .2s,background .3s,border-color .3s}
+.card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,0,0,.06)}
+.dark .card{background:#1e293b;border-color:#334155;box-shadow:0 1px 3px rgba(0,0,0,.2)}
+.dark .card:hover{box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.card-tag{display:inline-flex;align-items:center;gap:5px;background:#ecfdf5;color:#059669;padding:3px 10px;border-radius:9999px;font-size:.72rem;font-weight:600;margin-bottom:12px}
+.dark .card-tag{background:rgba(52,211,153,.1);color:#34d399}
+.card h3{font-family:'Plus Jakarta Sans','Noto Sans SC',sans-serif;font-size:1.15rem;font-weight:700;color:#0f172a;margin-bottom:12px}
+.dark .card h3{color:#f1f5f9}
+.card p,.card li{font-size:.9rem;line-height:1.8;color:#475569}
+.dark .card p,.dark .card li{color:#94a3b8}
+.card ul{padding-left:20px;margin:8px 0}
+.card li{margin-bottom:4px}
+.card li::marker{color:#10b981}
+.dark .card li::marker{color:#34d399}
+.signal-badge{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:9999px;font-size:.72rem;font-weight:600;margin-bottom:12px}
+.signal-high{background:#fef3c7;color:#92400e}
+.signal-very-high{background:#fee2e2;color:#991b1b}
+.signal-medium{background:#e0f2fe;color:#075985}
+.signal-medium-high{background:#fce7f3;color:#9d174d}
+.dark .signal-high{background:rgba(251,191,36,.15);color:#fbbf24}
+.dark .signal-very-high{background:rgba(239,68,68,.15);color:#f87171}
+.dark .signal-medium{background:rgba(56,189,248,.15);color:#38bdf8}
+.dark .signal-medium-high{background:rgba(236,72,153,.15);color:#f472b6}
+.verdict{background:#f0fdf4;border-left:3px solid #10b981;padding:14px 18px;border-radius:0 12px 12px 0;margin-top:16px;font-size:.88rem;color:#334155}
+.dark .verdict{background:rgba(16,185,129,.06);border-left-color:#34d399;color:#cbd5e1}
+.table-wrapper{overflow-x:auto;border-radius:16px;border:1px solid #e2e8f0}
+.dark .table-wrapper{border-color:#334155}
+table{width:100%;border-collapse:collapse;font-size:.85rem}
+thead{background:#f8fafc}
+.dark thead{background:#0f172a}
+th{padding:12px 16px;text-align:left;font-weight:600;color:#0f172a;border-bottom:2px solid #e2e8f0;white-space:nowrap}
+.dark th{color:#f1f5f9;border-bottom-color:#334155}
+td{padding:12px 16px;border-bottom:1px solid #f1f5f9;color:#475569}
+.dark td{border-bottom-color:#1e293b;color:#94a3b8}
+tbody tr:hover{background:#f0fdf4}
+.dark tbody tr:hover{background:rgba(52,211,153,.04)}
+tbody tr:last-child td{border-bottom:none}
+.donut-container{display:flex;align-items:center;gap:32px;flex-wrap:wrap}
+.donut{width:180px;height:180px;border-radius:50%;position:relative;background:conic-gradient(#10b981 0deg 63.72deg,#e2e8f0 63.72deg 360deg);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.dark .donut{background:conic-gradient(#34d399 0deg 63.72deg,#334155 63.72deg 360deg)}
+.donut-inner{width:120px;height:120px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.dark .donut-inner{background:#1e293b}
+.donut-value{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.8rem;font-weight:800;color:#10b981}
+.dark .donut-value{color:#34d399}
+.donut-label{font-size:.7rem;color:#64748b}
+.dark .donut-label{color:#94a3b8}
+.donut-legend{display:flex;flex-direction:column;gap:8px}
+.legend-item{display:flex;align-items:center;gap:8px;font-size:.85rem}
+.legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.risk-priority{display:inline-flex;align-items:center;gap:5px;padding:3px 10px;border-radius:9999px;font-size:.72rem;font-weight:600;margin-bottom:12px}
+.risk-medium{background:#fef3c7;color:#92400e}
+.risk-low{background:#dbeafe;color:#1e40af}
+.dark .risk-medium{background:rgba(251,191,36,.15);color:#fbbf24}
+.dark .risk-low{background:rgba(96,165,250,.15);color:#60a5fa}
+.outlook-item{display:flex;gap:16px;padding:16px 0;border-bottom:1px solid #f1f5f9}
+.dark .outlook-item{border-bottom-color:#1e293b}
+.outlook-item:last-child{border-bottom:none}
+.outlook-num{width:32px;height:32px;border-radius:10px;background:#ecfdf5;color:#10b981;display:flex;align-items:center;justify-content:center;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:.85rem;flex-shrink:0}
+.dark .outlook-num{background:rgba(52,211,153,.1);color:#34d399}
+.milestone-card{position:relative;padding-left:28px}
+.milestone-card::before{content:'';position:absolute;left:8px;top:36px;bottom:-20px;width:2px;background:#e2e8f0}
+.dark .milestone-card::before{background:#334155}
+.milestone-card:last-child::before{display:none}
+.milestone-dot{position:absolute;left:0;top:28px;width:18px;height:18px;border-radius:50%;background:#10b981;border:3px solid #ecfdf5}
+.dark .milestone-dot{background:#34d399;border-color:#1e293b}
+.footer{background:#0f172a;color:#64748b;padding:32px 48px;font-size:.8rem;text-align:center}
+.footer a{color:#34d399;text-decoration:none}
+.back-top{position:fixed;bottom:28px;right:28px;z-index:50;width:44px;height:44px;border-radius:14px;background:#10b981;color:#fff;border:none;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(20px);transition:opacity .3s,transform .3s;font-size:1rem;box-shadow:0 4px 12px rgba(16,185,129,.3)}
+.back-top.visible{opacity:1;transform:translateY(0)}
+.dark .back-top{background:#34d399;color:#0f172a}
+.mobile-toggle{display:none;position:fixed;top:14px;left:14px;z-index:50;width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid #e2e8f0;align-items:center;justify-content:center;cursor:pointer;color:#334155;font-size:1.1rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.dark .mobile-toggle{background:#1e293b;border-color:#334155;color:#cbd5e1}
+.fade-up{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.sidebar{transform:translateX(-100%)}.sidebar.open{transform:translateX(0);box-shadow:4px 0 24px rgba(0,0,0,.1)}.main-content{margin-left:0}.mobile-toggle{display:flex}.kpi-grid{grid-template-columns:repeat(3,1fr)}.hero{padding:60px 24px 40px}.hero h1{font-size:1.8rem}.section{padding:32px 24px}}
+@media(max-width:640px){.kpi-grid{grid-template-columns:repeat(2,1fr)}.hero h1{font-size:1.5rem}.donut-container{flex-direction:column;align-items:center}}
+</style>
+</head>
+<body>
+<button class="mobile-toggle" onclick="toggleSidebar()" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+<div class="sidebar-logo"><span>Robo</span>rock<br><span style="font-size:.7rem;font-weight:400;color:#64748b"><span data-zh>商业情报分析报告</span><span data-en>Business Intelligence Report</span></span></div>
+<nav>
+<a class="nav-item" href="#hero"><i class="fas fa-home"></i><span data-zh>概览</span><span data-en>Overview</span></a>
+<a class="nav-item" href="#summary"><i class="fas fa-file-lines"></i><span data-zh>执行摘要</span><span data-en>Executive Summary</span></a>
+<a class="nav-item" href="#trends"><i class="fas fa-chart-line"></i><span data-zh>趋势识别</span><span data-en>Trend Analysis</span></a>
+<a class="nav-item" href="#milestones"><i class="fas fa-flag"></i><span data-zh>里程碑事件</span><span data-en>Milestones</span></a>
+<a class="nav-item" href="#partnerships"><i class="fas fa-handshake"></i><span data-zh>合作与联盟</span><span data-en>Partnerships</span></a>
+<a class="nav-item" href="#risks"><i class="fas fa-triangle-exclamation"></i><span data-zh>风险预警</span><span data-en>Risk Alerts</span></a>
+<a class="nav-item" href="#competition"><i class="fas fa-chess"></i><span data-zh>竞争格局</span><span data-en>Competitive Landscape</span></a>
+<a class="nav-item" href="#outlook"><i class="fas fa-binoculars"></i><span data-zh>前瞻要点</span><span data-en>Outlook</span></a>
+</nav>
+</aside>
+
+<!-- Main -->
+<div class="main-content">
+<div class="top-bar">
+<button class="ctrl-btn" onclick="toggleLang()" id="langBtn" aria-label="Toggle language"><i class="fas fa-language"></i> <span id="langLabel">EN</span></button>
+<button class="ctrl-btn" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme"><i class="fas fa-moon" id="themeIcon"></i></button>
+</div>
+
+<!-- Hero -->
+<section class="hero" id="hero">
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-robot"></i> <span data-zh>商业情报分析报告</span><span data-en>Business Intelligence Report</span></div>
+<h1><span data-zh>石头科技（Roborock）</span><span data-en>Roborock Technology</span></h1>
+<p class="subtitle"><span data-zh>从全球品类冠军到全场景智能清洁平台——30天商业动态全景扫描</span><span data-en>From Global Category Champion to Full-Scene Smart Cleaning Platform — 30-Day Business Dynamics Panorama</span></p>
+<div class="hero-meta">
+<span><i class="fas fa-calendar"></i> <span data-zh>2026年3月30日 — 4月29日</span><span data-en>Mar 30 – Apr 29, 2026</span></span>
+<span><i class="fas fa-database"></i> <span data-zh>200条精选资讯</span><span data-en>200 Curated Articles</span></span>
+<span><i class="fas fa-building"></i> Supinfor Ltd.</span>
+<span><i class="fas fa-globe"></i> <span data-zh>全球商情速递平台</span><span data-en>Global Business Express</span></span>
+</div>
+<div class="kpi-grid">
+<div class="kpi-card fade-up"><div class="kpi-icon"><i class="fas fa-crown"></i></div><div class="kpi-value">17.7%</div><div class="kpi-label"><span data-zh>全球市占率 · 第一</span><span data-en>Global Share · #1</span></div></div>
+<div class="kpi-card fade-up" style="transition-delay:.1s"><div class="kpi-icon"><i class="fas fa-truck-fast"></i></div><div class="kpi-value"><span data-zh>580万</span><span data-en>5.8M</span></div><div class="kpi-label"><span data-zh>2025年出货量</span><span data-en>2025 Shipments</span></div></div>
+<div class="kpi-card fade-up" style="transition-delay:.2s"><div class="kpi-icon"><i class="fas fa-house-chimney"></i></div><div class="kpi-value"><span data-zh>2200万</span><span data-en>22M</span></div><div class="kpi-label"><span data-zh>累计服务家庭</span><span data-en>Households Served</span></div></div>
+<div class="kpi-card fade-up" style="transition-delay:.3s"><div class="kpi-icon"><i class="fas fa-earth-americas"></i></div><div class="kpi-value">170+</div><div class="kpi-label"><span data-zh>覆盖国家和地区</span><span data-en>Countries & Regions</span></div></div>
+<div class="kpi-card fade-up" style="transition-delay:.4s"><div class="kpi-icon"><i class="fas fa-industry"></i></div><div class="kpi-value"><span data-zh>70万</span><span data-en>700K</span></div><div class="kpi-label"><span data-zh>月产能（台）</span><span data-en>Monthly Capacity</span></div></div>
+</div>
+</div>
+</section>
+
+<!-- Section 1: Executive Summary -->
+<section class="section" id="summary">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-file-lines"></i></div>
+<h2 class="section-title"><span data-zh>一、执行摘要</span><span data-en>I. Executive Summary</span></h2>
+</div>
+<div class="card fade-up">
+<p><span data-zh>本周期内，石头科技呈现三个核心特征：<strong>产品矩阵从室内清洁向全场景扩张</strong>、<strong>中端市场密集布局抢占增量</strong>、<strong>全球渠道网络持续深化</strong>。品牌以Qrevo S Pro为代表的中端新品在欧洲多国同步上市，割草机器人RockMow/RockNeo系列正式进入波兰、德国等市场，标志着石头科技从"扫地机器人品牌"向"全场景智能清洁平台"的战略升级。</span><span data-en>During this period, Roborock exhibited three core characteristics: <strong>product matrix expanding from indoor cleaning to full-scene coverage</strong>, <strong>intensive mid-range market deployment to capture growth</strong>, and <strong>continued deepening of global channel networks</strong>. The mid-range Qrevo S Pro launched simultaneously across multiple European countries, while the RockMow/RockNeo robotic mower series officially entered Poland, Germany and other markets, marking Roborock's strategic upgrade from a "robot vacuum brand" to a "full-scene smart cleaning platform."</span></p>
+
+<div style="margin-top:24px">
+<h3 style="font-size:1rem;margin-bottom:16px"><span data-zh>核心数据快照</span><span data-en>Key Data Snapshot</span></h3>
+
+<!-- Donut Chart Visualization -->
+<div class="donut-container" style="margin-bottom:24px">
+<div class="donut"><div class="donut-inner"><div class="donut-value">17.7%</div><div class="donut-label"><span data-zh>全球市占率</span><span data-en>Global Share</span></div></div></div>
+<div class="donut-legend">
+<div class="legend-item"><div class="legend-dot" style="background:#10b981"></div><span data-zh>石头科技 Roborock — 17.7%（全球第一）</span><span data-en>Roborock — 17.7% (Global #1)</span></div>
+<div class="legend-item"><div class="legend-dot" style="background:#e2e8f0"></div><span data-zh>其他品牌 — 82.3%</span><span data-en>Other Brands — 82.3%</span></div>
+<div class="legend-item" style="margin-top:8px;font-size:.8rem;color:#64748b"><i class="fas fa-info-circle" style="margin-right:4px;color:#10b981"></i><span data-zh>数据来源：IDC 2025年全球智能清洁机器人市场报告</span><span data-en>Source: IDC 2025 Global Smart Cleaning Robot Market Report</span></div>
+</div>
+</div>
+
+<ul>
+<li><span data-zh>IDC数据：2025年石头科技以580万台出货量、17.7%市占率登顶全球智能清洁机器人市场</span><span data-en>IDC data: In 2025, Roborock topped the global smart cleaning robot market with 5.8M shipments and 17.7% market share</span></li>
+<li><span data-zh>连续三年稳居RVC（机器人吸尘器）细分赛道全球第一</span><span data-en>Ranked #1 globally in the RVC (Robot Vacuum Cleaner) segment for three consecutive years</span></li>
+<li><span data-zh>累计服务超2,200万家庭，覆盖170+国家和地区</span><span data-en>Served over 22 million households across 170+ countries and regions</span></li>
+<li><span data-zh>10年研发投入超2.8亿美元，自有工厂月产能70万台</span><span data-en>Over $280M R&D investment in 10 years, with 700K monthly production capacity</span></li>
+<li><span data-zh>本周期新品发布覆盖：扫地机器人（Saros 20系列、Qrevo S Pro）、洗地机（F25系列）、割草机器人（RockMow/RockNeo）、无线吸尘器（H60系列）、洗烘一体机（Zeo系列）</span><span data-en>New product launches this period: Robot vacuums (Saros 20, Qrevo S Pro), wet-dry vacuums (F25 series), robotic mowers (RockMow/RockNeo), cordless vacuums (H60 series), washer-dryers (Zeo series)</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<!-- Section 2: Trends -->
+<section class="section" id="trends">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-chart-line"></i></div>
+<h2 class="section-title"><span data-zh>二、趋势识别：正在发展或不断强化的方向</span><span data-en>II. Trend Analysis: Emerging & Strengthening Directions</span></h2>
+</div>
+
+<!-- Trend 1 -->
+<div class="card fade-up">
+<div class="signal-badge signal-very-high"><i class="fas fa-signal"></i> <span data-zh>信号密度：极高</span><span data-en>Signal Density: Very High</span></div>
+<h3><span data-zh>趋势1：产品矩阵从扫地机器人向全场景智能清洁全面扩张</span><span data-en>Trend 1: Product Matrix Expanding from Robot Vacuums to Full-Scene Smart Cleaning</span></h3>
+<p style="margin-bottom:8px;font-size:.82rem;color:#64748b"><span data-zh>新品发布标签144条，占精选集72%</span><span data-en>144 new product launch tags, 72% of curated collection</span></p>
+<p><span data-zh>石头科技已不再是一家"扫地机器人公司"。本周期内，品牌同时在五个产品线推进新品：</span><span data-en>Roborock is no longer just a "robot vacuum company." During this period, the brand advanced new products across five product lines simultaneously:</span></p>
+<ul>
+<li><span data-zh><strong>扫地机器人</strong>：Saros 20系列（旗舰）、Qrevo S Pro（中端）、Q7/Q10系列（入门）</span><span data-en><strong>Robot Vacuums</strong>: Saros 20 series (flagship), Qrevo S Pro (mid-range), Q7/Q10 series (entry-level)</span></li>
+<li><span data-zh><strong>洗地机</strong>：F25 Ultra（蒸汽清洁）、F25 ACE Pro（泡沫清洁）、F25 ACE Combo（5合1）</span><span data-en><strong>Wet-Dry Vacuums</strong>: F25 Ultra (steam cleaning), F25 ACE Pro (foam cleaning), F25 ACE Combo (5-in-1)</span></li>
+<li><span data-zh><strong>割草机器人</strong>：RockMow Z1（旗舰4WD）、RockMow S1（中端）、RockNeo Q1（入门），共8款机型</span><span data-en><strong>Robotic Mowers</strong>: RockMow Z1 (flagship 4WD), RockMow S1 (mid-range), RockNeo Q1 (entry-level), 8 models total</span></li>
+<li><span data-zh><strong>无线吸尘器</strong>：H60 Hub Ultra（带自动集尘座）</span><span data-en><strong>Cordless Vacuums</strong>: H60 Hub Ultra (with auto-empty dock)</span></li>
+<li><span data-zh><strong>洗烘一体机</strong>：Zeo Lite、Zeo Mini</span><span data-en><strong>Washer-Dryers</strong>: Zeo Lite, Zeo Mini</span></li>
+<li><span data-zh><strong>概念产品</strong>：Saros Rover（可爬楼梯）、Saros Z70（带机械臂）、Smart Projector R1（投影仪）、A30 ProSteam（5合1清洁平台）</span><span data-en><strong>Concept Products</strong>: Saros Rover (stair-climbing), Saros Z70 (robotic arm), Smart Projector R1 (projector), A30 ProSteam (5-in-1 cleaning platform)</span></li>
+</ul>
+<div class="verdict">
+<strong><span data-zh>趋势研判</span><span data-en>Trend Assessment</span></strong>：<span data-zh>石头科技正在复制其在扫地机器人领域的成功路径——"技术驱动+产品矩阵+全球渠道"——到每一个家庭清洁场景。割草机器人是最重要的新赛道，8款机型覆盖500-5000㎡草坪，直接对标Husqvarna、Segway等传统玩家。这一扩张逻辑清晰：用户已经信任Roborock品牌的室内清洁能力，将这种信任延伸到户外是自然的品牌杠杆。</span><span data-en>Roborock is replicating its successful robot vacuum playbook — "technology-driven + product matrix + global channels" — across every home cleaning scenario. Robotic mowers represent the most important new track, with 8 models covering 500-5,000㎡ lawns, directly competing with Husqvarna, Segway and other established players. The expansion logic is clear: users already trust the Roborock brand for indoor cleaning, and extending that trust outdoors is a natural brand leverage.</span></div>
+</div>
+
+<!-- Trend 2 -->
+<div class="card fade-up">
+<div class="signal-badge signal-high"><i class="fas fa-signal"></i> <span data-zh>信号密度：高</span><span data-en>Signal Density: High</span></div>
+<h3><span data-zh>趋势2：中端市场成为增长主战场</span><span data-en>Trend 2: Mid-Range Market Becomes the Main Growth Battleground</span></h3>
+<p style="margin-bottom:8px;font-size:.82rem;color:#64748b"><span data-zh>Qrevo S Pro相关报道超20条，覆盖英国、西班牙、意大利、瑞士、波兰等市场</span><span data-en>Over 20 reports on Qrevo S Pro, covering UK, Spain, Italy, Switzerland, Poland and more</span></p>
+<p><span data-zh>Qrevo S Pro是本周期内曝光量最高的单品之一，4月27日在欧洲多国同步上市：</span><span data-en>Qrevo S Pro was one of the most covered products this period, launching simultaneously across multiple European countries on April 27:</span></p>
+<ul>
+<li><span data-zh>英国售价549.99英镑，美国599.99美元，西班牙/意大利589欧元</span><span data-en>UK price £549.99, US $599.99, Spain/Italy €589</span></li>
+<li><span data-zh>定位"入门级高端"——18,500Pa吸力、LiDAR导航、75℃热水洗拖、45℃热风烘干</span><span data-en>Positioned as "entry-level premium" — 18,500Pa suction, LiDAR navigation, 75°C hot water mopping, 45°C hot air drying</span></li>
+<li><span data-zh>明确面向"首次购买扫地机器人的用户"</span><span data-en>Explicitly targeting "first-time robot vacuum buyers"</span></li>
+</ul>
+<div class="verdict">
+<strong><span data-zh>趋势研判</span><span data-en>Trend Assessment</span></strong>：<span data-zh>石头科技的策略是"旗舰树标杆，中端走量"。Saros 20系列（1,200-1,400欧元）展示技术天花板，Qrevo S Pro（550-600欧元）承接大众市场需求。这一价格带正是扫地机器人从"尝鲜品"变为"家庭标配"的关键区间。多国同步上市的节奏表明品牌对全球供应链和渠道的掌控力已相当成熟。</span><span data-en>Roborock's strategy is "flagship sets the benchmark, mid-range drives volume." The Saros 20 series (€1,200-1,400) showcases the technology ceiling, while Qrevo S Pro (€550-600) captures mass market demand. This price band is the critical range where robot vacuums transition from "novelty" to "household essential." The synchronized multi-country launch demonstrates the brand's mature global supply chain and channel control.</span></div>
+</div>
+
+<!-- Trend 3 -->
+<div class="card fade-up">
+<div class="signal-badge signal-medium-high"><i class="fas fa-signal"></i> <span data-zh>信号密度：中高</span><span data-en>Signal Density: Medium-High</span></div>
+<h3><span data-zh>趋势3：技术差异化从硬件参数转向AI与自动化体验</span><span data-en>Trend 3: Tech Differentiation Shifts from Hardware Specs to AI & Automation Experience</span></h3>
+<p style="margin-bottom:8px;font-size:.82rem;color:#64748b"><span data-zh>技术创新7条，大量新品评测涉及AI功能</span><span data-en>7 tech innovation articles, numerous product reviews covering AI features</span></p>
+<p><span data-zh>本周期内，石头科技的技术叙事已从"吸力多少Pa"转向"用户需要干预多少"：</span><span data-en>During this period, Roborock's technology narrative shifted from "how many Pa of suction" to "how little user intervention is needed":</span></p>
+<ul>
+<li><span data-zh><strong>Reactive AI 3.0</strong>：可识别超300种障碍物，包括宠物、线缆、鞋子等</span><span data-en><strong>Reactive AI 3.0</strong>: Identifies 300+ obstacle types including pets, cables, shoes, etc.</span></li>
+<li><span data-zh><strong>StarSight 2.0</strong>：3D ToF+RGB摄像头融合导航，无需传统LiDAR</span><span data-en><strong>StarSight 2.0</strong>: 3D ToF + RGB camera fusion navigation, no traditional LiDAR needed</span></li>
+<li><span data-zh><strong>AdaptiLift Chassis 3.0</strong>：可跨越8.8cm门槛，打破传统扫地机器人的物理限制</span><span data-en><strong>AdaptiLift Chassis 3.0</strong>: Crosses 8.8cm thresholds, breaking physical limitations of traditional robot vacuums</span></li>
+<li><span data-zh><strong>DuoDivide防缠绕系统</strong>：双分刷设计彻底解决毛发缠绕问题</span><span data-en><strong>DuoDivide Anti-Tangle System</strong>: Dual-split brush design completely solves hair tangling</span></li>
+<li><span data-zh><strong>Saros Rover概念机</strong>：轮腿混合结构，可爬楼梯清洁多楼层</span><span data-en><strong>Saros Rover Concept</strong>: Wheel-leg hybrid structure, can climb stairs to clean multiple floors</span></li>
+<li><span data-zh><strong>Saros Z70</strong>：搭载OmniGrip机械臂，可捡拾地面杂物</span><span data-en><strong>Saros Z70</strong>: Equipped with OmniGrip robotic arm, can pick up floor clutter</span></li>
+</ul>
+<div class="verdict">
+<strong><span data-zh>趋势研判</span><span data-en>Trend Assessment</span></strong>：<span data-zh>石头科技正在将扫地机器人从"清洁工具"重新定义为"家庭自动化节点"。Saros Rover和Z70虽然仍是概念产品，但它们代表的方向——让机器人理解并适应人类居住环境——是整个行业的终极目标。短期内，AI避障和自动化基站（自动洗拖、烘干、集尘、补水）是最直接的用户价值点。</span><span data-en>Roborock is redefining robot vacuums from "cleaning tools" to "home automation nodes." While Saros Rover and Z70 remain concept products, the direction they represent — enabling robots to understand and adapt to human living environments — is the industry's ultimate goal. In the short term, AI obstacle avoidance and automated base stations (auto-wash, dry, empty, refill) deliver the most direct user value.</span></div>
+</div>
+
+<!-- Trend 4 -->
+<div class="card fade-up">
+<div class="signal-badge signal-medium"><i class="fas fa-signal"></i> <span data-zh>信号密度：中</span><span data-en>Signal Density: Medium</span></div>
+<h3><span data-zh>趋势4：全球渠道从线上向线下品牌体验延伸</span><span data-en>Trend 4: Global Channels Extending from Online to Offline Brand Experience</span></h3>
+<p style="margin-bottom:8px;font-size:.82rem;color:#64748b"><span data-zh>销售合作4条、营销活动30条</span><span data-en>4 sales partnership articles, 30 marketing activity articles</span></p>
+<ul>
+<li><span data-zh><strong>乌克兰</strong>：Allo开设乌克兰首家Roborock官方单品牌展厅（shop-in-shop形式），2025年起成为独家分销商</span><span data-en><strong>Ukraine</strong>: Allo opened Ukraine's first official Roborock mono-brand showroom (shop-in-shop format), exclusive distributor since 2025</span></li>
+<li><span data-zh><strong>俄罗斯</strong>：Merlion旗下96城超150家服务网点成为Roborock授权服务中心</span><span data-en><strong>Russia</strong>: Merlion's 150+ service points across 96 cities became Roborock authorized service centers</span></li>
+<li><span data-zh><strong>台湾</strong>：燦坤3C与Roborock开设联名店，参加连锁加盟创业大展</span><span data-en><strong>Taiwan</strong>: Tsannkuen 3C opened co-branded stores with Roborock, participated in franchise exhibitions</span></li>
+<li><span data-zh><strong>土耳其</strong>：全系列新品同步发布，覆盖机器人吸尘器、干湿清洁、无线吸尘器</span><span data-en><strong>Turkey</strong>: Full product line launched simultaneously, covering robot vacuums, wet-dry cleaners, cordless vacuums</span></li>
+</ul>
+<div class="verdict">
+<strong><span data-zh>趋势研判</span><span data-en>Trend Assessment</span></strong>：<span data-zh>石头科技正在从"亚马逊/电商驱动"向"品牌体验+本地服务"升级。乌克兰的品牌展厅、俄罗斯的授权服务网络、台湾的联名店，都是在建立线下触点。这对于客单价500-1,400欧元的产品来说至关重要——消费者需要亲手体验才能做出购买决策。</span><span data-en>Roborock is upgrading from "Amazon/e-commerce driven" to "brand experience + local service." Ukraine's brand showroom, Russia's authorized service network, and Taiwan's co-branded stores are all establishing offline touchpoints. This is crucial for products priced at €500-1,400 — consumers need hands-on experience before making purchase decisions.</span></div>
+</div>
+</section>
+
+<!-- Section 3: Milestones -->
+<section class="section" id="milestones">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-flag"></i></div>
+<h2 class="section-title"><span data-zh>三、里程碑事件：转折点与关键节点</span><span data-en>III. Milestones: Turning Points & Key Events</span></h2>
+</div>
+
+<!-- Milestone 1 -->
+<div class="card milestone-card fade-up">
+<div class="milestone-dot"></div>
+<div class="card-tag"><i class="fas fa-trophy"></i> <span data-zh>里程碑 1</span><span data-en>Milestone 1</span></div>
+<h3><span data-zh>全球智能清洁机器人市场份额登顶</span><span data-en>Topped Global Smart Cleaning Robot Market Share</span></h3>
+<p><span data-zh>IDC数据显示，2025年石头科技以580万台出货量、17.7%市占率成为全球第一，连续三年稳居RVC细分赛道冠军，在美国、德国、韩国等核心市场也位列榜首。</span><span data-en>IDC data shows that in 2025, Roborock became the global leader with 5.8M shipments and 17.7% market share, ranking #1 in the RVC segment for three consecutive years, also leading in core markets including the US, Germany, and South Korea.</span></p>
+<div class="verdict">
+<strong><span data-zh>意义</span><span data-en>Significance</span></strong>：<span data-zh>从2014年成立到2025年全球登顶，石头科技用11年完成了从"小米生态链企业"到"全球品类冠军"的蜕变。这一地位为其向割草机器人、洗烘一体机等新品类扩张提供了品牌背书。</span><span data-en>From its founding in 2014 to global leadership in 2025, Roborock completed its transformation from a "Xiaomi ecosystem company" to "global category champion" in 11 years. This position provides brand endorsement for expansion into new categories like robotic mowers and washer-dryers.</span></div>
+</div>
+
+<!-- Milestone 2 -->
+<div class="card milestone-card fade-up">
+<div class="milestone-dot"></div>
+<div class="card-tag"><i class="fas fa-seedling"></i> <span data-zh>里程碑 2</span><span data-en>Milestone 2</span></div>
+<h3><span data-zh>割草机器人正式进入欧洲市场</span><span data-en>Robotic Mowers Officially Enter European Market</span></h3>
+<p><span data-zh>RockMow和RockNeo系列共8款机型在德国、波兰等市场开售，覆盖500-5,000㎡草坪，售价799-3,499欧元，采用RTK+VSLAM导航，无需边界线。</span><span data-en>RockMow and RockNeo series with 8 models launched in Germany, Poland and other markets, covering 500-5,000㎡ lawns, priced €799-3,499, using RTK+VSLAM navigation with no boundary wires needed.</span></p>
+<div class="verdict">
+<strong><span data-zh>意义</span><span data-en>Significance</span></strong>：<span data-zh>这是石头科技首次进入户外清洁赛道，标志着品牌从"室内清洁专家"向"全场景清洁平台"的战略转型正式落地。欧洲是全球最大的割草机器人市场，直接进入意味着与Husqvarna、Segway等老牌玩家正面竞争。</span><span data-en>This marks Roborock's first entry into the outdoor cleaning track, signaling the official implementation of its strategic transformation from "indoor cleaning expert" to "full-scene cleaning platform." Europe is the world's largest robotic mower market, and direct entry means head-to-head competition with established players like Husqvarna and Segway.</span></div>
+</div>
+
+<!-- Milestone 3 -->
+<div class="card milestone-card fade-up">
+<div class="milestone-dot"></div>
+<div class="card-tag"><i class="fas fa-rocket"></i> <span data-zh>里程碑 3</span><span data-en>Milestone 3</span></div>
+<h3><span data-zh>Qrevo S Pro多国同步上市——中端市场攻势启动</span><span data-en>Qrevo S Pro Multi-Country Simultaneous Launch — Mid-Range Offensive Begins</span></h3>
+<p><span data-zh>4月27日，Qrevo S Pro在英国、西班牙、意大利、瑞士、波兰等市场同步上市，定价550-600欧元区间，明确面向首次购机用户。</span><span data-en>On April 27, Qrevo S Pro launched simultaneously in the UK, Spain, Italy, Switzerland, Poland and other markets, priced in the €550-600 range, explicitly targeting first-time buyers.</span></p>
+<div class="verdict">
+<strong><span data-zh>意义</span><span data-en>Significance</span></strong>：<span data-zh>这是石头科技首次以"入门级高端"定位大规模推新品，信号明确——品牌认为扫地机器人市场已进入大众普及阶段，中端价位是增量的主战场。</span><span data-en>This is Roborock's first large-scale product launch positioned as "entry-level premium," sending a clear signal — the brand believes the robot vacuum market has entered the mass adoption phase, with mid-range pricing as the main battleground for growth.</span></div>
+</div>
+
+<!-- Milestone 4 -->
+<div class="card milestone-card fade-up">
+<div class="milestone-dot"></div>
+<div class="card-tag"><i class="fas fa-futbol"></i> <span data-zh>里程碑 4</span><span data-en>Milestone 4</span></div>
+<h3><span data-zh>与皇家马德里达成战略合作</span><span data-en>Strategic Partnership with Real Madrid</span></h3>
+<p><span data-zh>石头科技与皇家马德里足球俱乐部达成品牌合作，以"The Greatest Meeting the Greatest"为主题，将体育赛事的卓越表现融入家居清洁科技品牌叙事。</span><span data-en>Roborock partnered with Real Madrid Football Club under the theme "The Greatest Meeting the Greatest," integrating sports excellence into the home cleaning technology brand narrative.</span></p>
+<div class="verdict">
+<strong><span data-zh>意义</span><span data-en>Significance</span></strong>：<span data-zh>这是石头科技品牌升级的标志性动作——从"科技极客品牌"走向"大众生活方式品牌"。皇马的全球影响力可以帮助Roborock触达传统科技媒体覆盖不到的消费群体。</span><span data-en>This is a landmark move in Roborock's brand upgrade — from "tech geek brand" to "mass lifestyle brand." Real Madrid's global influence can help Roborock reach consumer groups beyond traditional tech media coverage.</span></div>
+</div>
+</section>
+
+<!-- Section 4: Partnerships -->
+<section class="section" id="partnerships">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-handshake"></i></div>
+<h2 class="section-title"><span data-zh>四、合作与联盟分析：机会与风险</span><span data-en>IV. Partnership & Alliance Analysis: Opportunities & Risks</span></h2>
+</div>
+
+<div class="card fade-up">
+<div class="card-tag"><i class="fas fa-table"></i> <span data-zh>关键合作一览</span><span data-en>Key Partnerships Overview</span></div>
+<div class="table-wrapper" style="margin-top:12px">
+<table>
+<thead>
+<tr>
+<th><span data-zh>合作方</span><span data-en>Partner</span></th>
+<th><span data-zh>领域</span><span data-en>Domain</span></th>
+<th><span data-zh>市场</span><span data-en>Market</span></th>
+<th><span data-zh>性质</span><span data-en>Nature</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-zh>皇家马德里</span><span data-en>Real Madrid</span></td>
+<td><span data-zh>品牌战略合作</span><span data-en>Brand Strategic Partnership</span></td>
+<td><span data-zh>全球</span><span data-en>Global</span></td>
+<td><span data-zh>品牌升级</span><span data-en>Brand Upgrade</span></td>
+</tr>
+<tr>
+<td>Allo<span data-zh>（乌克兰）</span><span data-en> (Ukraine)</span></td>
+<td><span data-zh>独家分销+品牌展厅</span><span data-en>Exclusive Distribution + Brand Showroom</span></td>
+<td><span data-zh>乌克兰</span><span data-en>Ukraine</span></td>
+<td><span data-zh>渠道深化</span><span data-en>Channel Deepening</span></td>
+</tr>
+<tr>
+<td>Merlion/Сети компьютерных клиник</td>
+<td><span data-zh>授权服务中心（96城150+网点）</span><span data-en>Authorized Service Centers (150+ in 96 cities)</span></td>
+<td><span data-zh>俄罗斯</span><span data-en>Russia</span></td>
+<td><span data-zh>售后网络</span><span data-en>After-Sales Network</span></td>
+</tr>
+<tr>
+<td><span data-zh>燦坤3C</span><span data-en>Tsannkuen 3C</span></td>
+<td><span data-zh>联名店+展会合作</span><span data-en>Co-branded Store + Exhibition</span></td>
+<td><span data-zh>台湾</span><span data-en>Taiwan</span></td>
+<td><span data-zh>渠道拓展</span><span data-en>Channel Expansion</span></td>
+</tr>
+<tr>
+<td>Home Assistant</td>
+<td><span data-zh>vacuum.clean_area区域清洁集成</span><span data-en>vacuum.clean_area Zone Cleaning Integration</span></td>
+<td><span data-zh>全球</span><span data-en>Global</span></td>
+<td><span data-zh>智能家居生态</span><span data-en>Smart Home Ecosystem</span></td>
+</tr>
+<tr>
+<td>Apple HomeKit/Matter</td>
+<td><span data-zh>协议兼容</span><span data-en>Protocol Compatibility</span></td>
+<td><span data-zh>全球</span><span data-en>Global</span></td>
+<td><span data-zh>智能家居生态</span><span data-en>Smart Home Ecosystem</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card fade-up" style="border-left:3px solid #10b981">
+<h3><span data-zh>机会判断</span><span data-en>Opportunity Assessment</span></h3>
+<p><span data-zh>石头科技的合作网络呈现"品牌+渠道+生态"三层结构。皇马合作提升品牌调性，Allo/燦坤拓展线下触点，Home Assistant/Matter打通智能家居生态。这种组合使Roborock不仅是一个"产品"，而是用户智能家居系统的一部分。</span><span data-en>Roborock's partnership network presents a three-layer structure of "brand + channel + ecosystem." The Real Madrid partnership elevates brand positioning, Allo/Tsannkuen expand offline touchpoints, and Home Assistant/Matter integration connects the smart home ecosystem. This combination makes Roborock not just a "product" but part of users' smart home systems.</span></p>
+</div>
+
+<div class="card fade-up" style="border-left:3px solid #f59e0b">
+<h3><span data-zh>风险判断</span><span data-en>Risk Assessment</span></h3>
+<p><span data-zh>当前合作网络中缺少大型零售商的深度绑定（如与MediaMarkt、Best Buy的战略合作），主要依赖电商渠道（亚马逊）和品牌官网。随着产品线扩展到割草机器人等需要线下体验的品类，渠道短板可能成为增长瓶颈。</span><span data-en>The current partnership network lacks deep ties with major retailers (e.g., strategic partnerships with MediaMarkt, Best Buy), relying mainly on e-commerce channels (Amazon) and the brand website. As the product line expands to categories like robotic mowers that require offline experience, channel gaps may become growth bottlenecks.</span></p>
+</div>
+</section>
+
+<!-- Section 5: Risks -->
+<section class="section" id="risks">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-triangle-exclamation"></i></div>
+<h2 class="section-title"><span data-zh>五、风险预警：需要重点关注的信号</span><span data-en>V. Risk Alerts: Signals Requiring Close Attention</span></h2>
+</div>
+
+<!-- Risk 1 -->
+<div class="card fade-up">
+<div class="risk-priority risk-medium"><i class="fas fa-exclamation-circle"></i> <span data-zh>中优先级</span><span data-en>Medium Priority</span></div>
+<h3><span data-zh>风险1：竞品密集追赶，技术差异化窗口收窄</span><span data-en>Risk 1: Intense Competitor Catch-Up, Narrowing Tech Differentiation Window</span></h3>
+<p style="margin-bottom:8px"><strong><span data-zh>事件</span><span data-en>Event</span></strong>：<span data-zh>本周期内，Dreame、ECOVACS、Mova、Narwal等品牌均推出了搭载类似技术（高吸力、AI避障、自动基站）的新品，部分产品在特定维度已超越石头科技（如Dreame X60的5cm越障能力）。</span><span data-en>During this period, Dreame, ECOVACS, Mova, Narwal and other brands all launched new products with similar technologies (high suction, AI obstacle avoidance, auto base stations), with some products surpassing Roborock in specific dimensions (e.g., Dreame X60's 5cm obstacle crossing).</span></p>
+<p style="margin-bottom:8px"><strong><span data-zh>影响评估</span><span data-en>Impact Assessment</span></strong>：<span data-zh>扫地机器人行业的技术同质化正在加速。石头科技的AdaptiLift越障、DuoDivide防缠绕等技术虽然领先，但竞品追赶速度很快。多家评测媒体已开始将Mova、Dreame等品牌与Roborock并列推荐。</span><span data-en>Technology homogenization in the robot vacuum industry is accelerating. While Roborock's AdaptiLift obstacle crossing and DuoDivide anti-tangle technologies lead, competitors are catching up fast. Multiple review outlets now recommend Mova, Dreame alongside Roborock.</span></p>
+<div class="verdict">
+<strong><span data-zh>风险研判</span><span data-en>Risk Assessment</span></strong>：<span data-zh>技术领先的时间窗口在缩短。石头科技需要持续加大研发投入（当前10年累计2.8亿美元），同时通过品牌、渠道和生态构建非技术壁垒。Saros Rover（爬楼梯）和Z70（机械臂）等概念产品的商业化速度将是关键。</span><span data-en>The technology leadership window is shrinking. Roborock needs to continue increasing R&D investment (currently $280M cumulative over 10 years) while building non-technical barriers through brand, channels, and ecosystem. The commercialization speed of concept products like Saros Rover (stair-climbing) and Z70 (robotic arm) will be critical.</span></div>
+</div>
+
+<!-- Risk 2 -->
+<div class="card fade-up">
+<div class="risk-priority risk-medium"><i class="fas fa-exclamation-circle"></i> <span data-zh>中优先级</span><span data-en>Medium Priority</span></div>
+<h3><span data-zh>风险2：割草机器人新赛道的市场验证风险</span><span data-en>Risk 2: Market Validation Risk in the New Robotic Mower Track</span></h3>
+<p style="margin-bottom:8px"><strong><span data-zh>事件</span><span data-en>Event</span></strong>：<span data-zh>RockMow/RockNeo系列刚进入欧洲市场，面临Husqvarna、Segway Navimow、Dreame、Mammotion等成熟玩家的竞争。</span><span data-en>The RockMow/RockNeo series just entered the European market, facing competition from established players like Husqvarna, Segway Navimow, Dreame, and Mammotion.</span></p>
+<p style="margin-bottom:8px"><strong><span data-zh>影响评估</span><span data-en>Impact Assessment</span></strong>：<span data-zh>割草机器人的使用场景、用户需求和售后服务与室内扫地机器人差异显著。户外环境的复杂性（天气、地形、植被）对产品可靠性要求更高，且欧洲用户对草坪维护有较高的品质预期。</span><span data-en>Robotic mower usage scenarios, user needs, and after-sales service differ significantly from indoor robot vacuums. Outdoor environment complexity (weather, terrain, vegetation) demands higher product reliability, and European users have high quality expectations for lawn maintenance.</span></p>
+<div class="verdict">
+<strong><span data-zh>风险研判</span><span data-en>Risk Assessment</span></strong>：<span data-zh>石头科技在割草机器人领域尚无市场验证数据。8款机型同时推出的策略虽然覆盖面广，但也意味着研发和售后资源的分散。需关注首批用户的实际反馈和退货率。</span><span data-en>Roborock has no market validation data in the robotic mower space yet. While the strategy of launching 8 models simultaneously provides broad coverage, it also means dispersed R&D and after-sales resources. First-batch user feedback and return rates need close monitoring.</span></div>
+</div>
+
+<!-- Risk 3 -->
+<div class="card fade-up">
+<div class="risk-priority risk-low"><i class="fas fa-info-circle"></i> <span data-zh>低优先级</span><span data-en>Low Priority</span></div>
+<h3><span data-zh>风险3：高端市场价格压力</span><span data-en>Risk 3: Premium Market Pricing Pressure</span></h3>
+<p style="margin-bottom:8px"><strong><span data-zh>事件</span><span data-en>Event</span></strong>：<span data-zh>多条评测和促销信息显示，Saros 20系列（1,200-1,400欧元）和Qrevo Curv 2 Pro（849欧元）已出现显著折扣，部分渠道降幅达35%。</span><span data-en>Multiple reviews and promotional information show that the Saros 20 series (€1,200-1,400) and Qrevo Curv 2 Pro (€849) have seen significant discounts, with some channels offering up to 35% off.</span></p>
+<p style="margin-bottom:8px"><strong><span data-zh>影响评估</span><span data-en>Impact Assessment</span></strong>：<span data-zh>高端扫地机器人的价格弹性正在被测试。频繁的促销可能侵蚀品牌溢价，也可能反映出高端市场需求增速放缓。</span><span data-en>Price elasticity of premium robot vacuums is being tested. Frequent promotions may erode brand premium, or may reflect slowing demand growth in the premium segment.</span></p>
+<div class="verdict">
+<strong><span data-zh>风险研判</span><span data-en>Risk Assessment</span></strong>：<span data-zh>这可能是新品上市初期的正常促销节奏，也可能是市场信号。需持续观察高端机型的全价销售占比和促销频率。</span><span data-en>This may be normal promotional rhythm during new product launches, or it may be a market signal. Full-price sales ratio and promotion frequency of premium models need continued monitoring.</span></div>
+</div>
+</section>
+
+<!-- Section 6: Competition -->
+<section class="section" id="competition">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-chess"></i></div>
+<h2 class="section-title"><span data-zh>六、竞争格局速览</span><span data-en>VI. Competitive Landscape Overview</span></h2>
+</div>
+
+<div class="card fade-up">
+<div class="card-tag"><i class="fas fa-chess-board"></i> <span data-zh>多维度竞争定位</span><span data-en>Multi-Dimensional Competitive Positioning</span></div>
+<div class="table-wrapper" style="margin-top:12px">
+<table>
+<thead>
+<tr>
+<th><span data-zh>维度</span><span data-en>Dimension</span></th>
+<th><span data-zh>石头科技的位置</span><span data-en>Roborock's Position</span></th>
+<th><span data-zh>主要竞争对手</span><span data-en>Key Competitors</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span data-zh>全球扫地机器人</span><span data-en>Global Robot Vacuums</span></td>
+<td><span data-zh>第一（17.7%市占率）</span><span data-en>#1 (17.7% market share)</span></td>
+<td>ECOVACS、iRobot、Dreame</td>
+</tr>
+<tr>
+<td><span data-zh>欧洲市场</span><span data-en>European Market</span></td>
+<td><span data-zh>领先（德国、北欧第一）</span><span data-en>Leading (Germany, Nordics #1)</span></td>
+<td>Dreame、Mova、ECOVACS</td>
+</tr>
+<tr>
+<td><span data-zh>越南市场</span><span data-en>Vietnam Market</span></td>
+<td><span data-zh>第三（小米、ECOVACS之后）</span><span data-en>#3 (after Xiaomi, ECOVACS)</span></td>
+<td><span data-zh>ECOVACS（54%市占率）、小米</span><span data-en>ECOVACS (54% share), Xiaomi</span></td>
+</tr>
+<tr>
+<td><span data-zh>洗地机</span><span data-en>Wet-Dry Vacuums</span></td>
+<td><span data-zh>快速增长中</span><span data-en>Rapidly Growing</span></td>
+<td>Tineco、Dreame、Dyson</td>
+</tr>
+<tr>
+<td><span data-zh>割草机器人</span><span data-en>Robotic Mowers</span></td>
+<td><span data-zh>新进入者</span><span data-en>New Entrant</span></td>
+<td>Husqvarna、Segway、Dreame</td>
+</tr>
+<tr>
+<td><span data-zh>无线吸尘器</span><span data-en>Cordless Vacuums</span></td>
+<td><span data-zh>挑战者</span><span data-en>Challenger</span></td>
+<td>Dyson、Shark、Dreame</td>
+</tr>
+<tr>
+<td><span data-zh>洗烘一体机</span><span data-en>Washer-Dryers</span></td>
+<td><span data-zh>试水阶段</span><span data-en>Testing Phase</span></td>
+<td><span data-zh>传统家电品牌（三星、LG等）</span><span data-en>Traditional appliance brands (Samsung, LG, etc.)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card fade-up" style="border-left:3px solid #f59e0b">
+<h3><span data-zh>竞争观察</span><span data-en>Competitive Observation</span></h3>
+<p><span data-zh>石头科技在扫地机器人领域的领先地位稳固，但正面临Dreame的全方位追赶——Dreame在扫地机器人、洗地机、割草机器人三个赛道同时与石头科技竞争，且在部分技术指标（越障高度、吸力）上已实现超越。Dyson进入越南市场（售价3,500万越南盾）虽然定价远高于石头科技，但其品牌号召力不容忽视。</span><span data-en>Roborock's leadership in robot vacuums remains solid, but it faces comprehensive pursuit from Dreame — competing simultaneously in robot vacuums, wet-dry vacuums, and robotic mowers, with Dreame already surpassing Roborock in certain technical metrics (obstacle crossing height, suction power). Dyson's entry into the Vietnam market (priced at 35M VND) is far above Roborock's pricing, but its brand appeal cannot be ignored.</span></p>
+</div>
+</section>
+
+<!-- Section 7: Outlook -->
+<section class="section" id="outlook">
+<div class="section-header fade-up">
+<div class="section-icon"><i class="fas fa-binoculars"></i></div>
+<h2 class="section-title"><span data-zh>七、前瞻：未来30-90天关注要点</span><span data-en>VII. Outlook: Key Focus Areas for the Next 30-90 Days</span></h2>
+</div>
+
+<div class="card fade-up">
+<div class="outlook-item">
+<div class="outlook-num">1</div>
+<div>
+<p><strong>Qrevo S Pro<span data-zh>全球销售数据</span><span data-en> Global Sales Data</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>作为中端主力，其首月销量将验证"入门级高端"策略的有效性</span><span data-en>As the mid-range flagship, its first-month sales will validate the "entry-level premium" strategy</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">2</div>
+<div>
+<p><strong><span data-zh>割草机器人欧洲市场反馈</span><span data-en>Robotic Mower European Market Feedback</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>首批用户评测和退货率，决定该赛道的投入力度</span><span data-en>First-batch user reviews and return rates will determine investment intensity in this track</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">3</div>
+<div>
+<p><strong>Saros Rover<span data-zh>商业化时间表</span><span data-en> Commercialization Timeline</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>可爬楼梯的概念机何时量产，将定义下一代扫地机器人的竞争维度</span><span data-en>When the stair-climbing concept machine enters mass production will define the next-gen robot vacuum competition dimension</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">4</div>
+<div>
+<p><strong>A30 ProSteam<span data-zh>上市</span><span data-en> Launch</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>5合1清洁平台的市场接受度，验证"一机多用"策略</span><span data-en>Market acceptance of the 5-in-1 cleaning platform, validating the "one machine, multiple uses" strategy</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">5</div>
+<div>
+<p><strong>Dreame<span data-zh>竞品动态</span><span data-en> Competitor Dynamics</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>Dreame X60系列和割草机器人的市场表现，直接影响石头科技的竞争压力</span><span data-en>Dreame X60 series and robotic mower market performance directly impacts Roborock's competitive pressure</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">6</div>
+<div>
+<p><strong><span data-zh>俄罗斯/乌克兰市场进展</span><span data-en>Russia/Ukraine Market Progress</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>地缘局势下的渠道建设和售后网络运营情况</span><span data-en>Channel development and after-sales network operations amid geopolitical conditions</span></p>
+</div>
+</div>
+<div class="outlook-item">
+<div class="outlook-num">7</div>
+<div>
+<p><strong>2026<span data-zh>年Q2财报</span><span data-en> Q2 Earnings</span></strong></p>
+<p style="color:#64748b;font-size:.85rem"><span data-zh>全球出货量增速、新品类收入占比、研发投入变化</span><span data-en>Global shipment growth rate, new category revenue share, R&D investment changes</span></p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<p style="margin-bottom:8px"><span data-zh>本报告基于公开媒体资讯整理分析，不构成投资建议。</span><span data-en>This report is based on publicly available media information and does not constitute investment advice.</span></p>
+<p>© 2026 <a href="#">Supinfor Ltd.</a> · <span data-zh>生成日期：2026年4月29日</span><span data-en>Generated: April 29, 2026</span></p>
+</footer>
+
+</div><!-- end main-content -->
+
+<!-- Back to Top -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+<i class="fas fa-arrow-up"></i>
+</button>
+
+<!-- Sidebar Overlay (mobile) -->
+<div id="sidebarOverlay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.3);z-index:35" onclick="toggleSidebar()"></div>
+
+<script>
+// ===== Theme =====
+function getSystemTheme(){return window.matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light'}
+function applyTheme(t){
+  document.documentElement.classList.toggle('dark',t==='dark');
+  document.documentElement.setAttribute('data-theme',t);
+  const icon=document.getElementById('themeIcon');
+  if(icon){icon.className=t==='dark'?'fas fa-sun':'fas fa-moon'}
+}
+function toggleTheme(){
+  const current=document.documentElement.classList.contains('dark')?'dark':'light';
+  const next=current==='dark'?'light':'dark';
+  localStorage.setItem('roborock-theme',next);
+  applyTheme(next);
+}
+(function(){
+  const saved=localStorage.getItem('roborock-theme');
+  applyTheme(saved||getSystemTheme());
+  window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change',e=>{
+    if(!localStorage.getItem('roborock-theme'))applyTheme(e.matches?'dark':'light');
+  });
+})();
+
+// ===== Language =====
+function applyLang(lang){
+  document.documentElement.setAttribute('data-lang',lang);
+  document.documentElement.lang=lang;
+  const label=document.getElementById('langLabel');
+  if(label)label.textContent=lang==='zh'?'EN':'中';
+}
+function toggleLang(){
+  const current=document.documentElement.getAttribute('data-lang')||'zh';
+  const next=current==='zh'?'en':'zh';
+  localStorage.setItem('roborock-lang',next);
+  applyLang(next);
+}
+(function(){
+  const saved=localStorage.getItem('roborock-lang');
+  applyLang(saved||'zh');
+})();
+
+// ===== Sidebar =====
+function toggleSidebar(){
+  const sb=document.getElementById('sidebar');
+  const ov=document.getElementById('sidebarOverlay');
+  sb.classList.toggle('open');
+  ov.style.display=sb.classList.contains('open')?'block':'none';
+}
+// Close sidebar on nav click (mobile)
+document.querySelectorAll('.nav-item').forEach(a=>{
+  a.addEventListener('click',()=>{
+    if(window.innerWidth<=1024){
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').style.display='none';
+    }
+  });
+});
+
+// ===== Active Nav Highlight =====
+const sections=document.querySelectorAll('section[id]');
+const navItems=document.querySelectorAll('.nav-item');
+function updateActiveNav(){
+  let current='';
+  sections.forEach(s=>{
+    const top=s.offsetTop-120;
+    if(window.scrollY>=top)current=s.getAttribute('id');
+  });
+  navItems.forEach(a=>{
+    a.classList.toggle('active',a.getAttribute('href')==='#'+current);
+  });
+}
+window.addEventListener('scroll',updateActiveNav);
+updateActiveNav();
+
+// ===== Back to Top =====
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>{
+  backTop.classList.toggle('visible',window.scrollY>400);
+});
+
+// ===== IntersectionObserver Animations =====
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}
+  });
+},{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.fade-up').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>

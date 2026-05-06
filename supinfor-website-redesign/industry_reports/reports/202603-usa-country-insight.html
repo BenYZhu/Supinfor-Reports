@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light" data-lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美国区域国别洞察报告 | 2026-03</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Serif+SC:wght@400;700;900&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+:root{--bg:#F0F2F5;--bg2:#FFFFFF;--hero-bg:#0B1426;--text:#1A1A2E;--text2:#4A4A6A;--text3:#8888A0;--gold:#C9A84C;--gold-light:#F5E6B8;--red:#DC3545;--red-light:#FFE0E3;--blue:#1D4ED8;--blue-light:#DBEAFE;--green:#059669;--green-light:#D1FAE5;--border:#E2E4E8;--shadow:0 2px 12px rgba(0,0,0,.06);--shadow-hover:0 12px 40px rgba(0,0,0,.12);--hero-grad:linear-gradient(160deg,#060D1A 0%,#0B1E3D 40%,#132B50 70%,#0A1628 100%)}
+[data-theme="dark"]{--bg:#0D1117;--bg2:#161B22;--hero-bg:#010409;--text:#E6EDF3;--text2:#A0AEC0;--text3:#6B7280;--gold:#F0D78C;--gold-light:#3D3520;--red:#FF6B7A;--red-light:#3D1520;--blue:#58A6FF;--blue-light:#152238;--green:#3FB950;--green-light:#15302A;--border:#30363D;--shadow:0 2px 12px rgba(0,0,0,.3);--shadow-hover:0 12px 40px rgba(0,0,0,.5);--hero-grad:linear-gradient(160deg,#010409 0%,#0D1117 40%,#161B22 70%,#010409 100%)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Noto Sans SC','Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.8;font-size:16px}
+/* NAV */
+.top-nav{position:fixed;top:0;left:0;right:0;z-index:1000;background:rgba(10,20,38,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(201,168,76,.12);padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}
+.nav-brand{color:var(--gold);font-weight:700;font-size:.9rem;letter-spacing:1px;font-family:'Noto Serif SC',serif}
+.nav-right{display:flex;align-items:center;gap:12px}
+.nav-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);color:#E6EDF3;border-radius:8px;padding:6px 14px;cursor:pointer;font-size:.82rem;transition:all .2s}
+.nav-btn:hover{background:rgba(201,168,76,.15);border-color:var(--gold);color:var(--gold)}
+/* HERO */
+.hero{background:var(--hero-grad);min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;padding:80px 2rem 80px}
+.hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 50% at 25% 50%,rgba(201,168,76,.07) 0%,transparent 60%),radial-gradient(ellipse 50% 40% at 75% 30%,rgba(29,78,216,.05) 0%,transparent 50%),radial-gradient(ellipse 40% 50% at 50% 80%,rgba(5,150,105,.04) 0%,transparent 50%)}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:150px;background:linear-gradient(to top,var(--bg),transparent)}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(201,168,76,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(201,168,76,.03) 1px,transparent 1px);background-size:80px 80px}
+.hero-inner{position:relative;z-index:2;max-width:900px;text-align:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:var(--gold);padding:8px 22px;border-radius:50px;font-size:.75rem;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;margin-bottom:2.5rem}
+.hero-title{font-family:'Noto Serif SC',serif;font-size:clamp(2.5rem,6vw,4.2rem);font-weight:900;color:#fff;line-height:1.2;margin-bottom:1.2rem}
+.hero-title .accent{color:var(--gold)}
+.hero-subtitle{font-size:clamp(.95rem,2vw,1.2rem);color:rgba(255,255,255,.55);font-weight:300;margin-bottom:3rem;max-width:700px;margin-left:auto;margin-right:auto;line-height:1.9}
+.hero-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;max-width:700px;margin:0 auto}
+@media(max-width:600px){.hero-stats{grid-template-columns:repeat(2,1fr)}}
+.hero-stat{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:1.4rem 1rem;transition:all .3s}
+.hero-stat:hover{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.2)}
+.hero-stat-val{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--gold)}
+.hero-stat-val.red{color:var(--red)}
+.hero-stat-label{font-size:.7rem;color:rgba(255,255,255,.45);margin-top:4px;letter-spacing:.5px}
+/* CONTENT */
+.content{max-width:1200px;margin:0 auto;padding:60px 24px}
+/* CORE INSIGHTS */
+.core-section{margin-bottom:64px}
+.core-section h2{font-family:'Noto Serif SC',serif;font-size:1.6rem;margin-bottom:2rem;position:relative;padding-left:20px}
+.core-section h2::before{content:'';position:absolute;left:0;top:4px;bottom:4px;width:4px;background:linear-gradient(180deg,var(--gold),transparent);border-radius:2px}
+.core-list{display:flex;flex-direction:column;gap:14px}
+.core-item{display:flex;gap:18px;align-items:flex-start;padding:20px 24px;background:var(--bg2);border:1px solid var(--border);border-radius:14px;transition:all .35s;cursor:default}
+.core-item:hover{border-color:var(--gold);box-shadow:var(--shadow-hover);transform:translateY(-2px)}
+.core-num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--gold);opacity:.7;min-width:40px;line-height:1}
+.core-text{font-size:.9rem;line-height:1.85;color:var(--text2);padding-top:6px}
+/* CHAPTER */
+.chapter{margin-bottom:56px;padding-top:32px}
+.chapter-header{margin-bottom:28px}
+.chapter-num{font-size:.7rem;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}
+.chapter-title{font-family:'Noto Serif SC',serif;font-size:1.5rem;line-height:1.4;color:var(--text);position:relative;padding-bottom:16px}
+.chapter-title::after{content:'';position:absolute;bottom:0;left:0;width:60px;height:3px;background:linear-gradient(90deg,var(--gold),transparent);border-radius:2px}
+/* INSIGHT CARD */
+.insight{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:28px 28px 24px;margin-bottom:20px;transition:all .35s;position:relative;overflow:hidden}
+.insight::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:var(--blue);border-radius:4px 0 0 4px;transition:background .3s}
+.insight:hover{box-shadow:var(--shadow-hover);transform:translateY(-2px);border-color:rgba(29,78,216,.3)}
+.insight-tag{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:.68rem;font-weight:700;padding:3px 10px;border-radius:5px;margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+.insight h4{font-size:1rem;margin-bottom:12px;line-height:1.5;font-weight:600}
+.insight-body{color:var(--text2);font-size:.88rem;line-height:1.9;margin-bottom:16px}
+.facts{list-style:none;padding:0;border-top:1px solid var(--border);padding-top:14px;margin-top:14px}
+.facts li{position:relative;padding-left:22px;margin-bottom:9px;font-size:.84rem;color:var(--text2);line-height:1.7}
+.facts li::before{content:'';position:absolute;left:0;top:9px;width:8px;height:8px;border-radius:50%;background:var(--blue);opacity:.4}
+/* RISK */
+.risk{background:var(--bg2);border:1px solid rgba(220,53,69,.25);border-radius:14px;padding:24px 28px;margin-bottom:18px;position:relative;overflow:hidden;transition:all .35s}
+.risk::before{content:'';position:absolute;top:0;left:0;bottom:0;width:4px;background:linear-gradient(180deg,var(--red),#FF9F1C);border-radius:4px 0 0 4px}
+.risk:hover{border-color:var(--red);box-shadow:0 4px 24px rgba(220,53,69,.1)}
+.risk h4{color:var(--red);font-size:.95rem;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.risk p{font-size:.86rem;color:var(--text2);line-height:1.8;margin-bottom:10px}
+.risk-indicator{font-size:.76rem;color:var(--gold);font-weight:600;display:flex;align-items:center;gap:6px}
+/* FOLLOW */
+.follow{display:flex;gap:18px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--border)}
+.follow:last-child{border-bottom:none}
+.follow-date{min-width:120px;font-weight:700;color:var(--gold);font-size:.84rem;font-family:'Playfair Display',serif}
+.follow-text{font-size:.86rem;color:var(--text2);line-height:1.7}
+/* SUMMARY */
+.summary-card{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;margin-bottom:18px}
+.summary-card h4{font-size:.95rem;margin-bottom:12px;color:var(--gold);display:flex;align-items:center;gap:8px;font-family:'Noto Serif SC',serif}
+.summary-card p,.summary-card li{font-size:.86rem;color:var(--text2);line-height:1.85}
+.summary-card ul{padding-left:18px;margin-top:8px}
+.summary-card li{margin-bottom:7px}
+.summary-card li strong{color:var(--text)}
+/* FOOTER */
+.footer{text-align:center;padding:48px 24px;border-top:1px solid var(--border);margin-top:48px}
+.footer p{font-size:.8rem;color:var(--text3);margin-bottom:4px}
+/* BACK TOP */
+.back-top{position:fixed;bottom:24px;right:24px;width:46px;height:46px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(20px);transition:all .3s;z-index:999;border:none;font-size:15px;box-shadow:0 4px 16px rgba(201,168,76,.3)}
+.back-top.visible{opacity:1;transform:translateY(0)}
+.back-top:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(201,168,76,.4)}
+/* TOC PANEL */
+.toc-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:2000;opacity:0;pointer-events:none;transition:opacity .3s}
+.toc-overlay.active{opacity:1;pointer-events:auto}
+.toc-panel{position:fixed;top:0;right:-400px;width:360px;max-width:88vw;height:100vh;background:var(--bg2);z-index:2001;box-shadow:-4px 0 30px rgba(0,0,0,.2);transition:right .35s ease;overflow-y:auto;padding:2rem}
+.toc-panel.active{right:0}
+.toc-panel h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;margin-bottom:1.5rem;border-bottom:2px solid var(--gold);padding-bottom:.5rem}
+.toc-panel a{display:block;font-size:.82rem;color:var(--text2);text-decoration:none;padding:8px 12px;border-radius:6px;margin-bottom:2px;transition:all .2s}
+.toc-panel a:hover{background:rgba(201,168,76,.08);color:var(--gold)}
+.toc-close{position:absolute;top:1rem;right:1rem;background:none;border:none;color:var(--text3);font-size:1.2rem;cursor:pointer}
+/* SECTION DIVIDER */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:40px 0}
+/* RESPONSIVE */
+@media(max-width:768px){.hero{padding:70px 1.5rem 60px;min-height:auto}.content{padding:40px 16px}.insight{padding:20px}.core-item{padding:16px 18px}.core-num{font-size:1.8rem}}
+/* ANIMATIONS */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* CHARTS */
+.chart-container{background:var(--bg2);border:1px solid var(--border);border-radius:14px;padding:24px 28px;overflow:hidden}
+.chart-title{font-size:.95rem;font-weight:700;color:var(--text);margin-bottom:4px;display:flex;align-items:center;gap:8px}
+.chart-title i{color:var(--gold)}
+.chart-subtitle{font-size:.72rem;color:var(--text3);margin-bottom:18px}
+.chart-note{font-size:.72rem;color:var(--text3);margin-top:14px;text-align:center;font-style:italic}
+.bar-chart{display:flex;flex-direction:column;gap:12px}
+.bar-row{display:flex;align-items:center;gap:12px}
+.bar-label{min-width:100px;font-size:.78rem;color:var(--text2);text-align:right;font-weight:500}
+.bar-track{flex:1;height:24px;background:var(--bg);border-radius:6px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:6px;transition:width 1.2s cubic-bezier(.22,1,.36,1)}
+.bar-value{min-width:60px;font-size:.82rem;font-weight:700;color:var(--text)}
+.metric-card{background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px;text-align:center;transition:all .3s}
+.metric-card:hover{border-color:var(--gold);transform:translateY(-2px)}
+.metric-val{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:900;color:var(--gold);line-height:1.2}
+.metric-unit{font-size:.9rem;font-weight:400;opacity:.7}
+.metric-label{font-size:.75rem;color:var(--text);margin-top:4px;font-weight:600}
+.metric-sub{font-size:.68rem;color:var(--text3);margin-top:2px}
+
+.lang-toggle{display:flex;align-items:center;gap:0;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:8px;overflow:hidden;font-size:.82rem}
+.lang-toggle button{background:none;border:none;color:#E6EDF3;padding:6px 14px;cursor:pointer;font-size:.82rem;font-weight:500;transition:all .2s}
+.lang-toggle button.active{background:var(--gold,#C9A84C);color:#0A1628;font-weight:700}
+.lang-toggle button:hover:not(.active){background:rgba(201,168,76,.2)}
+[data-lang="zh"] .lang-en{display:none!important}
+[data-lang="en"] .lang-zh{display:none!important}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="top-nav">
+<span class="nav-brand"><i class="fas fa-globe-americas"></i> <span class="lang-zh">美国区域国别洞察</span><span class="lang-en">U.S. Country Insight</span></span>
+<div class="nav-right">
+<div class="lang-toggle"><button onclick="setLang('zh')" class="active">中</button><button onclick="setLang('en')">EN</button></div>
+<button class="nav-btn" onclick="toggleToc()"><i class="fas fa-list"></i> <span class="lang-zh">目录</span><span class="lang-en">TOC</span></button>
+<button class="nav-btn" onclick="toggleTheme()"><i class="fas fa-adjust"></i></button>
+</div>
+</nav>
+
+<!-- TOC -->
+<div class="toc-overlay" onclick="toggleToc()"></div>
+<div class="toc-panel">
+<button class="toc-close" onclick="toggleToc()"><i class="fas fa-times"></i></button>
+<h3><span class="lang-zh">目录导航</span><span class="lang-en">Table of Contents</span></h3>
+<a href="#core" onclick="toggleToc()"><span class="lang-zh">核心洞察摘要</span><span class="lang-en">Core Insights</span></a>
+<a href="#s1" onclick="toggleToc()"><span class="lang-zh">一、能源地缘政治</span><span class="lang-en">1. Energy Geopolitics</span></a>
+<a href="#s2" onclick="toggleToc()"><span class="lang-zh">二、联邦与州气候对抗</span><span class="lang-en">2. Federal vs. State Climate Clash</span></a>
+<a href="#s3" onclick="toggleToc()"><span class="lang-zh">三、AI数据中心</span><span class="lang-en">3. AI Data Centers</span></a>
+<a href="#s4" onclick="toggleToc()"><span class="lang-zh">四、极端天气与气候危机</span><span class="lang-en">4. Extreme Weather &amp; Climate Crisis</span></a>
+<a href="#s5" onclick="toggleToc()"><span class="lang-zh">五、国内政治</span><span class="lang-en">5. Domestic Politics</span></a>
+<a href="#s6" onclick="toggleToc()"><span class="lang-zh">六、产业转型</span><span class="lang-en">6. Industrial Transition</span></a>
+<a href="#s7" onclick="toggleToc()"><span class="lang-zh">七、公共卫生与民生</span><span class="lang-en">7. Public Health &amp; Livelihood</span></a>
+<a href="#s8" onclick="toggleToc()"><span class="lang-zh">八、环境治理</span><span class="lang-en">8. Environmental Governance</span></a>
+<a href="#risk" onclick="toggleToc()"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></a>
+<a href="#follow" onclick="toggleToc()"><span class="lang-zh">下期关注</span><span class="lang-en">Upcoming Watch</span></a>
+<a href="#summary" onclick="toggleToc()"><span class="lang-zh">全文总结</span><span class="lang-en">Executive Summary</span></a>
+</div>
+
+<!-- HERO -->
+<header class="hero">
+<div class="hero-grid"></div>
+<div class="hero-inner">
+<span class="hero-badge"><i class="fas fa-shield-alt"></i> Country Insight Report</span>
+<h1 class="hero-title"><span class="accent"><span class="lang-zh">美国</span><span class="lang-en">United States</span></span> <span class="lang-zh">区域国别洞察报告</span><span class="lang-en">Country Insight Report</span></h1>
+<p class="hero-subtitle"><span class="lang-zh">基于三月美国热点国别月报（2026-03），覆盖能源、政治、产业、气候、民生等多维度深度洞察分析</span><span class="lang-en">Based on the March 2026 U.S. Country Monthly Brief, covering in-depth analysis across energy, politics, industry, climate, and livelihood</span></p>
+<div class="hero-stats">
+<div class="hero-stat"><div class="hero-stat-val">212</div><div class="hero-stat-label"><span class="lang-zh">原始资讯</span><span class="lang-en">Raw Sources</span></div></div>
+<div class="hero-stat"><div class="hero-stat-val">38</div><div class="hero-stat-label"><span class="lang-zh">关联簇</span><span class="lang-en">Clusters</span></div></div>
+<div class="hero-stat"><div class="hero-stat-val">38</div><div class="hero-stat-label"><span class="lang-zh">洞察提炼</span><span class="lang-en">Insights</span></div></div>
+<div class="hero-stat"><div class="hero-stat-val red">5</div><div class="hero-stat-label"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></div></div>
+</div>
+</div>
+</header>
+
+<!-- BACK TOP -->
+<button class="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- CONTENT -->
+<div class="content">
+
+<!-- CORE INSIGHTS -->
+<section id="core" class="core-section reveal">
+<h2><span class="lang-zh">核心洞察摘要</span><span class="lang-en">Core Insights</span></h2>
+<div class="core-list">
+<div class="core-item"><span class="core-num">1</span><span class="core-text lang-zh">美伊冲突引爆全球能源危机，美国化石能源依赖战略遭遇反噬——油价突破100美元/桶，国内汽油均价逼近4美元，加州逼近8美元，特朗普政府的"能源霸权"路线未能兑现降低能源成本的承诺</span><span class="core-text lang-en">The U.S.–Iran conflict triggered a global energy crisis, exposing the vulnerability of America's fossil-fuel dependence — oil surpassed $100/barrel, national average gasoline neared $4, California approached $8, and the Trump administration's "energy dominance" agenda failed to deliver on its promise of lower energy costs</span></div>
+<div class="core-item"><span class="core-num">2</span><span class="core-text lang-zh">联邦与州的气候-能源政策对抗进入司法决战阶段——24州联合起诉EPA撤销温室气体危害认定，加州与联邦在汽车排放、离岸石油、碳交易等多条战线同时交锋</span><span class="core-text lang-en">The federal–state climate-energy policy clash has entered a judicial showdown — 24 states jointly sued the EPA over the repeal of the greenhouse gas endangerment finding, while California and the federal government clash on multiple fronts including vehicle emissions, offshore oil, and carbon trading</span></div>
+<div class="core-item"><span class="core-num">3</span><span class="core-text lang-zh">AI数据中心成为重塑美国能源格局的最大变量——到2030年将占全国电力需求9%，推高清洁能源PPA价格9%，Meta单个项目投资270亿美元</span><span class="core-text lang-en">AI data centers have become the biggest variable reshaping America's energy landscape — projected to account for 9% of national electricity demand by 2030, pushing clean energy PPA prices up 9%, with Meta investing $27 billion in a single project</span></div>
+<div class="core-item"><span class="core-num">4</span><span class="core-text lang-zh">极端天气全面冲击美国经济民生——西部遭遇数十年最严重雪旱与破纪录高温，中部爆发史上最大山火，住房保险保费5年累计上涨46%</span><span class="core-text lang-en">Extreme weather is hitting the U.S. economy and livelihoods across the board — the West faces its worst snow drought in decades alongside record-breaking heat, the Midwest saw its largest wildfire in history, and home insurance premiums have surged 46% cumulatively over five years</span></div>
+<div class="core-item"><span class="core-num">5</span><span class="core-text lang-zh">特朗普政府医保削减与环保监管放松形成"健康双杀"——超万亿美元医保缩减叠加数十项空气污染标准放松，研究警告将推高肺部疾病发病率</span><span class="core-text lang-en">The Trump administration's healthcare cuts and environmental deregulation form a "double health blow" — over a trillion dollars in Medicaid reductions combined with the rollback of dozens of air pollution standards, with studies warning of rising pulmonary disease rates</span></div>
+<div class="core-item"><span class="core-num">6</span><span class="core-text lang-zh">移民执法政策出现内部裂痕——佛罗里达共和党治安官公开质疑执法范围过广，众议院共和党人建议中期选举前回避"大规模驱逐"话题</span><span class="core-text lang-en">Cracks are emerging within immigration enforcement policy — a Republican sheriff in Florida publicly questioned the overly broad scope of enforcement, and House Republicans advised avoiding the "mass deportation" topic ahead of the midterm elections</span></div>
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S1 -->
+<section id="s1" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 01</div><h2 class="chapter-title"><span class="lang-zh">能源地缘政治：美伊冲突暴露化石能源依赖的战略脆弱性</span><span class="lang-en">Energy Geopolitics: The U.S.–Iran Conflict Exposes the Strategic Fragility of Fossil-Fuel Dependence</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">1.1 美伊军事冲突引发全球能源市场剧烈动荡</span><span class="lang-en">1.1 U.S.–Iran Military Conflict Triggers Severe Global Energy Market Turmoil</span></h4><p class="insight-body"><span class="lang-zh">2026年美以空袭伊朗导致霍尔木兹海峡航运近乎停滞，全球原油价格突破100美元/桶，美国国内汽油均价攀升至3.84美元/加仑。释放战略石油储备等应急措施未能有效抑制价格上涨。</span><span class="lang-en">The 2026 U.S.–Israeli airstrikes on Iran brought Strait of Hormuz shipping to a near standstill, pushing global crude oil prices above $100/barrel and U.S. average gasoline to $3.84/gallon. Emergency measures such as releasing the Strategic Petroleum Reserve failed to effectively curb price increases.</span></p><ul class="facts"><li><span class="lang-zh">布伦特原油期货价格上涨40%，美国石油勘探企业股价上涨超30%</span><span class="lang-en">Brent crude futures rose 40%; U.S. oil exploration company stocks surged over 30%</span></li><li><span class="lang-zh">加州油价高达5.37美元/加仑，最坏情景下部分站点或接近10美元</span><span class="lang-en">California gas prices reached $5.37/gallon, with worst-case scenarios approaching $10 at some stations</span></li><li><span class="lang-zh">全球消费者自冲突爆发以来向化石燃料企业多支付超1000亿美元</span><span class="lang-en">Global consumers have paid over $100 billion more to fossil fuel companies since the conflict began</span></li><li><span class="lang-zh">EPA发布临时紧急燃料豁免，允许全国销售E15乙醇汽油</span><span class="lang-en">EPA issued a temporary emergency fuel waiver allowing nationwide sales of E15 ethanol gasoline</span></li></ul></div>
+<div class="chart-container reveal" style="margin:24px 0 32px">
+<div class="chart-title"><i class="fas fa-chart-bar"></i> <span class="lang-zh">美国汽油价格对比（美元/加仑）</span><span class="lang-en">U.S. Gasoline Price Comparison (USD/Gallon)</span></div>
+<div class="chart-subtitle"><span class="lang-zh">数据来源：报告原文 · 2026年3月</span><span class="lang-en">Source: Original Report · March 2026</span></div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">全国均价</span><span class="lang-en">National Avg.</span></span><div class="bar-track"><div class="bar-fill" style="width:38.4%;background:linear-gradient(90deg,#2563eb,#58a6ff)"></div></div><span class="bar-value">$3.84</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">加州均价</span><span class="lang-en">California Avg.</span></span><div class="bar-track"><div class="bar-fill" style="width:53.7%;background:linear-gradient(90deg,#d97706,#fbbf24)"></div></div><span class="bar-value">$5.37</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">加州最坏情景</span><span class="lang-en">CA Worst Case</span></span><div class="bar-track"><div class="bar-fill" style="width:100%;background:linear-gradient(90deg,#dc2626,#ff6b7a)"></div></div><span class="bar-value">~$10.00</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">冲突前均价</span><span class="lang-en">Pre-Conflict Avg.</span></span><div class="bar-track"><div class="bar-fill" style="width:29.4%;background:linear-gradient(90deg,#059669,#3fb950)"></div></div><span class="bar-value">$2.94</span></div>
+</div>
+</div>
+
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">1.2 特朗普政府全面押注化石能源，政策逻辑与现实效果脱节</span><span class="lang-en">1.2 The Trump Administration Goes All-In on Fossil Fuels, but Policy Logic Disconnects from Reality</span></h4><p class="insight-body"><span class="lang-zh">撤销温室气体危害认定、取消汽车排放标准、加速油气钻探审批、削减数千亿美元清洁能源补贴。但美伊冲突证明过度依赖化石能源反而加剧了能源安全风险。</span><span class="lang-en">Revoking the greenhouse gas endangerment finding, eliminating vehicle emission standards, fast-tracking oil and gas drilling permits, and slashing hundreds of billions in clean energy subsidies. Yet the U.S.–Iran conflict proved that over-reliance on fossil fuels actually heightened energy security risks.</span></p><ul class="facts"><li><span class="lang-zh">动用"上帝小组"条款豁免墨西哥湾油气钻井的物种保护约束</span><span class="lang-en">Invoked the "God Squad" clause to exempt Gulf of Mexico oil and gas drilling from endangered species protections</span></li><li><span class="lang-zh">支付10亿美元纳税人资金终止道达尔能源海上风电项目</span><span class="lang-en">Paid $1 billion in taxpayer funds to terminate TotalEnergies' offshore wind project</span></li><li><span class="lang-zh">Centralia燃煤电厂1-2月仅发电8兆瓦时</span><span class="lang-en">Centralia coal plant generated only 8 MWh in January–February</span></li><li><span class="lang-zh">阿拉斯加举行2019年以来首次油气租赁拍卖，推出625个地块</span><span class="lang-en">Alaska held its first oil and gas lease auction since 2019, offering 625 tracts</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S2 -->
+<section id="s2" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 02</div><h2 class="chapter-title"><span class="lang-zh">联邦与州的气候政策对抗：美国能源治理进入"分裂时代"</span><span class="lang-en">Federal vs. State Climate Policy Clash: U.S. Energy Governance Enters an "Era of Division"</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">2.1 温室气体危害认定撤销引发史上最大规模气候诉讼</span><span class="lang-en">2.1 Repeal of Greenhouse Gas Endangerment Finding Triggers Largest Climate Lawsuit in History</span></h4><p class="insight-body"><span class="lang-zh">24个民主党州、十余个城市联合起诉EPA。案件最终可能上诉至保守派占优的最高法院，判决将决定美国未来数十年的气候监管框架。</span><span class="lang-en">24 Democratic states and over a dozen cities jointly sued the EPA. The case may ultimately reach the conservative-leaning Supreme Court, with the ruling set to determine the U.S. climate regulatory framework for decades to come.</span></p><ul class="facts"><li><span class="lang-zh">该认定源于2007年最高法院马萨诸塞诉EPA案</span><span class="lang-en">The finding originated from the 2007 Supreme Court case Massachusetts v. EPA</span></li><li><span class="lang-zh">EPA在特朗普第二任期仅达成1项清洁空气法案和解</span><span class="lang-en">EPA reached only 1 Clean Air Act settlement during Trump's second term</span></li><li><span class="lang-zh">EPA裁员超4000人，降至40年来最低水平</span><span class="lang-en">EPA cut over 4,000 staff, falling to its lowest level in 40 years</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">2.2 加州与联邦全面对抗，形成"一国两制"式能源治理</span><span class="lang-en">2.2 California's Full-Scale Confrontation with the Federal Government Creates a "One Country, Two Systems" Energy Governance</span></h4><p class="insight-body"><span class="lang-zh">加州坚持2035年100%零排放新车销售目标，联邦通过司法诉讼、国会审查、传票调查等手段全面施压。</span><span class="lang-en">California insists on its 2035 target of 100% zero-emission new vehicle sales, while the federal government applies full pressure through lawsuits, congressional reviews, and subpoena investigations.</span></p><ul class="facts"><li><span class="lang-zh">加州炼油厂从40家缩减至7家，约70%石油供应依赖进口</span><span class="lang-en">California's refineries shrank from 40 to 7, with about 70% of oil supply dependent on imports</span></li><li><span class="lang-zh">加州汽油均价突破5美元/加仑</span><span class="lang-en">California's average gasoline price exceeded $5/gallon</span></li><li><span class="lang-zh">联邦援引《国防生产法案》要求重启加州圣伊内斯石油管道</span><span class="lang-en">The federal government invoked the Defense Production Act to demand the restart of California's Santa Ynez oil pipeline</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">2.3 气候责任诉讼升级，石油行业寻求"终极豁免"</span><span class="lang-en">2.3 Climate Liability Lawsuits Escalate as the Oil Industry Seeks "Ultimate Immunity"</span></h4><p class="insight-body"><span class="lang-zh">多州起诉石油巨头要求承担气候灾害损失，最高法院同意审理博尔德市气候诉讼案。</span><span class="lang-en">Multiple states sued oil majors demanding they bear climate disaster costs; the Supreme Court agreed to hear the Boulder climate lawsuit.</span></p><ul class="facts"><li><span class="lang-zh">美国纳税人每年为气候灾害承担超万亿美元成本</span><span class="lang-en">U.S. taxpayers bear over a trillion dollars annually in climate disaster costs</span></li><li><span class="lang-zh">纽约州要求化石能源企业25年内赔偿750亿美元</span><span class="lang-en">New York State demands fossil fuel companies pay $75 billion in damages over 25 years</span></li><li><span class="lang-zh">美国石油学会将责任豁免法案列为首要游说议题</span><span class="lang-en">The American Petroleum Institute listed the liability shield bill as its top lobbying priority</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S3 -->
+<section id="s3" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 03</div><h2 class="chapter-title"><span class="lang-zh">AI数据中心：重塑美国能源格局的"超级变量"</span><span class="lang-en">AI Data Centers: The "Super Variable" Reshaping America's Energy Landscape</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">3.1 AI算力需求爆发，数据中心成为电力需求增长最大驱动力</span><span class="lang-en">3.1 AI Computing Demand Surges, Data Centers Become the Largest Driver of Electricity Demand Growth</span></h4><p class="insight-body"><span class="lang-zh">到2030年数据中心用电将占全国总需求9%，科技企业资本开支超6000亿美元投向数据中心。</span><span class="lang-en">By 2030, data center electricity consumption will account for 9% of national demand, with tech companies directing over $600 billion in capital expenditure toward data centers.</span></p><ul class="facts"><li><span class="lang-zh">2026年全国电力负荷预计增长1.9%，2027年增长2.5%</span><span class="lang-en">National electricity load is projected to grow 1.9% in 2026 and 2.5% in 2027</span></li><li><span class="lang-zh">德州ERCOT 2027年电价或较2月预测上涨79%</span><span class="lang-en">Texas ERCOT 2027 electricity prices may rise 79% above February forecasts</span></li><li><span class="lang-zh">2025年1891个电力项目被取消，93%为清洁能源项目</span><span class="lang-en">1,891 power projects were canceled in 2025, 93% of which were clean energy projects</span></li></ul></div>
+<div class="chart-container reveal" style="margin:24px 0 32px">
+<div class="chart-title"><i class="fas fa-bolt"></i> <span class="lang-zh">美国数据中心占全国电力需求比例</span><span class="lang-en">U.S. Data Center Share of National Electricity Demand</span></div>
+<div class="chart-subtitle"><span class="lang-zh">数据来源：EIA、行业预测 · 报告原文</span><span class="lang-en">Source: EIA, Industry Forecasts · Original Report</span></div>
+<div style="display:flex;align-items:flex-end;gap:24px;justify-content:center;padding:20px 0">
+<div style="text-align:center">
+<div style="width:60px;height:48px;background:linear-gradient(180deg,var(--blue),var(--blue-light));border-radius:8px 8px 0 0;margin:0 auto"></div>
+<div style="font-size:1.4rem;font-weight:800;color:var(--blue);margin-top:8px">4%</div>
+<div style="font-size:.72rem;color:var(--text3)">2025</div>
+</div>
+<div style="text-align:center">
+<div style="width:60px;height:72px;background:linear-gradient(180deg,var(--gold),var(--gold-light));border-radius:8px 8px 0 0;margin:0 auto"></div>
+<div style="font-size:1.4rem;font-weight:800;color:var(--gold);margin-top:8px">6%</div>
+<div style="font-size:.72rem;color:var(--text3)"><span class="lang-zh">2027年(预)</span><span class="lang-en">2027 (est.)</span></div>
+</div>
+<div style="text-align:center">
+<div style="width:60px;height:108px;background:linear-gradient(180deg,var(--red),var(--red-light));border-radius:8px 8px 0 0;margin:0 auto"></div>
+<div style="font-size:1.4rem;font-weight:800;color:var(--red);margin-top:8px">9%</div>
+<div style="font-size:.72rem;color:var(--text3)"><span class="lang-zh">2030年(预)</span><span class="lang-en">2030 (est.)</span></div>
+</div>
+</div>
+<div class="chart-note"><span class="lang-zh">国际能源署预计2030年数据中心用电量将超过所有重工业总和</span><span class="lang-en">The IEA projects that by 2030, data center electricity consumption will exceed that of all heavy industry combined</span></div>
+</div>
+
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">3.2 科技巨头自建能源基础设施，"私人电网"兴起</span><span class="lang-en">3.2 Tech Giants Build Their Own Energy Infrastructure as "Private Grids" Emerge</span></h4><p class="insight-body"><span class="lang-zh">Meta在路易斯安那州投资270亿美元，出资建设7座总容量超5200兆瓦的天然气电厂和240英里输电线路。</span><span class="lang-en">Meta invested $27 billion in Louisiana, funding the construction of 7 natural gas power plants with a combined capacity exceeding 5,200 MW and 240 miles of transmission lines.</span></p><ul class="facts"><li><span class="lang-zh">xAI孟菲斯数据中心配备最多35台天然气涡轮</span><span class="lang-en">xAI's Memphis data center is equipped with up to 35 natural gas turbines</span></li><li><span class="lang-zh">微软购买重启后的三里岛核电站20年电力</span><span class="lang-en">Microsoft purchased 20 years of power from the restarted Three Mile Island nuclear plant</span></li><li><span class="lang-zh">若数据中心电力全由公共电网满足，消费者电价可能上涨40%</span><span class="lang-en">If data center power were fully supplied by the public grid, consumer electricity prices could rise 40%</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">3.3 数据中心扩张引发社区抗议与环境正义争议</span><span class="lang-en">3.3 Data Center Expansion Sparks Community Protests and Environmental Justice Disputes</span></h4><p class="insight-body"><span class="lang-zh">AI数据中心多布局在少数族裔社区，孟菲斯Boxtown居民预期寿命比全国平均低5年以上。</span><span class="lang-en">AI data centers are disproportionately located in minority communities; Boxtown residents in Memphis have a life expectancy more than 5 years below the national average.</span></p><ul class="facts"><li><span class="lang-zh">xAI数据中心单月用水量超1100万加仑</span><span class="lang-en">xAI's data center consumes over 11 million gallons of water per month</span></li><li><span class="lang-zh">NAACP起诉xAI违反联邦清洁空气法案</span><span class="lang-en">The NAACP sued xAI for violating the federal Clean Air Act</span></li><li><span class="lang-zh">伊利诺伊州要求数据中心缴纳100万美元申请费</span><span class="lang-en">Illinois requires data centers to pay a $1 million application fee</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S4 -->
+<section id="s4" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 04</div><h2 class="chapter-title"><span class="lang-zh">极端天气与气候危机：美国经济民生的系统性威胁</span><span class="lang-en">Extreme Weather &amp; Climate Crisis: A Systemic Threat to the U.S. Economy and Livelihoods</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">4.1 西部遭遇数十年最严重雪旱与破纪录高温</span><span class="lang-en">4.1 The West Faces Its Worst Snow Drought in Decades Alongside Record-Breaking Heat</span></h4><p class="insight-body"><span class="lang-zh">内布拉斯加州爆发历史最大规模野火（74.7万英亩），科罗拉多河水资源供应已难以维持长期使用。</span><span class="lang-en">Nebraska experienced its largest wildfire in history (747,000 acres), and the Colorado River's water supply can no longer sustain long-term use.</span></p><ul class="facts"><li><span class="lang-zh">丹佛积雪量仅为平均的32%，盐湖城仅19%</span><span class="lang-en">Denver's snowpack was only 32% of average; Salt Lake City's was just 19%</span></li><li><span class="lang-zh">南加州部分区域气温突破100华氏度</span><span class="lang-en">Parts of Southern California saw temperatures exceed 100°F</span></li><li><span class="lang-zh">科罗拉多河为美国7个西部州提供经济支撑</span><span class="lang-en">The Colorado River provides economic support for 7 western U.S. states</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">4.2 住房保险保费5年累计上涨46%</span><span class="lang-en">4.2 Home Insurance Premiums Have Risen 46% Cumulatively Over Five Years</span></h4><p class="insight-body"><span class="lang-zh">极端天气导致保险损失连续三年超420亿美元，加州FAIR计划参保人数激增43%。</span><span class="lang-en">Extreme weather has caused insurance losses exceeding $42 billion for three consecutive years, and enrollment in California's FAIR Plan surged 43%.</span></p><ul class="facts"><li><span class="lang-zh">2026年平均年保费预计达3057美元，佛罗里达接近8500美元</span><span class="lang-en">Average annual premiums are projected to reach $3,057 in 2026, with Florida approaching $8,500</span></li><li><span class="lang-zh">明尼苏达州2025年保费涨34%、科罗拉多州涨33%</span><span class="lang-en">Minnesota premiums rose 34% in 2025; Colorado rose 33%</span></li><li><span class="lang-zh">过半受访房主为负担保费做出财务牺牲</span><span class="lang-en">Over half of surveyed homeowners made financial sacrifices to afford premiums</span></li></ul></div>
+<div class="chart-container reveal" style="margin:24px 0 32px">
+<div class="chart-title"><i class="fas fa-chart-bar"></i> <span class="lang-zh">2025年各州住房保险保费涨幅</span><span class="lang-en">2025 Home Insurance Premium Increases by State</span></div>
+<div class="chart-subtitle"><span class="lang-zh">数据来源：Insurify · 报告原文</span><span class="lang-en">Source: Insurify · Original Report</span></div>
+<div class="bar-chart">
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">明尼苏达</span><span class="lang-en">Minnesota</span></span><div class="bar-track"><div class="bar-fill" style="width:85%;background:linear-gradient(90deg,#dc2626,#ff6b7a)"></div></div><span class="bar-value">+34%</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">科罗拉多</span><span class="lang-en">Colorado</span></span><div class="bar-track"><div class="bar-fill" style="width:82.5%;background:linear-gradient(90deg,#dc2626,#ff6b7a)"></div></div><span class="bar-value">+33%</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">内布拉斯加</span><span class="lang-en">Nebraska</span></span><div class="bar-track"><div class="bar-fill" style="width:50%;background:linear-gradient(90deg,#d97706,#fbbf24)"></div></div><span class="bar-value">+20%</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">全国平均</span><span class="lang-en">National Avg.</span></span><div class="bar-track"><div class="bar-fill" style="width:30%;background:linear-gradient(90deg,#2563eb,#58a6ff)"></div></div><span class="bar-value">+12%</span></div>
+<div class="bar-row"><span class="bar-label"><span class="lang-zh">2026年预计</span><span class="lang-en">2026 Est.</span></span><div class="bar-track"><div class="bar-fill" style="width:10%;background:linear-gradient(90deg,#059669,#3fb950)"></div></div><span class="bar-value">+4%</span></div>
+</div>
+<div class="chart-note"><span class="lang-zh">2021年以来累计上涨46%，约为通胀的3倍</span><span class="lang-en">Cumulative increase of 46% since 2021, roughly 3× the rate of inflation</span></div>
+</div>
+
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">4.3 滑雪产业遭遇重创，200亿美元产业面临挑战</span><span class="lang-en">4.3 Ski Industry Hit Hard — A $20 Billion Industry Faces Major Challenges</span></h4><p class="insight-body"><span class="lang-zh">超半数西部滑雪场已关闭或提前停业，Vail Resorts净收入指引下调30%。</span><span class="lang-en">Over half of western ski resorts have closed or shut down early; Vail Resorts cut its net income guidance by 30%.</span></p><ul class="facts"><li><span class="lang-zh">美国滑雪产业规模约200亿美元，雇佣超19万员工</span><span class="lang-en">The U.S. ski industry is worth approximately $20 billion and employs over 190,000 workers</span></li><li><span class="lang-zh">正常年份仅约12家提前关闭，2026年超半数已关闭</span><span class="lang-en">In a normal year only about 12 resorts close early; in 2026 over half have already closed</span></li><li><span class="lang-zh">科罗拉多州餐厅营收下降10%-15%</span><span class="lang-en">Colorado restaurant revenues declined 10%–15%</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S5 -->
+<section id="s5" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 05</div><h2 class="chapter-title"><span class="lang-zh">国内政治：联邦权力扩张与州权抵抗的全面博弈</span><span class="lang-en">Domestic Politics: A Full-Scale Contest Between Federal Power Expansion and State Resistance</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">5.1 移民执法政策出现内部裂痕</span><span class="lang-en">5.1 Cracks Emerge Within Immigration Enforcement Policy</span></h4><p class="insight-body"><span class="lang-zh">佛罗里达共和党治安官公开质疑执法范围过广，大沼泽地拘留中心日均运营成本超100万美元，联邦承诺的6.08亿美元报销款未到位。</span><span class="lang-en">A Republican sheriff in Florida publicly questioned the overly broad scope of enforcement. The Everglades detention center costs over $1 million per day to operate, and the $608 million in federal reimbursement promised has not been delivered.</span></p><ul class="facts"><li><span class="lang-zh">2025年佛罗里达共开展约2万次移民逮捕</span><span class="lang-en">Florida conducted approximately 20,000 immigration arrests in 2025</span></li><li><span class="lang-zh">马里兰州联邦法官发布临时禁令暂停拘留中心建设</span><span class="lang-en">A federal judge in Maryland issued a temporary injunction halting detention center construction</span></li><li><span class="lang-zh">联邦已在马里兰州项目投入超1亿美元</span><span class="lang-en">The federal government has already invested over $100 million in the Maryland project</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">5.2 两党能源对立成为中期选举核心战场</span><span class="lang-en">5.2 Bipartisan Energy Divide Becomes a Core Midterm Election Battleground</span></h4><p class="insight-body"><span class="lang-zh">120名民主党议员提出《能源法案救济法》，共和党推动许可改革加快油气审批。能源价格高企让两党都面临选民压力。</span><span class="lang-en">120 Democratic lawmakers introduced the Energy Bill Relief Act, while Republicans pushed permitting reform to accelerate oil and gas approvals. High energy prices put both parties under voter pressure.</span></p><ul class="facts"><li><span class="lang-zh">《工薪家庭减税法案》平均退税增长近11%</span><span class="lang-en">The Working Families Tax Cut Act increased average tax refunds by nearly 11%</span></li><li><span class="lang-zh">超2000万纳税人获加班税豁免</span><span class="lang-en">Over 20 million taxpayers received overtime tax exemptions</span></li><li><span class="lang-zh">所有民主党议员投票反对该减税法案</span><span class="lang-en">All Democratic lawmakers voted against the tax cut bill</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S6 -->
+<section id="s6" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 06</div><h2 class="chapter-title"><span class="lang-zh">产业转型：清洁能源与化石能源的"拉锯战"</span><span class="lang-en">Industrial Transition: The "Tug of War" Between Clean and Fossil Energy</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">6.1 海上风电遭政策打压但司法保护下艰难推进</span><span class="lang-en">6.1 Offshore Wind Faces Policy Suppression but Advances Under Judicial Protection</span></h4><p class="insight-body"><span class="lang-zh">Vineyard Wind完成全部施工（800MW），Revolution Wind开始送电。联邦法院多次推翻特朗普政府禁令。</span><span class="lang-en">Vineyard Wind completed full construction (800 MW) and Revolution Wind began delivering power. Federal courts overturned Trump administration bans multiple times.</span></p><ul class="facts"><li><span class="lang-zh">TotalEnergies获近10亿美元赔偿终止风电项目</span><span class="lang-en">TotalEnergies received nearly $1 billion in compensation to terminate its wind project</span></li><li><span class="lang-zh">Vineyard Wind 62台涡轮机可供电超35万户家庭</span><span class="lang-en">Vineyard Wind's 62 turbines can power over 350,000 homes</span></li><li><span class="lang-zh">特朗普政府曾暂停5个东海岸海上风电项目</span><span class="lang-en">The Trump administration had suspended 5 East Coast offshore wind projects</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">6.2 核电产业迎来跨党派政策松动窗口</span><span class="lang-en">6.2 Nuclear Power Industry Sees a Bipartisan Policy Window Opening</span></h4><p class="insight-body"><span class="lang-zh">加州等多州重新审视50年核电禁令，特朗普计划投入800亿美元支持核电。纽约关闭Indian Point后天然气发电占比从40%升至50%以上。</span><span class="lang-en">California and other states are revisiting 50-year nuclear bans; Trump plans to invest $80 billion in nuclear power. After New York closed Indian Point, natural gas generation rose from 40% to over 50%.</span></p><ul class="facts"><li><span class="lang-zh">纽约州居民电费较全国平均高59%</span><span class="lang-en">New York residents pay 59% more for electricity than the national average</span></li><li><span class="lang-zh">微软购买三里岛核电站20年电力</span><span class="lang-en">Microsoft purchased 20 years of power from the Three Mile Island nuclear plant</span></li><li><span class="lang-zh">新型核电规模化部署仍需至少十年</span><span class="lang-en">Large-scale deployment of advanced nuclear still requires at least a decade</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">6.3 特斯拉29亿美元中国光伏设备采购凸显供应链困境</span><span class="lang-en">6.3 Tesla's $2.9 Billion Chinese Solar Equipment Purchase Highlights Supply Chain Dilemma</span></h4><p class="insight-body"><span class="lang-zh">美国推动太阳能本土化，但制造设备仍高度依赖中国。暴露了"脱钩"与"产业发展"的根本矛盾。</span><span class="lang-en">The U.S. is pushing for solar localization, but manufacturing equipment remains highly dependent on China — exposing the fundamental contradiction between "decoupling" and "industrial development."</span></p><ul class="facts"><li><span class="lang-zh">美国太阳能发电仅占总装机10%（135GW）</span><span class="lang-en">U.S. solar power accounts for only 10% of total installed capacity (135 GW)</span></li><li><span class="lang-zh">特斯拉仍依赖400家中国供应商</span><span class="lang-en">Tesla still relies on 400 Chinese suppliers</span></li><li><span class="lang-zh">对华关税曾导致Cybertruck和Semi生产遭遇挫折</span><span class="lang-en">Tariffs on China previously caused setbacks in Cybertruck and Semi production</span></li></ul></div>
+<div class="chart-container reveal" style="margin:24px 0 32px">
+<div class="chart-title"><i class="fas fa-solar-panel"></i> <span class="lang-zh">美国能源产业关键指标</span><span class="lang-en">Key U.S. Energy Industry Metrics</span></div>
+<div class="chart-subtitle"><span class="lang-zh">数据来源：EIA、报告原文 · 2026年</span><span class="lang-en">Source: EIA, Original Report · 2026</span></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:16px">
+<div class="metric-card"><div class="metric-val">135<span class="metric-unit">GW</span></div><div class="metric-label"><span class="lang-zh">太阳能装机容量</span><span class="lang-en">Solar Capacity</span></div><div class="metric-sub"><span class="lang-zh">占总装机10%</span><span class="lang-en">10% of total capacity</span></div></div>
+<div class="metric-card"><div class="metric-val">800<span class="metric-unit"><span class="lang-zh">亿$</span><span class="lang-en">B$</span></span></div><div class="metric-label"><span class="lang-zh">核电投资计划</span><span class="lang-en">Nuclear Investment Plan</span></div><div class="metric-sub"><span class="lang-zh">特朗普政府承诺</span><span class="lang-en">Trump admin. pledge</span></div></div>
+<div class="metric-card"><div class="metric-val">1891</div><div class="metric-label"><span class="lang-zh">取消的电力项目</span><span class="lang-en">Canceled Power Projects</span></div><div class="metric-sub"><span class="lang-zh">93%为清洁能源</span><span class="lang-en">93% clean energy</span></div></div>
+<div class="metric-card"><div class="metric-val">6000<span class="metric-unit"><span class="lang-zh">亿$</span><span class="lang-en">B$</span></span></div><div class="metric-label"><span class="lang-zh">科技企业资本开支</span><span class="lang-en">Tech CapEx</span></div><div class="metric-sub"><span class="lang-zh">投向数据中心</span><span class="lang-en">Directed to data centers</span></div></div>
+</div>
+</div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- S7 -->
+<section id="s7" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 07</div><h2 class="chapter-title"><span class="lang-zh">公共卫生与社会民生：政策削减叠加环境恶化</span><span class="lang-en">Public Health &amp; Livelihood: Policy Cuts Compounded by Environmental Deterioration</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">7.1 超万亿美元医保削减叠加空气污染标准放松</span><span class="lang-en">7.1 Over a Trillion Dollars in Healthcare Cuts Combined with Relaxed Air Pollution Standards</span></h4><p class="insight-body"><span class="lang-zh">《One Big Beautiful Bill Act》为美国历史上规模最大的联邦医保缩减，同时放松数十项空气污染标准。</span><span class="lang-en">The "One Big Beautiful Bill Act" represents the largest federal Medicaid reduction in U.S. history, while simultaneously relaxing dozens of air pollution standards.</span></p><ul class="facts"><li><span class="lang-zh">放松煤烟、汞和汽车尾气排放限制</span><span class="lang-en">Relaxed limits on soot, mercury, and vehicle exhaust emissions</span></li><li><span class="lang-zh">卫生部长肯尼迪任内疫苗接种率下降</span><span class="lang-en">Vaccination rates declined under HHS Secretary Kennedy</span></li><li><span class="lang-zh">黑人社区哮喘发病率偏高，受冲击更重</span><span class="lang-en">Black communities have higher asthma rates and are disproportionately impacted</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">7.2 宾州电价高企，25%居民无法按时支付电费</span><span class="lang-en">7.2 Pennsylvania's High Electricity Prices Leave 25% of Residents Unable to Pay Bills on Time</span></h4><p class="insight-body"><span class="lang-zh">宾州长期依赖传统化石能源，能源项目并网流程存在阻碍，电价持续高位运行。</span><span class="lang-en">Pennsylvania has long relied on traditional fossil fuels, faces obstacles in grid interconnection for energy projects, and electricity prices remain persistently high.</span></p><ul class="facts"><li><span class="lang-zh">约25%居民每年至少一次无法支付电费</span><span class="lang-en">About 25% of residents fail to pay their electricity bill at least once a year</span></li><li><span class="lang-zh">短期内看不到电价下降迹象</span><span class="lang-en">No signs of electricity price decreases in the near term</span></li><li><span class="lang-zh">需加快部署多元化能源供应结构</span><span class="lang-en">Accelerated deployment of a diversified energy supply structure is needed</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- S8 -->
+<section id="s8" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num">Chapter 08</div><h2 class="chapter-title"><span class="lang-zh">环境治理与生态保护：监管放松与地方行动的角力</span><span class="lang-en">Environmental Governance &amp; Ecological Protection: The Struggle Between Deregulation and Local Action</span></h2></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">8.1 EPA执法能力系统性削弱</span><span class="lang-en">8.1 Systematic Weakening of EPA Enforcement Capacity</span></h4><p class="insight-body"><span class="lang-zh">EPA裁员超4000人降至40年来最低，75%的刑事结案案件在特朗普就职前就已启动。</span><span class="lang-en">EPA cut over 4,000 staff to its lowest level in 40 years; 75% of criminal cases closed were initiated before Trump took office.</span></p><ul class="facts"><li><span class="lang-zh">清洁空气法案执法和解仅1起</span><span class="lang-en">Only 1 Clean Air Act enforcement settlement</span></li><li><span class="lang-zh">超级基金清理和解金额创历史新低</span><span class="lang-en">Superfund cleanup settlement amounts hit a historic low</span></li><li><span class="lang-zh">司法部环境部门律师缩减三分之一</span><span class="lang-en">DOJ environmental division attorneys reduced by one-third</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">8.2 PFAS污染范围扩大，饮用水安全面临威胁</span><span class="lang-en">8.2 PFAS Contamination Spreads, Threatening Drinking Water Safety</span></h4><p class="insight-body"><span class="lang-zh">超20%的美国自来水受PFAS污染，影响超7000万人，清理成本高昂。</span><span class="lang-en">Over 20% of U.S. tap water is contaminated with PFAS, affecting more than 70 million people, with cleanup costs running high.</span></p><ul class="facts"><li><span class="lang-zh">佩珀雷尔镇预计清理费用达2800万美元</span><span class="lang-en">The town of Pepperell estimates cleanup costs at $28 million</span></li><li><span class="lang-zh">97%的美国人血液中可检出PFAS</span><span class="lang-en">PFAS is detectable in the blood of 97% of Americans</span></li><li><span class="lang-zh">该化学品难以自然降解</span><span class="lang-en">These chemicals are virtually non-degradable in nature</span></li></ul></div>
+<div class="insight"><span class="insight-tag"><span class="lang-zh">关键洞察</span><span class="lang-en">Key Insight</span></span><h4><span class="lang-zh">8.3 加州计划向原住民归还750万英亩土地</span><span class="lang-en">8.3 California Plans to Return 7.5 Million Acres of Land to Indigenous Peoples</span></h4><p class="insight-body"><span class="lang-zh">加州宣布归还750万英亩土地（占州面积7%）给原住民部落，恢复受控焚烧等传统管理手段。</span><span class="lang-en">California announced the return of 7.5 million acres (7% of the state's area) to Indigenous tribes, restoring traditional management practices such as controlled burns.</span></p><ul class="facts"><li><span class="lang-zh">目前已有超170万英亩由部落管理</span><span class="lang-en">Over 1.7 million acres are currently managed by tribes</span></li><li><span class="lang-zh">兑现1850年代未兑现的条约承诺</span><span class="lang-en">Fulfilling treaty promises left unmet since the 1850s</span></li><li><span class="lang-zh">美国规模最大的土地归还计划</span><span class="lang-en">The largest land return program in U.S. history</span></li></ul></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RISK -->
+<section id="risk" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num"><i class="fas fa-exclamation-triangle"></i> Risk Alerts</div><h2 class="chapter-title"><span class="lang-zh">风险警示</span><span class="lang-en">Risk Alerts</span></h2></div>
+<div class="risk"><h4><i class="fas fa-fire"></i> <span class="lang-zh">能源价格持续高企引发滞胀风险</span><span class="lang-en">Persistently High Energy Prices Raise Stagflation Risk</span></h4><p><span class="lang-zh">美伊冲突导致油价突破100美元/桶，叠加经济增长放缓，出现"slowflation"特征。美联储加息概率达40%。</span><span class="lang-en">The U.S.–Iran conflict pushed oil prices above $100/barrel; combined with slowing economic growth, "slowflation" characteristics have emerged. The probability of a Fed rate hike has reached 40%.</span></p><p class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：霍尔木兹海峡通航恢复、美联储6月议息会议、加州Valero炼油厂关闭后供应缺口</span><span class="lang-en">Watch: Strait of Hormuz navigation recovery, Fed June meeting, supply gap after California Valero refinery closure</span></p></div>
+<div class="risk"><h4><i class="fas fa-gavel"></i> <span class="lang-zh">气候诉讼判决可能重构能源监管框架</span><span class="lang-en">Climate Lawsuit Rulings May Reshape the Energy Regulatory Framework</span></h4><p><span class="lang-zh">24州联合起诉EPA案正在审理，最高法院同意审理博尔德市气候诉讼。判决将重塑能源产业投资逻辑。</span><span class="lang-en">The 24-state joint lawsuit against the EPA is under review; the Supreme Court agreed to hear the Boulder climate case. The rulings will reshape energy industry investment logic.</span></p><p class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：哥伦比亚特区巡回法院裁决、最高法院博尔德案进展、国会豁免法案立法</span><span class="lang-en">Watch: D.C. Circuit Court ruling, Supreme Court Boulder case progress, congressional immunity bill legislation</span></p></div>
+<div class="risk"><h4><i class="fas fa-bolt"></i> <span class="lang-zh">AI数据中心可能引发区域性电网危机</span><span class="lang-en">AI Data Centers May Trigger Regional Grid Crises</span></h4><p><span class="lang-zh">数据中心电力需求到2030年占全国9%，但清洁能源项目大量被取消，电网扩容审批滞后。</span><span class="lang-en">Data center electricity demand will reach 9% of the national total by 2030, yet clean energy projects are being canceled en masse and grid expansion approvals lag behind.</span></p><p class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：PJM容量拍卖价格、德州ERCOT负荷增长率、联邦许可改革立法</span><span class="lang-en">Watch: PJM capacity auction prices, Texas ERCOT load growth rate, federal permitting reform legislation</span></p></div>
+<div class="risk"><h4><i class="fas fa-cloud-showers-heavy"></i> <span class="lang-zh">极端天气频率上升，保险市场可能系统性失灵</span><span class="lang-en">Rising Extreme Weather Frequency May Cause Systemic Insurance Market Failure</span></h4><p><span class="lang-zh">住房保险保费5年累计上涨46%，加州保险公司大规模撤离，大量房产可能"不可保"。</span><span class="lang-en">Home insurance premiums have risen 46% cumulatively over five years; insurers are withdrawing en masse from California, and many properties may become "uninsurable."</span></p><p class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：2026年飓风季预测、加州保险改革法案、FAIR计划参保增速</span><span class="lang-en">Watch: 2026 hurricane season forecast, California insurance reform bill, FAIR Plan enrollment growth rate</span></p></div>
+<div class="risk"><h4><i class="fas fa-link"></i> <span class="lang-zh">中美供应链脱钩与能源转型需求矛盾激化</span><span class="lang-en">U.S.–China Supply Chain Decoupling Clashes with Energy Transition Needs</span></h4><p><span class="lang-zh">特斯拉29亿美元中国光伏设备采购需中国出口审批，若中美关系恶化将面临设备断供风险。</span><span class="lang-en">Tesla's $2.9 billion Chinese solar equipment purchase requires Chinese export approval; a deterioration in U.S.–China relations could lead to equipment supply disruptions.</span></p><p class="risk-indicator"><i class="fas fa-eye"></i> <span class="lang-zh">关注：中国商务部出口审批结果、对华关税调整、本土太阳能设备产能进度</span><span class="lang-en">Watch: China's MOFCOM export approval outcome, tariff adjustments on China, domestic solar equipment capacity progress</span></p></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FOLLOW -->
+<section id="follow" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num"><i class="fas fa-calendar-alt"></i> Upcoming</div><h2 class="chapter-title"><span class="lang-zh">下期关注</span><span class="lang-en">Upcoming Watch</span></h2></div>
+<div class="follow"><span class="follow-date">2026年5月</span><span class="follow-text"><span class="lang-zh">加州空气资源委员会对cap-and-invest碳交易计划修订方案最终投票</span><span class="lang-en">California Air Resources Board final vote on the cap-and-invest carbon trading plan revision</span></span></div>
+<div class="follow"><span class="follow-date">2026.05.01</span><span class="follow-text"><span class="lang-zh">EPA临时紧急燃料豁免（E15乙醇汽油全国销售）正式生效</span><span class="lang-en">EPA temporary emergency fuel waiver (nationwide E15 ethanol gasoline sales) takes effect</span></span></div>
+<div class="follow"><span class="follow-date">2026年6月</span><span class="follow-text"><span class="lang-zh">Centralia燃煤电厂联邦强制运营期限届满</span><span class="lang-en">Centralia coal plant federal mandatory operation deadline expires</span></span></div>
+<div class="follow"><span class="follow-date">2026.09.30</span><span class="follow-text"><span class="lang-zh">地面交通法案到期，新法案将首次纳入联邦电动汽车道路税（最高550美元/年）</span><span class="lang-en">Surface transportation bill expires; the new bill will include a federal EV road tax for the first time (up to $550/year)</span></span></div>
+<div class="follow"><span class="follow-date">2026年11月</span><span class="follow-text"><span class="lang-zh">中期选举——能源价格、移民政策、医保削减将成为核心选战议题</span><span class="lang-en">Midterm elections — energy prices, immigration policy, and healthcare cuts will be core campaign issues</span></span></div>
+</section>
+
+<div class="divider"></div>
+
+<!-- SUMMARY -->
+<section id="summary" class="chapter reveal">
+<div class="chapter-header"><div class="chapter-num"><i class="fas fa-file-alt"></i> Executive Brief</div><h2 class="chapter-title"><span class="lang-zh">全文总结</span><span class="lang-en">Executive Summary</span></h2></div>
+<div class="summary-card"><h4><i class="fas fa-landmark"></i> <span class="lang-zh">政治环境概述</span><span class="lang-en">Political Environment Overview</span></h4><p><span class="lang-zh">2026年3月美国政治呈现联邦权力扩张与州权抵抗全面对抗的格局。特朗普政府在能源、移民、选举、医保等领域大幅推进行政权力，但在司法层面频繁遭遇挫折。移民执法出现内部裂痕，2026年中期选举将成为政策方向的关键转折点。</span><span class="lang-en">U.S. politics in March 2026 is defined by a full-scale confrontation between federal power expansion and state resistance. The Trump administration has aggressively advanced executive authority in energy, immigration, elections, and healthcare, but has faced frequent judicial setbacks. Internal cracks have appeared in immigration enforcement, and the 2026 midterm elections will be a pivotal turning point for policy direction.</span></p></div>
+<div class="summary-card"><h4><i class="fas fa-chart-line"></i> <span class="lang-zh">经济发展概述</span><span class="lang-en">Economic Development Overview</span></h4><p><span class="lang-zh">美国经济面临"slowflation"风险——美伊冲突推高能源成本，油价突破100美元/桶，通胀压力上升，美联储加息概率达40%。AI产业投资热潮（资本开支超6000亿美元）注入增长动力，但也推高电力成本。</span><span class="lang-en">The U.S. economy faces "slowflation" risk — the U.S.–Iran conflict has driven up energy costs with oil exceeding $100/barrel, inflation pressure is rising, and the probability of a Fed rate hike has reached 40%. The AI investment boom (CapEx exceeding $600 billion) is injecting growth momentum but also pushing up electricity costs.</span></p></div>
+<div class="summary-card"><h4><i class="fas fa-briefcase"></i> <span class="lang-zh">营商环境洞察</span><span class="lang-en">Business Environment Insights</span></h4><ul class="lang-zh"><li><strong>能源政策不确定性极高：</strong>联邦与州对抗导致企业难以做出长期投资决策</li><li><strong>数据中心面临新监管：</strong>多地出台电网接入成本分摊机制</li><li><strong>供应链对华依赖矛盾：</strong>太阳能设备、EV零部件仍高度依赖中国</li><li><strong>EV政策环境恶化：</strong>7500美元抵免取消，拟征550美元/年道路税</li></ul><ul class="lang-en"><li><strong>Extreme energy policy uncertainty:</strong> Federal–state confrontation makes long-term investment decisions difficult for businesses</li><li><strong>New regulations for data centers:</strong> Multiple jurisdictions have introduced grid access cost-sharing mechanisms</li><li><strong>Supply chain dependence on China:</strong> Solar equipment and EV components remain highly dependent on China</li><li><strong>Deteriorating EV policy environment:</strong> $7,500 tax credit eliminated; a $550/year road tax is proposed</li></ul></div>
+<div class="summary-card"><h4><i class="fas fa-flag"></i> <span class="lang-zh">中资企业建议</span><span class="lang-en">Recommendations for Chinese Enterprises</span></h4><ul class="lang-zh"><li><strong>新能源设备出口：</strong>特斯拉29亿美元订单表明刚性需求，关注中国商务部出口审批动态</li><li><strong>电动汽车供应链：</strong>加快东南亚、墨西哥第三国产能布局，降低关税风险</li><li><strong>储能与电网设备：</strong>数据中心boom推动储能需求激增，可通过本土集成商合作参与</li><li><strong>合规风险管理：</strong>需同时评估联邦和州级政策风险，建立政策跟踪机制</li><li><strong>政治风险对冲：</strong>中期选举可能改变国会控制权，通过多元化布局降低波动风险</li></ul><ul class="lang-en"><li><strong>New energy equipment exports:</strong> Tesla's $2.9 billion order signals rigid demand; monitor China's MOFCOM export approval developments</li><li><strong>EV supply chain:</strong> Accelerate third-country capacity in Southeast Asia and Mexico to mitigate tariff risks</li><li><strong>Energy storage &amp; grid equipment:</strong> The data center boom is driving surging storage demand; participate through partnerships with local integrators</li><li><strong>Compliance risk management:</strong> Assess both federal and state-level policy risks simultaneously; establish policy tracking mechanisms</li><li><strong>Political risk hedging:</strong> Midterm elections may shift congressional control; diversify operations to reduce volatility risk</li></ul></div>
+</section>
+
+</div><!-- end content -->
+
+<!-- FOOTER -->
+<footer class="footer">
+<p><span class="lang-zh">本报告基于 三月美国热点国别月报（2026-03） 编制，仅供参考，不构成投资或决策建议。</span><span class="lang-en">This report is based on the March 2026 U.S. Country Monthly Brief and is for reference only. It does not constitute investment or decision-making advice.</span></p>
+<p><span class="lang-zh">发布日期：2026-04-27</span><span class="lang-en">Published: 2026-04-27</span> &nbsp;&bull;&nbsp; &copy; Supinfor Ltd.</p>
+</footer>
+
+<script>
+// Theme
+function toggleTheme(){
+const t=document.documentElement.getAttribute('data-theme')==='dark'?'light':'dark';
+document.documentElement.setAttribute('data-theme',t);
+localStorage.setItem('theme',t);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s);})();
+
+// TOC
+function toggleToc(){
+document.querySelector('.toc-overlay').classList.toggle('active');
+document.querySelector('.toc-panel').classList.toggle('active');
+}
+
+// Back to top
+const bt=document.querySelector('.back-top');
+window.addEventListener('scroll',()=>bt.classList.toggle('visible',scrollY>500));
+
+// Reveal on scroll
+const obs=new IntersectionObserver(entries=>{
+entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);}});
+},{threshold:.08,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Language toggle
+function setLang(lang){document.documentElement.setAttribute('data-lang',lang);document.documentElement.setAttribute('lang',lang==='zh'?'zh-CN':'en');localStorage.setItem('lang',lang);document.querySelectorAll('.lang-toggle button').forEach(btn=>{btn.classList.toggle('active',(lang==='zh'&&btn.textContent==='中')||(lang==='en'&&btn.textContent==='EN'))})}
+(function(){const s=localStorage.getItem('lang')||'zh';setLang(s)})();
+</script>
+</body>
+</html>

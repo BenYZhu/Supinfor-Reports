@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>半导体行业洞察月报 2026-03 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #0891b2; --c-primary-light: #22d3ee; --c-primary-dark: #0e7490;
+  --c-accent: #d97706; --c-accent-light: #f59e0b;
+  --c-bg: #ecfeff; --c-surface: #ffffff; --c-surface-alt: #f0fdfa;
+  --c-border: #d1d5db; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #0c1a1f; --c-surface: #162b2e; --c-surface-alt: #1a3330;
+  --c-border: #2d5a55; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #0c1a1f; --c-surface: #162b2e; --c-surface-alt: #1a3330;
+    --c-border: #2d5a55; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg,#0891b2 0%,#0e7490 40%,#155e75 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-microchip"></i>
+      <span data-zh>半导体行业洞察月报</span>
+      <span data-en>Semiconductor Industry Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年3月刊 · Supinfor Ltd.</span>
+      <span data-en>March 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>半导体行业<br>洞察月报</span>
+      <span data-en>Semiconductor Industry<br>Insight</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>HBM4三巨头同步量产 · 台积电先进制程产能瓶颈 · 中国半导体出口增长72.6% · 三星工会罢工风险</span>
+      <span data-en>HBM4 Triple Giants Mass Production · TSMC Advanced Node Capacity Bottleneck · China Semiconductor Export +72.6% · Samsung Union Strike Risk</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">153</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">30</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">8</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">5</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、AI内存军备竞赛</span><span data-en>I. AI Memory Arms Race</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、先进制程竞赛</span><span data-en>II. Advanced Node Race</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、全球产能扩张</span><span data-en>III. Global Capacity Expansion</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、芯片巨头战略重构</span><span data-en>IV. Chip Giant Strategy Shift</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、资本与产业链整合</span><span data-en>V. Capital & Supply Chain</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、中国半导体</span><span data-en>VI. China Semiconductor</span></a>
+      <a href="#s7" class="toc-link"><span data-zh>七、监管与地缘政治</span><span data-en>VII. Regulation & Geopolitics</span></a>
+      <a href="#s8" class="toc-link"><span data-zh>八、企业经营与市场表现</span><span data-en>VIII. Business & Market</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>HBM4三巨头同步量产标志着AI内存进入"军备竞赛"新阶段</span><span data-en>HBM4 Triple Giants Mass Production Marks New "Arms Race" Phase for AI Memory</span></h3>
+      <p><span data-zh>三星、美光、SK海力士围绕英伟达Rubin平台展开产能与良率的全面争夺，HBM市场规模预计从350亿美元增长至2028年的1000亿美元。</span><span data-en>Samsung, Micron, and SK hynix compete fiercely around NVIDIA's Rubin platform on capacity and yield. HBM market expected to grow from $35B to $100B by 2028.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>台积电先进制程产能成为全球AI算力的最大瓶颈</span><span data-en>TSMC Advanced Node Capacity Becomes the Biggest Bottleneck for Global AI Computing</span></h3>
+      <p><span data-zh>3nm产能严重短缺叠加1.4nm路线图公布，资本支出预计520-560亿美元，先进制程（7nm及以下）占晶圆营收77%。</span><span data-en>Severe 3nm capacity shortage combined with 1.4nm roadmap announcement. CapEx projected at $52-56B, advanced nodes (7nm and below) account for 77% of wafer revenue.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>马斯克TeraFab计划折射全球芯片制造成本过高的结构性矛盾</span><span data-en>Musk's TeraFab Plan Reflects Structural Contradiction of Excessive Global Chip Manufacturing Costs</span></h3>
+      <p><span data-zh>投资250亿美元，目标月产100万片2nm晶圆，"颠覆洁净室"理念虽面临重大技术挑战，但值得产业链持续关注。</span><span data-en>$25B investment targeting 1M 2nm wafers/month. The "disrupt cleanroom" concept faces major technical challenges but warrants continued industry attention.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>谷歌TurboQuant引发内存股暴跌属于市场过度反应</span><span data-en>Google TurboQuant-Triggered Memory Stock Crash Is Market Overreaction</span></h3>
+      <p><span data-zh>AI内存需求的"杰文斯悖论"效应将在中期推动HBM市场从350亿美元增长至2028年的1000亿美元。</span><span data-en>The "Jevons Paradox" effect of AI memory demand will drive HBM market growth from $35B to $100B by 2028 in the medium term.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>美超微走私案暴露美国AI芯片出口管控体系的系统性漏洞</span><span data-en>Super Micro Smuggling Case Exposes Systemic Loopholes in US AI Chip Export Controls</span></h3>
+      <p><span data-zh>《Chip Security法案》与终端用户验证机制的推进将重塑全球AI芯片贸易规则。</span><span data-en>The Chip Security Act and end-user verification mechanisms will reshape global AI chip trade rules.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">6</span>
+    <div class="core-content">
+      <h3><span data-zh>中国半导体出口额前两月同比增长72.6%，向"高价值供应商"转型</span><span data-en>China Semiconductor Exports Grew 72.6% YoY in First Two Months, Shifting to "High-Value Supplier"</span></h3>
+      <p><span data-zh>出口额433亿美元，平均单价上涨52%，成熟制程产能扩张与AI外围芯片突破是核心驱动力。</span><span data-en>Exports reached $43.3B, average unit price up 52%. Mature node capacity expansion and AI peripheral chip breakthroughs are core drivers.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">7</span>
+    <div class="core-content">
+      <h3><span data-zh>三星工会93.1%投票支持罢工，平泽工厂产能减半将加剧全球HBM供应紧张</span><span data-en>Samsung Union 93.1% Vote for Strike; Pyeongtaek Capacity Halving Would Worsen Global HBM Shortage</span></h3>
+      <p><span data-zh>若5月罢工持续18天将损失至少5万亿韩元运营利润，直接冲击全球AI服务器内存供应链。</span><span data-en>An 18-day May strike would cost at least ₩5T in operating profit, directly impacting global AI server memory supply chain.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">8</span>
+    <div class="core-content">
+      <h3><span data-zh>光互连技术获巨头密集投资，铜缆互连正逼近物理极限</span><span data-en>Optical Interconnect Tech Receives Dense Investment from Giants; Copper Interconnect Approaching Physical Limits</span></h3>
+      <p><span data-zh>Ayar Labs（5亿美元E轮）与Kandou AI（2.25亿美元A轮）的融资规模表明光互连将成为下一代AI数据中心的关键基础设施。</span><span data-en>Ayar Labs ($500M Series E) and Kandou AI ($225M Series A) funding scales indicate optical interconnect will become key infrastructure for next-gen AI data centers.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">$433B</div>
+      <div class="lbl"><span data-zh>中国半导体出口额（前两月）</span><span data-en>China Semi Exports (Jan-Feb)</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#b45309)">
+      <div class="val">72%</div>
+      <div class="lbl"><span data-zh>台积电全球代工市占率</span><span data-en>TSMC Global Foundry Share</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">$1T</div>
+      <div class="lbl"><span data-zh>英伟达2027累计订单目标</span><span data-en>NVIDIA 2027 Cumulative Orders</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+      <div class="val">$1000B</div>
+      <div class="lbl"><span data-zh>2028年HBM市场规模预估</span><span data-en>2028 HBM Market Size Est.</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: AI Memory Arms Race ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-memory"></i>
+    <h2><span data-zh>一、AI内存军备竞赛：HBM4量产与存储技术迭代</span><span data-en>I. AI Memory Arms Race: HBM4 Mass Production & Storage Tech Evolution</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>HBM4三巨头同步量产，围绕英伟达Rubin平台展开产能与良率争夺</span><span data-en>HBM4 Triple Giants Mass Production, Competing on Capacity & Yield Around NVIDIA Rubin Platform</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年3月，三星、美光先后宣布启动HBM4大规模量产，加上SK海力士计划2026下半年出货HBM4，全球HBM市场正式进入三巨头同步竞争的新阶段。英伟达Rubin平台成为各厂商争夺的核心战场，产能分配与良率水平将决定未来两年的市场格局。</span><span data-en><strong>Key Insight:</strong> In March 2026, Samsung and Micron successively announced HBM4 mass production, while SK hynix plans H2 2026 shipments. The global HBM market has officially entered a new phase of triple-giant competition. NVIDIA's Rubin platform is the core battleground, with capacity allocation and yield determining market dynamics for the next two years.</span></p>
+    </div>
+
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>厂商</span><span data-en>Vendor</span></th>
+        <th><span data-zh>HBM4量产时间</span><span data-en>HBM4 Production</span></th>
+        <th><span data-zh>关键技术优势</span><span data-en>Key Tech Advantage</span></th>
+        <th><span data-zh>2026年HBM市占率</span><span data-en>2026 HBM Share</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span data-zh>三星</span><span data-en>Samsung</span></td><td>2026 Q1</td><td><span data-zh>首个量产、垂直整合</span><span data-en>First to produce, vertical integration</span></td><td>~25%</td></tr>
+        <tr><td><span data-zh>美光</span><span data-en>Micron</span></td><td>2026 Q1</td><td><span data-zh>2048位接口、30%能效优势</span><span data-en>2048-bit interface, 30% efficiency gain</span></td><td>~25%</td></tr>
+        <tr><td>SK <span data-zh>海力士</span><span data-en>hynix</span></td><td>2026 H2</td><td><span data-zh>市场先发优势、英伟达深度合作</span><span data-en>First-mover advantage, deep NVIDIA ties</span></td><td>~50%</td></tr>
+      </tbody>
+    </table>
+
+    <ul class="fact-list">
+      <li><span data-zh>三星率先实现HBM4全球首个量产，已向英伟达等战略客户发货，占英伟达HBM4供应的30%，目标年底良率达85%</span><span data-en>Samsung achieved world's first HBM4 mass production, shipping to NVIDIA and strategic clients, 30% of NVIDIA HBM4 supply, targeting 85% yield by year-end</span></li>
+      <li><span data-zh>美光HBM4接口带宽翻倍至2048位，单栈带宽超2.8TB/s，与台积电合作定制逻辑基底芯片适配Rubin平台</span><span data-en>Micron HBM4 interface bandwidth doubled to 2048-bit, single-stack bandwidth exceeds 2.8TB/s, partnering with TSMC on custom logic die for Rubin</span></li>
+      <li><span data-zh>SK海力士当前HBM市场份额约50%，HBM4将于2026下半年出货，HBM4E样品预计2026年推出</span><span data-en>SK hynix holds ~50% HBM market share, HBM4 shipping H2 2026, HBM4E samples expected in 2026</span></li>
+      <li><span data-zh>JEDEC计划放宽HBM4堆叠高度限制至900微米，支持16-20层堆叠</span><span data-en>JEDEC plans to relax HBM4 stack height limit to 900μm, supporting 16-20 layer stacking</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: HBM Market Share -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化</span><span data-en>Data Visualization</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>2026年HBM市场份额预估</span><span data-en>2026 HBM Market Share Estimate</span></h3>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label">SK <span data-zh>海力士</span><span data-en>hynix</span></div><div class="bar-track"><div class="bar-fill" style="width:50%">~50%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>三星</span><span data-en>Samsung</span></div><div class="bar-track"><div class="bar-fill" style="width:25%;background:linear-gradient(90deg,#6366f1,#818cf8)">~25%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>美光</span><span data-en>Micron</span></div><div class="bar-track"><div class="bar-fill" style="width:25%;background:linear-gradient(90deg,#059669,#10b981)">~25%</div></div></div>
+    </div>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>谷歌TurboQuant引发的内存股暴跌是短期过度反应，"杰文斯悖论"将推动AI内存需求持续扩张</span><span data-en>Google TurboQuant-Triggered Memory Stock Crash Is Short-Term Overreaction; "Jevons Paradox" Will Drive Continued AI Memory Demand Expansion</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>谷歌TurboQuant算法可将AI模型KV缓存压缩至1/6，短期引发内存厂商股价剧烈波动，但行业分析普遍认为内存使用效率提升将催生更多AI项目投资，类似杰文斯悖论的需求增长效应将在中期显现。</span><span data-en><strong>Key Insight:</strong> Google's TurboQuant algorithm can compress AI model KV cache to 1/6, triggering short-term memory stock volatility. However, industry analysis broadly suggests efficiency gains will spur more AI investment, with Jevons Paradox-like demand growth emerging in the medium term.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>谷歌TurboQuant发布后，美光市值一周缩水超700亿美元，三星与SK海力士股价跌超8%</span><span data-en>After TurboQuant release, Micron lost $70B+ market cap in one week; Samsung and SK hynix stocks fell 8%+</span></li>
+      <li><span data-zh>美光股价在业绩发布后8个交易日累计下跌30%，但Citi维持买入评级，市场共识目标价达527.6美元</span><span data-en>Micron stock fell 30% in 8 trading days post-earnings, but Citi maintained Buy rating with consensus target $527.6</span></li>
+      <li><span data-zh>HBM市场规模预计从2025年的350亿美元增长至2028年的1000亿美元</span><span data-en>HBM market expected to grow from $35B in 2025 to $100B by 2028</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.3</span><span data-en>Insight 1.3</span></span>
+    <h3><span data-zh>美光GDDR堆叠技术与三星RISC-V控制器SSD标志着存储产品差异化竞争加剧</span><span data-en>Micron GDDR Stacking & Samsung RISC-V Controller SSD Signal Intensifying Storage Product Differentiation</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美光率先启动多层GDDR堆叠技术研发，填补标准GDDR与HBM之间的市场空白；三星推出首款RISC-V控制器PCIe 5.0 SSD，以开源架构替代ARM实现更灵活的固件优化。两大技术路线均指向AI工作负载的差异化适配。</span><span data-en><strong>Key Insight:</strong> Micron pioneered multi-layer GDDR stacking R&D, filling the gap between standard GDDR and HBM. Samsung launched the first RISC-V controller PCIe 5.0 SSD, replacing ARM with open-source architecture for more flexible firmware optimization. Both tech paths target differentiated AI workload adaptation.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>美光计划2027年推出4层堆叠GDDR样品，瞄准AI推理加速器市场</span><span data-en>Micron plans 4-layer stacked GDDR samples in 2027, targeting AI inference accelerator market</span></li>
+      <li><span data-zh>三星BM9K1 SSD采用RISC-V控制器，能效比前代提升23%，顺序读取11.4GB/s</span><span data-en>Samsung BM9K1 SSD uses RISC-V controller, 23% better efficiency, 11.4GB/s sequential read</span></li>
+      <li><span data-zh>全球NAND闪存出现短缺，索尼暂停全系列存储卡订单，Kioxia 2026年产能全部售罄</span><span data-en>Global NAND flash shortage emerged; Sony suspended all memory card orders; Kioxia 2026 capacity fully sold out</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: Advanced Node Race ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-atom"></i>
+    <h2><span data-zh>二、先进制程竞赛：台积电领跑与全球追赶者</span><span data-en>II. Advanced Node Race: TSMC Leads, Global Challengers Follow</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>台积电1.4nm路线图确立两年领先优势，3nm产能紧缺成为AI算力最大瓶颈</span><span data-en>TSMC 1.4nm Roadmap Establishes Two-Year Lead; 3nm Capacity Shortage Becomes Biggest AI Computing Bottleneck</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>台积电公布A14 1.4nm制程路线图，计划2027年试产、2028年量产，比三星同类计划提前两年。与此同时，其3nm产能严重短缺，仅优先向苹果、英伟达等长期忠诚客户供货，其他客户被迫转向三星或英特尔代工。</span><span data-en><strong>Key Insight:</strong> TSMC announced A14 1.4nm roadmap with 2027 pilot and 2028 mass production, two years ahead of Samsung. Meanwhile, severe 3nm capacity shortage prioritizes Apple and NVIDIA, forcing other clients to Samsung or Intel foundry.</span></p>
+    </div>
+
+    <div class="stat-highlight">
+      <div class="stat-highlight-card">
+        <div class="val">$52-56B</div>
+        <div class="lbl"><span data-zh>2026年资本支出</span><span data-en>2026 CapEx</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#b45309)">
+        <div class="val">77%</div>
+        <div class="lbl"><span data-zh>先进制程营收占比</span><span data-en>Advanced Node Revenue Share</span></div>
+      </div>
+      <div class="stat-highlight-card">
+        <div class="val">$165B</div>
+        <div class="lbl"><span data-zh>美国亚利桑那总投资</span><span data-en>Arizona Total Investment</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,#7c3aed,#5b21b6)">
+        <div class="val">$337.3B</div>
+        <div class="lbl"><span data-zh>Q4营收（同比+25.5%）</span><span data-en>Q4 Revenue (YoY +25.5%)</span></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>A14工艺基于第二代纳米片晶体管，同功耗性能提升15%，同性能功耗降低30%，逻辑密度提升20%以上</span><span data-en>A14 process based on 2nd-gen nanosheet transistors: 15% performance gain at same power, 30% power reduction at same performance, 20%+ logic density increase</span></li>
+      <li><span data-zh>美国亚利桑那州将建5座晶圆厂及2座封装厂，总投资超1650亿美元</span><span data-en>Arizona to build 5 fabs and 2 packaging plants, total investment exceeding $165B</span></li>
+      <li><span data-zh>2nm N2制程预计2027年贡献29%营收，英伟达将成为A16制程首个客户</span><span data-en>2nm N2 process expected to contribute 29% revenue by 2027; NVIDIA to be first A16 customer</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>日本Rapidus与马斯克TeraFab代表两种截然不同的追赶路径</span><span data-en>Japan's Rapidus and Musk's TeraFab Represent Two Fundamentally Different Catch-Up Paths</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Rapidus走政府主导的传统路线，获日本政府1000亿日元投资，目标2027年量产2nm；马斯克TeraFab则试图颠覆传统洁净室模式，以密封真空微型环境降低建厂成本。两条路径分别代表"追赶台积电"和"绕过台积电"的战略思路。</span><span data-en><strong>Key Insight:</strong> Rapidus follows a government-led traditional path with ¥100B investment targeting 2nm by 2027. Musk's TeraFab attempts to disrupt traditional cleanroom models with sealed vacuum micro-environments. The two paths represent "catching TSMC" vs. "bypassing TSMC" strategies.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Rapidus 2025年7月验证2nm晶体管可工作，不到2个月完成原本需1.5年的性能优化</span><span data-en>Rapidus verified working 2nm transistors in July 2025, completing 1.5-year optimization in under 2 months</span></li>
+      <li><span data-zh>TeraFab计划投资250亿美元，目标月产100万片2nm晶圆，80%产能用于太空AI数据中心</span><span data-en>TeraFab plans $25B investment, targeting 1M 2nm wafers/month, 80% capacity for space AI data centers</span></li>
+      <li><span data-zh>TeraFab由特斯拉、SpaceX、xAI合资，面临EUV设备供应链短缺、良率控制、人才不足等挑战</span><span data-en>TeraFab is a Tesla/SpaceX/xAI JV, facing EUV supply chain shortage, yield control, and talent challenges</span></li>
+      <li><span data-zh>行业普遍质疑TeraFab的可行性，马斯克也不排除投资英特尔代工或台积电专属产线</span><span data-en>Industry widely questions TeraFab feasibility; Musk doesn't rule out investing in Intel foundry or dedicated TSMC lines</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: Global Capacity Expansion ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-globe-asia"></i>
+    <h2><span data-zh>三、全球产能扩张：从集中走向分散</span><span data-en>III. Global Capacity Expansion: From Concentration to Diversification</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>印度半导体产业从设计枢纽向制造基地跃迁，美光工厂投产是标志性事件</span><span data-en>India's Semiconductor Industry Leaps from Design Hub to Manufacturing Base; Micron Factory Launch Is Landmark</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>印度已占全球20%的IC设计劳动力，美光27亿美元封装测试工厂正式投产标志着印度从纯设计向制造环节延伸。塔塔电子与Powerchip合作的110亿美元晶圆厂项目正在推进，印度正在成为全球半导体供应链多元化的关键一环。</span><span data-en><strong>Key Insight:</strong> India accounts for 20% of global IC design workforce. Micron's $2.7B packaging/testing factory launch marks India's extension from pure design to manufacturing. Tata Electronics' $11B fab with Powerchip is progressing, making India a key link in global semiconductor supply chain diversification.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>美光印度工厂占地50万平方英尺，全面投产后将承担美光全球10%的封装测试产能</span><span data-en>Micron India factory covers 500K sq ft, will handle 10% of Micron's global packaging/testing capacity at full production</span></li>
+      <li><span data-zh>塔塔电子与Powerchip合作建设印度首个商用晶圆厂，总投资约110亿美元</span><span data-en>Tata Electronics partners with Powerchip for India's first commercial fab, ~$11B total investment</span></li>
+      <li><span data-zh>2026年印度将有4座半导体厂投产，2027年再投产2座，首个晶圆厂2028年在Dholera投产</span><span data-en>India to have 4 semiconductor plants operational in 2026, 2 more in 2027, first fab in Dholera by 2028</span></li>
+      <li><span data-zh>英特尔、英伟达、高通等均在印度设有大型研发中心，已开展2nm芯片设计工作</span><span data-en>Intel, NVIDIA, Qualcomm all have major R&D centers in India, already working on 2nm chip design</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>韩国龙仁与光州全南合计1500万亿韩元投资计划，意图重塑全球半导体地理版图</span><span data-en>Korea's Yongin & Gwangju-Jeonnam ₩1,500T Combined Investment Plans Aim to Reshape Global Semiconductor Geography</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>韩国正在通过超大规模投资巩固其半导体制造中心地位。龙仁市依托三星与SK海力士合计1000万亿韩元项目打造全球半导体中心城市，光州全南则提出500万亿韩元三角轴集群计划。</span><span data-en><strong>Key Insight:</strong> Korea is consolidating its semiconductor manufacturing hub status through mega-scale investments. Yongin leverages Samsung and SK hynix's combined ₩1,000T projects, while Gwangju-Jeonnam proposes a ₩500T triangular cluster plan.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>龙仁市已吸引拉姆研究、东京电子、ASML等上下游企业入驻</span><span data-en>Yongin has attracted Lam Research, Tokyo Electron, ASML and other supply chain companies</span></li>
+      <li><span data-zh>光州全南计划：光州为AI半导体设计基地，全南西部为通用内存生产基地，全南东部为HBM量产基地</span><span data-en>Gwangju-Jeonnam plan: Gwangju as AI semiconductor design base, West Jeonnam for general memory, East Jeonnam for HBM production</span></li>
+      <li><span data-zh>预计2035年创造10万个就业岗位</span><span data-en>Expected to create 100,000 jobs by 2035</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.3</span><span data-en>Insight 3.3</span></span>
+    <h3><span data-zh>欧洲通过Chips Act 2.0与IMEC NanoIC产线加速半导体自主化</span><span data-en>Europe Accelerates Semiconductor Sovereignty via Chips Act 2.0 and IMEC NanoIC Line</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>欧盟正推进Chips Act 2.0"技术主权包"，IMEC的NanoIC试点产线获25亿欧元投资并配备ASML High-NA EUV设备。但欧洲当前全球半导体产能占比仅约10%，距2030年20%的目标仍有较大差距。</span><span data-en><strong>Key Insight:</strong> EU is advancing Chips Act 2.0 "tech sovereignty package." IMEC's NanoIC pilot line received €2.5B investment with ASML High-NA EUV equipment. But Europe's current ~10% global semiconductor capacity share is far from the 2030 target of 20%.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>IMEC NanoIC产线总投资25亿欧元，其中欧盟及地方政府出资14亿欧元</span><span data-en>IMEC NanoIC line total investment €2.5B, with €1.4B from EU and local governments</span></li>
+      <li><span data-zh>ASML为IMEC提供EXE:5200 High-NA EUV设备，全球仅不足12台</span><span data-en>ASML provides IMEC with EXE:5200 High-NA EUV equipment, fewer than 12 units globally</span></li>
+      <li><span data-zh>英特尔Fab34投资170亿欧元，是欧洲首座EUV量产工厂，2025年起量产3nm</span><span data-en>Intel Fab34 invested €17B, Europe's first EUV mass production factory, 3nm production from 2025</span></li>
+      <li><span data-zh>欧洲同时推进FAMES、APECS等5条试点产线，总投资37亿欧元</span><span data-en>Europe simultaneously advancing 5 pilot lines including FAMES and APECS, total investment €3.7B</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.4</span><span data-en>Insight 3.4</span></span>
+    <h3><span data-zh>越南从芯片组装向制造升级，美国取消战略出口管制打开技术通道</span><span data-en>Vietnam Upgrades from Chip Assembly to Manufacturing; US Lifts Strategic Export Controls Opening Tech Channel</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美国将越南从战略出口管制清单移除，为越南获取先进半导体技术扫清法律障碍。预计到2032年越南全球芯片封装份额将从1%提升至近9%。</span><span data-en><strong>Key Insight:</strong> The US removed Vietnam from strategic export control lists, clearing legal barriers for Vietnam to access advanced semiconductor technology. Vietnam's global chip packaging share is expected to rise from 1% to nearly 9% by 2032.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>越南电信集团旗下工厂计划2027年底试产32nm芯片</span><span data-en>Viettel subsidiary plans 32nm chip pilot production by end of 2027</span></li>
+      <li><span data-zh>高通在越南设立全球第三大研发中心</span><span data-en>Qualcomm established its third-largest global R&D center in Vietnam</span></li>
+      <li><span data-zh>Amkor投资16亿美元建设大型封装测试工厂</span><span data-en>Amkor investing $1.6B in a major packaging and testing factory</span></li>
+      <li><span data-zh>越南正与ASML协商设立培训中心与官方办公室</span><span data-en>Vietnam negotiating with ASML to establish training center and official office</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: Chip Giant Strategy ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chess-king"></i>
+    <h2><span data-zh>四、芯片巨头战略重构：从产品竞争到生态竞争</span><span data-en>IV. Chip Giant Strategy Shift: From Product to Ecosystem Competition</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>英伟达从GPU厂商向全栈AI基础设施平台演进，2027年累计订单目标翻倍至1万亿美元</span><span data-en>NVIDIA Evolves from GPU Vendor to Full-Stack AI Infrastructure Platform; 2027 Cumulative Order Target Doubles to $1 Trillion</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>英伟达在GTC 2026发布Vera Rubin架构与Vera CPU，收购Groq强化推理业务，投资Lumentum和Coherent布局光互连，与比亚迪、日产合作推进自动驾驶。其战略已从单一GPU供应商演进为覆盖训练、推理、网络、存储的全栈AI基础设施平台。</span><span data-en><strong>Key Insight:</strong> NVIDIA launched Vera Rubin architecture and Vera CPU at GTC 2026, acquired Groq for inference, invested in Lumentum and Coherent for optical interconnect, and partnered with BYD and Nissan for autonomous driving. Its strategy has evolved from single GPU vendor to full-stack AI infrastructure platform covering training, inference, networking, and storage.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2026财年Q4数据中心营收623.1亿美元，同比增长75%，占总营收91.5%</span><span data-en>FY2026 Q4 data center revenue $62.31B, +75% YoY, 91.5% of total revenue</span></li>
+      <li><span data-zh>全年营收2159亿美元，同比增长65%</span><span data-en>Full-year revenue $215.9B, +65% YoY</span></li>
+      <li><span data-zh>收购Groq强化AI推理，投资Lumentum和Coherent各20亿美元布局光互连</span><span data-en>Acquired Groq for AI inference; invested $2B each in Lumentum and Coherent for optical interconnect</span></li>
+      <li><span data-zh>计划在Computex 2026发布ARM架构笔记本CPU N1/N1X，进军PC市场</span><span data-en>Plans to launch ARM-based laptop CPUs N1/N1X at Computex 2026, entering PC market</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>苹果自研芯片生态加速闭环，C1X调制解调器与N1无线芯片标志着"去高通化"进入实质阶段</span><span data-en>Apple's In-House Chip Ecosystem Accelerates Closure; C1X Modem & N1 Wireless Chip Mark Substantive "De-Qualcomm" Phase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>苹果在iPhone Air搭载自研C1X 5G调制解调器与N1无线芯片，速度翻倍、功耗降低30%，与A19 Pro形成完整自研芯片生态。苹果正系统性减少对高通、博通等第三方芯片厂商的依赖。</span><span data-en><strong>Key Insight:</strong> Apple equipped iPhone Air with in-house C1X 5G modem and N1 wireless chip — speed doubled, power consumption down 30%, forming a complete in-house chip ecosystem with A19 Pro. Apple is systematically reducing dependence on Qualcomm, Broadcom, and other third-party chip vendors.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>C1X调制解调器速度较前代翻倍，功耗降低30%，在sub-6频段优于高通X80</span><span data-en>C1X modem speed doubled vs. predecessor, 30% lower power, outperforms Qualcomm X80 on sub-6 bands</span></li>
+      <li><span data-zh>N1无线芯片集成WiFi7、蓝牙6.0与Thread协议</span><span data-en>N1 wireless chip integrates WiFi 7, Bluetooth 6.0, and Thread protocol</span></li>
+      <li><span data-zh>M5 Pro支持最多3台外接显示器，M5 Max支持4台</span><span data-en>M5 Pro supports up to 3 external displays, M5 Max supports 4</span></li>
+      <li><span data-zh>苹果AMP计划到2030年投入400亿美元支持美国本土供应链</span><span data-en>Apple AMP plan to invest $40B by 2030 supporting US domestic supply chain</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.3</span><span data-en>Insight 4.3</span></span>
+    <h3><span data-zh>AMD通过三星HBM4供应与Naver合作打开亚洲AI市场，正在蚕食英伟达的垄断地位</span><span data-en>AMD Opens Asian AI Market via Samsung HBM4 Supply & Naver Partnership, Eroding NVIDIA's Monopoly</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>AMD CEO苏姿丰访韩与三星达成HBM4供应合作，与Naver达成AI芯片供应协议，Meta和OpenAI也在增加AMD芯片采购。AMD正从"英伟达替代品"向"AI芯片第二极"转型。</span><span data-en><strong>Key Insight:</strong> AMD CEO Lisa Su visited Korea to secure Samsung HBM4 supply partnership and Naver AI chip supply agreement. Meta and OpenAI are also increasing AMD chip procurement. AMD is transitioning from "NVIDIA alternative" to "second pole of AI chips."</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>三星将为AMD Instinct MI455X GPU供应HBM4，双方还合作开发DDR5方案</span><span data-en>Samsung to supply HBM4 for AMD Instinct MI455X GPU; also co-developing DDR5 solutions</span></li>
+      <li><span data-zh>数据中心GPU市场英伟达占92%，AMD以4%位居第二</span><span data-en>Data center GPU market: NVIDIA 92%, AMD 4% in second place</span></li>
+      <li><span data-zh>AMD预计通过战略合作在亚洲hyperscaler市场获得10%-15%份额</span><span data-en>AMD expects to capture 10-15% share in Asian hyperscaler market through strategic partnerships</span></li>
+      <li><span data-zh>2025年AMD营收346亿美元，同比增长34%</span><span data-en>AMD 2025 revenue $34.6B, +34% YoY</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Capital & Supply Chain ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-coins"></i>
+    <h2><span data-zh>五、资本与产业链整合：AI驱动的投资浪潮</span><span data-en>V. Capital & Supply Chain Integration: AI-Driven Investment Wave</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>SK海力士美国ADR上市计划募资100-140亿美元，全球半导体资本市场迎来超级融资周期</span><span data-en>SK hynix US ADR Listing Plans $10-14B Raise; Global Semiconductor Capital Market Enters Super Financing Cycle</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>SK海力士向美国SEC提交F-1注册文件，计划发行约2.4%新股募资100-140亿美元，用于清州、龙仁新晶圆厂建设及ASML EUV设备采购。这是继台积电之后又一家亚洲半导体巨头深化美国资本市场布局。</span><span data-en><strong>Key Insight:</strong> SK hynix filed F-1 with US SEC, planning to issue ~2.4% new shares raising $10-14B for Cheongju and Yongin new fabs and ASML EUV equipment. This is another Asian semiconductor giant deepening US capital market presence after TSMC.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>SK海力士计划年底前完成美国ADR上市</span><span data-en>SK hynix plans to complete US ADR listing by year-end</span></li>
+      <li><span data-zh>募资用于清州、龙仁新晶圆厂及ASML EUV设备采购</span><span data-en>Funds for Cheongju and Yongin new fabs and ASML EUV equipment procurement</span></li>
+      <li><span data-zh>HBM3E为当前核心产品，HBM4将于2026下半年出货</span><span data-en>HBM3E is current core product; HBM4 shipping H2 2026</span></li>
+      <li><span data-zh>2025年在无锡DRAM工厂投资增至5811亿韩元（同比增102%）</span><span data-en>2025 Wuxi DRAM factory investment increased to ₩581.1B (+102% YoY)</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>光互连赛道融资密集爆发，Ayar Labs与Kandou AI合计获7.25亿美元标志着技术路线拐点</span><span data-en>Optical Interconnect Funding Surge: Ayar Labs & Kandou AI's Combined $725M Marks Technology Inflection Point</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Ayar Labs完成5亿美元E轮（估值37.5亿美元），Kandou AI完成2.25亿美元A轮（估值4亿美元），英伟达投资的Scintil Photonics也开始向客户测试激光芯片。AI数据中心的互连瓶颈正催生一个全新的技术赛道。</span><span data-en><strong>Key Insight:</strong> Ayar Labs completed $500M Series E (valuation $3.75B), Kandou AI completed $225M Series A (valuation $400M), and NVIDIA-backed Scintil Photonics began customer laser chip testing. AI data center interconnect bottlenecks are creating an entirely new technology track.</span></p>
+    </div>
+
+    <!-- Data Viz: Optical Interconnect Funding -->
+    <div class="stat-highlight">
+      <div class="stat-highlight-card">
+        <div class="val">$500M</div>
+        <div class="lbl"><span data-zh>Ayar Labs E轮融资</span><span data-en>Ayar Labs Series E</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#b45309)">
+        <div class="val">$225M</div>
+        <div class="lbl"><span data-zh>Kandou AI A轮融资</span><span data-en>Kandou AI Series A</span></div>
+      </div>
+      <div class="stat-highlight-card">
+        <div class="val">4-20x</div>
+        <div class="lbl"><span data-zh>光互连每瓦吞吐量提升</span><span data-en>Optical Throughput/Watt Gain</span></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>Ayar Labs累计融资8.7亿美元，TeraPHY光互连芯片可实现比铜线高4-20倍的每瓦吞吐量</span><span data-en>Ayar Labs total funding $870M; TeraPHY optical interconnect chip achieves 4-20x throughput per watt vs. copper</span></li>
+      <li><span data-zh>Kandou AI的Chord技术可将铜互连带宽提升2-4倍，功耗降低一半，目标速率448Gbps以上</span><span data-en>Kandou AI's Chord technology boosts copper interconnect bandwidth 2-4x, halves power, targeting 448Gbps+</span></li>
+      <li><span data-zh>英伟达将在Rubin架构中引入共封装光学（CPO）技术</span><span data-en>NVIDIA to introduce co-packaged optics (CPO) technology in Rubin architecture</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.3</span><span data-en>Insight 5.3</span></span>
+    <h3><span data-zh>三星超550亿英镑扩张AI芯片部门，同时深化与AMD、英伟达、OpenAI的多线合作</span><span data-en>Samsung Expands AI Chip Division with £55B+, Deepening Multi-Line Partnerships with AMD, NVIDIA, OpenAI</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>三星正在通过大规模资本投入和多线战略合作重塑其在AI半导体领域的地位。超550亿英镑扩张AI芯片部门，与AMD合作供应HBM4和代工服务，HBM4获英伟达认证占其供应30%，还计划向OpenAI供应HBM4。</span><span data-en><strong>Key Insight:</strong> Samsung is reshaping its AI semiconductor position through massive capital investment and multi-line strategic partnerships. £55B+ AI chip division expansion, AMD HBM4 supply and foundry partnership, 30% of NVIDIA HBM4 supply, and plans to supply HBM4 to OpenAI.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>与AMD签署MOU，供应HBM4、DDR5方案，探讨代工合作</span><span data-en>Signed MOU with AMD for HBM4, DDR5 solutions, and foundry collaboration</span></li>
+      <li><span data-zh>西安NAND工厂2025年投资4654亿韩元（同比增67.5%），无锡DRAM工厂投资5811亿韩元（同比增102%）</span><span data-en>Xi'an NAND factory 2025 investment ₩465.4B (+67.5% YoY); Wuxi DRAM factory ₩581.1B (+102% YoY)</span></li>
+      <li><span data-zh>投资5000万美元入股AI芯片设计初创Normal Computing</span><span data-en>Invested $50M in AI chip design startup Normal Computing</span></li>
+      <li><span data-zh>计划2027年下半年在德州工厂量产特斯拉自动驾驶芯片</span><span data-en>Plans to mass produce Tesla autonomous driving chips at Texas factory in H2 2027</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.4</span><span data-en>Insight 5.4</span></span>
+    <h3><span data-zh>力积电出售铜锣厂转型AI封装平台，代工行业"小而美"生存策略浮现</span><span data-en>PSMC Sells Tongluo Fab to Transform into AI Packaging Platform; "Small but Beautiful" Foundry Survival Strategy Emerges</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>力积电将铜锣厂以约18亿美元出售给美光，同时切入HBM后段制程和3D堆叠技术，从成熟制程代工转向"AI+功率元件+先进封装"的复合业务模式。这代表了中小型代工厂在巨头挤压下的差异化生存策略。</span><span data-en><strong>Key Insight:</strong> PSMC sold Tongluo fab to Micron for ~$1.8B while entering HBM back-end processes and 3D stacking, shifting from mature node foundry to "AI + power devices + advanced packaging" composite model. This represents differentiated survival strategy for mid-size foundries under giant pressure.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>出售铜锣厂获约569亿新台币，预计贡献EPS约13元，助力年度扭亏为盈</span><span data-en>Tongluo sale yielded ~NT$56.9B, expected EPS contribution ~NT$13, helping annual turnaround to profit</span></li>
+      <li><span data-zh>切入HBM后段制程，布局3D堆叠（WoW）与中介层技术</span><span data-en>Entering HBM back-end processes, deploying 3D stacking (WoW) and interposer technology</span></li>
+      <li><span data-zh>Navitas将GaN订单从台积电转至力积电</span><span data-en>Navitas shifted GaN orders from TSMC to PSMC</span></li>
+      <li><span data-zh>目标2027年成为DDR4 8G/16G供应商</span><span data-en>Targeting to become DDR4 8G/16G supplier by 2027</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: China Semiconductor ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-dragon"></i>
+    <h2><span data-zh>六、中国半导体：自主化加速与全球份额提升</span><span data-en>VI. China Semiconductor: Accelerating Self-Sufficiency & Rising Global Share</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>中国半导体出口额前两月同比增长72.6%，从"中转站"向"高价值供应商"转型</span><span data-en>China Semiconductor Exports Grew 72.6% YoY in First Two Months, Shifting from "Transit Hub" to "High-Value Supplier"</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年前两个月中国半导体出口额达433亿美元，同比增长72.6%，出口平均单价上涨约52%，远超整体出口21.8%的增速。核心驱动力是：全球内存厂商转向HBM为中国厂商腾出传统内存市场空间，AI产业链外围芯片获得全球订单，以及成熟制程产能扩张承接全球溢出需求。</span><span data-en><strong>Key Insight:</strong> China's semiconductor exports reached $43.3B in the first two months of 2026, up 72.6% YoY, with average unit price up ~52%, far exceeding overall export growth of 21.8%. Core drivers: global memory makers' HBM shift freed traditional memory space for Chinese vendors, AI peripheral chips won global orders, and mature node capacity expansion absorbed global overflow demand.</span></p>
+    </div>
+
+    <!-- Data Viz: China Semi Export Growth -->
+    <div class="insight-card" style="background:var(--c-surface-alt);margin:1rem 0;border:1px solid var(--c-border);border-radius:var(--radius)">
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label"><span data-zh>出口额增长</span><span data-en>Export Growth</span></div><div class="bar-track"><div class="bar-fill" style="width:72.6%">+72.6%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>单价增长</span><span data-en>Unit Price Growth</span></div><div class="bar-track"><div class="bar-fill" style="width:52%;background:linear-gradient(90deg,#6366f1,#818cf8)">+52%</div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>整体出口增速</span><span data-en>Overall Export Growth</span></div><div class="bar-track"><div class="bar-fill" style="width:21.8%;background:linear-gradient(90deg,#059669,#10b981)">+21.8%</div></div></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>出口额433亿美元，同比增长72.6%，平均单价上涨52%</span><span data-en>Exports $43.3B, +72.6% YoY, average unit price up 52%</span></li>
+      <li><span data-zh>中芯国际、华虹半导体等厂商承接全球溢出订单，成熟制程（28nm-90nm）产能扩张</span><span data-en>SMIC, Hua Hong absorbing global overflow orders; mature node (28nm-90nm) capacity expanding</span></li>
+      <li><span data-zh>斯达半导等企业在车规级IGBT、MCU领域实现突破</span><span data-en>StarPower and others achieved breakthroughs in automotive-grade IGBT and MCU</span></li>
+      <li><span data-zh>Gartner预计2030年中国AI芯片国内市占率将超80%（当前约20%）</span><span data-en>Gartner projects China's domestic AI chip market share to exceed 80% by 2030 (currently ~20%)</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>中国AI芯片厂商营收集体爆发但仍普遍亏损，"以量换时间"策略面临盈利考验</span><span data-en>Chinese AI Chip Makers See Revenue Surge but Remain Broadly Unprofitable; "Volume for Time" Strategy Faces Profitability Test</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2025年中国AI芯片厂商营收集体爆发——壁仞科技增长207%、寒武纪增长450%、摩尔线程增长243%，但壁仞仍亏损16.5亿元。"以量换时间"的策略能否在美国制裁持续收紧的环境下实现盈利闭环，仍是核心悬念。</span><span data-en><strong>Key Insight:</strong> Chinese AI chip makers saw collective revenue explosion in 2025 — Biren +207%, Cambricon +450%, Moore Threads +243% — but Biren still lost ¥1.65B. Whether the "volume for time" strategy can achieve profitability under tightening US sanctions remains the core question.</span></p>
+    </div>
+
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label"><span data-zh>寒武纪</span><span data-en>Cambricon</span></div><div class="bar-track"><div class="bar-fill" style="width:90%">+450%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>摩尔线程</span><span data-en>Moore Threads</span></div><div class="bar-track"><div class="bar-fill" style="width:49%;background:linear-gradient(90deg,#6366f1,#818cf8)">+243%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>壁仞科技</span><span data-en>Biren Tech</span></div><div class="bar-track"><div class="bar-fill" style="width:41%;background:linear-gradient(90deg,#059669,#10b981)">+207%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>元启半导体</span><span data-en>Enflame</span></div><div class="bar-track"><div class="bar-fill" style="width:24%;background:linear-gradient(90deg,#ef4444,#f87171)">+121%</div></div></div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>壁仞科技2025年营收10.3亿元，同比增长207.2%，亏损16.5亿元，已被纳入美国实体清单</span><span data-en>Biren Tech 2025 revenue ¥1.03B, +207.2% YoY, loss ¥1.65B, added to US Entity List</span></li>
+      <li><span data-zh>华虹半导体完成7nm芯片生产线调试，打破中芯国际国内7nm垄断</span><span data-en>Hua Hong completed 7nm chip production line commissioning, breaking SMIC's domestic 7nm monopoly</span></li>
+      <li><span data-zh>中国计划5年内集中力量开发国产EUV光刻设备</span><span data-en>China plans to concentrate resources on developing domestic EUV lithography equipment within 5 years</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.3</span><span data-en>Insight 6.3</span></span>
+    <h3><span data-zh>阿里巴巴RISC-V架构AI CPU完成5nm验证，开源架构在AI芯片领域加速渗透</span><span data-en>Alibaba RISC-V AI CPU Completes 5nm Verification; Open-Source Architecture Accelerates AI Chip Penetration</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>阿里巴巴发布基于RISC-V架构的XuanTie C950 AI CPU并完成5nm工艺验证。结合三星在SSD控制器中采用RISC-V替代ARM，RISC-V开源架构正在从边缘场景向AI核心计算领域渗透，为中国等受制裁地区提供绕过ARM授权限制的技术路径。</span><span data-en><strong>Key Insight:</strong> Alibaba launched RISC-V-based XuanTie C950 AI CPU with 5nm process verification. Combined with Samsung's RISC-V SSD controller replacing ARM, RISC-V open-source architecture is penetrating from edge to core AI computing, providing sanctioned regions like China a path to bypass ARM licensing restrictions.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>XuanTie C950已完成5nm工艺验证，预计由台积电代工</span><span data-en>XuanTie C950 completed 5nm process verification, expected to be manufactured by TSMC</span></li>
+      <li><span data-zh>三星BM9K1 SSD采用RISC-V控制器替代ARM</span><span data-en>Samsung BM9K1 SSD uses RISC-V controller replacing ARM</span></li>
+      <li><span data-zh>英特尔ISSCC 2026论文中的56核DNN处理器也采用RISC-V核心</span><span data-en>Intel's ISSCC 2026 paper on 56-core DNN processor also uses RISC-V cores</span></li>
+      <li><span data-zh>RISC-V架构可降低IP授权成本，为受制裁地区提供替代路径</span><span data-en>RISC-V architecture reduces IP licensing costs, providing alternative path for sanctioned regions</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: Regulation & Geopolitics ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-gavel"></i>
+    <h2><span data-zh>七、监管与地缘政治：规则重塑与供应链风险</span><span data-en>VII. Regulation & Geopolitics: Rule Reshaping & Supply Chain Risk</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.1</span><span data-en>Insight 7.1</span></span>
+    <h3><span data-zh>美超微走私案暴露出口管控系统性漏洞，《Chip Security法案》将重塑AI芯片贸易规则</span><span data-en>Super Micro Smuggling Case Exposes Systemic Export Control Loopholes; Chip Security Act to Reshape AI Chip Trade Rules</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美超微联合创始人等三人通过东南亚空壳公司将价值约25亿美元的英伟达AI芯片服务器非法转运至中国，事件曝光后美超微股价单日暴跌33%。该案直接推动美国众议院推进《Chip Security法案》，要求建立芯片安全追溯机制和终端用户验证体系。</span><span data-en><strong>Key Insight:</strong> Super Micro co-founder and two others illegally transshipped ~$2.5B worth of NVIDIA AI chip servers to China via Southeast Asian shell companies. Super Micro stock plunged 33% in one day. The case directly pushed the US House to advance the Chip Security Act, requiring chip security traceability and end-user verification systems.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>涉案金额约25亿美元，通过东南亚空壳公司伪造文件转运</span><span data-en>~$2.5B involved, transshipped via Southeast Asian shell companies with forged documents</span></li>
+      <li><span data-zh>美超微股价单日暴跌33%，市值缩水约61亿美元</span><span data-en>Super Micro stock plunged 33% in one day, losing ~$6.1B market cap</span></li>
+      <li><span data-zh>《Chip Security法案》获两党支持，要求加强终端用户验证和芯片追溯</span><span data-en>Chip Security Act has bipartisan support, requiring enhanced end-user verification and chip traceability</span></li>
+      <li><span data-zh>两党参议员Warren和Banks致信商务部长，要求暂停审查所有英伟达对华出口许可</span><span data-en>Bipartisan Senators Warren and Banks wrote to Commerce Secretary demanding suspension of all NVIDIA China export license reviews</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.2</span><span data-en>Insight 7.2</span></span>
+    <h3><span data-zh>台积电2nm技术盗窃案与罗唯仁窃密案凸显先进制程技术的间谍风险</span><span data-en>TSMC 2nm Tech Theft Case & Luo Wei-Ren Espionage Case Highlight Advanced Node Espionage Risk</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>台积电前员工试图将2nm制程机密泄露给东京电子，另有前高管罗唯仁涉嫌带走关键技术参数。两案均依据台湾《国家安全法》处理，最高可判20年。随着先进制程技术的战略价值急剧上升，半导体技术间谍风险已成为行业级威胁。</span><span data-en><strong>Key Insight:</strong> A former TSMC employee attempted to leak 2nm process secrets to Tokyo Electron; another former executive Luo Wei-Ren allegedly took key technical parameters. Both cases handled under Taiwan's National Security Act with up to 20-year sentences. As advanced node strategic value surges, semiconductor espionage has become an industry-level threat.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2nm技术盗窃案主犯Chen Li-ming可能面临最高20年刑期</span><span data-en>2nm theft case principal Chen Li-ming faces up to 20-year sentence</span></li>
+      <li><span data-zh>东京电子台湾分公司面临约452万美元罚款</span><span data-en>Tokyo Electron Taiwan subsidiary faces ~$4.52M fine</span></li>
+      <li><span data-zh>罗唯仁案已由智慧财产暨商业法院受理，经济部选派13名技审官协助</span><span data-en>Luo Wei-Ren case accepted by IP & Commercial Court; Ministry of Economic Affairs assigned 13 technical reviewers</span></li>
+      <li><span data-zh>台积电已加强内部数据库访问管控和文档安全管理</span><span data-en>TSMC has strengthened internal database access controls and document security management</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.3</span><span data-en>Insight 7.3</span></span>
+    <h3><span data-zh>美国ITC启动SK海力士HBM专利337调查，NPE诉讼风险成为韩国芯片厂商新威胁</span><span data-en>US ITC Launches SK hynix HBM Patent 337 Investigation; NPE Litigation Becomes New Threat for Korean Chip Makers</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美国NPE Monolithic 3D向ITC提起诉讼，指控SK海力士和铠侠侵犯8项HBM和3D NAND专利，若认定侵权，相关产品将被禁止进入美国市场。NPE专利诉讼正成为韩国芯片厂商在美国市场的新型系统性风险。</span><span data-en><strong>Key Insight:</strong> US NPE Monolithic 3D filed ITC complaint alleging SK hynix and Kioxia infringed 8 HBM and 3D NAND patents. If infringement is found, products would be banned from the US market. NPE patent litigation is becoming a new systemic risk for Korean chip makers in the US market.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Monolithic 3D指控侵犯8项HBM和3D NAND相关专利</span><span data-en>Monolithic 3D alleges infringement of 8 HBM and 3D NAND related patents</span></li>
+      <li><span data-zh>若禁令生效，将影响全球AI服务器内存供应</span><span data-en>If injunction takes effect, it would impact global AI server memory supply</span></li>
+      <li><span data-zh>韩国政府正探索建立政府层面的NPE诉讼应对机制</span><span data-en>Korean government exploring government-level NPE litigation response mechanism</span></li>
+      <li><span data-zh>Netlist CEO同时呼吁对韩国启动301调查，指控三星系统性盗用专利</span><span data-en>Netlist CEO also called for 301 investigation against Korea, alleging Samsung's systematic patent theft</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 8: Business & Market ===== -->
+<section id="s8" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chart-line"></i>
+    <h2><span data-zh>八、企业经营与市场表现：业绩分化加剧</span><span data-en>VIII. Business & Market Performance: Widening Divergence</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 8.1</span><span data-en>Insight 8.1</span></span>
+    <h3><span data-zh>美光营收同比增长近3倍但股价8个交易日暴跌30%，AI内存龙头面临"业绩与估值脱钩"困境</span><span data-en>Micron Revenue Nearly Tripled YoY but Stock Plunged 30% in 8 Days; AI Memory Leader Faces "Earnings-Valuation Decoupling"</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>美光2026财年Q2营收239亿美元，同比增长近3倍，EPS达12.20美元，Q3指引335亿美元。但受TurboQuant技术恐慌、中东地缘局势等因素影响，股价8个交易日累计下跌30%。这种"超预期业绩+股价暴跌"的组合反映出市场对AI内存超级周期可持续性的深层焦虑。</span><span data-en><strong>Key Insight:</strong> Micron FY2026 Q2 revenue $23.9B, nearly 3x YoY, EPS $12.20, Q3 guidance $33.5B. But stock fell 30% in 8 trading days due to TurboQuant tech panic and Middle East geopolitical tensions. This "beat-and-crash" combination reflects deep market anxiety about AI memory super-cycle sustainability.</span></p>
+    </div>
+
+    <div class="stat-highlight">
+      <div class="stat-highlight-card">
+        <div class="val">$23.9B</div>
+        <div class="lbl"><span data-zh>Q2营收（同比近3倍）</span><span data-en>Q2 Revenue (~3x YoY)</span></div>
+      </div>
+      <div class="stat-highlight-card" style="background:linear-gradient(135deg,#ef4444,#b91c1c)">
+        <div class="val">-30%</div>
+        <div class="lbl"><span data-zh>8个交易日股价跌幅</span><span data-en>8-Day Stock Decline</span></div>
+      </div>
+      <div class="stat-highlight-card">
+        <div class="val">$33.5B</div>
+        <div class="lbl"><span data-zh>Q3营收指引</span><span data-en>Q3 Revenue Guidance</span></div>
+      </div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>2026年全年HBM产能已全部售罄，签署首份五年期战略客户协议</span><span data-en>Full-year 2026 HBM capacity fully sold out; signed first five-year strategic customer agreement</span></li>
+      <li><span data-zh>董事会批准季度股息上调30%，启动数十亿美元偿债计划</span><span data-en>Board approved 30% quarterly dividend increase; launched multi-billion dollar debt repayment plan</span></li>
+      <li><span data-zh>Citi维持买入评级，目标价从510美元下调至425美元，市场共识目标价527.6美元</span><span data-en>Citi maintained Buy rating, target cut from $510 to $425; consensus target $527.6</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 8.2</span><span data-en>Insight 8.2</span></span>
+    <h3><span data-zh>博通定制AI芯片业务营收增长106%，与OpenAI多年合作协议开辟千亿美元新赛道</span><span data-en>Broadcom Custom AI Chip Revenue +106%; Multi-Year OpenAI Partnership Opens $100B+ New Track</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>博通2026财年Q1 AI相关业务营收同比增长106%至84亿美元，与OpenAI达成多年合作开发定制AI加速器，预计AI芯片业务明年营收将超1000亿美元。博通正在以定制化XPU路线挑战英伟达通用GPU的数据中心垄断地位。</span><span data-en><strong>Key Insight:</strong> Broadcom FY2026 Q1 AI-related revenue grew 106% YoY to $8.4B, with multi-year OpenAI partnership for custom AI accelerators. AI chip business revenue expected to exceed $100B next year. Broadcom is challenging NVIDIA's data center GPU monopoly with custom XPU approach.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Q1总营收193.1亿美元，同比增长29.5%</span><span data-en>Q1 total revenue $19.31B, +29.5% YoY</span></li>
+      <li><span data-zh>AI相关业务营收84亿美元，同比增长106%</span><span data-en>AI-related revenue $8.4B, +106% YoY</span></li>
+      <li><span data-zh>与OpenAI达成多年定制AI加速器合作</span><span data-en>Multi-year custom AI accelerator partnership with OpenAI</span></li>
+      <li><span data-zh>股价近期回调约24%，分析师平均目标价435.3美元</span><span data-en>Stock recently pulled back ~24%; analyst average target $435.3</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 8.3</span><span data-en>Insight 8.3</span></span>
+    <h3><span data-zh>ASML订单与营收持续强劲，High-NA EUV设备成为先进制程竞争的"入场券"</span><span data-en>ASML Orders & Revenue Remain Strong; High-NA EUV Equipment Becomes "Entry Ticket" for Advanced Node Competition</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>ASML 2025年全年营收327亿欧元，Q4订单132亿欧元，手持订单388亿欧元，2026年营收指引340-390亿欧元。作为全球唯一EUV光刻机供应商，其High-NA EUV设备已成为2nm及以下制程研发的必备工具。</span><span data-en><strong>Key Insight:</strong> ASML 2025 full-year revenue €32.7B, Q4 orders €13.2B, backlog €38.8B, 2026 guidance €34-39B. As the world's sole EUV lithography supplier, its High-NA EUV equipment has become essential for sub-2nm R&D.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2025年全年营收327亿欧元，毛利率52.8%</span><span data-en>2025 full-year revenue €32.7B, gross margin 52.8%</span></li>
+      <li><span data-zh>SK海力士采购约79.7亿美元EUV设备</span><span data-en>SK hynix purchased ~$7.97B in EUV equipment</span></li>
+      <li><span data-zh>Bernstein目标价上调至1971美元，维持买入评级</span><span data-en>Bernstein raised target to $1,971, maintained Buy rating</span></li>
+      <li><span data-zh>计划在荷兰埃因霍温建设第二园区，可容纳2万名新员工</span><span data-en>Plans second campus in Eindhoven, Netherlands, accommodating 20,000 new employees</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 8.4</span><span data-en>Insight 8.4</span></span>
+    <h3><span data-zh>半导体全行业涨价潮来袭，德州仪器部分产品涨幅达85%</span><span data-en>Industry-Wide Semiconductor Price Hikes; Texas Instruments Products Up to 85% Increase</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年3月，英特尔与AMD宣布全系列CPU涨价10%-15%，德州仪器部分产品涨幅达85%，亚德诺平均涨价15%。涨价的根本原因是AI需求挤占产能导致供需失衡，叠加原材料成本上涨。高盛预计2026年DRAM和NAND供应缺口分别达4.9%和4.2%，为15年来最严重短缺。</span><span data-en><strong>Key Insight:</strong> In March 2026, Intel and AMD announced 10-15% CPU price hikes, TI products up to 85%, ADI average 15%. Root cause is AI demand crowding out capacity creating supply-demand imbalance, plus raw material cost increases. Goldman Sachs projects 2026 DRAM and NAND supply gaps of 4.9% and 4.2% respectively — worst shortage in 15 years.</span></p>
+    </div>
+
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label"><span data-zh>德州仪器（最高）</span><span data-en>TI (Max)</span></div><div class="bar-track"><div class="bar-fill" style="width:85%">+85%</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>亚德诺（最高）</span><span data-en>ADI (Max)</span></div><div class="bar-track"><div class="bar-fill" style="width:30%;background:linear-gradient(90deg,#6366f1,#818cf8)">+30%</div></div></div>
+      <div class="bar-row"><div class="bar-label">Intel / AMD</div><div class="bar-track"><div class="bar-fill" style="width:15%;background:linear-gradient(90deg,#059669,#10b981)">+10-15%</div></div></div>
+    </div>
+
+    <ul class="fact-list">
+      <li><span data-zh>英特尔与AMD宣布2026年3月起CPU涨价10%-15%，交货期延长至8-12周</span><span data-en>Intel and AMD announced 10-15% CPU price hikes from March 2026; lead times extended to 8-12 weeks</span></li>
+      <li><span data-zh>高盛预计2026年DRAM缺口4.9%、NAND缺口4.2%</span><span data-en>Goldman Sachs projects 2026 DRAM gap 4.9%, NAND gap 4.2%</span></li>
+      <li><span data-zh>DDR5 32GB套件价格从峰值490美元回落至370美元（受OpenAI缩减开支影响）</span><span data-en>DDR5 32GB kit price fell from peak $490 to $370 (due to OpenAI spending cuts)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险一：三星工会罢工可能引发全球HBM供应链连锁中断</span><span data-en>Risk 1: Samsung Union Strike May Trigger Global HBM Supply Chain Cascade Disruption</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>三星三大工会93.1%投票支持罢工，代表约9万名韩籍员工。若5月21日起18天罢工成行，平泽工厂约一半产能将受影响，分析师估算运营利润损失至少5万亿韩元。考虑到三星占英伟达HBM4供应的30%，罢工将直接冲击全球AI服务器内存供应链，波及汽车、PC、智能手机等下游行业。此前已有超100名员工跳槽至SK海力士，人才流失风险同步上升。</span><span data-en>Samsung's three major unions voted 93.1% in favor of strike, representing ~90,000 Korean employees. If the 18-day strike from May 21 proceeds, about half of Pyeongtaek factory capacity would be affected, with analysts estimating at least ₩5T operating profit loss. Given Samsung's 30% share of NVIDIA HBM4 supply, the strike would directly impact global AI server memory supply chain, affecting automotive, PC, and smartphone downstream industries. Over 100 employees have already defected to SK hynix, with talent drain risk rising.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>三星与工会的薪酬谈判进展（4月底前是否达成协议）、平泽工厂产能利用率变化、英伟达HBM4供应商切换动态</span><span data-en>Samsung-union wage negotiation progress (agreement before end of April), Pyeongtaek factory utilization changes, NVIDIA HBM4 supplier switching dynamics</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险二：中东地缘冲突导致氦气供应中断，芯片制造面临原材料瓶颈</span><span data-en>Risk 2: Middle East Conflict Disrupts Helium Supply; Chip Manufacturing Faces Raw Material Bottleneck</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>中东冲突导致卡塔尔氦气生产线受损，全球约三分之一的氦气供应受影响。氦气是芯片制造中冷却设备和清洗晶圆的关键原料，芯片厂商仅能维持约1.5个月库存，物流重新调配需数月。同时WTI原油突破100美元/桶推高能源成本，费城半导体指数已下跌4.23%。</span><span data-en>Middle East conflict damaged Qatar helium production lines, affecting ~1/3 of global helium supply. Helium is critical for chip manufacturing cooling and wafer cleaning. Chip makers can only maintain ~1.5 months of inventory, with logistics reallocation taking months. WTI crude breaking $100/barrel also pushes up energy costs; Philadelphia Semiconductor Index already fell 4.23%.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>卡塔尔氦气产线恢复进度、全球氦气现货价格、主要芯片厂商库存水平与采购替代方案</span><span data-en>Qatar helium line recovery progress, global helium spot prices, major chip maker inventory levels and procurement alternatives</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险三：美国出口管制持续收紧，AI芯片全球贸易规则面临重大不确定性</span><span data-en>Risk 3: US Export Controls Continue Tightening; Global AI Chip Trade Rules Face Major Uncertainty</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>美超微走私案推动《Chip Security法案》立法，两党参议员要求暂停英伟达对华出口许可审查，美国还指控中芯国际向伊朗军方提供设备。出口管制的持续收紧将增加全球AI芯片贸易的合规成本和不确定性，对依赖美国技术的芯片厂商的全球业务布局产生深远影响。</span><span data-en>The Super Micro smuggling case pushed Chip Security Act legislation. Bipartisan senators demanded suspension of NVIDIA China export license reviews. The US also accused SMIC of supplying equipment to Iran's military. Continued tightening of export controls will increase compliance costs and uncertainty in global AI chip trade, profoundly impacting global business strategies of chip makers dependent on US technology.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>《Chip Security法案》立法进度、英伟达对华出口许可审查结果、美国商务部实体清单更新动态</span><span data-en>Chip Security Act legislative progress, NVIDIA China export license review results, US Commerce Department Entity List updates</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险四：内存行业周期性过剩风险未消，OpenAI缩减开支已引发价格回落信号</span><span data-en>Risk 4: Memory Industry Cyclical Oversupply Risk Persists; OpenAI Spending Cuts Signal Price Decline</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>OpenAI取消与SK海力士的710亿美元DRAM订单意向，关停Sora项目、取消德州数据中心扩张，DDR5 32GB套件价格从峰值490美元回落至370美元。若更多AI企业缩减数据中心投资，当前基于AI超级周期预期的产能扩张可能面临需求不及预期的风险。</span><span data-en>OpenAI cancelled $71B DRAM order intent with SK hynix, shut down Sora project, cancelled Texas data center expansion. DDR5 32GB kit price fell from peak $490 to $370. If more AI companies cut data center investment, current capacity expansion based on AI super-cycle expectations may face demand shortfall risk.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>主要AI企业（OpenAI、Meta、谷歌）数据中心资本支出计划变化、DDR5/HBM现货与合约价格走势、内存厂商库存周转天数</span><span data-en>Major AI companies' (OpenAI, Meta, Google) data center CapEx plan changes, DDR5/HBM spot and contract price trends, memory maker inventory turnover days</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险五：MediaTek芯片重大安全漏洞波及数百万安卓设备，供应链安全信任受损</span><span data-en>Risk 5: MediaTek Chip Critical Vulnerability Affects Millions of Android Devices; Supply Chain Security Trust Damaged</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>MediaTek芯片CVE-2026-20435漏洞允许攻击者在45秒内通过物理连接绕过Android系统获取敏感数据，受影响设备包括小米、OPPO、Vivo、三星Galaxy A系列等数百万机型。虽已推送补丁，但用户更新率通常较低。该事件可能影响下游品牌对MediaTek芯片的信任度。</span><span data-en>MediaTek chip CVE-2026-20435 vulnerability allows attackers to bypass Android system and access sensitive data via physical connection in 45 seconds. Affected devices include millions of Xiaomi, OPPO, Vivo, and Samsung Galaxy A series models. Patches have been pushed but user update rates are typically low. This may impact downstream brand trust in MediaTek chips.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>MediaTek芯片在主要品牌旗舰机型中的采用率变化、企业级客户对芯片安全认证的要求升级</span><span data-en>MediaTek chip adoption rate changes in major brand flagship models, enterprise customer chip security certification requirement upgrades</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年5月21日</span><span data-en>May 21, 2026</span></div>
+      <div class="timeline-text"><span data-zh>三星工会计划发动为期18天的罢工，若谈判未达成协议，将直接影响平泽工厂HBM产能，需密切关注4月底前的劳资谈判进展及英伟达供应链应急调整</span><span data-en>Samsung union plans 18-day strike. If negotiations fail, Pyeongtaek HBM capacity will be directly affected. Watch labor negotiation progress before end of April and NVIDIA supply chain contingency adjustments</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q2-Q3</div>
+      <div class="timeline-text"><span data-zh>SK海力士美国ADR上市预计年底前完成，募资100-140亿美元的规模将对全球半导体资本市场产生重大影响，同时其HBM4出货时间将决定三巨头的市场份额重新分配</span><span data-en>SK hynix US ADR listing expected by year-end. The $10-14B raise will significantly impact global semiconductor capital markets. HBM4 shipping timeline will determine market share redistribution among the three giants</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date"><span data-zh>2026年Computex（6月）</span><span data-en>Computex 2026 (June)</span></div>
+      <div class="timeline-text"><span data-zh>英伟达将发布ARM架构笔记本CPU N1/N1X，若N1X的6144个CUDA核心实现无独显流畅游戏，将对英特尔、AMD、高通的笔记本CPU市场格局产生颠覆性影响</span><span data-en>NVIDIA to launch ARM-based laptop CPUs N1/N1X. If N1X's 6,144 CUDA cores enable smooth gaming without discrete GPU, it would disruptively impact Intel, AMD, and Qualcomm's laptop CPU market</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q4</div>
+      <div class="timeline-text"><span data-zh>IMEC NanoIC试点产线预计完成认证，ASML High-NA EUV设备的实际表现将决定欧洲2nm及以下制程研发的进度</span><span data-en>IMEC NanoIC pilot line expected to complete certification. ASML High-NA EUV actual performance will determine Europe's sub-2nm R&D progress</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026-2027</div>
+      <div class="timeline-text"><span data-zh>马斯克TeraFab详细计划公布后的技术验证进展，特别是"密封真空微型环境"替代传统洁净室的可行性验证，以及EUV设备采购能否落实</span><span data-en>Musk's TeraFab technical verification progress after detailed plan release, especially "sealed vacuum micro-environment" feasibility vs. traditional cleanroom, and whether EUV equipment procurement materializes</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年3月的全球半导体行业呈现出"AI驱动的供需失衡"这一核心主线：上游HBM4三巨头同步量产争夺英伟达Rubin平台订单，中游台积电先进制程产能成为最大瓶颈（3nm严重短缺、1.4nm路线图确立两年领先），下游AI芯片需求推动全行业涨价潮（德州仪器最高涨85%）。全球半导体产能正从亚洲集中走向多极分散——印度美光工厂投产、韩国1500万亿韩元投资计划、欧洲Chips Act 2.0、越南升级制造能力。中国半导体出口额前两月同比增长72.6%，正从"中转站"向"高价值供应商"转型。</span><span data-en>The global semiconductor industry in March 2026 centers on "AI-driven supply-demand imbalance": upstream HBM4 triple giants compete for NVIDIA Rubin platform orders; midstream TSMC advanced node capacity is the biggest bottleneck (severe 3nm shortage, 1.4nm roadmap establishing two-year lead); downstream AI chip demand drives industry-wide price hikes (TI up to 85%). Global semiconductor capacity is diversifying from Asia-centric to multi-polar — India Micron factory launch, Korea's ₩1,500T investment plan, Europe's Chips Act 2.0, Vietnam manufacturing upgrade. China semiconductor exports grew 72.6% YoY in first two months, shifting from "transit hub" to "high-value supplier."</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>英伟达从GPU厂商向全栈AI基础设施平台演进，2027年累计订单目标翻倍至1万亿美元，但PE已降至7年新低（约19.6倍）</span><span data-en>NVIDIA evolves from GPU vendor to full-stack AI infrastructure platform; 2027 cumulative order target doubles to $1T, but PE at 7-year low (~19.6x)</span></li>
+        <li><span data-zh>苹果C1X调制解调器与N1无线芯片标志着"去高通化"进入实质阶段</span><span data-en>Apple C1X modem and N1 wireless chip mark substantive "de-Qualcomm" phase</span></li>
+        <li><span data-zh>博通定制AI芯片业务增长106%，以XPU路线挑战英伟达通用GPU垄断</span><span data-en>Broadcom custom AI chip business +106%, challenging NVIDIA GPU monopoly with XPU approach</span></li>
+        <li><span data-zh>光互连技术获密集融资（Ayar Labs 5亿+Kandou AI 2.25亿美元），铜缆互连逼近物理极限</span><span data-en>Optical interconnect receives dense funding (Ayar Labs $500M + Kandou AI $225M); copper interconnect approaching physical limits</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>三星工会罢工风险（93.1%投票支持）可能导致平泽工厂产能减半，直接冲击全球HBM供应链</span><span data-en>Samsung union strike risk (93.1% vote) may halve Pyeongtaek capacity, directly impacting global HBM supply chain</span></li>
+        <li><span data-zh>中东地缘冲突导致氦气供应中断，芯片厂商仅1.5个月库存</span><span data-en>Middle East conflict disrupts helium supply; chip makers have only 1.5 months inventory</span></li>
+        <li><span data-zh>美国出口管制持续收紧，《Chip Security法案》将增加全球AI芯片贸易合规成本</span><span data-en>US export controls continue tightening; Chip Security Act will increase global AI chip trade compliance costs</span></li>
+        <li><span data-zh>OpenAI缩减数据中心投资引发内存价格回落，周期性过剩风险未完全消散</span><span data-en>OpenAI data center investment cuts trigger memory price decline; cyclical oversupply risk not fully dissipated</span></li>
+        <li><span data-zh>台积电2nm技术盗窃案凸显先进制程技术间谍风险，行业安全管控成本将持续上升</span><span data-en>TSMC 2nm tech theft case highlights advanced node espionage risk; industry security costs will continue rising</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>AI内存供应链多元化：</span><span data-en>AI Memory Supply Diversification: </span></strong><span data-zh>AI服务器厂商应在2026年Q2前完成HBM供应商的双源/三源认证，避免单一供应商依赖</span><span data-en>AI server makers should complete dual/triple-source HBM supplier certification by Q2 2026 to avoid single-supplier dependency</span></li>
+        <li><strong><span data-zh>先进封装能力布局：</span><span data-en>Advanced Packaging: </span></strong><span data-zh>中游封装企业应在2026年下半年前完成3D堆叠和混合键合技术的产线建设</span><span data-en>Mid-stream packaging companies should complete 3D stacking and hybrid bonding production lines by H2 2026</span></li>
+        <li><strong><span data-zh>光互连技术前瞻布局：</span><span data-en>Optical Interconnect: </span></strong><span data-zh>AI数据中心运营商应在2027年前启动光互连技术的POC验证</span><span data-en>AI data center operators should initiate optical interconnect POC verification before 2027</span></li>
+        <li><strong><span data-zh>地缘风险对冲：</span><span data-en>Geopolitical Risk Hedging: </span></strong><span data-zh>建议将氦气战略库存从1.5个月提升至3个月，在东南亚和印度建立备用封装测试产能</span><span data-en>Recommend increasing helium strategic inventory from 1.5 to 3 months; establish backup packaging/testing capacity in Southeast Asia and India</span></li>
+        <li><strong><span data-zh>RISC-V生态投资：</span><span data-en>RISC-V Ecosystem: </span></strong><span data-zh>芯片设计企业应评估在AI加速器和存储控制器中采用RISC-V架构的可行性，预计2027年渗透率将从不足5%提升至15%以上</span><span data-en>Chip design companies should evaluate RISC-V architecture feasibility for AI accelerators and storage controllers; penetration expected to rise from under 5% to 15%+ by 2027</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年4月</span><span data-en>Published: April 2026</span><br>
+    <span data-zh>本报告基于半导体行业行业月报2026-03编制，仅供参考，不构成投资建议。</span><span data-en>Based on Semiconductor Industry Monthly Report 2026-03. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>

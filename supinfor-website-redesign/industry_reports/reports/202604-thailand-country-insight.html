@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>泰国 区域国别洞察报告 — Supinfor</title>
+<style>
+/* ===== CSS Variables: Dark Mode (Default) ===== */
+:root {
+  --bg: #0a0f1e;
+  --surface: #1a2e50;
+  --surface-2: #233a60;
+  --surface-3: #2c4670;
+  --border: rgba(255,255,255,0.08);
+  --text: #e4e8f1;
+  --text-secondary: #8b95ad;
+  --text-muted: #5a6580;
+  --accent: #3b82f6;
+  --accent-dim: rgba(59,130,246,0.12);
+  --red: #ef4444;
+  --red-dim: rgba(239,68,68,0.12);
+  --orange: #f59e0b;
+  --orange-dim: rgba(245,158,11,0.12);
+  --green: #22c55e;
+  --green-dim: rgba(34,197,94,0.12);
+  --yellow: #eab308;
+  --yellow-dim: rgba(234,179,8,0.12);
+  --purple: #8b5cf6;
+  --purple-dim: rgba(139,92,246,0.12);
+  --teal: #14b8a6;
+  --teal-dim: rgba(20,184,166,0.12);
+  --radius: 10px;
+  --radius-sm: 6px;
+  --radius-lg: 14px;
+  --transition: 0.15s ease;
+}
+
+/* ===== Light Mode ===== */
+body.light {
+  --bg: #f0f4f8;
+  --surface: #ffffff;
+  --surface-2: #f1f5f9;
+  --surface-3: #e2e8f0;
+  --border: rgba(0,0,0,0.08);
+  --text: #1e293b;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --accent: #2563eb;
+  --accent-dim: rgba(37,99,235,0.10);
+  --red: #dc2626;
+  --red-dim: rgba(220,38,38,0.10);
+  --orange: #d97706;
+  --orange-dim: rgba(217,119,6,0.10);
+  --green: #16a34a;
+  --green-dim: rgba(22,163,74,0.10);
+  --yellow: #ca8a04;
+  --yellow-dim: rgba(202,138,4,0.10);
+  --purple: #7c3aed;
+  --purple-dim: rgba(124,58,237,0.10);
+  --teal: #0d9488;
+  --teal-dim: rgba(13,148,136,0.10);
+}
+
+/* ===== Reset & Base ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 15px;
+  transition: background var(--transition), color var(--transition);
+}
+
+/* ===== Header ===== */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  height: 60px;
+  background: rgba(10,15,30,0.82);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 28px;
+  transition: background var(--transition);
+}
+body.light .header { background: rgba(240,244,248,0.82); }
+.header-left { display: flex; align-items: center; gap: 14px; }
+.header-logo { height: 30px; width: 30px; border-radius: 6px; }
+.header-title { font-size: 16px; font-weight: 600; color: var(--text); letter-spacing: -0.01em; }
+.header-actions { display: flex; align-items: center; gap: 6px; }
+.header-btn {
+  background: var(--surface); border: 1px solid var(--border); color: var(--text-secondary);
+  width: 36px; height: 36px; border-radius: var(--radius-sm); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: all var(--transition); font-size: 16px;
+}
+.header-btn:hover { border-color: rgba(59,130,246,0.25); color: var(--text); background: var(--surface-2); }
+.header-btn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ===== Layout ===== */
+.layout { display: flex; min-height: calc(100vh - 60px); }
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 280px; min-width: 280px;
+  position: sticky; top: 60px; height: calc(100vh - 60px);
+  overflow-y: auto; padding: 20px 16px;
+  border-right: 1px solid var(--border);
+  background: var(--bg);
+  scrollbar-width: thin; scrollbar-color: var(--surface-2) transparent;
+}
+.sidebar::-webkit-scrollbar { width: 4px; }
+.sidebar::-webkit-scrollbar-thumb { background: var(--surface-2); border-radius: 4px; }
+.nav-group { margin-bottom: 20px; }
+.nav-group-title {
+  font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  color: var(--text-muted); padding: 0 10px; margin-bottom: 6px;
+}
+.nav-item {
+  display: block; padding: 7px 10px; border-radius: var(--radius-sm);
+  color: var(--text-secondary); text-decoration: none; font-size: 13px;
+  transition: all var(--transition); cursor: pointer; line-height: 1.5;
+}
+.nav-item:hover { background: var(--surface); color: var(--text); }
+.nav-item.active { background: var(--accent-dim); color: var(--accent); font-weight: 500; }
+
+/* ===== Main Content ===== */
+.main { flex: 1; max-width: 1280px; padding: 32px 40px; }
+
+/* ===== Hero ===== */
+.hero {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; margin-bottom: 28px;
+}
+.hero-gradient { height: 3px; background: linear-gradient(90deg, var(--accent), var(--teal), var(--green), var(--accent)); }
+.hero-content { padding: 32px 36px; }
+.hero-title { font-size: 28px; font-weight: 700; line-height: 1.3; margin-bottom: 12px; letter-spacing: -0.02em; }
+.hero-subtitle { font-size: 15px; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-pill {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 4px 12px; border-radius: 20px; font-size: 12px;
+  border: 1px solid var(--border); color: var(--text-secondary);
+  background: rgba(255,255,255,0.03);
+}
+body.light .hero-pill { background: rgba(0,0,0,0.02); }
+.hero-pill svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; }
+
+/* ===== Stat Cards ===== */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-bottom: 28px;
+}
+.stat-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 20px; position: relative; overflow: hidden;
+  transition: all var(--transition);
+}
+.stat-card::before {
+  content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px;
+}
+.stat-card:hover { border-color: rgba(59,130,246,0.25); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+.stat-card.red::before { background: var(--red); }
+.stat-card.orange::before { background: var(--orange); }
+.stat-card.green::before { background: var(--green); }
+.stat-card.accent::before { background: var(--accent); }
+.stat-card.teal::before { background: var(--teal); }
+.stat-card.purple::before { background: var(--purple); }
+.stat-label { font-size: 12px; color: var(--text-muted); margin-bottom: 6px; font-weight: 500; letter-spacing: 0.02em; }
+.stat-value { font-size: 22px; font-weight: 700; margin-bottom: 4px; line-height: 1.2; }
+.stat-value .red { color: var(--red); }
+.stat-value .green { color: var(--green); }
+.stat-value .orange { color: var(--orange); }
+.stat-value .accent { color: var(--accent); }
+.stat-value .teal { color: var(--teal); }
+.stat-value .purple { color: var(--purple); }
+.stat-sub { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+
+/* ===== Viz Dashboard ===== */
+.viz-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-bottom: 28px; }
+.viz-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 20px; overflow: hidden;
+}
+.viz-card-title { font-size: 13px; font-weight: 600; color: var(--text-secondary); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+.viz-card-title svg { width: 16px; height: 16px; stroke: currentColor; fill: none; stroke-width: 2; }
+canvas { display: block; width: 100%; }
+
+/* ===== Section Header ===== */
+.section-header {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 18px 22px; margin-bottom: 16px; margin-top: 36px;
+  display: flex; align-items: center; gap: 16px;
+  border-left: 3px solid var(--accent);
+}
+.section-icon {
+  width: 40px; height: 40px; border-radius: var(--radius-sm);
+  background: var(--accent-dim); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.section-icon svg { width: 20px; height: 20px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.section-title-group { flex: 1; }
+.section-title { font-size: 18px; font-weight: 700; line-height: 1.3; }
+.section-subtitle { font-size: 13px; color: var(--text-secondary); margin-top: 2px; }
+.section-badge {
+  padding: 3px 10px; border-radius: 20px; font-size: 11px; font-weight: 600;
+  background: var(--accent-dim); color: var(--accent);
+}
+
+/* ===== Insight Card ===== */
+.insight-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: 12px; overflow: hidden; transition: all var(--transition);
+}
+.insight-card:hover { border-color: rgba(59,130,246,0.25); }
+.insight-header {
+  padding: 16px 20px; cursor: pointer; display: flex; align-items: flex-start; gap: 14px;
+  user-select: none;
+}
+.insight-num {
+  background: var(--accent-dim); color: var(--accent); font-size: 12px; font-weight: 700;
+  width: 28px; height: 28px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px;
+}
+.insight-title { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+.insight-chevron {
+  width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 2;
+  transition: transform 0.2s ease; flex-shrink: 0; margin-top: 4px;
+}
+.insight-card.open .insight-chevron { transform: rotate(180deg); }
+.insight-body {
+  max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+}
+.insight-card.open .insight-body { max-height: 2000px; }
+.insight-content { padding: 0 20px 20px 62px; }
+.insight-tag {
+  display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 11px; font-weight: 600;
+  margin-bottom: 8px;
+}
+.insight-tag.key-insight { background: var(--accent-dim); color: var(--accent); }
+.insight-tag.key-facts { background: var(--teal-dim); color: var(--teal); }
+.insight-text { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+.insight-facts { list-style: none; }
+.insight-facts li {
+  font-size: 13px; color: var(--text-secondary); line-height: 1.7;
+  padding: 4px 0; padding-left: 16px; position: relative;
+}
+.insight-facts li::before {
+  content: ''; position: absolute; left: 0; top: 12px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--text-muted);
+}
+
+/* ===== Risk Card ===== */
+.risk-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: 12px; overflow: hidden; border-left: 3px solid var(--red);
+  transition: all var(--transition);
+}
+.risk-card:hover { border-color: rgba(239,68,68,0.25); border-left-color: var(--red); }
+.risk-header {
+  padding: 16px 20px; cursor: pointer; display: flex; align-items: flex-start; gap: 14px;
+  user-select: none;
+}
+.risk-icon {
+  width: 28px; height: 28px; border-radius: var(--radius-sm);
+  background: var(--red-dim); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  font-size: 14px;
+}
+.risk-title { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+.risk-chevron {
+  width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 2;
+  transition: transform 0.2s ease; flex-shrink: 0; margin-top: 4px;
+}
+.risk-card.open .risk-chevron { transform: rotate(180deg); }
+.risk-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.risk-card.open .risk-body { max-height: 2000px; }
+.risk-content { padding: 0 20px 20px 62px; }
+.risk-text { font-size: 14px; color: var(--text-secondary); line-height: 1.8; margin-bottom: 14px; }
+.risk-metrics {
+  background: var(--red-dim); border-radius: var(--radius-sm); padding: 12px 16px;
+}
+.risk-metrics-label { font-size: 11px; font-weight: 600; color: var(--red); margin-bottom: 6px; }
+.risk-metrics-text { font-size: 13px; color: var(--text-secondary); line-height: 1.7; }
+
+/* ===== Timeline ===== */
+.timeline { padding: 8px 0 8px 24px; position: relative; margin-bottom: 28px; }
+.timeline::before {
+  content: ''; position: absolute; left: 8px; top: 0; bottom: 0;
+  width: 2px; background: var(--border);
+}
+.timeline-item { position: relative; padding: 12px 0 12px 24px; }
+.timeline-item::before {
+  content: ''; position: absolute; left: -20px; top: 18px;
+  width: 10px; height: 10px; border-radius: 50%;
+  background: var(--accent); border: 2px solid var(--bg);
+}
+.timeline-date { font-size: 12px; font-weight: 600; color: var(--accent); margin-bottom: 4px; }
+.timeline-text { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+
+/* ===== Summary Section ===== */
+.summary-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 24px 28px; margin-bottom: 16px;
+}
+.summary-title { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+.summary-text { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+/* ===== Advice Card ===== */
+.advice-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  margin-bottom: 12px; overflow: hidden; border-left: 3px solid var(--green);
+}
+.advice-header {
+  padding: 16px 20px; cursor: pointer; display: flex; align-items: flex-start; gap: 14px;
+  user-select: none;
+}
+.advice-icon {
+  width: 28px; height: 28px; border-radius: var(--radius-sm);
+  background: var(--green-dim); display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  font-size: 14px; color: var(--green);
+}
+.advice-icon svg { width: 16px; height: 16px; stroke: var(--green); fill: none; stroke-width: 2; }
+.advice-title { font-size: 15px; font-weight: 600; line-height: 1.5; flex: 1; }
+.advice-chevron {
+  width: 20px; height: 20px; stroke: var(--text-muted); fill: none; stroke-width: 2;
+  transition: transform 0.2s ease; flex-shrink: 0; margin-top: 4px;
+}
+.advice-card.open .advice-chevron { transform: rotate(180deg); }
+.advice-body { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+.advice-card.open .advice-body { max-height: 2000px; }
+.advice-content { padding: 0 20px 20px 62px; }
+.advice-text { font-size: 14px; color: var(--text-secondary); line-height: 1.9; }
+
+/* ===== Core Insights (numbered list in hero area) ===== */
+.core-insights { margin-bottom: 28px; }
+.core-insight-item {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  padding: 14px 20px; margin-bottom: 8px; display: flex; align-items: flex-start; gap: 14px;
+}
+.core-insight-num {
+  background: var(--accent-dim); color: var(--accent); font-size: 13px; font-weight: 700;
+  width: 28px; height: 28px; border-radius: var(--radius-sm);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.core-insight-text { font-size: 14px; line-height: 1.7; color: var(--text); }
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 48px; padding: 24px 0; border-top: 1px solid var(--border);
+  text-align: center; font-size: 12px; color: var(--text-muted);
+}
+
+/* ===== Back to Top ===== */
+.back-to-top {
+  position: fixed; bottom: 28px; right: 28px; z-index: 90;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--accent); color: #fff; border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transform: translateY(10px); pointer-events: none;
+  transition: all 0.2s ease; box-shadow: 0 4px 12px rgba(59,130,246,0.3);
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.back-to-top:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(59,130,246,0.4); }
+.back-to-top svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2.5; }
+
+/* ===== Search Overlay ===== */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 200; background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px); display: none; align-items: flex-start; justify-content: center;
+  padding-top: 120px;
+}
+.search-overlay.active { display: flex; }
+.search-box {
+  width: 560px; max-width: 90vw; background: var(--surface);
+  border: 1px solid var(--border); border-radius: var(--radius-lg);
+  overflow: hidden; box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+}
+.search-input-wrap { display: flex; align-items: center; padding: 14px 18px; gap: 10px; border-bottom: 1px solid var(--border); }
+.search-input-wrap svg { width: 18px; height: 18px; stroke: var(--text-muted); fill: none; stroke-width: 2; flex-shrink: 0; }
+.search-input {
+  flex: 1; background: none; border: none; outline: none;
+  font-size: 15px; color: var(--text); font-family: inherit;
+}
+.search-input::placeholder { color: var(--text-muted); }
+.search-results { max-height: 360px; overflow-y: auto; padding: 8px; }
+.search-result-item {
+  padding: 10px 14px; border-radius: var(--radius-sm); cursor: pointer;
+  transition: background var(--transition);
+}
+.search-result-item:hover { background: var(--surface-2); }
+.search-result-title { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.search-result-preview { font-size: 12px; color: var(--text-secondary); line-height: 1.5; }
+.search-empty { padding: 24px; text-align: center; color: var(--text-muted); font-size: 13px; }
+.search-kbd { font-size: 11px; color: var(--text-muted); background: var(--surface-2); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .sidebar { display: none; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .viz-grid { grid-template-columns: 1fr; }
+  .main { padding: 24px 20px; }
+}
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  .hero-content { padding: 24px 20px; }
+  .hero-title { font-size: 22px; }
+  .main { padding: 16px 14px; }
+}
+
+/* ===== Print ===== */
+@media print {
+  .header, .sidebar, .back-to-top, .header-actions, .search-overlay { display: none !important; }
+  .layout { display: block; }
+  .main { max-width: 100%; padding: 0; }
+  .insight-body, .risk-body, .advice-body { max-height: none !important; }
+  body { background: #fff; color: #1e293b; }
+  .hero, .stat-card, .insight-card, .risk-card, .section-header, .summary-card, .advice-card, .viz-card {
+    break-inside: avoid; border-color: #e2e8f0;
+  }
+}
+</style>
+</head>
+<body>
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <img src="../../logo/logo-120_120.png" alt="Supinfor" class="header-logo" onerror="this.style.display='none'">
+    <span class="header-title">Supinfor 洞察报告</span>
+  </div>
+  <div class="header-actions">
+    <button class="header-btn" id="searchBtn" title="搜索 (Ctrl+K)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </button>
+    <button class="header-btn" id="expandBtn" title="展开/折叠全部">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+    </button>
+    <button class="header-btn" id="themeBtn" title="切换亮/暗模式">
+      <svg viewBox="0 0 24 24" id="themeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    </button>
+    <button class="header-btn" id="printBtn" title="打印">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SEARCH OVERLAY ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="搜索洞察、风险、建议…" autocomplete="off">
+      <span class="search-kbd">ESC</span>
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">输入关键词开始搜索</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== LAYOUT ===== -->
+<div class="layout">
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <div class="nav-group">
+        <div class="nav-group-title">概览</div>
+        <a class="nav-item" href="#hero">报告摘要</a>
+        <a class="nav-item" href="#core-insights">核心洞察</a>
+        <a class="nav-item" href="#stats">关键数据</a>
+        <a class="nav-item" href="#viz">数据仪表盘</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-title">深度分析</div>
+        <a class="nav-item" href="#sec-1">一、政治权力格局</a>
+        <a class="nav-item" href="#sec-2">二、司法与制度风险</a>
+        <a class="nav-item" href="#sec-3">三、能源危机</a>
+        <a class="nav-item" href="#sec-4">四、经济前景</a>
+        <a class="nav-item" href="#sec-5">五、外交与安全</a>
+        <a class="nav-item" href="#sec-6">六、外资监管收紧</a>
+        <a class="nav-item" href="#sec-7">七、产业与科技</a>
+        <a class="nav-item" href="#sec-8">八、民生与社会</a>
+      </div>
+      <div class="nav-group">
+        <div class="nav-group-title">风险与展望</div>
+        <a class="nav-item" href="#risks">风险警示</a>
+        <a class="nav-item" href="#timeline">下期关注</a>
+        <a class="nav-item" href="#summary">全文总结</a>
+        <a class="nav-item" href="#advice">中资企业建议</a>
+      </div>
+    </nav>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-gradient"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">泰国 区域国别洞察报告</h1>
+        <p class="hero-subtitle">基于泰国国别月报 2026-03 编制。本报告基于精选后的约 210 条高价值资讯（原始 220 条），已合并同一事件的重复报道，保留重大政策、高层变动、大额交易等高价值内容。</p>
+        <div class="hero-meta">
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            2026年4月 · 基于泰国国别月报 2026-03
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            能源危机：燃油基金日亏$3200万
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            GDP增速下调至1.3%–1.6%
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            5项核心风险 · 选举违宪案待裁
+          </span>
+          <span class="hero-pill">
+            <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            出品方：Supinfor Ltd.
+          </span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Insights -->
+    <section id="core-insights">
+      <div class="section-header" style="margin-top:0">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <div class="section-title-group">
+          <div class="section-title">核心洞察摘要</div>
+          <div class="section-subtitle">本期报告七大核心发现</div>
+        </div>
+        <span class="section-badge">7 条</span>
+      </div>
+      <div class="core-insights">
+        <div class="core-insight-item"><span class="core-insight-num">1</span><span class="core-insight-text">阿努廷以293票当选第32任总理，16党联合政府快速组阁，但执政联盟内部政策分歧与反对党强力监督将持续考验施政效率</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">2</span><span class="core-insight-text">中东冲突引发泰国全面能源危机，燃油基金日亏3200万美元、柴油单次涨价6泰铢/升，GDP增速预期从2%下调至1.3%-1.6%，成为新政府最紧迫的执政考验</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">3</span><span class="core-insight-text">中国资本对泰国电商（90%+市场份额）、农业收购、房地产（1000亿+泰铢）、钢铁、教育等多行业形成系统性冲击，泰国政府正从法律和行政层面全面收紧外资代理持股监管</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">4</span><span class="core-insight-text">宪法法院受理选票条形码/QR码违宪案，若认定选举无效将触发重新选举，叠加229人选举舞弊案调查分歧，泰国政治稳定面临重大司法风险</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">5</span><span class="core-insight-text">泰柬800公里边界争端持续百年，2025年多轮武装冲突后虽达成停火，但MOU44取消争议与边境电诈清剿问题使双边关系前景不明</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">6</span><span class="core-insight-text">44名前为泰党议员因修改刑法第112条被起诉，其中10名现任人民党议员面临停职风险，人民党同时遭遇数据泄露（11万+条）与议员叛逃双重危机</span></div>
+        <div class="core-insight-item"><span class="core-insight-num">7</span><span class="core-insight-text">新政府"Thailand 10 Plus"经济框架涵盖包容性增长与产业创收，但受宪法第169条看守政府权限限制，多项关键财政政策需等新内阁正式履职后方可推进</span></div>
+      </div>
+    </section>
+
+    <!-- Stat Cards -->
+    <section id="stats">
+      <div class="stats-grid">
+        <div class="stat-card red">
+          <div class="stat-label">燃油基金赤字</div>
+          <div class="stat-value"><span class="red">380亿泰铢</span></div>
+          <div class="stat-sub">日亏3200万美元 · 每升补贴柴油高达19泰铢</div>
+        </div>
+        <div class="stat-card orange">
+          <div class="stat-label">GDP增速预期下调</div>
+          <div class="stat-value"><span class="orange">1.3%–1.6%</span></div>
+          <div class="stat-sub">原预期2% · 若海峡封锁油价升至115美元/桶降至1.3%</div>
+        </div>
+        <div class="stat-card green">
+          <div class="stat-label">总理选举得票</div>
+          <div class="stat-value"><span class="green">293票</span></div>
+          <div class="stat-sub">阿努廷当选 · 16党联合 · 119票反对 · 86票弃权</div>
+        </div>
+        <div class="stat-card accent">
+          <div class="stat-label">中国电商市场占比</div>
+          <div class="stat-value"><span class="accent">90%+</span></div>
+          <div class="stat-sub">本土卖家承担7%增值税 · 境外卖家无需缴纳</div>
+        </div>
+        <div class="stat-card teal">
+          <div class="stat-label">国家燃油储备</div>
+          <div class="stat-value"><span class="teal">95–102天</span></div>
+          <div class="stat-sub">暂停除老挝缅甸外所有出口 · 最低库存比例上调至3%</div>
+        </div>
+        <div class="stat-card purple">
+          <div class="stat-label">外资持股公司审查</div>
+          <div class="stat-value"><span class="purple">11.8万家</span></div>
+          <div class="stat-sub">4月1日起新增出资证明要求 · 违规最高3年监禁</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Viz Dashboard -->
+    <section id="viz">
+      <div class="section-header" style="margin-top:0">
+        <div class="section-icon">
+          <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="section-title-group">
+          <div class="section-title">数据仪表盘</div>
+          <div class="section-subtitle">关键指标可视化</div>
+        </div>
+      </div>
+      <div class="viz-grid">
+        <div class="viz-card">
+          <div class="viz-card-title">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20"/></svg>
+            能源危机关键指标
+          </div>
+          <canvas id="gaugeChart" height="200"></canvas>
+        </div>
+        <div class="viz-card">
+          <div class="viz-card-title">
+            <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            产业冲击程度
+          </div>
+          <canvas id="barChart" height="200"></canvas>
+        </div>
+        <div class="viz-card">
+          <div class="viz-card-title">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/></svg>
+            五维风险雷达
+          </div>
+          <canvas id="radarChart" height="220"></canvas>
+        </div>
+        <div class="viz-card">
+          <div class="viz-card-title">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+            领域机遇-风险热力图
+          </div>
+          <canvas id="heatmapChart" height="220"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 1: 政治权力格局 ===== -->
+    <section id="sec-1">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">一、政治权力格局</div>
+          <div class="section-subtitle">阿努廷二度执政，联合政府快速成型但面临多重制约</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card open" data-search="阿努廷 293票 总理 16党 联合政府 权力交接">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">1.1</span>
+          <span class="insight-title">阿努廷以压倒性票数当选总理，16党联合政府标志泰国完成新一轮权力交接</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">2026年3月19日，阿努廷以293票赞成、119票反对、86票弃权当选第32任总理，16党联合阵营涵盖国会绝大多数席位。为泰党74名议员全员投赞成票，民主党21名议员全票弃权。新内阁于3月30-31日获国王签署敕令正式任命，预计4月6日宣誓就职。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>两名候选人：自豪泰党阿努廷 vs 人民党纳塔蓬，最终293:119:86</li>
+              <li>联合政府由自豪泰党、为泰党、国家发展党等16个政党组成</li>
+              <li>阿努廷兼任内政部长，内阁多数成员为旧部，为泰党获8个内阁席位</li>
+              <li>施政报告预计4月7-9日提交国会审议</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="联合政府 政策分歧 为泰党 自豪泰党 燃油补贴">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">1.2</span>
+          <span class="insight-title">联合政府内部存在政策路线分歧，为泰党民生补贴与自豪泰党企业优先路线需持续协调</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">为泰党主张民生保障与基层发展，自豪泰党侧重科技与经济政策，两党在燃油补贴力度、"人人有份"消费刺激计划等核心议题上存在潜在冲突。反对党已明确将在施政报告审议中就燃油危机应对发起质询。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>为泰党负责民生相关内阁部门，自豪泰党主导科技与经济政策</li>
+              <li>联合政府计划15天内向国会提交施政纲领</li>
+              <li>前总理阿披实批评新内阁未出台清晰的燃油价格应对措施</li>
+              <li>新政府面临"无蜜月期"执政压力</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="人民党 议员叛逃 数据泄露 司法起诉 PDPA 解散">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">1.3</span>
+          <span class="insight-title">人民党遭遇议员叛逃、数据泄露与司法起诉三重打击，反对党阵营实力受损</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">人民党议员素里亚在总理选举中公开倒戈支持阿努廷，成为首位"橙蛇"；党员数据库遭黑客攻击，超11万条敏感信息泄露，违反PDPA面临解散风险；44名前为泰党议员因修改刑法第112条被起诉，其中10名现任人民党议员若被法院受理将被暂停职务。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>议员收买价码曝光：最高8000万泰铢外加豪车</li>
+              <li>数据泄露含身份证号、联系方式等敏感数据，内政部已暂停其数字身份验证系统</li>
+              <li>反贪委与公民团体已请愿依据《政党法》第92条启动解散程序</li>
+              <li>人民党已提前准备替补人选维持国会席位</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="他信 保释 出狱 红衫军 为泰党">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">1.4</span>
+          <span class="insight-title">他信预计5月11日保释出狱，其政治影响力回归将重塑泰国政坛博弈格局</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">前总理他信已被列入特赦名单，将于2026年5月11日服完三分之二刑期后获释。红衫军计划在监狱外守夜迎接，其出狱后的政治动向将直接影响为泰党的策略走向与联合政府的稳定性。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>他信自2023年9月被关押，家人定期探望，健康状况改善</li>
+              <li>律师团队已提交保释申请，预计5月11日早7点获释</li>
+              <li>律师团队正对传播针对他信虚假新闻的人员提起诉讼</li>
+              <li>探望期间未讨论政治议题</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 2: 司法与制度风险 ===== -->
+    <section id="sec-2">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">二、司法与制度风险</div>
+          <div class="section-subtitle">宪法法院成为政治博弈焦点，选举合法性面临挑战</div>
+        </div>
+        <span class="section-badge">3 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="选票 条形码 QR码 违宪 宪法法院 选举无效">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">2.1</span>
+          <span class="insight-title">选票条形码/QR码违宪案被受理，若认定选举无效将触发政治地震与市场冲击</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">宪法法院以6:3票数受理21起关于选票条形码/QR码违反秘密投票原则的诉讼，要求选举委员会15日内提交答辩。审计署已裁定选票设计违规，民间模拟投票证实可准确识别投票者选择。若法院最终认定违宪，可能导致选举结果无效，对泰国股市及政治稳定造成重大冲击。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>2026年3月18日宪法法院受理此案</li>
+              <li>审计署已于3月13日裁定选票设计违规</li>
+              <li>模拟投票测试显示可准确识别每个投票者的选择</li>
+              <li>人民党推动修宪改革选举机构，并就选委会违规行为提起刑事诉讼</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="229人 选举舞弊 选举委员会 利益冲突">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">2.2</span>
+          <span class="insight-title">229人选举舞弊案调查出现内部分裂，选举委员会公正性遭严重质疑</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">负责核查的第36委员会以5:2投票认定229名涉案人员无罪，与此前第26调查委员会的结论完全相悖。选委会7名委员中4名由被调查议员任命，存在明显利益冲突。反对党质疑调查结果是为掩盖选举舞弊真相。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>涉案229人包括138名国会议员、91名政党及关联人员</li>
+              <li>特别调查厅已提交7万页证据，选委会迟迟未作裁决</li>
+              <li>涉及执政党核心人物</li>
+              <li>律师在选委会前举行祈福仪式呼吁公正处理</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="宪法法院 司法独立 法官 政治工具化">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">2.3</span>
+          <span class="insight-title">宪法法院强调司法独立但面临政治工具化质疑，法官背景审查争议浮出水面</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">宪法法院院长纳卡林多次公开表态强调9名法官独立行使审判权，但法官乌东的政治背景被质疑，法院取消海外考察计划也被解读为受政治压力影响。法院明确不会主动调查内阁成员道德问题，需有合法主体提交正式申诉。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>宪法法院28年发展历程中曾遭遇信任危机（如2020年股票案判决失误）</li>
+              <li>法官乌东回应称已通过国会、参议院与司法委员会严格选拔</li>
+              <li>法院鼓励民众成为"积极公民"通过合法途径维权</li>
+              <li>新宪法公投获超2100万票支持，但新政府尚未明确修宪时间表</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 3: 能源危机 ===== -->
+    <section id="sec-3">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--red-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">三、能源危机</div>
+          <div class="section-subtitle">中东冲突引发全面燃油短缺，暴露泰国能源体系结构性脆弱</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="燃油基金 3200万美元 柴油涨价 380亿泰铢 霍尔木兹海峡">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">3.1</span>
+          <span class="insight-title">燃油基金日亏3200万美元、柴油单次涨价6泰铢，能源危机成为新政府最紧迫考验</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">中东冲突导致霍尔木兹海峡航运受阻，泰国50%-60%进口燃油经该海峡。政府曾将柴油限价33泰铢/升持续15天，但燃油基金每日亏损超3200万美元、累计赤字达380亿泰铢难以为继，3月26日被迫上调各类燃油6泰铢/升。全国多地加油站断供，民众恐慌性囤油。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>燃油基金每升需补贴柴油高达19泰铢</li>
+              <li>国家燃油储备合计95-102天</li>
+              <li>暂停除老挝、缅甸外的所有燃油出口</li>
+              <li>对老挝出口量下调25%、对缅甸下调20%</li>
+              <li>法定最低库存比例从1%逐步上调至3%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="看守政府 宪法第169条 财政工具 燃油税">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">3.2</span>
+          <span class="insight-title">看守政府受宪法第169条限制，关键财政工具无法动用，政策空间严重受限</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">看守政府无法做出绑定下届政府的长期承诺，燃油基金举债扩容、长期补贴政策、燃油消费税结构性调整等关键措施均需等待新内阁正式履职。选举委员会仅批准先下调燃油税1泰铢/升，远不足以缓解民众压力。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>燃油消费税税率为5-6泰铢/升，财政部研究下调方案</li>
+              <li>计划出台2569财年预算转移法案，规模达数千亿泰铢</li>
+              <li>参考2020年新冠疫情期间的预算调剂模式</li>
+              <li>新内阁预计一周内完成组建后可不受限制推出全面政策</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="双轨价格 企业囤积 走私 燃油蛀虫 炼油厂">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">3.3</span>
+          <span class="insight-title">燃油市场暴露双轨价格、企业囤积与走私出口等系统性乱象</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">危机期间出现批发价与零售价倒挂，大型企业优先将燃油售予工业用户而非零售市场；部分地区出现为泰党地方政治势力控制加油站优先为关联企业供油的现象；边境地区存在燃油走私至周边国家的情况。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>6家炼油厂多由PTT、Bangchak等国营或控股企业主导</li>
+              <li>未与炼油厂签订长期合同的独立加油站受冲击最严重</li>
+              <li>政府上线Fuel-Now应用供民众查询实时燃油库存</li>
+              <li>军警联合严查燃油囤积与走私出口行为</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="能源结构 进口依赖 运输业 铁路 太阳能 LNG">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">3.4</span>
+          <span class="insight-title">泰国能源结构高度依赖进口，运输业80%靠公路燃油，长期转型迫在眉睫</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">泰国90%以上成品油依赖进口，70%电力依赖进口LNG（主要经霍尔木兹海峡），运输业占全国能源消费40%且80%依靠公路燃油，铁路运输占比不足1%。新任能源部长提出改革石油基金、建立国家石油储备库、推广屋顶太阳能、开放电力市场竞争等系统性改革方案。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>计划将柴油生物柴油添加比例从B5调整为B7，长期推广B20</li>
+              <li>LPG自给率60%，储备量可供19天</li>
+              <li>若国内储备不足25天，将优先保障救护车、警车等特种车辆</li>
+              <li>63项应急方案包括远程办公、空调调至26度降低10%能源消耗</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 4: 经济前景 ===== -->
+    <section id="sec-4">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--orange-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--orange)"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">四、经济前景</div>
+          <div class="section-subtitle">GDP增速预期大幅下调，新政府面临短期纾困与长期转型双重压力</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="GDP 1.3% 1.6% 20年 增长困境 清廉指数 OECD">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">4.1</span>
+          <span class="insight-title">GDP增速从2%下调至1.3%-1.6%，泰国经济面临20年来最严峻的增长困境</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">国家经济和社会发展委员会评估：若冲突1个月内结束，GDP增速降至1.6%；若霍尔木兹海峡被封锁、油价升至115-125美元/桶，GDP增速进一步降至1.3%。过去20年泰国GDP平均增速已从危机前的7.5%降至不足2%，核心问题是腐败、教育水平下滑与法治环境倒退等制度性缺陷。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>冲突局限中东且1月内结束：油价95-105美元/桶，GDP增速1.6%</li>
+              <li>冲突升级封锁海峡：油价115-125美元/桶，GDP增速1.3%</li>
+              <li>泰国清廉指数33分，全球第116位，东盟排第7</li>
+              <li>知名企业家建议加入OECD以外部压力推动制度改革</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="Thailand 10 Plus 经济框架 包容性增长 消费刺激">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">4.2</span>
+          <span class="insight-title">"Thailand 10 Plus"经济框架出台，但短期内难以对冲能源危机的即时冲击</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">新政府以"Thailand 10 Plus"为核心施政框架，涵盖包容性增长、提升国家竞争力、刺激经济与债务管理、产业创收四大方向，同时规划应对自然灾害、经济、安全、社会四大危机。计划重启"人人有份"第二阶段消费刺激政策，但市场更关注短期能源危机的具体应对方案。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>2570财年预算总规模3.788万亿泰铢，目标财政赤字率降至3%以内</li>
+              <li>计划6个月内合并旅游部与文化部</li>
+              <li>推进"超级执照"法案实现企业注册一站式服务</li>
+              <li>泰国商会呼吁新政府加强跨部门协作，快速制定清晰经济政策</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="渔业 农业 制造业 旅游业 产业链 停航 70亿美元">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">4.3</span>
+          <span class="insight-title">能源危机对渔业、农业、制造业、旅游业形成全面冲击，产业链脆弱性暴露</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">渔业受冲击最为严重——泰国最大渔港沙没沙空府超半数拖网渔船停航，预计4月后市场可能无新鲜渔获供应，2024年渔业出口额达70亿美元面临停滞风险。农业面临燃油与化肥双重成本上涨，制造业塑料、钢铁、水泥供应链受影响，旅游业复苏进度放缓。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>100万外卖骑手、80万出租车司机等非正规劳工收入大幅缩水</li>
+              <li>化肥库存可维持至8月，后续需与马来西亚、文莱沟通补充</li>
+              <li>超60%货运航线需经霍尔木兹海峡，绕行增加10-15天</li>
+              <li>国家铁路局月燃料成本增至约2.7亿泰铢，预计全年亏损180亿泰铢</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="insight-card" data-search="股市 SET指数 零售 饮料 金融 FDI">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">4.4</span>
+          <span class="insight-title">泰国股市受新政府组建提振，零售、饮料、金融板块成政策受益方向</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key-insight">关键洞察</span>
+            <p class="insight-text">3月初泰国股市累计下跌7.9%，但新政府组建进度快于预期提振市场信心。历史数据显示国会召开曾推动SET指数上涨超100点。分析师建议聚焦零售股（CPAXT、BJC）、饮料股（CBG、OSP、ICHI）和金融股（MTC、TIDLOR），分别受益于消费补贴、夏季旺季和债务减免政策。</p>
+            <span class="insight-tag key-facts">关键事实</span>
+            <ul class="insight-facts">
+              <li>两党联合政府被认为政策决策效率高于多党联合</li>
+              <li>快速组阁可吸引FDI流入，保障2570财年预算执行</li>
+              <li>部分政治家族持有多家上市公司股份，持股变动引发市场关注</li>
+              <li>黄金长期目标价位84000-87500泰铢/泰铢黄金</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 5: 外交与安全 ===== -->
+    <section id="sec-5">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--teal-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">五、外交与安全</div>
+          <div class="section-subtitle">中东冲突倒逼外交应急，泰柬边境争端与侨民安全成双线压力</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="中立外交 美伊冲突 战时经济办公室 侨民 使领馆">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">5.1</span>
+          <span class="insight-title">泰国坚持中立外交立场应对美伊冲突，跨部门战时经济办公室全天候运转</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">泰国政府明确秉持中立立场，反对中东冲突升级，支持外交谈判解决争端。成立由财政部牵头的跨部门战时经济办公室，全天候监测能源、物流及在中东的11万泰籍侨民安全。武装部队进入最高戒备状态，加强美国、以色列、伊朗等国驻泰使领馆安保。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>在中东泰国公民约80%为逊尼派，伊朗以什叶派为主</li>
+            <li>国内约10%什叶派穆斯林，各群体可和谐共处</li>
+            <li>超半数民众支持政府保持中立</li>
+            <li>国家安全委员会专门开会评估中东冲突影响</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="Merry Nari 商船遇袭 船员失踪 霍尔木兹 航运安全">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">5.2</span>
+          <span class="insight-title">泰国商船"Merry Nari"号遇袭3名船员失踪，霍尔木兹海峡航运安全成外交焦点</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">泰国商船在霍尔木兹海峡遇袭，3名泰籍船员失踪，其余20名船员被阿曼海军营救。副总理兼外长致电伊朗外长请求协助搜救并保障后续泰国商船安全通行。泰国正计划通过陆路经土耳其边境撤离在伊朗的泰籍侨民，约20人已表达回国意愿。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>在伊朗泰籍侨民约200多人</li>
+            <li>泰国正与伊朗当局磋商获取正式安全保障承诺</li>
+            <li>泰国正与俄罗斯磋商采购石油以拓展替代供应源</li>
+            <li>石油储备可维持60天，政府有时间寻找替代来源</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="泰柬 边界争端 MOU44 武装冲突 电诈 围栏">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">5.3</span>
+          <span class="insight-title">泰柬800公里边界争端持续百年，MOU44取消争议与边境电诈清剿使双边关系复杂化</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">泰柬边界争议已持续超百年，2025年7月和12月爆发多轮武装冲突造成数十人死亡、超100万人流离失所。双方虽于2025年12月达成停火，但泰国执政党考虑取消覆盖重叠海域的MOU44协定，同时要求柬埔寨切实配合清缴边境电信诈骗团伙。泰国将于4月在尖竹汶府段修建1.31公里安全围栏。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>边境围栏项目资金由朱拉蓬公主基金会提供，已收到超2亿泰铢捐款</li>
+            <li>后续计划增设配备传感器与摄像头的电子围栏实现24小时监控</li>
+            <li>柬埔寨首相洪森表示宋干节后与泰国就边界争端开启谈判</li>
+            <li>泰柬边界联合委员会谈判需等待新政府组建完成</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="中泰关系 中泰一家亲 命运共同体 阿努廷连任">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">5.4</span>
+          <span class="insight-title">中国祝贺阿努廷连任，中泰关系保持稳定发展态势</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">中国外交部发言人祝贺阿努廷连任总理，表态愿延续"中泰一家亲"友好情谊，深化中泰命运共同体各领域合作。在中国资本对泰国多行业冲击引发本土反弹的背景下，官方层面的友好表态为双边经贸关系提供了稳定预期。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>中方强调两国在政治、经济、文化各领域合作取得丰硕成果</li>
+            <li>泰国国王王后3月16-18日正式访问老挝，纪念泰老建交75周年</li>
+            <li>泰国总理接待微软副董事长，探讨数字化转型合作</li>
+            <li>泰国筹备2023年10月世行与IMF全球年会</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 6: 外资监管收紧 ===== -->
+    <section id="sec-6">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--purple-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--purple)"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">六、外资监管收紧</div>
+          <div class="section-subtitle">中国资本系统性冲击引发全面整治，代理持股成执法重点</div>
+        </div>
+        <span class="section-badge">3 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="代理持股 椰子 榴莲 农产品 外资 出资证明 11.8万家">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">6.1</span>
+          <span class="insight-title">中国资本通过代理持股控制泰国椰子、榴莲等农产品收购链，政府启动短期行政与长期立法双轨整治</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">商业发展厅联合刑事调查局在叻丕府查处6家违规使用泰国人代理持股的椰子企业，涉及10名泰籍挂名股东、7名外籍投资人。泰国约11.8万家外资持股比例在0.01%-49.99%的公司中多数存在代理持股问题。自4月1日起新增监管措施，要求泰籍股东提供实际出资证明。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>违规行为最高可处3年监禁或10万至100万泰铢罚款</li>
+            <li>短期措施：核查企业注册资本真实来源，追溯3-5年资金流向</li>
+            <li>长期措施：修订外国商业法、土地法，违规资产收归国有</li>
+            <li>重点严查春武里、清迈、素叻他尼、普吉、甲米等高发地区</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="电商 90% 增值税 新加坡 3575亿泰铢 钢铁 29%">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">6.2</span>
+          <span class="insight-title">中国电商平台占据泰国90%+市场份额，本土卖家面临增值税不对等竞争</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">中国主导的电商平台占据泰国超90%市场份额，本土卖家需承担7%增值税而境外卖家无需缴纳，导致竞争严重失衡。同时存在大量无认证进口商品、跨境商品未缴纳增值税的问题。中国资本还通过新加坡背景公司在泰投资，2563-2567年相关投资规模达3575.4亿泰铢（305个项目）。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>建议要求外资与本土企业成立合资公司或由本土企业占股</li>
+            <li>中国资本进驻抢占三攀-水门等传统商圈，挤压本土小商户</li>
+            <li>房地产领域累计投资超1000亿泰铢</li>
+            <li>中国资本收购泰钢铁企业后，本土钢铁企业产能利用率仅29%</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="旅游业 空壳公司 硬币旅游 导游 整治措施 30天">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">6.3</span>
+          <span class="insight-title">旅游业外资空壳公司全产业链渗透，内阁批准5项整治措施要求30天内提交方案</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">外国资本通过泰国公民作为名义代理非法经营酒店、餐饮、导游、购物店等全产业链旅游业务，存在强制游客消费、使用外籍导游、虚假宣传等违规行为。内阁已批准反贪委提出的5项整治措施，指定文旅部牵头多部门在30天内提交完整整治方案。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>中国资本运营的"硬币旅游"低价团模式被点名</li>
+            <li>整治方向：打击代理经营、优化监管、提升本土导游能力、管控关联商户、鼓励公众监督</li>
+            <li>中国资本通过收购股份控制泰国私立院校，某校中国学生占比达71%</li>
+            <li>冲突地区外资涌入东南亚，利用免签政策在帕岸岛、拜县等地形成封闭社区</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 7: 产业与科技 ===== -->
+    <section id="sec-7">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--green)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">七、产业与科技</div>
+          <div class="section-subtitle">能源转型加速推进，大麻产业陷入法律真空，数字治理取得实效</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="能源部长 石油基金 储备库 GPS 太阳能 电力市场">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">7.1</span>
+          <span class="insight-title">新任能源部长提出系统性改革方案，石油基金制度与国家储备库建设成核心议题</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">新任能源部长埃卡纳特提出四大改革方向：改革石油基金制度使其回归短期纾困功能、审查炼油厂加工成本与毛利率确保定价透明、建立实时燃油追踪系统（含油罐车GPS定位）打击囤货走私、设立国家石油储备库减少对私营储备依赖。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>石油基金长期被用作补贴工具而非短期纾困手段</li>
+            <li>计划建立中央监控仪表盘全程监控燃油流向</li>
+            <li>推广屋顶太阳能项目，放开国内电力市场竞争</li>
+            <li>泰国LPG自给率60%，形势相对稳定</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="大麻 法律空白 停滞 门店 非法经营 监管框架">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">7.2</span>
+          <span class="insight-title">大麻产业因法律监管空白陷入全面停滞，数千家门店面临沦为非法经营的风险</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">泰国大麻产业自2年前失去明确法律监管地位后全面停滞，经营许可审批冻结，大麻批发价从峰值每公斤2-3万泰铢暴跌至数千泰铢，部分知名品牌产品已从便利店下架。从业者呼吁政府尽快明确监管框架——要么列为毒品严格管控，要么放开产业发展。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>全国数千家大麻门店面临牌照到期后直接沦为非法经营</li>
+            <li>政策模糊为境外大麻制品涌入泰国市场创造空间</li>
+            <li>本土种植户与经营者遭受巨额损失</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="数字经济 43.7万 违法链接 AI 网络犯罪 5G 云服务">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">7.3</span>
+          <span class="insight-title">数字经济部5个月封禁43.7万违法链接，AI技术驱动网络犯罪治理取得显著成效</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">数字经济与社会部2569年10月至2月累计封禁超43.7万个违法链接与网站（在线赌博占比最高），引入AI技术检测分析违法内容，开发"Suspend"系统快速向ISP发送法院禁令，搭建"URL Checker"系统持续监测封禁情况。部长蔡猜连任后将推动NT公司成为云服务、AI、5G领域的国家基础设施核心。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>跨国儿童色情案：联合FBI、澳大利亚联邦警察等破获，查获25.8万条涉案文件</li>
+            <li>前警官被判4年有期徒刑并处罚金12万泰铢</li>
+            <li>e-Office系统已覆盖160个部级单位、5736个地方行政组织</li>
+            <li>政府部门可免费使用该系统</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="47项法案 教育改革 人力资本 学分银行 关机上课">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">7.4</span>
+          <span class="insight-title">为泰党提出47项法案推动高价值经济转型，教育改革与人力资本升级成核心抓手</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">为泰党提交47项法案分四大类别：12项基建法案、9项法治信任法案、6项安全保障法案、20项高价值经济法案。教育改革是转型关键——计划设立国家生产力委员会连接教育与劳动力市场，建立国家学分银行支持终身学习，推行以学生为中心的灵活课程体系。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>曼谷437所市属中小学将于5月18日起推行"关机上课"政策</li>
+            <li>新版《国家教育法》又称"人力资本法案"</li>
+            <li>计划设立"学生权利保护中心"</li>
+            <li>通用设计法案要求公共设施适配所有人群，助力老龄化社会</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION 8: 民生与社会 ===== -->
+    <section id="sec-8">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--yellow-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--yellow)"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">八、民生与社会</div>
+          <div class="section-subtitle">能源危机推高生活成本，弱势群体保障与公共服务改革并行推进</div>
+        </div>
+        <span class="section-badge">4 条洞察</span>
+      </div>
+
+      <div class="insight-card" data-search="福利卡 补贴 400泰铢 泰国助泰国 零售商 环卫">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">8.1</span>
+          <span class="insight-title">福利卡补贴从300泰铢提至400泰铢，"泰国助泰国"项目联合零售商推出特惠民生商品</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">政府计划向持有国家福利卡的低收入群体每月增加100泰铢补贴，同时启动"泰国助泰国"项目联合全国零售商以特惠价格销售生活必需品，覆盖全国77个府。高危环卫岗位补贴也同步上调：扫路工人从1500升至2500泰铢/月，垃圾车司机从2000升至3000泰铢/月。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>计划升级"半额补贴"政策，补贴金额或高于此前的2000泰铢/人</li>
+            <li>纳税人群体也将纳入保障范围</li>
+            <li>为农民提供化肥成本补贴，渔业可使用B20柴油降低成本</li>
+            <li>为中小企业提供流动性支持，延长政府承包商检验期限</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="69.9% 生活成本 卡车司机 渔民 抗议 债务">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">8.2</span>
+          <span class="insight-title">超69.9%民众最担忧生活成本上涨，卡车司机与渔民发起抗议要求直接补贴</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">国家统计局民调显示超69.9%民众最担忧生活成本上涨，超50%要求新政府优先解决民生与通胀问题，超80%期待政府施政更加透明。卡车司机、渔民、农民等群体已发起抗议活动，部分人士呼吁国会议员缩减每日1000泰铢伙食补贴与民众共渡难关。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>泰国30岁年龄段人群50%存在债务问题，其中1/5为不良债务</li>
+            <li>60-69岁人群平均负债约45万泰铢</li>
+            <li>央行推出"停息再续"计划帮助民众摆脱债务困境</li>
+            <li>央行推广50/30/20收入分配法则</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="铁路 停运 工会 180亿泰铢 公共交通 低收入">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">8.3</span>
+          <span class="insight-title">铁路工会反对削减社会服务列车计划，公共交通公平性与财政减亏目标产生冲突</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">国家铁路公司计划永久停运8列列车、调整16列运行时间、减少6列班次以降低运营亏损（预计全年180亿泰铢），但铁路工会强烈反对，认为此举将严重影响低收入群体、学生和通勤者的基本出行权益，要求以民众为中心重新审议。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>涉及泰国4条主要铁路线路</li>
+            <li>铁路运输占全国运输比例不足1%</li>
+            <li>计划开放私营企业租赁使用铁路线路新增营收</li>
+            <li>SRTA公司盘活铁路资产预计每年可新增40亿泰铢营收</li>
+          </ul>
+        </div></div>
+      </div>
+
+      <div class="insight-card" data-search="国防 边境安全 武器管控 弹药库 士兵权益">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <span class="insight-num">8.4</span>
+          <span class="insight-title">国防领域加强边境安全与武器管控，士兵权益保障机制亟待建立</span>
+          <svg class="insight-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="insight-body"><div class="insight-content">
+          <span class="insight-tag key-insight">关键洞察</span>
+          <p class="insight-text">内阁批准反贪委提交的打击武器走私相关贪腐措施，要求所有持有武器的政府单位在武器库出入口安装闭路监控。泰柬边境士兵触雷受伤事件与弹药库爆炸事故暴露基层安全隐患。南部边境防务任务正向地方行政村防御队移交，首批采购100支步枪、预算780万泰铢。</p>
+          <span class="insight-tag key-facts">关键事实</span>
+          <ul class="insight-facts">
+            <li>素林府边境巡逻警察弹药库火灾爆炸，存放子弹与RPG火箭弹</li>
+            <li>起火原因初步推测为高温天气叠加弹药老化</li>
+            <li>军方团体曝光基层士兵遭暴力体罚事件</li>
+            <li>建议参考美国UCMJ、英国军队申诉系统、韩国人权委员会机制</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== RISKS ===== -->
+    <section id="risks">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--red-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">风险警示</div>
+          <div class="section-subtitle">五大核心风险需持续跟踪</div>
+        </div>
+        <span class="section-badge" style="background:var(--red-dim);color:var(--red)">5 项风险</span>
+      </div>
+
+      <div class="risk-card open" data-search="选票条形码 违宪 选举无效 政治危机 市场波动">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-icon">⚠️</span>
+          <span class="risk-title">风险一：选票条形码违宪案可能导致选举结果无效，触发政治危机与市场剧烈波动</span>
+          <svg class="risk-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="risk-body"><div class="risk-content">
+          <p class="risk-text">宪法法院已受理21起关于选票条形码/QR码违反秘密投票原则的诉讼，审计署已裁定选票设计违规，民间模拟投票证实可追溯投票人身份。若法院最终认定违宪，可能导致2026年国会选举结果无效，触发重新选举，对泰国政治稳定、股市和外资信心造成重大冲击。</p>
+          <div class="risk-metrics">
+            <div class="risk-metrics-label">关注指标</div>
+            <div class="risk-metrics-text">宪法法院对选举委员会答辩材料的审理进度（15日内提交）；法院是否要求暂停新政府运作；SET指数对相关裁决的即时反应。</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="risk-card" data-search="能源危机 社会动荡 燃油基金赤字 财政稳定 停工停产">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-icon">⚠️</span>
+          <span class="risk-title">风险二：能源危机持续恶化可能引发社会动荡，燃油基金赤字扩大威胁财政稳定</span>
+          <svg class="risk-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="risk-body"><div class="risk-content">
+          <p class="risk-text">燃油基金累计赤字达380亿泰铢且仍在扩大，若中东冲突持续导致霍尔木兹海峡长期受阻，泰国60天石油储备将面临耗尽风险。渔业、农业、运输业已出现大面积停工停产，民众抗议活动升级，若新政府无法在短期内出台有效措施，社会不满情绪可能进一步激化。</p>
+          <div class="risk-metrics">
+            <div class="risk-metrics-label">关注指标</div>
+            <div class="risk-metrics-text">国际油价走势（关键阈值115美元/桶）；燃油基金赤字变化；全国加油站断供比例；运输业与渔业停工规模。</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="risk-card" data-search="外资代理持股 整治 合规中资 执法扩大化 民族主义">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-icon">⚠️</span>
+          <span class="risk-title">风险三：外资代理持股全面整治可能波及合规中资企业，执法扩大化风险上升</span>
+          <svg class="risk-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="risk-body"><div class="risk-content">
+          <p class="risk-text">泰国政府正从法律和行政层面全面收紧外资代理持股监管，4月1日起新增泰籍股东实际出资证明要求，重点严查春武里、清迈、普吉等中资集中地区。在民族主义情绪与能源危机叠加的背景下，执法力度可能超出预期，合规经营的中资企业也可能面临更严格的审查。</p>
+          <div class="risk-metrics">
+            <div class="risk-metrics-label">关注指标</div>
+            <div class="risk-metrics-text">商业发展厅4月起的执法案例数量与处罚力度；《外国商业法》修订草案进度；椰子、旅游等行业的专项整治范围是否扩大至其他行业。</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="risk-card" data-search="44名议员 起诉 人民党 停职 国会力量对比">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-icon">⚠️</span>
+          <span class="risk-title">风险四：44名议员起诉案若被法院受理，10名现任人民党议员停职将改变国会力量对比</span>
+          <svg class="risk-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="risk-body"><div class="risk-content">
+          <p class="risk-text">反贪委已表决通过起诉44名前为泰党议员修改刑法第112条的草案，其中10名隶属人民党的涉案议员若被最高法院受理将被暂停职务，这将削弱反对党的国会监督能力，同时可能引发人民党支持者的社会抗议。</p>
+          <div class="risk-metrics">
+            <div class="risk-metrics-label">关注指标</div>
+            <div class="risk-metrics-text">最高法院是否受理此案的裁定时间；人民党替补议员的就位速度；相关社会抗议活动的规模。</div>
+          </div>
+        </div></div>
+      </div>
+
+      <div class="risk-card" data-search="泰柬边境 升级 边界谈判 MOU44 武装冲突">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-icon">⚠️</span>
+          <span class="risk-title">风险五：泰柬边境局势存在再度升级风险，边界谈判进展缓慢且MOU44取消争议增加不确定性</span>
+          <svg class="risk-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="risk-body"><div class="risk-content">
+          <p class="risk-text">泰柬800公里边界争端在2025年已引发多轮武装冲突，虽达成停火但根本问题未解决。泰国执政党考虑取消MOU44协定，柬方对此高度敏感。宋干节后的边界谈判若无实质进展，边境紧张局势可能再度升级。</p>
+          <div class="risk-metrics">
+            <div class="risk-metrics-label">关注指标</div>
+            <div class="risk-metrics-text">宋干节后泰柬边界谈判启动时间与议程；MOU44取消议案是否提交内阁审议；边境地区军事部署变化。</div>
+          </div>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== TIMELINE ===== -->
+    <section id="timeline">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">下期关注</div>
+          <div class="section-subtitle">未来30-45天关键事件时间线</div>
+        </div>
+        <span class="section-badge">5 个节点</span>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-date">2026年4月1-2日</div>
+          <div class="timeline-text">第27届泰国国会首次会议召开，审议14项议员提案，反对党将就燃油危机发起质询，关注新政府应对能源危机的具体政策承诺</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2026年4月6-9日</div>
+          <div class="timeline-text">新内阁宣誓就职并向国会提交"Thailand 10 Plus"施政报告，关注燃油税调整幅度、消费刺激计划规模、外资监管政策细节</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2026年4月中旬</div>
+          <div class="timeline-text">宪法法院审理选票条形码违宪案（选委会15日内提交答辩），关注法院是否做出临时禁令或要求暂停新政府运作</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2026年4月底-5月初</div>
+          <div class="timeline-text">宋干节后泰柬边界谈判预期启动，关注MOU44取消议案进展与边境安全围栏建设进度</div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-date">2026年5月11日</div>
+          <div class="timeline-text">前总理他信预计保释出狱，关注其出狱后的政治表态与对为泰党策略的影响</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUMMARY ===== -->
+    <section id="summary">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">全文总结</div>
+          <div class="section-subtitle">政治、经济、营商环境综合评估</div>
+        </div>
+      </div>
+
+      <div class="summary-card">
+        <div class="summary-title">政治环境概述</div>
+        <p class="summary-text">2026年3月泰国完成新一轮权力交接，阿努廷以293票当选第32任总理，16党联合政府快速组阁标志政局短期趋稳。但深层风险犹存：宪法法院受理选票违宪案可能颠覆选举结果，229人选举舞弊案调查分裂暴露选举委员会公正性危机，44名议员起诉案威胁反对党阵营完整性。他信5月出狱将为政坛注入新变量。新政府面临"无蜜月期"执政压力，需同时应对能源危机、经济下行与司法挑战的三重考验。</p>
+      </div>
+
+      <div class="summary-card">
+        <div class="summary-title">经济发展概述</div>
+        <p class="summary-text">中东冲突引发的能源危机是当月最大经济冲击，GDP增速预期从2%大幅下调至1.3%-1.6%，燃油基金日亏3200万美元、累计赤字380亿泰铢。渔业出口（70亿美元）面临停滞风险，国家铁路预计全年亏损180亿泰铢。新政府"Thailand 10 Plus"框架提出包容性增长与产业创收方向，但短期内受看守政府宪法限制，关键财政工具无法动用。泰国经济的结构性困境——过去20年GDP平均增速从7.5%降至不足2%、清廉指数东盟倒数——需要远超一届政府任期的系统性改革。</p>
+      </div>
+
+      <div class="summary-card">
+        <div class="summary-title">营商环境洞察</div>
+        <p class="summary-text"><strong>外资监管全面收紧：</strong>4月1日起要求泰籍股东提供实际出资证明，代理持股违规最高3年监禁或100万泰铢罚款。11.8万家外资持股公司面临审查，椰子、旅游、房地产为重点行业。<br><br><strong>能源成本剧烈波动：</strong>柴油单次涨价6泰铢/升，超60%货运航线经霍尔木兹海峡（绕行增加10-15天），制造业面临塑料、钢铁、化肥供应链中断风险。<br><br><strong>政策窗口期：</strong>新政府推进"超级执照"一站式企业注册、计划合并旅游与文化部、调整地方公务员薪资体系（6档标准4月1日生效），营商便利化改革有望加速。<br><br><strong>知识产权保护：</strong>MBK中心被美国列入全球侵权实体市场名单，泰国推动电商平台签署知识产权保护备忘录，建立快速下架机制。<br><br><strong>EUDR合规：</strong>泰国暂不修改"森林"法律定义，但加快建立产品溯源系统和原产地认证体系，木制品、橡胶等7类出口产品需符合欧盟标准。</p>
+      </div>
+    </section>
+
+    <!-- ===== ADVICE ===== -->
+    <section id="advice">
+      <div class="section-header">
+        <div class="section-icon" style="background:var(--green-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--green)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="section-title-group">
+          <div class="section-title">中资企业建议</div>
+          <div class="section-subtitle">分行业风险提示与应对策略</div>
+        </div>
+        <span class="section-badge" style="background:var(--green-dim);color:var(--green)">6 项建议</span>
+      </div>
+
+      <div class="advice-card open" data-search="农业 食品 椰子 榴莲 代理持股 出资证明">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">农业与食品领域</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">泰国政府正全面整治外资代理持股控制农产品收购链的行为（椰子、榴莲、山竹为重点），4月1日起新增出资证明要求，追溯3-5年资金流向。已在泰从事农产品收购的中资企业应立即审查股权结构合规性，确保泰籍股东具有真实出资与经营参与，避免被认定为代理持股。泰国榴莲出口93%依赖中国市场，供应链话语权仍在，但经营模式需合规化。</p>
+        </div></div>
+      </div>
+
+      <div class="advice-card" data-search="电商 零售 合资 增值税 本地化">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">电商与零售领域</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">中国电商平台占泰国市场90%+份额已引发政策关注，泰方正研究要求外资与本土企业成立合资公司或由本土企业占股的方案，跨境商品增值税征收政策可能调整。建议平台企业提前评估合资架构方案，主动推进本地化合规，避免被动应对政策变化。</p>
+        </div></div>
+      </div>
+
+      <div class="advice-card" data-search="房地产 旅游 硬币旅游 酒店 导游 整治方案">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">房地产与旅游领域</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">中资在泰房地产投资超1000亿泰铢，旅游业"硬币旅游"低价团模式被点名整治，文旅部30天内将提交全产业链整治方案。建议相关企业关注整治方案细节，特别是酒店、导游、购物店等环节的外资经营资质要求变化。</p>
+        </div></div>
+      </div>
+
+      <div class="advice-card" data-search="能源 制造 太阳能 B20 钢铁 产能过剩">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">能源与制造领域</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">泰国正推进能源结构转型，屋顶太阳能、电力市场开放、B20生物柴油推广等领域存在投资机会。但短期内燃油成本剧烈波动（柴油涨6泰铢/升）将显著推高制造业运营成本，中资钢铁企业（本土产能利用率仅29%）面临产能过剩与政策压力双重挑战。</p>
+        </div></div>
+      </div>
+
+      <div class="advice-card" data-search="合规 PDPA 数据安全 会计 律师 股权审查">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">合规风险管理</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">泰国《个人数据保护法》（PDPA）执法力度加强（人民党数据泄露案面临解散风险），在泰中资企业应全面审查数据安全体系。代理持股违规最高3年监禁，参与造假的会计机构也将被追责，建议聘请本地合规律师进行股权结构专项审查。</p>
+        </div></div>
+      </div>
+
+      <div class="advice-card" data-search="政治风险 不可抗力 供应链 宪法法院 泰柬边境">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <span class="advice-icon"><svg viewBox="0 0 24 24"><polyline points="22 4 12 14.01 9 11.01"/></svg></span>
+          <span class="advice-title">政治风险对冲</span>
+          <svg class="advice-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+        <div class="advice-body"><div class="advice-content">
+          <p class="advice-text">选票违宪案可能导致选举结果无效并触发重新选举，建议在泰中资企业制定政治不确定性应急预案，包括合同中增加不可抗力条款、分散供应链布局、密切跟踪宪法法院裁决进度。同时关注泰柬边境局势对东部工业区（如罗勇、春武里）物流通道的潜在影响。</p>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+      <p>本报告基于泰国国别月报 2026-03 编制，仅供参考，不构成投资或决策建议。</p>
+      <p style="margin-top:4px">© Supinfor Ltd.</p>
+    </div>
+
+  </main>
+</div>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<script>
+// ===== Theme Toggle =====
+const themeBtn = document.getElementById('themeBtn');
+const themeIcon = document.getElementById('themeIcon');
+const sunIcon = '<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+const moonIcon = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+
+function isDark() { return !document.body.classList.contains('light'); }
+function modeColor(dark, light) { return isDark() ? dark : light; }
+
+function applyTheme(light) {
+  document.body.classList.toggle('light', light);
+  themeIcon.innerHTML = light ? moonIcon : sunIcon;
+  localStorage.setItem('theme', light ? 'light' : 'dark');
+  redrawCharts();
+}
+
+const saved = localStorage.getItem('theme');
+if (saved === 'light') applyTheme(true);
+themeBtn.addEventListener('click', () => applyTheme(isDark()));
+
+// ===== Expand/Collapse All =====
+let allExpanded = false;
+document.getElementById('expandBtn').addEventListener('click', () => {
+  allExpanded = !allExpanded;
+  document.querySelectorAll('.insight-card, .risk-card, .advice-card').forEach(c => {
+    c.classList.toggle('open', allExpanded);
+  });
+});
+
+function toggleCard(header) {
+  header.closest('.insight-card, .risk-card, .advice-card').classList.toggle('open');
+}
+
+// ===== Back to Top =====
+const btt = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+  btt.classList.toggle('visible', window.scrollY > 400);
+});
+btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+// ===== Print =====
+document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+// ===== Sidebar Active Highlight =====
+const sections = document.querySelectorAll('section[id]');
+const navItems = document.querySelectorAll('.nav-item');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      navItems.forEach(n => n.classList.remove('active'));
+      const link = document.querySelector(`.nav-item[href="#${e.target.id}"]`);
+      if (link) link.classList.add('active');
+    }
+  });
+}, { rootMargin: '-80px 0px -60% 0px', threshold: 0 });
+sections.forEach(s => observer.observe(s));
+
+// ===== Search =====
+const searchOverlay = document.getElementById('searchOverlay');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+function openSearch() { searchOverlay.classList.add('active'); searchInput.value = ''; searchInput.focus(); doSearch(''); }
+function closeSearch() { searchOverlay.classList.remove('active'); }
+
+document.getElementById('searchBtn').addEventListener('click', openSearch);
+document.addEventListener('keydown', e => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'k') { e.preventDefault(); openSearch(); }
+  if (e.key === 'Escape') closeSearch();
+});
+searchOverlay.addEventListener('click', e => { if (e.target === searchOverlay) closeSearch(); });
+
+searchInput.addEventListener('input', e => doSearch(e.target.value));
+
+function doSearch(q) {
+  q = q.trim().toLowerCase();
+  if (!q) { searchResults.innerHTML = '<div class="search-empty">输入关键词开始搜索</div>'; return; }
+  const cards = document.querySelectorAll('[data-search]');
+  let html = '';
+  cards.forEach(c => {
+    const searchText = (c.getAttribute('data-search') + ' ' + c.textContent).toLowerCase();
+    if (searchText.includes(q)) {
+      const title = c.querySelector('.insight-title, .risk-title, .advice-title');
+      const preview = c.querySelector('.insight-text, .risk-text, .advice-text');
+      if (title) {
+        const id = c.closest('section')?.id || '';
+        html += `<div class="search-result-item" onclick="jumpTo('${id}','${c.querySelector('.insight-num, .risk-icon, .advice-icon')?.textContent?.trim() || ''}')">
+          <div class="search-result-title">${title.textContent.substring(0, 80)}</div>
+          <div class="search-result-preview">${preview ? preview.textContent.substring(0, 100) + '…' : ''}</div>
+        </div>`;
+      }
+    }
+  });
+  searchResults.innerHTML = html || '<div class="search-empty">未找到匹配结果</div>';
+}
+
+function jumpTo(sectionId) {
+  closeSearch();
+  const el = document.getElementById(sectionId);
+  if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// ===== Canvas Charts =====
+function getCtx(id, h) {
+  const canvas = document.getElementById(id);
+  if (!canvas) return null;
+  const dpr = window.devicePixelRatio || 1;
+  const rect = canvas.getBoundingClientRect();
+  canvas.width = rect.width * dpr;
+  canvas.height = (h || rect.height) * dpr;
+  canvas.style.height = (h || rect.height) + 'px';
+  const ctx = canvas.getContext('2d');
+  ctx.scale(dpr, dpr);
+  ctx.w = rect.width;
+  ctx.h = h || rect.height;
+  return ctx;
+}
+
+function drawGauges() {
+  const ctx = getCtx('gaugeChart', 200);
+  if (!ctx) return;
+  const w = ctx.w, h = ctx.h;
+  ctx.clearRect(0, 0, w, h);
+
+  const gauges = [
+    { label: '燃油基金赤字', value: 380, max: 500, unit: '亿฿', color: modeColor('#ef4444','#dc2626') },
+    { label: 'GDP增速', value: 1.45, max: 3, unit: '%', color: modeColor('#f59e0b','#d97706') },
+    { label: '燃油储备', value: 98, max: 120, unit: '天', color: modeColor('#14b8a6','#0d9488') },
+    { label: '外资审查', value: 11.8, max: 15, unit: '万家', color: modeColor('#8b5cf6','#7c3aed') },
+  ];
+
+  const gw = (w - 40) / 4;
+  gauges.forEach((g, i) => {
+    const cx = 20 + gw * i + gw / 2;
+    const cy = h * 0.52;
+    const r = Math.min(gw * 0.38, 55);
+    const startAngle = Math.PI * 0.8;
+    const endAngle = Math.PI * 2.2;
+    const valAngle = startAngle + (endAngle - startAngle) * Math.min(g.value / g.max, 1);
+
+    // Background arc
+    ctx.beginPath(); ctx.arc(cx, cy, r, startAngle, endAngle);
+    ctx.strokeStyle = modeColor('rgba(255,255,255,0.06)', 'rgba(0,0,0,0.06)');
+    ctx.lineWidth = 8; ctx.lineCap = 'round'; ctx.stroke();
+
+    // Value arc
+    ctx.beginPath(); ctx.arc(cx, cy, r, startAngle, valAngle);
+    ctx.strokeStyle = g.color; ctx.lineWidth = 8; ctx.lineCap = 'round'; ctx.stroke();
+
+    // Center value
+    ctx.fillStyle = modeColor('#e4e8f1', '#1e293b');
+    ctx.font = 'bold 16px -apple-system, sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(g.value + g.unit, cx, cy);
+
+    // Label
+    ctx.fillStyle = modeColor('#8b95ad', '#475569');
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.fillText(g.label, cx, cy + r + 18);
+  });
+}
+
+function drawBars() {
+  const ctx = getCtx('barChart', 200);
+  if (!ctx) return;
+  const w = ctx.w, h = ctx.h;
+  ctx.clearRect(0, 0, w, h);
+
+  const data = [
+    { label: '渔业', value: 95, color: modeColor('#ef4444','#dc2626') },
+    { label: '运输业', value: 82, color: modeColor('#f59e0b','#d97706') },
+    { label: '农业', value: 68, color: modeColor('#f59e0b','#d97706') },
+    { label: '制造业', value: 55, color: modeColor('#eab308','#ca8a04') },
+    { label: '旅游业', value: 40, color: modeColor('#22c55e','#16a34a') },
+  ];
+
+  const barH = 24, gap = 12, labelW = 60, valueW = 50;
+  const maxBarW = w - labelW - valueW - 20;
+  const startY = 20;
+
+  data.forEach((d, i) => {
+    const y = startY + i * (barH + gap);
+
+    // Label
+    ctx.fillStyle = modeColor('#8b95ad', '#475569');
+    ctx.font = '12px -apple-system, sans-serif';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText(d.label, labelW - 8, y + barH / 2);
+
+    // Background bar
+    ctx.fillStyle = modeColor('rgba(255,255,255,0.04)', 'rgba(0,0,0,0.04)');
+    ctx.beginPath();
+    ctx.roundRect(labelW, y, maxBarW, barH, 6);
+    ctx.fill();
+
+    // Value bar
+    const bw = maxBarW * (d.value / 100);
+    ctx.fillStyle = d.color;
+    ctx.globalAlpha = 0.85;
+    ctx.beginPath();
+    ctx.roundRect(labelW, y, bw, barH, 6);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+
+    // Value text
+    ctx.fillStyle = modeColor('#e4e8f1', '#1e293b');
+    ctx.font = 'bold 12px -apple-system, sans-serif';
+    ctx.textAlign = 'left';
+    ctx.fillText(d.value + '%', labelW + maxBarW + 8, y + barH / 2);
+  });
+}
+
+function drawRadar() {
+  const ctx = getCtx('radarChart', 220);
+  if (!ctx) return;
+  const w = ctx.w, h = ctx.h;
+  ctx.clearRect(0, 0, w, h);
+
+  const labels = ['政治风险', '能源安全', '外资监管', '经济增长', '社会稳定'];
+  const values = [0.85, 0.92, 0.78, 0.70, 0.65];
+  const cx = w / 2, cy = h / 2 + 5, r = Math.min(w, h) * 0.34;
+  const n = labels.length;
+
+  // Grid
+  for (let ring = 1; ring <= 4; ring++) {
+    const rr = r * ring / 4;
+    ctx.beginPath();
+    for (let i = 0; i <= n; i++) {
+      const angle = -Math.PI / 2 + (2 * Math.PI / n) * i;
+      const x = cx + rr * Math.cos(angle);
+      const y = cy + rr * Math.sin(angle);
+      i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle = modeColor('rgba(255,255,255,0.06)', 'rgba(0,0,0,0.06)');
+    ctx.lineWidth = 1; ctx.stroke();
+  }
+
+  // Axes
+  for (let i = 0; i < n; i++) {
+    const angle = -Math.PI / 2 + (2 * Math.PI / n) * i;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + r * Math.cos(angle), cy + r * Math.sin(angle));
+    ctx.strokeStyle = modeColor('rgba(255,255,255,0.06)', 'rgba(0,0,0,0.06)');
+    ctx.stroke();
+  }
+
+  // Data polygon
+  ctx.beginPath();
+  values.forEach((v, i) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI / n) * i;
+    const x = cx + r * v * Math.cos(angle);
+    const y = cy + r * v * Math.sin(angle);
+    i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
+  });
+  ctx.closePath();
+  ctx.fillStyle = modeColor('rgba(239,68,68,0.12)', 'rgba(220,38,38,0.12)');
+  ctx.fill();
+  ctx.strokeStyle = modeColor('#ef4444', '#dc2626');
+  ctx.lineWidth = 2; ctx.stroke();
+
+  // Points & labels
+  values.forEach((v, i) => {
+    const angle = -Math.PI / 2 + (2 * Math.PI / n) * i;
+    const x = cx + r * v * Math.cos(angle);
+    const y = cy + r * v * Math.sin(angle);
+
+    ctx.beginPath(); ctx.arc(x, y, 4, 0, Math.PI * 2);
+    ctx.fillStyle = modeColor('#ef4444', '#dc2626'); ctx.fill();
+
+    const lx = cx + (r + 18) * Math.cos(angle);
+    const ly = cy + (r + 18) * Math.sin(angle);
+    ctx.fillStyle = modeColor('#8b95ad', '#475569');
+    ctx.font = '11px -apple-system, sans-serif';
+    ctx.textAlign = 'center'; ctx.textBaseline = 'middle';
+    ctx.fillText(labels[i] + ' ' + Math.round(v * 100), lx, ly);
+  });
+}
+
+function drawHeatmap() {
+  const ctx = getCtx('heatmapChart', 220);
+  if (!ctx) return;
+  const w = ctx.w, h = ctx.h;
+  ctx.clearRect(0, 0, w, h);
+
+  const rows = [
+    { label: '能源', opp: 0.3, risk: 0.95 },
+    { label: '农业', opp: 0.5, risk: 0.7 },
+    { label: '电商', opp: 0.6, risk: 0.8 },
+    { label: '旅游', opp: 0.65, risk: 0.6 },
+    { label: '制造', opp: 0.55, risk: 0.55 },
+    { label: '房地产', opp: 0.4, risk: 0.75 },
+    { label: '数字经济', opp: 0.8, risk: 0.25 },
+  ];
+
+  const labelW = 65, colW = (w - labelW - 20) / 2, rowH = 26, gap = 4, startY = 30;
+
+  // Headers
+  ctx.fillStyle = modeColor('#8b95ad', '#475569');
+  ctx.font = 'bold 11px -apple-system, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.fillText('机遇度', labelW + colW / 2, 16);
+  ctx.fillText('风险度', labelW + colW + gap + colW / 2, 16);
+
+  rows.forEach((r, i) => {
+    const y = startY + i * (rowH + gap);
+
+    // Label
+    ctx.fillStyle = modeColor('#8b95ad', '#475569');
+    ctx.font = '12px -apple-system, sans-serif';
+    ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    ctx.fillText(r.label, labelW - 8, y + rowH / 2);
+
+    // Opportunity cell
+    const oppAlpha = 0.15 + r.opp * 0.6;
+    ctx.fillStyle = isDark() ? `rgba(34,197,94,${oppAlpha})` : `rgba(22,163,74,${oppAlpha})`;
+    ctx.beginPath(); ctx.roundRect(labelW, y, colW, rowH, 4); ctx.fill();
+    ctx.fillStyle = modeColor('#e4e8f1', '#1e293b');
+    ctx.font = 'bold 11px -apple-system, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText(Math.round(r.opp * 100), labelW + colW / 2, y + rowH / 2);
+
+    // Risk cell
+    const riskAlpha = 0.15 + r.risk * 0.6;
+    ctx.fillStyle = isDark() ? `rgba(239,68,68,${riskAlpha})` : `rgba(220,38,38,${riskAlpha})`;
+    ctx.beginPath(); ctx.roundRect(labelW + colW + gap, y, colW, rowH, 4); ctx.fill();
+    ctx.fillStyle = modeColor('#e4e8f1', '#1e293b');
+    ctx.fillText(Math.round(r.risk * 100), labelW + colW + gap + colW / 2, y + rowH / 2);
+  });
+}
+
+function redrawCharts() {
+  drawGauges();
+  drawBars();
+  drawRadar();
+  drawHeatmap();
+}
+
+// Initial draw
+window.addEventListener('load', redrawCharts);
+window.addEventListener('resize', redrawCharts);
+</script>
+</body>
+</html>

@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" class="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>汽车行业概览-东南亚市场 | Supinfor Ltd.</title>
+<meta name="description" content="汽车行业概览-东南亚市场 - L2 标准报告 · 2026年4月9日">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+@theme {
+  --color-graphite: #1e293b;
+  --color-graphite-dark: #0f172a;
+  --color-graphite-deeper: #080d19;
+  --color-electric-orange: #f97316;
+  --color-electric-orange-light: #fb923c;
+  --color-emerald-accent: #10b981;
+  --color-emerald-dark: #059669;
+  --font-heading: 'Exo 2', sans-serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+}
+</style>
+<style>
+/* Base & Theme */
+html { scroll-behavior: smooth; font-family: 'Noto Sans SC', sans-serif; }
+h1, h2, h3, h4, h5, h6, .font-heading { font-family: 'Exo 2', 'Noto Sans SC', sans-serif; }
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #1e293b; }
+::-webkit-scrollbar-thumb { background: #f97316; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #fb923c; }
+
+/* Light mode overrides */
+html:not(.dark) { --bg-primary: #f8fafc; --bg-secondary: #ffffff; --bg-card: #ffffff; --text-primary: #1e293b; --text-secondary: #475569; --border-color: #e2e8f0; }
+html.dark { --bg-primary: #080d19; --bg-secondary: #0f172a; --bg-card: #1e293b; --text-primary: #f1f5f9; --text-secondary: #94a3b8; --border-color: #334155; }
+body { background: var(--bg-primary); color: var(--text-primary); transition: background 0.3s, color 0.3s; }
+
+/* Card base */
+.card { background: var(--bg-card); border: 1px solid var(--border-color); border-radius: 12px; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(249,115,22,0.15); }
+
+/* Reveal animations */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* Bar animation */
+.bar-fill { width: 0; transition: width 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.bar-fill.animated { width: var(--target-width); }
+
+/* Progress bar animation */
+.progress-fill { width: 0; transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+.progress-fill.animated { width: var(--target-width); }
+
+/* KPI counter animation */
+@keyframes countUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.kpi-number { animation: countUp 0.8s ease forwards; }
+
+/* Speed lines for hero */
+.speed-lines { position: absolute; inset: 0; overflow: hidden; opacity: 0.08; }
+.speed-line { position: absolute; height: 2px; background: linear-gradient(90deg, transparent, #f97316, transparent); animation: speedLine 3s linear infinite; }
+@keyframes speedLine { 0% { transform: translateX(-100%); opacity: 0; } 50% { opacity: 1; } 100% { transform: translateX(200%); opacity: 0; } }
+
+/* Gauge styling */
+.gauge-track { background: var(--border-color); border-radius: 9999px; overflow: hidden; }
+
+/* TOC */
+.toc-link { transition: all 0.2s ease; border-left: 3px solid transparent; }
+.toc-link:hover { border-left-color: #f97316; background: rgba(249,115,22,0.1); color: #f97316; }
+
+/* Timeline */
+.timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, #f97316, #10b981); }
+.timeline-dot { width: 14px; height: 14px; border-radius: 50%; border: 3px solid #f97316; background: var(--bg-primary); position: absolute; left: 14px; top: 6px; z-index: 1; }
+
+/* SWOT colors */
+.swot-s { border-top: 4px solid #10b981; }
+.swot-w { border-top: 4px solid #ef4444; }
+.swot-o { border-top: 4px solid #3b82f6; }
+.swot-t { border-top: 4px solid #f59e0b; }
+
+/* Risk severity borders */
+.risk-high { border-left: 5px solid #ef4444; }
+.risk-medium-high { border-left: 5px solid #f97316; }
+.risk-medium { border-left: 5px solid #eab308; }
+.risk-low { border-left: 5px solid #10b981; }
+
+/* Porter forces */
+.force-strong { background: linear-gradient(135deg, rgba(239,68,68,0.15), rgba(239,68,68,0.05)); border: 1px solid rgba(239,68,68,0.3); }
+.force-medium { background: linear-gradient(135deg, rgba(234,179,8,0.15), rgba(234,179,8,0.05)); border: 1px solid rgba(234,179,8,0.3); }
+
+html:not(.dark) .force-strong { background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.03)); }
+html:not(.dark) .force-medium { background: linear-gradient(135deg, rgba(234,179,8,0.1), rgba(234,179,8,0.03)); }
+
+/* Back to top */
+#backToTop { opacity: 0; pointer-events: none; transition: opacity 0.3s ease; }
+#backToTop.visible { opacity: 1; pointer-events: auto; }
+
+/* Table styling */
+.data-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.data-table th { background: rgba(249,115,22,0.15); color: #f97316; font-weight: 600; padding: 12px 16px; text-align: left; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.data-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-color); font-size: 0.9rem; }
+.data-table tr:hover td { background: rgba(249,115,22,0.05); }
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+
+html:not(.dark) .data-table th { background: rgba(249,115,22,0.1); }
+
+/* Mobile nav */
+#mobileNav { transform: translateX(-100%); transition: transform 0.3s ease; }
+#mobileNav.open { transform: translateX(0); }
+
+/* Section heading */
+.section-heading { position: relative; padding-left: 20px; }
+.section-heading::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: linear-gradient(to bottom, #f97316, #10b981); border-radius: 2px; }
+
+/* Language switching */
+[data-lang="zh"] [data-en] { display: none; }
+[data-lang="en"] [data-zh] { display: none; }
+</style>
+</head>
+<body class="min-h-screen">
+
+<!-- Theme Toggle & Language Toggle & Mobile Nav Button -->
+<div class="fixed top-4 right-4 z-50 flex items-center gap-2">
+  <button id="langToggle" class="w-11 h-11 rounded-full bg-graphite/80 dark:bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-electric-orange transition-all shadow-lg" aria-label="切换语言">
+    <i class="fas fa-language text-sm mr-1"></i><span id="langLabel" class="text-xs font-bold">EN</span>
+  </button>
+  <button id="themeToggle" class="w-11 h-11 rounded-full bg-graphite/80 dark:bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-electric-orange transition-all shadow-lg" aria-label="切换主题">
+    <i class="fas fa-sun text-sm hidden dark:inline"></i>
+    <i class="fas fa-moon text-sm dark:hidden"></i>
+  </button>
+  <button id="mobileNavBtn" class="w-11 h-11 rounded-full bg-graphite/80 dark:bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white hover:bg-electric-orange transition-all shadow-lg lg:hidden" aria-label="导航菜单">
+    <i class="fas fa-bars text-sm"></i>
+  </button>
+</div>
+
+<!-- Mobile Navigation Overlay -->
+<div id="mobileNav" class="fixed inset-0 z-40 lg:hidden">
+  <div class="absolute inset-0 bg-black/60 backdrop-blur-sm" id="mobileNavOverlay"></div>
+  <nav class="relative w-72 h-full bg-graphite-dark dark:bg-graphite-deeper overflow-y-auto p-6">
+    <h3 class="font-heading text-electric-orange font-bold text-lg mb-4"><span data-zh>目录导航</span><span data-en>Navigation</span></h3>
+    <div class="space-y-1" id="mobileNavLinks"></div>
+  </nav>
+</div>
+
+<!-- ==================== HERO SECTION ==================== -->
+<header id="hero" class="relative min-h-[85vh] flex items-center justify-center overflow-hidden" style="background: linear-gradient(135deg, #080d19 0%, #1e293b 40%, #2d1a0a 70%, #1e293b 100%);">
+  <!-- Speed lines decoration -->
+  <div class="speed-lines">
+    <div class="speed-line" style="top:15%; width:40%; animation-delay:0s;"></div>
+    <div class="speed-line" style="top:25%; width:60%; animation-delay:0.5s;"></div>
+    <div class="speed-line" style="top:40%; width:35%; animation-delay:1s;"></div>
+    <div class="speed-line" style="top:55%; width:50%; animation-delay:1.5s;"></div>
+    <div class="speed-line" style="top:70%; width:45%; animation-delay:2s;"></div>
+    <div class="speed-line" style="top:85%; width:55%; animation-delay:2.5s;"></div>
+  </div>
+  <!-- Geometric pattern overlay -->
+  <div class="absolute inset-0 opacity-5">
+    <svg width="100%" height="100%"><defs><pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M 60 0 L 0 0 0 60" fill="none" stroke="#f97316" stroke-width="0.5"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
+  </div>
+  <!-- Gradient overlay -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[var(--bg-primary)] to-transparent"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="mb-4">
+      <span class="inline-block px-4 py-1.5 rounded-full bg-electric-orange/20 text-electric-orange text-sm font-semibold tracking-wider border border-electric-orange/30">
+        <i class="fas fa-car-side mr-2"></i><span data-zh>行业研究 · L2 标准报告</span><span data-en>Industry Research · L2 Standard Report</span>
+      </span>
+    </div>
+    <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight tracking-tight">
+      <span data-zh>汽车行业概览<br><span class="text-electric-orange">东南亚市场</span></span><span data-en>Automotive Industry Overview<br><span class="text-electric-orange">Southeast Asia Market</span></span>
+    </h1>
+    <p class="text-lg sm:text-xl text-gray-300 mb-3 font-light"><span data-zh>L2 标准报告 · 2026 年 4 月 9 日</span><span data-en>L2 Standard Report · April 9, 2026</span></p>
+    <p class="text-sm text-gray-400 mb-10">
+      <i class="fas fa-building mr-1"></i> Supinfor Ltd. &nbsp;|&nbsp;
+      <i class="fas fa-globe-asia mr-1"></i> <span data-zh>ASEAN 重点国家：印度尼西亚 · 泰国 · 马来西亚 · 菲律宾 · 越南</span><span data-en>ASEAN Key Markets: Indonesia · Thailand · Malaysia · Philippines · Vietnam</span>
+    </p>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl mx-auto">
+      <div class="card p-5 sm:p-6 bg-white/5 backdrop-blur-md border-white/10 reveal reveal-delay-1">
+        <div class="text-electric-orange text-3xl mb-2"><i class="fas fa-car"></i></div>
+        <div class="kpi-number font-heading text-3xl sm:text-4xl font-black text-white">316<span class="text-xl"><span data-zh>万辆</span><span data-en>0K units</span></span></div>
+        <div class="text-gray-400 text-sm mt-1"><span data-zh>ASEAN 总销量（2025）</span><span data-en>ASEAN Total Sales (2025)</span></div>
+        <div class="text-red-400 text-xs mt-1"><i class="fas fa-arrow-down mr-1"></i><span data-zh>同比 -2.3%</span><span data-en>YoY -2.3%</span></div>
+      </div>
+      <div class="card p-5 sm:p-6 bg-white/5 backdrop-blur-md border-white/10 reveal reveal-delay-2">
+        <div class="text-emerald-accent text-3xl mb-2"><i class="fas fa-bolt"></i></div>
+        <div class="kpi-number font-heading text-3xl sm:text-4xl font-black text-white">13<span class="text-xl">%</span></div>
+        <div class="text-gray-400 text-sm mt-1"><span data-zh>EV 渗透率（2025）</span><span data-en>EV Penetration (2025)</span></div>
+        <div class="text-emerald-accent text-xs mt-1"><i class="fas fa-arrow-up mr-1"></i><span data-zh>快速提升中</span><span data-en>Rapidly increasing</span></div>
+      </div>
+      <div class="card p-5 sm:p-6 bg-white/5 backdrop-blur-md border-white/10 reveal reveal-delay-3">
+        <div class="text-electric-orange text-3xl mb-2"><i class="fas fa-charging-station"></i></div>
+        <div class="kpi-number font-heading text-3xl sm:text-4xl font-black text-white">79.4<span class="text-xl"><span data-zh>亿$</span><span data-en>B USD</span></span></div>
+        <div class="text-gray-400 text-sm mt-1"><span data-zh>EV 市场规模（2025）</span><span data-en>EV Market Size (2025)</span></div>
+        <div class="text-emerald-accent text-xs mt-1"><i class="fas fa-chart-line mr-1"></i>CAGR 7.2%</div>
+      </div>
+      <div class="card p-5 sm:p-6 bg-white/5 backdrop-blur-md border-white/10 reveal reveal-delay-4">
+        <div class="text-emerald-accent text-3xl mb-2"><i class="fas fa-wrench"></i></div>
+        <div class="kpi-number font-heading text-3xl sm:text-4xl font-black text-white">312<span class="text-xl"><span data-zh>亿$</span><span data-en>B USD</span></span></div>
+        <div class="text-gray-400 text-sm mt-1"><span data-zh>售后市场规模（2026）</span><span data-en>Aftermarket Size (2026)</span></div>
+        <div class="text-emerald-accent text-xs mt-1"><i class="fas fa-chart-line mr-1"></i>CAGR 8.3%</div>
+      </div>
+    </div>
+
+    <div class="mt-10">
+      <a href="#toc" class="inline-flex items-center gap-2 text-gray-400 hover:text-electric-orange transition-colors">
+        <span class="text-sm"><span data-zh>浏览完整报告</span><span data-en>Browse Full Report</span></span>
+        <i class="fas fa-chevron-down animate-bounce"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== TABLE OF CONTENTS ==================== -->
+<section id="toc" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="reveal">
+    <h2 class="font-heading text-2xl sm:text-3xl font-bold mb-8 section-heading">
+      <span data-zh><span class="text-electric-orange">目录</span>导航</span><span data-en><span class="text-electric-orange">Table of</span> Contents</span>
+    </h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Part A -->
+      <div class="card p-6">
+        <h3 class="font-heading text-lg font-bold text-electric-orange mb-4 flex items-center gap-2">
+          <i class="fas fa-globe"></i> <span data-zh>Part A：行业全景</span><span data-en>Part A: Industry Landscape</span>
+        </h3>
+        <div class="space-y-1">
+          <a href="#a1" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.1 行业定义与边界</span><span data-en>A.1 Industry Definition & Scope</span></a>
+          <a href="#a2" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.2 市场规模与增长</span><span data-en>A.2 Market Size & Growth</span></a>
+          <a href="#a3" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.3 产业链分析</span><span data-en>A.3 Value Chain Analysis</span></a>
+          <a href="#a4" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.4 发展历程</span><span data-en>A.4 Development History</span></a>
+          <a href="#a5" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.5 竞争格局</span><span data-en>A.5 Competitive Landscape</span></a>
+          <a href="#a6" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>A.6 玩家图谱</span><span data-en>A.6 Player Map</span></a>
+        </div>
+      </div>
+      <!-- Part B -->
+      <div class="card p-6">
+        <h3 class="font-heading text-lg font-bold text-electric-orange mb-4 flex items-center gap-2">
+          <i class="fas fa-chart-bar"></i> <span data-zh>Part B：行业评估</span><span data-en>Part B: Industry Assessment</span>
+        </h3>
+        <div class="space-y-1">
+          <a href="#b1" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>B.1 增长动力分析</span><span data-en>B.1 Growth Driver Analysis</span></a>
+          <a href="#b2" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>B.2 竞争强度评估（波特五力）</span><span data-en>B.2 Competitive Intensity (Porter's Five Forces)</span></a>
+          <a href="#b3" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>B.3 进入壁垒分析</span><span data-en>B.3 Entry Barrier Analysis</span></a>
+          <a href="#b4" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>B.4 风险因素</span><span data-en>B.4 Risk Factors</span></a>
+          <a href="#b5" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>B.5 行业吸引力记分卡</span><span data-en>B.5 Industry Attractiveness Scorecard</span></a>
+        </div>
+      </div>
+      <!-- Part C -->
+      <div class="card p-6">
+        <h3 class="font-heading text-lg font-bold text-electric-orange mb-4 flex items-center gap-2">
+          <i class="fas fa-lightbulb"></i> <span data-zh>Part C：判断与展望</span><span data-en>Part C: Outlook & Insights</span>
+        </h3>
+        <div class="space-y-1">
+          <a href="#c1" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>C.1 核心结论</span><span data-en>C.1 Key Conclusions</span></a>
+          <a href="#c2" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>C.2 趋势预判</span><span data-en>C.2 Trend Forecast</span></a>
+          <a href="#c3" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>C.3 机会识别</span><span data-en>C.3 Opportunity Identification</span></a>
+          <a href="#c4" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>C.4 风险提示</span><span data-en>C.4 Risk Alerts</span></a>
+          <a href="#c5" class="toc-link block px-3 py-2 rounded text-sm" style="color:var(--text-secondary)"><span data-zh>C.5 行业 SWOT 矩阵</span><span data-en>C.5 Industry SWOT Matrix</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN CONTENT ==================== -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+<!-- ==================== PART A: 行业全景 ==================== -->
+<div class="mb-12 reveal">
+  <div class="flex items-center gap-3 mb-2">
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-electric-orange/20 text-electric-orange font-heading font-bold text-lg">A</span>
+    <h2 class="font-heading text-3xl sm:text-4xl font-bold"><span data-zh>行业全景</span><span data-en>Industry Landscape</span></h2>
+  </div>
+  <div class="h-1 w-24 bg-gradient-to-r from-electric-orange to-emerald-accent rounded-full"></div>
+</div>
+
+<!-- A.1 行业定义与边界 -->
+<section id="a1" class="mb-16 reveal">
+  <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.1 行业定义与边界</span><span data-en>A.1 Industry Definition & Scope</span></h3>
+  <div class="card p-6 overflow-x-auto">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th style="width:20%"><span data-zh>维度</span><span data-en>Dimension</span></th>
+          <th><span data-zh>内容</span><span data-en>Details</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>行业名称</span><span data-en>Industry Name</span></td><td><span data-zh>汽车行业 / Automotive Industry</span><span data-en>Automotive Industry</span></td></tr>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>定义</span><span data-en>Definition</span></td><td><span data-zh>涵盖乘用车和商用车的制造、销售、售后服务全产业链</span><span data-en>Covers the full value chain of passenger and commercial vehicle manufacturing, sales, and after-sales services</span></td></tr>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>统计口径</span><span data-en>Statistical Scope</span></td><td><span data-zh>本报告聚焦东南亚（ASEAN）汽车市场，以新车销量为核心指标，涵盖传统燃油车（ICE）和新能源汽车（NEV/EV）</span><span data-en>This report focuses on the ASEAN automotive market, using new vehicle sales as the core metric, covering both ICE and NEV/EV segments</span></td></tr>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>目标市场</span><span data-en>Target Market</span></td><td><span data-zh>东南亚（ASEAN），重点国家：印度尼西亚、泰国、马来西亚、菲律宾、越南</span><span data-en>Southeast Asia (ASEAN), key markets: Indonesia, Thailand, Malaysia, Philippines, Vietnam</span></td></tr>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>细分赛道</span><span data-en>Sub-segments</span></td><td><span data-zh>乘用车（轿车/SUV/MPV）、商用车（皮卡/卡车）、新能源汽车（BEV/PHEV）、售后市场</span><span data-en>Passenger vehicles (sedan/SUV/MPV), commercial vehicles (pickup/truck), NEV (BEV/PHEV), aftermarket</span></td></tr>
+        <tr><td class="font-semibold text-electric-orange"><span data-zh>相邻行业</span><span data-en>Adjacent Industries</span></td><td><span data-zh>动力电池、汽车零部件、充电基础设施、汽车金融、二手车</span><span data-en>Power batteries, auto parts, charging infrastructure, auto finance, used vehicles</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- A.2 市场规模与增长 -->
+<section id="a2" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.2 市场规模与增长</span><span data-en>A.2 Market Size & Growth</span></h3>
+  </div>
+
+  <!-- 全球市场概况 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-globe text-electric-orange"></i> <span data-zh>全球市场概况</span><span data-en>Global Market Overview</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>指标</span><span data-en>Metric</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>来源</span><span data-en>Source</span></th></tr></thead>
+        <tbody>
+          <tr><td><span data-zh>全球新车销量（2025 年）</span><span data-en>Global New Vehicle Sales (2025)</span></td><td class="font-semibold"><span data-zh>约 8,500–9,000 万辆/年</span><span data-en>Approx. 85–90 million units/year</span></td><td class="text-sm opacity-70">OICA / Statista</td></tr>
+          <tr><td><span data-zh>全球 EV 渗透率（2025 年）</span><span data-en>Global EV Penetration (2025)</span></td><td class="font-semibold"><span data-zh>约 25%</span><span data-en>Approx. 25%</span></td><td class="text-sm opacity-70">IEA / BloombergNEF</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 东南亚市场规模 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-chart-area text-emerald-accent"></i> <span data-zh>东南亚市场规模</span><span data-en>Southeast Asia Market Size</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>指标</span><span data-en>Metric</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>来源</span><span data-en>Source</span></th></tr></thead>
+        <tbody>
+          <tr><td><span data-zh>ASEAN 新车销量（2025 年）</span><span data-en>ASEAN New Vehicle Sales (2025)</span></td><td class="font-semibold"><span data-zh>约 316 万辆，同比 -2.3%</span><span data-en>Approx. 3.16 million units, YoY -2.3%</span></td><td class="text-sm opacity-70">ASEAN Automotive Federation</td></tr>
+          <tr><td><span data-zh>乘用车市场收入（2025 年）</span><span data-en>Passenger Vehicle Market Revenue (2025)</span></td><td class="font-semibold"><span data-zh>约 683 亿美元</span><span data-en>Approx. USD 68.3 billion</span></td><td class="text-sm opacity-70">Statista</td></tr>
+          <tr><td><span data-zh>消费者汽车购买支出预测（2029 年）</span><span data-en>Consumer Auto Spending Forecast (2029)</span></td><td class="font-semibold"><span data-zh>超 1,040 亿美元</span><span data-en>Over USD 104 billion</span></td><td class="text-sm opacity-70">Statista</td></tr>
+          <tr><td><span data-zh>ASEAN 占全球比例</span><span data-en>ASEAN Share of Global Market</span></td><td class="font-semibold"><span data-zh>约 3.5–3.7%</span><span data-en>Approx. 3.5–3.7%</span></td><td class="text-sm opacity-70"><span data-zh>根据全球销量推算</span><span data-en>Estimated from global sales</span></td></tr>
+          <tr><td><span data-zh>ASEAN EV 市场规模（2025 年）</span><span data-en>ASEAN EV Market Size (2025)</span></td><td class="font-semibold"><span data-zh>约 79.4 亿美元</span><span data-en>Approx. USD 7.94 billion</span></td><td class="text-sm opacity-70">Mordor Intelligence</td></tr>
+          <tr><td><span data-zh>ASEAN EV 市场预测（2034 年）</span><span data-en>ASEAN EV Market Forecast (2034)</span></td><td class="font-semibold"><span data-zh>约 148.6 亿美元（CAGR 7.2%）</span><span data-en>Approx. USD 14.86 billion (CAGR 7.2%)</span></td><td class="text-sm opacity-70">Mordor Intelligence</td></tr>
+          <tr><td><span data-zh>ASEAN EV 渗透率（2025 年）</span><span data-en>ASEAN EV Penetration (2025)</span></td><td class="font-semibold"><span data-zh>约 13%</span><span data-en>Approx. 13%</span></td><td class="text-sm opacity-70"><span data-zh>行业综合数据</span><span data-en>Industry composite data</span></td></tr>
+          <tr><td><span data-zh>ASEAN EV 销量预测（2029 年）</span><span data-en>ASEAN EV Sales Forecast (2029)</span></td><td class="font-semibold"><span data-zh>约 56 万辆</span><span data-en>Approx. 560,000 units</span></td><td class="text-sm opacity-70">Statista</td></tr>
+          <tr><td><span data-zh>售后市场规模（2026 年）</span><span data-en>Aftermarket Size (2026)</span></td><td class="font-semibold"><span data-zh>约 312 亿美元</span><span data-en>Approx. USD 31.2 billion</span></td><td class="text-sm opacity-70">Research and Markets</td></tr>
+          <tr><td><span data-zh>售后市场预测（2036 年）</span><span data-en>Aftermarket Forecast (2036)</span></td><td class="font-semibold"><span data-zh>约 693 亿美元（CAGR 8.3%）</span><span data-en>Approx. USD 69.3 billion (CAGR 8.3%)</span></td><td class="text-sm opacity-70">Research and Markets</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 各国销量份额 - 横向条形图 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-chart-bar text-electric-orange"></i> <span data-zh>各国销量份额（2025 年）</span><span data-en>Sales Share by Country (2025)</span>
+    </h4>
+    <div class="card p-6">
+      <div class="space-y-5" id="salesBars">
+        <!-- 马来西亚 -->
+        <div class="bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇲🇾</span>
+              <span class="font-semibold"><span data-zh>马来西亚</span><span data-en>Malaysia</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange"><span data-zh>第1名</span><span data-en>#1</span></span>
+            </div>
+            <div class="text-right">
+              <span class="font-heading font-bold text-electric-orange text-lg">26%</span>
+              <span class="text-sm opacity-70 ml-2"><span data-zh>约 82 万辆</span><span data-en>Approx. 820K units</span></span>
+              <span class="text-xs text-emerald-accent ml-1">+2%</span>
+            </div>
+          </div>
+          <div class="gauge-track h-6 rounded-lg">
+            <div class="bar-fill h-full rounded-lg bg-gradient-to-r from-electric-orange to-electric-orange-light flex items-center justify-end pr-2" style="--target-width:100%">
+              <span class="text-xs font-bold text-white">26%</span>
+            </div>
+          </div>
+        </div>
+        <!-- 印度尼西亚 -->
+        <div class="bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇮🇩</span>
+              <span class="font-semibold"><span data-zh>印度尼西亚</span><span data-en>Indonesia</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange"><span data-zh>第2名</span><span data-en>#2</span></span>
+            </div>
+            <div class="text-right">
+              <span class="font-heading font-bold text-electric-orange text-lg">22.8%</span>
+              <span class="text-sm opacity-70 ml-2"><span data-zh>约 80.4 万辆（批发口径）</span><span data-en>Approx. 804K units (wholesale)</span></span>
+              <span class="text-xs text-red-400 ml-1">-8.7%</span>
+            </div>
+          </div>
+          <div class="gauge-track h-6 rounded-lg">
+            <div class="bar-fill h-full rounded-lg bg-gradient-to-r from-electric-orange to-electric-orange-light flex items-center justify-end pr-2" style="--target-width:87.7%">
+              <span class="text-xs font-bold text-white">22.8%</span>
+            </div>
+          </div>
+        </div>
+        <!-- 泰国 -->
+        <div class="bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇹🇭</span>
+              <span class="font-semibold"><span data-zh>泰国</span><span data-en>Thailand</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange"><span data-zh>第3名</span><span data-en>#3</span></span>
+            </div>
+            <div class="text-right">
+              <span class="font-heading font-bold text-electric-orange text-lg">18.2%</span>
+              <span class="text-xs text-red-400 ml-1">-15.6%</span>
+            </div>
+          </div>
+          <div class="gauge-track h-6 rounded-lg">
+            <div class="bar-fill h-full rounded-lg bg-gradient-to-r from-electric-orange to-electric-orange-light flex items-center justify-end pr-2" style="--target-width:70%">
+              <span class="text-xs font-bold text-white">18.2%</span>
+            </div>
+          </div>
+        </div>
+        <!-- 菲律宾 -->
+        <div class="bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇵🇭</span>
+              <span class="font-semibold"><span data-zh>菲律宾</span><span data-en>Philippines</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange"><span data-zh>第4名</span><span data-en>#4</span></span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs text-emerald-accent ml-1">+3.6%</span>
+            </div>
+          </div>
+          <div class="gauge-track h-6 rounded-lg">
+            <div class="bar-fill h-full rounded-lg bg-gradient-to-r from-emerald-accent to-emerald-dark flex items-center justify-end pr-2" style="--target-width:50%">
+            </div>
+          </div>
+        </div>
+        <!-- 越南 -->
+        <div class="bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇻🇳</span>
+              <span class="font-semibold"><span data-zh>越南</span><span data-en>Vietnam</span></span>
+              <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange"><span data-zh>第5名</span><span data-en>#5</span></span>
+            </div>
+          </div>
+          <div class="gauge-track h-6 rounded-lg">
+            <div class="bar-fill h-full rounded-lg bg-gradient-to-r from-emerald-accent to-emerald-dark flex items-center justify-end pr-2" style="--target-width:38%">
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Important finding callout -->
+      <div class="mt-6 p-4 rounded-lg bg-electric-orange/10 border border-electric-orange/30">
+        <p class="text-sm flex items-start gap-2">
+          <i class="fas fa-exclamation-triangle text-electric-orange mt-0.5"></i>
+          <span><strong class="text-electric-orange"><span data-zh>重要发现：</span><span data-en>Key Finding:</span></strong><span data-zh>马来西亚在 2025 年首次超越印度尼西亚成为东南亚最大汽车市场（按销量计），泰国跌幅最大（-15.6%），反映出传统燃油车市场的结构性压力。</span><span data-en>Malaysia surpassed Indonesia for the first time in 2025 to become ASEAN's largest auto market by sales volume. Thailand saw the steepest decline (-15.6%), reflecting structural pressure on the traditional ICE market.</span></span>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EV 渗透率进度条 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-bolt text-emerald-accent"></i> <span data-zh>EV 渗透率（各国，2025 年）</span><span data-en>EV Penetration by Country (2025)</span>
+    </h4>
+    <div class="card p-6">
+      <div class="space-y-5" id="evBars">
+        <!-- 新加坡 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇸🇬</span>
+              <span class="font-semibold"><span data-zh>新加坡</span><span data-en>Singapore</span></span>
+            </div>
+            <span class="font-heading font-bold text-emerald-accent text-lg"><span data-zh>约 40%</span><span data-en>~40%</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-emerald-accent to-emerald-dark" style="--target-width:40%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>城市国家，政策强力推动</span><span data-en>City-state with strong policy push</span></p>
+        </div>
+        <!-- 越南 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇻🇳</span>
+              <span class="font-semibold"><span data-zh>越南</span><span data-en>Vietnam</span></span>
+            </div>
+            <span class="font-heading font-bold text-emerald-accent text-lg"><span data-zh>约 40%</span><span data-en>~40%</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-emerald-accent to-emerald-dark" style="--target-width:40%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>VinFast 主导本地 EV 市场</span><span data-en>VinFast dominates the local EV market</span></p>
+        </div>
+        <!-- 泰国 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇹🇭</span>
+              <span class="font-semibold"><span data-zh>泰国</span><span data-en>Thailand</span></span>
+            </div>
+            <span class="font-heading font-bold text-electric-orange text-lg"><span data-zh>约 21%</span><span data-en>~21%</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-electric-orange to-electric-orange-light" style="--target-width:21%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>中国品牌推动，EV 3.0/3.5 政策支持</span><span data-en>Driven by Chinese brands, supported by EV 3.0/3.5 policies</span></p>
+        </div>
+        <!-- 印度尼西亚 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇮🇩</span>
+              <span class="font-semibold"><span data-zh>印度尼西亚</span><span data-en>Indonesia</span></span>
+            </div>
+            <span class="font-heading font-bold text-yellow-400 text-sm"><span data-zh>较低但快速增长</span><span data-en>Low but rapidly growing</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:8%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>EV 激励政策逐步落地</span><span data-en>EV incentive policies gradually taking effect</span></p>
+        </div>
+        <!-- 马来西亚 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇲🇾</span>
+              <span class="font-semibold"><span data-zh>马来西亚</span><span data-en>Malaysia</span></span>
+            </div>
+            <span class="font-heading font-bold text-yellow-400 text-sm"><span data-zh>较低但快速增长</span><span data-en>Low but rapidly growing</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:7%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>EV 免税政策推动</span><span data-en>Driven by EV tax exemption policies</span></p>
+        </div>
+        <!-- 菲律宾 -->
+        <div class="ev-bar-item">
+          <div class="flex justify-between items-baseline mb-1.5">
+            <div class="flex items-center gap-2">
+              <span class="text-lg">🇵🇭</span>
+              <span class="font-semibold"><span data-zh>菲律宾</span><span data-en>Philippines</span></span>
+            </div>
+            <span class="font-heading font-bold text-yellow-400 text-sm"><span data-zh>较低但快速增长</span><span data-en>Low but rapidly growing</span></span>
+          </div>
+          <div class="gauge-track h-4 rounded-full">
+            <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:5%"></div>
+          </div>
+          <p class="text-xs opacity-60 mt-1"><span data-zh>起步阶段</span><span data-en>Early stage</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A.3 产业链分析 -->
+<section id="a3" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.3 产业链分析</span><span data-en>A.3 Value Chain Analysis</span></h3>
+  </div>
+
+  <!-- 产业链结构图 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-project-diagram text-electric-orange"></i> <span data-zh>产业链结构图</span><span data-en>Value Chain Structure</span>
+    </h4>
+    <div class="card p-6">
+      <div class="flex flex-col md:flex-row items-stretch gap-4">
+        <div class="flex-1 p-5 rounded-xl bg-gradient-to-br from-electric-orange/15 to-electric-orange/5 border border-electric-orange/20 text-center">
+          <div class="text-electric-orange text-2xl mb-2"><i class="fas fa-cubes"></i></div>
+          <h5 class="font-heading font-bold text-electric-orange mb-2"><span data-zh>上游</span><span data-en>Upstream</span></h5>
+          <p class="text-sm opacity-80"><span data-zh>钢铁 / 铝材 / 橡胶 / 塑料 / 电子元器件 / 动力电池</span><span data-en>Steel / Aluminum / Rubber / Plastics / Electronics / Power Batteries</span></p>
+        </div>
+        <div class="hidden md:flex items-center text-electric-orange text-2xl"><i class="fas fa-arrow-right"></i></div>
+        <div class="flex md:hidden justify-center text-electric-orange text-2xl"><i class="fas fa-arrow-down"></i></div>
+        <div class="flex-1 p-5 rounded-xl bg-gradient-to-br from-emerald-accent/15 to-emerald-accent/5 border border-emerald-accent/20 text-center">
+          <div class="text-emerald-accent text-2xl mb-2"><i class="fas fa-industry"></i></div>
+          <h5 class="font-heading font-bold text-emerald-accent mb-2"><span data-zh>中游</span><span data-en>Midstream</span></h5>
+          <p class="text-sm opacity-80"><span data-zh>整车组装 / 零部件制造</span><span data-en>Vehicle Assembly / Parts Manufacturing</span></p>
+        </div>
+        <div class="hidden md:flex items-center text-emerald-accent text-2xl"><i class="fas fa-arrow-right"></i></div>
+        <div class="flex md:hidden justify-center text-emerald-accent text-2xl"><i class="fas fa-arrow-down"></i></div>
+        <div class="flex-1 p-5 rounded-xl bg-gradient-to-br from-blue-500/15 to-blue-500/5 border border-blue-500/20 text-center">
+          <div class="text-blue-400 text-2xl mb-2"><i class="fas fa-store"></i></div>
+          <h5 class="font-heading font-bold text-blue-400 mb-2"><span data-zh>下游</span><span data-en>Downstream</span></h5>
+          <p class="text-sm opacity-80"><span data-zh>经销商网络 / 售后服务 / 二手车 / 汽车金融</span><span data-en>Dealer Networks / After-sales / Used Vehicles / Auto Finance</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 各环节分析 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-layer-group text-emerald-accent"></i> <span data-zh>各环节分析</span><span data-en>Segment Analysis</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead>
+          <tr><th><span data-zh>环节</span><span data-en>Segment</span></th><th><span data-zh>主要内容</span><span data-en>Key Content</span></th><th><span data-zh>东南亚代表企业</span><span data-en>Representative Companies in SEA</span></th><th><span data-zh>利润率特征</span><span data-en>Margin Profile</span></th><th><span data-zh>议价能力</span><span data-en>Bargaining Power</span></th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold text-electric-orange"><span data-zh>上游</span><span data-en>Upstream</span></td>
+            <td><span data-zh>钢铁、铝材、橡胶、塑料、电子元器件、动力电池（主要进口）</span><span data-en>Steel, aluminum, rubber, plastics, electronics, power batteries (mostly imported)</span></td>
+            <td><span data-zh>CATL（电池供应）、本地橡胶/钢铁供应商</span><span data-en>CATL (battery supply), local rubber/steel suppliers</span></td>
+            <td><span data-zh>中等（原材料波动大）</span><span data-en>Medium (high raw material volatility)</span></td>
+            <td><span data-zh>中（电池供应商议价能力上升）</span><span data-en>Medium (battery suppliers gaining leverage)</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-emerald-accent"><span data-zh>中游</span><span data-en>Midstream</span></td>
+            <td><span data-zh>整车组装（泰国和印尼为区域制造中心）；日系车企设厂数十年；中国车企正在建设新工厂</span><span data-en>Vehicle assembly (Thailand and Indonesia as regional manufacturing hubs); Japanese OEMs with decades of presence; Chinese OEMs building new plants</span></td>
+            <td><span data-zh>丰田、本田、三菱（日系）；BYD、长城、奇瑞（中国）</span><span data-en>Toyota, Honda, Mitsubishi (Japanese); BYD, GWM, Chery (Chinese)</span></td>
+            <td><span data-zh>较薄（3–5%）</span><span data-en>Thin (3–5%)</span></td>
+            <td><span data-zh>中</span><span data-en>Medium</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold text-blue-400"><span data-zh>下游</span><span data-en>Downstream</span></td>
+            <td><span data-zh>经销商网络、售后服务、二手车、汽车金融</span><span data-en>Dealer networks, after-sales services, used vehicles, auto finance</span></td>
+            <td><span data-zh>Astra International（印尼）、Sime Darby（马来西亚）</span><span data-en>Astra International (Indonesia), Sime Darby (Malaysia)</span></td>
+            <td><span data-zh>较高（售后 15–25%）</span><span data-en>Higher (after-sales 15–25%)</span></td>
+            <td><span data-zh>中</span><span data-en>Medium</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 价值链利润分布 -->
+  <div class="reveal">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-coins text-electric-orange"></i> <span data-zh>价值链利润分布</span><span data-en>Value Chain Profit Distribution</span>
+    </h4>
+    <div class="card p-6">
+      <p class="text-sm leading-relaxed opacity-90"><span data-zh>东南亚汽车行业的利润分布呈现"微笑曲线"特征：整车制造环节利润率最薄（3–5%），主要受制于激烈的价格竞争和高固定成本；售后市场利润率最高（15–25%），包括维修保养、零配件销售和延保服务；汽车金融利润率同样可观。与全球市场相比，东南亚的本地化特征在于：上游零部件供应链相对薄弱，大量核心零部件依赖进口（尤其是动力电池），这压缩了中游制造商的利润空间。</span><span data-en>The profit distribution in the SEA automotive industry follows a "smile curve" pattern: vehicle assembly has the thinnest margins (3–5%), constrained by intense price competition and high fixed costs; the aftermarket has the highest margins (15–25%), including maintenance, parts sales, and extended warranties; auto finance margins are also substantial. Compared to global markets, SEA's localization challenge is a relatively weak upstream parts supply chain, with heavy reliance on imports for core components (especially power batteries), which compresses midstream manufacturers' margins.</span></p>
+      <!-- Mini visual: Smile curve -->
+      <div class="mt-6 flex items-end justify-center gap-2 h-32">
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xs opacity-60"><span data-zh>上游</span><span data-en>Upstream</span></span>
+          <div class="w-16 sm:w-20 bg-electric-orange/30 rounded-t-lg" style="height:60%"></div>
+          <span class="text-xs font-semibold text-electric-orange"><span data-zh>中等</span><span data-en>Medium</span></span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xs opacity-60"><span data-zh>中游</span><span data-en>Midstream</span></span>
+          <div class="w-16 sm:w-20 bg-red-400/30 rounded-t-lg" style="height:25%"></div>
+          <span class="text-xs font-semibold text-red-400">3-5%</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xs opacity-60"><span data-zh>下游售后</span><span data-en>After-sales</span></span>
+          <div class="w-16 sm:w-20 bg-emerald-accent/30 rounded-t-lg" style="height:90%"></div>
+          <span class="text-xs font-semibold text-emerald-accent">15-25%</span>
+        </div>
+        <div class="flex flex-col items-center gap-1">
+          <span class="text-xs opacity-60"><span data-zh>汽车金融</span><span data-en>Auto Finance</span></span>
+          <div class="w-16 sm:w-20 bg-blue-400/30 rounded-t-lg" style="height:75%"></div>
+          <span class="text-xs font-semibold text-blue-400"><span data-zh>可观</span><span data-en>Substantial</span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A.4 发展历程 - 垂直时间线 -->
+<section id="a4" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.4 发展历程</span><span data-en>A.4 Development History</span></h3>
+  </div>
+  <div class="card p-6 reveal">
+    <div class="relative pl-12">
+      <div class="timeline-line"></div>
+
+      <!-- 奠基期 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot" style="border-color:#f97316;"></div>
+        <div class="ml-4">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="font-heading font-bold text-electric-orange text-lg"><span data-zh>奠基期</span><span data-en>Foundation Era</span></span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange">1960s–1980s</span>
+          </div>
+          <p class="text-sm font-semibold mb-1"><span data-zh>日系车企进入泰国和印尼建厂，建立区域制造基础</span><span data-en>Japanese OEMs entered Thailand and Indonesia, establishing regional manufacturing foundations</span></p>
+          <p class="text-sm opacity-70"><span data-zh>丰田、本田、三菱在泰国和印尼设立组装工厂，泰国获"亚洲底特律"称号</span><span data-en>Toyota, Honda, and Mitsubishi set up assembly plants in Thailand and Indonesia; Thailand earned the title "Detroit of Asia"</span></p>
+        </div>
+      </div>
+
+      <!-- 成长期 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot" style="border-color:#fb923c;"></div>
+        <div class="ml-4">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="font-heading font-bold text-electric-orange-light text-lg"><span data-zh>成长期</span><span data-en>Growth Era</span></span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange">1990s–2000s</span>
+          </div>
+          <p class="text-sm font-semibold mb-1"><span data-zh>区域分工形成，泰国和印尼成为出口制造中心</span><span data-en>Regional division of labor formed; Thailand and Indonesia became export manufacturing hubs</span></p>
+          <p class="text-sm opacity-70"><span data-zh>泰国成为全球皮卡生产中心，印尼成为 MPV 生产中心</span><span data-en>Thailand became a global pickup production hub; Indonesia became an MPV production hub</span></p>
+        </div>
+      </div>
+
+      <!-- 成熟期 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot" style="border-color:#10b981;"></div>
+        <div class="ml-4">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="font-heading font-bold text-emerald-accent text-lg"><span data-zh>成熟期</span><span data-en>Maturity Era</span></span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-emerald-accent/20 text-emerald-accent">2010s</span>
+          </div>
+          <p class="text-sm font-semibold mb-1"><span data-zh>年销量突破 300 万辆，日系品牌占据绝对主导地位</span><span data-en>Annual sales exceeded 3 million units; Japanese brands held absolute dominance</span></p>
+          <p class="text-sm opacity-70"><span data-zh>日系品牌合计份额超 80%，市场格局高度稳定</span><span data-en>Japanese brands held over 80% combined share; market structure was highly stable</span></p>
+        </div>
+      </div>
+
+      <!-- 转型期 -->
+      <div class="relative mb-10">
+        <div class="timeline-dot" style="border-color:#3b82f6;"></div>
+        <div class="ml-4">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="font-heading font-bold text-blue-400 text-lg"><span data-zh>转型期</span><span data-en>Transition Era</span></span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-blue-400/20 text-blue-400">2022–2023</span>
+          </div>
+          <p class="text-sm font-semibold mb-1"><span data-zh>中国 EV 品牌大举进入，电动化浪潮开启</span><span data-en>Chinese EV brands entered en masse; the electrification wave began</span></p>
+          <p class="text-sm opacity-70"><span data-zh>BYD、长城、哪吒等进入泰国市场，泰国成为东南亚 EV 桥头堡</span><span data-en>BYD, GWM, Neta and others entered the Thai market; Thailand became the EV beachhead in SEA</span></p>
+        </div>
+      </div>
+
+      <!-- 当前阶段 -->
+      <div class="relative">
+        <div class="timeline-dot" style="border-color:#f97316; background:#f97316;"></div>
+        <div class="ml-4">
+          <div class="flex flex-wrap items-center gap-2 mb-1">
+            <span class="font-heading font-bold text-electric-orange text-lg"><span data-zh>当前阶段</span><span data-en>Current Phase</span></span>
+            <span class="text-xs px-2 py-0.5 rounded-full bg-electric-orange/20 text-electric-orange animate-pulse">2024–2025</span>
+          </div>
+          <p class="text-sm font-semibold mb-1"><span data-zh>EV 渗透率快速提升，传统市场承压，竞争格局重塑</span><span data-en>EV penetration rising rapidly; traditional market under pressure; competitive landscape reshaping</span></p>
+          <p class="text-sm opacity-70"><span data-zh>新加坡和越南 EV 渗透率达 40%，泰国达 21%；印尼和泰国整体销量下滑；中国品牌份额快速上升</span><span data-en>Singapore and Vietnam EV penetration reached 40%, Thailand 21%; Indonesia and Thailand overall sales declined; Chinese brand share rising rapidly</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A.5 竞争格局 -->
+<section id="a5" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.5 竞争格局</span><span data-en>A.5 Competitive Landscape</span></h3>
+  </div>
+
+  <!-- 全球竞争格局概况 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-globe text-electric-orange"></i> <span data-zh>全球竞争格局概况</span><span data-en>Global Competitive Landscape Overview</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>指标</span><span data-en>Metric</span></th><th><span data-zh>数据</span><span data-en>Data</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold"><span data-zh>全球龙头</span><span data-en>Global Leaders</span></td><td><span data-zh>丰田（全球第一）、大众、现代起亚、Stellantis、通用</span><span data-en>Toyota (global #1), Volkswagen, Hyundai-Kia, Stellantis, GM</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>全球格局类型</span><span data-en>Global Structure</span></td><td><span data-zh>群雄割据（传统巨头主导，中国品牌在 EV 领域快速崛起）</span><span data-en>Fragmented oligopoly (traditional giants dominate; Chinese brands rising fast in EV)</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>中国 EV 全球份额（2025 年）</span><span data-en>Chinese EV Global Share (2025)</span></td><td><span data-zh>约 28%</span><span data-en>Approx. 28%</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 东南亚竞争格局 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-chess text-emerald-accent"></i> <span data-zh>东南亚竞争格局</span><span data-en>SEA Competitive Landscape</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>指标</span><span data-en>Metric</span></th><th><span data-zh>数据</span><span data-en>Data</span></th><th><span data-zh>说明</span><span data-en>Notes</span></th></tr></thead>
+        <tbody>
+          <tr><td class="font-semibold"><span data-zh>日系品牌合计份额</span><span data-en>Japanese Brands Combined Share</span></td><td class="font-heading font-bold text-electric-orange"><span data-zh>约 70–75%</span><span data-en>Approx. 70–75%</span></td><td><span data-zh>仍为主导力量，但份额持续下降</span><span data-en>Still dominant, but share declining steadily</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>格局类型</span><span data-en>Structure Type</span></td><td><span data-zh>从"日系一家独大"向"日系+中国+本地"三足鼎立演变</span><span data-en>Evolving from "Japanese dominance" to a "Japanese + Chinese + Local" three-way competition</span></td><td><span data-zh>格局正在快速重塑</span><span data-en>Landscape reshaping rapidly</span></td></tr>
+          <tr><td class="font-semibold"><span data-zh>与全球格局的差异</span><span data-en>Difference from Global</span></td><td><span data-zh>日系品牌在东南亚的主导地位远强于全球平均水平</span><span data-en>Japanese brand dominance in SEA far exceeds global average</span></td><td><span data-zh>本地品牌（Perodua、Proton、VinFast）在各自国家有显著份额</span><span data-en>Local brands (Perodua, Proton, VinFast) hold significant share in their home markets</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 主要玩家排名 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-trophy text-electric-orange"></i> <span data-zh>主要玩家排名</span><span data-en>Major Player Rankings</span>
+    </h4>
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <!-- 丰田 -->
+      <div class="card p-5 border-t-4 border-t-electric-orange">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-electric-orange text-white font-heading font-bold text-sm">1</span>
+          <h5 class="font-heading font-bold text-lg"><span data-zh>丰田</span><span data-en>Toyota</span></h5>
+        </div>
+        <div class="space-y-1 text-sm">
+          <p><span class="opacity-60"><span data-zh>市场定位：</span><span data-en>Positioning: </span></span><span data-zh>区域整体第一，全品类覆盖</span><span data-en>Regional #1, full category coverage</span></p>
+          <p><span class="opacity-60"><span data-zh>类型：</span><span data-en>Type: </span></span><span data-zh>国际（日本）</span><span data-en>International (Japan)</span></p>
+          <p><span class="opacity-60"><span data-zh>核心优势：</span><span data-en>Core Strengths: </span></span><span data-zh>数十年渠道积累、品牌信任度、完善的售后网络</span><span data-en>Decades of channel development, brand trust, comprehensive after-sales network</span></p>
+        </div>
+      </div>
+      <!-- 本田 -->
+      <div class="card p-5 border-t-4 border-t-electric-orange-light">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-electric-orange-light text-white font-heading font-bold text-sm">2</span>
+          <h5 class="font-heading font-bold text-lg"><span data-zh>本田</span><span data-en>Honda</span></h5>
+        </div>
+        <div class="space-y-1 text-sm">
+          <p><span class="opacity-60"><span data-zh>市场定位：</span><span data-en>Positioning: </span></span><span data-zh>乘用车强势，轿车和 SUV 领先</span><span data-en>Strong in passenger vehicles, leading in sedans and SUVs</span></p>
+          <p><span class="opacity-60"><span data-zh>类型：</span><span data-en>Type: </span></span><span data-zh>国际（日本）</span><span data-en>International (Japan)</span></p>
+          <p><span class="opacity-60"><span data-zh>核心优势：</span><span data-en>Core Strengths: </span></span><span data-zh>产品可靠性、品牌忠诚度</span><span data-en>Product reliability, brand loyalty</span></p>
+        </div>
+      </div>
+      <!-- Perodua -->
+      <div class="card p-5 border-t-4 border-t-emerald-accent">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-emerald-accent text-white font-heading font-bold text-sm">3</span>
+          <h5 class="font-heading font-bold text-lg">Perodua</h5>
+        </div>
+        <div class="space-y-1 text-sm">
+          <p><span class="opacity-60"><span data-zh>市场定位：</span><span data-en>Positioning: </span></span><span data-zh>马来西亚国民车品牌</span><span data-en>Malaysia's national car brand</span></p>
+          <p><span class="opacity-60"><span data-zh>类型：</span><span data-en>Type: </span></span><span data-zh>本地（马来西亚）</span><span data-en>Local (Malaysia)</span></p>
+          <p><span class="opacity-60"><span data-zh>核心优势：</span><span data-en>Core Strengths: </span></span><span data-zh>极致性价比、政府支持、本地渠道深耕</span><span data-en>Extreme value for money, government support, deep local channel penetration</span></p>
+        </div>
+      </div>
+      <!-- 三菱 -->
+      <div class="card p-5 border-t-4 border-t-blue-400">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-blue-400 text-white font-heading font-bold text-sm">4</span>
+          <h5 class="font-heading font-bold text-lg"><span data-zh>三菱</span><span data-en>Mitsubishi</span></h5>
+        </div>
+        <div class="space-y-1 text-sm">
+          <p><span class="opacity-60"><span data-zh>市场定位：</span><span data-en>Positioning: </span></span><span data-zh>皮卡和 SUV 细分领先</span><span data-en>Leading in pickup and SUV segments</span></p>
+          <p><span class="opacity-60"><span data-zh>类型：</span><span data-en>Type: </span></span><span data-zh>国际（日本）</span><span data-en>International (Japan)</span></p>
+          <p><span class="opacity-60"><span data-zh>核心优势：</span><span data-en>Core Strengths: </span></span><span data-zh>泰国和印尼制造基地、皮卡产品力</span><span data-en>Manufacturing bases in Thailand and Indonesia, strong pickup lineup</span></p>
+        </div>
+      </div>
+      <!-- BYD -->
+      <div class="card p-5 border-t-4 border-t-red-500">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500 text-white font-heading font-bold text-sm">5</span>
+          <h5 class="font-heading font-bold text-lg">BYD</h5>
+        </div>
+        <div class="space-y-1 text-sm">
+          <p><span class="opacity-60"><span data-zh>市场定位：</span><span data-en>Positioning: </span></span><span data-zh>东南亚 NEV 市场领先者</span><span data-en>SEA NEV market leader</span></p>
+          <p><span class="opacity-60"><span data-zh>类型：</span><span data-en>Type: </span></span><span data-zh>国际（中国）</span><span data-en>International (China)</span></p>
+          <p><span class="opacity-60"><span data-zh>核心优势：</span><span data-en>Core Strengths: </span></span><span data-zh>EV 技术领先、垂直整合、性价比优势</span><span data-en>Leading EV technology, vertical integration, cost-performance advantage</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 竞争格局变化趋势 -->
+  <div class="reveal">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-exchange-alt text-emerald-accent"></i> <span data-zh>竞争格局变化趋势</span><span data-en>Competitive Landscape Trends</span>
+    </h4>
+    <div class="card p-6">
+      <p class="text-sm leading-relaxed opacity-90"><span data-zh>东南亚汽车市场正经历数十年来最大的格局变动。日系品牌份额从 80%+ 下降至 70–75%，且下降趋势仍在加速。中国品牌（以 BYD 为首）凭借 EV 产品快速抢占市场，BYD 2025 年出口东南亚增长 216.8%。本地品牌在各自国家保持稳固地位（Perodua 在马来西亚、VinFast 在越南）。新进入者持续涌入，市场从高度集中向多元化竞争演变。</span><span data-en>The SEA automotive market is undergoing its most significant structural shift in decades. Japanese brand share has declined from 80%+ to 70–75%, and the downward trend is accelerating. Chinese brands (led by BYD) are rapidly capturing market share through EV products — BYD's SEA exports grew 216.8% in 2025. Local brands maintain solid positions in their home markets (Perodua in Malaysia, VinFast in Vietnam). New entrants continue to flood in, and the market is evolving from high concentration to diversified competition.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- A.6 玩家图谱 -->
+<section id="a6" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>A.6 玩家图谱</span><span data-en>A.6 Player Map</span></h3>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- 传统龙头 -->
+    <div class="card p-5 reveal reveal-delay-1">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-electric-orange"></span>
+        <h5 class="font-heading font-bold"><span data-zh>传统龙头（国际）</span><span data-en>Traditional Leaders (International)</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-electric-orange mb-2"><span data-zh>丰田、本田、三菱、铃木、日产</span><span data-en>Toyota, Honda, Mitsubishi, Suzuki, Nissan</span></p>
+      <p class="text-sm opacity-70"><span data-zh>深耕东南亚数十年，渠道和品牌优势显著，但电动化转型缓慢</span><span data-en>Decades of deep presence in SEA with strong channel and brand advantages, but slow EV transition</span></p>
+    </div>
+    <!-- 本地龙头 -->
+    <div class="card p-5 reveal reveal-delay-2">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-emerald-accent"></span>
+        <h5 class="font-heading font-bold"><span data-zh>本地龙头</span><span data-en>Local Leaders</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-emerald-accent mb-2"><span data-zh>Perodua（马来西亚）、Proton（马来西亚，吉利控股）、VinFast（越南）</span><span data-en>Perodua (Malaysia), Proton (Malaysia, Geely-controlled), VinFast (Vietnam)</span></p>
+      <p class="text-sm opacity-70"><span data-zh>在各自国家享有政策保护和品牌认同，VinFast 以 EV 为核心差异化</span><span data-en>Enjoy policy protection and brand recognition in their home markets; VinFast differentiates through EV focus</span></p>
+    </div>
+    <!-- 中国挑战者 -->
+    <div class="card p-5 reveal reveal-delay-3">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-red-500"></span>
+        <h5 class="font-heading font-bold"><span data-zh>中国挑战者</span><span data-en>Chinese Challengers</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-red-400 mb-2"><span data-zh>BYD、奇瑞、长城、长安、吉利</span><span data-en>BYD, Chery, GWM, Changan, Geely</span></p>
+      <p class="text-sm opacity-70"><span data-zh>增速最快的群体，以 EV/PHEV 产品切入，正在泰国和印尼建设本地工厂</span><span data-en>Fastest-growing group, entering via EV/PHEV products, building local factories in Thailand and Indonesia</span></p>
+    </div>
+    <!-- 韩系品牌 -->
+    <div class="card p-5 reveal reveal-delay-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-blue-400"></span>
+        <h5 class="font-heading font-bold"><span data-zh>韩系品牌</span><span data-en>Korean Brands</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-blue-400 mb-2"><span data-zh>现代、起亚</span><span data-en>Hyundai, Kia</span></p>
+      <p class="text-sm opacity-70"><span data-zh>份额稳定但不突出，在 EV 领域有一定产品力</span><span data-en>Stable but modest share; some product competitiveness in EV segment</span></p>
+    </div>
+    <!-- 新进入者 -->
+    <div class="card p-5 reveal reveal-delay-5">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-purple-400"></span>
+        <h5 class="font-heading font-bold"><span data-zh>新进入者</span><span data-en>New Entrants</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-purple-400 mb-2"><span data-zh>特斯拉（有限布局）、小鹏、蔚来（观望中）</span><span data-en>Tesla (limited presence), XPeng, NIO (watching)</span></p>
+      <p class="text-sm opacity-70"><span data-zh>尚未大规模进入，关注市场发展</span><span data-en>Not yet entered at scale; monitoring market development</span></p>
+    </div>
+    <!-- 跨界玩家 -->
+    <div class="card p-5 reveal">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+        <h5 class="font-heading font-bold"><span data-zh>跨界玩家</span><span data-en>Cross-industry Players</span></h5>
+      </div>
+      <p class="text-sm font-semibold text-yellow-400 mb-2"><span data-zh>Grab（出行平台）、GoTo（印尼出行+电商）</span><span data-en>Grab (ride-hailing platform), GoTo (Indonesia ride-hailing + e-commerce)</span></p>
+      <p class="text-sm opacity-70"><span data-zh>从出行服务切入汽车生态，影响消费者购车决策和用车方式</span><span data-en>Entering the auto ecosystem through mobility services, influencing consumer purchase decisions and vehicle usage patterns</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PART B: 行业评估 ==================== -->
+<div class="mb-12 reveal">
+  <div class="flex items-center gap-3 mb-2">
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-accent/20 text-emerald-accent font-heading font-bold text-lg">B</span>
+    <h2 class="font-heading text-3xl sm:text-4xl font-bold"><span data-zh>行业评估</span><span data-en>Industry Assessment</span></h2>
+  </div>
+  <div class="h-1 w-24 bg-gradient-to-r from-emerald-accent to-electric-orange rounded-full"></div>
+</div>
+
+<!-- B.1 增长动力分析 -->
+<section id="b1" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>B.1 增长动力分析</span><span data-en>B.1 Growth Driver Analysis</span></h3>
+  </div>
+
+  <!-- 需求侧驱动力 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-users text-electric-orange"></i> <span data-zh>需求侧驱动力</span><span data-en>Demand-side Drivers</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>驱动力</span><span data-en>Driver</span></th><th><span data-zh>强度</span><span data-en>Strength</span></th><th><span data-zh>说明</span><span data-en>Description</span></th><th><span data-zh>持续性</span><span data-en>Duration</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold"><span data-zh>人口红利</span><span data-en>Demographic Dividend</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>强</span><span data-en>Strong</span></span></td>
+            <td><span data-zh>ASEAN 6.8 亿人口，中位年龄约 30 岁，劳动力充裕且年轻化，消费潜力巨大</span><span data-en>ASEAN's 680 million population with median age ~30; abundant young workforce with huge consumption potential</span></td>
+            <td><span data-zh>长期</span><span data-en>Long-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>低汽车保有率</span><span data-en>Low Vehicle Ownership</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>强</span><span data-en>Strong</span></span></td>
+            <td><span data-zh>约 150–200 辆/千人，远低于发达国家 500+ 辆/千人，增长空间显著</span><span data-en>~150–200 vehicles per 1,000 people, far below 500+ in developed countries; significant growth headroom</span></td>
+            <td><span data-zh>长期</span><span data-en>Long-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>中产阶级扩大</span><span data-en>Expanding Middle Class</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>强</span><span data-en>Strong</span></span></td>
+            <td><span data-zh>城镇化率持续提升，消费升级趋势明显，首购需求旺盛</span><span data-en>Rising urbanization, clear consumption upgrade trend, strong first-time buyer demand</span></td>
+            <td><span data-zh>长期</span><span data-en>Long-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>EV 需求爆发</span><span data-en>EV Demand Surge</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>政策补贴叠加中国品牌带来的高性价比 EV 选择，消费者接受度快速提升</span><span data-en>Policy subsidies combined with cost-effective EV options from Chinese brands; consumer acceptance rising rapidly</span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 供给侧驱动力 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-industry text-emerald-accent"></i> <span data-zh>供给侧驱动力</span><span data-en>Supply-side Drivers</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>驱动力</span><span data-en>Driver</span></th><th><span data-zh>强度</span><span data-en>Strength</span></th><th><span data-zh>说明</span><span data-en>Description</span></th><th><span data-zh>持续性</span><span data-en>Duration</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold"><span data-zh>中国车企大规模建厂</span><span data-en>Large-scale Chinese OEM Factory Construction</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>强</span><span data-en>Strong</span></span></td>
+            <td><span data-zh>BYD 泰国工厂、长城泰国工厂、奇瑞印尼工厂等相继投产，带来新产能和新产品</span><span data-en>BYD Thailand plant, GWM Thailand plant, Chery Indonesia plant coming online, bringing new capacity and products</span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>本地化生产加速</span><span data-en>Accelerating Localization</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>各国要求提高本地化率，推动零部件供应链本地化建设</span><span data-en>Countries requiring higher local content ratios, driving localization of parts supply chains</span></td>
+            <td><span data-zh>长期</span><span data-en>Long-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>充电基础设施逐步完善</span><span data-en>Gradual Charging Infrastructure Improvement</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>各国政府和企业加大充电桩建设投入，缓解 EV 里程焦虑</span><span data-en>Governments and companies increasing charging station investment, alleviating EV range anxiety</span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 政策驱动力 -->
+  <div class="reveal mb-8">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-landmark text-blue-400"></i> <span data-zh>政策驱动力</span><span data-en>Policy Drivers</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>政策/法规</span><span data-en>Policy/Regulation</span></th><th><span data-zh>影响方向</span><span data-en>Impact Direction</span></th><th><span data-zh>影响程度</span><span data-en>Impact Level</span></th><th><span data-zh>时间窗口</span><span data-en>Time Window</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold"><span data-zh>泰国 30@30 政策（2030 年 30% 零排放车辆生产目标）</span><span data-en>Thailand 30@30 Policy (30% ZEV production target by 2030)</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好</span><span data-en>Positive</span></span></td>
+            <td><span class="font-bold text-electric-orange"><span data-zh>高</span><span data-en>High</span></span></td>
+            <td><span data-zh>中期（至 2030 年）</span><span data-en>Mid-term (through 2030)</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>泰国 EV 3.0/3.5 政策（进口关税减免最高 40%、消费税从 8% 降至 2%、购车补贴最高 10 万泰铢）</span><span data-en>Thailand EV 3.0/3.5 Policy (up to 40% import duty reduction, excise tax cut from 8% to 2%, purchase subsidy up to 100K THB)</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好</span><span data-en>Positive</span></span></td>
+            <td><span class="font-bold text-electric-orange"><span data-zh>高</span><span data-en>High</span></span></td>
+            <td><span data-zh>短中期（政策窗口期）</span><span data-en>Short to mid-term (policy window)</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>印尼 EV 激励（进口关税减免、奢侈品税豁免）</span><span data-en>Indonesia EV Incentives (import duty reduction, luxury tax exemption)</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好</span><span data-en>Positive</span></span></td>
+            <td><span class="font-bold text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>越南政府支持 VinFast 及本地 EV 产业</span><span data-en>Vietnam Government Support for VinFast and Local EV Industry</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好</span><span data-en>Positive</span></span></td>
+            <td><span class="font-bold text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>马来西亚 EV 免税政策</span><span data-en>Malaysia EV Tax Exemption Policy</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好</span><span data-en>Positive</span></span></td>
+            <td><span class="font-bold text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>中期</span><span data-en>Mid-term</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>各国排放标准趋严</span><span data-en>Tightening Emission Standards Across Countries</span></td>
+            <td><span class="text-emerald-accent"><i class="fas fa-arrow-up mr-1"></i><span data-zh>利好（EV）</span><span data-en>Positive (EV)</span></span> / <span class="text-red-400"><i class="fas fa-arrow-down mr-1"></i><span data-zh>利空（ICE）</span><span data-en>Negative (ICE)</span></span></td>
+            <td><span class="font-bold text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            <td><span data-zh>长期</span><span data-en>Long-term</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 技术驱动力 -->
+  <div class="reveal">
+    <h4 class="font-heading text-lg font-semibold mb-4 flex items-center gap-2">
+      <i class="fas fa-microchip text-purple-400"></i> <span data-zh>技术驱动力</span><span data-en>Technology Drivers</span>
+    </h4>
+    <div class="card p-6 overflow-x-auto">
+      <table class="data-table">
+        <thead><tr><th><span data-zh>技术趋势</span><span data-en>Technology Trend</span></th><th><span data-zh>成熟度</span><span data-en>Maturity</span></th><th><span data-zh>影响</span><span data-en>Impact</span></th><th><span data-zh>时间窗口</span><span data-en>Time Window</span></th></tr></thead>
+        <tbody>
+          <tr>
+            <td class="font-semibold"><span data-zh>电动化转型</span><span data-en>Electrification Transition</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>成长期</span><span data-en>Growth Stage</span></span></td>
+            <td><span data-zh>重塑整车制造格局，降低传统日系品牌的技术壁垒优势，中国品牌借此弯道超车</span><span data-en>Reshaping vehicle manufacturing landscape, lowering Japanese brands' technology barrier advantage, enabling Chinese brands to leapfrog</span></td>
+            <td><span data-zh>中期（3–5 年）</span><span data-en>Mid-term (3–5 years)</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>智能网联汽车</span><span data-en>Connected & Intelligent Vehicles</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>早期</span><span data-en>Early Stage</span></span></td>
+            <td><span data-zh>ADAS 和车联网功能逐步成为中高端车型标配，提升产品差异化</span><span data-en>ADAS and V2X features becoming standard in mid-to-high-end models, enhancing product differentiation</span></td>
+            <td><span data-zh>中长期（5–10 年）</span><span data-en>Mid to long-term (5–10 years)</span></td>
+          </tr>
+          <tr>
+            <td class="font-semibold"><span data-zh>电池技术进步</span><span data-en>Battery Technology Advancement</span></td>
+            <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent"><span data-zh>成长期</span><span data-en>Growth Stage</span></span></td>
+            <td><span data-zh>磷酸铁锂和固态电池技术进步持续降低 EV 成本，缩小与 ICE 的价格差距</span><span data-en>LFP and solid-state battery advances continue to reduce EV costs, narrowing the price gap with ICE</span></td>
+            <td><span data-zh>中期（3–5 年）</span><span data-en>Mid-term (3–5 years)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- B.2 竞争强度评估（波特五力） -->
+<section id="b2" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>B.2 竞争强度评估（波特五力）</span><span data-en>B.2 Competitive Intensity (Porter's Five Forces)</span></h3>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <!-- 现有竞争者 -->
+    <div class="card p-5 force-strong rounded-xl reveal reveal-delay-1">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400"><i class="fas fa-swords text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>现有竞争者之间的竞争</span><span data-en>Rivalry Among Existing Competitors</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>强</span><span data-en>Strong</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>日系品牌 vs 中国品牌 vs 本地品牌三方角力，价格战加剧，尤其在 EV 和入门级乘用车细分市场</span><span data-en>Three-way battle between Japanese, Chinese, and local brands; price wars intensifying, especially in EV and entry-level passenger vehicle segments</span></p>
+    </div>
+    <!-- 新进入者 -->
+    <div class="card p-5 force-strong rounded-xl reveal reveal-delay-2">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400"><i class="fas fa-door-open text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>新进入者的威胁</span><span data-en>Threat of New Entrants</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>强</span><span data-en>Strong</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>中国品牌持续涌入东南亚市场，EV 降低了传统整车制造的技术和资金壁垒</span><span data-en>Chinese brands continue flooding into SEA; EVs have lowered traditional vehicle manufacturing technology and capital barriers</span></p>
+    </div>
+    <!-- 替代品 -->
+    <div class="card p-5 force-medium rounded-xl reveal reveal-delay-3">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400"><i class="fas fa-random text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>替代品的威胁</span><span data-en>Threat of Substitutes</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>公共交通、网约车（Grab）、摩托车在部分市场（越南、印尼）替代汽车出行需求</span><span data-en>Public transit, ride-hailing (Grab), and motorcycles substitute for car travel demand in some markets (Vietnam, Indonesia)</span></p>
+    </div>
+    <!-- 供应商 -->
+    <div class="card p-5 force-medium rounded-xl reveal reveal-delay-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400"><i class="fas fa-truck text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>供应商的议价能力</span><span data-en>Bargaining Power of Suppliers</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>电池供应商（CATL 等）议价能力上升，传统零部件供应商议价能力因竞争加剧而下降</span><span data-en>Battery suppliers (CATL, etc.) gaining bargaining power; traditional parts suppliers losing leverage due to intensifying competition</span></p>
+    </div>
+    <!-- 买方 -->
+    <div class="card p-5 force-medium rounded-xl reveal reveal-delay-5">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400"><i class="fas fa-user-tag text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>买方的议价能力</span><span data-en>Bargaining Power of Buyers</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>消费者可选品牌和车型大幅增加，但品牌忠诚度（尤其对日系品牌）仍然存在</span><span data-en>Consumers have significantly more brand and model choices, but brand loyalty (especially to Japanese brands) persists</span></p>
+    </div>
+    <!-- 综合 -->
+    <div class="card p-5 rounded-xl reveal border-2 border-electric-orange/50" style="background: linear-gradient(135deg, rgba(249,115,22,0.15), rgba(249,115,22,0.05));">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-electric-orange/20 text-electric-orange"><i class="fas fa-gauge-high text-sm"></i></span>
+        <h5 class="font-heading font-bold text-sm"><span data-zh>综合竞争强度</span><span data-en>Overall Competitive Intensity</span></h5>
+      </div>
+      <div class="mb-2"><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>强</span><span data-en>Strong</span></span></div>
+      <p class="text-sm opacity-80"><span data-zh>东南亚汽车市场正处于竞争最激烈的历史时期，中国品牌的进入打破了日系品牌数十年的稳定格局</span><span data-en>The SEA auto market is at its most competitive period in history; Chinese brands' entry has disrupted the decades-long stable Japanese-dominated landscape</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- B.3 进入壁垒分析 -->
+<section id="b3" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>B.3 进入壁垒分析</span><span data-en>B.3 Entry Barrier Analysis</span></h3>
+  </div>
+  <div class="card p-6 overflow-x-auto reveal">
+    <table class="data-table">
+      <thead><tr><th><span data-zh>壁垒类型</span><span data-en>Barrier Type</span></th><th><span data-zh>高度</span><span data-en>Level</span></th><th><span data-zh>说明</span><span data-en>Description</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="font-semibold"><span data-zh>资金壁垒</span><span data-en>Capital Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>整车制造工厂投资通常在 5–10 亿美元以上；即使是 CKD 组装也需数亿美元级投入</span><span data-en>Vehicle manufacturing plant investment typically exceeds USD 500M–1B; even CKD assembly requires hundreds of millions</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>技术壁垒</span><span data-en>Technology Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span data-zh>EV 时代技术壁垒有所降低（相比 ICE 发动机和变速箱），但电池管理、智能驾驶等仍需积累</span><span data-en>EV era has lowered technology barriers (vs. ICE engines and transmissions), but BMS and autonomous driving still require accumulation</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>规模壁垒</span><span data-en>Scale Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>汽车制造规模效应显著，年产 10 万辆以下难以实现盈利</span><span data-en>Significant economies of scale in auto manufacturing; profitability difficult below 100K units/year</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>品牌/渠道壁垒</span><span data-en>Brand/Channel Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>日系品牌在东南亚经营数十年，经销商网络和售后服务体系深入城镇，新品牌建设渠道耗时耗资</span><span data-en>Japanese brands have operated in SEA for decades with deep dealer and after-sales networks; new brands face time and cost challenges building channels</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>政策/牌照壁垒</span><span data-en>Policy/License Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span data-zh>各国对汽车制造有本地化率要求（如印尼要求 CKD 组装），但 EV 领域政策相对宽松</span><span data-en>Countries have local content requirements for auto manufacturing (e.g., Indonesia requires CKD assembly), but EV policies are relatively relaxed</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>人才壁垒</span><span data-en>Talent Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span data-zh>泰国和印尼有成熟的汽车制造人才储备，但 EV 和智能化领域人才相对稀缺</span><span data-en>Thailand and Indonesia have mature auto manufacturing talent pools, but EV and smart vehicle talent is relatively scarce</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>本地化壁垒</span><span data-en>Localization Barrier</span></td>
+          <td><span class="inline-block px-3 py-1 rounded-full text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span data-zh>各国消费偏好差异大（印尼偏好 MPV、泰国偏好皮卡、马来西亚偏好轿车），需要针对性产品策略</span><span data-en>Consumer preferences vary widely (Indonesia prefers MPVs, Thailand pickups, Malaysia sedans); targeted product strategies required</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- B.4 风险因素 -->
+<section id="b4" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>B.4 风险因素</span><span data-en>B.4 Risk Factors</span></h3>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <!-- 传统市场销量下滑 -->
+    <div class="card p-5 risk-high reveal reveal-delay-1">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>传统市场销量下滑</span><span data-en>Traditional Market Sales Decline</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>严重度：高</span><span data-en>Severity: High</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>概率：高</span><span data-en>Probability: High</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>泰国 -15.6%、印尼 -8.7%，消费信心不足叠加 EV 替代效应，传统燃油车市场持续承压</span><span data-en>Thailand -15.6%, Indonesia -8.7%; weak consumer confidence combined with EV substitution effect; traditional ICE market under sustained pressure</span></p>
+    </div>
+    <!-- 日系品牌电动化转型缓慢 -->
+    <div class="card p-5 risk-high reveal reveal-delay-2">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>日系品牌电动化转型缓慢</span><span data-en>Slow EV Transition by Japanese Brands</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>严重度：高</span><span data-en>Severity: High</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>日系品牌占区域供应链核心地位，其转型迟缓可能拖累整个区域零部件供应链的升级</span><span data-en>Japanese brands hold core positions in the regional supply chain; their slow transition may drag down the entire regional parts supply chain upgrade</span></p>
+    </div>
+    <!-- 中国品牌过度竞争 -->
+    <div class="card p-5 risk-medium reveal reveal-delay-3">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>中国品牌过度竞争导致价格战</span><span data-en>Chinese Brand Overcrowding Leading to Price Wars</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>概率：高</span><span data-en>Probability: High</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>多家中国品牌同时涌入，产品定位重叠，价格战压缩全行业利润率</span><span data-en>Multiple Chinese brands entering simultaneously with overlapping positioning; price wars compressing industry-wide margins</span></p>
+    </div>
+    <!-- EV 补贴政策到期 -->
+    <div class="card p-5 risk-medium reveal reveal-delay-4">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>EV 补贴政策到期后需求可持续性</span><span data-en>Demand Sustainability After EV Subsidy Expiry</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>泰国 EV 3.0/3.5 等补贴政策有明确时间窗口，退坡后消费者购买意愿存疑</span><span data-en>Thailand's EV 3.0/3.5 subsidies have defined time windows; consumer willingness to buy at full price after phase-out is uncertain</span></p>
+    </div>
+    <!-- 充电基础设施不足 -->
+    <div class="card p-5 risk-medium reveal reveal-delay-5">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>充电基础设施不足</span><span data-en>Insufficient Charging Infrastructure</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>概率：高</span><span data-en>Probability: High</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>除新加坡外，东南亚各国充电桩密度远低于中国和欧洲，制约 EV 向二三线城市渗透</span><span data-en>Except Singapore, charging station density across SEA is far below China and Europe, constraining EV penetration into tier-2/3 cities</span></p>
+    </div>
+    <!-- 地缘政治风险 -->
+    <div class="card p-5 risk-medium reveal">
+      <div class="flex items-center justify-between mb-2">
+        <h5 class="font-heading font-bold text-sm"><span data-zh>地缘政治风险</span><span data-en>Geopolitical Risk</span></h5>
+        <div class="flex gap-1">
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>概率：中</span><span data-en>Probability: Medium</span></span>
+        </div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>中美贸易摩擦可能波及东南亚汽车供应链，尤其是中国品牌在东南亚的投资和出口</span><span data-en>US-China trade friction may impact SEA auto supply chains, especially Chinese brand investments and exports in SEA</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- B.5 行业吸引力记分卡 -->
+<section id="b5" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>B.5 行业吸引力记分卡</span><span data-en>B.5 Industry Attractiveness Scorecard</span></h3>
+  </div>
+  <div class="space-y-4">
+    <!-- 市场规模与增速 -->
+    <div class="card p-5 reveal reveal-delay-1">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>市场规模与增速</span><span data-en>Market Size & Growth</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:55%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>总量 316 万辆但同比 -2.3%，整体市场承压；EV 细分市场高增长（CAGR 7.2%），结构性机会明显</span><span data-en>Total volume 3.16M units but YoY -2.3%, overall market under pressure; EV segment high growth (CAGR 7.2%), clear structural opportunities</span></p>
+    </div>
+    <!-- 利润率水平 -->
+    <div class="card p-5 reveal reveal-delay-2">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>利润率水平</span><span data-en>Margin Levels</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:50%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>整车制造利润率薄（3–5%），售后市场利润率高（15–25%），汽车金融利润率可观</span><span data-en>Vehicle manufacturing margins thin (3–5%), aftermarket margins high (15–25%), auto finance margins substantial</span></p>
+    </div>
+    <!-- 竞争格局稳定性 -->
+    <div class="card p-5 reveal reveal-delay-3">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>竞争格局稳定性</span><span data-en>Competitive Stability</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:45%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>正在从日系主导向多元化转变，格局不稳定，既是风险也是机会</span><span data-en>Transitioning from Japanese dominance to diversification; unstable landscape presents both risk and opportunity</span></p>
+    </div>
+    <!-- 进入壁垒 -->
+    <div class="card p-5 reveal reveal-delay-4">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>进入壁垒</span><span data-en>Entry Barriers</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:50%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>EV 降低了技术壁垒，但本地化生产要求和渠道建设仍构成较高门槛</span><span data-en>EVs have lowered technology barriers, but localization requirements and channel building still pose significant hurdles</span></p>
+    </div>
+    <!-- 政策环境 -->
+    <div class="card p-5 reveal reveal-delay-5">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-emerald-accent flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>政策环境</span><span data-en>Policy Environment</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-emerald-accent/20 text-emerald-accent">🟢</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-emerald-accent to-emerald-dark" style="--target-width:75%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>多国积极推动 EV 转型，补贴力度大，政策方向明确且持续</span><span data-en>Multiple countries actively promoting EV transition with strong subsidies and clear, sustained policy direction</span></p>
+    </div>
+    <!-- 技术变革风险 -->
+    <div class="card p-5 reveal">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-4 h-4 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold"><span data-zh>技术变革风险</span><span data-en>Technology Disruption Risk</span></h5>
+          <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-3 rounded-full mb-2">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500" style="--target-width:55%"></div>
+      </div>
+      <p class="text-sm opacity-80"><span data-zh>电动化转型加速，传统燃油车面临替代风险，但也为新玩家创造了窗口期</span><span data-en>Electrification accelerating; traditional ICE vehicles face substitution risk, but also creates a window for new players</span></p>
+    </div>
+    <!-- 综合吸引力 -->
+    <div class="card p-5 reveal border-2 border-electric-orange/40" style="background: linear-gradient(135deg, rgba(249,115,22,0.08), rgba(16,185,129,0.05));">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-3 mb-3">
+        <div class="flex items-center gap-3 flex-1">
+          <span class="w-5 h-5 rounded-full bg-yellow-400 flex-shrink-0"></span>
+          <h5 class="font-heading font-bold text-lg"><span data-zh>综合吸引力</span><span data-en>Overall Attractiveness</span></h5>
+          <span class="px-3 py-1 rounded text-sm font-bold bg-yellow-400/20 text-yellow-400">🟡</span>
+        </div>
+      </div>
+      <div class="gauge-track h-4 rounded-full mb-3">
+        <div class="progress-fill h-full rounded-full bg-gradient-to-r from-yellow-400 to-electric-orange" style="--target-width:55%"></div>
+      </div>
+      <p class="text-sm opacity-90"><span data-zh>传统燃油车市场承压，但 EV 转型带来巨大结构性机会；适合有 EV 技术和供应链优势的企业进入</span><span data-en>Traditional ICE market under pressure, but EV transition brings massive structural opportunities; suitable for companies with EV technology and supply chain advantages</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PART C: 判断与展望 ==================== -->
+<div class="mb-12 reveal">
+  <div class="flex items-center gap-3 mb-2">
+    <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 font-heading font-bold text-lg">C</span>
+    <h2 class="font-heading text-3xl sm:text-4xl font-bold"><span data-zh>判断与展望</span><span data-en>Outlook & Insights</span></h2>
+  </div>
+  <div class="h-1 w-24 bg-gradient-to-r from-blue-400 to-electric-orange rounded-full"></div>
+  <p class="mt-3 text-sm opacity-60 italic"><i class="fas fa-info-circle mr-1"></i><span data-zh>编者注：本部分内容为分析师基于 Part A/B 事实和数据的研判观点，不构成投资建议。</span><span data-en>Editor's note: This section contains analyst opinions based on Part A/B facts and data, and does not constitute investment advice.</span></p>
+</div>
+
+<!-- C.1 核心结论 -->
+<section id="c1" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>C.1 核心结论</span><span data-en>C.1 Key Conclusions</span></h3>
+  </div>
+  <div class="card p-6 reveal border-l-4 border-l-electric-orange" style="background: linear-gradient(135deg, rgba(249,115,22,0.08), rgba(16,185,129,0.03));">
+    <div class="flex items-start gap-3">
+      <i class="fas fa-bullseye text-electric-orange text-xl mt-1 flex-shrink-0"></i>
+      <p class="text-sm sm:text-base leading-relaxed"><span data-zh>东南亚汽车行业正处于历史性转折点：传统燃油车市场增长放缓甚至下滑（2025 年整体 -2.3%），但电动化转型带来巨大结构性机会（EV 市场 CAGR 7.2%）。中国品牌正在重塑竞争格局，日系品牌数十年的统治地位首次面临实质性挑战。最大的机会在于 EV 整车及其配套生态（充电、售后、金融），最大的风险在于传统市场持续萎缩和补贴退坡后的需求可持续性。</span><span data-en>The SEA automotive industry is at a historic turning point: traditional ICE market growth is slowing or declining (overall -2.3% in 2025), but the electrification transition brings massive structural opportunities (EV market CAGR 7.2%). Chinese brands are reshaping the competitive landscape, and Japanese brands' decades-long dominance faces substantive challenges for the first time. The biggest opportunities lie in EV vehicles and their supporting ecosystem (charging, after-sales, finance); the biggest risks are continued traditional market contraction and demand sustainability after subsidy phase-out.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- C.2 趋势预判 -->
+<section id="c2" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>C.2 趋势预判（未来 3–5 年）</span><span data-en>C.2 Trend Forecast (Next 3–5 Years)</span></h3>
+  </div>
+  <div class="card p-6 overflow-x-auto reveal">
+    <table class="data-table">
+      <thead><tr><th><span data-zh>趋势</span><span data-en>Trend</span></th><th><span data-zh>确定性</span><span data-en>Certainty</span></th><th><span data-zh>影响程度</span><span data-en>Impact</span></th><th><span data-zh>时间窗口</span><span data-en>Time Window</span></th><th><span data-zh>说明</span><span data-en>Description</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="font-semibold"><span data-zh>中国品牌份额持续上升</span><span data-en>Chinese Brand Share Continues Rising</span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>中期（2–3 年）</span><span data-en>Mid-term (2–3 years)</span></td>
+          <td class="text-sm"><span data-zh>BYD 2025 年出口东南亚增长 216.8%，奇瑞、长安、长城同步扩张；本地建厂投产将进一步巩固份额</span><span data-en>BYD's SEA exports grew 216.8% in 2025; Chery, Changan, GWM expanding simultaneously; local factory commissioning will further consolidate share</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>EV 渗透率加速提升，2030 年可能达 30–40%</span><span data-en>EV Penetration Accelerating, May Reach 30–40% by 2030</span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-electric-orange/20 text-electric-orange"><span data-zh>中高</span><span data-en>Med-High</span></span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>中期（3–5 年）</span><span data-en>Mid-term (3–5 years)</span></td>
+          <td class="text-sm"><span data-zh>政策支持 + 产品供给增加 + 电池成本下降三重驱动；但基础设施和消费者购买力仍是制约因素</span><span data-en>Triple drivers: policy support + increased product supply + declining battery costs; but infrastructure and consumer purchasing power remain constraints</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>泰国从"亚洲底特律"向"亚洲 EV 中心"转型</span><span data-en>Thailand Transitioning from "Detroit of Asia" to "Asia's EV Hub"</span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>中长期（3–7 年）</span><span data-en>Mid to long-term (3–7 years)</span></td>
+          <td class="text-sm"><span data-zh>泰国 30@30 政策目标明确，中国车企集中在泰国建厂；但转型过程中传统供应链面临阵痛</span><span data-en>Thailand's 30@30 policy target is clear; Chinese OEMs concentrating factory construction in Thailand; but traditional supply chain faces transition pain</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>日系品牌被迫加速电动化或面临份额持续流失</span><span data-en>Japanese Brands Forced to Accelerate EV Transition or Face Continued Share Loss</span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span data-zh>中期（2–4 年）</span><span data-en>Mid-term (2–4 years)</span></td>
+          <td class="text-sm"><span data-zh>丰田、本田已宣布东南亚 EV 计划，但产品推出节奏明显慢于中国品牌</span><span data-en>Toyota and Honda have announced SEA EV plans, but product launch pace is notably slower than Chinese brands</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>售后市场和汽车金融成为新利润增长点</span><span data-en>Aftermarket and Auto Finance as New Profit Growth Drivers</span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>高</span><span data-en>High</span></span></td>
+          <td><span class="inline-block px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span data-zh>长期（5+ 年）</span><span data-en>Long-term (5+ years)</span></td>
+          <td class="text-sm"><span data-zh>汽车保有量持续增长推动售后需求，EV 售后服务模式创新带来新机会；售后市场 CAGR 8.3%</span><span data-en>Growing vehicle parc drives aftermarket demand; EV after-sales service model innovation brings new opportunities; aftermarket CAGR 8.3%</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- C.3 机会识别 -->
+<section id="c3" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>C.3 机会识别</span><span data-en>C.3 Opportunity Identification</span></h3>
+  </div>
+  <div class="card p-6 overflow-x-auto reveal mb-6">
+    <table class="data-table">
+      <thead><tr><th><span data-zh>机会</span><span data-en>Opportunity</span></th><th><span data-zh>市场空间</span><span data-en>Market Size</span></th><th><span data-zh>竞争程度</span><span data-en>Competition</span></th><th><span data-zh>进入难度</span><span data-en>Entry Difficulty</span></th><th><span data-zh>时间窗口</span><span data-en>Time Window</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="font-semibold"><span data-zh>EV 整车制造和销售</span><span data-en>EV Vehicle Manufacturing & Sales</span></td>
+          <td><span class="text-emerald-accent font-semibold"><span data-zh>大</span><span data-en>Large</span></span><span data-zh>（2034 年 148.6 亿美元）</span><span data-en> (USD 14.86B by 2034)</span></td>
+          <td><span class="text-red-400"><span data-zh>激烈</span><span data-en>Intense</span></span></td>
+          <td><span data-zh>中</span><span data-en>Medium</span></td>
+          <td><span data-zh>当前至 2028 年（窗口期正在收窄）</span><span data-en>Now to 2028 (window narrowing)</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>EV 充电基础设施</span><span data-en>EV Charging Infrastructure</span></td>
+          <td><span class="text-yellow-400 font-semibold"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span class="text-emerald-accent"><span data-zh>蓝海</span><span data-en>Blue Ocean</span></span></td>
+          <td><span data-zh>中</span><span data-en>Medium</span></td>
+          <td><span data-zh>当前至 2030 年（基础设施缺口大）</span><span data-en>Now to 2030 (large infrastructure gap)</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>汽车零部件本地化供应</span><span data-en>Localized Auto Parts Supply</span></td>
+          <td><span class="text-emerald-accent font-semibold"><span data-zh>大</span><span data-en>Large</span></span></td>
+          <td><span class="text-yellow-400"><span data-zh>中等</span><span data-en>Moderate</span></span></td>
+          <td><span data-zh>中高</span><span data-en>Med-High</span></td>
+          <td><span data-zh>中期（各国本地化率要求提升）</span><span data-en>Mid-term (rising local content requirements)</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>售后市场和汽车服务</span><span data-en>Aftermarket & Auto Services</span></td>
+          <td><span class="text-emerald-accent font-semibold"><span data-zh>大</span><span data-en>Large</span></span><span data-zh>（2036 年 693 亿美元）</span><span data-en> (USD 69.3B by 2036)</span></td>
+          <td><span class="text-yellow-400"><span data-zh>中等</span><span data-en>Moderate</span></span></td>
+          <td><span data-zh>低</span><span data-en>Low</span></td>
+          <td><span data-zh>长期（持续增长）</span><span data-en>Long-term (sustained growth)</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>二手车和汽车金融</span><span data-en>Used Vehicles & Auto Finance</span></td>
+          <td><span class="text-yellow-400 font-semibold"><span data-zh>中</span><span data-en>Medium</span></span></td>
+          <td><span class="text-emerald-accent"><span data-zh>蓝海</span><span data-en>Blue Ocean</span></span></td>
+          <td><span data-zh>中</span><span data-en>Medium</span></td>
+          <td><span data-zh>中期（市场尚不成熟）</span><span data-en>Mid-term (market still maturing)</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 最佳切入点建议 -->
+  <div class="card p-6 reveal border-l-4 border-l-emerald-accent" style="background: linear-gradient(135deg, rgba(16,185,129,0.08), rgba(249,115,22,0.03));">
+    <h4 class="font-heading font-bold text-emerald-accent mb-3 flex items-center gap-2">
+      <i class="fas fa-crosshairs"></i> <span data-zh>最佳切入点建议</span><span data-en>Recommended Entry Points</span>
+    </h4>
+    <p class="text-sm leading-relaxed opacity-90"><span data-zh>对于有 EV 技术和供应链优势的企业，建议优先从泰国市场切入 EV 整车销售和本地化制造，利用泰国 EV 3.0/3.5 政策窗口期和已有的汽车制造基础设施。对于中小型企业或服务型企业，EV 充电基础设施和售后市场是更务实的切入点——前者竞争尚不激烈且政策支持明确，后者进入门槛低且市场增速稳健（CAGR 8.3%）。汽车零部件本地化供应适合有制造能力的企业，各国本地化率要求的提升将创造持续的替代进口机会。</span><span data-en>For companies with EV technology and supply chain advantages, prioritize entering the Thai market for EV vehicle sales and localized manufacturing, leveraging Thailand's EV 3.0/3.5 policy window and existing auto manufacturing infrastructure. For SMEs or service-oriented companies, EV charging infrastructure and the aftermarket are more pragmatic entry points — the former has limited competition with clear policy support, while the latter has low entry barriers and steady growth (CAGR 8.3%). Localized auto parts supply suits companies with manufacturing capabilities; rising local content requirements across countries will create sustained import substitution opportunities.</span></p>
+  </div>
+</section>
+
+<!-- C.4 风险提示 -->
+<section id="c4" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>C.4 风险提示</span><span data-en>C.4 Risk Alerts</span></h3>
+  </div>
+  <div class="space-y-4">
+    <!-- 风险1 -->
+    <div class="card p-6 risk-high reveal reveal-delay-1">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-red-500/20 text-red-400 font-bold text-sm">1</span>
+        <h5 class="font-heading font-bold"><span data-zh>传统市场销量下滑风险</span><span data-en>Traditional Market Sales Decline Risk</span></h5>
+        <span class="px-2 py-0.5 rounded text-xs font-bold bg-red-500/20 text-red-400"><span data-zh>严重度：高</span><span data-en>Severity: High</span></span>
+      </div>
+      <p class="text-sm leading-relaxed opacity-90 mb-3"><span data-zh>泰国（-15.6%）和印尼（-8.7%）两大传统市场在 2025 年出现显著下滑，反映出消费信心不足、家庭债务高企和 EV 替代效应的叠加影响。若宏观经济未能改善，传统燃油车市场可能进入持续萎缩通道，影响区域整车制造产能利用率和供应链健康度。</span><span data-en>Thailand (-15.6%) and Indonesia (-8.7%), the two largest traditional markets, saw significant declines in 2025, reflecting weak consumer confidence, high household debt, and EV substitution effects. If macroeconomic conditions don't improve, the traditional ICE market may enter a sustained contraction, affecting regional vehicle manufacturing capacity utilization and supply chain health.</span></p>
+      <div class="p-3 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20">
+        <p class="text-sm"><i class="fas fa-shield-alt text-emerald-accent mr-1"></i><strong class="text-emerald-accent"><span data-zh>应对思路：</span><span data-en>Mitigation: </span></strong><span data-zh>关注 EV 和混动车型的结构性增长机会，避免过度依赖传统燃油车业务。</span><span data-en>Focus on structural growth opportunities in EV and hybrid vehicles; avoid over-reliance on traditional ICE business.</span></p>
+      </div>
+    </div>
+    <!-- 风险2 -->
+    <div class="card p-6 risk-medium-high reveal reveal-delay-2">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-electric-orange/20 text-electric-orange font-bold text-sm">2</span>
+        <h5 class="font-heading font-bold"><span data-zh>EV 补贴退坡后需求可持续性风险</span><span data-en>Demand Sustainability Risk After EV Subsidy Phase-out</span></h5>
+        <span class="px-2 py-0.5 rounded text-xs font-bold bg-electric-orange/20 text-electric-orange"><span data-zh>严重度：中高</span><span data-en>Severity: Med-High</span></span>
+      </div>
+      <p class="text-sm leading-relaxed opacity-90 mb-3"><span data-zh>泰国 EV 3.0/3.5 等补贴政策有明确的时间窗口，补贴金额逐步递减。当前 EV 销量中有相当比例受补贴驱动，补贴退坡后消费者是否愿意以全价购买 EV 存在不确定性。触发条件：补贴到期且电池成本未能同步下降。</span><span data-en>Thailand's EV 3.0/3.5 subsidies have defined time windows with gradually decreasing amounts. A significant portion of current EV sales are subsidy-driven; uncertainty remains about consumer willingness to purchase EVs at full price after phase-out. Trigger: subsidy expiry without corresponding battery cost reduction.</span></p>
+      <div class="p-3 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20">
+        <p class="text-sm"><i class="fas fa-shield-alt text-emerald-accent mr-1"></i><strong class="text-emerald-accent"><span data-zh>应对思路：</span><span data-en>Mitigation: </span></strong><span data-zh>关注电池成本下降曲线，评估无补贴情景下 EV 与 ICE 的总拥有成本（TCO）对比。</span><span data-en>Monitor battery cost reduction curves; assess EV vs. ICE total cost of ownership (TCO) comparison in a no-subsidy scenario.</span></p>
+      </div>
+    </div>
+    <!-- 风险3 -->
+    <div class="card p-6 risk-medium reveal reveal-delay-3">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400 font-bold text-sm">3</span>
+        <h5 class="font-heading font-bold"><span data-zh>中国品牌过度竞争导致价格战</span><span data-en>Chinese Brand Overcrowding Leading to Price Wars</span></h5>
+        <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+      </div>
+      <p class="text-sm leading-relaxed opacity-90 mb-3"><span data-zh>BYD、奇瑞、长城、长安、吉利等多家中国品牌同时进入东南亚市场，产品定位和价格区间高度重叠。价格战已在泰国 EV 市场显现，部分品牌以低于成本价销售以抢占份额。长期来看，价格战将压缩全行业利润率，可能导致部分品牌退出。</span><span data-en>Multiple Chinese brands (BYD, Chery, GWM, Changan, Geely) entering SEA simultaneously with highly overlapping positioning and price ranges. Price wars have already emerged in Thailand's EV market, with some brands selling below cost to capture share. Long-term, price wars will compress industry-wide margins and may force some brands to exit.</span></p>
+      <div class="p-3 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20">
+        <p class="text-sm"><i class="fas fa-shield-alt text-emerald-accent mr-1"></i><strong class="text-emerald-accent"><span data-zh>应对思路：</span><span data-en>Mitigation: </span></strong><span data-zh>差异化竞争策略，避免纯粹的价格竞争。</span><span data-en>Differentiation strategy; avoid pure price competition.</span></p>
+      </div>
+    </div>
+    <!-- 风险4 -->
+    <div class="card p-6 risk-medium reveal reveal-delay-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400 font-bold text-sm">4</span>
+        <h5 class="font-heading font-bold"><span data-zh>充电基础设施不足制约 EV 普及</span><span data-en>Insufficient Charging Infrastructure Constraining EV Adoption</span></h5>
+        <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+      </div>
+      <p class="text-sm leading-relaxed opacity-90 mb-3"><span data-zh>除新加坡外，东南亚各国充电桩密度远低于中国和欧洲。城市地区充电设施逐步完善，但二三线城市和农村地区严重不足。这限制了 EV 从一线城市向更广泛市场的渗透。</span><span data-en>Except Singapore, charging station density across SEA is far below China and Europe. Urban areas are gradually improving, but tier-2/3 cities and rural areas remain severely underserved. This limits EV penetration beyond tier-1 cities.</span></p>
+      <div class="p-3 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20">
+        <p class="text-sm"><i class="fas fa-shield-alt text-emerald-accent mr-1"></i><strong class="text-emerald-accent"><span data-zh>应对思路：</span><span data-en>Mitigation: </span></strong><span data-zh>关注各国充电基础设施建设规划和投资进展。</span><span data-en>Monitor charging infrastructure development plans and investment progress across countries.</span></p>
+      </div>
+    </div>
+    <!-- 风险5 -->
+    <div class="card p-6 risk-medium reveal reveal-delay-5">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="inline-flex items-center justify-center w-8 h-8 rounded-full bg-yellow-400/20 text-yellow-400 font-bold text-sm">5</span>
+        <h5 class="font-heading font-bold"><span data-zh>地缘政治风险影响供应链</span><span data-en>Geopolitical Risk Impacting Supply Chains</span></h5>
+        <span class="px-2 py-0.5 rounded text-xs font-bold bg-yellow-400/20 text-yellow-400"><span data-zh>严重度：中</span><span data-en>Severity: Medium</span></span>
+      </div>
+      <p class="text-sm leading-relaxed opacity-90 mb-3"><span data-zh>中美贸易摩擦可能波及东南亚汽车供应链。若美国对中国制造的汽车零部件加征关税，可能影响在东南亚组装但使用中国零部件的车辆出口。同时，部分东南亚国家可能在中美之间面临选边压力。</span><span data-en>US-China trade friction may impact SEA auto supply chains. If the US imposes additional tariffs on Chinese-made auto parts, it could affect vehicles assembled in SEA using Chinese components for export. Some SEA countries may also face pressure to choose sides between the US and China.</span></p>
+      <div class="p-3 rounded-lg bg-emerald-accent/10 border border-emerald-accent/20">
+        <p class="text-sm"><i class="fas fa-shield-alt text-emerald-accent mr-1"></i><strong class="text-emerald-accent"><span data-zh>应对思路：</span><span data-en>Mitigation: </span></strong><span data-zh>供应链多元化，关注各国贸易政策动向。</span><span data-en>Diversify supply chains; monitor trade policy developments across countries.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- C.5 行业 SWOT 矩阵 -->
+<section id="c5" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>C.5 行业 SWOT 矩阵</span><span data-en>C.5 Industry SWOT Matrix</span></h3>
+  </div>
+  <div class="grid sm:grid-cols-2 gap-4">
+    <!-- Strengths -->
+    <div class="card p-6 swot-s reveal reveal-delay-1">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-emerald-accent/20 text-emerald-accent font-heading font-bold">S</span>
+        <div>
+          <h5 class="font-heading font-bold text-emerald-accent"><span data-zh>优势 (Strengths)</span><span data-en>Strengths</span></h5>
+          <span class="text-xs opacity-60"><span data-zh>内部 · 正面</span><span data-en>Internal · Positive</span></span>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-accent mt-1 flex-shrink-0">①</span>
+          <span><span data-zh>人口红利显著，6.8 亿人口、中位年龄 30 岁</span><span data-en>Significant demographic dividend: 680M population, median age 30</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-accent mt-1 flex-shrink-0">②</span>
+          <span><span data-zh>汽车保有率低（150–200 辆/千人），增长空间大</span><span data-en>Low vehicle ownership (150–200 per 1,000 people), large growth headroom</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-emerald-accent mt-1 flex-shrink-0">③</span>
+          <span><span data-zh>中国品牌带来高性价比 EV 选择，加速市场电动化</span><span data-en>Chinese brands bringing cost-effective EV options, accelerating market electrification</span></span>
+        </li>
+      </ul>
+    </div>
+    <!-- Weaknesses -->
+    <div class="card p-6 swot-w reveal reveal-delay-2">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-red-500/20 text-red-400 font-heading font-bold">W</span>
+        <div>
+          <h5 class="font-heading font-bold text-red-400"><span data-zh>劣势 (Weaknesses)</span><span data-en>Weaknesses</span></h5>
+          <span class="text-xs opacity-60"><span data-zh>内部 · 负面</span><span data-en>Internal · Negative</span></span>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-1 flex-shrink-0">①</span>
+          <span><span data-zh>充电基础设施不足，制约 EV 向二三线城市渗透</span><span data-en>Insufficient charging infrastructure, constraining EV penetration into tier-2/3 cities</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-1 flex-shrink-0">②</span>
+          <span><span data-zh>消费者购买力有限，价格敏感度高</span><span data-en>Limited consumer purchasing power, high price sensitivity</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-red-400 mt-1 flex-shrink-0">③</span>
+          <span><span data-zh>本地零部件供应链薄弱，核心部件依赖进口</span><span data-en>Weak local parts supply chain, core components reliant on imports</span></span>
+        </li>
+      </ul>
+    </div>
+    <!-- Opportunities -->
+    <div class="card p-6 swot-o reveal reveal-delay-3">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-blue-500/20 text-blue-400 font-heading font-bold">O</span>
+        <div>
+          <h5 class="font-heading font-bold text-blue-400"><span data-zh>机会 (Opportunities)</span><span data-en>Opportunities</span></h5>
+          <span class="text-xs opacity-60"><span data-zh>外部 · 正面</span><span data-en>External · Positive</span></span>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1 flex-shrink-0">①</span>
+          <span><span data-zh>EV 转型窗口期，政策支持力度大且方向明确</span><span data-en>EV transition window with strong and clear policy support</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1 flex-shrink-0">②</span>
+          <span><span data-zh>全球供应链重组，东南亚成为"中国+1"制造基地受益者</span><span data-en>Global supply chain restructuring; SEA benefits as a "China+1" manufacturing base</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-blue-400 mt-1 flex-shrink-0">③</span>
+          <span><span data-zh>售后市场和汽车金融爆发增长（售后 CAGR 8.3%）</span><span data-en>Explosive growth in aftermarket and auto finance (aftermarket CAGR 8.3%)</span></span>
+        </li>
+      </ul>
+    </div>
+    <!-- Threats -->
+    <div class="card p-6 swot-t reveal reveal-delay-4">
+      <div class="flex items-center gap-2 mb-4">
+        <span class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-yellow-400/20 text-yellow-400 font-heading font-bold">T</span>
+        <div>
+          <h5 class="font-heading font-bold text-yellow-400"><span data-zh>威胁 (Threats)</span><span data-en>Threats</span></h5>
+          <span class="text-xs opacity-60"><span data-zh>外部 · 负面</span><span data-en>External · Negative</span></span>
+        </div>
+      </div>
+      <ul class="space-y-3 text-sm">
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-1 flex-shrink-0">①</span>
+          <span><span data-zh>传统燃油车市场持续下滑（泰国 -15.6%、印尼 -8.7%）</span><span data-en>Continued decline in traditional ICE market (Thailand -15.6%, Indonesia -8.7%)</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-1 flex-shrink-0">②</span>
+          <span><span data-zh>EV 补贴退坡后需求可持续性存疑</span><span data-en>Demand sustainability uncertain after EV subsidy phase-out</span></span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="text-yellow-400 mt-1 flex-shrink-0">③</span>
+          <span><span data-zh>地缘政治风险影响供应链稳定性</span><span data-en>Geopolitical risks impacting supply chain stability</span></span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== 质量自检 ==================== -->
+<section id="quality" class="mb-16">
+  <div class="reveal">
+    <h3 class="font-heading text-xl sm:text-2xl font-bold mb-6 section-heading"><span data-zh>质量自检</span><span data-en>Quality Self-check</span></h3>
+  </div>
+  <div class="card p-6 overflow-x-auto reveal">
+    <table class="data-table">
+      <thead><tr><th><span data-zh>检查项</span><span data-en>Check Item</span></th><th><span data-zh>状态</span><span data-en>Status</span></th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="font-semibold"><span data-zh>行业边界已定义</span><span data-en>Industry Scope Defined</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>A.1 节明确定义了行业范围、统计口径和细分赛道</span><span data-en>Section A.1 clearly defines industry scope, statistical methodology, and sub-segments</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>目标市场已明确</span><span data-en>Target Market Defined</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>聚焦东南亚（ASEAN），重点国家为印度尼西亚、泰国、马来西亚、菲律宾、越南</span><span data-en>Focused on ASEAN, key markets: Indonesia, Thailand, Malaysia, Philippines, Vietnam</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>全球背景与目标市场已区分</span><span data-en>Global vs. Target Market Distinguished</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>各章节均先提供全球背景数据，再聚焦东南亚市场详细分析</span><span data-en>Each section provides global context first, then focuses on detailed SEA market analysis</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>市场规模数据标注来源和口径</span><span data-en>Market Data Sources Cited</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>主要数据均标注来源（ASEAN Automotive Federation、Statista、Mordor Intelligence、Research and Markets 等）</span><span data-en>Key data sources cited (ASEAN Automotive Federation, Statista, Mordor Intelligence, Research and Markets, etc.)</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>历史数据与预测数据已区分</span><span data-en>Historical vs. Forecast Data Distinguished</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>2025 年数据为最新实际/估算数据，2029/2034/2036 年数据明确标注为预测</span><span data-en>2025 data is latest actual/estimated; 2029/2034/2036 data clearly marked as forecasts</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>目标市场数据不足已声明</span><span data-en>Data Gaps Disclosed</span></td>
+          <td><span class="text-yellow-400">⚠️</span> <span data-zh>菲律宾和越南的具体销量数据不完整，仅有排名和增速信息；部分国家 EV 渗透率为定性描述（"较低但快速增长"）</span><span data-en>Philippines and Vietnam specific sales data incomplete, only ranking and growth rate available; some countries' EV penetration described qualitatively ("low but rapidly growing")</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>缺失信息已声明</span><span data-en>Missing Information Disclosed</span></td>
+          <td><span class="text-yellow-400">⚠️</span> <span data-zh>CR3/CR5 具体数值因各机构统计口径差异未能精确给出，以日系品牌合计份额（70–75%）替代；各细分赛道占比数据缺失</span><span data-en>CR3/CR5 specific values not available due to varying statistical methodologies; Japanese brands' combined share (70–75%) used as proxy; sub-segment share data missing</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>数据时效已标注</span><span data-en>Data Timeliness Noted</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>数据截止日期为 2026-04-09，主要引用 2025 年数据</span><span data-en>Data cutoff date: 2026-04-09, primarily citing 2025 data</span></td>
+        </tr>
+        <tr>
+          <td class="font-semibold"><span data-zh>事实与观点已区分</span><span data-en>Facts vs. Opinions Distinguished</span></td>
+          <td><span class="text-emerald-accent">✅</span> <span data-zh>Part A/B 以事实和数据为主，Part C 明确标注为分析师研判观点</span><span data-en>Part A/B primarily fact and data-based; Part C clearly marked as analyst opinions</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+</main>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="border-t" style="border-color: var(--border-color);">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-8">
+      <p class="font-heading font-bold text-lg text-electric-orange mb-1">Supinfor Ltd.</p>
+      <p class="text-sm opacity-60"><span data-zh>报告生成日期：2026-04-09 &nbsp;|&nbsp; 数据截止：2026-04-09</span><span data-en>Report Date: 2026-04-09 &nbsp;|&nbsp; Data Cutoff: 2026-04-09</span></p>
+    </div>
+    <div class="card p-6 mb-8">
+      <h4 class="font-heading font-bold text-sm text-electric-orange mb-3 flex items-center gap-2">
+        <i class="fas fa-exclamation-circle"></i> <span data-zh>免责声明</span><span data-en>Disclaimer</span>
+      </h4>
+      <p class="text-xs leading-relaxed opacity-70"><span data-zh>本报告由 Supinfor Ltd. 编制，仅供参考之用，不构成任何投资建议或商业决策依据。报告中的数据和分析基于公开可获取的信息来源，Supinfor Ltd. 不对数据的准确性、完整性或时效性做出任何明示或暗示的保证。报告中 Part C 部分的趋势预判和机会识别为分析师基于现有数据的主观研判，可能与实际发展存在偏差。读者应根据自身情况独立判断，并在做出任何商业或投资决策前咨询专业顾问。Supinfor Ltd. 不对因使用本报告内容而产生的任何直接或间接损失承担责任。</span><span data-en>This report is prepared by Supinfor Ltd. for reference purposes only and does not constitute investment advice or a basis for business decisions. Data and analysis are based on publicly available sources; Supinfor Ltd. makes no express or implied warranties regarding accuracy, completeness, or timeliness. Trend forecasts and opportunity identification in Part C represent analyst opinions based on available data and may differ from actual developments. Readers should exercise independent judgment and consult professional advisors before making any business or investment decisions. Supinfor Ltd. assumes no liability for any direct or indirect losses arising from the use of this report.</span></p>
+    </div>
+    <div class="text-center">
+      <p class="text-sm opacity-50">© 2026 Supinfor Ltd. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button id="backToTop" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-electric-orange text-white shadow-lg flex items-center justify-center hover:bg-electric-orange-light transition-all" aria-label="返回顶部">
+  <i class="fas fa-chevron-up"></i>
+</button>
+
+<script>
+// ==================== Theme Toggle ====================
+(function() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('themeToggle');
+
+  // Check saved preference or system preference
+  function getPreferredTheme() {
+    const saved = localStorage.getItem('theme');
+    if (saved) return saved;
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'dark') {
+      html.classList.add('dark');
+    } else {
+      html.classList.remove('dark');
+    }
+    localStorage.setItem('theme', theme);
+  }
+
+  applyTheme(getPreferredTheme());
+
+  toggle.addEventListener('click', () => {
+    const current = html.classList.contains('dark') ? 'dark' : 'light';
+    applyTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+})();
+
+// ==================== Language Toggle ====================
+(function() {
+  const html = document.documentElement;
+  const toggle = document.getElementById('langToggle');
+  const label = document.getElementById('langLabel');
+
+  function getPreferredLang() {
+    return localStorage.getItem('lang') || 'zh';
+  }
+
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    label.textContent = lang === 'zh' ? 'EN' : '中';
+    localStorage.setItem('lang', lang);
+  }
+
+  applyLang(getPreferredLang());
+
+  toggle.addEventListener('click', () => {
+    const current = html.getAttribute('data-lang');
+    applyLang(current === 'zh' ? 'en' : 'zh');
+  });
+})();
+
+// ==================== Mobile Navigation ====================
+(function() {
+  const btn = document.getElementById('mobileNavBtn');
+  const nav = document.getElementById('mobileNav');
+  const overlay = document.getElementById('mobileNavOverlay');
+  const linksContainer = document.getElementById('mobileNavLinks');
+
+  // Populate mobile nav links
+  const sections = [
+    { id: 'a1', zh: 'A.1 行业定义与边界', en: 'A.1 Industry Definition & Scope' },
+    { id: 'a2', zh: 'A.2 市场规模与增长', en: 'A.2 Market Size & Growth' },
+    { id: 'a3', zh: 'A.3 产业链分析', en: 'A.3 Value Chain Analysis' },
+    { id: 'a4', zh: 'A.4 发展历程', en: 'A.4 Development History' },
+    { id: 'a5', zh: 'A.5 竞争格局', en: 'A.5 Competitive Landscape' },
+    { id: 'a6', zh: 'A.6 玩家图谱', en: 'A.6 Player Map' },
+    { id: 'b1', zh: 'B.1 增长动力分析', en: 'B.1 Growth Driver Analysis' },
+    { id: 'b2', zh: 'B.2 竞争强度评估', en: 'B.2 Competitive Intensity' },
+    { id: 'b3', zh: 'B.3 进入壁垒分析', en: 'B.3 Entry Barrier Analysis' },
+    { id: 'b4', zh: 'B.4 风险因素', en: 'B.4 Risk Factors' },
+    { id: 'b5', zh: 'B.5 行业吸引力记分卡', en: 'B.5 Attractiveness Scorecard' },
+    { id: 'c1', zh: 'C.1 核心结论', en: 'C.1 Key Conclusions' },
+    { id: 'c2', zh: 'C.2 趋势预判', en: 'C.2 Trend Forecast' },
+    { id: 'c3', zh: 'C.3 机会识别', en: 'C.3 Opportunity Identification' },
+    { id: 'c4', zh: 'C.4 风险提示', en: 'C.4 Risk Alerts' },
+    { id: 'c5', zh: 'C.5 行业 SWOT 矩阵', en: 'C.5 Industry SWOT Matrix' },
+  ];
+
+  sections.forEach(s => {
+    const a = document.createElement('a');
+    a.href = '#' + s.id;
+    a.className = 'toc-link block px-3 py-2 rounded text-sm text-gray-300 hover:text-electric-orange';
+    a.innerHTML = '<span data-zh>' + s.zh + '</span><span data-en>' + s.en + '</span>';
+    a.addEventListener('click', () => nav.classList.remove('open'));
+    linksContainer.appendChild(a);
+  });
+
+  btn.addEventListener('click', () => nav.classList.toggle('open'));
+  overlay.addEventListener('click', () => nav.classList.remove('open'));
+})();
+
+// ==================== IntersectionObserver for Reveal Animations ====================
+(function() {
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+})();
+
+// ==================== Bar & Progress Animations ====================
+(function() {
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = entry.target.querySelectorAll('.bar-fill, .progress-fill');
+        bars.forEach((bar, i) => {
+          setTimeout(() => bar.classList.add('animated'), i * 150);
+        });
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('#salesBars, #evBars, .gauge-track').forEach(el => {
+    // For individual gauge tracks in scorecard
+    if (el.classList.contains('gauge-track')) {
+      const sectionCard = el.closest('.card');
+      if (sectionCard && !sectionCard.dataset.barObserved) {
+        sectionCard.dataset.barObserved = 'true';
+        barObserver.observe(sectionCard);
+      }
+    } else {
+      barObserver.observe(el);
+    }
+  });
+})();
+
+// ==================== Back to Top ====================
+(function() {
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      btn.classList.add('visible');
+    } else {
+      btn.classList.remove('visible');
+    }
+  });
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+})();
+</script>
+</body>
+</html>

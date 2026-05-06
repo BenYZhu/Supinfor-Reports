@@ -1,0 +1,1968 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dyson 品牌声誉分析报告 | Brand Reputation Analysis</title>
+<meta name="description" content="Dyson（戴森）品牌声誉分析报告 2026年4月 — 六维品牌声誉棱镜分析">
+<meta name="author" content="Supinfor Ltd.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Source+Code+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: ['selector', '[data-theme="dark"]'],
+  theme: {
+    extend: {
+      colors: {
+        copper: { light: '#B87333', dark: '#D4956A', DEFAULT: '#B87333' },
+        warmwhite: '#F8F6F3',
+        graphite: '#2D2D2D',
+        cardlight: '#E8E4E0',
+        charcoal: '#1A1A1A',
+        textdark: '#F0EDE8',
+        carddark: '#2A2A2A',
+        muted: '#8B9DAF',
+      },
+      fontFamily: {
+        serif: ['"DM Serif Display"', 'Georgia', 'serif'],
+        mono: ['"Source Code Pro"', 'monospace'],
+        body: ['system-ui', '"PingFang SC"', '"Microsoft YaHei"', 'sans-serif'],
+      }
+    }
+  }
+}
+</script>
+<style>
+/* === BILINGUAL TOGGLE === */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* === BASE STYLES === */
+html { scroll-behavior: smooth; }
+body {
+  font-family: system-ui, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background-color: #F8F6F3;
+  color: #2D2D2D;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+[data-theme="dark"] body {
+  background-color: #1A1A1A;
+  color: #F0EDE8;
+}
+
+/* === ENGINEERING GRID BACKGROUND === */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    linear-gradient(rgba(139,157,175,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,157,175,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+[data-theme="dark"] body::before {
+  background-image:
+    linear-gradient(rgba(139,157,175,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139,157,175,0.04) 1px, transparent 1px);
+}
+
+/* === SIDEBAR NAV === */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 280px;
+  height: 100vh;
+  background: rgba(248,246,243,0.95);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(184,115,51,0.15);
+  z-index: 40;
+  overflow-y: auto;
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1), background 0.4s ease;
+  padding-top: 1rem;
+}
+[data-theme="dark"] .sidebar {
+  background: rgba(26,26,26,0.95);
+  border-right-color: rgba(212,149,106,0.15);
+}
+.sidebar.closed { transform: translateX(-100%); }
+@media (min-width: 1024px) {
+  .sidebar { transform: translateX(0) !important; }
+  .main-content { margin-left: 280px; }
+}
+@media (max-width: 1023px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+}
+
+.sidebar-link {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.85rem;
+  color: #2D2D2D;
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+  line-height: 1.5;
+}
+[data-theme="dark"] .sidebar-link { color: #F0EDE8; }
+.sidebar-link:hover, .sidebar-link.active {
+  color: #B87333;
+  border-left-color: #B87333;
+  background: rgba(184,115,51,0.06);
+}
+[data-theme="dark"] .sidebar-link:hover,
+[data-theme="dark"] .sidebar-link.active {
+  color: #D4956A;
+  border-left-color: #D4956A;
+  background: rgba(212,149,106,0.06);
+}
+
+/* === TOP BAR (mobile) === */
+.topbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: rgba(248,246,243,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(184,115,51,0.12);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  transition: background 0.4s ease;
+}
+[data-theme="dark"] .topbar {
+  background: rgba(26,26,26,0.92);
+  border-bottom-color: rgba(212,149,106,0.12);
+}
+@media (min-width: 1024px) {
+  .topbar { left: 280px; }
+  .hamburger-btn { display: none !important; }
+}
+
+/* === CARDS === */
+.card {
+  background: #E8E4E0;
+  border: 1px solid rgba(184,115,51,0.12);
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+[data-theme="dark"] .card {
+  background: #2A2A2A;
+  border-color: rgba(212,149,106,0.12);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(184,115,51,0.35);
+  box-shadow: 0 4px 12px rgba(184,115,51,0.08);
+}
+[data-theme="dark"] .card:hover {
+  border-color: rgba(212,149,106,0.35);
+  box-shadow: 0 4px 12px rgba(212,149,106,0.08);
+}
+
+/* === SCORE CARDS === */
+.score-number {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #B87333;
+  line-height: 1;
+}
+[data-theme="dark"] .score-number { color: #D4956A; }
+
+/* === PROGRESS BARS === */
+.progress-bar-bg {
+  background: rgba(184,115,51,0.12);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+[data-theme="dark"] .progress-bar-bg { background: rgba(212,149,106,0.12); }
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #B87333, #D4956A);
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+  width: 0;
+}
+
+/* === WARNING BOX === */
+.warning-box {
+  background: rgba(184,115,51,0.08);
+  border-left: 3px solid #B87333;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+}
+[data-theme="dark"] .warning-box {
+  background: rgba(212,149,106,0.08);
+  border-left-color: #D4956A;
+}
+
+/* === BLOCKQUOTE === */
+.advice-box {
+  background: rgba(139,157,175,0.08);
+  border-left: 3px solid #8B9DAF;
+  border-radius: 0 8px 8px 0;
+  padding: 1rem 1.25rem;
+}
+
+/* === TABLE === */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+.data-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 2px solid #B87333;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8B9DAF;
+}
+[data-theme="dark"] .data-table th { border-bottom-color: #D4956A; }
+.data-table td {
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid rgba(184,115,51,0.08);
+}
+[data-theme="dark"] .data-table td { border-bottom-color: rgba(212,149,106,0.08); }
+.data-table tr:hover td { background: rgba(184,115,51,0.04); }
+
+/* === SCROLL ANIMATION === */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === RADAR CHART (SVG) === */
+.radar-chart { max-width: 400px; margin: 0 auto; }
+
+/* === COPPER ACCENT TEXT === */
+.copper-text { color: #B87333; }
+[data-theme="dark"] .copper-text { color: #D4956A; }
+
+/* === SECTION HEADING === */
+.section-heading {
+  font-family: 'DM Serif Display', Georgia, serif;
+  font-size: 1.75rem;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+@media (min-width: 768px) { .section-heading { font-size: 2rem; } }
+
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #B87333, transparent);
+  margin-bottom: 2rem;
+}
+[data-theme="dark"] .section-divider {
+  background: linear-gradient(90deg, #D4956A, transparent);
+}
+
+/* === HERO DECORATIVE LINES === */
+.hero-line {
+  position: absolute;
+  border: 1px solid rgba(184,115,51,0.1);
+  border-radius: 50%;
+  pointer-events: none;
+}
+[data-theme="dark"] .hero-line { border-color: rgba(212,149,106,0.08); }
+
+/* === BACK TO TOP === */
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #B87333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+  z-index: 50;
+  border: none;
+  box-shadow: 0 2px 8px rgba(184,115,51,0.3);
+}
+[data-theme="dark"] .back-to-top {
+  background: #D4956A;
+  box-shadow: 0 2px 8px rgba(212,149,106,0.3);
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { transform: translateY(-3px); }
+
+/* === OVERLAY === */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 35;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.sidebar-overlay.active { opacity: 1; pointer-events: auto; }
+
+/* === MISC === */
+.mono { font-family: 'Source Code Pro', monospace; }
+.serif { font-family: 'DM Serif Display', Georgia, serif; }
+
+/* === HORIZONTAL BAR CHART === */
+.bar-chart-item { margin-bottom: 0.75rem; }
+.bar-label {
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.bar-track {
+  height: 24px;
+  background: rgba(184,115,51,0.08);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+[data-theme="dark"] .bar-track { background: rgba(212,149,106,0.08); }
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #B87333, #D4956A);
+  transition: width 1.4s cubic-bezier(0.4,0,0.2,1);
+  width: 0;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+}
+.bar-fill span {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* === SIGNAL DENSITY INDICATOR === */
+.density-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+.density-high { background: #B87333; }
+.density-medium { background: #8B9DAF; }
+.density-low { background: rgba(184,115,51,0.3); }
+[data-theme="dark"] .density-high { background: #D4956A; }
+[data-theme="dark"] .density-low { background: rgba(212,149,106,0.3); }
+
+/* Print styles */
+@media print {
+  .sidebar, .topbar, .back-to-top, .sidebar-overlay { display: none !important; }
+  .main-content { margin-left: 0 !important; }
+  .reveal { opacity: 1 !important; transform: none !important; }
+}
+</style>
+</head>
+<body class="relative min-h-screen">
+
+<!-- SIDEBAR OVERLAY (mobile) -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
+
+<!-- SIDEBAR NAVIGATION -->
+<nav class="sidebar closed" id="sidebar">
+  <div class="px-5 pt-3 pb-4 mb-2">
+    <div class="flex items-center gap-2 mb-1">
+      <span class="mono text-xs tracking-widest uppercase copper-text font-semibold">Supinfor</span>
+    </div>
+    <div class="text-xs text-muted">
+      <span data-zh>品牌声誉棱镜</span>
+      <span data-en>Brand Reputation Prism</span>
+    </div>
+  </div>
+  <div class="px-3">
+    <a href="#hero" class="sidebar-link active">
+      <span data-zh>报告概览</span><span data-en>Overview</span>
+    </a>
+    <a href="#section-1" class="sidebar-link">
+      <span data-zh>一、品牌画像综述</span><span data-en>1. Brand Profile</span>
+    </a>
+    <a href="#section-2" class="sidebar-link">
+      <span data-zh>二、技术形象</span><span data-en>2. Tech Image</span>
+    </a>
+    <a href="#section-3" class="sidebar-link">
+      <span data-zh>三、商业势能</span><span data-en>3. Business Momentum</span>
+    </a>
+    <a href="#section-4" class="sidebar-link">
+      <span data-zh>四、生态角色</span><span data-en>4. Ecosystem Role</span>
+    </a>
+    <a href="#section-5" class="sidebar-link">
+      <span data-zh>五、风险轮廓</span><span data-en>5. Risk Profile</span>
+    </a>
+    <a href="#section-6" class="sidebar-link">
+      <span data-zh>六、市场叙事</span><span data-en>6. Market Narrative</span>
+    </a>
+    <a href="#section-7" class="sidebar-link">
+      <span data-zh>七、价值主张</span><span data-en>7. Value Proposition</span>
+    </a>
+    <a href="#section-8" class="sidebar-link">
+      <span data-zh>八、维度交叉分析</span><span data-en>8. Cross-Dimension</span>
+    </a>
+    <a href="#section-9" class="sidebar-link">
+      <span data-zh>九、管理建议</span><span data-en>9. Recommendations</span>
+    </a>
+    <a href="#section-10" class="sidebar-link">
+      <span data-zh>十、附录</span><span data-en>10. Appendix</span>
+    </a>
+  </div>
+  <div class="mt-6 px-5 pt-4 border-t border-opacity-10" style="border-color: rgba(184,115,51,0.12);">
+    <div class="text-xs text-muted leading-relaxed">
+      <span data-zh>© 2026 Supinfor Ltd.</span>
+      <span data-en>© 2026 Supinfor Ltd.</span>
+    </div>
+  </div>
+</nav>
+
+<!-- TOP BAR -->
+<header class="topbar">
+  <div class="flex items-center gap-3">
+    <button class="hamburger-btn w-9 h-9 flex items-center justify-center rounded-lg hover:bg-black/5 dark:hover:bg-white/5 transition" onclick="toggleSidebar()" aria-label="Toggle menu">
+      <i class="fa-solid fa-bars text-sm"></i>
+    </button>
+    <span class="serif text-base copper-text tracking-wide">Dyson</span>
+  </div>
+  <div class="flex items-center gap-1">
+    <button onclick="toggleLang()" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-black/5 transition" title="中/EN" aria-label="Toggle language">
+      <i class="fa-solid fa-language text-sm"></i>
+    </button>
+    <button onclick="toggleTheme()" class="w-9 h-9 flex items-center justify-center rounded-lg hover:bg-black/5 transition" id="themeBtn" aria-label="Toggle theme">
+      <i class="fa-solid fa-moon text-sm" id="themeIcon"></i>
+    </button>
+  </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main class="main-content relative z-10 pt-14 lg:pt-0">
+
+<!-- ==================== HERO SECTION ==================== -->
+<section id="hero" class="relative overflow-hidden py-20 md:py-32 px-6">
+  <!-- Decorative engineering lines -->
+  <div class="hero-line" style="width:300px;height:300px;top:-80px;right:-60px;"></div>
+  <div class="hero-line" style="width:500px;height:500px;top:-150px;right:-150px;"></div>
+  <div class="hero-line" style="width:200px;height:200px;bottom:-60px;left:10%;"></div>
+  <!-- Decorative compass arc -->
+  <svg class="absolute top-10 left-10 opacity-[0.06] pointer-events-none" width="120" height="120" viewBox="0 0 120 120">
+    <circle cx="60" cy="60" r="55" fill="none" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="60" cy="60" r="40" fill="none" stroke="currentColor" stroke-width="0.5"/>
+    <line x1="60" y1="5" x2="60" y2="115" stroke="currentColor" stroke-width="0.3"/>
+    <line x1="5" y1="60" x2="115" y2="60" stroke="currentColor" stroke-width="0.3"/>
+  </svg>
+  <svg class="absolute bottom-20 right-20 opacity-[0.05] pointer-events-none hidden md:block" width="180" height="180" viewBox="0 0 180 180">
+    <circle cx="90" cy="90" r="85" fill="none" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="90" cy="90" r="60" fill="none" stroke="currentColor" stroke-width="0.5"/>
+    <circle cx="90" cy="90" r="35" fill="none" stroke="currentColor" stroke-width="0.5"/>
+  </svg>
+
+  <div class="max-w-3xl mx-auto text-center relative z-10">
+    <div class="mono text-xs tracking-[0.3em] uppercase copper-text mb-4 font-medium">
+      <span data-zh>品牌声誉棱镜 · 六维分析</span>
+      <span data-en>Brand Reputation Prism · Six-Dimension Analysis</span>
+    </div>
+    <h1 class="serif text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight">
+      <span data-zh>Dyson<span class="copper-text">（戴森）</span><br>品牌声誉分析报告</span>
+      <span data-en>Dyson<br><span class="copper-text">Brand Reputation</span> Analysis</span>
+    </h1>
+    <div class="w-16 h-[2px] mx-auto mb-6" style="background:linear-gradient(90deg,transparent,#B87333,transparent)"></div>
+    <p class="text-muted text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-8">
+      <span data-zh>2026年3月30日 — 4月29日（30天）<br>基于全球商情速递平台（Supinfor）200条精选资讯</span>
+      <span data-en>March 30 – April 29, 2026 (30 days)<br>Based on 200 curated articles from Supinfor Global Intelligence</span>
+    </p>
+    <!-- Key metrics row -->
+    <div class="flex flex-wrap justify-center gap-6 md:gap-10 mt-8">
+      <div class="text-center">
+        <div class="score-number text-3xl">200</div>
+        <div class="text-xs text-muted mt-1 mono">
+          <span data-zh>精选资讯</span><span data-en>Curated Articles</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="score-number text-3xl">6</div>
+        <div class="text-xs text-muted mt-1 mono">
+          <span data-zh>分析维度</span><span data-en>Dimensions</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="score-number text-3xl">30</div>
+        <div class="text-xs text-muted mt-1 mono">
+          <span data-zh>天监测周期</span><span data-en>Day Period</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <div class="score-number text-3xl">3.2:1</div>
+        <div class="text-xs text-muted mt-1 mono">
+          <span data-zh>压缩比</span><span data-en>Compression</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== META INFO BAR ==================== -->
+<section class="px-6 pb-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="card reveal">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+        <div>
+          <div class="text-xs text-muted mono mb-1">
+            <span data-zh>数据来源</span><span data-en>Data Source</span>
+          </div>
+          <div>
+            <span data-zh>全球商情速递平台（Supinfor），媒体过滤（国际知名/国家主流/区域重点），仅保留带贴文标签数据</span>
+            <span data-en>Supinfor Global Intelligence Platform, media filter (international/national/regional), tagged articles only</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs text-muted mono mb-1">
+            <span data-zh>样本量</span><span data-en>Sample Size</span>
+          </div>
+          <div>
+            <span data-zh>200条精选资讯（原始去重后2,477条，带标签640条，压缩比3.2:1）</span>
+            <span data-en>200 curated (2,477 deduplicated, 640 tagged, 3.2:1 compression)</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs text-muted mono mb-1">
+            <span data-zh>分析框架</span><span data-en>Framework</span>
+          </div>
+          <div>
+            <span data-zh>六维品牌声誉棱镜</span>
+            <span data-en>Six-Dimension Brand Reputation Prism</span>
+          </div>
+        </div>
+        <div>
+          <div class="text-xs text-muted mono mb-1">
+            <span data-zh>分析机构 / 日期</span><span data-en>Institution / Date</span>
+          </div>
+          <div>
+            <span data-zh>Supinfor Ltd. / 2026年4月29日</span>
+            <span data-en>Supinfor Ltd. / April 29, 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 1: 品牌画像综述 ==================== -->
+<section id="section-1" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第一章</span><span data-en>Chapter 1</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>品牌画像综述</span>
+        <span data-en>Brand Profile Overview</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Warning box -->
+    <div class="warning-box reveal mb-8">
+      <div class="flex items-start gap-2">
+        <span class="text-lg mt-0.5">⚠️</span>
+        <div class="text-sm leading-relaxed">
+          <strong>
+            <span data-zh>阅读提示</span><span data-en>Reading Note</span>
+          </strong>
+          <span data-zh>：本报告基于30天的媒体数据，是品牌形象的短周期扫描快照。本周期恰逢Supersonic Travel旅行吹风机全球发布（4月21日），该事件贡献了大量报道，可能导致产品维度信号偏高。建议结合多个周期的持续监测，形成更完整的品牌画像认知。</span>
+          <span data-en>: This report is based on 30 days of media data, serving as a short-cycle snapshot of brand image. This period coincided with the global launch of the Supersonic Travel hair dryer (April 21), which contributed significant coverage and may skew product-dimension signals upward. We recommend combining multiple monitoring cycles for a more complete brand profile.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overview paragraph -->
+    <div class="reveal mb-10">
+      <p class="text-base leading-relaxed mb-4">
+        <span data-zh>本周期内，Dyson在全球媒体中初步呈现为一个<strong class="copper-text">高端工程美学品牌</strong>——技术叙事围绕"工程创新解决生活痛点"展开，品牌调性通过韩流明星代言、快闪体验店和设计语言传递"精致生活方式"信号。与同赛道的石头科技（技术参数驱动）和追觅（性价比+多元化扩张）形成鲜明对比，Dyson的品牌形象更接近"家电界的苹果"——以设计和体验溢价为核心，而非以参数和价格取胜。</span>
+        <span data-en>During this period, Dyson initially presents in global media as a <strong class="copper-text">premium engineering-aesthetic brand</strong> — its technical narrative centers on "engineering innovation solving everyday pain points," while brand tonality conveys "refined lifestyle" signals through K-pop celebrity endorsements, pop-up experience stores, and design language. In contrast to Roborock (spec-driven) and Dreame (value + diversification), Dyson's brand image is closer to "the Apple of home appliances" — premised on design and experience premium rather than specs and pricing.</span>
+      </p>
+    </div>
+
+    <!-- ===== RADAR CHART ===== -->
+    <div class="reveal mb-10">
+      <h3 class="serif text-lg mb-6 text-center">
+        <span data-zh>品牌声誉棱镜雷达图</span>
+        <span data-en>Brand Reputation Prism Radar</span>
+      </h3>
+      <div class="radar-chart" id="radarChart">
+        <svg viewBox="0 0 400 380" xmlns="http://www.w3.org/2000/svg" class="w-full">
+          <!-- Background hexagons -->
+          <g transform="translate(200,180)">
+            <!-- Level lines 1-5 -->
+            <polygon points="0,-150 129.9,-75 129.9,75 0,150 -129.9,75 -129.9,-75" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+            <polygon points="0,-120 103.9,-60 103.9,60 0,120 -103.9,60 -103.9,-60" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+            <polygon points="0,-90 77.9,-45 77.9,45 0,90 -77.9,45 -77.9,-45" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+            <polygon points="0,-60 52,-30 52,30 0,60 -52,30 -52,-30" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+            <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="none" stroke="currentColor" stroke-width="0.5" opacity="0.1"/>
+            <!-- Axis lines -->
+            <line x1="0" y1="0" x2="0" y2="-150" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <line x1="0" y1="0" x2="129.9" y2="-75" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <line x1="0" y1="0" x2="129.9" y2="75" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <line x1="0" y1="0" x2="0" y2="150" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <line x1="0" y1="0" x2="-129.9" y2="75" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <line x1="0" y1="0" x2="-129.9" y2="-75" stroke="currentColor" stroke-width="0.3" opacity="0.15"/>
+            <!-- Data polygon: Tech4, Biz3, Eco2.5, Risk4, Market5, Value5 -->
+            <polygon id="radarPoly"
+              points="0,-120 77.9,-45 64.9,37.5 0,150 -129.9,75 -129.9,-75"
+              fill="rgba(184,115,51,0.15)" stroke="#B87333" stroke-width="2" stroke-linejoin="round"
+              style="transition: all 0.8s ease;"
+            />
+            <!-- Data dots -->
+            <circle cx="0" cy="-120" r="4" fill="#B87333" class="radar-dot"/>
+            <circle cx="77.9" cy="-45" r="4" fill="#B87333" class="radar-dot"/>
+            <circle cx="64.9" cy="37.5" r="4" fill="#B87333" class="radar-dot"/>
+            <circle cx="0" cy="150" r="4" fill="#B87333" class="radar-dot"/>
+            <circle cx="-129.9" cy="75" r="4" fill="#B87333" class="radar-dot"/>
+            <circle cx="-129.9" cy="-75" r="4" fill="#B87333" class="radar-dot"/>
+          </g>
+          <!-- Labels -->
+          <text x="200" y="22" text-anchor="middle" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>技术形象 4.0</tspan><tspan data-en>Tech Image 4.0</tspan>
+          </text>
+          <text x="348" y="100" text-anchor="start" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>商业势能 3.0</tspan><tspan data-en>Business 3.0</tspan>
+          </text>
+          <text x="348" y="268" text-anchor="start" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>生态角色 2.5</tspan><tspan data-en>Ecosystem 2.5</tspan>
+          </text>
+          <text x="200" y="370" text-anchor="middle" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>风险轮廓 4.0</tspan><tspan data-en>Risk Profile 4.0</tspan>
+          </text>
+          <text x="52" y="268" text-anchor="end" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>市场叙事 5.0</tspan><tspan data-en>Narrative 5.0</tspan>
+          </text>
+          <text x="52" y="100" text-anchor="end" class="fill-current text-xs" font-family="'Source Code Pro',monospace">
+            <tspan data-zh>价值主张 5.0</tspan><tspan data-en>Value Prop 5.0</tspan>
+          </text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Score cards row -->
+    <div class="reveal mb-10">
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="4.0">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>技术形象</span><span data-en>Tech Image</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>工程美学型</span><span data-en>Eng. Aesthetic</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="3.0">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>商业势能</span><span data-en>Business</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>信号不足型</span><span data-en>Low Signal</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="60"></div></div>
+        </div>
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="2.5">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>生态角色</span><span data-en>Ecosystem</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>独立品牌型</span><span data-en>Independent</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="50"></div></div>
+        </div>
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="4.0">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>风险轮廓</span><span data-en>Risk Profile</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>低风险型</span><span data-en>Low Risk</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="80"></div></div>
+        </div>
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="5.0">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>市场叙事</span><span data-en>Narrative</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>品类标杆型</span><span data-en>Benchmark</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="100"></div></div>
+        </div>
+        <div class="card text-center py-4 px-2">
+          <div class="score-number text-2xl md:text-3xl" data-score="5.0">0</div>
+          <div class="text-xs text-muted mt-1">
+            <span data-zh>价值主张</span><span data-en>Value Prop</span>
+          </div>
+          <div class="mono text-[10px] copper-text mt-0.5">
+            <span data-zh>精致生活方式型</span><span data-en>Refined Lifestyle</span>
+          </div>
+          <div class="progress-bar-bg mt-2"><div class="progress-bar-fill" data-width="100"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- One-line portrait -->
+    <div class="reveal">
+      <div class="card" style="border-left:3px solid #B87333;">
+        <h3 class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+          <span data-zh>一句话画像</span><span data-en>One-Line Portrait</span>
+        </h3>
+        <p class="text-sm leading-relaxed">
+          <span data-zh>在本周期的媒体报道中，Dyson初步呈现为<strong>一个以工程创新和设计美学为核心竞争力、通过高端定价和生活方式叙事构建品牌溢价的家电品牌，在媒体中享有"品类标杆"地位，但面临中国品牌在技术参数和性价比上的全面追赶</strong>。</span>
+          <span data-en>In this period's media coverage, Dyson initially presents as <strong>a home appliance brand whose core competitiveness lies in engineering innovation and design aesthetics, building brand premium through high-end pricing and lifestyle narratives, enjoying "category benchmark" status in media, yet facing comprehensive catch-up from Chinese brands on specs and value</strong>.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2: 技术形象 ==================== -->
+<section id="section-2" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第二章</span><span data-en>Chapter 2</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>技术形象：工程美学型</span>
+        <span data-en>Tech Image: Engineering Aesthetic</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Dimension card -->
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">4.0</div>
+        <div>
+          <div class="text-xs text-muted mono">
+            <span data-zh>评分</span><span data-en>Score</span>
+          </div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1">
+          <span data-zh>信号密度</span><span data-en>Signal Density</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-high"></span>
+          <span class="text-sm">
+            <span data-zh>高（新品发布136条+技术创新3条，占精选集69.5%）</span>
+            <span data-en>High (136 product launches + 3 tech innovation, 69.5% of curated set)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core findings -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>核心发现</span><span data-en>Key Findings</span>
+      </h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong>
+                <span data-zh>"工程解决痛点"是核心技术叙事</span>
+                <span data-en>"Engineering Solves Pain Points" is the core tech narrative</span>
+              </strong>
+              <span data-zh>：Supersonic Travel（解决旅行吹风痛点）、PencilVac（解决小空间清洁痛点）、PencilWash（解决硬地板湿清洁痛点）、Spot+Scrub AI（解决机器人吸力不足痛点）——每款产品都围绕一个具体的用户痛点展开</span>
+              <span data-en>: Supersonic Travel (travel hair drying), PencilVac (small-space cleaning), PencilWash (hard floor wet cleaning), Spot+Scrub AI (robot suction insufficiency) — each product addresses a specific user pain point</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong>
+                <span data-zh>设计语言是技术叙事的重要组成部分</span>
+                <span data-en>Design language is integral to the tech narrative</span>
+              </strong>
+              <span data-zh>：Supersonic Travel"比原版小32%、轻25%"被反复强调，PencilVac"38mm直径手柄"成为核心卖点，设计本身就是技术</span>
+              <span data-en>: Supersonic Travel "32% smaller, 25% lighter" was repeatedly emphasized; PencilVac's "38mm diameter handle" became a core selling point — design itself is technology</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong>
+                <span data-zh>AI应用相对克制</span>
+                <span data-en>Restrained AI adoption</span>
+              </strong>
+              <span data-zh>：Spot+Scrub AI搭载AI污渍识别，但整体AI叙事远不如石头科技和追觅激进</span>
+              <span data-en>: Spot+Scrub AI features AI stain recognition, but overall AI narrative is far less aggressive than Roborock and Dreame</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Supporting evidence -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>支撑证据</span><span data-en>Supporting Evidence</span>
+      </h3>
+      <div class="space-y-3 text-sm leading-relaxed">
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-circle text-[4px] copper-text mt-2 flex-shrink-0"></i>
+          <div>
+            <span data-zh><strong>Supersonic Travel</strong>：4月21日全球发布，覆盖英、美、韩、日、马来西亚、印尼、台湾等市场，单日42条报道</span>
+            <span data-en><strong>Supersonic Travel</strong>: Global launch on April 21, covering UK, US, Korea, Japan, Malaysia, Indonesia, Taiwan, with 42 reports in a single day</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-circle text-[4px] copper-text mt-2 flex-shrink-0"></i>
+          <div>
+            <span data-zh><strong>PencilVac Fluffy</strong>：将电机、电池、集尘桶整合进38mm手柄，WIRED评测称其为"戴森slim设计路线的探索产品"</span>
+            <span data-en><strong>PencilVac Fluffy</strong>: Motor, battery, and dust bin integrated into a 38mm handle; WIRED called it "Dyson's exploration of the slim design route"</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-circle text-[4px] copper-text mt-2 flex-shrink-0"></i>
+          <div>
+            <span data-zh><strong>Spot+Scrub AI</strong>：65AW持续吸力、10组同心气旋、识别超100种污渍，被西班牙媒体称为"当前激光洗地机器人领域的最高标准"</span>
+            <span data-en><strong>Spot+Scrub AI</strong>: 65AW sustained suction, 10 concentric cyclones, 100+ stain recognition; Spanish media called it "the highest standard in laser mopping robots"</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-circle text-[4px] copper-text mt-2 flex-shrink-0"></i>
+          <div>
+            <span data-zh><strong>V10 Konical</strong>：首款可自动集尘的戴森吸尘器，搭配Auto-empty Dok底座</span>
+            <span data-en><strong>V10 Konical</strong>: First Dyson vacuum with auto-emptying, paired with Auto-empty Dok base</span>
+          </div>
+        </div>
+        <div class="flex items-start gap-2">
+          <i class="fa-solid fa-circle text-[4px] copper-text mt-2 flex-shrink-0"></i>
+          <div>
+            <span data-zh><strong>HushJet Mini Cool</strong>：首款手持便携风扇，65000转无刷电机</span>
+            <span data-en><strong>HushJet Mini Cool</strong>: First handheld portable fan, 65,000 RPM brushless motor</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Assessment -->
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>形象研判</span><span data-en>Image Assessment</span>
+      </h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>Dyson在本周期内的技术形象呈现为"工程美学型"——技术创新不以参数竞赛为目标，而是以解决具体用户痛点和提升使用体验为导向。这与石头科技的"技术引领型"（追求参数天花板）和追觅的"技术激进型"（多品类快速扩张）形成差异化。不过，在扫地机器人领域，Dyson的Spot+Scrub AI在吸力（65AW vs 石头科技36000Pa）和越障能力等参数上并不占优，其技术叙事更多依赖"AI污渍识别"和"持续吸力不衰减"等差异化卖点。</span>
+        <span data-en>Dyson's tech image in this period presents as "Engineering Aesthetic" — innovation targets solving specific user pain points and enhancing experience rather than spec competition. This differentiates from Roborock's "Tech Leadership" (pushing spec ceilings) and Dreame's "Tech Aggressive" (rapid multi-category expansion). However, in robot vacuums, Dyson's Spot+Scrub AI doesn't lead on suction (65AW vs Roborock's 36,000Pa) or obstacle avoidance specs; its narrative relies more on differentiated features like "AI stain recognition" and "sustained suction without decay."</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: 商业势能 ==================== -->
+<section id="section-3" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第三章</span><span data-en>Chapter 3</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>商业势能：信号不足型</span>
+        <span data-en>Business Momentum: Low Signal</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">3.0</div>
+        <div>
+          <div class="text-xs text-muted mono"><span data-zh>评分</span><span data-en>Score</span></div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="60"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1"><span data-zh>信号密度</span><span data-en>Signal Density</span></div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-low"></span>
+          <span class="text-sm">
+            <span data-zh>极低（经营业绩1条，且为土耳其白电行业整体数据而非Dyson自身）</span>
+            <span data-en>Very low (1 business performance article, covering Turkey's white goods industry, not Dyson specifically)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4"><span data-zh>核心发现</span><span data-en>Key Findings</span></h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>财务数据几乎为零</span><span data-en>Near-zero financial data</span></strong>
+              <span data-zh>：作为非上市公司，Dyson的营收、利润等数据在本周期报道中完全缺失</span>
+              <span data-en>: As a private company, Dyson's revenue and profit data are completely absent from this period's coverage</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>产品发布密度暗示商业活跃度</span><span data-en>Product launch density implies business activity</span></strong>
+              <span data-zh>：Supersonic Travel、PencilVac、PencilWash、V10 Konical、HushJet Mini Cool、Spot+Scrub AI等多款新品同期发布</span>
+              <span data-en>: Multiple new products launched simultaneously — Supersonic Travel, PencilVac, PencilWash, V10 Konical, HushJet Mini Cool, Spot+Scrub AI</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>全球市场覆盖广泛</span><span data-en>Broad global market coverage</span></strong>
+              <span data-zh>：新品发布覆盖英、美、韩、日、马来西亚、印尼、越南、台湾、西班牙、土耳其等市场</span>
+              <span data-en>: Launches covered UK, US, Korea, Japan, Malaysia, Indonesia, Vietnam, Taiwan, Spain, Turkey and more</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4"><span data-zh>形象研判</span><span data-en>Image Assessment</span></h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>由于Dyson为非上市公司，本周期内几乎没有财务数据信号，无法对其商业势能做出可靠判断。产品发布密度和全球市场覆盖暗示品牌处于活跃扩张状态，但缺少营收、利润、市占率等硬数据支撑。这一维度的评分（3分）带有较大不确定性，建议在后续周期中关注行业报告和第三方市场数据。</span>
+        <span data-en>As a private company, Dyson has virtually no financial data signals in this period, making reliable business momentum assessment impossible. Product launch density and global coverage suggest active expansion, but lack hard data on revenue, profit, and market share. This dimension's score (3.0) carries significant uncertainty; we recommend monitoring industry reports and third-party market data in subsequent cycles.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: 生态角色 ==================== -->
+<section id="section-4" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第四章</span><span data-en>Chapter 4</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>生态角色：独立品牌型</span>
+        <span data-en>Ecosystem Role: Independent Brand</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">2.5</div>
+        <div>
+          <div class="text-xs text-muted mono"><span data-zh>评分</span><span data-en>Score</span></div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="50"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1"><span data-zh>信号密度</span><span data-en>Signal Density</span></div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-low"></span>
+          <span class="text-sm">
+            <span data-zh>极低（销售合作1条、区域拓展1条）</span>
+            <span data-en>Very low (1 sales partnership, 1 regional expansion)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4"><span data-zh>核心发现</span><span data-en>Key Findings</span></h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>渠道合作以零售为主</span><span data-en>Channel partnerships are retail-focused</span></strong>
+              <span data-zh>：与ANA航空合作在机场休息室安装吹风机、与乐天Hi Mart合作在韩国50家门店开售</span>
+              <span data-en>: Partnered with ANA Airlines for airport lounge hair dryer installations; partnered with Lotte Hi Mart for sales in 50 Korean stores</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>无明显的生态构建信号</span><span data-en>No clear ecosystem-building signals</span></strong>
+              <span data-zh>：不同于石头科技的"全场景清洁平台"或大疆的"影像创作生态"，Dyson在本周期内没有展现生态构建的意图</span>
+              <span data-en>: Unlike Roborock's "full-scenario cleaning platform" or DJI's "imaging creation ecosystem," Dyson showed no ecosystem-building intent in this period</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>MyDyson App是唯一的数字触点</span><span data-en>MyDyson App is the sole digital touchpoint</span></strong>
+              <span data-zh>：多款产品支持MyDyson App连接，但功能以设备控制和使用数据为主，未形成平台效应</span>
+              <span data-en>: Multiple products support MyDyson App connectivity, but functionality is limited to device control and usage data, without platform effects</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4"><span data-zh>形象研判</span><span data-en>Image Assessment</span></h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>Dyson在本周期内呈现为"独立品牌型"——依靠产品力和品牌溢价独立运营，不依赖也不构建多方参与的生态系统。这与其"高端工程美学"定位一致——苹果式的封闭体验优于开放生态。但在智能家居互联趋势下，缺少生态构建可能成为长期短板。</span>
+        <span data-en>Dyson presents as an "Independent Brand" in this period — operating independently on product strength and brand premium, neither relying on nor building multi-party ecosystems. This aligns with its "premium engineering aesthetic" positioning — Apple-style closed experience over open ecosystem. However, amid smart home connectivity trends, lack of ecosystem building may become a long-term weakness.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 5: 风险轮廓 ==================== -->
+<section id="section-5" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第五章</span><span data-en>Chapter 5</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>风险轮廓：低风险型（风险较低）</span>
+        <span data-en>Risk Profile: Low Risk</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">4.0</div>
+        <div>
+          <div class="text-xs text-muted mono"><span data-zh>评分（风险较低）</span><span data-en>Score (Low Risk)</span></div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="80"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1"><span data-zh>信号密度</span><span data-en>Signal Density</span></div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-low"></span>
+          <span class="text-sm">
+            <span data-zh>极低（法律诉讼1条，为追觅相关而非Dyson自身）</span>
+            <span data-en>Very low (1 legal case, related to Dreame, not Dyson itself)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4"><span data-zh>核心发现</span><span data-en>Key Findings</span></h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>本周期内几乎没有负面报道</span><span data-en>Virtually no negative coverage in this period</span></strong>
+              <span data-zh>：无安全事故、无监管调查、无财务风险信号</span>
+              <span data-en>: No safety incidents, no regulatory investigations, no financial risk signals</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>竞品追赶是唯一的隐性风险</span><span data-en>Competitor catch-up is the only implicit risk</span></strong>
+              <span data-zh>：多篇品牌比较类报道显示，Shark、石头科技、追觅等品牌在性能和价格上正在缩小与Dyson的差距</span>
+              <span data-en>: Multiple brand comparison articles show Shark, Roborock, and Dreame narrowing the gap with Dyson on performance and price</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>越南市场数据暗示竞争压力</span><span data-en>Vietnam market data hints at competitive pressure</span></strong>
+              <span data-zh>：越南扫地机器人市场中国品牌占超65%份额，Dyson Spot+Scrub AI售价3500万越南盾远高于竞品</span>
+              <span data-en>: Chinese brands hold 65%+ of Vietnam's robot vacuum market; Dyson Spot+Scrub AI priced at 35M VND, far above competitors</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4"><span data-zh>形象研判</span><span data-en>Image Assessment</span></h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>Dyson在本周期内的风险轮廓呈现为"低风险型"——品牌声誉干净，无重大负面事件。但需注意，低风险信号也可能是因为Dyson作为非上市公司，媒体对其财务和运营的审视远不如上市公司严格。竞品追赶是值得持续关注的结构性风险。</span>
+        <span data-en>Dyson's risk profile in this period presents as "Low Risk" — clean brand reputation with no major negative events. However, low risk signals may partly reflect that Dyson, as a private company, faces far less media scrutiny on finances and operations than public companies. Competitor catch-up remains a structural risk worth continuous monitoring.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6: 市场叙事 ==================== -->
+<section id="section-6" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第六章</span><span data-en>Chapter 6</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>市场叙事：品类标杆型</span>
+        <span data-en>Market Narrative: Category Benchmark</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">5.0</div>
+        <div>
+          <div class="text-xs text-muted mono"><span data-zh>评分</span><span data-en>Score</span></div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="100"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1"><span data-zh>信号密度</span><span data-en>Signal Density</span></div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-medium"></span>
+          <span class="text-sm">
+            <span data-zh>中高（品牌比较9条+行业分析4条，加上大量评测中的对比叙事）</span>
+            <span data-en>Medium-high (9 brand comparisons + 4 industry analyses, plus extensive comparative narratives in reviews)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4"><span data-zh>核心发现</span><span data-en>Key Findings</span></h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>"对标Dyson"是竞品的标准叙事框架</span><span data-en>"Benchmarking against Dyson" is competitors' standard narrative</span></strong>
+              <span data-zh>：Shark FlexStyle被描述为"戴森Airwrap的一半价格"、T3 Aire 360被描述为"最接近Dyson效果的平价替代"、追觅Z30 Pro被描述为"对标戴森的高性价比选择"</span>
+              <span data-en>: Shark FlexStyle described as "half the price of Dyson Airwrap"; T3 Aire 360 as "the closest affordable alternative to Dyson"; Dreame Z30 Pro as "a high-value Dyson competitor"</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>"Dyson替代品"是一个独立的媒体品类</span><span data-en>"Dyson Alternative" has become an independent media category</span></strong>
+              <span data-zh>：多篇文章以"Dyson alternative""比Dyson便宜的选择"为标题，说明Dyson已成为品类的代名词</span>
+              <span data-en>: Multiple articles titled "Dyson alternative" or "cheaper than Dyson" indicate Dyson has become synonymous with the category</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>IMTEST德国测试中Dyson Supersonic排名第一</span><span data-en>Dyson Supersonic ranked #1 in IMTEST Germany</span></strong>
+              <span data-zh>：但与第二名仅差0.7分，小米Mi Ionen-Föhn以40欧元售价获"性价比之王"</span>
+              <span data-en>: But only 0.7 points ahead of second place; Xiaomi Mi Ionen-Föhn at €40 won "best value"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4"><span data-zh>形象研判</span><span data-en>Image Assessment</span></h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>Dyson在本周期内的市场叙事地位是六个维度中最强的——它不仅是品类参与者，而是品类的定义者和标杆。竞品的营销叙事几乎都以"对标Dyson"或"Dyson替代品"为框架，这本身就是品牌统治力的证明。不过，"Dyson替代品"叙事的流行也暗示，越来越多消费者认为可以用更低价格获得接近Dyson的体验。</span>
+        <span data-en>Dyson's market narrative position is the strongest of all six dimensions — it's not merely a category participant but the category definer and benchmark. Competitors' marketing narratives almost universally frame around "benchmarking Dyson" or "Dyson alternative," which itself proves brand dominance. However, the popularity of the "Dyson alternative" narrative also suggests growing consumer belief that near-Dyson experiences are available at lower prices.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7: 价值主张 ==================== -->
+<section id="section-7" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第七章</span><span data-en>Chapter 7</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>价值主张：精致生活方式型</span>
+        <span data-en>Value Proposition: Refined Lifestyle</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="reveal mb-8 flex flex-wrap gap-4 items-center">
+      <div class="card flex items-center gap-4 flex-1 min-w-[200px]">
+        <div class="score-number">5.0</div>
+        <div>
+          <div class="text-xs text-muted mono"><span data-zh>评分</span><span data-en>Score</span></div>
+          <div class="progress-bar-bg mt-1 w-24"><div class="progress-bar-fill" data-width="100"></div></div>
+        </div>
+      </div>
+      <div class="card flex-1 min-w-[200px]">
+        <div class="text-xs text-muted mono mb-1"><span data-zh>信号密度</span><span data-en>Signal Density</span></div>
+        <div class="flex items-center gap-2">
+          <span class="density-dot density-high"></span>
+          <span class="text-sm">
+            <span data-zh>高（营销活动43条，占精选集21.5%）</span>
+            <span data-en>High (43 marketing activities, 21.5% of curated set)</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4"><span data-zh>核心发现</span><span data-en>Key Findings</span></h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>韩流明星代言强化"精致生活"调性</span><span data-en>K-pop celebrity endorsements reinforce "refined living" tonality</span></strong>
+              <span data-zh>：朴宝剑和IVE张员瑛出席首尔圣水洞快闪店，多条韩国媒体报道聚焦明星颜值而非产品参数</span>
+              <span data-en>: Park Bo-gum and IVE's Jang Won-young attended the Seoul Seongsu-dong pop-up; Korean media coverage focused on celebrity visuals rather than product specs</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>快闪体验店是核心营销载体</span><span data-en>Pop-up experience stores are the core marketing vehicle</span></strong>
+              <span data-zh>：首尔圣水洞"Supersonic Travel Lounge"、羽田机场快闪、台中漢神洲際专柜——品牌通过线下体验传递"触摸品质"的价值</span>
+              <span data-en>: Seoul Seongsu-dong "Supersonic Travel Lounge," Haneda Airport pop-up, Taichung Han Shin counter — the brand conveys "touch quality" value through offline experiences</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">03</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>护发品类延伸传递"全方位呵护"</span><span data-en>Hair care category extension conveys "holistic care"</span></strong>
+              <span data-zh>：Omega滋养修护系列（向日葵籽油护发产品）、Amino免冲洗头皮护理泡沫——从硬件延伸到耗材，构建"护发生态"</span>
+              <span data-en>: Omega nourishing repair series (sunflower seed oil hair products), Amino leave-in scalp care foam — extending from hardware to consumables, building a "hair care ecosystem"</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">04</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>母亲节营销精准定位"孝心经济"</span><span data-en>Mother's Day marketing precisely targets "filial piety economy"</span></strong>
+              <span data-zh>：台湾、韩国市场的母亲节营销将Dyson定位为"送给妈妈的沙龙级美容神器"</span>
+              <span data-en>: Mother's Day campaigns in Taiwan and Korea positioned Dyson as "a salon-grade beauty device for Mom"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4"><span data-zh>形象研判</span><span data-en>Image Assessment</span></h3>
+      <p class="text-sm leading-relaxed">
+        <span data-zh>Dyson在本周期内的价值主张是六个维度中最清晰、最一致的——"精致生活方式"贯穿产品设计、营销活动、明星代言和渠道体验的每一个环节。与石头科技的"自动化生活方式"（减少人工干预）和大疆的"创作者赋能"（让每个人都能创作）相比，Dyson的价值主张更偏向"品质升级"和"自我呵护"。这一定位在高端消费市场具有强大的情感共鸣力。</span>
+        <span data-en>Dyson's value proposition is the clearest and most consistent of all six dimensions — "refined lifestyle" permeates every aspect from product design, marketing activities, celebrity endorsements, to channel experiences. Compared to Roborock's "automated lifestyle" (reducing manual intervention) and DJI's "creator empowerment" (enabling everyone to create), Dyson's value proposition leans toward "quality upgrade" and "self-care." This positioning carries powerful emotional resonance in the premium consumer market.</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 8: 维度交叉分析 ==================== -->
+<section id="section-8" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第八章</span><span data-en>Chapter 8</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>维度交叉分析</span>
+        <span data-en>Cross-Dimension Analysis</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- 形象一致性 -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>形象一致性</span><span data-en>Image Consistency</span>
+      </h3>
+      <div class="card mb-4">
+        <p class="text-sm leading-relaxed mb-3">
+          <span data-zh><strong class="copper-text">技术形象（4分）× 市场叙事（5分）× 价值主张（5分）</strong>三个维度高度一致：工程美学的技术叙事支撑了品类标杆的市场地位，品类标杆地位又强化了精致生活方式的价值主张。这三个维度构成了Dyson品牌的核心资产，且相互强化。</span>
+          <span data-en><strong class="copper-text">Tech Image (4) × Market Narrative (5) × Value Proposition (5)</strong> — three dimensions are highly consistent: engineering aesthetic narrative supports category benchmark market position, which in turn reinforces the refined lifestyle value proposition. These three dimensions form Dyson's core brand assets and mutually reinforce each other.</span>
+        </p>
+        <p class="text-sm leading-relaxed">
+          <span data-zh><strong class="copper-text">风险轮廓（4分，低风险）</strong>与整体品牌调性一致：一个"精致生活方式"品牌不应该有负面新闻，Dyson在这方面做到了。</span>
+          <span data-en><strong class="copper-text">Risk Profile (4, Low Risk)</strong> is consistent with overall brand tonality: a "refined lifestyle" brand shouldn't have negative news, and Dyson has achieved this.</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 形象裂缝 -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>形象裂缝</span><span data-en>Image Gaps</span>
+      </h3>
+      <div class="card">
+        <p class="text-sm leading-relaxed">
+          <span data-zh><strong class="copper-text">商业势能（3分）× 生态角色（2.5分）</strong>是两个信号不足的维度，与其他维度的高分形成反差。这不一定是"裂缝"，更可能是Dyson作为非上市公司的信息不透明导致的"盲区"。但如果竞品（石头科技、追觅）在商业增长和生态构建上持续展现强劲信号，Dyson的"沉默"可能被市场解读为"停滞"。</span>
+          <span data-en><strong class="copper-text">Business Momentum (3) × Ecosystem Role (2.5)</strong> are two low-signal dimensions, contrasting with high scores elsewhere. This isn't necessarily a "gap" — more likely a "blind spot" caused by Dyson's opacity as a private company. However, if competitors (Roborock, Dreame) continue showing strong signals in business growth and ecosystem building, Dyson's "silence" may be interpreted as "stagnation."</span>
+        </p>
+      </div>
+    </div>
+
+    <!-- 形象盲区 -->
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4">
+        <span data-zh>形象盲区</span><span data-en>Image Blind Spots</span>
+      </h3>
+      <div class="space-y-4">
+        <div class="card">
+          <p class="text-sm leading-relaxed">
+            <strong class="copper-text">
+              <span data-zh>财务数据完全缺失</span><span data-en>Complete absence of financial data</span>
+            </strong>
+            <span data-zh>：这是本报告最大的盲区。无法判断Dyson的营收增速、利润率、市占率变化，也无法评估其高端定价策略在竞品追赶下的可持续性。</span>
+            <span data-en>: This is the report's biggest blind spot. Unable to assess Dyson's revenue growth, profit margins, or market share changes, nor evaluate the sustainability of its premium pricing strategy under competitor pressure.</span>
+          </p>
+        </div>
+        <div class="card">
+          <p class="text-sm leading-relaxed">
+            <strong class="copper-text">
+              <span data-zh>B2B和工业应用维度为零</span><span data-en>Zero B2B and industrial application signals</span>
+            </strong>
+            <span data-zh>：Dyson在本周期内完全是一个消费品牌，没有任何B2B或工业应用的信号。</span>
+            <span data-en>: Dyson is entirely a consumer brand in this period, with no B2B or industrial application signals whatsoever.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 9: 品牌声誉管理建议 ==================== -->
+<section id="section-9" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第九章</span><span data-en>Chapter 9</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>品牌声誉管理建议</span>
+        <span data-en>Brand Reputation Recommendations</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="advice-box reveal mb-8">
+      <p class="text-sm">
+        <span data-zh>以下建议基于30天短周期扫描，仅供参考。</span>
+        <span data-en>The following recommendations are based on a 30-day short-cycle scan and are for reference only.</span>
+      </p>
+    </div>
+
+    <!-- 值得强化 -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-arrow-up-right-dots copper-text text-base"></i>
+        <span data-zh>值得强化的维度</span><span data-en>Dimensions Worth Strengthening</span>
+      </h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>市场叙事+价值主张</span><span data-en>Market Narrative + Value Proposition</span></strong>
+              <span data-zh>：这两个维度是Dyson的核心资产。韩流明星代言、快闪体验店、护发品类延伸等策略在本周期内表现出色，值得持续投入。特别是"Supersonic Travel解决旅行吹风痛点"的叙事非常成功，可作为后续新品发布的参考模板</span>
+              <span data-en>: These two dimensions are Dyson's core assets. K-pop endorsements, pop-up stores, and hair care category extension performed excellently this period and deserve continued investment. The "Supersonic Travel solves travel hair drying pain point" narrative was particularly successful and can serve as a template for future launches</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>技术形象</span><span data-en>Tech Image</span></strong>
+              <span data-zh>：Spot+Scrub AI的"AI污渍识别"和"持续吸力不衰减"是有效的差异化叙事，可在扫地机器人品类中持续强化，避免陷入与中国品牌的参数竞赛</span>
+              <span data-en>: Spot+Scrub AI's "AI stain recognition" and "sustained suction without decay" are effective differentiation narratives that can be continuously reinforced in the robot vacuum category, avoiding spec wars with Chinese brands</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 值得关注 -->
+    <div class="reveal mb-8">
+      <h3 class="serif text-lg mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-triangle-exclamation copper-text text-base"></i>
+        <span data-zh>值得关注的维度</span><span data-en>Dimensions Worth Watching</span>
+      </h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>竞品追赶</span><span data-en>Competitor catch-up</span></strong>
+              <span data-zh>：Shark、石头科技、追觅在性能和价格上的追赶是结构性趋势。"Dyson替代品"叙事的流行值得警惕——当"替代品"成为一个独立品类时，说明品牌溢价正在被侵蚀</span>
+              <span data-en>: Shark, Roborock, and Dreame's catch-up on performance and price is a structural trend. The popularity of the "Dyson alternative" narrative warrants vigilance — when "alternative" becomes an independent category, it signals brand premium erosion</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>越南等新兴市场</span><span data-en>Emerging markets like Vietnam</span></strong>
+              <span data-zh>：Spot+Scrub AI在越南售价3500万越南盾，远高于中国品牌竞品。新兴市场的价格敏感度可能限制Dyson的渗透率</span>
+              <span data-en>: Spot+Scrub AI priced at 35M VND in Vietnam, far above Chinese competitors. Price sensitivity in emerging markets may limit Dyson's penetration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 值得观察 -->
+    <div class="reveal">
+      <h3 class="serif text-lg mb-4 flex items-center gap-2">
+        <i class="fa-solid fa-binoculars copper-text text-base"></i>
+        <span data-zh>值得观察的维度</span><span data-en>Dimensions Worth Observing</span>
+      </h3>
+      <div class="space-y-4">
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">01</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>商业势能</span><span data-en>Business Momentum</span></strong>
+              <span data-zh>：建议在后续周期中关注第三方市场数据（IDC、GfK等），弥补非上市公司财务数据缺失的盲区</span>
+              <span data-en>: Recommend monitoring third-party market data (IDC, GfK, etc.) in subsequent cycles to compensate for the private company financial data blind spot</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex items-start gap-3">
+            <span class="mono copper-text font-bold text-sm mt-0.5">02</span>
+            <div class="text-sm leading-relaxed">
+              <strong><span data-zh>生态角色</span><span data-en>Ecosystem Role</span></strong>
+              <span data-zh>：智能家居互联趋势下，Dyson是否会从"独立品牌"转向"生态参与者"（如接入Matter协议、与智能家居平台合作），值得持续观察</span>
+              <span data-en>: Amid smart home connectivity trends, whether Dyson will shift from "independent brand" to "ecosystem participant" (e.g., adopting Matter protocol, partnering with smart home platforms) is worth continuous observation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 10: 附录 ==================== -->
+<section id="section-10" class="px-6 py-12">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <div class="mono text-xs tracking-widest uppercase copper-text mb-2 font-medium">
+        <span data-zh>第十章</span><span data-en>Chapter 10</span>
+      </div>
+      <h2 class="section-heading">
+        <span data-zh>附录</span>
+        <span data-en>Appendix</span>
+      </h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- ===== 标签分布图 (Bar Chart Visualization) ===== -->
+    <div class="reveal mb-10">
+      <h3 class="serif text-lg mb-6">
+        <span data-zh>标签分布（精选后）</span>
+        <span data-en>Tag Distribution (After Curation)</span>
+      </h3>
+
+      <!-- Visual bar chart -->
+      <div class="card mb-6" id="tagChart">
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>新品发布</span><span data-en>Product Launch</span></span>
+            <span class="mono text-xs copper-text">136 <span data-zh>条</span><span data-en>items</span> · 68.0%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="68" style="width:0"><span>68.0%</span></div></div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>营销活动</span><span data-en>Marketing</span></span>
+            <span class="mono text-xs copper-text">43 <span data-zh>条</span><span data-en>items</span> · 21.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="21.5" style="width:0"><span>21.5%</span></div></div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>品牌比较</span><span data-en>Brand Comparison</span></span>
+            <span class="mono text-xs copper-text">9 <span data-zh>条</span><span data-en>items</span> · 4.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="4.5" style="width:0"><span>4.5%</span></div></div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>行业分析</span><span data-en>Industry Analysis</span></span>
+            <span class="mono text-xs copper-text">4 <span data-zh>条</span><span data-en>items</span> · 2.0%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="2" style="width:0"><span>2.0%</span></div></div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>技术创新</span><span data-en>Tech Innovation</span></span>
+            <span class="mono text-xs copper-text">3 <span data-zh>条</span><span data-en>items</span> · 1.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="1.5" style="width:0"><span>1.5%</span></div></div>
+        </div>
+        <div class="bar-chart-item">
+          <div class="bar-label">
+            <span class="text-sm"><span data-zh>其他（5类）</span><span data-en>Others (5 types)</span></span>
+            <span class="mono text-xs copper-text">5 <span data-zh>条</span><span data-en>items</span> · 2.5%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill" data-width="2.5" style="width:0"><span>2.5%</span></div></div>
+        </div>
+      </div>
+
+      <!-- Data table -->
+      <div class="card overflow-x-auto">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><span data-zh>标签</span><span data-en>Tag</span></th>
+              <th><span data-zh>条数</span><span data-en>Count</span></th>
+              <th><span data-zh>占比</span><span data-en>Share</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-zh>新品发布</span><span data-en>Product Launch</span></td>
+              <td class="mono">136</td>
+              <td class="mono copper-text">68.0%</td>
+            </tr>
+            <tr>
+              <td><span data-zh>营销活动</span><span data-en>Marketing</span></td>
+              <td class="mono">43</td>
+              <td class="mono copper-text">21.5%</td>
+            </tr>
+            <tr>
+              <td><span data-zh>品牌比较</span><span data-en>Brand Comparison</span></td>
+              <td class="mono">9</td>
+              <td class="mono copper-text">4.5%</td>
+            </tr>
+            <tr>
+              <td><span data-zh>行业分析</span><span data-en>Industry Analysis</span></td>
+              <td class="mono">4</td>
+              <td class="mono copper-text">2.0%</td>
+            </tr>
+            <tr>
+              <td><span data-zh>技术创新</span><span data-en>Tech Innovation</span></td>
+              <td class="mono">3</td>
+              <td class="mono copper-text">1.5%</td>
+            </tr>
+            <tr>
+              <td><span data-zh>其他（5类）</span><span data-en>Others (5 types)</span></td>
+              <td class="mono">5</td>
+              <td class="mono copper-text">2.5%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ===== 六维归属分布 (Dimension Distribution Visualization) ===== -->
+    <div class="reveal mb-10">
+      <h3 class="serif text-lg mb-6">
+        <span data-zh>六维归属分布</span>
+        <span data-en>Six-Dimension Attribution Distribution</span>
+      </h3>
+
+      <!-- Visual cards with data bars -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6" id="dimensionChart">
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>技术形象</span><span data-en>Tech Image</span></span>
+            <span class="mono text-xs copper-text">~139</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="100"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：极高</span><span data-en>Signal: Very High</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>价值主张</span><span data-en>Value Prop</span></span>
+            <span class="mono text-xs copper-text">~50</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="36"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：高</span><span data-en>Signal: High</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>市场叙事</span><span data-en>Narrative</span></span>
+            <span class="mono text-xs copper-text">~20</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="14.4"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：中</span><span data-en>Signal: Medium</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>商业势能</span><span data-en>Business</span></span>
+            <span class="mono text-xs copper-text">~5</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="3.6"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：极低</span><span data-en>Signal: Very Low</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>生态角色</span><span data-en>Ecosystem</span></span>
+            <span class="mono text-xs copper-text">~5</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="3.6"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：极低</span><span data-en>Signal: Very Low</span>
+          </div>
+        </div>
+        <div class="card">
+          <div class="flex justify-between items-baseline mb-2">
+            <span class="text-sm font-medium"><span data-zh>风险轮廓</span><span data-en>Risk Profile</span></span>
+            <span class="mono text-xs copper-text">~3</span>
+          </div>
+          <div class="progress-bar-bg h-3"><div class="progress-bar-fill h-3" data-width="2.2"></div></div>
+          <div class="text-xs text-muted mt-1 mono">
+            <span data-zh>信号密度：极低</span><span data-en>Signal: Very Low</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Data table -->
+      <div class="card overflow-x-auto mb-4">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th><span data-zh>维度</span><span data-en>Dimension</span></th>
+              <th><span data-zh>归属资讯条数</span><span data-en>Attributed Articles</span></th>
+              <th><span data-zh>信号密度</span><span data-en>Signal Density</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-zh>技术形象</span><span data-en>Tech Image</span></td>
+              <td class="mono">~139</td>
+              <td><span class="mono copper-text"><span data-zh>极高</span><span data-en>Very High</span></span></td>
+            </tr>
+            <tr>
+              <td><span data-zh>商业势能</span><span data-en>Business Momentum</span></td>
+              <td class="mono">~5</td>
+              <td><span class="mono text-muted"><span data-zh>极低</span><span data-en>Very Low</span></span></td>
+            </tr>
+            <tr>
+              <td><span data-zh>生态角色</span><span data-en>Ecosystem Role</span></td>
+              <td class="mono">~5</td>
+              <td><span class="mono text-muted"><span data-zh>极低</span><span data-en>Very Low</span></span></td>
+            </tr>
+            <tr>
+              <td><span data-zh>风险轮廓</span><span data-en>Risk Profile</span></td>
+              <td class="mono">~3</td>
+              <td><span class="mono text-muted"><span data-zh>极低</span><span data-en>Very Low</span></span></td>
+            </tr>
+            <tr>
+              <td><span data-zh>市场叙事</span><span data-en>Market Narrative</span></td>
+              <td class="mono">~20</td>
+              <td><span class="mono"><span data-zh>中</span><span data-en>Medium</span></span></td>
+            </tr>
+            <tr>
+              <td><span data-zh>价值主张</span><span data-en>Value Proposition</span></td>
+              <td class="mono">~50</td>
+              <td><span class="mono copper-text"><span data-zh>高</span><span data-en>High</span></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Footnote -->
+      <div class="advice-box">
+        <p class="text-xs text-muted leading-relaxed">
+          <span data-zh>注：单条资讯可能归属多个维度。技术形象信号密度极高，因大量新品发布同时涉及技术叙事。</span>
+          <span data-en>Note: A single article may be attributed to multiple dimensions. Tech Image signal density is very high because numerous product launches simultaneously involve technical narratives.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER / DISCLAIMER ==================== -->
+<footer class="px-6 py-12 border-t" style="border-color:rgba(184,115,51,0.1);">
+  <div class="max-w-4xl mx-auto">
+    <div class="reveal">
+      <p class="text-xs text-muted leading-relaxed mb-3" style="font-style:italic;">
+        <span data-zh>本报告基于30天内的公开媒体资讯整理分析，是品牌形象的短周期扫描快照，不代表品牌的长期积累或历史定位。本周期恰逢Supersonic Travel全球发布，产品维度报道密度可能存在周期性偏高。品牌画像反映的是本周期内媒体报道中的品牌形象，可能与品牌自身定位存在偏差。建议持续监测跟踪，结合多个周期数据形成更完整的品牌声誉评估。</span>
+        <span data-en>This report is based on analysis of publicly available media information over 30 days, serving as a short-cycle snapshot of brand image. It does not represent the brand's long-term accumulation or historical positioning. This period coincided with the global launch of Supersonic Travel, and product dimension coverage density may be cyclically elevated. The brand profile reflects the brand image in media coverage during this period and may deviate from the brand's own positioning. Continuous monitoring is recommended, combining multiple cycles of data for a more complete brand reputation assessment.</span>
+      </p>
+      <p class="text-xs text-muted">© 2026 Supinfor Ltd.</p>
+    </div>
+  </div>
+</footer>
+
+</main>
+
+<!-- BACK TO TOP BUTTON -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up text-sm"></i>
+</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  // ===== THEME MANAGEMENT =====
+  const html = document.documentElement;
+  const themeIcon = document.getElementById('themeIcon');
+
+  function getSystemTheme() {
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function applyTheme(theme) {
+    html.setAttribute('data-theme', theme);
+    if (themeIcon) {
+      themeIcon.className = theme === 'dark' ? 'fa-solid fa-sun text-sm' : 'fa-solid fa-moon text-sm';
+    }
+  }
+
+  // Initialize theme
+  const savedTheme = localStorage.getItem('dyson-report-theme');
+  applyTheme(savedTheme || getSystemTheme());
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('dyson-report-theme')) {
+      applyTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  window.toggleTheme = function() {
+    const current = html.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('dyson-report-theme', next);
+    applyTheme(next);
+  };
+
+  // ===== LANGUAGE MANAGEMENT =====
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+  }
+
+  const savedLang = localStorage.getItem('dyson-report-lang');
+  applyLang(savedLang || 'zh');
+
+  window.toggleLang = function() {
+    const current = html.getAttribute('data-lang');
+    const next = current === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('dyson-report-lang', next);
+    applyLang(next);
+  };
+
+  // ===== SIDEBAR MANAGEMENT =====
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+
+  window.toggleSidebar = function() {
+    const isOpen = sidebar.classList.contains('open');
+    if (isOpen) {
+      sidebar.classList.remove('open');
+      sidebar.classList.add('closed');
+      overlay.classList.remove('active');
+    } else {
+      sidebar.classList.remove('closed');
+      sidebar.classList.add('open');
+      overlay.classList.add('active');
+    }
+  };
+
+  // Close sidebar on link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 1024) {
+        sidebar.classList.remove('open');
+        sidebar.classList.add('closed');
+        overlay.classList.remove('active');
+      }
+    });
+  });
+
+  // ===== ACTIVE SIDEBAR LINK TRACKING =====
+  const sections = document.querySelectorAll('section[id]');
+  const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+  function updateActiveLink() {
+    let current = '';
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120) {
+        current = section.getAttribute('id');
+      }
+    });
+    sidebarLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+
+  // ===== BACK TO TOP BUTTON =====
+  const backToTop = document.getElementById('backToTop');
+  function updateBackToTop() {
+    if (window.scrollY > 400) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }
+
+  // ===== SCROLL ANIMATIONS (IntersectionObserver) =====
+  const revealElements = document.querySelectorAll('.reveal');
+  let revealDelay = 0;
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, index * 80);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(el => revealObserver.observe(el));
+
+  // ===== ANIMATED PROGRESS BARS =====
+  const progressBars = document.querySelectorAll('.progress-bar-fill[data-width]');
+  const barObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        setTimeout(() => {
+          entry.target.style.width = width + '%';
+        }, 200);
+        barObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  progressBars.forEach(bar => barObserver.observe(bar));
+
+  // ===== ANIMATED BAR CHART FILLS =====
+  const barFills = document.querySelectorAll('.bar-fill[data-width]');
+  const barFillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const width = entry.target.getAttribute('data-width');
+        setTimeout(() => {
+          entry.target.style.width = width + '%';
+        }, 300);
+        barFillObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  barFills.forEach(bar => barFillObserver.observe(bar));
+
+  // ===== ANIMATED SCORE NUMBERS =====
+  const scoreElements = document.querySelectorAll('[data-score]');
+  const scoreObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = parseFloat(entry.target.getAttribute('data-score'));
+        animateNumber(entry.target, 0, target, 800);
+        scoreObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.3 });
+
+  function animateNumber(el, start, end, duration) {
+    const startTime = performance.now();
+    function update(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      // Ease out cubic
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const current = start + (end - start) * eased;
+      el.textContent = current.toFixed(1);
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      }
+    }
+    requestAnimationFrame(update);
+  }
+
+  scoreElements.forEach(el => scoreObserver.observe(el));
+
+  // ===== SCROLL EVENT LISTENER (throttled) =====
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        updateActiveLink();
+        updateBackToTop();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+
+  // Initial calls
+  updateActiveLink();
+  updateBackToTop();
+
+})();
+</script>
+</body>
+</html>

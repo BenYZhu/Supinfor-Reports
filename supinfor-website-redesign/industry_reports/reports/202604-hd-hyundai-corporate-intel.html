@@ -1,0 +1,1275 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="auto">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HD Hyundai 商业情报分析报告 2026.04</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ===== CSS Variables — Dark (Default: Steel Blueprint) ===== */
+:root {
+  --bg-primary: #1b2838;
+  --bg-secondary: #162230;
+  --bg-card: #1f3347;
+  --bg-hero: linear-gradient(160deg, #0e1b2a 0%, #1b2838 40%, #243b53 100%);
+  --text-primary: #e8ecf1;
+  --text-secondary: #a8b8c8;
+  --text-muted: #6b7f94;
+  --accent-yellow: #f5a623;
+  --accent-yellow-bg: rgba(245,166,35,0.12);
+  --accent-green: #2ecc71;
+  --accent-green-bg: rgba(46,204,113,0.12);
+  --accent-red: #e74c3c;
+  --accent-red-bg: rgba(231,76,60,0.10);
+  --accent-orange: #e67e22;
+  --accent-orange-bg: rgba(230,126,34,0.12);
+  --border-color: #2a4560;
+  --sidebar-bg: #142030;
+  --sidebar-border: #2a4560;
+  --table-header-bg: #162d45;
+  --table-row-hover: #1a3550;
+  --table-alt-row: rgba(245,166,35,0.03);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.4);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.5);
+  --bar-bg: #1e3a5f;
+  --nav-active: #f5a623;
+  --kpi-border: #f5a623;
+  --grid-line: rgba(245,166,35,0.06);
+  --grid-line-strong: rgba(245,166,35,0.12);
+}
+
+/* ===== Light Mode ===== */
+[data-theme="light"] {
+  --bg-primary: #f4f1ed;
+  --bg-secondary: #ebe7e1;
+  --bg-card: #ffffff;
+  --bg-hero: linear-gradient(160deg, #1b2838 0%, #243b53 40%, #2c4a66 100%);
+  --text-primary: #2c3e50;
+  --text-secondary: #546e7a;
+  --text-muted: #78909c;
+  --accent-yellow: #e09500;
+  --accent-yellow-bg: rgba(245,166,35,0.10);
+  --accent-green: #27ae60;
+  --accent-green-bg: rgba(39,174,96,0.10);
+  --accent-red: #c0392b;
+  --accent-red-bg: rgba(192,57,43,0.08);
+  --accent-orange: #d35400;
+  --accent-orange-bg: rgba(211,84,0,0.10);
+  --border-color: #d5cfc7;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #d5cfc7;
+  --table-header-bg: #1b2838;
+  --table-row-hover: #f0ece6;
+  --table-alt-row: rgba(27,40,56,0.03);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.10);
+  --shadow-lg: 0 8px 30px rgba(0,0,0,0.12);
+  --bar-bg: #d5cfc7;
+  --nav-active: #1b2838;
+  --kpi-border: #f5a623;
+  --grid-line: rgba(27,40,56,0.05);
+  --grid-line-strong: rgba(27,40,56,0.10);
+}
+
+/* ===== Bilingual Toggle ===== */
+[data-lang="zh"] [data-en] { display: none !important; }
+[data-lang="en"] [data-zh] { display: none !important; }
+
+/* ===== Base Styles ===== */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.75;
+  transition: background 0.3s, color 0.3s;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Roboto Condensed', 'Source Sans 3', sans-serif;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.3px;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  position: fixed; left: 0; top: 0; bottom: 0;
+  width: 272px; background: var(--sidebar-bg);
+  border-right: 2px solid var(--border-color);
+  z-index: 100; overflow-y: auto;
+  padding: 24px 0; transition: transform 0.3s ease;
+  box-shadow: var(--shadow-md);
+}
+.sidebar-logo {
+  padding: 0 20px 18px; border-bottom: 2px solid var(--accent-yellow);
+  margin-bottom: 16px;
+}
+.sidebar-logo h2 {
+  font-size: 1.05rem; color: var(--accent-yellow);
+  letter-spacing: 1px; text-transform: uppercase;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.sidebar-logo p { font-size: 0.73rem; color: var(--text-muted); margin-top: 4px; }
+.sidebar nav { padding: 0 10px; }
+.sidebar nav a {
+  display: flex; align-items: center; gap: 10px;
+  padding: 9px 12px; margin: 2px 0;
+  border-radius: 6px; font-size: 0.83rem;
+  color: var(--text-secondary); text-decoration: none;
+  transition: all 0.2s; border-left: 3px solid transparent;
+  font-family: 'Source Sans 3', sans-serif;
+}
+.sidebar nav a:hover, .sidebar nav a.active {
+  background: var(--accent-yellow-bg); color: var(--nav-active);
+  border-left-color: var(--accent-yellow);
+}
+.sidebar nav a .nav-icon { width: 20px; text-align: center; font-size: 0.8rem; }
+
+/* ===== Main Content ===== */
+.main-content { margin-left: 272px; }
+
+/* ===== Top Bar ===== */
+.top-bar {
+  position: fixed; top: 0; right: 0; left: 272px;
+  height: 52px; background: var(--bg-secondary);
+  border-bottom: 2px solid var(--border-color);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding: 0 24px; z-index: 90; gap: 8px;
+  backdrop-filter: blur(10px);
+  transition: left 0.3s;
+}
+.top-btn {
+  width: 38px; height: 38px; border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-card); color: var(--text-secondary);
+  cursor: pointer; display: flex; align-items: center;
+  justify-content: center; font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.top-btn:hover { border-color: var(--accent-yellow); color: var(--accent-yellow); }
+.lang-btn { font-size: 0.78rem; font-weight: 600; width: auto; padding: 0 12px; gap: 6px; }
+.hamburger { display: none; }
+
+/* ===== Hero Section — Blueprint Grid ===== */
+.hero {
+  background: var(--bg-hero);
+  min-height: 100vh; display: flex; flex-direction: column;
+  justify-content: center; align-items: center;
+  padding: 100px 40px 60px; position: relative; overflow: hidden;
+  text-align: center;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background:
+    repeating-linear-gradient(0deg, transparent, transparent 39px, var(--grid-line) 39px, var(--grid-line) 40px),
+    repeating-linear-gradient(90deg, transparent, transparent 39px, var(--grid-line) 39px, var(--grid-line) 40px),
+    repeating-linear-gradient(0deg, transparent, transparent 199px, var(--grid-line-strong) 199px, var(--grid-line-strong) 200px),
+    repeating-linear-gradient(90deg, transparent, transparent 199px, var(--grid-line-strong) 199px, var(--grid-line-strong) 200px);
+  pointer-events: none;
+}
+.hero::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 60%, rgba(245,166,35,0.06) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 30%, rgba(46,204,113,0.04) 0%, transparent 50%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(245,166,35,0.15); border: 1px solid rgba(245,166,35,0.35);
+  border-radius: 4px; padding: 6px 18px; font-size: 0.8rem;
+  color: #f5a623; margin-bottom: 24px; position: relative; z-index: 1;
+  text-transform: uppercase; letter-spacing: 1.5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  color: #ffffff; margin-bottom: 16px; position: relative; z-index: 1;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.hero h1 .accent { color: #f5a623; }
+.hero-meta {
+  color: rgba(255,255,255,0.55); font-size: 0.88rem;
+  margin-bottom: 48px; position: relative; z-index: 1;
+  max-width: 750px; line-height: 1.8;
+}
+.hero-meta strong { color: rgba(255,255,255,0.8); }
+
+/* ===== KPI Cards — Industrial Gauge Style ===== */
+.kpi-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 16px; width: 100%; max-width: 1100px;
+  position: relative; z-index: 1;
+}
+.kpi-card {
+  background: rgba(31,51,71,0.7);
+  border: 2px solid rgba(245,166,35,0.25);
+  border-top: 4px solid #f5a623;
+  border-radius: 4px; padding: 22px 18px;
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, border-color 0.3s;
+}
+.kpi-card:hover { transform: translateY(-3px); border-color: rgba(245,166,35,0.6); }
+.kpi-label {
+  font-size: 0.7rem; color: rgba(245,166,35,0.7);
+  text-transform: uppercase; letter-spacing: 1.5px;
+  margin-bottom: 8px; font-family: 'Roboto Condensed', sans-serif;
+}
+.kpi-value {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.6rem; font-weight: 700; color: #ffffff; line-height: 1.2;
+}
+.kpi-value .yellow { color: #f5a623; }
+.kpi-value .green { color: #2ecc71; }
+.kpi-change { font-size: 0.78rem; margin-top: 6px; }
+.kpi-change.up { color: #2ecc71; }
+.kpi-change.down { color: #e74c3c; }
+.kpi-sub { font-size: 0.72rem; color: rgba(255,255,255,0.4); margin-top: 4px; }
+
+/* ===== Section Styles ===== */
+.content-section {
+  padding: 80px 48px 40px;
+  max-width: 1060px;
+}
+.section-header {
+  display: flex; align-items: center; gap: 16px;
+  margin-bottom: 32px; padding-bottom: 14px;
+  border-bottom: 3px solid var(--accent-yellow);
+}
+.section-num {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--accent-yellow); background: var(--accent-yellow-bg);
+  padding: 4px 14px; border-radius: 3px;
+  letter-spacing: 1.5px; text-transform: uppercase;
+}
+.section-title {
+  font-size: 1.5rem; color: var(--text-primary);
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+
+/* ===== Cards — Industrial Style ===== */
+.card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-left: 4px solid var(--accent-yellow);
+  border-radius: 2px; padding: 26px 28px;
+  margin-bottom: 20px; box-shadow: var(--shadow-sm);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { box-shadow: var(--shadow-md); }
+.card-tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.73rem; font-weight: 700;
+  padding: 4px 12px; border-radius: 3px;
+  margin-bottom: 12px; text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.tag-yellow { background: var(--accent-yellow-bg); color: var(--accent-yellow); }
+.tag-green { background: var(--accent-green-bg); color: var(--accent-green); }
+.tag-red { background: var(--accent-red-bg); color: var(--accent-red); }
+.tag-orange { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.card h3 {
+  font-size: 1.15rem; margin-bottom: 12px; color: var(--text-primary);
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.card p, .card li { color: var(--text-secondary); font-size: 0.91rem; line-height: 1.8; }
+.card ul { padding-left: 20px; margin: 12px 0; }
+.card li { margin-bottom: 8px; }
+.card li strong { color: var(--text-primary); }
+
+/* Insight box — Blueprint callout */
+.insight-box {
+  background: var(--accent-yellow-bg);
+  border-left: 4px solid var(--accent-yellow);
+  border-radius: 0 3px 3px 0;
+  padding: 16px 20px; margin-top: 16px;
+  font-size: 0.9rem; color: var(--text-secondary);
+}
+.insight-box strong { color: var(--accent-yellow); }
+
+/* Signal density badge */
+.signal-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 4px 12px; border-radius: 3px;
+  font-size: 0.76rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.5px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.signal-extreme { background: var(--accent-red-bg); color: var(--accent-red); }
+.signal-high { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.signal-medium { background: var(--accent-yellow-bg); color: var(--accent-yellow); }
+.signal-med-high { background: var(--accent-orange-bg); color: var(--accent-orange); }
+
+/* ===== Bar Chart — Industrial ===== */
+.bar-chart { margin: 20px 0; }
+.bar-row {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 10px;
+}
+.bar-label {
+  width: 100px; font-size: 0.83rem; font-weight: 600;
+  text-align: right; color: var(--text-secondary); flex-shrink: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.bar-track {
+  flex: 1; height: 30px; background: var(--bar-bg);
+  border-radius: 2px; overflow: hidden; position: relative;
+  border: 1px solid var(--border-color);
+}
+.bar-fill {
+  height: 100%; border-radius: 2px;
+  background: linear-gradient(90deg, #f5a623, #e09500);
+  display: flex; align-items: center; justify-content: flex-end;
+  padding-right: 10px; font-size: 0.75rem; font-weight: 700;
+  color: #1b2838; transition: width 1.2s ease;
+  min-width: 45px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.bar-fill.green { background: linear-gradient(90deg, #2ecc71, #27ae60); color: #fff; }
+.bar-fill.dim { background: linear-gradient(90deg, #546e7a, #78909c); color: #fff; }
+
+/* ===== Tables — Heavy Industrial ===== */
+.table-wrapper { overflow-x: auto; margin: 20px 0; }
+.styled-table {
+  width: 100%; border-collapse: collapse;
+  border: 2px solid var(--border-color);
+  font-size: 0.86rem;
+}
+.styled-table thead th {
+  background: var(--table-header-bg);
+  padding: 13px 14px; text-align: left;
+  font-weight: 700; color: var(--accent-yellow);
+  border-bottom: 3px solid var(--accent-yellow);
+  font-size: 0.78rem; text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+[data-theme="light"] .styled-table thead th {
+  color: #ffffff;
+}
+.styled-table tbody td {
+  padding: 11px 14px; border-bottom: 1px solid var(--border-color);
+  color: var(--text-secondary); vertical-align: top;
+}
+.styled-table tbody tr:nth-child(even) { background: var(--table-alt-row); }
+.styled-table tbody tr:last-child td { border-bottom: none; }
+.styled-table tbody tr:hover { background: var(--table-row-hover); }
+
+/* Market tags */
+.market-tag {
+  display: inline-block; padding: 2px 8px; border-radius: 3px;
+  font-size: 0.72rem; font-weight: 700;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.market-tag.eu { background: rgba(33,150,243,0.15); color: #42a5f5; }
+.market-tag.kr { background: rgba(245,166,35,0.15); color: var(--accent-yellow); }
+.market-tag.global { background: rgba(96,125,139,0.15); color: #90a4ae; }
+.market-tag.uk { background: rgba(156,39,176,0.15); color: #ab47bc; }
+.market-tag.au { background: rgba(0,150,136,0.15); color: #26a69a; }
+.market-tag.vn { background: rgba(244,67,54,0.15); color: #ef5350; }
+
+/* Position indicators */
+.pos-rank { font-weight: 700; font-family: 'Roboto Condensed', sans-serif; }
+.pos-top { color: var(--accent-yellow); }
+.pos-mid { color: var(--accent-green); }
+.pos-low { color: var(--text-muted); }
+
+/* ===== Risk Cards ===== */
+.risk-card { border-left-width: 5px; }
+.risk-high { border-left-color: var(--accent-red); }
+.risk-medium { border-left-color: var(--accent-orange); }
+.risk-low { border-left-color: var(--accent-yellow); }
+.risk-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 1px; padding: 3px 10px; border-radius: 3px;
+  margin-bottom: 12px;
+  font-family: 'Roboto Condensed', sans-serif;
+}
+.risk-badge.high { background: var(--accent-red-bg); color: var(--accent-red); }
+.risk-badge.medium { background: var(--accent-orange-bg); color: var(--accent-orange); }
+.risk-badge.low { background: var(--accent-yellow-bg); color: var(--accent-yellow); }
+
+/* ===== Forward Look Grid ===== */
+.forward-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+.forward-card {
+  background: var(--bg-card); border: 1px solid var(--border-color);
+  border-top: 3px solid var(--accent-yellow);
+  border-radius: 2px; padding: 18px 22px;
+  display: flex; gap: 14px; align-items: flex-start;
+  box-shadow: var(--shadow-sm); transition: transform 0.2s, box-shadow 0.2s;
+}
+.forward-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.forward-num {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.3rem; font-weight: 700;
+  color: var(--accent-yellow); flex-shrink: 0;
+  width: 34px; height: 34px; display: flex;
+  align-items: center; justify-content: center;
+  background: var(--accent-yellow-bg); border-radius: 3px;
+  border: 1px solid rgba(245,166,35,0.3);
+}
+.forward-card h4 { font-size: 0.92rem; color: var(--text-primary); margin-bottom: 5px; }
+.forward-card p { font-size: 0.83rem; color: var(--text-muted); }
+
+/* ===== Milestone Cards ===== */
+.milestone-card { position: relative; padding-left: 28px; }
+.milestone-card::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 14px; height: 14px; border-radius: 2px;
+  background: var(--accent-yellow); box-shadow: 0 0 0 4px var(--accent-yellow-bg);
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  padding: 40px 48px; border-top: 3px solid var(--accent-yellow);
+  text-align: center; color: var(--text-muted); font-size: 0.82rem;
+}
+.site-footer .brand { color: var(--accent-yellow); font-weight: 700; font-family: 'Roboto Condensed', sans-serif; }
+
+/* ===== Back to Top ===== */
+.back-to-top {
+  position: fixed; bottom: 32px; right: 32px;
+  width: 46px; height: 46px; border-radius: 4px;
+  background: var(--accent-yellow); color: #1b2838;
+  border: none; cursor: pointer; font-size: 1.1rem;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 16px rgba(245,166,35,0.3);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 200; font-weight: 700;
+}
+.back-to-top.visible { opacity: 1; transform: translateY(0); }
+.back-to-top:hover { background: #e09500; }
+
+/* ===== Animations ===== */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .sidebar { transform: translateX(-100%); }
+  .sidebar.open { transform: translateX(0); }
+  .main-content { margin-left: 0; }
+  .top-bar { left: 0; }
+  .hamburger { display: flex; }
+  .content-section { padding: 80px 24px 40px; }
+  .kpi-grid { grid-template-columns: repeat(2, 1fr); }
+  .hero { padding: 100px 24px 60px; }
+}
+@media (max-width: 640px) {
+  .kpi-grid { grid-template-columns: 1fr; }
+  .kpi-card { padding: 16px 14px; }
+  .kpi-value { font-size: 1.3rem; }
+  .forward-grid { grid-template-columns: 1fr; }
+  .styled-table { font-size: 0.76rem; }
+  .styled-table thead th, .styled-table tbody td { padding: 8px 10px; }
+  .content-section { padding: 70px 16px 30px; }
+}
+
+/* Overlay for mobile sidebar */
+.sidebar-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.6); z-index: 99;
+}
+.sidebar-overlay.active { display: block; }
+
+/* Competition matrix special */
+.comp-highlight { color: var(--accent-yellow); font-weight: 700; }
+</style>
+</head>
+<body>
+
+<!-- Sidebar Overlay -->
+<div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+<!-- Sidebar Navigation -->
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-logo">
+    <h2><i class="fa-solid fa-gear"></i> HD Hyundai</h2>
+    <p><span data-zh>商业情报分析报告</span><span data-en>Business Intelligence Report</span></p>
+  </div>
+  <nav>
+    <a href="#hero" class="active">
+      <span class="nav-icon"><i class="fa-solid fa-industry"></i></span>
+      <span data-zh>概览</span><span data-en>Overview</span>
+    </a>
+    <a href="#sec-summary">
+      <span class="nav-icon"><i class="fa-solid fa-clipboard-list"></i></span>
+      <span data-zh>一、执行摘要</span><span data-en>I. Executive Summary</span>
+    </a>
+    <a href="#sec-trends">
+      <span class="nav-icon"><i class="fa-solid fa-chart-line"></i></span>
+      <span data-zh>二、趋势识别</span><span data-en>II. Trend Analysis</span>
+    </a>
+    <a href="#sec-milestones">
+      <span class="nav-icon"><i class="fa-solid fa-flag-checkered"></i></span>
+      <span data-zh>三、里程碑事件</span><span data-en>III. Milestones</span>
+    </a>
+    <a href="#sec-partnerships">
+      <span class="nav-icon"><i class="fa-solid fa-handshake"></i></span>
+      <span data-zh>四、合作与联盟</span><span data-en>IV. Partnerships</span>
+    </a>
+    <a href="#sec-risks">
+      <span class="nav-icon"><i class="fa-solid fa-triangle-exclamation"></i></span>
+      <span data-zh>五、风险预警</span><span data-en>V. Risk Alerts</span>
+    </a>
+    <a href="#sec-competition">
+      <span class="nav-icon"><i class="fa-solid fa-chess"></i></span>
+      <span data-zh>六、竞争格局</span><span data-en>VI. Competition</span>
+    </a>
+    <a href="#sec-outlook">
+      <span class="nav-icon"><i class="fa-solid fa-binoculars"></i></span>
+      <span data-zh>七、前瞻</span><span data-en>VII. Outlook</span>
+    </a>
+  </nav>
+</aside>
+
+<!-- Top Bar -->
+<div class="top-bar" id="topBar">
+  <button class="top-btn hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+  <div style="flex:1"></div>
+  <button class="top-btn lang-btn" id="langBtn" aria-label="Toggle language">
+    <i class="fa-solid fa-language"></i>
+    <span id="langLabel">EN</span>
+  </button>
+  <button class="top-btn" id="themeBtn" aria-label="Toggle theme">
+    <i class="fa-solid fa-moon" id="themeIcon"></i>
+  </button>
+</div>
+
+<!-- Main Content -->
+<main class="main-content">
+
+<!-- ==================== HERO SECTION ==================== -->
+<section class="hero" id="hero">
+  <div class="hero-badge">
+    <i class="fa-solid fa-satellite-dish"></i>
+    <span data-zh>全球商情速递 · Supinfor</span><span data-en>Global Business Intelligence · Supinfor</span>
+  </div>
+  <h1>
+    <span data-zh>HD Hyundai <span class="accent">商业情报</span>分析报告</span>
+    <span data-en>HD Hyundai <span class="accent">Business Intelligence</span> Report</span>
+  </h1>
+  <div class="hero-meta">
+    <span data-zh><strong>周期</strong>：2026年3月30日 — 4月29日（30天）<br><strong>数据来源</strong>：全球商情速递平台（Supinfor），仅保留带贴文标签的高质量数据<br><strong>样本量</strong>：200条精选资讯（原始去重后455条，全量4,139条） &nbsp;|&nbsp; <strong>分析机构</strong>：Supinfor Ltd. &nbsp;|&nbsp; <strong>生成日期</strong>：2026年4月29日</span>
+    <span data-en><strong>Period</strong>: Mar 30 – Apr 29, 2026 (30 days)<br><strong>Data Source</strong>: Supinfor Global Business Express — curated high-quality tagged data only<br><strong>Sample Size</strong>: 200 selected articles (455 deduplicated, 4,139 total) &nbsp;|&nbsp; <strong>Analyst</strong>: Supinfor Ltd. &nbsp;|&nbsp; <strong>Date</strong>: April 29, 2026</span>
+  </div>
+
+  <!-- KPI Cards -->
+  <div class="kpi-grid">
+    <div class="kpi-card reveal">
+      <div class="kpi-label"><span data-zh>Q1 营收</span><span data-en>Q1 Revenue</span></div>
+      <div class="kpi-value">2.3049<span class="yellow" style="font-size:0.9rem"><span data-zh>万亿韩元</span><span data-en>T KRW</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-arrow-up"></i> +22.1% YoY</div>
+      <div class="kpi-sub"><span data-zh>HD建设机械合并后首季</span><span data-en>HD CE first quarter post-merger</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-1">
+      <div class="kpi-label"><span data-zh>Q1 营业利润</span><span data-en>Q1 Operating Profit</span></div>
+      <div class="kpi-value">1,907<span class="yellow" style="font-size:0.9rem"><span data-zh>亿韩元</span><span data-en>B KRW</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-arrow-up"></i> +88.3% YoY</div>
+      <div class="kpi-sub"><span data-zh>远超市场预期</span><span data-en>Far exceeding market expectations</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-2">
+      <div class="kpi-label"><span data-zh>建筑机械增速</span><span data-en>CE Revenue Growth</span></div>
+      <div class="kpi-value"><span class="green">+26.9%</span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-chart-line"></i> <span data-zh>部门营收同比</span><span data-en>Division YoY</span></div>
+      <div class="kpi-sub"><span data-zh>中东非洲+68.1%领涨</span><span data-en>MEA +68.1% leading growth</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-3">
+      <div class="kpi-label"><span data-zh>发动机利润率</span><span data-en>Engine Profit Margin</span></div>
+      <div class="kpi-value"><span class="yellow">14.1%</span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-bolt"></i> <span data-zh>高收益业务</span><span data-en>High-margin business</span></div>
+      <div class="kpi-sub"><span data-zh>远超整机业务利润率</span><span data-en>Far above whole-machine margins</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-4">
+      <div class="kpi-label"><span data-zh>HX320 销量</span><span data-en>HX320 Sales</span></div>
+      <div class="kpi-value">60+<span style="font-size:0.9rem;color:rgba(255,255,255,0.6)"><span data-zh>台</span><span data-en> units</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-arrow-up"></i> +50% <span data-zh>较前代</span><span data-en>vs predecessor</span></div>
+      <div class="kpi-sub"><span data-zh>上市仅3个月</span><span data-en>Within 3 months of launch</span></div>
+    </div>
+    <div class="kpi-card reveal reveal-delay-5">
+      <div class="kpi-label"><span data-zh>破冰船订单</span><span data-en>Icebreaker Order</span></div>
+      <div class="kpi-value"><span class="yellow">$3.489</span><span style="font-size:0.9rem;color:rgba(255,255,255,0.6)"><span data-zh>亿</span><span data-en>M</span></span></div>
+      <div class="kpi-change up"><i class="fa-solid fa-ship"></i> <span data-zh>瑞典海事管理局</span><span data-en>Swedish Maritime Admin</span></div>
+      <div class="kpi-sub"><span data-zh>韩国造船业历史性突破</span><span data-en>Historic milestone for Korean shipbuilding</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 1: EXECUTIVE SUMMARY ==================== -->
+<section class="content-section" id="sec-summary">
+  <div class="section-header reveal">
+    <span class="section-num">01</span>
+    <h2 class="section-title"><span data-zh>执行摘要</span><span data-en>Executive Summary</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <p><span data-zh>本周期内，HD Hyundai（现代重工）集团旗下工程机械板块呈现三个核心特征：<strong>合并整合效应全面释放</strong>、<strong>智能化与自动化产品密集发布</strong>、<strong>全球经销网络加速扩张</strong>。HD建设机械（HD현대건설기계与HD현대인프라코어合并后的新实体）交出了合并后首份季报，营业利润同比暴增88.3%，验证了"One Team"协同战略的有效性。与此同时，DEVELON和Hyundai双品牌在欧洲、东南亚、拉美等市场密集推出新品和技术方案，展现出强劲的产品创新节奏。</span><span data-en>During this period, HD Hyundai's construction equipment division exhibited three core characteristics: <strong>full realization of merger synergies</strong>, <strong>intensive launch of intelligent and automated products</strong>, and <strong>accelerated global dealer network expansion</strong>. HD Construction Equipment (the new entity formed by the merger of HD Hyundai Construction Equipment and HD Hyundai Infracore) delivered its first post-merger quarterly report with operating profit surging 88.3% YoY, validating the effectiveness of the "One Team" synergy strategy. Meanwhile, the dual brands DEVELON and Hyundai intensively launched new products and technology solutions across Europe, Southeast Asia, and Latin America, demonstrating a robust product innovation cadence.</span></p>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-camera" style="color:var(--accent-yellow);margin-right:8px"></i><span data-zh>核心数据快照</span><span data-en>Key Data Snapshot</span></h3>
+    <ul>
+      <li><span data-zh>HD建设机械Q1营收 <strong>2.3049万亿韩元</strong>（+22.1%），营业利润 <strong>1907亿韩元</strong>（+88.3%）</span><span data-en>HD CE Q1 revenue <strong>KRW 2.3049 trillion</strong> (+22.1%), operating profit <strong>KRW 190.7 billion</strong> (+88.3%)</span></li>
+      <li><span data-zh>建筑机械部门营收同比增 <strong>26.9%</strong>，中东非洲增 <strong>68.1%</strong>、中南美增 <strong>46.3%</strong></span><span data-en>Construction equipment division revenue up <strong>26.9%</strong> YoY; MEA up <strong>68.1%</strong>, Central/South America up <strong>46.3%</strong></span></li>
+      <li><span data-zh>发动机部门营业利润率 <strong>14.1%</strong>，保持高收益</span><span data-en>Engine division operating margin at <strong>14.1%</strong>, maintaining high profitability</span></li>
+      <li><span data-zh>Doosan Bobcat Q1营收 <strong>2.2473万亿韩元</strong>（+7.1%），净利润增 <strong>15.9%</strong></span><span data-en>Doosan Bobcat Q1 revenue <strong>KRW 2.2473 trillion</strong> (+7.1%), net profit up <strong>15.9%</strong></span></li>
+      <li><span data-zh>HX320型32吨挖掘机上市3个月国内销量超 <strong>60台</strong>，较前代增长 <strong>50%</strong></span><span data-en>HX320 32-ton excavator domestic sales exceeded <strong>60 units</strong> within 3 months, up <strong>50%</strong> vs predecessor</span></li>
+      <li><span data-zh>HD现代重工首获海外破冰船订单（瑞典，<strong>3.489亿美元</strong>）</span><span data-en>HD Hyundai Heavy Industries won its first overseas icebreaker order (Sweden, <strong>$348.9 million</strong>)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== SECTION 2: TREND IDENTIFICATION ==================== -->
+<section class="content-section" id="sec-trends">
+  <div class="section-header reveal">
+    <span class="section-num">02</span>
+    <h2 class="section-title"><span data-zh>趋势识别：正在发展或不断强化的方向</span><span data-en>Trend Identification: Emerging & Strengthening Directions</span></h2>
+  </div>
+
+  <!-- Trend 1 -->
+  <div class="card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-link"></i> <span data-zh>趋势 1</span><span data-en>Trend 1</span></div>
+    <h3><span data-zh>合并整合效应从组织层面向财务层面全面兑现</span><span data-en>Merger Synergies Fully Materialize from Organizational to Financial Level</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-extreme"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：极高（经营业绩39条，企业重组7条，合并相关超30条）</span><span data-en>Signal Density: Extreme (39 performance, 7 restructuring, 30+ merger-related)</span></span>
+    </div>
+    <p><span data-zh>2026年1月HD현대건설기계与HD현대인프라코어正式合并为HD건설기계后，首季度业绩远超市场预期。这不是简单的规模叠加，而是系统性的效率提升：</span><span data-en>After HD Hyundai Construction Equipment and HD Hyundai Infracore officially merged into HD Construction Equipment in January 2026, first-quarter results far exceeded market expectations. This was not a simple scale addition but a systematic efficiency improvement:</span></p>
+    <ul>
+      <li><span data-zh><strong>组织重构</strong>：搭建8个区域总监体制，保留Hyundai和DEVELON双品牌灵活应对市场</span><span data-en><strong>Organizational restructuring</strong>: Established 8 regional director system, retaining dual brands Hyundai and DEVELON for market flexibility</span></li>
+      <li><span data-zh><strong>供应链整合</strong>：欧美整合配送中心，交货期缩短30%、成本降低20%</span><span data-en><strong>Supply chain integration</strong>: Consolidated distribution centers in Europe and Americas, reducing delivery time by 30% and costs by 20%</span></li>
+      <li><span data-zh><strong>生产基地优化</strong>：中国生产基地从双基地整合为烟台单基地</span><span data-en><strong>Production base optimization</strong>: Consolidated China production from dual bases to a single Yantai base</span></li>
+      <li><span data-zh><strong>全区域增长</strong>：中东非洲营收增68.1%、中南美增46.3%、北美增26%、欧洲增59%、中国增17%</span><span data-en><strong>All-region growth</strong>: MEA revenue up 68.1%, Central/South America up 46.3%, North America up 26%, Europe up 59%, China up 17%</span></li>
+    </ul>
+
+    <!-- Regional Revenue Growth Bar Chart -->
+    <h4 style="margin-top:20px;margin-bottom:10px;color:var(--accent-yellow);font-family:'Roboto Condensed',sans-serif;font-size:0.9rem;text-transform:uppercase;letter-spacing:1px"><i class="fa-solid fa-chart-bar" style="margin-right:6px"></i><span data-zh>各区域营收增速</span><span data-en>Regional Revenue Growth</span></h4>
+    <div class="bar-chart">
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>中东非洲</span><span data-en>MEA</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:100%">68.1%</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>欧洲</span><span data-en>Europe</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:86.6%">59%</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>中南美</span><span data-en>C/S America</span></span>
+        <div class="bar-track"><div class="bar-fill" style="width:68%">46.3%</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>北美</span><span data-en>N. America</span></span>
+        <div class="bar-track"><div class="bar-fill green" style="width:38.2%">26%</div></div>
+      </div>
+      <div class="bar-row">
+        <span class="bar-label"><span data-zh>中国</span><span data-en>China</span></span>
+        <div class="bar-track"><div class="bar-fill dim" style="width:25%">17%</div></div>
+      </div>
+    </div>
+
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>合并后的协同效应仍处于释放初期。公司已明确2030年营收14.1万亿韩元（进入全球前十）的目标，后续将通过扩产能、强化发动机与零部件等高附加值业务持续释放增长潜力。场外交易股价在财报发布后双位数上涨，市场对整合前景投出信任票。</span>
+      <span data-en>Post-merger synergies are still in the early stages of realization. The company has set a clear target of KRW 14.1 trillion in revenue by 2030 (entering the global top 10), and will continue to unlock growth potential through capacity expansion and strengthening high-value-added businesses such as engines and components. OTC share prices rose by double digits after the earnings release, with the market casting a vote of confidence in the integration outlook.</span>
+    </div>
+  </div>
+
+  <!-- Trend 2 -->
+  <div class="card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-microchip"></i> <span data-zh>趋势 2</span><span data-en>Trend 2</span></div>
+    <h3><span data-zh>智能化与AI技术从概念走向产品落地</span><span data-en>AI & Smart Technologies Move from Concept to Product Deployment</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-high"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：高（技术创新16条、新品发布57条中大量涉及AI和智能技术）</span><span data-en>Signal Density: High (16 tech innovation, 57 new product launches heavily involving AI)</span></span>
+    </div>
+    <p><span data-zh>本周期内，HD Hyundai旗下品牌密集推出搭载AI和智能技术的新一代产品：</span><span data-en>During this period, HD Hyundai brands intensively launched next-generation products equipped with AI and smart technologies:</span></p>
+    <ul>
+      <li><span data-zh><strong>DEVELON Series 9智能挖掘机</strong>：搭载全电控液压（FEH）与AI技术，配备10项突破性功能（AI安全系统、虚拟边界、智能坡度找平、E-Stop等），燃油效率提升10%</span><span data-en><strong>DEVELON Series 9 Smart Excavators</strong>: Equipped with Full Electronic Hydraulic (FEH) and AI technology, featuring 10 breakthrough functions (AI safety system, virtual boundary, smart grade, E-Stop, etc.), 10% fuel efficiency improvement</span></li>
+      <li><span data-zh><strong>Real-X自主挖掘系统</strong>：与Gravis Robotics合作，在瑞士工地完成全球首个实际部署，作业效率较人工提升120%</span><span data-en><strong>Real-X Autonomous Excavation System</strong>: In partnership with Gravis Robotics, completed the world's first real-world deployment at a Swiss construction site, achieving 120% efficiency improvement over manual operation</span></li>
+      <li><span data-zh><strong>HX320型32吨挖掘机</strong>：搭载自研DX08发动机与FEH系统，燃油效率提升25%，年省油费660万韩元，上市3个月销量超前代50%</span><span data-en><strong>HX320 32-ton Excavator</strong>: Equipped with proprietary DX08 engine and FEH system, 25% fuel efficiency improvement, saving KRW 6.6 million in annual fuel costs, sales exceeded predecessor by 50% within 3 months</span></li>
+      <li><span data-zh><strong>AI安全技术合作</strong>：现代建设与HD建设机械签署协议，联合开发AI监控、过载预警等智能安全技术</span><span data-en><strong>AI Safety Technology Partnership</strong>: Hyundai E&C and HD CE signed an agreement to jointly develop AI monitoring, overload warning, and other smart safety technologies</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>HD Hyundai正在将AI从"展会概念"推向"工地实战"。Real-X在瑞士的实际部署、E-Stop安全系统获法国OPPBTP行业组织背书、HX320的市场热销，都表明客户已开始为智能化买单。这一趋势将重塑工程机械的竞争维度——从单纯比拼硬件参数，转向比拼"硬件+软件+数据"的综合方案能力。</span>
+      <span data-en>HD Hyundai is pushing AI from "trade show concept" to "real-world deployment." The Real-X deployment in Switzerland, E-Stop safety system endorsement by France's OPPBTP industry organization, and the HX320's market success all indicate that customers are beginning to pay for intelligence. This trend will reshape the competitive dimensions of construction equipment — from purely comparing hardware specs to competing on integrated "hardware + software + data" solution capabilities.</span>
+    </div>
+  </div>
+
+  <!-- Trend 3 -->
+  <div class="card reveal">
+    <div class="card-tag tag-green"><i class="fa-solid fa-bolt"></i> <span data-zh>趋势 3</span><span data-en>Trend 3</span></div>
+    <h3><span data-zh>电动化产品线从试验走向量产覆盖</span><span data-en>Electrification Product Line Moves from Trials to Mass Production</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-medium"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：中（新品发布中电动相关约10条）</span><span data-en>Signal Density: Medium (~10 electrification-related in new product launches)</span></span>
+    </div>
+    <p><span data-zh>电动工程机械在本周期内呈现加速态势：</span><span data-en>Electric construction equipment showed accelerating momentum during this period:</span></p>
+    <ul>
+      <li><span data-zh><strong>DEVELON</strong>：推出DX23E-7电动迷你挖掘机（32kWh/40kWh两版本），续航8-10小时；展示EX250LCE重型电动挖掘机（570kWh电池）</span><span data-en><strong>DEVELON</strong>: Launched DX23E-7 electric mini excavator (32kWh/40kWh versions), 8-10 hour runtime; showcased EX250LCE heavy electric excavator (570kWh battery)</span></li>
+      <li><span data-zh><strong>Doosan Bobcat</strong>：展出E10e电动迷你挖掘机</span><span data-en><strong>Doosan Bobcat</strong>: Exhibited E10e electric mini excavator</span></li>
+      <li><span data-zh><strong>行业对标</strong>：沃尔沃开启A30/A40 Electric电动铰接自卸车量产；Fortescue采购利勃海尔、徐工电动矿用设备，年省燃油3-4亿美元</span><span data-en><strong>Industry benchmarks</strong>: Volvo CE started mass production of A30/A40 Electric articulated haulers; Fortescue procured Liebherr and XCMG electric mining equipment, saving $300-400M annually in fuel</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>电动化在迷你/紧凑型设备领域已接近商业化临界点（室内作业零排放刚需），但在大型矿用设备领域仍处于早期。HD Hyundai的策略是"两端布局"——小型设备率先电动化抢占市场，大型设备通过节油技术（如HX320的25%燃油效率提升）过渡。</span>
+      <span data-en>Electrification in the mini/compact equipment segment is approaching the commercialization tipping point (driven by zero-emission requirements for indoor operations), but remains in early stages for large mining equipment. HD Hyundai's strategy is a "dual-end approach" — electrifying small equipment first to capture market share, while bridging large equipment through fuel-saving technologies (such as the HX320's 25% fuel efficiency improvement).</span>
+    </div>
+  </div>
+
+  <!-- Trend 4 -->
+  <div class="card reveal">
+    <div class="card-tag tag-orange"><i class="fa-solid fa-earth-americas"></i> <span data-zh>趋势 4</span><span data-en>Trend 4</span></div>
+    <h3><span data-zh>新兴市场成为增长主引擎</span><span data-en>Emerging Markets Become the Primary Growth Engine</span></h3>
+    <div style="margin-bottom:16px">
+      <span class="signal-badge signal-med-high"><i class="fa-solid fa-signal"></i> <span data-zh>信号密度：中高（区域拓展12条，多条财报分析指向新兴市场）</span><span data-en>Signal Density: Medium-High (12 regional expansion, multiple earnings analyses pointing to emerging markets)</span></span>
+    </div>
+    <p><span data-zh>Q1财报显示，新兴市场增速远超发达市场：</span><span data-en>Q1 earnings show emerging market growth far outpacing developed markets:</span></p>
+    <ul>
+      <li><span data-zh>中东非洲营收增 <strong>68.1%</strong></span><span data-en>MEA revenue up <strong>68.1%</strong></span></li>
+      <li><span data-zh>中南美增 <strong>46.3%</strong></span><span data-en>Central/South America up <strong>46.3%</strong></span></li>
+      <li><span data-zh><strong>越南</strong>：签署技能人才培养MOU，深化本地化布局</span><span data-en><strong>Vietnam</strong>: Signed skills training MOU, deepening localization</span></li>
+      <li><span data-zh><strong>智利/秘鲁</strong>：DEVELON大型矿用设备进入拉美矿业市场</span><span data-en><strong>Chile/Peru</strong>: DEVELON large mining equipment entering Latin American mining market</span></li>
+      <li><span data-zh><strong>俄罗斯</strong>：中国品牌占据新设备主导地位，日韩品牌仍主导二手市场</span><span data-en><strong>Russia</strong>: Chinese brands dominate new equipment, Japanese/Korean brands still lead used equipment market</span></li>
+    </ul>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>趋势研判</span><span data-en>Trend Assessment</span>：</strong>
+      <span data-zh>HD Hyundai的"8区域总监体制"正是为新兴市场量身打造的组织架构。公司在越南的人才培养投入（世界技能大赛支持、绿智人才项目）表明其采取的是"先扎根再收割"的长期主义策略，而非短期订单驱动。</span>
+      <span data-en>HD Hyundai's "8 regional director system" is an organizational structure tailor-made for emerging markets. The company's investment in talent development in Vietnam (WorldSkills support, Green Smart Talent program) indicates a "root first, harvest later" long-term strategy rather than short-term order-driven approach.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 3: MILESTONES ==================== -->
+<section class="content-section" id="sec-milestones">
+  <div class="section-header reveal">
+    <span class="section-num">03</span>
+    <h2 class="section-title"><span data-zh>里程碑事件：转折点与关键节点</span><span data-en>Milestones: Turning Points & Key Events</span></h2>
+  </div>
+
+  <!-- Milestone 1 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-trophy"></i> <span data-zh>里程碑 1</span><span data-en>Milestone 1</span></div>
+    <h3><span data-zh>HD建设机械合并后首季度营业利润暴增88.3%</span><span data-en>HD CE Post-Merger Q1 Operating Profit Surges 88.3%</span></h3>
+    <p><span data-zh>HD현대건설기계与HD현대인프라코어合并后的首份季报，营收2.3049万亿韩元（+22.1%），营业利润1907亿韩元（+88.3%），远超市场预期。这是合并战略从"组织整合"进入"财务兑现"阶段的标志性节点。</span><span data-en>The first quarterly report after the merger of HD Hyundai Construction Equipment and HD Hyundai Infracore showed revenue of KRW 2.3049 trillion (+22.1%) and operating profit of KRW 190.7 billion (+88.3%), far exceeding market expectations. This marks the transition of the merger strategy from "organizational integration" to "financial realization."</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>验证了双品牌保留+组织整合+供应链优化的合并模式有效性，为后续向全球前十目标推进奠定信心基础。</span>
+      <span data-en>Validates the effectiveness of the dual-brand retention + organizational integration + supply chain optimization merger model, laying a confidence foundation for the push toward the global top 10 target.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 2 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-robot"></i> <span data-zh>里程碑 2</span><span data-en>Milestone 2</span></div>
+    <h3><span data-zh>Real-X自主挖掘系统全球首个实际工地部署</span><span data-en>Real-X Autonomous Excavation System: World's First Real-World Deployment</span></h3>
+    <p><span data-zh>HD Hyundai XiteSolution联合Gravis Robotics，向瑞士KIBAG集团工地交付搭载Real-X方案的22吨级无人自主挖掘机，作业效率较人工提升120%。</span><span data-en>HD Hyundai XiteSolution, in partnership with Gravis Robotics, delivered a 22-ton autonomous excavator equipped with the Real-X solution to KIBAG Group's construction site in Switzerland, achieving 120% efficiency improvement over manual operation.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>这是工程机械自主作业从展会演示走向真实工地的转折点。此前Real-X仅在展会展示，此次瑞士部署是商业化落地的第一步，后续将拓展全球合作。</span>
+      <span data-en>This is a turning point for autonomous construction equipment operations moving from trade show demonstrations to real-world construction sites. Previously, Real-X was only showcased at exhibitions; this Swiss deployment is the first step toward commercialization, with global partnerships to follow.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 3 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-ship"></i> <span data-zh>里程碑 3</span><span data-en>Milestone 3</span></div>
+    <h3><span data-zh>HD现代重工首获海外破冰船订单</span><span data-en>HD HHI Wins First Overseas Icebreaker Order</span></h3>
+    <p><span data-zh>HD现代重工与瑞典海事管理局签订3.489亿美元破冰船建造合同，击败芬兰、挪威等传统强国中标，为韩国造船业历史性里程碑。新船2029年交付，具备PC4级破冰能力。</span><span data-en>HD Hyundai Heavy Industries signed a $348.9 million icebreaker construction contract with the Swedish Maritime Administration, winning the bid over traditional powerhouses Finland and Norway — a historic milestone for Korean shipbuilding. The new vessel will be delivered in 2029 with PC4-class ice-breaking capability.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>标志着HD现代重工从传统商船和LNG运输船领域，向高附加值特种船舶市场拓展，打开了全球海军及特种船舶的新增长空间。</span>
+      <span data-en>Marks HD HHI's expansion from traditional commercial vessels and LNG carriers into the high-value-added specialty vessel market, opening new growth opportunities in global naval and specialty shipbuilding.</span>
+    </div>
+  </div>
+
+  <!-- Milestone 4 -->
+  <div class="card milestone-card reveal">
+    <div class="card-tag tag-yellow"><i class="fa-solid fa-tractor"></i> <span data-zh>里程碑 4</span><span data-en>Milestone 4</span></div>
+    <h3><span data-zh>时隔24年重启国产推土机生产</span><span data-en>Domestic Bulldozer Production Resumes After 24 Years</span></h3>
+    <p><span data-zh>HD现代基础设施核心推出DEVELON品牌DD100型10吨级推土机，首单5台售罄。此前韩国推土机市场90%被美国企业（主要是卡特彼勒）占据。</span><span data-en>HD Hyundai Infracore launched the DEVELON-branded DD100 10-ton bulldozer, with the first batch of 5 units sold out. Previously, 90% of the Korean bulldozer market was dominated by American companies (primarily Caterpillar).</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-star"></i> <span data-zh>意义</span><span data-en>Significance</span>：</strong>
+      <span data-zh>这不仅是产品线补全，更是对卡特彼勒在韩国推土机市场垄断地位的正面挑战，体现了HD Hyundai"全品类覆盖"的战略意图。</span>
+      <span data-en>This is not merely a product line completion but a direct challenge to Caterpillar's monopoly in the Korean bulldozer market, reflecting HD Hyundai's strategic intent for "full category coverage."</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 4: PARTNERSHIPS ==================== -->
+<section class="content-section" id="sec-partnerships">
+  <div class="section-header reveal">
+    <span class="section-num">04</span>
+    <h2 class="section-title"><span data-zh>合作与联盟分析：机会与风险</span><span data-en>Partnership & Alliance Analysis: Opportunities & Risks</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-handshake" style="color:var(--accent-yellow);margin-right:8px"></i><span data-zh>关键合作一览</span><span data-en>Key Partnership Overview</span></h3>
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th><span data-zh>合作方</span><span data-en>Partner</span></th>
+            <th><span data-zh>领域</span><span data-en>Domain</span></th>
+            <th><span data-zh>市场</span><span data-en>Market</span></th>
+            <th><span data-zh>性质</span><span data-en>Type</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Gravis Robotics</strong></td>
+            <td><span data-zh>Real-X自主挖掘系统</span><span data-en>Real-X autonomous excavation system</span></td>
+            <td><span class="market-tag eu"><span data-zh>欧洲</span><span data-en>Europe</span></span></td>
+            <td><span data-zh>技术合作</span><span data-en>Tech partnership</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>现代建设</span><span data-en>Hyundai E&C</span></strong></td>
+            <td><span data-zh>AI安全技术联合开发</span><span data-en>AI safety tech joint development</span></td>
+            <td><span class="market-tag kr"><span data-zh>韩国</span><span data-en>Korea</span></span></td>
+            <td><span data-zh>集团内协同</span><span data-en>Intra-group synergy</span></td>
+          </tr>
+          <tr>
+            <td><strong>PTC</strong></td>
+            <td><span data-zh>智能产品生命周期（Bobcat）</span><span data-en>Smart product lifecycle (Bobcat)</span></td>
+            <td><span class="market-tag global"><span data-zh>全球</span><span data-en>Global</span></span></td>
+            <td><span data-zh>研发数字化</span><span data-en>R&D digitalization</span></td>
+          </tr>
+          <tr>
+            <td><strong>Leica Geosystems</strong></td>
+            <td><span data-zh>推土机机器控制系统</span><span data-en>Bulldozer machine control system</span></td>
+            <td><span class="market-tag global"><span data-zh>全球</span><span data-en>Global</span></span></td>
+            <td><span data-zh>技术集成</span><span data-en>Tech integration</span></td>
+          </tr>
+          <tr>
+            <td><strong>Iridium</strong></td>
+            <td><span data-zh>卫星IoT远程车队管理</span><span data-en>Satellite IoT remote fleet management</span></td>
+            <td><span class="market-tag global"><span data-zh>全球</span><span data-en>Global</span></span></td>
+            <td><span data-zh>连接服务</span><span data-en>Connectivity service</span></td>
+          </tr>
+          <tr>
+            <td><strong>Grupel<span data-zh>（葡萄牙）</span><span data-en> (Portugal)</span></strong></td>
+            <td><span data-zh>264台G2发动机供应</span><span data-en>264 G2 engine supply</span></td>
+            <td><span class="market-tag eu"><span data-zh>欧洲</span><span data-en>Europe</span></span></td>
+            <td><span data-zh>发动机销售</span><span data-en>Engine sales</span></td>
+          </tr>
+          <tr>
+            <td><strong>HODGE Plant</strong></td>
+            <td><span data-zh>苏格兰独家经销商</span><span data-en>Scotland exclusive dealer</span></td>
+            <td><span class="market-tag uk"><span data-zh>英国</span><span data-en>UK</span></span></td>
+            <td><span data-zh>渠道拓展</span><span data-en>Channel expansion</span></td>
+          </tr>
+          <tr>
+            <td><strong>Gordons Construction</strong></td>
+            <td><span data-zh>DEVELON苏格兰独家经销商</span><span data-en>DEVELON Scotland exclusive dealer</span></td>
+            <td><span class="market-tag uk"><span data-zh>英国</span><span data-en>UK</span></span></td>
+            <td><span data-zh>渠道拓展</span><span data-en>Channel expansion</span></td>
+          </tr>
+          <tr>
+            <td><strong>Onetrak</strong></td>
+            <td><span data-zh>澳洲工程机械分销</span><span data-en>Australia CE distribution</span></td>
+            <td><span class="market-tag au"><span data-zh>澳洲</span><span data-en>Australia</span></span></td>
+            <td><span data-zh>渠道拓展</span><span data-en>Channel expansion</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>越南职训总局/CCT1</span><span data-en>Vietnam GDVT / CCT1</span></strong></td>
+            <td><span data-zh>世界技能大赛人才培养</span><span data-en>WorldSkills talent development</span></td>
+            <td><span class="market-tag vn"><span data-zh>越南</span><span data-en>Vietnam</span></span></td>
+            <td><span data-zh>本地化人才</span><span data-en>Localization talent</span></td>
+          </tr>
+          <tr>
+            <td><strong>STC</strong></td>
+            <td><span data-zh>HX520A HRD高拆挖掘机</span><span data-en>HX520A HRD high-reach demolition excavator</span></td>
+            <td><span class="market-tag eu"><span data-zh>欧洲</span><span data-en>Europe</span></span></td>
+            <td><span data-zh>产品合作</span><span data-en>Product partnership</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>韩国进出口银行</span><span data-en>Korea Eximbank</span></strong></td>
+            <td><span data-zh>5000万欧元债务担保</span><span data-en>€50M debt guarantee</span></td>
+            <td><span class="market-tag eu"><span data-zh>欧洲</span><span data-en>Europe</span></span></td>
+            <td><span data-zh>金融支持</span><span data-en>Financial support</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-circle-check" style="color:var(--accent-green);margin-right:8px"></i><span data-zh>机会判断</span><span data-en>Opportunity Assessment</span></h3>
+    <p><span data-zh>HD Hyundai的合作网络呈现"技术+渠道"双轮驱动特征。技术端，与Gravis Robotics（自主作业）、PTC（数字化研发）、Leica（精准控制）、Iridium（卫星连接）的合作构建了从研发到运营的完整数字化链条。渠道端，在英国、澳洲、越南等市场持续扩充经销商网络，尤其是越南的人才培养投入，体现了超越短期销售的长期布局思维。</span><span data-en>HD Hyundai's partnership network exhibits a "technology + channel" dual-wheel drive. On the technology side, partnerships with Gravis Robotics (autonomous operations), PTC (digital R&D), Leica (precision control), and Iridium (satellite connectivity) build a complete digital chain from R&D to operations. On the channel side, the company continues to expand its dealer network in the UK, Australia, Vietnam, and other markets. The talent development investment in Vietnam, in particular, reflects long-term strategic thinking that goes beyond short-term sales.</span></p>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-circle-exclamation" style="color:var(--accent-orange);margin-right:8px"></i><span data-zh>风险判断</span><span data-en>Risk Assessment</span></h3>
+    <ul>
+      <li><span data-zh><strong>美伊冲突影响</strong>：中东短期营收递延，但公司在中东非洲市占率11.3%，经销商网络成熟，战后重建需求可能带来反弹机会</span><span data-en><strong>US-Iran conflict impact</strong>: Short-term revenue deferral in the Middle East, but the company holds 11.3% market share in MEA with a mature dealer network; post-conflict reconstruction demand could bring rebound opportunities</span></li>
+      <li><span data-zh><strong>双品牌运营复杂度</strong>：保留Hyundai和DEVELON双品牌虽有市场细分优势，但长期运营成本和品牌定位清晰度需持续管理</span><span data-en><strong>Dual-brand operational complexity</strong>: Retaining both Hyundai and DEVELON brands offers market segmentation advantages, but long-term operational costs and brand positioning clarity require ongoing management</span></li>
+      <li><span data-zh><strong>卡特彼勒专利诉讼</strong>：Bobcat与卡特彼勒的专利战涉及超14项新一代小型设备专利，可能影响产品销售和定价策略</span><span data-en><strong>Caterpillar patent litigation</strong>: The Bobcat vs. Caterpillar patent war involves over 14 next-generation compact equipment patents, potentially affecting product sales and pricing strategies</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==================== SECTION 5: RISK ALERTS ==================== -->
+<section class="content-section" id="sec-risks">
+  <div class="section-header reveal">
+    <span class="section-num">05</span>
+    <h2 class="section-title"><span data-zh>风险预警：需要重点关注的信号</span><span data-en>Risk Alerts: Key Signals to Monitor</span></h2>
+  </div>
+
+  <!-- Risk 1 -->
+  <div class="card risk-card risk-medium reveal">
+    <div class="risk-badge medium"><i class="fa-solid fa-exclamation-triangle"></i> <span data-zh>中优先级</span><span data-en>Medium Priority</span></div>
+    <h3><span data-zh>风险1：美伊冲突长期化对中东业务的持续影响</span><span data-en>Risk 1: Prolonged US-Iran Conflict Impact on Middle East Operations</span></h3>
+    <p style="margin-bottom:12px"><span data-zh><strong>事件</strong>：美伊冲突导致中东地区短期营收递延，物流和原材料成本上升。</span><span data-en><strong>Event</strong>: The US-Iran conflict has caused short-term revenue deferrals in the Middle East, with rising logistics and raw material costs.</span></p>
+    <p style="margin-bottom:12px"><span data-zh><strong>影响评估</strong>：HD建设机械在中东非洲市占率11.3%，Q1该区域营收仍增68.1%，降幅小于市场整体。但若冲突长期化，将面临物流中断、供应链成本上升、欧美市场需求萎缩等连锁风险。</span><span data-en><strong>Impact Assessment</strong>: HD CE holds 11.3% market share in MEA, and Q1 regional revenue still grew 68.1%, declining less than the overall market. However, prolonged conflict could trigger cascading risks including logistics disruptions, rising supply chain costs, and weakening demand in Western markets.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>风险研判</span><span data-en>Risk Assessment</span>：</strong>
+      <span data-zh>短期可控，中期需关注。公司已表态将聚焦非洲、亚洲、CIS国家维持运营指标，战后中东重建需求将是重要机遇窗口。</span>
+      <span data-en>Controllable in the short term, requires monitoring in the medium term. The company has stated it will focus on Africa, Asia, and CIS countries to maintain operational metrics; post-conflict Middle East reconstruction demand will be a significant opportunity window.</span>
+    </div>
+  </div>
+
+  <!-- Risk 2 -->
+  <div class="card risk-card risk-medium reveal">
+    <div class="risk-badge medium"><i class="fa-solid fa-exclamation-triangle"></i> <span data-zh>中优先级</span><span data-en>Medium Priority</span></div>
+    <h3><span data-zh>风险2：Bobcat与卡特彼勒专利诉讼升级</span><span data-en>Risk 2: Bobcat vs. Caterpillar Patent Litigation Escalation</span></h3>
+    <p style="margin-bottom:12px"><span data-zh><strong>事件</strong>：Bobcat发起的专利指控已升级为全面法律对抗，卡特彼勒提起反诉，涉及超14项新一代小型设备专利，覆盖液压系统、自动化技术等核心领域。</span><span data-en><strong>Event</strong>: Bobcat's patent claims have escalated into full legal confrontation, with Caterpillar filing counterclaims involving over 14 next-generation compact equipment patents covering hydraulic systems, automation technology, and other core areas.</span></p>
+    <p style="margin-bottom:12px"><span data-zh><strong>影响评估</strong>：诉讼可能影响全球市场销售、经销商库存策略与终端定价，同时凸显行业在数字化转型下技术竞争与知识产权保护的深层矛盾。</span><span data-en><strong>Impact Assessment</strong>: The litigation could affect global market sales, dealer inventory strategies, and end-user pricing, while highlighting the deeper tensions between technology competition and IP protection in the industry's digital transformation.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>风险研判</span><span data-en>Risk Assessment</span>：</strong>
+      <span data-zh>这是工程机械行业的标志性事件，结果将影响整个行业的技术创新边界。需关注诉讼进展及对Bobcat产品线的实际影响。</span>
+      <span data-en>This is a landmark event for the construction equipment industry, with outcomes that will affect the entire industry's technology innovation boundaries. Monitor litigation progress and its actual impact on the Bobcat product line.</span>
+    </div>
+  </div>
+
+  <!-- Risk 3 -->
+  <div class="card risk-card risk-low reveal">
+    <div class="risk-badge low"><i class="fa-solid fa-info-circle"></i> <span data-zh>低优先级</span><span data-en>Low Priority</span></div>
+    <h3><span data-zh>风险3：中国品牌在新兴市场的竞争加剧</span><span data-en>Risk 3: Intensifying Chinese Brand Competition in Emerging Markets</span></h3>
+    <p style="margin-bottom:12px"><span data-zh><strong>事件</strong>：俄罗斯市场数据显示，中国品牌占新挖掘机81%、新自卸车92%、新推土机超63%，且价格持续下降。</span><span data-en><strong>Event</strong>: Russian market data shows Chinese brands account for 81% of new excavators, 92% of new dump trucks, and over 63% of new bulldozers, with prices continuing to decline.</span></p>
+    <p style="margin-bottom:12px"><span data-zh><strong>影响评估</strong>：中国品牌凭借性价比在新兴市场快速扩张，正在挤压日韩品牌的传统优势领域。HD Hyundai在俄罗斯等市场面临份额压力。</span><span data-en><strong>Impact Assessment</strong>: Chinese brands are rapidly expanding in emerging markets through price competitiveness, squeezing Japanese and Korean brands' traditional strongholds. HD Hyundai faces market share pressure in Russia and similar markets.</span></p>
+    <div class="insight-box">
+      <strong><i class="fa-solid fa-compass-drafting"></i> <span data-zh>风险研判</span><span data-en>Risk Assessment</span>：</strong>
+      <span data-zh>HD Hyundai的应对策略是"向上走"——通过AI、自动化、智能安全等技术差异化，与中国品牌拉开价值层级。但在价格敏感的新兴市场，这一策略的有效性仍需验证。</span>
+      <span data-en>HD Hyundai's response strategy is to "move upmarket" — differentiating through AI, automation, and smart safety technologies to create a value tier gap with Chinese brands. However, the effectiveness of this strategy in price-sensitive emerging markets remains to be validated.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SECTION 6: COMPETITION ==================== -->
+<section class="content-section" id="sec-competition">
+  <div class="section-header reveal">
+    <span class="section-num">06</span>
+    <h2 class="section-title"><span data-zh>竞争格局速览</span><span data-en>Competitive Landscape Overview</span></h2>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-chess" style="color:var(--accent-yellow);margin-right:8px"></i><span data-zh>竞争格局矩阵</span><span data-en>Competitive Landscape Matrix</span></h3>
+    <div class="table-wrapper">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th><span data-zh>维度</span><span data-en>Dimension</span></th>
+            <th><span data-zh>HD Hyundai的位置</span><span data-en>HD Hyundai's Position</span></th>
+            <th><span data-zh>主要竞争对手</span><span data-en>Key Competitors</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span data-zh>全球工程机械排名</span><span data-en>Global CE Ranking</span></strong></td>
+            <td><span class="pos-rank pos-top"><span data-zh>第14位（合并后）</span><span data-en>#14 (post-merger)</span></span></td>
+            <td><span data-zh>卡特彼勒(#1)、小松(#2)、约翰迪尔(#3)</span><span data-en>Caterpillar (#1), Komatsu (#2), John Deere (#3)</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>韩国市场</span><span data-en>Korean Market</span></strong></td>
+            <td><span class="pos-rank pos-top"><span data-zh>最大综合建机企业</span><span data-en>Largest integrated CE company</span></span></td>
+            <td><span data-zh>斗山Bobcat（紧凑型设备）</span><span data-en>Doosan Bobcat (compact equipment)</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>欧洲市场</span><span data-en>European Market</span></strong></td>
+            <td><span class="pos-rank pos-mid"><span data-zh>加速扩张中</span><span data-en>Accelerating expansion</span></span></td>
+            <td><span data-zh>利勃海尔、沃尔沃CE、JCB</span><span data-en>Liebherr, Volvo CE, JCB</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>自主/AI技术</span><span data-en>Autonomous / AI Tech</span></strong></td>
+            <td><span class="pos-rank pos-top"><span data-zh>Real-X首个实际部署</span><span data-en>Real-X first real-world deployment</span></span></td>
+            <td><span data-zh>小松（智能施工）、卡特彼勒（Cat Command）</span><span data-en>Komatsu (Smart Construction), Caterpillar (Cat Command)</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>电动化</span><span data-en>Electrification</span></strong></td>
+            <td><span class="pos-rank pos-mid"><span data-zh>迷你/紧凑型布局</span><span data-en>Mini/compact segment focus</span></span></td>
+            <td><span data-zh>沃尔沃CE（量产电动自卸车领先）、JCB</span><span data-en>Volvo CE (leading in mass-produced electric haulers), JCB</span></td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>推土机（韩国）</span><span data-en>Bulldozers (Korea)</span></strong></td>
+            <td><span class="pos-rank pos-low"><span data-zh>刚重新进入</span><span data-en>Just re-entered</span></span></td>
+            <td><span data-zh>卡特彼勒（90%市占率）</span><span data-en>Caterpillar (90% market share)</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card reveal">
+    <h3><i class="fa-solid fa-eye" style="color:var(--accent-yellow);margin-right:8px"></i><span data-zh>竞争观察</span><span data-en>Competitive Observation</span></h3>
+    <p><span data-zh>合并后HD建设机械跻身全球第14位，但与前三（卡特彼勒、小松、约翰迪尔）仍有显著差距。其差异化路径是"双品牌+智能化+发动机高利润率"组合，发动机部门14.1%的营业利润率远超整机业务，是利润结构的重要支撑。</span><span data-en>Post-merger, HD Construction Equipment has risen to global #14, but a significant gap remains with the top three (Caterpillar, Komatsu, John Deere). Its differentiation path is a "dual brand + intelligence + high engine margins" combination, with the engine division's 14.1% operating margin far exceeding the whole-machine business, serving as a critical pillar of the profit structure.</span></p>
+  </div>
+</section>
+
+<!-- ==================== SECTION 7: OUTLOOK ==================== -->
+<section class="content-section" id="sec-outlook">
+  <div class="section-header reveal">
+    <span class="section-num">07</span>
+    <h2 class="section-title"><span data-zh>前瞻：未来30-90天关注要点</span><span data-en>Outlook: Key Focus Areas for the Next 30-90 Days</span></h2>
+  </div>
+
+  <div class="forward-grid">
+    <div class="forward-card reveal">
+      <div class="forward-num">1</div>
+      <div>
+        <h4><span data-zh>HD建设机械Q2业绩</span><span data-en>HD CE Q2 Earnings</span></h4>
+        <p><span data-zh>合并协同效应能否持续释放，中东冲突影响是否加深</span><span data-en>Whether merger synergies continue to materialize; whether Middle East conflict impact deepens</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-1">
+      <div class="forward-num">2</div>
+      <div>
+        <h4><span data-zh>DEVELON 32吨级新机型发布</span><span data-en>DEVELON 32-Ton New Model Launch</span></h4>
+        <p><span data-zh>计划下半年推出，与HX320形成双品牌覆盖</span><span data-en>Planned for H2 launch, forming dual-brand coverage with HX320</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-2">
+      <div class="forward-num">3</div>
+      <div>
+        <h4><span data-zh>Real-X自主系统商业化进展</span><span data-en>Real-X Autonomous System Commercialization</span></h4>
+        <p><span data-zh>瑞士首个部署后的客户反馈和后续订单</span><span data-en>Customer feedback and follow-up orders after the first Swiss deployment</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-3">
+      <div class="forward-num">4</div>
+      <div>
+        <h4><span data-zh>Bobcat vs 卡特彼勒专利诉讼进展</span><span data-en>Bobcat vs. Caterpillar Patent Litigation</span></h4>
+        <p><span data-zh>可能影响全球小型设备市场格局</span><span data-en>Could reshape the global compact equipment market landscape</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-4">
+      <div class="forward-num">5</div>
+      <div>
+        <h4><span data-zh>美伊冲突走向</span><span data-en>US-Iran Conflict Trajectory</span></h4>
+        <p><span data-zh>直接影响中东营收和全球供应链成本</span><span data-en>Directly impacts Middle East revenue and global supply chain costs</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal">
+      <div class="forward-num">6</div>
+      <div>
+        <h4><span data-zh>SaMoTer 2026展会（5月，维罗纳）</span><span data-en>SaMoTer 2026 Exhibition (May, Verona)</span></h4>
+        <p><span data-zh>DEVELON将展示最新创新产品</span><span data-en>DEVELON to showcase latest innovative products</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-1">
+      <div class="forward-num">7</div>
+      <div>
+        <h4><span data-zh>越南本地化布局深化</span><span data-en>Deepening Vietnam Localization</span></h4>
+        <p><span data-zh>世界技能大赛支持效果、造船产能扩张进展</span><span data-en>WorldSkills support outcomes, shipbuilding capacity expansion progress</span></p>
+      </div>
+    </div>
+    <div class="forward-card reveal reveal-delay-2">
+      <div class="forward-num">8</div>
+      <div>
+        <h4><span data-zh>发动机业务欧洲拓展</span><span data-en>Engine Business European Expansion</span></h4>
+        <p><span data-zh>与Grupel的264台G2发动机交付，目标2030年欧洲动力发动机营收从400亿增至670亿韩元</span><span data-en>264 G2 engine delivery to Grupel; target to grow European power engine revenue from KRW 40B to KRW 67B by 2030</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="site-footer">
+  <p><span data-zh>本报告基于公开媒体资讯整理分析，不构成投资建议。</span><span data-en>This report is based on publicly available media information and does not constitute investment advice.</span></p>
+  <p style="margin-top:8px">© 2026 <span class="brand">Supinfor Ltd.</span> · <span data-zh>生成日期：2026年4月29日</span><span data-en>Generated: April 29, 2026</span></p>
+</footer>
+
+</main>
+
+<!-- Back to Top -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+  var html = document.documentElement;
+  var themeBtn = document.getElementById('themeBtn');
+  var themeIcon = document.getElementById('themeIcon');
+
+  // ===== Theme Management =====
+  function applyTheme(pref) {
+    if (pref === 'auto') {
+      var isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      html.setAttribute('data-theme', isDark ? 'dark' : 'light');
+    } else {
+      html.setAttribute('data-theme', pref);
+    }
+    updateThemeIcon();
+  }
+
+  function updateThemeIcon() {
+    var current = html.getAttribute('data-theme');
+    themeIcon.className = current === 'light' ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+  }
+
+  var themePref = localStorage.getItem('hd-theme-pref') || 'auto';
+  applyTheme(themePref);
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function() {
+    if (themePref === 'auto') applyTheme('auto');
+  });
+
+  themeBtn.addEventListener('click', function() {
+    var current = html.getAttribute('data-theme');
+    themePref = current === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('hd-theme-pref', themePref);
+    applyTheme(themePref);
+  });
+
+  // ===== Language Management =====
+  var langBtn = document.getElementById('langBtn');
+  var langLabel = document.getElementById('langLabel');
+
+  function applyLang(lang) {
+    html.setAttribute('data-lang', lang);
+    html.setAttribute('lang', lang === 'zh' ? 'zh-CN' : 'en');
+    langLabel.textContent = lang === 'zh' ? 'EN' : '中';
+  }
+
+  var langPref = localStorage.getItem('hd-lang-pref') || 'zh';
+  applyLang(langPref);
+
+  langBtn.addEventListener('click', function() {
+    langPref = langPref === 'zh' ? 'en' : 'zh';
+    localStorage.setItem('hd-lang-pref', langPref);
+    applyLang(langPref);
+  });
+
+  // ===== Sidebar Toggle (Mobile) =====
+  var sidebar = document.getElementById('sidebar');
+  var overlay = document.getElementById('sidebarOverlay');
+  var hamburger = document.getElementById('hamburgerBtn');
+
+  function toggleSidebar() {
+    sidebar.classList.toggle('open');
+    overlay.classList.toggle('active');
+  }
+
+  hamburger.addEventListener('click', toggleSidebar);
+  overlay.addEventListener('click', toggleSidebar);
+
+  // Close sidebar on nav click (mobile)
+  sidebar.querySelectorAll('nav a').forEach(function(a) {
+    a.addEventListener('click', function() {
+      if (window.innerWidth <= 1024) {
+        sidebar.classList.remove('open');
+        overlay.classList.remove('active');
+      }
+    });
+  });
+
+  // ===== Active Nav Highlight =====
+  var sections = document.querySelectorAll('section[id]');
+  var navLinks = document.querySelectorAll('.sidebar nav a');
+
+  function updateActiveNav() {
+    var current = '';
+    sections.forEach(function(section) {
+      var top = section.offsetTop - 120;
+      if (window.scrollY >= top) {
+        current = section.getAttribute('id');
+      }
+    });
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  }
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+  // ===== Back to Top =====
+  var backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 600) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  backToTop.addEventListener('click', function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // ===== IntersectionObserver Scroll Animations =====
+  var revealElements = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    revealElements.forEach(function(el) {
+      observer.observe(el);
+    });
+  } else {
+    revealElements.forEach(function(el) {
+      el.classList.add('visible');
+    });
+  }
+
+  // ===== Bar Chart Animation =====
+  var barFills = document.querySelectorAll('.bar-fill');
+  barFills.forEach(function(bar) {
+    var targetWidth = bar.style.width;
+    bar.style.width = '0%';
+    if ('IntersectionObserver' in window) {
+      var barObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            setTimeout(function() {
+              entry.target.style.width = targetWidth;
+            }, 200);
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3 });
+      barObserver.observe(bar);
+    } else {
+      bar.style.width = targetWidth;
+    }
+  });
+
+})();
+</script>
+</body>
+</html>

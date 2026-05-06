@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>印度尼西亚营商环境洞察报告 — 2026.04.13–04.19</title>
+<style>
+/* ===== Reset & Base ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei','Helvetica Neue',Arial,sans-serif;line-height:1.7;transition:background .15s ease,color .15s ease}
+
+/* ===== Dark Mode (default) ===== */
+:root{
+  --bg:#0a0f1e;--surface:#1a2e50;--surface-2:#233a60;--surface-3:#2c4670;
+  --border:rgba(255,255,255,0.08);
+  --text:#e4e8f1;--text-secondary:#8b95ad;--text-muted:#5a6580;
+  --accent:#3b82f6;--accent-dim:rgba(59,130,246,0.12);
+  --red:#ef4444;--red-dim:rgba(239,68,68,0.12);
+  --orange:#f59e0b;--orange-dim:rgba(245,158,11,0.12);
+  --green:#22c55e;--green-dim:rgba(34,197,94,0.12);
+  --yellow:#eab308;--yellow-dim:rgba(234,179,8,0.12);
+  --purple:#8b5cf6;--purple-dim:rgba(139,92,246,0.12);
+  --teal:#14b8a6;--teal-dim:rgba(20,184,166,0.12);
+  --header-bg:rgba(10,15,30,0.82);
+  --sidebar-bg:rgba(10,15,30,0.92);
+}
+
+/* ===== Light Mode ===== */
+body.light{
+  --bg:#f0f4f8;--surface:#ffffff;--surface-2:#f1f5f9;--surface-3:#e2e8f0;
+  --border:rgba(0,0,0,0.08);
+  --text:#1e293b;--text-secondary:#475569;--text-muted:#94a3b8;
+  --accent:#2563eb;--accent-dim:rgba(37,99,235,0.10);
+  --red:#dc2626;--red-dim:rgba(220,38,38,0.10);
+  --orange:#d97706;--orange-dim:rgba(217,119,6,0.10);
+  --green:#16a34a;--green-dim:rgba(22,163,74,0.10);
+  --yellow:#ca8a04;--yellow-dim:rgba(202,138,4,0.10);
+  --purple:#7c3aed;--purple-dim:rgba(124,58,237,0.10);
+  --teal:#0d9488;--teal-dim:rgba(13,148,136,0.10);
+  --header-bg:rgba(240,244,248,0.82);
+  --sidebar-bg:rgba(240,244,248,0.92);
+}
+
+body{background:var(--bg);color:var(--text)}
+
+/* ===== Header ===== */
+.header{position:sticky;top:0;z-index:100;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 28px;background:var(--header-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.header-left{display:flex;align-items:center;gap:14px}
+.header-logo{font-size:15px;font-weight:700;color:var(--accent);letter-spacing:.5px}
+.header-logo span{color:var(--text-muted);font-weight:400;margin-left:4px;font-size:13px}
+.header-actions{display:flex;align-items:center;gap:6px}
+.header-btn{background:none;border:1px solid var(--border);color:var(--text-secondary);border-radius:6px;padding:6px 10px;cursor:pointer;font-size:13px;display:flex;align-items:center;gap:5px;transition:all .15s ease}
+.header-btn:hover{border-color:rgba(59,130,246,0.25);color:var(--text);background:var(--accent-dim)}
+.header-btn svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.menu-btn{display:none}
+
+/* ===== Layout ===== */
+.layout{display:flex;min-height:calc(100vh - 60px)}
+.sidebar{width:280px;position:sticky;top:60px;height:calc(100vh - 60px);overflow-y:auto;padding:24px 0;background:var(--sidebar-bg);border-right:1px solid var(--border);flex-shrink:0;scrollbar-width:thin;scrollbar-color:var(--surface-3) transparent}
+.sidebar::-webkit-scrollbar{width:4px}
+.sidebar::-webkit-scrollbar-thumb{background:var(--surface-3);border-radius:4px}
+.sidebar-group{margin-bottom:20px}
+.sidebar-group-title{font-size:11px;text-transform:uppercase;letter-spacing:1.2px;color:var(--text-muted);padding:0 24px;margin-bottom:8px;font-weight:600}
+.sidebar-link{display:block;padding:7px 24px 7px 28px;font-size:13px;color:var(--text-secondary);text-decoration:none;border-left:2px solid transparent;transition:all .15s ease;cursor:pointer}
+.sidebar-link:hover{color:var(--text);background:var(--accent-dim)}
+.sidebar-link.active{color:var(--accent);border-left-color:var(--accent);background:var(--accent-dim)}
+.main{flex:1;min-width:0;max-width:1280px;padding:32px 40px}
+</style>
+<style>
+/* ===== Hero ===== */
+.hero{background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;margin-bottom:28px}
+.hero-bar{height:3px;background:linear-gradient(90deg,var(--accent),var(--teal),var(--green),var(--accent))}
+.hero-inner{padding:36px 40px 32px}
+.hero-title{font-size:26px;font-weight:700;line-height:1.35;margin-bottom:6px}
+.hero-subtitle{font-size:15px;color:var(--text-secondary);margin-bottom:18px}
+.hero-pills{display:flex;flex-wrap:wrap;gap:8px}
+.hero-pill{font-size:12px;padding:4px 12px;border-radius:20px;border:1px solid var(--border);color:var(--text-secondary);background:var(--surface-2);white-space:nowrap}
+.hero-pill b{color:var(--text);font-weight:600}
+.hero-pill.red{border-color:var(--red-dim);color:var(--red)}
+.hero-pill.green{border-color:var(--green-dim);color:var(--green)}
+.hero-pill.accent{border-color:var(--accent-dim);color:var(--accent)}
+.hero-pill.orange{border-color:var(--orange-dim);color:var(--orange)}
+.hero-pill.teal{border-color:var(--teal-dim);color:var(--teal)}
+.hero-pill.purple{border-color:var(--purple-dim);color:var(--purple)}
+
+/* ===== Stat Cards ===== */
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:28px}
+.stat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:18px 20px;border-left:3px solid var(--accent);transition:all .15s ease}
+.stat-card:hover{border-color:rgba(59,130,246,0.25);transform:translateY(-1px);box-shadow:0 4px 12px rgba(0,0,0,0.15)}
+.stat-card.red{border-left-color:var(--red)}
+.stat-card.orange{border-left-color:var(--orange)}
+.stat-card.green{border-left-color:var(--green)}
+.stat-card.accent{border-left-color:var(--accent)}
+.stat-card.teal{border-left-color:var(--teal)}
+.stat-card.purple{border-left-color:var(--purple)}
+.stat-label{font-size:12px;color:var(--text-muted);margin-bottom:6px;font-weight:500}
+.stat-value{font-size:22px;font-weight:700;margin-bottom:4px}
+.stat-value .c-red{color:var(--red)}.stat-value .c-green{color:var(--green)}.stat-value .c-orange{color:var(--orange)}.stat-value .c-accent{color:var(--accent)}.stat-value .c-teal{color:var(--teal)}.stat-value .c-purple{color:var(--purple)}
+.stat-sub{font-size:12px;color:var(--text-secondary);line-height:1.5}
+
+/* ===== Viz Dashboard ===== */
+.viz-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:28px}
+.viz-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;overflow:hidden}
+.viz-card.full{grid-column:1/-1}
+.viz-title{font-size:14px;font-weight:600;margin-bottom:14px;display:flex;align-items:center;gap:8px}
+.viz-title .badge{font-size:11px;padding:2px 8px;border-radius:4px;font-weight:500}
+canvas{display:block}
+
+/* ===== Section Header ===== */
+.section-header{display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-bottom:20px;border-left:3px solid var(--accent)}
+.section-icon{width:40px;height:40px;border-radius:8px;background:var(--accent-dim);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.section-icon svg{width:20px;height:20px;stroke:var(--accent);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.section-title{font-size:18px;font-weight:700;flex:1}
+.section-badge{font-size:12px;padding:3px 10px;border-radius:20px;background:var(--accent-dim);color:var(--accent);font-weight:600;white-space:nowrap}
+
+/* ===== Insight Card ===== */
+.insight-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease}
+.insight-card:hover{border-color:rgba(59,130,246,0.25)}
+.insight-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.insight-num{width:28px;height:28px;border-radius:6px;background:var(--accent-dim);color:var(--accent);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.insight-title-text{flex:1;font-size:15px;font-weight:600}
+.insight-level{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600;white-space:nowrap}
+.insight-level.high{background:var(--red-dim);color:var(--red)}
+.insight-level.medium{background:var(--orange-dim);color:var(--orange)}
+.insight-level.low{background:var(--green-dim);color:var(--green)}
+.insight-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.insight-card.open .insight-toggle{transform:rotate(180deg)}
+.insight-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.insight-card.open .insight-body{max-height:8000px}
+.insight-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.insight-content p{margin-bottom:12px}
+.insight-content p:last-child{margin-bottom:0}
+.insight-content ul{margin:0 0 12px 18px}
+.insight-content li{margin-bottom:4px}
+.insight-tag{display:inline-block;font-size:12px;padding:3px 10px;border-radius:4px;margin-bottom:10px;font-weight:600}
+.insight-tag.key{background:var(--accent-dim);color:var(--accent)}
+.insight-tag.fact{background:var(--teal-dim);color:var(--teal)}
+.insight-tag.advice{background:var(--green-dim);color:var(--green)}
+.insight-tag.warn{background:var(--orange-dim);color:var(--orange)}
+.insight-tag.impact{background:var(--purple-dim);color:var(--purple)}
+
+/* ===== Impact Table ===== */
+.impact-table{width:100%;border-collapse:collapse;font-size:13px;margin:12px 0}
+.impact-table th{background:var(--surface-2);padding:8px 14px;text-align:left;font-weight:600;color:var(--text-secondary);font-size:12px;border-bottom:1px solid var(--border)}
+.impact-table td{padding:8px 14px;border-bottom:1px solid var(--border);color:var(--text-secondary)}
+.impact-table tr:last-child td{border-bottom:none}
+
+/* ===== Risk Card ===== */
+.risk-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease}
+.risk-card:hover{border-color:rgba(239,68,68,0.25)}
+.risk-card.red-border{border-left:3px solid var(--red)}
+.risk-card.orange-border{border-left:3px solid var(--orange)}
+.risk-card.green-border{border-left:3px solid var(--green)}
+.risk-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.risk-level{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600;white-space:nowrap}
+.risk-level.high{background:var(--red-dim);color:var(--red)}
+.risk-level.medium{background:var(--orange-dim);color:var(--orange)}
+.risk-level.low{background:var(--green-dim);color:var(--green)}
+.risk-title-text{flex:1;font-size:15px;font-weight:600}
+.risk-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.risk-card.open .risk-toggle{transform:rotate(180deg)}
+.risk-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.risk-card.open .risk-body{max-height:3000px}
+.risk-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.risk-content p{margin-bottom:12px}
+.risk-indicators{background:var(--red-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.risk-indicators.orange-bg{background:var(--orange-dim)}
+.risk-indicators.green-bg{background:var(--green-dim)}
+.risk-indicators-title{font-size:12px;font-weight:700;color:var(--red);margin-bottom:8px}
+.risk-indicators-title.orange-text{color:var(--orange)}
+.risk-indicators-title.green-text{color:var(--green)}
+.risk-indicators ul{list-style:none;padding:0}
+.risk-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.risk-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+.risk-indicators.orange-bg li::before{background:var(--orange)}
+.risk-indicators.green-bg li::before{background:var(--green)}
+
+/* ===== Trend Card ===== */
+.trend-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease;border-left:3px solid var(--teal)}
+.trend-card:hover{border-color:rgba(20,184,166,0.25)}
+.trend-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.trend-num{width:28px;height:28px;border-radius:6px;background:var(--teal-dim);color:var(--teal);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.trend-title-text{flex:1;font-size:15px;font-weight:600}
+.trend-prob{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600;white-space:nowrap;background:var(--teal-dim);color:var(--teal)}
+.trend-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.trend-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.trend-card.open .trend-body{max-height:3000px}
+.trend-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.trend-content p{margin-bottom:12px}
+.trend-indicators{background:var(--teal-dim);border-radius:8px;padding:14px 16px;margin-top:10px}
+.trend-indicators-title{font-size:12px;font-weight:700;color:var(--teal);margin-bottom:8px}
+.trend-indicators ul{list-style:none;padding:0}
+.trend-indicators li{font-size:13px;color:var(--text-secondary);padding:3px 0;padding-left:16px;position:relative}
+.trend-indicators li::before{content:'';position:absolute;left:0;top:11px;width:6px;height:6px;border-radius:50%;background:var(--teal)}
+
+/* ===== Advice Card ===== */
+.advice-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;margin-bottom:14px;overflow:hidden;transition:all .15s ease;border-left:3px solid var(--green)}
+.advice-card:hover{border-color:rgba(34,197,94,0.25)}
+.advice-header{display:flex;align-items:center;gap:12px;padding:16px 20px;cursor:pointer;user-select:none}
+.advice-num{width:28px;height:28px;border-radius:6px;background:var(--green-dim);color:var(--green);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.advice-title-text{flex:1;font-size:15px;font-weight:600}
+.advice-urgency{font-size:12px;padding:3px 10px;border-radius:4px;font-weight:600;white-space:nowrap}
+.advice-urgency.high{background:var(--red-dim);color:var(--red)}
+.advice-urgency.medium{background:var(--orange-dim);color:var(--orange)}
+.advice-toggle{color:var(--text-muted);transition:transform .15s ease;font-size:18px}
+.advice-card.open .advice-toggle{transform:rotate(180deg)}
+.advice-body{max-height:0;overflow:hidden;transition:max-height .3s ease}
+.advice-card.open .advice-body{max-height:3000px}
+.advice-content{padding:0 20px 20px;font-size:14px;color:var(--text-secondary);line-height:1.8}
+.advice-content p{margin-bottom:12px}
+.advice-content ul{margin:0 0 12px 18px}
+.advice-content li{margin-bottom:4px}
+
+/* ===== Timeline ===== */
+.timeline{position:relative;padding-left:28px;margin-bottom:28px}
+.timeline::before{content:'';position:absolute;left:8px;top:0;bottom:0;width:2px;background:var(--border)}
+.timeline-item{position:relative;margin-bottom:20px}
+.timeline-dot{position:absolute;left:-24px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.timeline-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:16px 20px}
+.timeline-date{font-size:12px;color:var(--text-muted);margin-bottom:4px}
+.timeline-text{font-size:14px;color:var(--text-secondary);line-height:1.7}
+.timeline-text b{color:var(--text);font-weight:600}
+
+/* ===== Heatmap ===== */
+.heatmap{display:grid;grid-template-columns:180px 1fr 1fr;gap:2px;margin-bottom:16px}
+.heatmap-header{font-size:11px;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:.5px;padding:8px 12px;background:var(--surface-2);border-radius:6px}
+.heatmap-label{font-size:13px;color:var(--text-secondary);padding:8px 12px;background:var(--surface);border-radius:6px;display:flex;align-items:center}
+.heatmap-cell{padding:8px 12px;border-radius:6px;font-size:13px;font-weight:600;text-align:center;transition:transform .15s ease}
+.heatmap-cell:hover{transform:scale(1.05)}
+
+/* ===== Data Table ===== */
+.data-table-wrap{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-bottom:28px}
+.data-table{width:100%;border-collapse:collapse;font-size:13px}
+.data-table th{background:var(--surface-2);padding:10px 16px;text-align:left;font-weight:600;color:var(--text-secondary);font-size:12px;text-transform:uppercase;letter-spacing:.5px;border-bottom:1px solid var(--border)}
+.data-table td{padding:10px 16px;border-bottom:1px solid var(--border);color:var(--text-secondary)}
+.data-table tr:last-child td{border-bottom:none}
+.data-table tr:hover td{background:var(--accent-dim)}
+
+/* ===== Footer ===== */
+.footer{text-align:center;padding:32px 0;font-size:12px;color:var(--text-muted);border-top:1px solid var(--border);margin-top:40px}
+
+/* ===== Back to Top ===== */
+.back-top{position:fixed;bottom:28px;right:28px;width:40px;height:40px;border-radius:10px;background:var(--surface);border:1px solid var(--border);color:var(--text-secondary);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .15s ease;z-index:90}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.back-top svg{width:18px;height:18px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* ===== Search Overlay ===== */
+.search-overlay{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.5);display:none;align-items:flex-start;justify-content:center;padding-top:120px}
+.search-overlay.show{display:flex}
+.search-box{width:560px;max-width:90vw;background:var(--surface);border:1px solid var(--border);border-radius:14px;overflow:hidden;box-shadow:0 16px 48px rgba(0,0,0,0.3)}
+.search-input-wrap{display:flex;align-items:center;padding:0 16px;border-bottom:1px solid var(--border)}
+.search-input-wrap svg{width:18px;height:18px;stroke:var(--text-muted);fill:none;stroke-width:2;flex-shrink:0}
+.search-input{flex:1;border:none;background:none;padding:14px 12px;font-size:15px;color:var(--text);outline:none;font-family:inherit}
+.search-input::placeholder{color:var(--text-muted)}
+.search-results{max-height:320px;overflow-y:auto;padding:8px}
+.search-result-item{padding:10px 14px;border-radius:8px;cursor:pointer;font-size:14px;color:var(--text-secondary);transition:background .1s ease}
+.search-result-item:hover{background:var(--accent-dim);color:var(--text)}
+.search-result-item .sr-title{font-weight:600;color:var(--text);margin-bottom:2px}
+.search-result-item .sr-snippet{font-size:12px;color:var(--text-muted)}
+.search-empty{padding:20px;text-align:center;color:var(--text-muted);font-size:13px}
+.search-hint{padding:8px 16px;font-size:11px;color:var(--text-muted);border-top:1px solid var(--border);text-align:center}
+
+/* ===== Mobile Sidebar Overlay ===== */
+.sidebar-overlay{display:none;position:fixed;inset:0;z-index:150;background:rgba(0,0,0,0.5)}
+.sidebar-overlay.show{display:block}
+
+/* ===== Responsive ===== */
+@media(max-width:1024px){
+  .sidebar{display:none}
+  .sidebar.mobile-open{display:block;position:fixed;top:60px;left:0;z-index:160;height:calc(100vh - 60px);background:var(--bg)}
+  .menu-btn{display:flex}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .viz-grid{grid-template-columns:1fr}
+  .main{padding:24px 20px}
+}
+@media(max-width:640px){
+  .stats-grid{grid-template-columns:1fr}
+  .hero-inner{padding:24px 20px 20px}
+  .hero-title{font-size:20px}
+  .heatmap{grid-template-columns:120px 1fr 1fr}
+}
+
+/* ===== Print ===== */
+@media print{
+  .header,.sidebar,.back-top,.header-actions,.search-overlay,.sidebar-overlay,.menu-btn{display:none!important}
+  .layout{display:block}
+  .main{max-width:100%;padding:0}
+  .insight-body,.risk-body,.trend-body,.advice-body{max-height:none!important}
+  body{background:#fff;color:#1e293b}
+  .hero,.stat-card,.insight-card,.risk-card,.trend-card,.advice-card,.viz-card,.section-header,.timeline-card,.data-table-wrap{border-color:#ddd;box-shadow:none}
+}
+
+.section-spacer{height:8px}
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="header">
+  <div class="header-left">
+    <button class="header-btn menu-btn" onclick="toggleMobileSidebar()" aria-label="菜单">
+      <svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+    <div class="header-logo">SUPINFOR<span>营商环境洞察</span></div>
+  </div>
+  <div class="header-actions">
+    <button class="header-btn" onclick="openSearch()" title="搜索 (Ctrl+K)">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <span>搜索</span>
+    </button>
+    <button class="header-btn" onclick="toggleAllCards()" title="展开/折叠全部" id="toggleAllBtn">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      <span>展开全部</span>
+    </button>
+    <button class="header-btn" onclick="toggleTheme()" id="themeBtn" title="切换亮/暗模式">
+      <svg viewBox="0 0 24 24" id="themeIcon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+    <button class="header-btn" onclick="window.print()" title="打印">
+      <svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    </button>
+  </div>
+</header>
+
+<!-- ===== SIDEBAR OVERLAY (mobile) ===== -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleMobileSidebar()"></div>
+
+<!-- ===== LAYOUT ===== -->
+<div class="layout">
+  <!-- Sidebar -->
+  <nav class="sidebar" id="sidebar">
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">概览</div>
+      <a class="sidebar-link" data-target="hero">报告摘要</a>
+      <a class="sidebar-link" data-target="stats">核心数据</a>
+      <a class="sidebar-link" data-target="viz">数据仪表盘</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">重点事件</div>
+      <a class="sidebar-link" data-target="sec-events">重点事件解读</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">趋势与风险</div>
+      <a class="sidebar-link" data-target="sec-trend">趋势研判</a>
+      <a class="sidebar-link" data-target="sec-risk">风险警示</a>
+    </div>
+    <div class="sidebar-group">
+      <div class="sidebar-group-title">行动建议</div>
+      <a class="sidebar-link" data-target="sec-advice">行动建议</a>
+      <a class="sidebar-link" data-target="sec-timeline">下期关注</a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero" class="hero">
+      <div class="hero-bar"></div>
+      <div class="hero-inner">
+        <div class="hero-title">印度尼西亚营商环境洞察报告</div>
+        <div class="hero-subtitle">2026年4月13日 – 4月19日 · 营商环境全维度监测 · Supinfor 区域国别实时监测平台</div>
+        <div class="hero-pills">
+          <span class="hero-pill"><b>Supinfor Ltd.</b> 出品 · SUPINFOR-ID-BC-20260419</span>
+          <span class="hero-pill red">反腐多线出击：KPK查获 <b>638亿盾</b> 税务欺诈 · CPI仅 <b>34分</b></span>
+          <span class="hero-pill orange">非补贴燃油突然提价 · 能源成本波动信号</span>
+          <span class="hero-pill accent">16个中国汽车品牌入印尼 · 日系经销商加速退出</span>
+          <span class="hero-pill teal">经济增长加速工作组成立 · 第4/2026号总统令</span>
+          <span class="hero-pill purple">PSE注册制度实质执行 · 维基媒体面临封锁</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== STAT CARDS ===== -->
+    <section id="stats" class="stats-grid">
+      <div class="stat-card red">
+        <div class="stat-label">反腐查获规模</div>
+        <div class="stat-value"><span class="c-red">638亿盾</span></div>
+        <div class="stat-sub">北雅加达税务欺诈案 · 8名嫌疑人被捕 · 南苏门答腊港务局1600亿盾腐败案并行</div>
+      </div>
+      <div class="stat-card orange">
+        <div class="stat-label">清廉指数全球排名</div>
+        <div class="stat-value"><span class="c-orange">第109位</span></div>
+        <div class="stat-sub">CPI得分34分 · 官员财产申报覆盖率仅67.98% · 制度执行缺口显著</div>
+      </div>
+      <div class="stat-card green">
+        <div class="stat-label">经济增长加速工作组</div>
+        <div class="stat-value"><span class="c-green">第4/2026号</span></div>
+        <div class="stat-sub">总统令成立 · 直接向总统汇报 · 支撑"2045黄金印尼"愿景</div>
+      </div>
+      <div class="stat-card accent">
+        <div class="stat-label">中国汽车品牌数量</div>
+        <div class="stat-value"><span class="c-accent">16个品牌</span></div>
+        <div class="stat-sub">已进入印尼市场 · 日系经销商加速关闭 · TKDN政策面临改革</div>
+      </div>
+      <div class="stat-card teal">
+        <div class="stat-label">垃圾发电覆盖目标</div>
+        <div class="stat-value"><span class="c-teal">100%</span></div>
+        <div class="stat-sub">2029年实现全覆盖 · 第109/2025号总统令 · 国家战略项目定位</div>
+      </div>
+      <div class="stat-card purple">
+        <div class="stat-label">外商引进/处罚比</div>
+        <div class="stat-value"><span class="c-purple">1.28 : 1</span></div>
+        <div class="stat-sub">引进271条 vs 处罚211条 · 招商与监管动态平衡 · 处罚力度不容忽视</div>
+      </div>
+    </section>
+
+    <!-- ===== VIZ DASHBOARD ===== -->
+    <section id="viz" class="viz-grid">
+      <!-- Business Environment Radar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          营商环境综合评估
+          <span class="badge" style="background:var(--accent-dim);color:var(--accent)">雷达</span>
+        </div>
+        <canvas id="chartRadar" height="260"></canvas>
+      </div>
+      <!-- Risk Bubble Matrix -->
+      <div class="viz-card">
+        <div class="viz-title">
+          风险概率×影响矩阵
+          <span class="badge" style="background:var(--red-dim);color:var(--red)">评估</span>
+        </div>
+        <canvas id="chartRiskBubble" height="260"></canvas>
+      </div>
+      <!-- Tag Distribution Bar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          营商环境标签 TOP8
+          <span class="badge" style="background:var(--teal-dim);color:var(--teal)">分布</span>
+        </div>
+        <canvas id="chartTagBar" height="240"></canvas>
+      </div>
+      <!-- Column Distribution Bar -->
+      <div class="viz-card">
+        <div class="viz-title">
+          栏目数据分布
+          <span class="badge" style="background:var(--green-dim);color:var(--green)">占比</span>
+        </div>
+        <canvas id="chartColumnBar" height="240"></canvas>
+      </div>
+      <!-- Heatmap -->
+      <div class="viz-card full">
+        <div class="viz-title">
+          重点领域机遇/风险热力图
+          <span class="badge" style="background:var(--purple-dim);color:var(--purple)">评估</span>
+        </div>
+        <div class="heatmap">
+          <div class="heatmap-header">领域</div>
+          <div class="heatmap-header">机遇度</div>
+          <div class="heatmap-header">风险度</div>
+          <div class="heatmap-label">反腐制度化</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.5);color:#fff">中高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">数字经济监管</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">能源成本</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.15);color:var(--green)">低</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">汽车产业重塑</div>
+          <div class="heatmap-cell" style="background:var(--green);color:#fff">极高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中高</div>
+          <div class="heatmap-label">垃圾发电/环保</div>
+          <div class="heatmap-cell" style="background:var(--green);color:#fff">极高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.15);color:var(--red)">低</div>
+          <div class="heatmap-label">土地产权</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.15);color:var(--green)">低</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.7);color:#fff">高</div>
+          <div class="heatmap-label">IKN新首都</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.3);color:var(--green)">中</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.5);color:#fff">中高</div>
+          <div class="heatmap-label">经济增长加速</div>
+          <div class="heatmap-cell" style="background:rgba(34,197,94,0.7);color:#fff">高</div>
+          <div class="heatmap-cell" style="background:rgba(239,68,68,0.3);color:var(--red)">中低</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SECTION: 重点事件解读 ===== -->
+    <section id="sec-events">
+      <div class="section-header">
+        <div class="section-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+        <div class="section-title">重点事件解读</div>
+        <div class="section-badge">8 个事件</div>
+      </div>
+
+      <!-- Event 1: 反腐风暴 -->
+      <div class="insight-card open" data-search="反腐 KPK 肃贪委 海关 税务 贪腐 CPI 清廉 财产申报 图隆阿贡 勒姜勒邦">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--red-dim);color:var(--red)">1</div>
+          <div class="insight-title-text">反腐风暴多线出击，行政体系震荡加剧</div>
+          <span class="insight-level high">🔴 高度关注</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>本周期内，印尼肃贪委（KPK）在多个领域同步发力：海关总署进口贪腐案持续发酵；图隆阿贡县长因向下属勒索<b style="color:var(--red)">50亿印尼盾</b>被逮捕；勒姜勒邦县长因项目腐败落马；北雅加达税务欺诈案8名嫌疑人被捕、查获<b style="color:var(--red)">638亿印尼盾</b>；南苏门答腊检察院突击搜查港务局涉及<b style="color:var(--red)">1600亿印尼盾</b>腐败案。</p>
+
+            <span class="insight-tag fact">关键事实</span>
+            <p>印尼清廉指数（CPI）得分<b>34分</b>，全球排名第109位。KPK报告显示仅<b>67.98%</b>的官员提交了财产申报，反映制度执行仍有较大缺口。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>短期影响</td><td>行政审批效率可能下降，部分地方官员因"避风"心态延缓决策</td></tr>
+              <tr><td>中期影响</td><td>海关、税务系统整顿将改变既有"灰色通关"模式，合规成本上升但透明度提高</td></tr>
+              <tr><td>长期影响</td><td>若反腐制度化推进，将显著改善营商环境可预期性</td></tr>
+              <tr><td>外商直接影响</td><td>涉及海关清关、税务申报、地方项目审批的企业需重新评估合规流程</td></tr>
+            </table>
+
+            <span class="insight-tag warn">关注要点</span>
+            <ul>
+              <li>海关系统整顿对进出口企业清关时效的实际影响</li>
+              <li>地方政府换届/落马后的政策连续性风险</li>
+              <li>KPK财产申报覆盖率不足70%，反映制度执行仍有较大缺口</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 2: 非补贴燃油提价 -->
+      <div class="insight-card open" data-search="燃油 提价 Pertamina Pertamax Dexlite 能源 补贴 柴油 物流 通胀">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--red-dim);color:var(--red)">2</div>
+          <div class="insight-title-text">非补贴燃油突然提价，能源成本波动信号</div>
+          <span class="insight-level high">🔴 高度关注</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>国家石油公司Pertamina在未提前通知的情况下上调Pertamax Turbo、Dexlite、Pertamina Dex三款非补贴燃油价格，引发国会议员强烈批评。政府随后表态补贴燃油价格在2026年内不会上调。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>物流成本</td><td>非补贴柴油（Dexlite/Pertamina Dex）提价直接推高工业物流和运输成本</td></tr>
+              <tr><td>生产成本</td><td>使用非补贴燃油的制造业企业面临即时成本上升</td></tr>
+              <tr><td>政策信号</td><td>"突然提价"模式暴露价格调整机制缺乏透明度和可预期性</td></tr>
+              <tr><td>通胀传导</td><td>非补贴燃油提价可能通过供应链向终端消费品传导</td></tr>
+            </table>
+
+            <span class="insight-tag warn">关注要点</span>
+            <ul>
+              <li>补贴燃油价格是否能如承诺维持至年底</li>
+              <li>Pertamina后续是否有进一步调价计划</li>
+              <li>对依赖公路运输的供应链成本的实际传导幅度</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 3: 维基媒体封锁 -->
+      <div class="insight-card" data-search="维基媒体 PSE 数字监管 封锁 Meta TikTok Google 年龄限制 合规 数据本地化">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--orange-dim);color:var(--orange)">3</div>
+          <div class="insight-title-text">维基媒体封锁威胁，数字监管框架强化</div>
+          <span class="insight-level medium">🟡 密切跟踪</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>印尼通信与信息技术部威胁封锁所有维基媒体项目（包括维基百科），原因是其未按要求注册为PSE（电子系统提供者）。维基媒体基金会回应称相关要求违反国际人权准则。与此同时，Meta已遵守PP Tunas法规将年龄限制提高至16岁，TikTok和Roblox部分合规，Google尚未合规。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>数字合规</td><td>PSE注册制度从"纸面要求"进入"实质执行"阶段</td></tr>
+              <tr><td>内容监管</td><td>年龄限制、内容审核等要求将增加平台运营成本</td></tr>
+              <tr><td>市场准入</td><td>不合规平台面临被封锁风险，影响数字生态系统完整性</td></tr>
+              <tr><td>信号意义</td><td>政府展示了对国际科技巨头的监管决心，后续可能扩展至数据本地化</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 4: IKN新首都 -->
+      <div class="insight-card" data-search="IKN 新首都 万隆理工 ITB 加里曼丹 佐科 普拉博沃 格尔塔贾蒂 Kertajati">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--orange-dim);color:var(--orange)">4</div>
+          <div class="insight-title-text">新首都（IKN）项目遭学界质疑</div>
+          <span class="insight-level medium">🟡 密切跟踪</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>万隆理工学院（ITB）教授公开批评新首都（IKN）项目缺乏成熟技术论证，建设过于仓促，缺乏综合城市规划，且未被纳入中期发展规划。该教授将IKN与此前失败的格尔塔贾蒂（Kertajati）机场项目相类比。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>投资确定性</td><td>IKN相关投资的政策连续性和项目可行性存疑</td></tr>
+              <tr><td>基建机遇</td><td>短期内IKN配套基建招标可能放缓或调整</td></tr>
+              <tr><td>区域布局</td><td>企业在加里曼丹的长期布局需重新评估风险收益比</td></tr>
+              <tr><td>政治风险</td><td>IKN作为前总统佐科的标志性项目，在普拉博沃政府下优先级可能调整</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 5: 经济增长加速工作组 -->
+      <div class="insight-card" data-search="经济增长 工作组 总统令 普拉博沃 2045 黄金印尼 加速">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--green-dim);color:var(--green)">5</div>
+          <div class="insight-title-text">经济增长加速工作组成立</div>
+          <span class="insight-level low">🟢 积极信号</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>普拉博沃总统签署第4/2026号总统令，成立经济增长加速工作组，直接向总统汇报。该工作组旨在加速推进经济增长项目，支撑"2045黄金印尼"愿景。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>政策效率</td><td>直接向总统汇报的机制有望打破部际协调瓶颈</td></tr>
+              <tr><td>投资信号</td><td>释放政府加速经济增长的积极信号，有利于提振投资者信心</td></tr>
+              <tr><td>项目推进</td><td>重点经济项目的审批和推进速度可能加快</td></tr>
+              <tr><td>制度风险</td><td>工作组模式可能绕过常规制度程序，增加政策不确定性</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 6: 汽车产业 -->
+      <div class="insight-card" data-search="汽车 中国品牌 日系 TKDN 国产化率 新能源 经销商 零部件 供应链">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--orange-dim);color:var(--orange)">6</div>
+          <div class="insight-title-text">汽车产业格局剧变，中日竞争白热化</div>
+          <span class="insight-level medium">🟡 密切跟踪</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>目前已有<b style="color:var(--accent)">16个中国汽车品牌</b>进入印尼市场，日系经销商加速关闭。行业专家建议政府协调跨部委监管，改革国产化率（TKDN）政策，以技术转让激励替代简单的本地化率要求。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>市场机遇</td><td>中国车企在印尼市场份额快速扩大，新能源汽车赛道尤为突出</td></tr>
+              <tr><td>政策风险</td><td>TKDN政策改革方向不明，可能对现有投资布局产生影响</td></tr>
+              <tr><td>供应链重构</td><td>日系供应链体系松动为中国零部件企业创造替代机会</td></tr>
+              <tr><td>竞争加剧</td><td>16个品牌同台竞争可能引发价格战，压缩利润空间</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 7: 土地纠纷 -->
+      <div class="insight-card" data-search="土地 纠纷 产权 丹那阿邦 乌芒岛 楠榜 殖民 PT KAI 伪造">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--orange-dim);color:var(--orange)">7</div>
+          <div class="insight-title-text">土地纠纷频发，产权保护不确定性持续</div>
+          <span class="insight-level medium">🟡 密切跟踪</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>本周期内多起土地纠纷案件引发关注：丹那阿邦地区PT KAI与殖民时期继承人之间的土地争议；乌芒岛出售争议；楠榜省土地证伪造案。这些案件反映出印尼土地产权制度的深层结构性问题。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>投资安全</td><td>土地产权不确定性是外商投资的核心风险之一</td></tr>
+              <tr><td>项目开发</td><td>涉及土地收购的项目需预留更长的尽职调查周期</td></tr>
+              <tr><td>法律成本</td><td>土地纠纷解决周期长、成本高，增加项目总体风险</td></tr>
+              <tr><td>区域差异</td><td>爪哇岛与外岛的土地制度执行差异显著</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event 8: 垃圾发电 -->
+      <div class="insight-card" data-search="垃圾发电 PSEL 环保 战略项目 总统令 西楠榜 PPP 可再生能源">
+        <div class="insight-header" onclick="toggleCard(this)">
+          <div class="insight-num" style="background:var(--green-dim);color:var(--green)">8</div>
+          <div class="insight-title-text">垃圾发电战略项目与环保政策推进</div>
+          <span class="insight-level low">🟢 积极信号</span>
+          <div class="insight-toggle">▾</div>
+        </div>
+        <div class="insight-body">
+          <div class="insight-content">
+            <span class="insight-tag key">关键洞察</span>
+            <p>根据第109/2025号总统令，垃圾发电（PSEL）被列为国家战略项目，目标是到<b style="color:var(--teal)">2029年实现100%垃圾处理覆盖率</b>。西楠榜省正积极推动项目落地实施。</p>
+
+            <span class="insight-tag impact">营商影响</span>
+            <table class="impact-table">
+              <tr><th>维度</th><th>影响评估</th></tr>
+              <tr><td>投资机遇</td><td>垃圾发电领域为环保技术企业提供明确的市场机会</td></tr>
+              <tr><td>政策支持</td><td>国家战略项目定位意味着审批绿色通道和政策优惠</td></tr>
+              <tr><td>技术需求</td><td>印尼本土技术能力不足，对外国技术和设备有较强需求</td></tr>
+              <tr><td>合作模式</td><td>PPP（政府与社会资本合作）模式可能是主要合作框架</td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 趋势研判 ===== -->
+    <section id="sec-trend">
+      <div class="section-header" style="border-left-color:var(--teal)">
+        <div class="section-icon" style="background:var(--teal-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--teal)"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+        <div class="section-title">趋势研判</div>
+        <div class="section-badge" style="background:var(--teal-dim);color:var(--teal)">4 个趋势</div>
+      </div>
+
+      <!-- Trend 1 -->
+      <div class="trend-card open" data-search="反腐 制度化 KPK 财产申报 选举改革 合规 透明度">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">1</div>
+          <div class="trend-title-text">反腐运动从"运动式"向"制度化"过渡</div>
+          <span class="trend-prob">75%-85%</span>
+          <div class="trend-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>KPK多线出击的广度和深度表明反腐已超越个案查处，正向系统性制度建设演进。时间窗口<b>6-18个月</b>。</p>
+            <p>企业应主动完善合规体系，从"关系型"运营模式向"制度型"转变。灰色地带操作空间将持续收窄。短期内行政效率可能下降（官员"观望"心态），中期将显著提升制度透明度。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键指标</div>
+              <ul>
+                <li>KPK财产申报覆盖率变化</li>
+                <li>海关/税务系统制度改革方案出台</li>
+                <li>选举改革五项建议的立法进展</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 2 -->
+      <div class="trend-card open" data-search="数字经济 监管 PSE 维基媒体 数据本地化 平台 合规">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">2</div>
+          <div class="trend-title-text">数字经济监管框架加速收紧</div>
+          <span class="trend-prob">85%-95%</span>
+          <div class="trend-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>PSE注册制度实质执行、平台年龄限制、内容审核要求三管齐下，数字监管从"框架搭建"进入"落地执行"阶段。时间窗口<b>3-12个月</b>。</p>
+            <p>所有在印尼提供数字服务的企业（包括跨境电商、SaaS平台、社交媒体）需加速合规准备。数据本地化可能成为下一阶段监管重点，需提前评估数据架构调整成本。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键指标</div>
+              <ul>
+                <li>维基媒体谈判结果</li>
+                <li>Google合规进展</li>
+                <li>数据本地化政策动向</li>
+                <li>PSE注册企业数量变化</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 3 -->
+      <div class="trend-card" data-search="能源 成本 补贴 煤炭 工业 电价 可再生能源 光伏">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">3</div>
+          <div class="trend-title-text">能源成本结构性上行压力显现</div>
+          <span class="trend-prob">65%-75%</span>
+          <div class="trend-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>非补贴燃油提价是能源补贴改革的前奏，叠加煤炭产能调整，工业用能成本面临结构性上行压力。时间窗口<b>6-24个月</b>。</p>
+            <p>能源密集型制造业（冶炼、化工、建材等）需重新评估印尼生产基地的成本竞争力。建议企业提前布局能源替代方案（光伏、生物质能等），并在合同中增加能源成本调整条款。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键指标</div>
+              <ul>
+                <li>补贴燃油价格调整时点</li>
+                <li>煤炭出口配额政策变化</li>
+                <li>工业电价调整方案</li>
+                <li>可再生能源上网电价政策</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trend 4 -->
+      <div class="trend-card" data-search="产业 重塑 汽车 TKDN 村级合作社 垃圾发电 中资 保护主义">
+        <div class="trend-header" onclick="toggleCard(this)">
+          <div class="trend-num">4</div>
+          <div class="trend-title-text">产业格局重塑加速，中资企业机遇与风险并存</div>
+          <span class="trend-prob">70%-80%</span>
+          <div class="trend-toggle">▾</div>
+        </div>
+        <div class="trend-body">
+          <div class="trend-content">
+            <p>汽车产业中日竞争白热化、村级合作社改革、垃圾发电战略项目等多条线索指向印尼产业结构正在经历深层重塑。时间窗口<b>12-36个月</b>。</p>
+            <p>中资企业在汽车、新能源、环保技术、数字基础设施等领域面临战略性机遇窗口。但需警惕：品牌过度集中可能引发保护主义反弹；TKDN政策改革方向不明增加投资不确定性；地方治理问题仍是项目落地的主要障碍。</p>
+            <div class="trend-indicators">
+              <div class="trend-indicators-title">关键指标</div>
+              <ul>
+                <li>TKDN政策改革方案</li>
+                <li>新能源汽车补贴政策</li>
+                <li>村级合作社运营效果</li>
+                <li>PSEL项目招标进展</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 风险警示 ===== -->
+    <section id="sec-risk">
+      <div class="section-header" style="border-left-color:var(--red)">
+        <div class="section-icon" style="background:var(--red-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--red)"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+        <div class="section-title">风险警示</div>
+        <div class="section-badge" style="background:var(--red-dim);color:var(--red)">3红 · 5黄 · 4绿</div>
+      </div>
+
+      <!-- Red Risks -->
+      <div class="risk-card red-border open" data-search="反腐 扩大化 KPK 海关 税务 合规">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">🔴 红色</span>
+          <div class="risk-title-text">反腐运动扩大化</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>KPK在海关、税务、地方政府多线出击，可能波及与涉案官员有业务往来的企业。影响范围：进出口企业、地方项目投资企业、税务筹划相关企业。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">建议响应</div>
+              <ul>
+                <li>立即审查与政府机构的业务往来记录，确保所有交易合规可追溯</li>
+                <li>暂缓通过非正式渠道推进的审批事项</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card red-border open" data-search="燃油 提价 能源 物流 成本 Pertamina">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">🔴 红色</span>
+          <div class="risk-title-text">非补贴燃油突然提价</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>能源成本上升直接影响物流和生产成本，且调价机制缺乏透明度。影响范围：制造业企业、物流企业、依赖公路运输的供应链。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">建议响应</div>
+              <ul>
+                <li>重新核算运营成本模型，在供应商合同中增加能源成本联动条款</li>
+                <li>评估替代能源方案</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card red-border" data-search="土地 产权 纠纷 殖民 权属 尽职调查">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level high">🔴 红色</span>
+          <div class="risk-title-text">土地产权纠纷</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>多起土地纠纷案件暴露产权制度深层问题，涉及殖民时期遗留权属争议。影响范围：房地产开发、工业园区、基础设施项目投资企业。</p>
+            <div class="risk-indicators">
+              <div class="risk-indicators-title">建议响应</div>
+              <ul>
+                <li>对已有土地资产进行产权链完整性复核</li>
+                <li>新项目土地收购需聘请专业律所进行深度尽职调查</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yellow Risks -->
+      <div class="risk-card orange-border" data-search="数字监管 PSE 封锁 数据本地化 跨境电商">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">🟡 黄色</span>
+          <div class="risk-title-text">数字监管收紧</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>PSE注册制度实质执行，不合规平台面临封锁风险。影响范围：数字平台、跨境电商、SaaS服务商、数据处理企业。</p>
+            <div class="risk-indicators orange-bg">
+              <div class="risk-indicators-title orange-text">建议响应</div>
+              <ul>
+                <li>确认PSE注册状态，评估数据本地化需求，制定合规时间表</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card orange-border" data-search="IKN 新首都 投资 加里曼丹 压力测试">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">🟡 黄色</span>
+          <div class="risk-title-text">IKN项目不确定性</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>学界质疑叠加政策优先级可能调整，IKN相关投资风险上升。影响范围：IKN配套基建投资企业、加里曼丹区域布局企业。</p>
+            <div class="risk-indicators orange-bg">
+              <div class="risk-indicators-title orange-text">建议响应</div>
+              <ul>
+                <li>对IKN相关投资承诺进行压力测试，设置阶段性退出条件</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card orange-border" data-search="TKDN 国产化率 汽车 零部件 电子制造">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">🟡 黄色</span>
+          <div class="risk-title-text">TKDN政策改革</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>汽车产业国产化率政策面临改革，方向和时间表不明。影响范围：汽车及零部件制造企业、电子制造企业。</p>
+            <div class="risk-indicators orange-bg">
+              <div class="risk-indicators-title orange-text">建议响应</div>
+              <ul>
+                <li>密切跟踪工业部政策动向，准备多种TKDN达标方案</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card orange-border" data-search="地方治理 裙带关系 玛琅 亚齐辛基尔 预算僵局">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">🟡 黄色</span>
+          <div class="risk-title-text">地方治理风险</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>裙带关系、预算僵局等地方治理问题频发。影响范围：在地方政府层面有业务往来的企业。</p>
+            <div class="risk-indicators orange-bg">
+              <div class="risk-indicators-title orange-text">建议响应</div>
+              <ul>
+                <li>建立地方政治风险监测机制，重要决策避免过度依赖单一地方官员</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card orange-border" data-search="社会治安 Prima Alumga 非法采矿 安保">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level medium">🟡 黄色</span>
+          <div class="risk-title-text">社会治安</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>PT Prima Alumga设施遭袭、非法采矿打击等事件反映部分地区治安形势严峻。影响范围：资源开发企业、偏远地区运营企业。</p>
+            <div class="risk-indicators orange-bg">
+              <div class="risk-indicators-title orange-text">建议响应</div>
+              <ul>
+                <li>评估运营地点安全风险，完善应急预案和安保措施</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Green Risks -->
+      <div class="risk-card green-border" data-search="选举改革 政商互动 立法">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level low">🟢 绿色</span>
+          <div class="risk-title-text">选举改革推进</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>KPK提出五项选举改革建议，若立法推进将改变政商互动模式。纳入长期政策跟踪，评估对政商关系的潜在影响。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card green-border" data-search="数字鸿沟 互联网 卫星 东部">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level low">🟢 绿色</span>
+          <div class="risk-title-text">东部地区数字鸿沟</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>互联网渗透率仅<b>69.26%</b>（全国80.66%），卫星互联网推进中。关注卫星互联网部署进展，评估东部市场数字化服务机会。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card green-border" data-search="监察 Ombudsman 公信力 权力滥用">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level low">🟢 绿色</span>
+          <div class="risk-title-text">监察机构公信力</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>监察专员机构（Ombudsman）自身陷入权力滥用丑闻。多元化争议解决渠道，不过度依赖单一行政救济机制。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="risk-card green-border" data-search="朝觐 航班 苏加诺哈达 T2F 航空运力">
+        <div class="risk-header" onclick="toggleCard(this)">
+          <span class="risk-level low">🟢 绿色</span>
+          <div class="risk-title-text">朝觐航班基建</div>
+          <div class="risk-toggle">▾</div>
+        </div>
+        <div class="risk-body">
+          <div class="risk-content">
+            <p>苏加诺-哈达机场T2F航站楼为<b>22.1万</b>朝觐旅客服务，短期影响航空运力。朝觐季期间提前规划航空货运和商务出行安排。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 行动建议 ===== -->
+    <section id="sec-advice">
+      <div class="section-header" style="border-left-color:var(--green)">
+        <div class="section-icon" style="background:var(--green-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--green)"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <div class="section-title">行动建议</div>
+        <div class="section-badge" style="background:var(--green-dim);color:var(--green)">3 类受众</div>
+      </div>
+
+      <!-- Advice 1: 在印尼运营企业 -->
+      <div class="advice-card open" data-search="合规 成本管理 风险防控 战略布局 海关 税务 PSE 燃油 土地 TKDN PSEL">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <div class="advice-num">1</div>
+          <div class="advice-title-text">在印尼运营企业</div>
+          <div class="advice-toggle">▾</div>
+        </div>
+        <div class="advice-body">
+          <div class="advice-content">
+            <span class="insight-tag key">合规升级（紧迫度：高）</span>
+            <ul>
+              <li>立即启动内部合规审查，重点覆盖海关申报、税务处理、政府采购参与等环节</li>
+              <li>数字业务相关企业需在30天内确认PSE注册状态，评估数据本地化需求</li>
+              <li>建立与KPK反腐动态的常态化跟踪机制</li>
+            </ul>
+
+            <span class="insight-tag warn">成本管理（紧迫度：高）</span>
+            <ul>
+              <li>重新核算运营成本模型，将非补贴燃油提价影响纳入财务预测</li>
+              <li>在物流和供应商合同中增加能源成本联动调整条款</li>
+              <li>评估光伏、生物质能等替代能源方案的经济可行性</li>
+            </ul>
+
+            <span class="insight-tag impact">风险防控（紧迫度：中）</span>
+            <ul>
+              <li>对已有土地资产进行产权链完整性复核，特别关注殖民时期遗留权属问题</li>
+              <li>建立地方政治风险监测机制，避免核心业务过度依赖单一地方官员</li>
+              <li>完善偏远地区运营的安保预案</li>
+            </ul>
+
+            <span class="insight-tag advice">战略布局（紧迫度：中）</span>
+            <ul>
+              <li>汽车及零部件企业密切跟踪TKDN政策改革方向</li>
+              <li>关注垃圾发电（PSEL）国家战略项目招标机会</li>
+              <li>评估村级合作社改革带来的农村市场渠道机会</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advice 2: 拟进入印尼市场的投资者 -->
+      <div class="advice-card open" data-search="市场准入 尽职调查 进入策略 经济特区 SEZ 渐进式">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <div class="advice-num">2</div>
+          <div class="advice-title-text">拟进入印尼市场的投资者</div>
+          <div class="advice-toggle">▾</div>
+        </div>
+        <div class="advice-body">
+          <div class="advice-content">
+            <span class="insight-tag key">市场准入评估</span>
+            <ul>
+              <li>重点关注数字经济监管框架的最新要求，PSE注册、数据本地化等合规成本需纳入投资测算</li>
+              <li>汽车及新能源领域进入窗口仍然开放，但需充分评估TKDN政策改革风险</li>
+              <li>环保技术（垃圾发电、废水处理）领域受政策强力支持，是优质赛道</li>
+            </ul>
+
+            <span class="insight-tag fact">尽职调查重点</span>
+            <ul>
+              <li>土地产权尽职调查需追溯至殖民时期权属记录</li>
+              <li>评估目标投资区域的地方治理质量，关注地方政府换届风险</li>
+              <li>反腐背景下，对合作伙伴的合规背景调查需更加深入</li>
+            </ul>
+
+            <span class="insight-tag advice">进入策略建议</span>
+            <ul>
+              <li>优先考虑经济特区（SEZ）和工业园区，土地产权保障和行政服务相对规范</li>
+              <li>建议采用渐进式进入策略，先以贸易或技术合作方式试水</li>
+              <li>IKN相关投资建议持观望态度</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Advice 3: 研究机构与智库 -->
+      <div class="advice-card" data-search="研究 智库 CPI 数字经济 能源补贴 汽车品牌 东南亚">
+        <div class="advice-header" onclick="toggleCard(this)">
+          <div class="advice-num">3</div>
+          <div class="advice-title-text">研究机构与智库</div>
+          <div class="advice-toggle">▾</div>
+        </div>
+        <div class="advice-body">
+          <div class="advice-content">
+            <span class="insight-tag key">重点研究方向</span>
+            <ul>
+              <li>印尼反腐制度化进程对营商环境的量化影响评估——CPI得分34分的结构性成因与改善路径</li>
+              <li>数字经济监管框架的国际比较研究——PSE制度与欧盟DSA、中国网络安全法的异同分析</li>
+              <li>能源补贴改革的政治经济学——非补贴燃油提价的政策逻辑与社会承受力评估</li>
+              <li>中国汽车品牌在东南亚市场的竞争格局演变——印尼案例的产业政策含义</li>
+            </ul>
+
+            <span class="insight-tag fact">数据跟踪建议</span>
+            <ul>
+              <li>建立KPK执法动态数据库，跟踪反腐案件的行业分布和处罚力度变化</li>
+              <li>监测PSE注册企业数量和合规执法案例</li>
+              <li>跟踪非补贴燃油价格变动与工业生产成本的传导关系</li>
+              <li>建立印尼土地纠纷案例库，分析产权风险的地域和行业分布特征</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-spacer"></div>
+
+    <!-- ===== SECTION: 下期关注 ===== -->
+    <section id="sec-timeline">
+      <div class="section-header" style="border-left-color:var(--purple)">
+        <div class="section-icon" style="background:var(--purple-dim)"><svg viewBox="0 0 24 24" style="stroke:var(--purple)"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <div class="section-title">下期关注</div>
+        <div class="section-badge" style="background:var(--purple-dim);color:var(--purple)">时间线</div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--red)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">下周</div>
+            <div class="timeline-text"><b>维基媒体与印尼政府谈判结果</b>：对PSE制度执行力度具有标杆意义，影响所有在印尼运营的数字平台合规预期</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--orange)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">近期</div>
+            <div class="timeline-text"><b>Pertamina后续调价动向</b>：关注非补贴燃油是否有进一步调价计划，以及补贴燃油价格承诺的兑现情况</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--accent)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">近期</div>
+            <div class="timeline-text"><b>经济增长加速工作组首批项目清单</b>：关注工作组的具体职能范围和首批纳入加速推进的项目</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--teal)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">持续关注</div>
+            <div class="timeline-text"><b>TKDN政策改革方向</b>：工业部对汽车产业国产化率政策的改革方案和时间表</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--green)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">持续关注</div>
+            <div class="timeline-text"><b>PSEL垃圾发电项目招标</b>：各省市项目招标时间表、准入条件和上网电价政策</div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot" style="background:var(--purple)"></div>
+          <div class="timeline-card">
+            <div class="timeline-date">中长期</div>
+            <div class="timeline-text"><b>IKN是否纳入下一期中期发展规划（RPJMN）</b>：决定新首都项目的政策优先级和投资确定性</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>本报告基于 Supinfor 区域国别实时监测平台编制，仅供内部参考，不构成投资建议。</p>
+      <p>报告期：2026年4月13日 – 4月19日 · 编号：SUPINFOR-ID-BC-20260419 · 密级：内部参考</p>
+      <p style="margin-top:4px">报告编制：Supinfor 区域国别研究团队 · 审核：Supinfor 营商环境分析部</p>
+      <p style="margin-top:8px">© 2026 Supinfor Ltd. 保留所有权利。</p>
+    </footer>
+  </main>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<!-- ===== SEARCH OVERLAY ===== -->
+<div class="search-overlay" id="searchOverlay">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input class="search-input" id="searchInput" type="text" placeholder="搜索洞察、风险、趋势..." autocomplete="off">
+    </div>
+    <div class="search-results" id="searchResults">
+      <div class="search-empty">输入关键词开始搜索</div>
+    </div>
+    <div class="search-hint">ESC 关闭 · 点击结果跳转</div>
+  </div>
+</div>
+
+<script>
+/* ===== Theme Toggle ===== */
+function isDark(){return !document.body.classList.contains('light')}
+function modeColor(dark,light){return isDark()?dark:light}
+
+function toggleTheme(){
+  document.body.classList.toggle('light');
+  localStorage.setItem('supinfor-theme',isDark()?'dark':'light');
+  updateThemeIcon();
+  redrawCharts();
+}
+function updateThemeIcon(){
+  const icon=document.getElementById('themeIcon');
+  if(isDark()){
+    icon.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  }else{
+    icon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+  }
+}
+(function(){
+  const saved=localStorage.getItem('supinfor-theme');
+  if(saved==='light')document.body.classList.add('light');
+  updateThemeIcon();
+})();
+
+/* ===== Card Toggle ===== */
+function toggleCard(header){
+  const card=header.closest('.insight-card,.risk-card,.trend-card,.advice-card');
+  card.classList.toggle('open');
+}
+let allExpanded=false;
+function toggleAllCards(){
+  allExpanded=!allExpanded;
+  document.querySelectorAll('.insight-card,.risk-card,.trend-card,.advice-card').forEach(c=>{
+    if(allExpanded)c.classList.add('open');else c.classList.remove('open');
+  });
+  document.getElementById('toggleAllBtn').querySelector('span').textContent=allExpanded?'折叠全部':'展开全部';
+}
+
+/* ===== Mobile Sidebar ===== */
+function toggleMobileSidebar(){
+  document.getElementById('sidebar').classList.toggle('mobile-open');
+  document.getElementById('sidebarOverlay').classList.toggle('show');
+}
+
+/* ===== Sidebar Navigation ===== */
+document.querySelectorAll('.sidebar-link').forEach(link=>{
+  link.addEventListener('click',function(e){
+    e.preventDefault();
+    const target=document.getElementById(this.dataset.target);
+    if(target){
+      target.scrollIntoView({behavior:'smooth',block:'start'});
+      document.getElementById('sidebar').classList.remove('mobile-open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+    }
+  });
+});
+
+const sections=document.querySelectorAll('section[id]');
+const sidebarLinks=document.querySelectorAll('.sidebar-link');
+window.addEventListener('scroll',function(){
+  let current='';
+  sections.forEach(s=>{
+    const top=s.offsetTop-120;
+    if(pageYOffset>=top)current=s.id;
+  });
+  sidebarLinks.forEach(l=>{
+    l.classList.remove('active');
+    if(l.dataset.target===current)l.classList.add('active');
+  });
+  document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
+});
+
+/* ===== Search ===== */
+function openSearch(){
+  document.getElementById('searchOverlay').classList.add('show');
+  document.getElementById('searchInput').value='';
+  document.getElementById('searchInput').focus();
+  document.getElementById('searchResults').innerHTML='<div class="search-empty">输入关键词开始搜索</div>';
+}
+function closeSearch(){document.getElementById('searchOverlay').classList.remove('show')}
+document.addEventListener('keydown',function(e){
+  if((e.ctrlKey||e.metaKey)&&e.key==='k'){e.preventDefault();openSearch()}
+  if(e.key==='Escape')closeSearch();
+});
+document.getElementById('searchOverlay').addEventListener('click',function(e){
+  if(e.target===this)closeSearch();
+});
+document.getElementById('searchInput').addEventListener('input',function(){
+  const q=this.value.trim().toLowerCase();
+  const results=document.getElementById('searchResults');
+  if(!q){results.innerHTML='<div class="search-empty">输入关键词开始搜索</div>';return}
+  const cards=document.querySelectorAll('[data-search]');
+  let html='';
+  cards.forEach(card=>{
+    const titleEl=card.querySelector('.insight-title-text,.risk-title-text,.trend-title-text,.advice-title-text');
+    const searchText=(card.dataset.search+' '+(titleEl?titleEl.textContent:'')).toLowerCase();
+    if(searchText.includes(q)){
+      const title=titleEl?titleEl.textContent:'';
+      const contentEl=card.querySelector('.insight-content,.risk-content,.trend-content,.advice-content');
+      const snippet=contentEl?contentEl.textContent.substring(0,80):'';
+      const secId=card.closest('section')?card.closest('section').id:'';
+      html+='<div class="search-result-item" onclick="jumpToCard(this)" data-card-id="'+secId+'"><div class="sr-title">'+title+'</div><div class="sr-snippet">'+snippet+'...</div></div>';
+    }
+  });
+  results.innerHTML=html||'<div class="search-empty">未找到匹配结果</div>';
+});
+function jumpToCard(item){
+  closeSearch();
+  const secId=item.dataset.cardId;
+  if(secId){
+    const sec=document.getElementById(secId);
+    if(sec)sec.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+}
+</script>
+
+<script>
+/* ===== Canvas Charts ===== */
+function setupCanvas(id){
+  const canvas=document.getElementById(id);
+  if(!canvas)return null;
+  const dpr=window.devicePixelRatio||1;
+  const rect=canvas.getBoundingClientRect();
+  canvas.width=rect.width*dpr;
+  canvas.height=rect.height*dpr;
+  const ctx=canvas.getContext('2d');
+  ctx.scale(dpr,dpr);
+  canvas.style.width=rect.width+'px';
+  canvas.style.height=rect.height+'px';
+  return{ctx,w:rect.width,h:rect.height};
+}
+
+/* ===== Business Environment Radar ===== */
+function drawRadar(){
+  const c=setupCanvas('chartRadar');if(!c)return;
+  const{ctx,w,h}=c;
+  const cx=w/2;const cy=h/2+5;const r=Math.min(w,h)*0.32;
+  const labels=['政策透明度','反腐力度','数字监管','能源稳定','产业开放','土地保障'];
+  const values=[0.35,0.7,0.6,0.4,0.65,0.3];
+  const colors=[
+    modeColor('#f59e0b','#d97706'),
+    modeColor('#22c55e','#16a34a'),
+    modeColor('#3b82f6','#2563eb'),
+    modeColor('#ef4444','#dc2626'),
+    modeColor('#22c55e','#16a34a'),
+    modeColor('#ef4444','#dc2626')
+  ];
+  const n=labels.length;
+  const angleStep=Math.PI*2/n;
+  const startAngle=-Math.PI/2;
+
+  for(let ring=1;ring<=4;ring++){
+    const rr=r*ring/4;
+    ctx.beginPath();
+    for(let i=0;i<=n;i++){
+      const a=startAngle+i*angleStep;
+      const x=cx+Math.cos(a)*rr;
+      const y=cy+Math.sin(a)*rr;
+      if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+    }
+    ctx.closePath();
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.lineWidth=1;ctx.stroke();
+  }
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    ctx.beginPath();ctx.moveTo(cx,cy);
+    ctx.lineTo(cx+Math.cos(a)*r,cy+Math.sin(a)*r);
+    ctx.strokeStyle=modeColor('rgba(255,255,255,0.06)','rgba(0,0,0,0.06)');
+    ctx.stroke();
+  }
+  ctx.beginPath();
+  for(let i=0;i<=n;i++){
+    const idx=i%n;
+    const a=startAngle+idx*angleStep;
+    const x=cx+Math.cos(a)*r*values[idx];
+    const y=cy+Math.sin(a)*r*values[idx];
+    if(i===0)ctx.moveTo(x,y);else ctx.lineTo(x,y);
+  }
+  ctx.closePath();
+  ctx.fillStyle=modeColor('rgba(59,130,246,0.12)','rgba(37,99,235,0.10)');
+  ctx.fill();
+  ctx.strokeStyle=modeColor('#3b82f6','#2563eb');
+  ctx.lineWidth=2;ctx.stroke();
+  ctx.textAlign='center';ctx.textBaseline='middle';
+  for(let i=0;i<n;i++){
+    const a=startAngle+i*angleStep;
+    const dx=cx+Math.cos(a)*r*values[i];
+    const dy=cy+Math.sin(a)*r*values[i];
+    ctx.beginPath();ctx.arc(dx,dy,4,0,Math.PI*2);
+    ctx.fillStyle=colors[i];ctx.fill();
+    const lx=cx+Math.cos(a)*(r+24);
+    const ly=cy+Math.sin(a)*(r+24);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.fillText(labels[i],lx,ly);
+    const sx=cx+Math.cos(a)*(r*values[i]+16);
+    const sy=cy+Math.sin(a)*(r*values[i]+16);
+    ctx.fillStyle=colors[i];
+    ctx.font='600 11px "Segoe UI",sans-serif';
+    ctx.fillText(Math.round(values[i]*100),sx,sy);
+  }
+}
+
+/* ===== Risk Bubble Matrix ===== */
+function drawRiskBubble(){
+  const c=setupCanvas('chartRiskBubble');if(!c)return;
+  const{ctx,w,h}=c;
+  const pad={top:30,right:20,bottom:40,left:50};
+  const cw=w-pad.left-pad.right;
+  const ch=h-pad.top-pad.bottom;
+
+  const mx=pad.left+cw/2;const my=pad.top+ch/2;
+  ctx.fillStyle=modeColor('rgba(34,197,94,0.04)','rgba(22,163,74,0.04)');
+  ctx.fillRect(pad.left,pad.top,cw/2,ch/2);
+  ctx.fillStyle=modeColor('rgba(239,68,68,0.06)','rgba(220,38,38,0.06)');
+  ctx.fillRect(mx,pad.top,cw/2,ch/2);
+  ctx.fillStyle=modeColor('rgba(234,179,8,0.04)','rgba(202,138,4,0.04)');
+  ctx.fillRect(pad.left,my,cw/2,ch/2);
+  ctx.fillStyle=modeColor('rgba(245,158,11,0.04)','rgba(217,119,6,0.04)');
+  ctx.fillRect(mx,my,cw/2,ch/2);
+
+  ctx.strokeStyle=modeColor('rgba(255,255,255,0.08)','rgba(0,0,0,0.08)');
+  ctx.lineWidth=1;
+  ctx.beginPath();ctx.moveTo(pad.left,pad.top+ch);ctx.lineTo(pad.left+cw,pad.top+ch);ctx.stroke();
+  ctx.beginPath();ctx.moveTo(pad.left,pad.top);ctx.lineTo(pad.left,pad.top+ch);ctx.stroke();
+
+  ctx.fillStyle=modeColor('#5a6580','#94a3b8');
+  ctx.font='11px "Segoe UI","PingFang SC",sans-serif';
+  ctx.textAlign='center';
+  ctx.fillText('概率 →',pad.left+cw/2,h-8);
+  ctx.save();ctx.translate(12,pad.top+ch/2);ctx.rotate(-Math.PI/2);
+  ctx.fillText('影响 →',0,0);ctx.restore();
+
+  const risks=[
+    [0.8,0.85,22,'反腐扩大化',modeColor('#ef4444','#dc2626')],
+    [0.7,0.75,20,'能源成本上行',modeColor('#ef4444','#dc2626')],
+    [0.75,0.7,18,'土地产权',modeColor('#ef4444','#dc2626')],
+    [0.6,0.6,16,'数字监管',modeColor('#f59e0b','#d97706')],
+    [0.5,0.55,14,'IKN不确定性',modeColor('#f59e0b','#d97706')],
+    [0.55,0.5,13,'TKDN改革',modeColor('#f59e0b','#d97706')]
+  ];
+  risks.forEach(([prob,impact,size,label,color])=>{
+    const x=pad.left+prob*cw;
+    const y=pad.top+(1-impact)*ch;
+    ctx.beginPath();ctx.arc(x,y,size+4,0,Math.PI*2);
+    ctx.fillStyle=color.replace(')',',0.15)').replace('rgb','rgba');
+    ctx.fill();
+    ctx.beginPath();ctx.arc(x,y,size,0,Math.PI*2);
+    ctx.fillStyle=color.replace(')',',0.7)').replace('rgb','rgba');
+    ctx.fill();
+    ctx.strokeStyle=color;ctx.lineWidth=1.5;ctx.stroke();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='600 10px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='center';
+    ctx.fillText(label,x,y+size+14);
+  });
+}
+
+/* ===== Tag Distribution Bar ===== */
+function drawTagBar(){
+  const c=setupCanvas('chartTagBar');if(!c)return;
+  const{ctx,w,h}=c;
+  const data=[
+    {name:'政府公共服务',value:1403,color:modeColor('#ef4444','#dc2626')},
+    {name:'金融服务能力',value:757,color:modeColor('#f59e0b','#d97706')},
+    {name:'能源供应平衡',value:692,color:modeColor('#ef4444','#dc2626')},
+    {name:'交通物流建设',value:662,color:modeColor('#3b82f6','#2563eb')},
+    {name:'营商文化氛围',value:513,color:modeColor('#8b5cf6','#7c3aed')},
+    {name:'产业政策调整',value:472,color:modeColor('#14b8a6','#0d9488')},
+    {name:'知识产权保护',value:464,color:modeColor('#14b8a6','#0d9488')},
+    {name:'税收法规调整',value:450,color:modeColor('#f59e0b','#d97706')}
+  ];
+  const max=data[0].value;
+  const barH=18;const gap=8;const labelW=90;const valW=50;
+  const startY=(h-data.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  data.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-valW-20)*(d.value/max);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.name,labelW-8,y+barH/2);
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-valW-20,barH,4);ctx.fill();
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,4);ctx.fill();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='600 11px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText(d.value,labelW+barW+6,y+barH/2);
+  });
+}
+
+/* ===== Column Distribution Bar ===== */
+function drawColumnBar(){
+  const c=setupCanvas('chartColumnBar');if(!c)return;
+  const{ctx,w,h}=c;
+  const data=[
+    {name:'经济',value:29.4,color:modeColor('#3b82f6','#2563eb')},
+    {name:'民生',value:24.5,color:modeColor('#f59e0b','#d97706')},
+    {name:'产业',value:16.5,color:modeColor('#14b8a6','#0d9488')},
+    {name:'政治',value:10.2,color:modeColor('#ef4444','#dc2626')},
+    {name:'环保',value:6.2,color:modeColor('#22c55e','#16a34a')},
+    {name:'外交',value:3.3,color:modeColor('#8b5cf6','#7c3aed')},
+    {name:'教育',value:3.1,color:modeColor('#8b5cf6','#7c3aed')},
+    {name:'科技',value:2.8,color:modeColor('#14b8a6','#0d9488')}
+  ];
+  const max=data[0].value;
+  const barH=18;const gap=8;const labelW=50;const valW=50;
+  const startY=(h-data.length*(barH+gap))/2;
+  ctx.textBaseline='middle';
+  data.forEach((d,i)=>{
+    const y=startY+i*(barH+gap);
+    const barW=(w-labelW-valW-20)*(d.value/max);
+    ctx.fillStyle=modeColor('#8b95ad','#475569');
+    ctx.font='12px "Segoe UI","PingFang SC",sans-serif';
+    ctx.textAlign='right';
+    ctx.fillText(d.name,labelW-8,y+barH/2);
+    ctx.fillStyle=modeColor('rgba(255,255,255,0.04)','rgba(0,0,0,0.04)');
+    ctx.beginPath();ctx.roundRect(labelW,y,w-labelW-valW-20,barH,4);ctx.fill();
+    ctx.fillStyle=d.color;
+    ctx.beginPath();ctx.roundRect(labelW,y,barW,barH,4);ctx.fill();
+    ctx.fillStyle=modeColor('#e4e8f1','#1e293b');
+    ctx.font='600 11px "Segoe UI",sans-serif';
+    ctx.textAlign='left';
+    ctx.fillText(d.value+'%',labelW+barW+6,y+barH/2);
+  });
+}
+
+/* ===== Redraw All Charts ===== */
+function redrawCharts(){
+  drawRadar();
+  drawRiskBubble();
+  drawTagBar();
+  drawColumnBar();
+}
+
+window.addEventListener('load',redrawCharts);
+window.addEventListener('resize',redrawCharts);
+</script>
+</body>
+</html>

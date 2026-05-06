@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-lang="zh" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>巴西政治领域动态速览 | Brazil Political Flash — 2026.04.12</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ===== CSS RESET & BASE ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Inter','Noto Serif SC',sans-serif;line-height:1.8;transition:background .4s,color .4s}
+
+/* ===== LANGUAGE TOGGLE ===== */
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+
+/* ===== DARK THEME (default) ===== */
+:root,[data-theme="dark"]{
+  --base:#0c0f14;--surface:#141820;--card:#1c2028;
+  --primary:#009c3b;--primary-dim:#006b2b;--secondary:#ffdf00;--secondary-dim:#c5a000;
+  --crisis:#dc2626;--crisis-bg:rgba(220,38,38,.12);
+  --text:#f0f0f0;--muted:#8b95a5;--border:rgba(255,255,255,.08);
+  --card-hover:rgba(0,156,59,.08);--glow:rgba(0,156,59,.25);
+  --hero-grad:linear-gradient(135deg,#009c3b 0%,#006b2b 40%,#1a1a2e 70%,#c5a000 100%);
+  --tag-bg:rgba(0,156,59,.15);--tag-text:#4ade80;
+  --table-stripe:rgba(255,255,255,.03);--table-head:rgba(0,156,59,.18);
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"]{
+  --base:#fefce8;--surface:#ffffff;--card:#f7f7f2;
+  --primary:#006b2b;--primary-dim:#004d1f;--secondary:#c5a000;--secondary-dim:#9a7d00;
+  --crisis:#dc2626;--crisis-bg:rgba(220,38,38,.08);
+  --text:#1a1a1a;--muted:#6b7280;--border:rgba(0,0,0,.1);
+  --card-hover:rgba(0,107,43,.06);--glow:rgba(0,107,43,.15);
+  --hero-grad:linear-gradient(135deg,#009c3b 0%,#4ade80 30%,#fefce8 60%,#ffdf00 100%);
+  --tag-bg:rgba(0,107,43,.1);--tag-text:#006b2b;
+  --table-stripe:rgba(0,0,0,.03);--table-head:rgba(0,107,43,.12);
+}
+
+body{background:var(--base);color:var(--text)}
+
+/* ===== TYPOGRAPHY ===== */
+.font-display{font-family:'Playfair Display','Noto Serif SC',serif}
+.font-serif-cn{font-family:'Noto Serif SC','Playfair Display',serif}
+.font-body{font-family:'Inter','Noto Serif SC',sans-serif}
+
+h1,h2,h3{font-family:'Playfair Display','Noto Serif SC',serif;font-weight:700;line-height:1.3}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1280px;margin:0 auto;padding:0 24px}
+@media(min-width:768px){.container{padding:0 40px}}
+@media(min-width:1024px){.container{padding:0 60px}}
+
+section{padding:60px 0}
+@media(min-width:768px){section{padding:80px 0}}
+
+/* ===== CONTROLS (theme + lang toggle) ===== */
+.controls{position:fixed;top:20px;right:20px;z-index:1000;display:flex;gap:10px}
+.ctrl-btn{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--border);background:var(--surface);color:var(--text);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:16px;transition:all .3s;backdrop-filter:blur(12px);box-shadow:0 4px 20px rgba(0,0,0,.2)}
+.ctrl-btn:hover{border-color:var(--primary);color:var(--primary);transform:scale(1.08)}
+
+/* ===== BACK TO TOP ===== */
+.back-top{position:fixed;bottom:30px;right:30px;z-index:999;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;cursor:pointer;font-size:20px;display:flex;align-items:center;justify-content:center;opacity:0;transform:translateY(20px);transition:all .3s;box-shadow:0 4px 20px rgba(0,156,59,.3)}
+.back-top.visible{opacity:1;transform:translateY(0)}
+.back-top:hover{transform:translateY(-3px);box-shadow:0 6px 25px rgba(0,156,59,.5)}
+
+/* ===== HERO SECTION ===== */
+.hero{position:relative;min-height:520px;display:flex;align-items:center;overflow:hidden;background:var(--hero-grad)}
+.hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(135deg,transparent,transparent 40px,rgba(255,255,255,.03) 40px,rgba(255,255,255,.03) 42px);pointer-events:none}
+.hero::after{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;background:conic-gradient(from 0deg,transparent 0%,rgba(255,223,0,.08) 25%,transparent 50%,rgba(0,156,59,.08) 75%,transparent 100%);border-radius:50%;pointer-events:none}
+.hero-content{position:relative;z-index:2;padding:80px 0 60px}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;padding:6px 16px;border-radius:20px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);color:#fff;font-size:13px;margin-bottom:24px;border:1px solid rgba(255,255,255,.15)}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:16px;font-weight:900;letter-spacing:-.02em}
+.hero-subtitle{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1rem,2.5vw,1.35rem);color:rgba(255,255,255,.8);margin-bottom:32px;max-width:700px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:12px}
+.meta-tag{padding:5px 14px;border-radius:16px;font-size:12px;background:rgba(255,255,255,.1);color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.12)}
+
+/* ===== KEY NUMBERS STRIP ===== */
+.key-numbers{background:var(--surface);border-top:3px solid var(--primary);border-bottom:1px solid var(--border)}
+.numbers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;padding:40px 0}
+@media(min-width:640px){.numbers-grid{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:1024px){.numbers-grid{grid-template-columns:repeat(6,1fr)}}
+.num-card{text-align:center;padding:24px 12px;border-radius:12px;background:var(--card);border:1px solid var(--border);transition:all .3s}
+.num-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 8px 30px var(--glow)}
+.num-value{font-family:'Playfair Display',serif;font-size:clamp(2.5rem,4vw,4rem);font-weight:900;line-height:1;margin-bottom:8px}
+.num-value.green{color:var(--primary)}
+.num-value.gold{color:var(--secondary)}
+.num-value.red{color:var(--crisis)}
+.num-label{font-size:13px;color:var(--muted);line-height:1.4}
+</style>
+<style>
+/* ===== SECTION HEADERS ===== */
+.section-header{margin-bottom:40px}
+.section-num{font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;color:var(--primary);opacity:.18;line-height:1;margin-bottom:-20px}
+.section-title{font-size:clamp(1.5rem,3vw,2.2rem);position:relative;padding-left:20px;border-left:4px solid var(--primary)}
+.section-title.gold-border{border-left-color:var(--secondary)}
+
+/* ===== FOCUS EVENT CARDS ===== */
+.focus-card{background:var(--card);border-radius:16px;padding:32px;margin-bottom:32px;border:1px solid var(--border);border-left:5px solid var(--primary);transition:all .3s}
+.focus-card:hover{box-shadow:0 8px 40px var(--glow);border-left-color:var(--secondary)}
+.focus-card.crisis{border-left-color:var(--crisis)}
+.focus-card.crisis:hover{box-shadow:0 8px 40px rgba(220,38,38,.15)}
+.focus-card.gold{border-left-color:var(--secondary)}
+.focus-card.gold:hover{box-shadow:0 8px 40px rgba(255,223,0,.15)}
+.focus-card h3{font-size:clamp(1.2rem,2.5vw,1.6rem);margin-bottom:20px;color:var(--text)}
+.focus-card .subtitle{font-family:'Playfair Display',serif;font-style:italic;color:var(--muted);margin-bottom:20px;font-size:15px}
+.focus-card p{margin-bottom:16px;color:var(--text);line-height:1.9;font-size:15px}
+.focus-card strong{color:var(--primary)}
+[data-theme="light"] .focus-card strong{color:var(--primary-dim)}
+
+/* ===== DYNAMIC SCAN 4-COL ===== */
+.scan-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:640px){.scan-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.scan-grid{grid-template-columns:repeat(4,1fr)}}
+.scan-card{background:var(--card);border-radius:14px;padding:28px 24px;border:1px solid var(--border);transition:all .3s}
+.scan-card:hover{transform:translateY(-4px);border-color:var(--primary);box-shadow:0 8px 30px var(--glow)}
+.scan-icon{width:48px;height:48px;border-radius:12px;background:var(--tag-bg);color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px}
+.scan-card h4{font-size:1.05rem;margin-bottom:14px;font-family:'Playfair Display','Noto Serif SC',serif}
+.scan-card p{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:10px}
+.scan-card ul{list-style:none;padding:0}
+.scan-card li{font-size:14px;color:var(--text);line-height:1.8;padding:6px 0;border-bottom:1px solid var(--border);position:relative;padding-left:16px}
+.scan-card li::before{content:'›';position:absolute;left:0;color:var(--primary);font-weight:700}
+
+/* ===== POLITICAL FORCES TABLE ===== */
+.table-wrap{overflow-x:auto;border-radius:14px;border:1px solid var(--border);background:var(--card)}
+.pf-table{width:100%;border-collapse:collapse;font-size:14px;min-width:800px}
+.pf-table thead{background:var(--table-head)}
+.pf-table th{padding:14px 16px;text-align:left;font-weight:600;color:var(--text);white-space:nowrap;font-family:'Playfair Display','Noto Serif SC',serif;font-size:14px}
+.pf-table td{padding:14px 16px;border-bottom:1px solid var(--border);color:var(--text);line-height:1.6}
+.pf-table tbody tr:nth-child(even){background:var(--table-stripe)}
+.pf-table tbody tr:hover{background:var(--card-hover)}
+.badge{display:inline-block;padding:3px 10px;border-radius:10px;font-size:12px;font-weight:600}
+.badge-red{background:rgba(220,38,38,.15);color:#ef4444}
+.badge-amber{background:rgba(245,158,11,.15);color:#f59e0b}
+.badge-yellow{background:rgba(234,179,8,.15);color:#eab308}
+
+/* ===== DATA VISUALIZATIONS ===== */
+.viz-section{background:var(--surface);border-radius:16px;padding:32px;margin-bottom:32px;border:1px solid var(--border)}
+.viz-title{font-family:'Playfair Display','Noto Serif SC',serif;font-size:1.2rem;margin-bottom:24px;padding-bottom:12px;border-bottom:2px solid var(--primary)}
+
+/* Bar chart */
+.bar-group{margin-bottom:20px}
+.bar-label{font-size:13px;color:var(--muted);margin-bottom:6px;display:flex;justify-content:space-between}
+.bar-track{height:32px;background:var(--card);border-radius:8px;overflow:hidden;position:relative}
+.bar-fill{height:100%;border-radius:8px;display:flex;align-items:center;padding-left:12px;font-size:13px;font-weight:600;color:#fff;transition:width 1.5s cubic-bezier(.4,0,.2,1);width:0}
+.bar-fill.green{background:linear-gradient(90deg,var(--primary),#4ade80)}
+.bar-fill.red{background:linear-gradient(90deg,var(--crisis),#f87171)}
+.bar-fill.gold{background:linear-gradient(90deg,var(--secondary-dim),var(--secondary))}
+
+/* Donut chart */
+.donut-wrap{display:flex;flex-wrap:wrap;align-items:center;gap:32px;justify-content:center}
+.donut{width:200px;height:200px;border-radius:50%;position:relative;display:flex;align-items:center;justify-content:center}
+.donut-inner{width:120px;height:120px;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;flex-direction:column;z-index:2}
+.donut-pct{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:900;color:var(--primary)}
+.donut-sub{font-size:11px;color:var(--muted)}
+.donut-legend{display:flex;flex-direction:column;gap:12px}
+.legend-item{display:flex;align-items:center;gap:10px;font-size:14px}
+.legend-dot{width:14px;height:14px;border-radius:4px;flex-shrink:0}
+
+/* Stat dashboard */
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(min-width:640px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+.stat-card{background:var(--card);border-radius:12px;padding:20px;text-align:center;border:1px solid var(--border);transition:all .3s}
+.stat-card:hover{border-color:var(--primary);box-shadow:0 4px 20px var(--glow)}
+.stat-value{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;margin-bottom:4px}
+.stat-desc{font-size:12px;color:var(--muted);line-height:1.4}
+
+/* ===== TRENDS & RISKS ===== */
+.trend-card{background:var(--card);border-radius:16px;padding:32px;margin-bottom:28px;border:1px solid var(--border);transition:all .3s}
+.trend-card:hover{box-shadow:0 8px 30px var(--glow)}
+.trend-num{font-family:'Playfair Display',serif;font-size:3rem;font-weight:900;color:var(--primary);opacity:.2;float:left;margin-right:16px;line-height:1}
+.trend-card h4{font-size:1.15rem;margin-bottom:16px;font-family:'Playfair Display','Noto Serif SC',serif}
+.trend-card p{font-size:15px;line-height:1.9;margin-bottom:14px}
+.indicator-box{background:var(--tag-bg);border:1px solid rgba(0,156,59,.2);border-radius:10px;padding:16px 20px;margin-top:16px;font-size:14px;line-height:1.7}
+.indicator-box strong{color:var(--primary)}
+
+.risk-card{background:var(--card);border-radius:16px;padding:32px;margin-bottom:28px;border:1px solid var(--border);border-left:5px solid var(--crisis);transition:all .3s}
+.risk-card:hover{box-shadow:0 8px 30px rgba(220,38,38,.12)}
+.risk-card h4{font-size:1.15rem;margin-bottom:16px;font-family:'Playfair Display','Noto Serif SC',serif;color:var(--crisis)}
+.risk-card p{font-size:15px;line-height:1.9;margin-bottom:14px}
+.risk-indicator{background:var(--crisis-bg);border:1px solid rgba(220,38,38,.2);border-radius:10px;padding:16px 20px;margin-top:16px;font-size:14px;line-height:1.7}
+.risk-indicator strong{color:var(--crisis)}
+
+/* ===== COOPERATION TABLE ===== */
+.coop-table{width:100%;border-collapse:collapse;font-size:14px;min-width:700px}
+.coop-table thead{background:var(--table-head)}
+.coop-table th{padding:14px 16px;text-align:left;font-weight:600;font-family:'Playfair Display','Noto Serif SC',serif}
+.coop-table td{padding:14px 16px;border-bottom:1px solid var(--border);line-height:1.6}
+.coop-table tbody tr:nth-child(even){background:var(--table-stripe)}
+.coop-table tbody tr:hover{background:var(--card-hover)}
+
+/* ===== FORWARD LOOKING TIMELINE ===== */
+.timeline{position:relative;padding-left:32px}
+.timeline::before{content:'';position:absolute;left:10px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--primary),var(--secondary))}
+.tl-item{position:relative;margin-bottom:32px;padding:24px;background:var(--card);border-radius:14px;border:1px solid var(--border);transition:all .3s}
+.tl-item:hover{border-color:var(--primary);box-shadow:0 6px 25px var(--glow)}
+.tl-item::before{content:'';position:absolute;left:-28px;top:28px;width:14px;height:14px;border-radius:50%;background:var(--primary);border:3px solid var(--base)}
+.tl-date{display:inline-block;padding:4px 12px;border-radius:8px;background:var(--tag-bg);color:var(--tag-text);font-size:13px;font-weight:600;margin-bottom:10px}
+.tl-item h4{font-size:1rem;margin-bottom:10px;font-family:'Playfair Display','Noto Serif SC',serif}
+.tl-item p{font-size:14px;color:var(--muted);line-height:1.7}
+
+/* ===== APPENDIX ===== */
+.appendix-table{width:100%;border-collapse:collapse;font-size:14px}
+.appendix-table th{padding:12px 16px;text-align:left;background:var(--table-head);font-weight:600;font-family:'Playfair Display','Noto Serif SC',serif}
+.appendix-table td{padding:10px 16px;border-bottom:1px solid var(--border)}
+.appendix-table tbody tr:nth-child(even){background:var(--table-stripe)}
+
+/* ===== FOOTER ===== */
+.site-footer{background:var(--primary-dim);color:rgba(255,255,255,.85);padding:40px 0;text-align:center;font-size:14px}
+.site-footer .brand{font-family:'Playfair Display',serif;font-size:1.5rem;font-weight:700;margin-bottom:8px;color:#fff}
+.site-footer p{margin-bottom:4px;opacity:.8}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ===== CORE FINDINGS ===== */
+.finding-list{counter-reset:finding}
+.finding-item{position:relative;padding:20px 20px 20px 64px;margin-bottom:16px;background:var(--card);border-radius:12px;border:1px solid var(--border);transition:all .3s;counter-increment:finding}
+.finding-item:hover{border-color:var(--primary);box-shadow:0 4px 20px var(--glow)}
+.finding-item::before{content:counter(finding);position:absolute;left:16px;top:18px;width:36px;height:36px;border-radius:50%;background:var(--tag-bg);color:var(--primary);display:flex;align-items:center;justify-content:center;font-family:'Playfair Display',serif;font-weight:700;font-size:16px}
+.finding-item p{font-size:15px;line-height:1.8}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:640px){
+  .hero{min-height:420px}
+  .hero h1{font-size:1.8rem}
+  section{padding:40px 0}
+  .focus-card{padding:24px 20px}
+  .trend-num{font-size:2rem}
+}
+</style>
+</head>
+<body>
+
+<!-- ===== CONTROLS ===== -->
+<div class="controls">
+  <button class="ctrl-btn" id="langToggle" title="切换语言 / Toggle Language" aria-label="Toggle Language">
+    <span id="langIcon">EN</span>
+  </button>
+  <button class="ctrl-btn" id="themeToggle" title="切换主题 / Toggle Theme" aria-label="Toggle Theme">
+    <i class="fas fa-moon" id="themeIcon"></i>
+  </button>
+</div>
+
+<!-- ===== BACK TO TOP ===== -->
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<!-- ========================================== -->
+<!-- HERO SECTION -->
+<!-- ========================================== -->
+<section class="hero">
+  <div class="container hero-content">
+    <div class="hero-badge">
+      <i class="fas fa-globe-americas"></i>
+      <span data-zh>Supinfor 区域国别实时监测平台</span>
+      <span data-en>Supinfor Regional Country Real-time Monitoring Platform</span>
+    </div>
+    <h1 class="font-display">
+      <span data-zh>巴西政治领域动态速览</span>
+      <span data-en>Brazil Political Flash</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>"卢拉不支持率首次突破51%，2026大选两极化格局加速成型"</span>
+      <span data-en>"Lula's disapproval breaks 51% for the first time — the 2026 election polarization accelerates"</span>
+    </p>
+    <div class="hero-meta">
+      <span class="meta-tag"><i class="far fa-calendar"></i>&nbsp; 2026.04.06 — 2026.04.12</span>
+      <span class="meta-tag"><i class="far fa-newspaper"></i>&nbsp; <span data-zh>1,989条资讯精选约250条</span><span data-en>1,989 items, ~250 curated</span></span>
+      <span class="meta-tag"><i class="far fa-building"></i>&nbsp; Supinfor Ltd.</span>
+      <span class="meta-tag"><i class="far fa-file-alt"></i>&nbsp; <span data-zh>2026年4月12日</span><span data-en>April 12, 2026</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- KEY NUMBERS STRIP -->
+<!-- ========================================== -->
+<section class="key-numbers">
+  <div class="container">
+    <div class="numbers-grid">
+      <div class="num-card reveal">
+        <div class="num-value red">51%</div>
+        <div class="num-label"><span data-zh>卢拉不支持率创新高，首次过半</span><span data-en>Lula disapproval hits record high, exceeds 50% for first time</span></div>
+      </div>
+      <div class="num-card reveal">
+        <div class="num-value red">29%</div>
+        <div class="num-label"><span data-zh>卢拉正面评价降至任期最低点（较3月下降3个百分点）</span><span data-en>Lula positive rating drops to term low (down 3pp from March)</span></div>
+      </div>
+      <div class="num-card reveal">
+        <div class="num-value green">59%</div>
+        <div class="num-label"><span data-zh>支持博索纳罗居家监禁的民众比例</span><span data-en>Public support for Bolsonaro's house arrest</span></div>
+      </div>
+      <div class="num-card reveal">
+        <div class="num-value gold"><span data-zh>27<span style="font-size:.5em">年</span>3<span style="font-size:.5em">月</span></span><span data-en>27<span style="font-size:.5em">yr</span>3<span style="font-size:.5em">mo</span></span></div>
+        <div class="num-label"><span data-zh>博索纳罗因1·8事件被判处的刑期</span><span data-en>Bolsonaro's sentence for Jan 8 events</span></div>
+      </div>
+      <div class="num-card reveal">
+        <div class="num-value green">41</div>
+        <div class="num-label"><span data-zh>梅西亚斯STF提名在参议院全院通过所需最低票数</span><span data-en>Minimum Senate votes needed for Messias STF confirmation</span></div>
+      </div>
+      <div class="num-card reveal">
+        <div class="num-value gold">5.6</div>
+        <div class="num-label"><span data-zh>2026大选选民登记截止日期（5月6日）</span><span data-en>2026 election voter registration deadline (May 6)</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 1: CORE FINDINGS -->
+<!-- ========================================== -->
+<section id="core-findings">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">01</div>
+      <h2 class="section-title">
+        <span data-zh>本周核心发现</span>
+        <span data-en>Core Findings of the Week</span>
+      </h2>
+    </div>
+    <div class="finding-list">
+      <div class="finding-item reveal">
+        <p>
+          <span data-zh>Datafolha最新民调显示卢拉不支持率首次突破51%，正面评价跌至29%，执政根基遭受Banco Master丑闻、高利率与伊朗战争通胀三重侵蚀。</span>
+          <span data-en>The latest Datafolha poll shows Lula's disapproval rate breaking through 51% for the first time, with positive ratings dropping to 29%. His governing foundation is being eroded by the triple impact of the Banco Master scandal, high interest rates, and Iran war-driven inflation.</span>
+        </p>
+      </div>
+      <div class="finding-item reveal">
+        <p>
+          <span data-zh>博索纳罗居家监禁获59%民众支持，其子弗拉维奥·博索纳罗加速整合右翼力量，与米纳斯州长泽马的竞选搭档方案浮出水面，2026大选格局加速成型。</span>
+          <span data-en>Bolsonaro's house arrest receives 59% public support. His son Flávio Bolsonaro is accelerating the consolidation of right-wing forces, with a running mate plan with Minas Gerais Governor Zema emerging, as the 2026 election landscape takes shape rapidly.</span>
+        </p>
+      </div>
+      <div class="finding-item reveal">
+        <p>
+          <span data-zh>卢拉提名联邦总检察长梅西亚斯出任STF大法官引发朝野激烈博弈，福音派参议员与反对派集体反对，4月29日参议院听证将成关键节点。</span>
+          <span data-en>Lula's nomination of Attorney General Messias for the STF justice seat has triggered fierce political battles, with evangelical senators and the opposition collectively opposing. The April 29 Senate hearing will be a critical juncture.</span>
+        </p>
+      </div>
+      <div class="finding-item reveal">
+        <p>
+          <span data-zh>联邦警察二度认定博索纳罗干预警方案无犯罪证据，司法系统政治化争议持续深化，STF大法官莫莱斯的角色再度成为焦点。</span>
+          <span data-en>Federal Police have determined for the second time that there is no criminal evidence in the Bolsonaro police interference case. The controversy over judicial politicization continues to deepen, with STF Justice Moraes' role once again becoming the focus.</span>
+        </p>
+      </div>
+      <div class="finding-item reveal">
+        <p>
+          <span data-zh>卢拉借桑托斯-瓜鲁雅隧道等基建项目造势，与圣保罗州长塔西西欧的政治竞争白热化，基建议题正成为2026大选前哨战场。</span>
+          <span data-en>Lula is leveraging infrastructure projects like the Santos-Guarujá tunnel for political momentum. His competition with São Paulo Governor Tarcísio has intensified, with infrastructure becoming a battleground for the 2026 election.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 2: FOCUS EVENTS -->
+<!-- ========================================== -->
+<section id="focus-events" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">02</div>
+      <h2 class="section-title">
+        <span data-zh>焦点事件深度解读</span>
+        <span data-en>In-Depth Focus Event Analysis</span>
+      </h2>
+    </div>
+
+    <!-- FOCUS 2.1 -->
+    <div class="focus-card crisis reveal">
+      <h3>
+        <span data-zh>2.1 卢拉支持率持续下滑：Datafolha民调显示不支持率首次突破51%</span>
+        <span data-en>2.1 Lula's Approval Continues to Decline: Datafolha Poll Shows Disapproval Breaks 51% for First Time</span>
+      </h3>
+      <p>
+        <span data-zh>Datafolha于4月12日发布的最新民调数据为卢拉政府敲响了警钟。调查显示，卢拉的施政支持率从3月的47%下降至45%，不支持率则攀升至51%，这是卢拉第三任期以来不支持率首次突破半数大关。与此同时，对政府的正面评价从3月的32%骤降至29%，负面评价维持在40%的高位。</span>
+        <span data-en>The latest Datafolha poll released on April 12 sounded the alarm for the Lula government. The survey shows Lula's governance approval dropped from 47% in March to 45%, while disapproval climbed to 51% — the first time disapproval has exceeded the halfway mark since Lula's third term began. Meanwhile, positive government ratings plummeted from 32% in March to 29%, with negative ratings holding at a high of 40%.</span>
+      </p>
+      <p><strong><span data-zh>民意分化的结构性特征</span><span data-en>Structural Characteristics of Public Opinion Polarization</span></strong></p>
+      <p>
+        <span data-zh>民调揭示了巴西社会深层的结构性分裂。卢拉的正面评价主要集中在三类群体：年长选民、低学历群体和东北部选民——这些恰恰是卢拉传统票仓的核心构成。而负面评价则在高学历群体、南部选民、福音派信众以及月收入超过10倍最低工资的高收入阶层中尤为突出。这一分布格局表明，卢拉的支持基础正在向"低收入-低学历-东北部"的传统铁盘收缩，而中产阶级和新兴城市选民的流失趋势明显。</span>
+        <span data-en>The poll reveals deep structural divisions in Brazilian society. Lula's positive ratings are concentrated among three groups: older voters, lower-education demographics, and Northeastern voters — precisely the core of Lula's traditional voter base. Negative ratings are particularly prominent among highly educated groups, Southern voters, evangelical believers, and high-income earners with monthly incomes exceeding 10 times the minimum wage. This distribution pattern indicates that Lula's support base is contracting toward the traditional stronghold of "low-income, low-education, Northeast," while the loss of middle-class and emerging urban voters is clearly evident.</span>
+      </p>
+      <p><strong><span data-zh>三重压力叠加效应</span><span data-en>Triple Pressure Compounding Effect</span></strong></p>
+      <p>
+        <span data-zh>本轮支持率下滑并非单一事件驱动，而是三重压力叠加的结果。首先，Banco Master丑闻持续发酵，该银行涉嫌利用政府关联进行不当金融操作的指控，直接冲击了卢拉政府的廉政形象。其次，巴西央行维持高利率政策，Selic基准利率居高不下，企业融资成本攀升，中小企业主和中产阶级的不满情绪持续积累。第三，伊朗战争引发的国际能源价格波动正通过输入性通胀传导至巴西国内，食品和燃料价格上涨直接影响民众日常生活。</span>
+        <span data-en>This round of approval decline is not driven by a single event but is the result of triple pressure compounding. First, the Banco Master scandal continues to ferment — allegations that the bank used government connections for improper financial operations have directly impacted the Lula government's integrity image. Second, the Central Bank of Brazil maintains its high interest rate policy, with the Selic benchmark rate remaining elevated, driving up corporate financing costs and accumulating discontent among SME owners and the middle class. Third, international energy price volatility triggered by the Iran war is transmitting imported inflation to Brazil, with rising food and fuel prices directly affecting people's daily lives.</span>
+      </p>
+      <p><strong><span data-zh>历史比较与前瞻</span><span data-en>Historical Comparison and Outlook</span></strong></p>
+      <p>
+        <span data-zh>值得注意的是，尽管卢拉当前支持率持续走低，但仍高于博索纳罗在其任期同一时间节点的表现。然而，这一"相对优势"正在快速缩小。距离2026年10月大选仅剩约18个月，如果支持率下滑趋势不能在未来两个季度内得到遏制，卢拉的连任前景将面临实质性挑战。</span>
+        <span data-en>It is worth noting that despite Lula's continuously declining approval, it remains higher than Bolsonaro's performance at the same point in his term. However, this "relative advantage" is shrinking rapidly. With only about 18 months until the October 2026 election, if the declining trend cannot be contained within the next two quarters, Lula's re-election prospects will face substantive challenges.</span>
+      </p>
+      <p>
+        <span data-zh>执政联盟内部已意识到危机的严峻性。卢拉近期密集出席基建项目签约仪式，试图通过"看得见的政绩"重建民众信心，但Datafolha数据表明，这些努力尚未转化为有效的民意支撑。政府需要在经济治理层面拿出更具说服力的方案，尤其是在控制通胀和降低生活成本方面取得实质性突破，否则2026年大选将面临极为被动的局面。</span>
+        <span data-en>The ruling coalition has internally recognized the severity of the crisis. Lula has recently attended infrastructure project signing ceremonies intensively, attempting to rebuild public confidence through "visible achievements." However, Datafolha data indicates these efforts have not yet translated into effective public support. The government needs to present more convincing plans at the economic governance level, particularly achieving substantive breakthroughs in controlling inflation and reducing living costs, or the 2026 election will present an extremely passive situation.</span>
+      </p>
+    </div>
+
+    <!-- FOCUS 2.2 -->
+    <div class="focus-card gold reveal">
+      <h3>
+        <span data-zh>2.2 博索纳罗居家监禁争议与2026大选格局重塑</span>
+        <span data-en>2.2 Bolsonaro House Arrest Controversy and Reshaping of the 2026 Election Landscape</span>
+      </h3>
+      <p>
+        <span data-zh>博索纳罗的司法命运与2026年大选格局正在发生深度交织。自3月27日STF大法官莫莱斯批准博索纳罗因细菌性支气管肺炎从Papudinha监狱转为90天居家监禁以来，这一决定持续搅动巴西政坛。</span>
+        <span data-en>Bolsonaro's judicial fate and the 2026 election landscape are becoming deeply intertwined. Since STF Justice Moraes approved Bolsonaro's transfer from Papudinha prison to 90-day house arrest on March 27 due to bacterial bronchopneumonia, this decision has continued to stir Brazilian politics.</span>
+      </p>
+      <p><strong><span data-zh>民意的微妙平衡</span><span data-en>The Delicate Balance of Public Opinion</span></strong></p>
+      <p>
+        <span data-zh>Datafolha民调显示，59%的巴西民众支持博索纳罗继续居家服刑，37%希望其重返监狱，5%态度不明。支持居家监禁的比例在60岁以上群体（61%）和企业家群体（81%）中尤为突出，而年轻群体和失业者则更倾向于要求收监。这一数据反映出巴西社会对博索纳罗的态度已从激烈对抗转向某种"疲劳式接受"——多数人并非同情博索纳罗，而是认为居家监禁已是足够的惩罚。</span>
+        <span data-en>The Datafolha poll shows 59% of Brazilians support Bolsonaro continuing to serve his sentence under house arrest, 37% want him returned to prison, and 5% are undecided. Support for house arrest is particularly prominent among those over 60 (61%) and entrepreneurs (81%), while younger groups and the unemployed tend to favor re-imprisonment. This data reflects that Brazilian society's attitude toward Bolsonaro has shifted from fierce confrontation to a kind of "fatigue acceptance" — most people don't sympathize with Bolsonaro but consider house arrest sufficient punishment.</span>
+      </p>
+      <p>
+        <span data-zh>居家监禁期间，博索纳罗须佩戴电子脚镣，禁止使用社交平台，住宅周边1公里范围内禁止聚集，仅家人、律师和医生可按规定探访。90天期满后，STF将重新评估是否维持人道主义居家监禁，必要时将进行医学鉴定。</span>
+        <span data-en>During house arrest, Bolsonaro must wear an electronic ankle monitor, is prohibited from using social media platforms, gatherings are banned within a 1km radius of his residence, and only family members, lawyers, and doctors may visit according to regulations. After the 90-day period expires, the STF will reassess whether to maintain humanitarian house arrest, with medical evaluation if necessary.</span>
+      </p>
+      <p><strong><span data-zh>弗拉维奥·博索纳罗的崛起</span><span data-en>The Rise of Flávio Bolsonaro</span></strong></p>
+      <p>
+        <span data-zh>在父亲身陷囹圄的背景下，参议员弗拉维奥·博索纳罗正加速从"博索纳罗之子"向"右翼领袖候选人"的角色转型。本周，弗拉维奥密集会见圣保罗商界领袖，释放经济务实信号。更引人注目的是，弗拉维奥与米纳斯吉拉斯州长罗密欧·泽马的竞选搭档方案正式浮出水面。两人在社交平台发布轻松互动视频讨论搭档可能性，参议员Cleitinho Azevedo公开表态支持这一组合，前米纳斯州工业联合会主席弗拉维奥·罗斯科加入自由党后也在积极协调两人关系。</span>
+        <span data-en>With his father imprisoned, Senator Flávio Bolsonaro is accelerating his role transformation from "Bolsonaro's son" to "right-wing leadership candidate." This week, Flávio held intensive meetings with São Paulo business leaders, signaling economic pragmatism. More notably, the running mate plan between Flávio and Minas Gerais Governor Romeu Zema has officially emerged. The two posted casual interaction videos on social media discussing the partnership possibility, Senator Cleitinho Azevedo publicly endorsed this combination, and former Minas Gerais Industrial Federation president Flávio Roscoe, after joining the Liberal Party, is actively coordinating the relationship between the two.</span>
+      </p>
+      <p>
+        <span data-zh>弗拉维奥-泽马组合的战略逻辑清晰：弗拉维奥继承博索纳罗的右翼民粹基本盘，泽马则以"务实治理者"形象吸引中右翼和商界选民，两人分别覆盖里约热内卢和米纳斯吉拉斯两大关键选举州。如果这一组合成型，将构成对卢拉连任的最强挑战。</span>
+        <span data-en>The strategic logic of the Flávio-Zema combination is clear: Flávio inherits Bolsonaro's right-wing populist base, while Zema attracts center-right and business voters with his "pragmatic governor" image. Together they cover two key electoral states — Rio de Janeiro and Minas Gerais. If this combination materializes, it will constitute the strongest challenge to Lula's re-election.</span>
+      </p>
+      <p><strong><span data-zh>TSE领导权的隐忧</span><span data-en>Concerns Over TSE Leadership</span></strong></p>
+      <p>
+        <span data-zh>一个容易被忽视但极为关键的变量是：博索纳罗任期内提名的大法官卡门·露西亚的继任者将在2026年大选期间主导最高选举法院（TSE）。这将是巴西历史上首次由前总统提名人士在该总统受审期间领导选举司法机构，其对选举公正性的潜在影响值得高度关注。</span>
+        <span data-en>An easily overlooked but extremely critical variable: the successor to Justice Cármen Lúcia, nominated during Bolsonaro's term, will lead the Superior Electoral Court (TSE) during the 2026 election. This will be the first time in Brazilian history that a person nominated by a former president leads the electoral judiciary while that president is on trial, and its potential impact on electoral fairness deserves close attention.</span>
+      </p>
+    </div>
+
+    <!-- FOCUS 2.3 -->
+    <div class="focus-card reveal">
+      <h3>
+        <span data-zh>2.3 STF大法官提名战：梅西亚斯任命引发朝野博弈</span>
+        <span data-en>2.3 STF Justice Nomination Battle: Messias Appointment Triggers Political Showdown</span>
+      </h3>
+      <p>
+        <span data-zh>卢拉提名联邦总检察长（AGU）豪尔赫·梅西亚斯出任STF大法官席位，引发了本周最激烈的朝野博弈。这场提名战不仅关乎一个司法席位的归属，更折射出巴西三权关系的深层张力。</span>
+        <span data-en>Lula's nomination of Attorney General (AGU) Jorge Messias for the STF justice seat has triggered the most intense political showdown of the week. This nomination battle is not just about a judicial seat — it reflects the deep tensions in Brazil's separation of powers.</span>
+      </p>
+      <p><strong><span data-zh>支持与反对的力量对比</span><span data-en>Balance of Supporting and Opposing Forces</span></strong></p>
+      <p>
+        <span data-zh>STF现任院长吉尔马尔·门德斯罕见地公开为梅西亚斯背书，在社交平台发文肯定其在捍卫国家主权、对抗海外关税壁垒及追责科技平台违法内容方面的贡献，称其"具备履职资格"。吉尔马尔还驳斥了媒体对梅西亚斯的批评，称其为"空泛攻击"，忽略了梅西亚斯的优秀履历。</span>
+        <span data-en>Current STF President Gilmar Mendes made a rare public endorsement of Messias, posting on social media to affirm his contributions in defending national sovereignty, combating overseas tariff barriers, and holding tech platforms accountable for illegal content, calling him "qualified for the position." Gilmar also dismissed media criticism of Messias as "empty attacks" that ignored Messias's excellent track record.</span>
+      </p>
+      <p>
+        <span data-zh>然而，反对力量同样强大。福音派参议员因AGU此前发表的反对22周以上胎儿辅助死亡的意见而集体反对梅西亚斯，认为其立场威胁保守价值观。反对派决定集体投反对票，试图制造卢拉任期内首次STF提名被否决的历史性事件。</span>
+        <span data-en>However, opposing forces are equally powerful. Evangelical senators collectively oppose Messias due to the AGU's previous opinion against assisted death for fetuses over 22 weeks, viewing his stance as threatening conservative values. The opposition has decided to vote collectively against, attempting to create the historic event of the first STF nomination rejection during Lula's term.</span>
+      </p>
+      <p><strong><span data-zh>关键程序节点</span><span data-en>Key Procedural Milestones</span></strong></p>
+      <p>
+        <span data-zh>梅西亚斯的提名需经参议院宪法与司法委员会（CCJ）听证审查，听证定于4月29日举行，随后由参议院全院投票表决，需至少41票通过。执政联盟内部估算目前可争取到48-52票，但匿名投票机制可能改变最终结果——部分表面支持的参议员可能在匿名投票中倒戈。</span>
+        <span data-en>Messias's nomination must undergo a hearing review by the Senate Constitution and Justice Committee (CCJ), scheduled for April 29, followed by a full Senate vote requiring at least 41 votes to pass. The ruling coalition internally estimates it can currently secure 48-52 votes, but the secret ballot mechanism could change the final outcome — some senators who appear supportive may defect in a secret vote.</span>
+      </p>
+      <p>
+        <span data-zh>梅西亚斯本人已联络近70名参议员争取支持，显示出执政联盟对这场投票的高度重视。但福音派的集体反对和反对派的统一立场，使得最终结果充满不确定性。</span>
+        <span data-en>Messias himself has contacted nearly 70 senators to seek support, demonstrating the ruling coalition's high regard for this vote. However, the evangelical bloc's collective opposition and the opposition's unified stance make the final outcome highly uncertain.</span>
+      </p>
+      <p><strong><span data-zh>深层博弈逻辑</span><span data-en>Deeper Strategic Logic</span></strong></p>
+      <p>
+        <span data-zh>这场提名战的实质是卢拉试图通过控制STF席位来巩固司法系统中的执政联盟影响力。在博索纳罗案件审理、央行自治权争议、选举法改革等一系列重大议题上，STF的立场将直接影响巴西政治走向。反对派深知这一点，因此将梅西亚斯提名视为必须阻击的战略要地。</span>
+        <span data-en>The essence of this nomination battle is Lula's attempt to consolidate the ruling coalition's influence in the judicial system by controlling STF seats. On a series of major issues including the Bolsonaro case trial, central bank autonomy disputes, and electoral law reform, the STF's position will directly influence Brazil's political direction. The opposition is well aware of this, treating the Messias nomination as a strategic position that must be blocked.</span>
+      </p>
+      <p>
+        <span data-zh>如果梅西亚斯最终获得确认，卢拉将在STF中进一步巩固友好力量；如果提名被否，这将是对卢拉政治权威的重大打击，也将为反对派在2026年大选前积累重要的政治资本。</span>
+        <span data-en>If Messias is ultimately confirmed, Lula will further consolidate friendly forces within the STF; if the nomination is rejected, it will be a major blow to Lula's political authority and will accumulate important political capital for the opposition ahead of the 2026 election.</span>
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- DATA VISUALIZATIONS -->
+<!-- ========================================== -->
+<section id="data-viz">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num" style="opacity:.12">📊</div>
+      <h2 class="section-title gold-border">
+        <span data-zh>数据可视化</span>
+        <span data-en>Data Visualizations</span>
+      </h2>
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr;gap:28px">
+      <!-- VIZ 1: Lula Approval Trend -->
+      <div class="viz-section reveal" id="viz-approval">
+        <div class="viz-title">
+          <i class="fas fa-chart-bar" style="color:var(--primary);margin-right:8px"></i>
+          <span data-zh>卢拉支持率变化趋势（3月 → 4月）</span>
+          <span data-en>Lula Approval Trend (March → April)</span>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>支持率 3月</span><span data-en>Approval Mar</span></span>
+            <span>47%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill green animated-bar" data-width="47" style="width:0%">47%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>支持率 4月</span><span data-en>Approval Apr</span></span>
+            <span>45%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill green animated-bar" data-width="45" style="width:0%">45%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>不支持率 3月</span><span data-en>Disapproval Mar</span></span>
+            <span>49%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill red animated-bar" data-width="49" style="width:0%">49%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>不支持率 4月</span><span data-en>Disapproval Apr</span></span>
+            <span>51%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill red animated-bar" data-width="51" style="width:0%">51%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>正面评价 3月</span><span data-en>Positive Rating Mar</span></span>
+            <span>32%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill green animated-bar" data-width="32" style="width:0%">32%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>正面评价 4月</span><span data-en>Positive Rating Apr</span></span>
+            <span>29%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill green animated-bar" data-width="29" style="width:0%">29%</div></div>
+        </div>
+        <div class="bar-group">
+          <div class="bar-label">
+            <span><span data-zh>负面评价</span><span data-en>Negative Rating</span></span>
+            <span>40%</span>
+          </div>
+          <div class="bar-track"><div class="bar-fill red animated-bar" data-width="40" style="width:0%">40%</div></div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr;gap:28px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px" class="viz-row-2">
+          <!-- VIZ 2: Donut Chart -->
+          <div class="viz-section reveal" id="viz-donut">
+            <div class="viz-title">
+              <i class="fas fa-chart-pie" style="color:var(--secondary);margin-right:8px"></i>
+              <span data-zh>博索纳罗居家监禁民意分布</span>
+              <span data-en>Bolsonaro House Arrest Public Opinion</span>
+            </div>
+            <div class="donut-wrap">
+              <div class="donut" style="background:conic-gradient(var(--primary) 0% 59%, var(--crisis) 59% 96%, var(--muted) 96% 100%)">
+                <div class="donut-inner">
+                  <div class="donut-pct">59%</div>
+                  <div class="donut-sub"><span data-zh>支持居家监禁</span><span data-en>Support House Arrest</span></div>
+                </div>
+              </div>
+              <div class="donut-legend">
+                <div class="legend-item">
+                  <div class="legend-dot" style="background:var(--primary)"></div>
+                  <span><span data-zh>支持居家监禁 59%</span><span data-en>Support House Arrest 59%</span></span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot" style="background:var(--crisis)"></div>
+                  <span><span data-zh>希望重返监狱 37%</span><span data-en>Want Return to Prison 37%</span></span>
+                </div>
+                <div class="legend-item">
+                  <div class="legend-dot" style="background:var(--muted)"></div>
+                  <span><span data-zh>态度不明 5%</span><span data-en>Undecided 5%</span></span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIZ 3: Key Metrics Dashboard -->
+          <div class="viz-section reveal" id="viz-dashboard">
+            <div class="viz-title">
+              <i class="fas fa-tachometer-alt" style="color:var(--primary);margin-right:8px"></i>
+              <span data-zh>关键指标仪表盘</span>
+              <span data-en>Key Metrics Dashboard</span>
+            </div>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--crisis)">51%</div>
+                <div class="stat-desc"><span data-zh>卢拉不支持率</span><span data-en>Lula Disapproval</span></div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--crisis)">29%</div>
+                <div class="stat-desc"><span data-zh>正面评价（任期最低）</span><span data-en>Positive Rating (Term Low)</span></div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--primary)">59%</div>
+                <div class="stat-desc"><span data-zh>支持居家监禁</span><span data-en>Support House Arrest</span></div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--secondary)"><span data-zh>27<span style="font-size:.5em">年</span>3<span style="font-size:.5em">月</span></span><span data-en>27<span style="font-size:.5em">yr</span>3<span style="font-size:.5em">mo</span></span></div>
+                <div class="stat-desc"><span data-zh>博索纳罗刑期</span><span data-en>Bolsonaro Sentence</span></div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--primary)">41</div>
+                <div class="stat-desc"><span data-zh>STF提名所需票数</span><span data-en>Votes for STF Confirmation</span></div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-value" style="color:var(--secondary)">5/6</div>
+                <div class="stat-desc"><span data-zh>选民登记截止日</span><span data-en>Voter Registration Deadline</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 3: DYNAMIC SCAN -->
+<!-- ========================================== -->
+<section id="dynamic-scan" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">03</div>
+      <h2 class="section-title">
+        <span data-zh>重要动态扫描</span>
+        <span data-en>Key Developments Scan</span>
+      </h2>
+    </div>
+
+    <div class="scan-grid">
+      <!-- 3.1 执政党动态 -->
+      <div class="scan-card reveal">
+        <div class="scan-icon"><i class="fas fa-landmark"></i></div>
+        <h4><span data-zh>3.1 执政党动态</span><span data-en>3.1 Ruling Party Developments</span></h4>
+        <ul>
+          <li>
+            <span data-zh>PT前主席、卢拉政府原机构关系事务部长格莱西·霍夫曼正式宣布参选巴拉那州参议员，参与了UOL与《圣保罗页报》联合制作的大选访谈节目，标志着PT在南部地区的选举布局启动。</span>
+            <span data-en>Former PT president and Lula government's former Institutional Relations Minister Gleisi Hoffmann officially announced her candidacy for Paraná state senator, participating in an election interview program jointly produced by UOL and Folha de S.Paulo, marking the launch of PT's electoral strategy in the southern region.</span>
+          </li>
+          <li>
+            <span data-zh>卢拉持续利用基建项目进行政治造势。本周围绕桑托斯-瓜鲁雅隧道项目的巴西银行26亿雷亚尔贷款签约仪式，卢拉安排副总统阿尔克明与财政部长出席，并临时邀请圣保罗州长塔西西欧团队参加，试图将该贷款包装为联邦政府政绩。塔西西欧方面则指出该贷款由圣保罗州偿还，且联邦政府尚未支付其应承担的项目出资份额。</span>
+            <span data-en>Lula continues to leverage infrastructure projects for political momentum. This week, around the Banco do Brasil R$2.6 billion loan signing ceremony for the Santos-Guarujá tunnel project, Lula arranged for Vice President Alckmin and the Finance Minister to attend, and last-minute invited São Paulo Governor Tarcísio's team, attempting to package the loan as a federal government achievement. Tarcísio's side pointed out that the loan is repaid by São Paulo state, and the federal government has not yet paid its share of project funding.</span>
+          </li>
+          <li>
+            <span data-zh>共和党（Republicanos）的纳博尔·万德利公开表态支持卢拉，显示执政联盟仍在努力扩大议会支持基础。</span>
+            <span data-en>Republicanos party's Nabor Wanderley publicly expressed support for Lula, showing the ruling coalition is still working to expand its parliamentary support base.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3.2 反对派与政党博弈 -->
+      <div class="scan-card reveal">
+        <div class="scan-icon"><i class="fas fa-chess"></i></div>
+        <h4><span data-zh>3.2 反对派与政党博弈</span><span data-en>3.2 Opposition & Party Dynamics</span></h4>
+        <ul>
+          <li>
+            <span data-zh>弗拉维奥·博索纳罗本周在多条战线同时推进。除与泽马的搭档方案外，他还发布视频将巴西超8000万家庭债务问题置于公共辩论中心，批评高利率与税负政策，并将体育博彩增长与低收入群体债务增加关联，展现出从社会议题切入选战的策略。</span>
+            <span data-en>Flávio Bolsonaro advanced on multiple fronts this week. Beyond the running mate plan with Zema, he released videos placing Brazil's 80+ million household debt problem at the center of public debate, criticizing high interest rates and tax policies, and linking sports betting growth to increased low-income household debt, demonstrating a strategy of entering the election campaign through social issues.</span>
+          </li>
+          <li>
+            <span data-zh>自由党（PL）内部整合加速。前米纳斯州工业联合会主席罗斯科加入PL后，积极协调弗拉维奥与泽马的关系，试图整合米纳斯州右翼力量。参议员Cleitinho Azevedo公开力挺弗拉维奥-泽马组合，右翼阵营的团结度正在提升。</span>
+            <span data-en>Internal consolidation of the Liberal Party (PL) is accelerating. After former Minas Gerais Industrial Federation president Roscoe joined PL, he actively coordinated the relationship between Flávio and Zema, attempting to consolidate right-wing forces in Minas Gerais. Senator Cleitinho Azevedo publicly endorsed the Flávio-Zema combination, with right-wing camp unity on the rise.</span>
+          </li>
+          <li>
+            <span data-zh>反对派在梅西亚斯STF提名问题上达成集体反对共识，这是近期反对派最为统一的一次行动，显示出右翼力量在关键议题上的协调能力正在增强。</span>
+            <span data-en>The opposition reached a collective consensus to oppose the Messias STF nomination, the most unified opposition action in recent times, demonstrating that right-wing forces' coordination capability on key issues is strengthening.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3.3 议会与立法 -->
+      <div class="scan-card reveal">
+        <div class="scan-icon"><i class="fas fa-gavel"></i></div>
+        <h4><span data-zh>3.3 议会与立法</span><span data-en>3.3 Parliament & Legislation</span></h4>
+        <ul>
+          <li>
+            <span data-zh>央行自治法案因政治冲突陷入僵局。该法案涉及央行独立性的制度化保障，但在当前政治极化环境下，执政联盟与反对派难以达成共识，法案推进前景不明。</span>
+            <span data-en>The Central Bank autonomy bill has stalled due to political conflict. The bill involves institutional guarantees for central bank independence, but in the current politically polarized environment, the ruling coalition and opposition cannot reach consensus, and the bill's prospects remain unclear.</span>
+          </li>
+          <li>
+            <span data-zh>选举法层面，5月6日为2026年大选选民登记截止日期，选民可在此前办理选民证、更新登记信息或转移选举住所。18岁以上选民投票为强制性，文盲、70岁以上及16-17岁青年为自愿投票。TSE已开放线上自助系统办理相关手续。</span>
+            <span data-en>On the electoral law front, May 6 is the voter registration deadline for the 2026 election. Voters can obtain voter cards, update registration information, or transfer electoral residence before this date. Voting is mandatory for citizens over 18, while it is voluntary for illiterate citizens, those over 70, and youth aged 16-17. The TSE has opened an online self-service system for these procedures.</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 3.4 地方政治 -->
+      <div class="scan-card reveal">
+        <div class="scan-icon"><i class="fas fa-map-marked-alt"></i></div>
+        <h4><span data-zh>3.4 地方政治</span><span data-en>3.4 Local Politics</span></h4>
+        <ul>
+          <li>
+            <span data-zh>帕拉伊巴州卡贝德洛市补选结果揭晓，艾德瓦尔多·内托以61%的有效票当选市长，击败对手瓦尔贝尔·维尔戈利诺。此次补选因原市长和副市长因选举违规被司法机构撤销任期而举行，共53320名合格选民参与投票。内托当选后宣布将提交降低IPTU法案并推进安全政策。</span>
+            <span data-en>The by-election results in Cabedelo, Paraíba state were announced. Edvaldo Neto won the mayoral election with 61% of valid votes, defeating opponent Walber Virgolino. The by-election was held because the original mayor and vice mayor had their terms revoked by the judiciary for electoral violations, with 53,320 eligible voters participating. After his election, Neto announced he would submit a bill to reduce IPTU and advance security policies.</span>
+          </li>
+          <li>
+            <span data-zh>圣卡塔琳娜州州长选举格局初步成型，预计将有五名候选人参选。现任州长若热·梅洛已宣布阿德里亚诺·席尔瓦为副手，中右翼的若泽·罗德里格斯成为巴西民主运动党备选，左翼的热尔松·梅里西奥正在整合左翼政党力量。</span>
+            <span data-en>The Santa Catarina state governor election landscape is taking initial shape, with five candidates expected to run. Current Governor Jorge Melo has announced Adriano Silva as his running mate, center-right José Rodrigues has become the MDB backup candidate, and left-wing Gerson Merísio is consolidating left-wing party forces.</span>
+          </li>
+          <li>
+            <span data-zh>圣保罗州进步党（PP）领导权争夺持续，反映出中右翼政党在大选前的内部重组压力。</span>
+            <span data-en>The leadership struggle within the Progressive Party (PP) in São Paulo state continues, reflecting the internal reorganization pressure on center-right parties ahead of the election.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- POLITICAL FORCES TABLE -->
+<!-- ========================================== -->
+<section id="political-forces">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">🏛️</div>
+      <h2 class="section-title gold-border">
+        <span data-zh>政治力量对比图谱</span>
+        <span data-en>Political Forces Comparison Matrix</span>
+      </h2>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="pf-table">
+        <thead>
+          <tr>
+            <th><span data-zh>阵营</span><span data-en>Faction</span></th>
+            <th><span data-zh>核心人物</span><span data-en>Key Figures</span></th>
+            <th><span data-zh>本周动向</span><span data-en>This Week's Moves</span></th>
+            <th><span data-zh>2026大选立场</span><span data-en>2026 Election Stance</span></th>
+            <th><span data-zh>风险评估</span><span data-en>Risk Assessment</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong><span data-zh>执政联盟（PT/PSD/MDB）</span><span data-en>Ruling Coalition (PT/PSD/MDB)</span></strong>
+            </td>
+            <td>
+              <span data-zh>卢拉、格莱西·霍夫曼、阿尔克明</span>
+              <span data-en>Lula, Gleisi Hoffmann, Alckmin</span>
+            </td>
+            <td>
+              <span data-zh>支持率下滑至45%，密集基建造势，推动梅西亚斯STF提名</span>
+              <span data-en>Approval drops to 45%, intensive infrastructure campaigning, pushing Messias STF nomination</span>
+            </td>
+            <td>
+              <span data-zh>寻求连任，但民意基础收窄</span>
+              <span data-en>Seeking re-election, but public support base narrowing</span>
+            </td>
+            <td><span class="badge badge-yellow">⚠️ <span data-zh>高：经济议题持续侵蚀支持率</span><span data-en>High: Economic issues eroding support</span></span></td>
+          </tr>
+          <tr>
+            <td>
+              <strong><span data-zh>右翼反对派（PL）</span><span data-en>Right-wing Opposition (PL)</span></strong>
+            </td>
+            <td>
+              <span data-zh>弗拉维奥·博索纳罗、泽马、Cleitinho</span>
+              <span data-en>Flávio Bolsonaro, Zema, Cleitinho</span>
+            </td>
+            <td>
+              <span data-zh>弗拉维奥-泽马搭档方案成型，集体反对梅西亚斯提名</span>
+              <span data-en>Flávio-Zema running mate plan taking shape, collective opposition to Messias nomination</span>
+            </td>
+            <td>
+              <span data-zh>弗拉维奥为总统候选人，泽马为副手</span>
+              <span data-en>Flávio as presidential candidate, Zema as VP</span>
+            </td>
+            <td><span class="badge badge-amber">🔶 <span data-zh>中：需证明独立于父亲的执政能力</span><span data-en>Med: Must prove governance ability independent of father</span></span></td>
+          </tr>
+          <tr>
+            <td>
+              <strong><span data-zh>中右翼（Novo/PP）</span><span data-en>Center-right (Novo/PP)</span></strong>
+            </td>
+            <td>
+              <span data-zh>塔西西欧·德·弗雷塔斯</span>
+              <span data-en>Tarcísio de Freitas</span>
+            </td>
+            <td>
+              <span data-zh>与卢拉在基建议题上竞争，圣保罗州政绩突出</span>
+              <span data-en>Competing with Lula on infrastructure, strong São Paulo state record</span>
+            </td>
+            <td>
+              <span data-zh>潜在第三势力候选人</span>
+              <span data-en>Potential third-force candidate</span>
+            </td>
+            <td><span class="badge badge-amber">🔶 <span data-zh>中：需在两极化格局中找到空间</span><span data-en>Med: Must find space in polarized landscape</span></span></td>
+          </tr>
+          <tr>
+            <td>
+              <strong><span data-zh>司法系统（STF）</span><span data-en>Judiciary (STF)</span></strong>
+            </td>
+            <td>
+              <span data-zh>莫莱斯、吉尔马尔·门德斯、法钦</span>
+              <span data-en>Moraes, Gilmar Mendes, Fachin</span>
+            </td>
+            <td>
+              <span data-zh>莫莱斯批准博索纳罗居家监禁，吉尔马尔力挺梅西亚斯，法钦驳回莫莱斯回避申请</span>
+              <span data-en>Moraes approved Bolsonaro house arrest, Gilmar endorsed Messias, Fachin rejected Moraes recusal request</span>
+            </td>
+            <td>
+              <span data-zh>司法独立性受质疑，成为政治博弈核心战场</span>
+              <span data-en>Judicial independence questioned, becoming core political battleground</span>
+            </td>
+            <td><span class="badge badge-red">🔴 <span data-zh>高：司法政治化风险持续上升</span><span data-en>High: Judicial politicization risk rising</span></span></td>
+          </tr>
+          <tr>
+            <td>
+              <strong><span data-zh>福音派势力</span><span data-en>Evangelical Bloc</span></strong>
+            </td>
+            <td>
+              <span data-zh>多名参议员</span>
+              <span data-en>Multiple Senators</span>
+            </td>
+            <td>
+              <span data-zh>集体反对梅西亚斯STF提名</span>
+              <span data-en>Collective opposition to Messias STF nomination</span>
+            </td>
+            <td>
+              <span data-zh>倾向右翼，但保持议价空间</span>
+              <span data-en>Leaning right-wing, but maintaining bargaining space</span>
+            </td>
+            <td><span class="badge badge-amber">🔶 <span data-zh>中：可能成为关键摇摆力量</span><span data-en>Med: Could become key swing force</span></span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 4: TRENDS -->
+<!-- ========================================== -->
+<section id="trends" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">04</div>
+      <h2 class="section-title">
+        <span data-zh>趋势研判</span>
+        <span data-en>Trend Analysis</span>
+      </h2>
+    </div>
+
+    <!-- Trend 1 -->
+    <div class="trend-card reveal">
+      <div class="trend-num">1</div>
+      <h4>
+        <span data-zh>趋势一：2026大选两极化格局加速成型——卢拉 vs 弗拉维奥·博索纳罗</span>
+        <span data-en>Trend 1: 2026 Election Polarization Accelerating — Lula vs. Flávio Bolsonaro</span>
+      </h4>
+      <p>
+        <span data-zh>多重证据表明，2026年大选正在快速收敛为卢拉与弗拉维奥·博索纳罗的两极对决格局。弗拉维奥本周密集会见商界领袖、与泽马公开讨论搭档方案、在社会议题上主动出击，展现出系统性的选战准备。与此同时，卢拉支持率的持续下滑和反对派的加速整合，正在压缩中间路线候选人（如塔西西欧）的生存空间。</span>
+        <span data-en>Multiple pieces of evidence indicate that the 2026 election is rapidly converging into a bipolar showdown between Lula and Flávio Bolsonaro. Flávio this week held intensive meetings with business leaders, publicly discussed the running mate plan with Zema, and proactively engaged on social issues, demonstrating systematic campaign preparation. Meanwhile, Lula's continued approval decline and the opposition's accelerating consolidation are compressing the survival space for centrist candidates (such as Tarcísio).</span>
+      </p>
+      <div class="indicator-box">
+        <strong><span data-zh>关键观测指标：</span><span data-en>Key Observation Indicators: </span></strong>
+        <span data-zh>弗拉维奥-泽马组合是否在未来60天内正式宣布；卢拉5月民调是否企稳；塔西西欧是否明确表态参选总统。</span>
+        <span data-en>Whether the Flávio-Zema combination is officially announced within the next 60 days; whether Lula's May poll numbers stabilize; whether Tarcísio explicitly declares presidential candidacy.</span>
+      </div>
+    </div>
+
+    <!-- Trend 2 -->
+    <div class="trend-card reveal">
+      <div class="trend-num">2</div>
+      <h4>
+        <span data-zh>趋势二：司法政治化持续深化——STF成为政治博弈核心战场</span>
+        <span data-en>Trend 2: Judicial Politicization Deepening — STF Becomes Core Political Battleground</span>
+      </h4>
+      <p>
+        <span data-zh>本周至少四个事件指向同一趋势：梅西亚斯STF提名引发的朝野对决、吉尔马尔·门德斯罕见公开背书、法钦驳回莫莱斯回避申请、联邦警察二度认定博索纳罗干预警方案无证据。STF已不再是传统意义上的司法仲裁者，而是深度卷入政治博弈的核心参与者。</span>
+        <span data-en>At least four events this week point to the same trend: the political showdown triggered by the Messias STF nomination, Gilmar Mendes' rare public endorsement, Fachin's rejection of the Moraes recusal request, and Federal Police's second determination of no evidence in the Bolsonaro police interference case. The STF is no longer a traditional judicial arbiter but a core participant deeply involved in political maneuvering.</span>
+      </p>
+      <div class="indicator-box">
+        <strong><span data-zh>关键观测指标：</span><span data-en>Key Observation Indicators: </span></strong>
+        <span data-zh>4月29日梅西亚斯听证结果；博索纳罗居家监禁90天期满后的司法决定；莫莱斯在博索纳罗干预警方案上的最终裁定。</span>
+        <span data-en>The April 29 Messias hearing result; the judicial decision after Bolsonaro's 90-day house arrest expires; Moraes' final ruling on the Bolsonaro police interference case.</span>
+      </div>
+    </div>
+
+    <!-- Trend 3 -->
+    <div class="trend-card reveal">
+      <div class="trend-num">3</div>
+      <h4>
+        <span data-zh>趋势三：经济议题正在侵蚀卢拉执政根基</span>
+        <span data-en>Trend 3: Economic Issues Are Eroding Lula's Governing Foundation</span>
+      </h4>
+      <p>
+        <span data-zh>Datafolha数据显示，卢拉支持率下滑的核心驱动力来自经济层面：Banco Master丑闻冲击政府廉政形象、高利率挤压中产阶级、伊朗战争推高通胀。弗拉维奥·博索纳罗敏锐地抓住家庭债务和博彩问题发起攻击，显示反对派已将经济议题作为选战主攻方向。超8000万家庭负债的现实，正在将经济不满转化为政治反对。</span>
+        <span data-en>Datafolha data shows that the core driver of Lula's approval decline comes from the economic front: the Banco Master scandal impacting the government's integrity image, high interest rates squeezing the middle class, and the Iran war driving up inflation. Flávio Bolsonaro has keenly seized on household debt and gambling issues to launch attacks, showing the opposition has made economic issues their primary campaign direction. The reality of over 80 million indebted households is converting economic discontent into political opposition.</span>
+      </p>
+      <div class="indicator-box">
+        <strong><span data-zh>关键观测指标：</span><span data-en>Key Observation Indicators: </span></strong>
+        <span data-zh>未来三个月CPI走势；Banco Master案司法进展；政府Desenrola 2.0债务重组计划的实际覆盖率。</span>
+        <span data-en>CPI trends over the next three months; judicial progress on the Banco Master case; actual coverage rate of the government's Desenrola 2.0 debt restructuring plan.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 5: RISKS -->
+<!-- ========================================== -->
+<section id="risks">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">05</div>
+      <h2 class="section-title" style="border-left-color:var(--crisis)">
+        <span data-zh>风险警示</span>
+        <span data-en>Risk Alerts</span>
+      </h2>
+    </div>
+
+    <!-- Risk 1 -->
+    <div class="risk-card reveal">
+      <h4>
+        <span data-zh>⚠️ 风险一：TSE由博索纳罗提名人士主导，选举公正性可能受质疑</span>
+        <span data-en>⚠️ Risk 1: TSE Led by Bolsonaro Nominee — Electoral Fairness May Be Questioned</span>
+      </h4>
+      <p>
+        <span data-zh>博索纳罗任期内提名的大法官继任者将在2026年大选期间领导最高选举法院（TSE），这是巴西民主化以来首次出现此类情况。考虑到博索纳罗本人因试图颠覆选举结果而被判刑，其提名人士主导选举司法机构的合法性和公正性必将受到广泛质疑，可能引发选举争议甚至社会动荡。</span>
+        <span data-en>The successor to a justice nominated during Bolsonaro's term will lead the Superior Electoral Court (TSE) during the 2026 election — the first such occurrence since Brazil's democratization. Given that Bolsonaro himself was sentenced for attempting to overturn election results, the legitimacy and fairness of his nominee leading the electoral judiciary will inevitably face widespread questioning, potentially triggering electoral disputes or even social unrest.</span>
+      </p>
+      <div class="risk-indicator">
+        <strong><span data-zh>监测指标：</span><span data-en>Monitoring Indicators: </span></strong>
+        <span data-zh>TSE新任主席的公开表态与裁决倾向；国际选举观察机构的评估报告；社交媒体上关于选举公正性的舆论走向。</span>
+        <span data-en>The new TSE president's public statements and ruling tendencies; assessment reports from international election observation organizations; public opinion trends on social media regarding electoral fairness.</span>
+      </div>
+    </div>
+
+    <!-- Risk 2 -->
+    <div class="risk-card reveal">
+      <h4>
+        <span data-zh>⚠️ 风险二：Banco Master丑闻持续发酵，可能拖累卢拉政府公信力</span>
+        <span data-en>⚠️ Risk 2: Banco Master Scandal Continues to Ferment — May Drag Down Lula Government Credibility</span>
+      </h4>
+      <p>
+        <span data-zh>Banco Master丑闻已被Datafolha民调确认为卢拉支持率下滑的重要驱动因素之一。如果该案进一步曝出政府关联人士的涉案证据，或司法调查扩大至更高层级，将对卢拉政府的廉政叙事造成致命打击，尤其是在2026年大选背景下，反对派必将充分利用这一议题。</span>
+        <span data-en>The Banco Master scandal has been confirmed by Datafolha polls as one of the important drivers of Lula's approval decline. If the case further reveals evidence of government-connected individuals' involvement, or if the judicial investigation expands to higher levels, it will deal a fatal blow to the Lula government's integrity narrative, especially in the context of the 2026 election, where the opposition will fully exploit this issue.</span>
+      </p>
+      <div class="risk-indicator">
+        <strong><span data-zh>监测指标：</span><span data-en>Monitoring Indicators: </span></strong>
+        <span data-zh>联邦检察院对Banco Master案的调查进展；涉案人员与执政联盟的关联曝光情况；主流媒体的持续报道密度。</span>
+        <span data-en>Federal Prosecutor's Office investigation progress on the Banco Master case; exposure of connections between involved individuals and the ruling coalition; sustained reporting density from mainstream media.</span>
+      </div>
+    </div>
+
+    <!-- Risk 3 -->
+    <div class="risk-card reveal">
+      <h4>
+        <span data-zh>⚠️ 风险三：央行自治法案搁置，金融监管能力面临系统性风险</span>
+        <span data-en>⚠️ Risk 3: Central Bank Autonomy Bill Shelved — Financial Regulatory Capacity Faces Systemic Risk</span>
+      </h4>
+      <p>
+        <span data-zh>央行自治法案因政治冲突陷入僵局，这不仅影响巴西金融监管的制度化水平，更可能在国际资本市场引发对巴西政策连续性的担忧。在全球利率环境不确定、伊朗战争推高能源价格的背景下，央行独立性的制度保障缺失可能放大外部冲击对巴西经济的传导效应。</span>
+        <span data-en>The Central Bank autonomy bill has stalled due to political conflict, which not only affects the institutionalization of Brazil's financial regulation but may also trigger concerns in international capital markets about Brazil's policy continuity. Against the backdrop of uncertain global interest rate environments and the Iran war driving up energy prices, the lack of institutional guarantees for central bank independence could amplify the transmission of external shocks to the Brazilian economy.</span>
+      </p>
+      <div class="risk-indicator">
+        <strong><span data-zh>监测指标：</span><span data-en>Monitoring Indicators: </span></strong>
+        <span data-zh>央行自治法案在议会的排期进展；国际评级机构对巴西主权信用的评估变化；外资对巴西国债的持仓变动。</span>
+        <span data-en>Progress of the Central Bank autonomy bill's parliamentary scheduling; changes in international rating agencies' assessments of Brazil's sovereign credit; changes in foreign holdings of Brazilian government bonds.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 6: COOPERATION SIGNALS -->
+<!-- ========================================== -->
+<section id="cooperation" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">06</div>
+      <h2 class="section-title">
+        <span data-zh>合作信号速览</span>
+        <span data-en>Cooperation Signals Overview</span>
+      </h2>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="coop-table">
+        <thead>
+          <tr>
+            <th><span data-zh>领域</span><span data-en>Sector</span></th>
+            <th><span data-zh>机会信号</span><span data-en>Opportunity Signal</span></th>
+            <th><span data-zh>政策/资金支撑</span><span data-en>Policy/Funding Support</span></th>
+            <th><span data-zh>时间窗口</span><span data-en>Time Window</span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong><span data-zh>基础设施</span><span data-en>Infrastructure</span></strong></td>
+            <td>
+              <span data-zh>桑托斯-瓜鲁雅隧道项目（总投资51亿雷亚尔）、坎皮纳斯-圣保罗城际列车（60亿雷亚尔融资）</span>
+              <span data-en>Santos-Guarujá tunnel project (total investment R$5.1 billion), Campinas-São Paulo intercity rail (R$6 billion financing)</span>
+            </td>
+            <td>
+              <span data-zh>巴西银行26亿雷亚尔贷款已签约，联邦与州政府共同出资</span>
+              <span data-en>Banco do Brasil R$2.6 billion loan signed, federal and state government co-funding</span>
+            </td>
+            <td>
+              <span data-zh>2026-2028年施工期</span>
+              <span data-en>2026-2028 construction period</span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>金融服务</span><span data-en>Financial Services</span></strong></td>
+            <td>
+              <span data-zh>Desenrola 2.0债务重组计划聚焦低收入家庭</span>
+              <span data-en>Desenrola 2.0 debt restructuring plan focusing on low-income households</span>
+            </td>
+            <td>
+              <span data-zh>政府主导，针对超8000万负债家庭</span>
+              <span data-en>Government-led, targeting 80+ million indebted households</span>
+            </td>
+            <td>
+              <span data-zh>2026年内推出</span>
+              <span data-en>Launch within 2026</span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>博彩监管</span><span data-en>Gambling Regulation</span></strong></td>
+            <td>
+              <span data-zh>第14790号法案规范固定赔率博彩市场</span>
+              <span data-en>Law No. 14790 regulating fixed-odds betting market</span>
+            </td>
+            <td>
+              <span data-zh>明确运营规则、税收及收益分配</span>
+              <span data-en>Clear operational rules, taxation, and revenue distribution</span>
+            </td>
+            <td>
+              <span data-zh>已生效，执行细则持续完善</span>
+              <span data-en>In effect, implementation details being refined</span>
+            </td>
+          </tr>
+          <tr>
+            <td><strong><span data-zh>数字平台治理</span><span data-en>Digital Platform Governance</span></strong></td>
+            <td>
+              <span data-zh>AGU推动科技平台违法内容追责</span>
+              <span data-en>AGU pushing accountability for illegal content on tech platforms</span>
+            </td>
+            <td>
+              <span data-zh>STF支持，梅西亚斯提名强化政策方向</span>
+              <span data-en>STF support, Messias nomination reinforcing policy direction</span>
+            </td>
+            <td>
+              <span data-zh>持续推进中</span>
+              <span data-en>Ongoing</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- SECTION 7: FORWARD LOOKING -->
+<!-- ========================================== -->
+<section id="forward-looking">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">07</div>
+      <h2 class="section-title gold-border">
+        <span data-zh>下期关注</span>
+        <span data-en>Forward Looking</span>
+      </h2>
+    </div>
+
+    <div class="timeline">
+      <!-- Item 1 -->
+      <div class="tl-item reveal">
+        <div class="tl-date">
+          <span data-zh>4月29日</span><span data-en>April 29</span>
+        </div>
+        <h4>
+          <span data-zh>梅西亚斯STF提名参议院听证</span>
+          <span data-en>Messias STF Nomination Senate Hearing</span>
+        </h4>
+        <p>
+          <span data-zh>梅西亚斯STF提名在参议院宪法与司法委员会（CCJ）听证，投票结果将直接影响卢拉的司法布局和政治权威。</span>
+          <span data-en>Messias STF nomination hearing at the Senate Constitution and Justice Committee (CCJ). The vote result will directly impact Lula's judicial strategy and political authority.</span>
+        </p>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="tl-item reveal">
+        <div class="tl-date">
+          <span data-zh>5月6日</span><span data-en>May 6</span>
+        </div>
+        <h4>
+          <span data-zh>2026大选选民登记截止</span>
+          <span data-en>2026 Election Voter Registration Deadline</span>
+        </h4>
+        <p>
+          <span data-zh>2026年大选选民登记截止日，关注最终登记人数变化及各州登记率差异，这将影响选举版图预判。</span>
+          <span data-en>Voter registration deadline for the 2026 election. Monitor final registration numbers and state-level registration rate differences, which will affect electoral map projections.</span>
+        </p>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="tl-item reveal">
+        <div class="tl-date">
+          <span data-zh>6月下旬</span><span data-en>Late June</span>
+        </div>
+        <h4>
+          <span data-zh>博索纳罗居家监禁期满评估</span>
+          <span data-en>Bolsonaro House Arrest Expiry Assessment</span>
+        </h4>
+        <p>
+          <span data-zh>博索纳罗90天居家监禁期满（自3月27日起算），STF将重新评估是否维持居家监禁，决定将影响右翼阵营的选战策略。</span>
+          <span data-en>Bolsonaro's 90-day house arrest expires (counting from March 27). The STF will reassess whether to maintain house arrest, with the decision impacting the right-wing camp's campaign strategy.</span>
+        </p>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="tl-item reveal">
+        <div class="tl-date">
+          <span data-zh>4月中下旬</span><span data-en>Mid-Late April</span>
+        </div>
+        <h4>
+          <span data-zh>Banco Master案与5月民调</span>
+          <span data-en>Banco Master Case & May Polls</span>
+        </h4>
+        <p>
+          <span data-zh>关注Banco Master案司法调查是否出现新进展，以及5月Datafolha民调是否确认卢拉支持率下滑趋势。</span>
+          <span data-en>Monitor whether the Banco Master judicial investigation produces new developments, and whether the May Datafolha poll confirms Lula's approval decline trend.</span>
+        </p>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="tl-item reveal">
+        <div class="tl-date">
+          <span data-zh>持续关注</span><span data-en>Ongoing</span>
+        </div>
+        <h4>
+          <span data-zh>弗拉维奥-泽马搭档与塔西西欧动向</span>
+          <span data-en>Flávio-Zema Partnership & Tarcísio Movements</span>
+        </h4>
+        <p>
+          <span data-zh>弗拉维奥·博索纳罗与泽马的搭档方案是否正式确认，以及塔西西欧·德·弗雷塔斯是否明确表态参选总统。</span>
+          <span data-en>Whether the Flávio Bolsonaro-Zema running mate plan is officially confirmed, and whether Tarcísio de Freitas explicitly declares his presidential candidacy.</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- APPENDIX -->
+<!-- ========================================== -->
+<section id="appendix" style="background:var(--surface)">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-num">📎</div>
+      <h2 class="section-title">
+        <span data-zh>附录</span>
+        <span data-en>Appendix</span>
+      </h2>
+    </div>
+
+    <!-- Data Statistics -->
+    <div style="margin-bottom:40px" class="reveal">
+      <h3 style="font-size:1.15rem;margin-bottom:16px;font-family:'Playfair Display','Noto Serif SC',serif">
+        <span data-zh>数据统计</span>
+        <span data-en>Data Statistics</span>
+      </h3>
+      <div class="table-wrap">
+        <table class="appendix-table">
+          <thead>
+            <tr>
+              <th><span data-zh>指标</span><span data-en>Indicator</span></th>
+              <th><span data-zh>数值</span><span data-en>Value</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span data-zh>API总量</span><span data-en>Total API Volume</span></td>
+              <td>3,090</td>
+            </tr>
+            <tr>
+              <td><span data-zh>提取量</span><span data-en>Extracted</span></td>
+              <td>1,989</td>
+            </tr>
+            <tr>
+              <td><span data-zh>精选后</span><span data-en>Curated</span></td>
+              <td>~250</td>
+            </tr>
+            <tr>
+              <td><span data-zh>时间范围</span><span data-en>Time Range</span></td>
+              <td>2026-04-06 <span data-zh>至</span><span data-en>to</span> 2026-04-12</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Media Sources -->
+    <div class="reveal">
+      <h3 style="font-size:1.15rem;margin-bottom:16px;font-family:'Playfair Display','Noto Serif SC',serif">
+        <span data-zh>主要信源</span>
+        <span data-en>Primary Sources</span>
+      </h3>
+      <div class="table-wrap">
+        <table class="appendix-table">
+          <thead>
+            <tr>
+              <th><span data-zh>信源</span><span data-en>Source</span></th>
+              <th><span data-zh>报道量（估计）</span><span data-en>Coverage (Est.)</span></th>
+              <th><span data-zh>类型</span><span data-en>Type</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Folha de S.Paulo</td>
+              <td>35+</td>
+              <td><span data-zh>主流大报</span><span data-en>Major Newspaper</span></td>
+            </tr>
+            <tr>
+              <td>g1 (Globo)</td>
+              <td>30+</td>
+              <td><span data-zh>门户新闻</span><span data-en>Portal News</span></td>
+            </tr>
+            <tr>
+              <td>CNN Brasil</td>
+              <td>25+</td>
+              <td><span data-zh>电视/网络新闻</span><span data-en>TV/Online News</span></td>
+            </tr>
+            <tr>
+              <td>CartaCapital</td>
+              <td>20+</td>
+              <td><span data-zh>左翼杂志</span><span data-en>Left-wing Magazine</span></td>
+            </tr>
+            <tr>
+              <td>Correio Braziliense</td>
+              <td>18+</td>
+              <td><span data-zh>首都大报</span><span data-en>Capital Newspaper</span></td>
+            </tr>
+            <tr>
+              <td>Veja</td>
+              <td>15+</td>
+              <td><span data-zh>主流杂志</span><span data-en>Major Magazine</span></td>
+            </tr>
+            <tr>
+              <td>R7</td>
+              <td>12+</td>
+              <td><span data-zh>门户新闻</span><span data-en>Portal News</span></td>
+            </tr>
+            <tr>
+              <td>Istoe Dinheiro</td>
+              <td>10+</td>
+              <td><span data-zh>财经媒体</span><span data-en>Financial Media</span></td>
+            </tr>
+            <tr>
+              <td>ND Mais</td>
+              <td>8+</td>
+              <td><span data-zh>地方媒体</span><span data-en>Regional Media</span></td>
+            </tr>
+            <tr>
+              <td>Brasil de Fato</td>
+              <td>8+</td>
+              <td><span data-zh>左翼媒体</span><span data-en>Left-wing Media</span></td>
+            </tr>
+            <tr>
+              <td>Diário do Centro do Mundo</td>
+              <td>6+</td>
+              <td><span data-zh>独立媒体</span><span data-en>Independent Media</span></td>
+            </tr>
+            <tr>
+              <td>NSC Total</td>
+              <td>5+</td>
+              <td><span data-zh>南部地方媒体</span><span data-en>Southern Regional Media</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Disclaimer -->
+    <div style="margin-top:40px;padding:20px;border-radius:12px;background:var(--card);border:1px solid var(--border);font-size:13px;color:var(--muted);line-height:1.7" class="reveal">
+      <p>
+        <span data-zh>本报告基于 Supinfor 区域国别实时监测平台编制，仅供参考，不构成投资建议。</span>
+        <span data-en>This report is compiled based on the Supinfor Regional Country Real-time Monitoring Platform, for reference only, and does not constitute investment advice.</span>
+      </p>
+      <p>
+        <span data-zh>数据截止时间：2026年4月12日 23:59 (UTC+8)</span>
+        <span data-en>Data cutoff: April 12, 2026, 23:59 (UTC+8)</span>
+      </p>
+      <p>© Supinfor Ltd.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ========================================== -->
+<!-- FOOTER -->
+<!-- ========================================== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="brand">Supinfor Ltd.</div>
+    <p><span data-zh>区域国别实时监测平台 · 政治栏目</span><span data-en>Regional Country Real-time Monitoring Platform · Political Section</span></p>
+    <p style="margin-top:8px;opacity:.6"><span data-zh>报告日期：2026年4月12日</span><span data-en>Report Date: April 12, 2026</span></p>
+    <p style="opacity:.5;margin-top:4px">© 2026 Supinfor Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- ========================================== -->
+<!-- JAVASCRIPT -->
+<!-- ========================================== -->
+<script>
+(function(){
+  'use strict';
+
+  // ===== THEME TOGGLE =====
+  const html = document.documentElement;
+  const themeBtn = document.getElementById('themeToggle');
+  const themeIcon = document.getElementById('themeIcon');
+
+  function setTheme(t){
+    html.setAttribute('data-theme', t);
+    localStorage.setItem('theme', t);
+    themeIcon.className = t === 'dark' ? 'fas fa-moon' : 'fas fa-sun';
+  }
+
+  // Init theme: localStorage > system preference > dark
+  const saved = localStorage.getItem('theme');
+  if(saved){
+    setTheme(saved);
+  } else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
+    setTheme('light');
+  } else {
+    setTheme('dark');
+  }
+
+  themeBtn.addEventListener('click', function(){
+    const current = html.getAttribute('data-theme');
+    setTheme(current === 'dark' ? 'light' : 'dark');
+  });
+
+  // Listen for system theme changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(e){
+    if(!localStorage.getItem('theme')){
+      setTheme(e.matches ? 'dark' : 'light');
+    }
+  });
+
+  // ===== LANGUAGE TOGGLE =====
+  const langBtn = document.getElementById('langToggle');
+  const langIcon = document.getElementById('langIcon');
+
+  function setLang(l){
+    html.setAttribute('data-lang', l);
+    localStorage.setItem('lang', l);
+    langIcon.textContent = l === 'zh' ? 'EN' : '中';
+  }
+
+  const savedLang = localStorage.getItem('lang');
+  if(savedLang){
+    setLang(savedLang);
+  } else {
+    setLang('zh');
+  }
+
+  langBtn.addEventListener('click', function(){
+    const current = html.getAttribute('data-lang');
+    setLang(current === 'zh' ? 'en' : 'zh');
+  });
+
+  // ===== BACK TO TOP =====
+  const backTop = document.getElementById('backTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 400){
+      backTop.classList.add('visible');
+    } else {
+      backTop.classList.remove('visible');
+    }
+  }, {passive: true});
+
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+
+  // ===== SCROLL REVEAL =====
+  const revealElements = document.querySelectorAll('.reveal');
+  const revealObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry, index){
+      if(entry.isIntersecting){
+        // Staggered delay based on position in viewport
+        const siblings = Array.from(entry.target.parentElement.children).filter(function(c){ return c.classList.contains('reveal'); });
+        const idx = siblings.indexOf(entry.target);
+        const delay = Math.min(idx * 80, 400);
+        setTimeout(function(){
+          entry.target.classList.add('visible');
+        }, delay);
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {threshold: 0.08, rootMargin: '0px 0px -40px 0px'});
+
+  revealElements.forEach(function(el){
+    revealObserver.observe(el);
+  });
+
+  // ===== BAR CHART ANIMATION =====
+  const bars = document.querySelectorAll('.animated-bar');
+  const barObserver = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        const bar = entry.target;
+        const width = bar.getAttribute('data-width');
+        setTimeout(function(){
+          bar.style.width = width + '%';
+        }, 200);
+        barObserver.unobserve(bar);
+      }
+    });
+  }, {threshold: 0.2});
+
+  bars.forEach(function(bar){
+    barObserver.observe(bar);
+  });
+
+})();
+</script>
+
+<!-- Responsive fix for viz row -->
+<style>
+@media(max-width:768px){
+  .viz-row-2{grid-template-columns:1fr!important}
+}
+</style>
+
+</body>
+</html>

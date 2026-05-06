@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh" data-lang="zh" data-theme="system">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>工程机械行业洞察月报 2026-02 | Supinfor Ltd.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Noto+Serif+SC:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+/* ========== CSS VARIABLES ========== */
+:root {
+  --c-primary: #EA580C; --c-primary-light: #f97316; --c-primary-dark: #C2410C;
+  --c-accent: #475569; --c-accent-light: #64748b;
+  --c-bg: #fff7ed; --c-surface: #ffffff; --c-surface-alt: #fff1e6;
+  --c-border: #fed7aa; --c-text: #111827; --c-text-secondary: #4b5563;
+  --c-text-muted: #9ca3af; --c-risk-bg: #fef2f2; --c-risk-border: #f87171;
+  --c-risk-text: #991b1b; --font-display: 'Playfair Display', Georgia, serif;
+  --font-serif: 'Noto Serif SC', 'Songti SC', serif;
+  --font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06); --shadow-md: 0 4px 16px rgba(0,0,0,.08);
+  --shadow-lg: 0 12px 40px rgba(0,0,0,.12); --radius: 16px; --radius-sm: 10px;
+}
+[data-theme="dark"] {
+  --c-bg: #1a0f08; --c-surface: #2a1a10; --c-surface-alt: #352015;
+  --c-border: #5a3520; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+  --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+  --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+}
+@media(prefers-color-scheme:dark){
+  [data-theme="system"]{
+    --c-bg: #1a0f08; --c-surface: #2a1a10; --c-surface-alt: #352015;
+    --c-border: #5a3520; --c-text: #e5e7eb; --c-text-secondary: #a1a1aa;
+    --c-text-muted: #71717a; --c-risk-bg: #2a1215; --c-risk-border: #7f1d1d;
+    --c-risk-text: #fca5a5; --shadow-sm: 0 1px 3px rgba(0,0,0,.2);
+    --shadow-md: 0 4px 16px rgba(0,0,0,.3); --shadow-lg: 0 12px 40px rgba(0,0,0,.4);
+  }
+}
+
+/* ========== BASE ========== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--c-bg);color:var(--c-text);font-family:var(--font-sans);line-height:1.8;transition:background .4s,color .4s}
+[data-lang="zh"] [data-en]{display:none!important}
+[data-lang="en"] [data-zh]{display:none!important}
+a{color:var(--c-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto}
+
+/* ========== NAVBAR ========== */
+.navbar{position:fixed;top:0;left:0;right:0;z-index:100;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);background:color-mix(in srgb,var(--c-bg) 80%,transparent);border-bottom:1px solid var(--c-border);transition:all .3s}
+.navbar-inner{max-width:1200px;margin:0 auto;padding:.75rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+.navbar-brand{display:flex;align-items:center;gap:.5rem;font-weight:700;font-size:1.05rem}
+.navbar-brand i{color:var(--c-primary);font-size:1.2rem}
+.navbar-actions{display:flex;align-items:center;gap:.5rem}
+.btn-icon{display:inline-flex;align-items:center;gap:.35rem;padding:.45rem .85rem;border-radius:8px;border:1px solid var(--c-border);background:transparent;color:var(--c-text);font-size:.82rem;font-weight:500;cursor:pointer;transition:all .2s;font-family:var(--font-sans)}
+.btn-icon:hover{background:var(--c-surface-alt);border-color:var(--c-primary)}
+
+/* ========== HERO ========== */
+.hero{position:relative;padding:7rem 1.5rem 4rem;overflow:hidden;background:linear-gradient(135deg, #EA580C 0%, #C2410C 40%, #9a3412 100%)}
+.hero::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='.04'%3E%3Ccircle cx='40' cy='40' r='1.5'/%3E%3Ccircle cx='0' cy='0' r='1.5'/%3E%3Ccircle cx='80' cy='0' r='1.5'/%3E%3Ccircle cx='0' cy='80' r='1.5'/%3E%3Ccircle cx='80' cy='80' r='1.5'/%3E%3C/g%3E%3C/svg%3E")}
+.hero::after{content:'';position:absolute;bottom:-2px;left:0;right:0;height:80px;background:linear-gradient(to top,var(--c-bg),transparent)}
+.hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;color:#fff}
+.hero-badge{display:inline-block;padding:.35rem 1rem;background:rgba(255,255,255,.15);backdrop-filter:blur(8px);border-radius:100px;font-size:.8rem;font-weight:600;letter-spacing:.03em;margin-bottom:1.25rem;border:1px solid rgba(255,255,255,.2)}
+.hero h1{font-family:var(--font-display);font-size:clamp(2.2rem,5vw,3.8rem);font-weight:900;line-height:1.15;margin-bottom:1rem;letter-spacing:-.02em}
+.hero-subtitle{font-size:clamp(1rem,2vw,1.25rem);opacity:.9;max-width:700px;line-height:1.6;margin-bottom:2.5rem}
+.stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+@media(max-width:640px){.stat-grid{grid-template-columns:repeat(2,1fr)}}
+.stat-card{background:rgba(255,255,255,.12);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.18);border-radius:var(--radius-sm);padding:1.25rem;text-align:center;transition:transform .3s}
+.stat-card:hover{transform:translateY(-3px);background:rgba(255,255,255,.18)}
+.stat-value{font-family:var(--font-display);font-size:2.2rem;font-weight:900;line-height:1}
+.stat-label{font-size:.75rem;opacity:.75;margin-top:.35rem}
+
+/* ========== LAYOUT ========== */
+.layout{max-width:1200px;margin:0 auto;display:flex;gap:2rem;padding:2.5rem 1.5rem}
+.sidebar{width:240px;flex-shrink:0}
+@media(max-width:1024px){.sidebar{display:none}}
+.sidebar-inner{position:sticky;top:5rem}
+.toc-title{font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--c-text-muted);margin-bottom:.75rem}
+.toc-link{display:block;padding:.4rem .75rem;margin-bottom:2px;border-left:3px solid transparent;font-size:.8rem;color:var(--c-text-muted);transition:all .2s;border-radius:0 6px 6px 0;line-height:1.4}
+.toc-link:hover,.toc-link.active{border-left-color:var(--c-primary);color:var(--c-primary);background:var(--c-surface-alt);text-decoration:none}
+.main{flex:1;min-width:0}
+
+/* ========== SECTIONS ========== */
+.section{margin-bottom:3rem}
+.section-header{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:2px solid var(--c-border)}
+.section-header i{font-size:1.3rem;color:var(--c-primary)}
+.section-header h2{font-family:var(--font-serif);font-size:1.6rem;font-weight:700;line-height:1.3}
+</style>
+
+<style>
+/* ========== CARDS ========== */
+.insight-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.insight-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px);border-color:var(--c-primary-light)}
+.insight-card h3{font-family:var(--font-serif);font-size:1.15rem;font-weight:700;margin-bottom:.75rem;line-height:1.4;color:var(--c-text)}
+.insight-label{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--c-primary);background:color-mix(in srgb,var(--c-primary) 10%,transparent);padding:.2rem .6rem;border-radius:4px;margin-bottom:.6rem}
+.insight-body{font-size:.92rem;color:var(--c-text-secondary);line-height:1.75}
+.insight-body strong{color:var(--c-primary-dark);font-weight:600}
+.fact-list{list-style:none;padding:0;margin:.75rem 0 0}
+.fact-list li{position:relative;padding:.5rem 0 .5rem 1.5rem;font-size:.88rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 50%,transparent);line-height:1.6}
+.fact-list li:last-child{border-bottom:none}
+.fact-list li::before{content:'';position:absolute;left:0;top:.85rem;width:8px;height:8px;border-radius:50%;background:var(--c-primary);opacity:.6}
+
+/* ========== CORE SUMMARY ========== */
+.core-card{display:flex;gap:1rem;align-items:flex-start;background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;margin-bottom:1rem;box-shadow:var(--shadow-sm);transition:all .35s}
+.core-card:hover{box-shadow:var(--shadow-md);transform:translateY(-2px)}
+.core-num{display:flex;align-items:center;justify-content:center;width:2.5rem;height:2.5rem;border-radius:50%;background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));color:#fff;font-family:var(--font-display);font-weight:900;font-size:1.1rem;flex-shrink:0}
+.core-content h3{font-size:1rem;font-weight:700;margin-bottom:.4rem;line-height:1.4}
+.core-content p{font-size:.85rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== RISK CARDS ========== */
+.risk-card{background:var(--c-risk-bg);border:1px solid var(--c-risk-border);border-radius:var(--radius);padding:1.75rem;margin-bottom:1.25rem;transition:all .3s}
+.risk-card:hover{box-shadow:0 4px 20px rgba(248,113,113,.15)}
+.risk-card h3{color:var(--c-risk-text);font-family:var(--font-serif);font-size:1.05rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.risk-card h3 i{color:#ef4444}
+.risk-body{font-size:.88rem;color:var(--c-text-secondary);line-height:1.7}
+.risk-indicator{display:inline-block;font-size:.7rem;font-weight:700;padding:.2rem .6rem;border-radius:4px;background:#fee2e2;color:#991b1b;margin-bottom:.5rem}
+[data-theme="dark"] .risk-indicator{background:#450a0a;color:#fca5a5}
+@media(prefers-color-scheme:dark){[data-theme="system"] .risk-indicator{background:#450a0a;color:#fca5a5}}
+
+/* ========== TIMELINE ========== */
+.timeline{position:relative;padding-left:2rem}
+.timeline::before{content:'';position:absolute;left:.5rem;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--c-primary),var(--c-accent))}
+.timeline-item{position:relative;margin-bottom:1.5rem;padding-left:1.5rem}
+.timeline-item::before{content:'';position:absolute;left:-1.55rem;top:.6rem;width:12px;height:12px;border-radius:50%;background:var(--c-primary);border:3px solid var(--c-bg);box-shadow:0 0 0 2px var(--c-primary)}
+.timeline-date{font-size:.78rem;font-weight:700;color:var(--c-accent);margin-bottom:.25rem}
+.timeline-text{font-size:.88rem;color:var(--c-text-secondary);line-height:1.6}
+
+/* ========== DATA VIZ ========== */
+.bar-chart{margin:1rem 0}
+.bar-row{display:flex;align-items:center;gap:.75rem;margin-bottom:.6rem}
+.bar-label{width:140px;font-size:.78rem;font-weight:600;text-align:right;flex-shrink:0;color:var(--c-text-secondary)}
+.bar-track{flex:1;height:26px;background:var(--c-surface-alt);border-radius:6px;overflow:hidden;border:1px solid var(--c-border)}
+.bar-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--c-primary),var(--c-accent));display:flex;align-items:center;justify-content:flex-end;padding-right:.5rem;font-size:.7rem;font-weight:700;color:#fff;transition:width 1.2s ease-out}
+.donut-container{display:flex;align-items:center;justify-content:center;gap:2rem;margin:1.5rem 0;flex-wrap:wrap}
+.donut-chart{position:relative;width:140px;height:140px}
+.donut-chart svg{transform:rotate(-90deg)}
+.donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.donut-value{font-family:var(--font-display);font-size:1.6rem;font-weight:900;color:var(--c-primary)}
+.donut-label{font-size:.65rem;color:var(--c-text-muted)}
+.stat-highlight{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:1rem;margin:1.5rem 0}
+.stat-highlight-card{background:linear-gradient(135deg,var(--c-primary),var(--c-primary-dark));border-radius:var(--radius-sm);padding:1.25rem;text-align:center;color:#fff}
+.stat-highlight-card .val{font-family:var(--font-display);font-size:1.8rem;font-weight:900}
+.stat-highlight-card .lbl{font-size:.72rem;opacity:.8;margin-top:.2rem}
+
+/* ========== SUMMARY ========== */
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;margin-top:1.5rem}
+.summary-card{background:var(--c-surface);border:1px solid var(--c-border);border-radius:var(--radius);padding:1.5rem;box-shadow:var(--shadow-sm)}
+.summary-card h4{font-family:var(--font-serif);font-size:1rem;font-weight:700;margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem}
+.summary-card h4 i{color:var(--c-primary)}
+.summary-card ul{list-style:none;padding:0}
+.summary-card li{padding:.4rem 0;font-size:.85rem;color:var(--c-text-secondary);border-bottom:1px solid color-mix(in srgb,var(--c-border) 40%,transparent);line-height:1.5}
+.summary-card li:last-child{border-bottom:none}
+.summary-card li strong{color:var(--c-primary-dark)}
+
+/* ========== TABLE ========== */
+.styled-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+.styled-table th{text-align:left;padding:.6rem .75rem;background:var(--c-surface-alt);border-bottom:2px solid var(--c-primary);font-weight:700;color:var(--c-text);font-size:.78rem;text-transform:uppercase;letter-spacing:.04em}
+.styled-table td{padding:.55rem .75rem;border-bottom:1px solid var(--c-border);color:var(--c-text-secondary)}
+.styled-table tr:hover td{background:color-mix(in srgb,var(--c-primary) 5%,transparent)}
+
+/* ========== FOOTER ========== */
+.footer{border-top:1px solid var(--c-border);padding:3rem 1.5rem;text-align:center}
+.footer-brand{font-family:var(--font-display);font-size:1.3rem;font-weight:700;color:var(--c-primary);margin-bottom:.5rem}
+.footer-text{font-size:.8rem;color:var(--c-text-muted);line-height:1.8}
+
+/* ========== BACK TO TOP ========== */
+#backToTop{position:fixed;bottom:2rem;right:2rem;width:3rem;height:3rem;border-radius:50%;background:var(--c-primary);color:#fff;border:none;cursor:pointer;display:none;align-items:center;justify-content:center;font-size:1rem;box-shadow:var(--shadow-md);z-index:50;transition:all .3s}
+#backToTop:hover{transform:scale(1.1);background:var(--c-primary-dark)}
+
+/* ========== ANIMATIONS ========== */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease-out,transform .7s ease-out}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<header class="navbar">
+  <div class="navbar-inner">
+    <div class="navbar-brand">
+      <i class="fas fa-truck-monster"></i>
+      <span data-zh>工程机械行业洞察月报</span>
+      <span data-en>Construction Machinery Insight</span>
+    </div>
+    <div class="navbar-actions">
+      <button class="btn-icon" onclick="toggleLang()" aria-label="Toggle language">
+        <i class="fas fa-language"></i> <span id="langLabel">EN</span>
+      </button>
+      <button class="btn-icon" onclick="toggleTheme()" aria-label="Toggle theme">
+        <i class="fas fa-circle-half-stroke"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ==================== HERO ==================== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <span data-zh>2026年2月刊 · Supinfor Ltd.</span>
+      <span data-en>February 2026 · Supinfor Ltd.</span>
+    </div>
+    <h1>
+      <span data-zh>工程机械行业<br>洞察月报</span>
+      <span data-en>Construction Machinery<br>Industry Insight Report</span>
+    </h1>
+    <p class="hero-subtitle">
+      <span data-zh>矿业自主化与电气化融合 · 中国企业出海生态升级 · AI数据中心驱动设备需求</span>
+      <span data-en>Mining Autonomy &amp; Electrification · Chinese Companies Global Expansion · AI Data Center Equipment Demand</span>
+    </p>
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">82</div><div class="stat-label"><span data-zh>原始资讯</span><span data-en>Source Articles</span></div></div>
+      <div class="stat-card"><div class="stat-value">16</div><div class="stat-label"><span data-zh>洞察提炼</span><span data-en>Key Insights</span></div></div>
+      <div class="stat-card"><div class="stat-value">6</div><div class="stat-label"><span data-zh>核心摘要</span><span data-en>Core Findings</span></div></div>
+      <div class="stat-card"><div class="stat-value">4</div><div class="stat-label"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== MAIN LAYOUT ==================== -->
+<div class="layout">
+
+<!-- SIDEBAR TOC -->
+<aside class="sidebar">
+  <div class="sidebar-inner">
+    <div class="toc-title"><span data-zh>目录导航</span><span data-en>Contents</span></div>
+    <nav>
+      <a href="#core" class="toc-link"><span data-zh>核心洞察摘要</span><span data-en>Core Insights</span></a>
+      <a href="#s1" class="toc-link"><span data-zh>一、矿业装备：自主化与电气化</span><span data-en>I. Mining: Autonomy & Electrification</span></a>
+      <a href="#s2" class="toc-link"><span data-zh>二、中国企业出海</span><span data-en>II. Chinese Companies Going Global</span></a>
+      <a href="#s3" class="toc-link"><span data-zh>三、头部企业转型</span><span data-en>III. Industry Leaders Transformation</span></a>
+      <a href="#s4" class="toc-link"><span data-zh>四、AI与数字化</span><span data-en>IV. AI & Digitalization</span></a>
+      <a href="#s5" class="toc-link"><span data-zh>五、设备融资与市场周期</span><span data-en>V. Equipment Financing & Cycles</span></a>
+      <a href="#s6" class="toc-link"><span data-zh>六、区域市场与供应链</span><span data-en>VI. Regional Markets & Supply Chain</span></a>
+      <a href="#s7" class="toc-link"><span data-zh>七、行业治理与人才</span><span data-en>VII. Governance & Talent</span></a>
+      <a href="#risk" class="toc-link"><span data-zh>风险警示</span><span data-en>Risk Alerts</span></a>
+      <a href="#focus" class="toc-link"><span data-zh>下期关注</span><span data-en>Next Focus</span></a>
+      <a href="#summary" class="toc-link"><span data-zh>全文总结</span><span data-en>Summary</span></a>
+    </nav>
+  </div>
+</aside>
+
+<!-- MAIN CONTENT -->
+<main class="main">
+
+<!-- ===== CORE INSIGHTS ===== -->
+<section id="core" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-star" style="color:var(--c-accent)"></i>
+    <h2><span data-zh>核心洞察摘要</span><span data-en>Core Insights Summary</span></h2>
+  </div>
+
+  <div class="core-card reveal reveal-delay-1">
+    <span class="core-num">1</span>
+    <div class="core-content">
+      <h3><span data-zh>矿业自主化与电气化深度融合进入商业化加速期</span><span data-en>Mining Autonomy & Electrification Enter Commercialization Acceleration</span></h3>
+      <p><span data-zh>小松、卡特彼勒、利勃海尔三巨头以"自动驾驶+零排放+软件平台"三位一体模式争夺矿山全生命周期价值链。小松+卡特合计占据全球自主卡车品牌市场74%份额。</span><span data-en>Komatsu, Caterpillar, and Liebherr compete for mining lifecycle value with "autonomous driving + zero emission + software platform" trinity. Komatsu + CAT hold 74% of global autonomous truck market share.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-2">
+    <span class="core-num">2</span>
+    <div class="core-content">
+      <h3><span data-zh>中国工程机械企业以"大额订单+本地化服务+标准输出"组合拳深耕海外</span><span data-en>Chinese Companies Deepen Overseas Markets with "Large Orders + Localization + Standards" Strategy</span></h3>
+      <p><span data-zh>徐工单月斩获超8亿美元海外订单，中联重科国际订单占比突破80%，产品出口至40多个国家和地区。</span><span data-en>XCMG secured over $800M overseas orders in a single month; Zoomlion international orders exceeded 80%, exporting to 40+ countries.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal reveal-delay-3">
+    <span class="core-num">3</span>
+    <div class="core-content">
+      <h3><span data-zh>卡特彼勒与约翰迪尔同步推进"硬件+软件+服务"一体化转型</span><span data-en>Caterpillar & John Deere Simultaneously Push "Hardware + Software + Service" Integration</span></h3>
+      <p><span data-zh>通过收购矿业软件商和数字化平台公司，将经常性收入占比提升为核心战略目标。卡特彼勒Power & Energy部门营收同比大涨23%。</span><span data-en>Through acquisitions of mining software and digital platform companies, recurring revenue share becomes a core strategic goal. CAT Power & Energy revenue surged 23% YoY.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">4</span>
+    <div class="core-content">
+      <h3><span data-zh>电动挖掘机市场2025-2033年CAGR达23.5%</span><span data-en>Electric Excavator Market CAGR Reaches 23.5% (2025-2033)</span></h3>
+      <p><span data-zh>日立、徐工、利勃海尔等头部企业密集发布电动产品线，城市施工场景成为电气化落地首选战场。纯电、混动、氨燃料三条技术路线并行推进。</span><span data-en>Hitachi, XCMG, Liebherr intensively launch electric product lines. Urban construction becomes the preferred electrification battlefield. Pure electric, hybrid, and ammonia fuel routes advance in parallel.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">5</span>
+    <div class="core-content">
+      <h3><span data-zh>美国设备融资额创20年新高，AI数据中心成重型设备需求新引擎</span><span data-en>US Equipment Financing Hits 20-Year High; AI Data Centers Become New Demand Engine</span></h3>
+      <p><span data-zh>2026年1月美国设备融资额达116亿美元（同比+30.1%），ELFA明确指出AI投资是核心驱动力。卡特彼勒Power & Energy部门营收同比大涨23%至94亿美元。</span><span data-en>Jan 2026 US equipment financing reached $11.6B (+30.1% YoY). ELFA identified AI investment as core driver. CAT Power & Energy revenue surged 23% to $9.4B.</span></p>
+    </div>
+  </div>
+
+  <div class="core-card reveal">
+    <span class="core-num">6</span>
+    <div class="core-content">
+      <h3><span data-zh>美国EPA维修权指导与海关反规避调查并行推进</span><span data-en>US EPA Right-to-Repair & Customs Anti-Circumvention Investigations Advance in Parallel</span></h3>
+      <p><span data-zh>合规风险正从贸易端向售后服务端全面延伸，中国出海企业面临多维度监管压力。中联重科移动登高设备遭反规避调查。</span><span data-en>Compliance risks extend from trade to after-sales service. Chinese companies face multi-dimensional regulatory pressure. Zoomlion aerial equipment faces anti-circumvention investigation.</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DATA VIZ: Key Metrics ===== -->
+<section class="section reveal">
+  <div class="stat-highlight">
+    <div class="stat-highlight-card">
+      <div class="val">74%</div>
+      <div class="lbl"><span data-zh>小松+卡特 自主卡车市占率</span><span data-en>Komatsu+CAT AHS Market Share</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,var(--c-accent),#334155)">
+      <div class="val">$8B+</div>
+      <div class="lbl"><span data-zh>徐工单月海外订单</span><span data-en>XCMG Monthly Overseas Orders</span></div>
+    </div>
+    <div class="stat-highlight-card">
+      <div class="val">$116B</div>
+      <div class="lbl"><span data-zh>美国设备融资额（1月）</span><span data-en>US Equipment Financing (Jan)</span></div>
+    </div>
+    <div class="stat-highlight-card" style="background:linear-gradient(135deg,#0e7490,#155e75)">
+      <div class="val">23.5%</div>
+      <div class="lbl"><span data-zh>电动挖掘机CAGR</span><span data-en>Electric Excavator CAGR</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SECTION 1: Mining Equipment ===== -->
+<section id="s1" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-mountain"></i>
+    <h2><span data-zh>一、矿业装备：自主化与电气化深度融合进入商业化冲刺</span><span data-en>I. Mining Equipment: Autonomy & Electrification Enter Commercialization Sprint</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.1</span><span data-en>Insight 1.1</span></span>
+    <h3><span data-zh>小松-卡特-利勃海尔三巨头以"AHS+电动+软件"三位一体争夺矿山价值链</span><span data-en>Komatsu-CAT-Liebherr Compete for Mining Value Chain with "AHS + Electric + Software" Trinity</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>全球矿业装备竞争已从单一设备销售升级为"自主运输系统（AHS）+电气化动力+数字化管理平台"的生态之争。小松与卡特彼勒合计占据全球自主卡车品牌市场74%份额，但利勃海尔凭借与Fortescue的475台零排放设备大单强势切入，三方正围绕矿山全生命周期价值展开全面竞争。</span><span data-en><strong>Key Insight:</strong> Global mining equipment competition has evolved from single equipment sales to an ecosystem battle of "Autonomous Haulage System (AHS) + Electrified Power + Digital Management Platform." Komatsu and Caterpillar together hold 74% of the global autonomous truck market, but Liebherr has entered strongly with a 475-unit zero-emission equipment deal with Fortescue. All three are competing for full mining lifecycle value.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>小松全球部署780台自主卡车，累计运输超100亿吨物料，10台卡车运行时长突破10万小时；与丰田合作开发自主轻型车，推出凿岩机和推土机远程操控系统</span><span data-en>Komatsu deployed 780 autonomous trucks globally, transported over 10 billion tons, 10 trucks exceeded 100,000 hours; partnered with Toyota on autonomous light vehicles, launched remote control for rock drills and dozers</span></li>
+      <li><span data-zh>卡特彼勒MineStar Command系统已在三大洲部署，累计自主行驶超2亿英里、运输物料超91亿吨；新增电池电动技术支持与充电管理功能；完成收购矿业软件公司RPMGlobal，打造软硬件一体化矿场解决方案</span><span data-en>CAT MineStar Command deployed across 3 continents, over 200M autonomous miles, 9.1B+ tons transported; added battery-electric support and charging management; acquired RPMGlobal for integrated mining solutions</span></li>
+      <li><span data-zh>利勃海尔与Fortescue签署475台设备协议（含360台自主电池电动矿卡、55台电动挖掘机、60台电池推土机），联合开发的AHS集成能源管理系统支持6MW快充，预计2026年初完成全自主电池电动方案验证</span><span data-en>Liebherr signed 475-unit deal with Fortescue (360 autonomous battery-electric haul trucks, 55 electric excavators, 60 battery dozers), AHS with 6MW fast charging, full autonomous battery-electric validation expected early 2026</span></li>
+      <li><span data-zh>内华达金矿（NGM）部署小松300吨级自主矿卡配合AI矿石分选，2025年Q4产量增长25%，全年增长约15%</span><span data-en>Nevada Gold Mines (NGM) deployed Komatsu 300-ton autonomous trucks with AI ore sorting, Q4 2025 production up 25%, full year up ~15%</span></li>
+    </ul>
+
+    <!-- Data Viz: Mining AHS Market Share -->
+    <div style="margin:1.25rem 0">
+      <h4 style="font-size:.9rem;font-weight:700;margin-bottom:.75rem"><span data-zh>矿业自主化市场份额对比</span><span data-en>Mining Autonomy Market Share Comparison</span></h4>
+      <div class="bar-chart">
+        <div class="bar-row"><div class="bar-label"><span data-zh>小松</span><span data-en>Komatsu</span></div><div class="bar-track"><div class="bar-fill" style="width:42%;background:linear-gradient(90deg,#EA580C,#f97316)"><span data-zh>780台 AHS</span><span data-en>780 AHS</span></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>卡特彼勒</span><span data-en>Caterpillar</span></div><div class="bar-track"><div class="bar-fill" style="width:32%;background:linear-gradient(90deg,#C2410C,#EA580C)"><span data-zh>三大洲部署</span><span data-en>3 Continents</span></div></div></div>
+        <div class="bar-row"><div class="bar-label"><span data-zh>利勃海尔</span><span data-en>Liebherr</span></div><div class="bar-track"><div class="bar-fill" style="width:20%;background:linear-gradient(90deg,#475569,#64748b)"><span data-zh>360台（订单）</span><span data-en>360 (Orders)</span></div></div></div>
+      </div>
+      <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>小松+卡特合计占全球自主卡车品牌市场74%份额</span><span data-en>Komatsu + CAT hold 74% of global autonomous truck brand market</span></p>
+    </div>
+
+    <!-- Data Table: Three Giants Comparison -->
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>企业</span><span data-en>Company</span></th>
+        <th><span data-zh>自主卡车部署量</span><span data-en>AHS Deployment</span></th>
+        <th><span data-zh>累计运输量</span><span data-en>Total Hauled</span></th>
+        <th><span data-zh>电气化进展</span><span data-en>Electrification</span></th>
+        <th><span data-zh>软件平台</span><span data-en>Software Platform</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span data-zh>小松</span><span data-en>Komatsu</span></td><td>780<span data-zh>台</span><span data-en> units</span></td><td>>100<span data-zh>亿吨</span><span data-en>B tons</span></td><td><span data-zh>HB365混动、氨发动机研发</span><span data-en>HB365 hybrid, ammonia engine R&D</span></td><td>FrontRunner AHS</td></tr>
+        <tr><td><span data-zh>卡特彼勒</span><span data-en>Caterpillar</span></td><td><span data-zh>未披露（三大洲）</span><span data-en>Undisclosed (3 continents)</span></td><td>>91<span data-zh>亿吨</span><span data-en>B tons</span></td><td><span data-zh>MineStar支持电动矿卡充电管理</span><span data-en>MineStar supports EV charging mgmt</span></td><td>MineStar + RPMGlobal</td></tr>
+        <tr><td><span data-zh>利勃海尔</span><span data-en>Liebherr</span></td><td>360<span data-zh>台（订单）</span><span data-en> (orders)</span></td><td>—</td><td>475<span data-zh>台零排放设备组合</span><span data-en> zero-emission units</span></td><td>IoMine + AHS</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 1.2</span><span data-en>Insight 1.2</span></span>
+    <h3><span data-zh>电气化路径分化：纯电、混动、氨燃料三条技术路线并行推进</span><span data-en>Electrification Path Divergence: Pure Electric, Hybrid, Ammonia Fuel Advance in Parallel</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>矿业与工程机械的动力转型并非"一刀切"走向纯电，而是根据应用场景形成纯电（城市/封闭矿区）、混动（过渡方案）、氨燃料（偏远矿区）三条并行路线。小松与AFC Energy合作研发氨燃料发动机，为无法部署充电基础设施的偏远矿区提供第三选择，这一差异化布局值得关注。</span><span data-en><strong>Key Insight:</strong> Mining and construction machinery power transition is not a one-size-fits-all move to pure electric. Three parallel routes have formed based on application scenarios: pure electric (urban/enclosed mines), hybrid (transitional), and ammonia fuel (remote mines). Komatsu's ammonia fuel engine R&D with AFC Energy provides a third option for remote mines without charging infrastructure.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>纯电路线：徐工向Fortescue交付783kW电机的XC9260BEWL装载机和XC9260BEWD推土机（4亿美元订单首批）；日立推出198kWh锂电池的ZX135-7EB电动挖掘机</span><span data-en>Pure electric: XCMG delivered 783kW XC9260BEWL loader and XC9260BEWD dozer to Fortescue ($400M order first batch); Hitachi launched ZX135-7EB electric excavator with 198kWh lithium battery</span></li>
+      <li><span data-zh>混动路线：小松与印尼United Tractors推出HB365-1混动挖掘机，省油17%、每小时减排13kg CO2；Lundin Mining将小松930E-4矿卡改装为混动电动设备</span><span data-en>Hybrid: Komatsu and Indonesia's United Tractors launched HB365-1 hybrid excavator, 17% fuel savings, 13kg CO2 reduction/hour; Lundin Mining converted Komatsu 930E-4 to hybrid-electric</span></li>
+      <li><span data-zh>氨燃料路线：小松与AFC Energy签署约200万美元联合开发协议，研发氨裂解技术与工业内燃机整合方案，目标为偏远矿区提供可持续替代燃料</span><span data-en>Ammonia fuel: Komatsu signed ~$2M joint development agreement with AFC Energy for ammonia cracking technology integration with industrial ICE, targeting sustainable fuel for remote mines</span></li>
+      <li><span data-zh>电池供应链：卡特彼勒风投领投塞尔维亚ElevenEs B轮融资，支持建设1GWh LFP电池超级工厂，2027年开始交付</span><span data-en>Battery supply chain: CAT Ventures led Serbia's ElevenEs Series B, supporting 1GWh LFP battery gigafactory, delivery starting 2027</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 2: Chinese Companies Going Global ===== -->
+<section id="s2" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-globe-asia"></i>
+    <h2><span data-zh>二、中国企业出海：从设备出口到生态输出的战略升级</span><span data-en>II. Chinese Companies: Strategic Upgrade from Equipment Export to Ecosystem Output</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.1</span><span data-en>Insight 2.1</span></span>
+    <h3><span data-zh>徐工以"大单+服务+标准"三维攻势深耕非洲与资源国市场</span><span data-en>XCMG Deepens Africa & Resource Markets with "Large Orders + Service + Standards" Strategy</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>徐工2月海外动作密集且层次分明——与尼日利亚丹格特签署4亿美元设备协议、向南非Exxaro供应7台220吨级矿卡、向Fortescue交付电动矿用设备、在内蒙古部署100台自主电动矿卡，同时主导制定流动式起重机图形符号国家标准（接轨ISO 7296-2）。这标志着徐工正从单纯的设备出口商向"设备+服务+标准"生态输出者转型。</span><span data-en><strong>Key Insight:</strong> XCMG's February overseas activities were intensive and multi-layered — $400M equipment deal with Nigeria's Dangote, 7 units of 220-ton mining trucks to South Africa's Exxaro, electric mining equipment delivery to Fortescue, 100 autonomous electric mining trucks deployed in Inner Mongolia, while leading national standard development for mobile crane graphic symbols (aligned with ISO 7296-2). This marks XCMG's transformation from pure equipment exporter to "equipment + service + standards" ecosystem exporter.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>与丹格特签署4亿美元协议，设备用于炼油厂扩建至140万桶/日产能，覆盖炼油、石化、农业、基础设施等领域</span><span data-en>$400M deal with Dangote for refinery expansion to 1.4M barrels/day, covering refining, petrochemicals, agriculture, infrastructure</span></li>
+      <li><span data-zh>向南非Exxaro供应7台XDE260矿卡（载重220吨、最高时速64.5km/h），同时在几内亚Simandou铁矿项目部署同款设备</span><span data-en>7 XDE260 mining trucks (220-ton, max 64.5km/h) to South Africa's Exxaro; same model deployed at Guinea's Simandou iron ore project</span></li>
+      <li><span data-zh>在俄罗斯多城市设立仓库，储备超10万种配件；巴西任命新商业总监强化经销商网络</span><span data-en>Warehouses in multiple Russian cities with 100,000+ parts; new commercial director in Brazil to strengthen dealer network</span></li>
+      <li><span data-zh>主导制定GB/T 25195.2-2025国家标准，累计参与64项标准制定（含3项国际标准），加速从产品出口向标准出口转型</span><span data-en>Led GB/T 25195.2-2025 national standard, participated in 64 standards (including 3 international), accelerating shift from product to standards export</span></li>
+      <li><span data-zh>东吴证券首次覆盖给予"买入"评级，预计2025-2027年归母净利润分别为70亿、90亿、119亿元</span><span data-en>Soochow Securities initiated "Buy" rating, forecasting 2025-2027 net profit of ¥7B, ¥9B, ¥11.9B respectively</span></li>
+    </ul>
+  </div>
+
+  <!-- Data Viz: Chinese Companies Overseas Orders -->
+  <div class="insight-card reveal" style="background:var(--c-surface-alt)">
+    <span class="insight-label" style="background:color-mix(in srgb,var(--c-accent) 15%,transparent);color:var(--c-accent)"><i class="fas fa-chart-bar"></i> <span data-zh>数据可视化</span><span data-en>Data Visualization</span></span>
+    <h3 style="font-size:.95rem"><span data-zh>中国企业海外订单与交付对比</span><span data-en>Chinese Companies Overseas Orders & Delivery Comparison</span></h3>
+    <div class="bar-chart">
+      <div class="bar-row"><div class="bar-label"><span data-zh>徐工海外订单</span><span data-en>XCMG Overseas</span></div><div class="bar-track"><div class="bar-fill" style="width:90%;background:linear-gradient(90deg,#EA580C,#f97316)">$8B+</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>中联重科交付</span><span data-en>Zoomlion Delivery</span></div><div class="bar-track"><div class="bar-fill" style="width:70%;background:linear-gradient(90deg,#C2410C,#EA580C)">~$12B (¥85B)</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>徐工-丹格特</span><span data-en>XCMG-Dangote</span></div><div class="bar-track"><div class="bar-fill" style="width:45%;background:linear-gradient(90deg,#475569,#64748b)">$4B</div></div></div>
+      <div class="bar-row"><div class="bar-label"><span data-zh>徐工-Fortescue</span><span data-en>XCMG-Fortescue</span></div><div class="bar-track"><div class="bar-fill" style="width:45%;background:linear-gradient(90deg,#0e7490,#155e75)">$4B</div></div></div>
+    </div>
+    <p style="font-size:.72rem;color:var(--c-text-muted);text-align:center;margin-top:.5rem"><span data-zh>2026年2月中国工程机械企业海外订单/交付规模</span><span data-en>Feb 2026 Chinese Construction Machinery Overseas Orders/Delivery Scale</span></p>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 2.2</span><span data-en>Insight 2.2</span></span>
+    <h3><span data-zh>中联重科国际订单占比突破80%，高端智能设备成出海主力</span><span data-en>Zoomlion International Orders Exceed 80%; High-End Smart Equipment Leads Overseas Push</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>中联重科2026年初完成约12亿美元全球交付（超15000台设备），国际订单占比超80%，产品出口至40多个国家。值得注意的是，其出口结构已从中低端通用设备转向高端智能产品——4000吨级全地面起重机、82米级直臂式高空作业平台、百吨级矿用挖掘机配套纯电矿卡一体化方案，这些均为全球同级别领先产品。</span><span data-en><strong>Key Insight:</strong> Zoomlion completed ~$1.2B global delivery (15,000+ units) in early 2026, with international orders exceeding 80%, exporting to 40+ countries. Notably, its export mix has shifted from mid-low-end to high-end smart products — 4,000-ton all-terrain cranes, 82m straight-boom aerial platforms, 100-ton mining excavators with pure electric mining truck integrated solutions — all globally leading products in their class.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>总交付价值约85亿元人民币（约12亿美元），国际订单占比超80%</span><span data-en>Total delivery value ~¥8.5B (~$1.2B), international orders exceeding 80%</span></li>
+      <li><span data-zh>工程起重机交付超1500台（含4000吨级全地面起重机），价值超24亿元</span><span data-en>Engineering cranes: 1,500+ units delivered (including 4,000-ton all-terrain crane), value over ¥2.4B</span></li>
+      <li><span data-zh>土方与矿山机械交付超3700台，核心为百吨级矿用挖掘机+纯电矿卡一体化方案，价值约23亿元</span><span data-en>Earthmoving & mining: 3,700+ units, core being 100-ton mining excavator + pure electric truck integrated solution, value ~¥2.3B</span></li>
+      <li><span data-zh>高空作业平台交付超4000台，主打82米级全球最高直臂式产品</span><span data-en>Aerial platforms: 4,000+ units, featuring world's tallest 82m straight-boom product</span></li>
+      <li><span data-zh>产品出口至德国、澳大利亚、美国、新加坡等40多个国家和地区</span><span data-en>Products exported to Germany, Australia, US, Singapore and 40+ countries/regions</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 3: Industry Leaders Transformation ===== -->
+<section id="s3" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-arrows-rotate"></i>
+    <h2><span data-zh>三、头部企业转型：从"卖铁"到"卖服务"的战略重心迁移</span><span data-en>III. Industry Leaders: Strategic Shift from "Selling Iron" to "Selling Services"</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.1</span><span data-en>Insight 3.1</span></span>
+    <h3><span data-zh>卡特彼勒以收购+风投双轮驱动，加速向软件与经常性收入转型</span><span data-en>Caterpillar Accelerates Software & Recurring Revenue Transformation via M&A + Venture Capital</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>卡特彼勒2月完成两项关键资本动作——收购矿业软件商RPMGlobal、风投领投ElevenEs电池工厂，叠加此前推出的租赁管理系统升级，清晰勾勒出"硬件设备→软件平台→经常性服务收入"的转型路径。其Power & Energy部门营收同比大涨23%至94亿美元，天然气发电机和电池储能产品需求激增，AI数据中心基建正成为新增长引擎。</span><span data-en><strong>Key Insight:</strong> Caterpillar completed two key capital moves in February — acquiring mining software company RPMGlobal and leading ElevenEs battery factory investment — clearly outlining the "hardware → software platform → recurring service revenue" transformation path. Power & Energy revenue surged 23% to $9.4B, with gas generators and battery storage demand surging as AI data center infrastructure becomes a new growth engine.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>2025年全年营收676亿美元（+4%），Q4 EPS 5.16美元（预期4.67美元），营收191.3亿美元（+17.9%）</span><span data-en>2025 full-year revenue $67.6B (+4%), Q4 EPS $5.16 (est. $4.67), revenue $19.13B (+17.9%)</span></li>
+      <li><span data-zh>Power & Energy部门营收94亿美元（+23%），天然气发电机、电池储能需求覆盖更广客户群</span><span data-en>Power & Energy revenue $9.4B (+23%), gas generators and battery storage demand expanding to broader customer base</span></li>
+      <li><span data-zh>收购RPMGlobal：矿场规划、调度软件与采矿设备、自主系统深度结合，打造一体化矿场解决方案</span><span data-en>RPMGlobal acquisition: mine planning and scheduling software deeply integrated with mining equipment and autonomous systems for integrated solutions</span></li>
+      <li><span data-zh>风投领投ElevenEs：支持塞尔维亚1GWh LFP电池超级工厂建设，布局工业设备电池供应链</span><span data-en>Led ElevenEs investment: supporting Serbia 1GWh LFP battery gigafactory, positioning in industrial equipment battery supply chain</span></li>
+      <li><span data-zh>富国银行上调目标价至870美元，大和证券上调至790美元；但2月空头兴趣激增61%至约1000万股</span><span data-en>Wells Fargo raised target to $870, Daiwa to $790; but Feb short interest surged 61% to ~10M shares</span></li>
+    </ul>
+
+    <!-- Data Table: CAT Financial Highlights -->
+    <table class="styled-table">
+      <thead><tr>
+        <th><span data-zh>指标</span><span data-en>Metric</span></th>
+        <th>2025</th>
+        <th><span data-zh>同比</span><span data-en>YoY</span></th>
+        <th><span data-zh>备注</span><span data-en>Notes</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td><span data-zh>全年营收</span><span data-en>Annual Revenue</span></td><td>$67.6B</td><td>+4%</td><td></td></tr>
+        <tr><td>Q4 EPS</td><td>$5.16</td><td>—</td><td><span data-zh>超预期$4.67</span><span data-en>Beat est. $4.67</span></td></tr>
+        <tr><td>Power & Energy</td><td>$9.4B</td><td>+23%</td><td><span data-zh>AI数据中心驱动</span><span data-en>AI DC driven</span></td></tr>
+        <tr><td>PE</td><td>~40x</td><td>—</td><td><span data-zh>历史溢价水平</span><span data-en>Historical premium</span></td></tr>
+        <tr><td><span data-zh>空头兴趣</span><span data-en>Short Interest</span></td><td>~10M<span data-zh>股</span><span data-en> shares</span></td><td>+61%</td><td><span data-zh>2月激增</span><span data-en>Feb surge</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 3.2</span><span data-en>Insight 3.2</span></span>
+    <h3><span data-zh>约翰迪尔Q1超预期后启动产能扩张，数字化收购补齐软件短板</span><span data-en>John Deere Expands Capacity After Q1 Beat; Digital Acquisition Fills Software Gap</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>约翰迪尔Q1净销售额96亿美元（+13%）超预期后，做出两个关键决策：一是召回数百名工人扩大产能，表明管理层判断2026年为周期底部；二是收购Tenna强化数字化与fleet管理能力。结合新发布的634马力8RX 540拖拉机（搭载Supervised Autonomy功能），迪尔正在构建"高端硬件+自主技术+数字平台"的竞争壁垒。</span><span data-en><strong>Key Insight:</strong> After John Deere's Q1 net sales of $9.6B (+13%) beat expectations, two key decisions were made: recalling hundreds of workers to expand capacity (indicating management views 2026 as cycle bottom), and acquiring Tenna to strengthen digital and fleet management capabilities. Combined with the new 634hp 8RX 540 tractor (with Supervised Autonomy), Deere is building a "premium hardware + autonomous tech + digital platform" competitive moat.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Q1净销售额96亿美元（+13%），上调全年净利润指引至45-50亿美元</span><span data-en>Q1 net sales $9.6B (+13%), raised full-year net income guidance to $4.5-5.0B</span></li>
+      <li><span data-zh>召回数百名工人扩大产能，基于对建筑和小型农业设备订单的信心</span><span data-en>Recalled hundreds of workers to expand capacity, based on confidence in construction and small agriculture equipment orders</span></li>
+      <li><span data-zh>收购Tenna增强数字化和fleet管理服务能力</span><span data-en>Acquired Tenna to enhance digital and fleet management service capabilities</span></li>
+      <li><span data-zh>新一代8RX 540拖拉机峰值634马力，搭载Supervised Autonomy功能（路径规划、直线引导、自动转向），硬件支持后续自主组件升级</span><span data-en>New 8RX 540 tractor with peak 634hp, Supervised Autonomy (path planning, straight-line guidance, auto-steering), hardware supports future autonomous upgrades</span></li>
+      <li><span data-zh>启动2026年Startup Collaborator Program，5家初创企业涵盖边缘AI、混合车队优化、土壤传感等技术</span><span data-en>Launched 2026 Startup Collaborator Program, 5 startups covering edge AI, hybrid fleet optimization, soil sensing</span></li>
+      <li><span data-zh>股价过去一月涨28.8%，市盈率约35倍，估值溢价明显</span><span data-en>Stock up 28.8% in past month, PE ~35x, significant valuation premium</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 4: AI & Digitalization ===== -->
+<section id="s4" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-microchip"></i>
+    <h2><span data-zh>四、AI与数字化：从概念验证到生产力释放的关键转折</span><span data-en>IV. AI & Digitalization: Critical Turning Point from PoC to Productivity</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.1</span><span data-en>Insight 4.1</span></span>
+    <h3><span data-zh>AI在矿山场景率先实现规模化生产力提升，数字孪生缩短勘探周期</span><span data-en>AI Achieves Scaled Productivity Gains in Mining; Digital Twins Shorten Exploration Cycles</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>内华达金矿（NGM）的案例证明AI技术已从概念验证进入规模化生产力释放阶段——自主矿卡24小时无人驾驶、AI矿石分选实时识别含金矿石、数字孪生将勘探周期从数年缩短至数周。但技术转型也暴露出人才结构性短缺问题：传统操作员需求减少，能维护5G中继站的技术人员严重不足。</span><span data-en><strong>Key Insight:</strong> Nevada Gold Mines (NGM) proves AI has moved from proof-of-concept to scaled productivity — autonomous trucks running 24/7, AI ore sorting identifying gold-bearing ore in real-time, digital twins shortening exploration from years to weeks. But the tech transition also exposes structural talent shortages: fewer traditional operators needed, severe shortage of technicians who can maintain 5G relay stations.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>NGM 2025年Q4 Carlin产区产量增长25%，全年增长约15%</span><span data-en>NGM Q4 2025 Carlin production up 25%, full year up ~15%</span></li>
+      <li><span data-zh>AI矿石分选通过计算机视觉和机器学习实时识别含金矿石与废石，大幅减少无效运输和磨矿成本</span><span data-en>AI ore sorting uses computer vision and ML to identify gold-bearing ore vs waste in real-time, significantly reducing unnecessary hauling and grinding costs</span></li>
+      <li><span data-zh>Fourmile矿区数字孪生技术将勘探周期从数年缩短至数周，资源量预估翻倍至260万盎司（品位超17g/t）</span><span data-en>Fourmile digital twin technology shortened exploration from years to weeks, resource estimate doubled to 2.6M oz (grade >17g/t)</span></li>
+      <li><span data-zh>人才缺口：急需能在暴风雪中维护5G中继站的技术人员，NGM承认该类人才短缺</span><span data-en>Talent gap: urgent need for technicians who can maintain 5G relay stations in blizzards; NGM acknowledges this shortage</span></li>
+      <li><span data-zh>尽管生产数据亮眼，Barrick股价仍下跌近8%，市场担忧2026年业绩指引和技术投入成本</span><span data-en>Despite strong production data, Barrick stock fell ~8%, market concerned about 2026 guidance and tech investment costs</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 4.2</span><span data-en>Insight 4.2</span></span>
+    <h3><span data-zh>HD建设机械以Real-X AI方案和CONEXPO首秀冲击北美市场</span><span data-en>HD Hyundai CE Targets North America with Real-X AI Solution and CONEXPO Debut</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>HD建设机械（现代+迪万伦整合体）在CONEXPO 2026上以9款新一代挖掘机和Real-X AI无人自主方案高调亮相，同时全球首发1.1L级DA11超小型发动机和氢发动机、电池包等下一代动力系统。这是整合法人成立后的首次全球展会，"1公司2品牌"策略已在蒙古63台矿用设备大单中验证有效，后市场业务预期可达设备价格的4倍。</span><span data-en><strong>Key Insight:</strong> HD Hyundai CE (Hyundai + Develon integration) debuted at CONEXPO 2026 with 9 next-gen excavators and Real-X AI autonomous solution, plus global launch of 1.1L DA11 ultra-compact engine and hydrogen engine/battery packs. This is the first global show since integration. The "1 company, 2 brands" strategy was validated by a 63-unit mining equipment order in Mongolia, with aftermarket business expected at 4x equipment price.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>CONEXPO 2026展出9款23-40吨级新一代挖掘机（现代HX系列5款+迪万伦NextGen系列4款），搭载Real-X AI无人自主方案</span><span data-en>CONEXPO 2026: 9 next-gen 23-40 ton excavators (5 Hyundai HX + 4 Develon NextGen), equipped with Real-X AI autonomous solution</span></li>
+      <li><span data-zh>现代展位约2413㎡展出22款旗舰机型，迪万伦展位约3759㎡展出21款产品</span><span data-en>Hyundai booth ~2,413㎡ with 22 flagship models; Develon booth ~3,759㎡ with 21 products</span></li>
+      <li><span data-zh>全球首发1.1L级DA11发动机，同时展出氢发动机、高性能电池包等下一代动力系统</span><span data-en>Global launch of 1.1L DA11 engine, plus hydrogen engine and high-performance battery packs</span></li>
+      <li><span data-zh>蒙古63台矿用设备订单（含100吨级挖掘机、矿卡等），得益于"1企2品牌"协同效应</span><span data-en>Mongolia 63-unit mining equipment order (including 100-ton excavators, haul trucks), benefiting from "1 company, 2 brands" synergy</span></li>
+      <li><span data-zh>预期带动最高达设备价格4倍的后市场业务增长</span><span data-en>Expected to drive aftermarket business growth up to 4x equipment price</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 5: Equipment Financing & Market Cycles ===== -->
+<section id="s5" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-chart-line"></i>
+    <h2><span data-zh>五、设备融资与市场周期：AI基建驱动新一轮设备需求上行</span><span data-en>V. Equipment Financing & Market Cycles: AI Infrastructure Drives New Demand Upswing</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.1</span><span data-en>Insight 5.1</span></span>
+    <h3><span data-zh>美国设备融资额创20年新高，AI数据中心成重型设备需求新引擎</span><span data-en>US Equipment Financing Hits 20-Year High; AI Data Centers Become New Heavy Equipment Demand Engine</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2026年1月美国设备融资额达116亿美元（同比+30.1%），创近20年最高水平，ELFA明确指出AI投资是核心驱动力。结合卡特彼勒Power & Energy部门23%的营收增速和多家机构上调目标价，AI数据中心基建正在成为工程机械行业继矿业、基建之后的第三大需求引擎。</span><span data-en><strong>Key Insight:</strong> January 2026 US equipment financing reached $11.6B (+30.1% YoY), the highest in nearly 20 years. ELFA explicitly identified AI investment as the core driver. Combined with CAT Power & Energy's 23% revenue growth and multiple analyst upgrades, AI data center infrastructure is becoming the third major demand engine for construction machinery after mining and infrastructure.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>1月设备融资额116亿美元（同比+30.1%、环比+7.8%），创近20年新高</span><span data-en>Jan equipment financing $11.6B (+30.1% YoY, +7.8% MoM), 20-year high</span></li>
+      <li><span data-zh>小额设备融资额53亿美元（环比+5.5%），作为设备需求和经济状况的关键风向标</span><span data-en>Small-ticket financing $5.3B (+5.5% MoM), key indicator of equipment demand and economic conditions</span></li>
+      <li><span data-zh>ELFA总裁表示AI投资将带动设备融资活动持续强劲增长</span><span data-en>ELFA president stated AI investment will drive continued strong growth in equipment financing</span></li>
+      <li><span data-zh>卡特彼勒被分析师视为AI基础设施建设的受益标的</span><span data-en>Caterpillar viewed by analysts as AI infrastructure beneficiary</span></li>
+      <li><span data-zh>银行端设备融资较12月下降11.7%，显示融资渠道分化</span><span data-en>Bank equipment financing down 11.7% from December, showing channel divergence</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 5.2</span><span data-en>Insight 5.2</span></span>
+    <h3><span data-zh>沃尔沃与联合拖拉机业绩承压，服务业务成周期下行的利润锚</span><span data-en>Volvo & United Tractors Under Pressure; Service Business Anchors Profits in Downcycle</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>沃尔沃集团2025年净销售额经汇率调整后同比降3%，印尼联合拖拉机净利润同比下滑24%，两家企业均面临周期性下行压力。但值得注意的是，沃尔沃服务业务保持稳定增长，成为利润率的重要支撑（调整后营业利润率仍达10.7%）；联合拖拉机黄金业务收入同比增41%，多元化布局有效对冲了煤炭业务下滑。这印证了"服务+多元化"是穿越周期的关键策略。</span><span data-en><strong>Key Insight:</strong> Volvo Group 2025 net sales fell 3% (FX-adjusted), Indonesia's United Tractors net profit declined 24% YoY. Both face cyclical downturn pressure. However, Volvo's service business maintained stable growth, supporting margins (adjusted operating margin still 10.7%); United Tractors' gold business revenue grew 41% YoY, effectively offsetting coal decline. This confirms "service + diversification" as the key strategy for navigating cycles.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>沃尔沃集团：净销售额4792亿瑞典克朗（经汇率调整-3%），调整后营业利润512亿瑞典克朗，利润率10.7%（2024年12.5%）</span><span data-en>Volvo Group: net sales SEK 479.2B (FX-adjusted -3%), adjusted operating profit SEK 51.2B, margin 10.7% (2024: 12.5%)</span></li>
+      <li><span data-zh>联合拖拉机：净收入131.3万亿印尼盾（-2%），净利润14.8万亿印尼盾（-24%）；小松设备销量+2%至4515台，市占率20%保持领先</span><span data-en>United Tractors: net revenue IDR 131.3T (-2%), net profit IDR 14.8T (-24%); Komatsu equipment sales +2% to 4,515 units, 20% market share maintained</span></li>
+      <li><span data-zh>联合拖拉机黄金业务收入同比增41%至14万亿印尼盾，部分抵消煤炭业务负面影响</span><span data-en>United Tractors gold business revenue +41% YoY to IDR 14T, partially offsetting coal business decline</span></li>
+      <li><span data-zh>沃尔沃CEO表示已为下一轮周期性复苏做好准备</span><span data-en>Volvo CEO stated readiness for next cyclical recovery</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 6: Regional Markets & Supply Chain ===== -->
+<section id="s6" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-earth-africa"></i>
+    <h2><span data-zh>六、区域市场与供应链：非洲崛起、俄罗斯重构、印度扩产</span><span data-en>VI. Regional Markets & Supply Chain: Africa Rising, Russia Restructuring, India Expanding</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.1</span><span data-en>Insight 6.1</span></span>
+    <h3><span data-zh>非洲成为中国工程机械与商用车品牌的战略增长极</span><span data-en>Africa Becomes Strategic Growth Pole for Chinese Construction Machinery & Commercial Vehicle Brands</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>非洲市场正经历从"欧美日品牌主导"到"中国品牌领跑"的结构性转变。FAW 2024年以18%市占率成为南非重卡销量冠军，白俄MTZ非洲拖拉机出口同比增超60%，徐工在尼日利亚和南非连续斩获大单。中国品牌的成功密码是"高性价比+适配苛刻工况+本地组装降关税+融资支持"的组合策略。</span><span data-en><strong>Key Insight:</strong> Africa is undergoing a structural shift from "Western/Japanese brand dominance" to "Chinese brand leadership." FAW became South Africa's heavy truck sales champion in 2024 with 18% market share. Belarus MTZ Africa tractor exports grew 60%+ YoY. XCMG secured consecutive large orders in Nigeria and South Africa. Chinese brands' success formula: "high value-for-money + harsh condition adaptation + local assembly for tariff reduction + financing support."</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>FAW 2024年南非重卡市占率18%，年销量超5000辆，2025年月销量稳定突破500辆</span><span data-en>FAW 2024 South Africa heavy truck market share 18%, annual sales 5,000+, 2025 monthly sales consistently above 500</span></li>
+      <li><span data-zh>中国卡车价格仅为欧美品牌的1/2-1/3，高扭矩、耐用性适配非洲工况</span><span data-en>Chinese truck prices only 1/2 to 1/3 of Western brands, high torque and durability adapted to African conditions</span></li>
+      <li><span data-zh>本地组装关税优势显著：南非本地组装可将进口关税从20%降至0，尼日利亚成品车关税70%而散件仅5-10%</span><span data-en>Significant local assembly tariff advantage: South Africa local assembly reduces import duty from 20% to 0; Nigeria finished vehicle duty 70% vs CKD 5-10%</span></li>
+      <li><span data-zh>MTZ 2025年非洲拖拉机出口同比增超60%，核心市场为津巴布韦、尼日利亚、埃及（增幅16%-90%）</span><span data-en>MTZ 2025 Africa tractor exports +60% YoY, core markets: Zimbabwe, Nigeria, Egypt (growth 16%-90%)</span></li>
+      <li><span data-zh>徐工与丹格特4亿美元协议、向Exxaro供应矿卡，深化非洲市场布局</span><span data-en>XCMG $400M Dangote deal, mining trucks to Exxaro, deepening Africa market presence</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.2</span><span data-en>Insight 6.2</span></span>
+    <h3><span data-zh>俄罗斯后市场格局重构：中国品牌配件需求激增，欧美日断供加剧</span><span data-en>Russia Aftermarket Restructuring: Chinese Brand Parts Demand Surges, Western Supply Disruption Deepens</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>俄罗斯工程机械后市场正经历深刻重构——中国品牌设备保有量2022-2024年增长40%，直接带动配件需求增长10-15%，而欧美日品牌电子控制模块等核心部件仍面临长达半年的交付延迟。徐工、柳工通过大规模库存投资和服务网络建设抢占后市场份额，但低价位段约30%的不合格仿制品构成质量风险。</span><span data-en><strong>Key Insight:</strong> Russia's construction machinery aftermarket is undergoing profound restructuring — Chinese brand equipment fleet grew 40% from 2022-2024, directly driving 10-15% parts demand growth, while Western/Japanese electronic control modules still face up to 6-month delivery delays. XCMG and LiuGong are capturing aftermarket share through massive inventory investment and service network building, but ~30% substandard counterfeits in the low-price segment pose quality risks.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>中国品牌设备在俄保有量2022-2024年增长40%，配件需求增长10-15%</span><span data-en>Chinese brand equipment fleet in Russia grew 40% (2022-2024), parts demand up 10-15%</span></li>
+      <li><span data-zh>欧美日品牌电子控制模块曾出现长达半年交付延迟，当前仍属采购难点</span><span data-en>Western/Japanese electronic control modules experienced up to 6-month delivery delays, still a procurement challenge</span></li>
+      <li><span data-zh>徐工在俄储备超10万种配件；柳工莫斯科配送中心拥有超4万种配件，2025年计划增加15-20%库存</span><span data-en>XCMG stocks 100,000+ parts in Russia; LiuGong Moscow distribution center has 40,000+ parts, plans 15-20% inventory increase in 2025</span></li>
+      <li><span data-zh>低价位段配件约30%为不合格仿制品</span><span data-en>~30% of low-price segment parts are substandard counterfeits</span></li>
+      <li><span data-zh>俄罗斯企业逐渐转向人民币、迪拉姆等友好国家货币结算</span><span data-en>Russian companies gradually shifting to RMB, Dirham and other friendly country currencies for settlement</span></li>
+      <li><span data-zh>LUZAR公司推出替代散热器，价格仅为原厂件的1/3（如John Deere散热器原厂35万卢布 vs LUZAR 12.5万卢布）</span><span data-en>LUZAR launched replacement radiators at 1/3 OEM price (e.g., John Deere radiator OEM 350K RUB vs LUZAR 125K RUB)</span></li>
+    </ul>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 6.3</span><span data-en>Insight 6.3</span></span>
+    <h3><span data-zh>印度传动系统扩产与电动化布局，承接全球供应链转移</span><span data-en>India Drivetrain Expansion & Electrification, Capturing Global Supply Chain Shift</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>Carraro India计划3年投资30亿卢比扩产，瞄准印度4WD拖拉机渗透率从1-2%升至25%的结构性机遇，以及基础设施投资带动的建筑设备需求增长。其与Montra Electric合作开发电动拖拉机传动系统，本地采购率提升可降低15%成本，这反映了全球工程机械供应链向印度转移的趋势。</span><span data-en><strong>Key Insight:</strong> Carraro India plans ₹3B investment over 3 years, targeting the structural opportunity of India's 4WD tractor penetration rising from 1-2% to 25%, plus infrastructure-driven construction equipment demand. Its partnership with Montra Electric for electric tractor drivetrains, with local sourcing reducing costs by 15%, reflects the global construction machinery supply chain shift to India.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>Carraro India计划每年投入10亿卢比（约1200万美元），用于瓶颈改造和新增产能</span><span data-en>Carraro India plans ₹1B/year (~$12M) for bottleneck upgrades and new capacity</span></li>
+      <li><span data-zh>预计2026财年营收2000亿卢比，目标2030财年突破3500亿卢比</span><span data-en>FY2026 revenue forecast ₹200B, targeting ₹350B+ by FY2030</span></li>
+      <li><span data-zh>印度4WD拖拉机渗透率从6年前的1-2%升至25%</span><span data-en>India 4WD tractor penetration rose from 1-2% (6 years ago) to 25%</span></li>
+      <li><span data-zh>与Montra Electric合作开发电动拖拉机传动系统</span><span data-en>Partnering with Montra Electric on electric tractor drivetrain development</span></li>
+      <li><span data-zh>本地采购率提升可降低15%成本</span><span data-en>Increased local sourcing can reduce costs by 15%</span></li>
+      <li><span data-zh>客户涵盖Mahindra、John Deere、Caterpillar等全球品牌</span><span data-en>Customers include Mahindra, John Deere, Caterpillar and other global brands</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== SECTION 7: Governance & Talent ===== -->
+<section id="s7" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-users-gear"></i>
+    <h2><span data-zh>七、行业治理与人才：领导层密集调整折射战略转型方向</span><span data-en>VII. Governance & Talent: Leadership Changes Reflect Strategic Transformation</span></h2>
+  </div>
+
+  <div class="insight-card reveal">
+    <span class="insight-label"><span data-zh>洞察 7.1</span><span data-en>Insight 7.1</span></span>
+    <h3><span data-zh>欧美头部企业领导层密集换血，AI与数字化岗位成新设重点</span><span data-en>Western Industry Leaders Undergo Intensive Leadership Changes; AI & Digital Roles Become Priority</span></h3>
+    <div class="insight-body">
+      <p><span data-zh><strong>关键洞察：</strong>2月欧美工程机械企业出现罕见的领导层密集调整——卡特彼勒建筑部门总裁退休换帅、特雷克斯新设首席AI与数据官、现代重工提拔COO、Atlas更换CEO为三人领导团队。其中特雷克斯任命首席AI与数据官（拥有20年行业经验的Namita Jindal）尤为值得关注，这是工程机械行业首批C-suite级别的AI专职岗位，标志着数字化从业务支撑升级为战略核心。</span><span data-en><strong>Key Insight:</strong> February saw rare intensive leadership changes across Western construction machinery companies — Caterpillar construction division president retired, Terex created Chief AI & Data Officer, Hyundai CE promoted COO, Atlas replaced CEO with three-person leadership team. Terex's appointment of Chief AI & Data Officer (Namita Jindal, 20 years industry experience) is particularly noteworthy — one of the first C-suite AI positions in construction machinery, marking digitalization's elevation from business support to strategic core.</span></p>
+    </div>
+    <ul class="fact-list">
+      <li><span data-zh>卡特彼勒：建筑部门总裁Tony Fassino退休（任职30年），Rod Shurman接任（1997年入职，历任工程、服务、运营等多部门）</span><span data-en>Caterpillar: Construction division president Tony Fassino retired (30 years), Rod Shurman succeeds (joined 1997, served in engineering, service, operations)</span></li>
+      <li><span data-zh>特雷克斯：任命Namita Jindal为首席AI与数据官，拥有20年行业经验，负责推动数字化战略</span><span data-en>Terex: appointed Namita Jindal as Chief AI & Data Officer, 20 years industry experience, leading digital strategy</span></li>
+      <li><span data-zh>现代重工：Michael Ross升任COO，疫情期间助力经销商网络扩张</span><span data-en>Hyundai CE: Michael Ross promoted to COO, helped expand dealer network during pandemic</span></li>
+      <li><span data-zh>Atlas：原CEO离职，由三人领导团队接替，聚焦产品质量与长期合作伙伴关系</span><span data-en>Atlas: former CEO departed, replaced by three-person leadership team focusing on product quality and long-term partnerships</span></li>
+      <li><span data-zh>芬兰KH-Koneet任命新CEO（前Cramo高管），巩固北欧市场</span><span data-en>Finland's KH-Koneet appointed new CEO (former Cramo executive), consolidating Nordic market</span></li>
+      <li><span data-zh>中国企业海外管理层补位：徐工巴西任命新商业总监（25年跨国经验），柳工英国提拔销售总监（前JCB工程师）</span><span data-en>Chinese companies' overseas management: XCMG Brazil appointed new commercial director (25 years multinational experience), LiuGong UK promoted sales director (former JCB engineer)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== RISK ALERTS ===== -->
+<section id="risk" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-triangle-exclamation" style="color:#ef4444"></i>
+    <h2><span data-zh>风险警示</span><span data-en>Risk Alerts</span></h2>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险一：美国贸易合规风险全面升级，中国出海企业面临多维度监管压力</span><span data-en>Risk 1: US Trade Compliance Risks Escalate; Chinese Companies Face Multi-Dimensional Regulatory Pressure</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>美国海关（CBP）正式启动对中联重科移动登高设备的反规避调查（EAPA案件8245），指控其通过墨西哥虚假标注原产地规避反倾销/反补贴税令，已实施"实时报关"等临时管制措施，后续不排除民事罚款和刑事调查。叠加卡特彼勒2026年约26亿美元的关税相关成本预估，美国市场的贸易合规风险正在系统性升级。</span><span data-en>US Customs (CBP) launched anti-circumvention investigation into Zoomlion aerial equipment (EAPA Case 8245), alleging false origin labeling via Mexico to evade AD/CVD orders. "Live entry" interim measures implemented, with potential civil penalties and criminal investigation. Combined with Caterpillar's ~$2.6B tariff cost estimate for 2026, US market trade compliance risks are systematically escalating.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>CBP对EAPA案件8245的最终裁定结果；美国对中国工程机械产品的反倾销/反补贴税率调整；中国企业在墨西哥、东南亚等第三国的产能布局合规性审查</span><span data-en>CBP final ruling on EAPA Case 8245; US AD/CVD rate adjustments for Chinese construction machinery; compliance review of Chinese companies' capacity in Mexico, Southeast Asia and other third countries</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>高风险</span><span data-en>HIGH RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险二：电气化转型投入巨大但回报周期不确定，技术路线分化增加决策风险</span><span data-en>Risk 2: Massive Electrification Investment with Uncertain Returns; Tech Route Divergence Increases Decision Risk</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>电动挖掘机市场虽预计2033年达143亿美元（CAGR 23.5%），但当前面临高设置和维护成本、缺乏标准化框架、充电基础设施不足等现实挑战。小松同时押注纯电、混动和氨燃料三条路线，卡特彼勒投资LFP电池工厂，利勃海尔与Fortescue联合开发电池系统——技术路线尚未收敛，企业面临"押错赛道"的风险。ElevenEs电池工厂2027年才开始交付，Fortescue零排放方案2026年初才完成验证，商业化时间表仍存在不确定性。</span><span data-en>Electric excavator market projected at $14.3B by 2033 (CAGR 23.5%), but faces high setup/maintenance costs, lack of standardization, and insufficient charging infrastructure. Komatsu bets on three routes simultaneously (pure electric, hybrid, ammonia), CAT invests in LFP battery factory, Liebherr co-develops battery systems with Fortescue — tech routes haven't converged, companies risk "betting on the wrong track." ElevenEs battery factory delivery starts 2027, Fortescue zero-emission validation early 2026, commercialization timelines remain uncertain.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>Fortescue 2026年初全自主电池电动方案验证结果；ElevenEs电池工厂建设进度；各主要矿业客户的电气化设备采购订单转化率</span><span data-en>Fortescue early 2026 full autonomous battery-electric validation results; ElevenEs battery factory construction progress; major mining customers' electrification equipment order conversion rates</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险三：头部企业高估值与内部人减持并存，短期股价波动风险加大</span><span data-en>Risk 3: High Valuations & Insider Selling Coexist; Short-Term Stock Volatility Risk Increases</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>卡特彼勒PE约40倍、约翰迪尔PE约35倍，均处于历史溢价水平。卡特彼勒近90天内部人士累计出售143,450股（价值约9,824.5万美元），2月空头兴趣激增约61%至约1,000万股。约翰迪尔虽上调全年指引，但债务的经营现金流覆盖能力不足。高估值使这些标的对订单放缓或利润率变动更为敏感。</span><span data-en>Caterpillar PE ~40x, John Deere PE ~35x, both at historical premium levels. CAT insiders sold 143,450 shares (~$98.2M) in past 90 days, Feb short interest surged ~61% to ~10M shares. Deere raised full-year guidance but operating cash flow coverage of debt is insufficient. High valuations make these stocks more sensitive to order slowdowns or margin changes.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>卡特彼勒和约翰迪尔后续季度订单簿变化；内部人交易动态；美联储降息节奏对设备融资成本的影响</span><span data-en>CAT and Deere subsequent quarterly order book changes; insider trading dynamics; Fed rate cut pace impact on equipment financing costs</span></p>
+    </div>
+  </div>
+
+  <div class="risk-card reveal">
+    <span class="risk-indicator"><span data-zh>中风险</span><span data-en>MEDIUM RISK</span></span>
+    <h3><i class="fas fa-triangle-exclamation"></i> <span data-zh>风险四：俄罗斯市场仿制品泛滥与品牌侵权风险并存</span><span data-en>Risk 4: Counterfeit Proliferation & Brand Infringement Risks Coexist in Russia Market</span></h3>
+    <div class="risk-body">
+      <p><span data-zh>俄罗斯低价位段配件约30%为不合格仿制品，存在较大质量和安全风险。乌兹别克斯坦已出现未经授权使用"HYUNDAI"商标进口挖掘机的侵权案例。印度消费者委员会裁决三一重工赔偿缺陷挖掘机买家100万卢比。新兴市场的品牌保护和产品质量管控正成为中国企业出海的隐性风险。</span><span data-en>~30% of low-price segment parts in Russia are substandard counterfeits, posing significant quality and safety risks. Uzbekistan has seen unauthorized use of "HYUNDAI" trademark for imported excavators. India's consumer commission ruled SANY to compensate defective excavator buyer ₹1M. Brand protection and product quality control in emerging markets are becoming hidden risks for Chinese companies going global.</span></p>
+      <p style="margin-top:.75rem"><strong><span data-zh>关注指标：</span><span data-en>Key Indicators: </span></strong><span data-zh>俄罗斯及中亚市场仿制品占比变化；各国消费者保护诉讼案例；品牌授权经销商网络覆盖率</span><span data-en>Counterfeit share changes in Russia and Central Asia; consumer protection litigation cases; authorized dealer network coverage</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEXT FOCUS ===== -->
+<section id="focus" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-calendar-check" style="color:#3b82f6"></i>
+    <h2><span data-zh>下期关注</span><span data-en>Next Period Focus</span></h2>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026-03-03 ~ 03-07</div>
+      <div class="timeline-text"><span data-zh>CONEXPO 2026（拉斯维加斯）：HD建设机械整合后首秀、各主要厂商新品发布和技术演示的集中窗口，尤其关注AI自主方案和电动设备的现场表现，以及北美市场订单转化情况</span><span data-en>CONEXPO 2026 (Las Vegas): HD Hyundai CE's first show post-integration, major OEM product launches and tech demos, especially AI autonomous solutions and electric equipment performance, plus North American order conversion</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 Q1-Q2</div>
+      <div class="timeline-text"><span data-zh>Fortescue零排放方案验证节点：利勃海尔与Fortescue联合开发的全自主电池电动解决方案预计2026年初完成验证，结果将直接影响矿业电气化的商业化进程和后续订单规模</span><span data-en>Fortescue zero-emission validation milestone: Liebherr-Fortescue full autonomous battery-electric solution validation expected early 2026, results will directly impact mining electrification commercialization and subsequent order scale</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026-07-10</div>
+      <div class="timeline-text"><span data-zh>智利圣安东尼奥外港项目经济报价截止：该项目招标延期至新政府接手，中国铁建（CRCC）联合体为预资格认证投标方之一，项目走向将反映拉美基建市场对中国企业的开放程度</span><span data-en>Chile San Antonio outer port project economic bid deadline: tender delayed to new government, CRCC consortium is a pre-qualified bidder, project direction will reflect Latin American infrastructure market openness to Chinese companies</span></div>
+    </div>
+    <div class="timeline-item reveal">
+      <div class="timeline-date">2026 H2</div>
+      <div class="timeline-text"><span data-zh>美国CBP对中联重科反规避调查进展：EAPA案件8245的最终裁定将为中国工程机械企业的美国市场准入策略提供关键参考，尤其是第三国转口模式的合规边界</span><span data-en>US CBP anti-circumvention investigation progress on Zoomlion: EAPA Case 8245 final ruling will provide key reference for Chinese construction machinery companies' US market access strategy, especially compliance boundaries of third-country transshipment models</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FULL SUMMARY ===== -->
+<section id="summary" class="section reveal">
+  <div class="section-header">
+    <i class="fas fa-file-lines"></i>
+    <h2><span data-zh>全文总结</span><span data-en>Full Summary</span></h2>
+  </div>
+
+  <div class="summary-grid">
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-chart-line"></i> <span data-zh>核心趋势概括</span><span data-en>Core Trends</span></h4>
+      <p style="font-size:.88rem;color:var(--c-text-secondary);line-height:1.7"><span data-zh>2026年2月的工程机械行业呈现三条清晰的主线：一是矿业装备的自主化与电气化深度融合进入商业化冲刺阶段，小松、卡特彼勒、利勃海尔三巨头以"AHS+电动+软件平台"三位一体模式争夺矿山全生命周期价值；二是中国头部企业（徐工、中联重科）以大额海外订单、本地化服务网络和标准输出为抓手，加速从设备出口商向生态输出者转型；三是AI数据中心基建成为重型设备需求的新增长极，美国设备融资额创20年新高，卡特彼勒和约翰迪尔同步推进"硬件+软件+服务"一体化转型以捕获经常性收入。</span><span data-en>February 2026 construction machinery industry shows three clear themes: (1) Mining equipment autonomy and electrification entering commercialization sprint, with Komatsu, CAT, and Liebherr competing via "AHS + electric + software" trinity for full mining lifecycle value; (2) Chinese leaders (XCMG, Zoomlion) accelerating transformation from equipment exporters to ecosystem exporters through large overseas orders, localized service networks, and standards output; (3) AI data center infrastructure becoming a new growth engine for heavy equipment demand, with US equipment financing hitting 20-year highs and CAT/Deere pushing "hardware + software + service" integration for recurring revenue.</span></p>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-crosshairs"></i> <span data-zh>行业竞争信号</span><span data-en>Competition Signals</span></h4>
+      <ul>
+        <li><span data-zh>矿业自主化市场集中度极高（小松+卡特占74%），但利勃海尔凭借Fortescue 475台零排放设备大单强势切入，竞争格局面临重塑</span><span data-en>Mining autonomy market highly concentrated (Komatsu+CAT 74%), but Liebherr enters strongly with Fortescue 475-unit zero-emission deal, reshaping competition</span></li>
+        <li><span data-zh>HD建设机械"1企2品牌"策略在蒙古63台大单中验证有效，整合后的协同效应正在释放，后市场业务预期达设备价格4倍</span><span data-en>HD Hyundai CE "1 company, 2 brands" strategy validated by Mongolia 63-unit order, synergies materializing, aftermarket expected at 4x equipment price</span></li>
+        <li><span data-zh>中国品牌在非洲重卡市场（FAW市占率18%）和俄罗斯后市场（设备保有量+40%）实现结构性突破，欧美日品牌份额持续被侵蚀</span><span data-en>Chinese brands achieve structural breakthroughs in Africa heavy trucks (FAW 18% share) and Russia aftermarket (fleet +40%), eroding Western/Japanese market share</span></li>
+        <li><span data-zh>特雷克斯新设首席AI与数据官，标志着数字化从业务支撑升级为C-suite级别的战略核心</span><span data-en>Terex creates Chief AI & Data Officer, marking digitalization's elevation from business support to C-suite strategic core</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-exclamation-circle"></i> <span data-zh>经营风险提示</span><span data-en>Business Risk Alerts</span></h4>
+      <ul>
+        <li><span data-zh>美国贸易合规风险全面升级：中联重科反规避调查、约26亿美元关税成本预估、EPA维修权指导改变售后服务格局</span><span data-en>US trade compliance risks escalate: Zoomlion anti-circumvention investigation, ~$2.6B tariff cost estimate, EPA right-to-repair guidance reshaping aftermarket</span></li>
+        <li><span data-zh>电气化技术路线尚未收敛（纯电/混动/氨燃料并行），企业面临高投入、长回报周期和"押错赛道"的三重风险</span><span data-en>Electrification tech routes haven't converged (pure electric/hybrid/ammonia in parallel), companies face triple risks of high investment, long payback, and "wrong bet"</span></li>
+        <li><span data-zh>头部企业估值处于历史高位（卡特PE~40x、迪尔PE~35x），内部人减持和空头兴趣激增增加短期波动风险</span><span data-en>Industry leaders at historical valuation highs (CAT PE~40x, Deere PE~35x), insider selling and short interest surge increase short-term volatility</span></li>
+        <li><span data-zh>新兴市场仿制品泛滥（俄罗斯低端配件30%为不合格品）和品牌侵权（乌兹别克斯坦现代商标案）构成隐性风险</span><span data-en>Emerging market counterfeits (30% substandard in Russia low-end parts) and brand infringement (Uzbekistan Hyundai trademark case) pose hidden risks</span></li>
+      </ul>
+    </div>
+
+    <div class="summary-card reveal">
+      <h4><i class="fas fa-compass"></i> <span data-zh>战略发展建议</span><span data-en>Strategic Recommendations</span></h4>
+      <ul>
+        <li><strong><span data-zh>矿业装备企业：</span><span data-en>Mining Equipment: </span></strong><span data-zh>应在2026年内完成自主运输系统的矿山级验证测试，参考徐工在内蒙古伊敏煤矿部署100台自主电动矿卡的模式，以国内矿山为试验场积累运营数据</span><span data-en>Complete mine-level AHS validation tests in 2026, following XCMG's model of deploying 100 autonomous electric trucks at Inner Mongolia's Yimin coal mine as domestic testing ground</span></li>
+        <li><strong><span data-zh>出海企业合规：</span><span data-en>Overseas Compliance: </span></strong><span data-zh>在2026年Q2前完成美国市场产品原产地合规审计，对墨西哥、东南亚等转口节点的生产实质性进行自查，建立关税成本动态监测机制</span><span data-en>Complete US market product origin compliance audit by Q2 2026, self-inspect production substantiality at Mexico/SE Asia transshipment nodes, establish dynamic tariff cost monitoring</span></li>
+        <li><strong><span data-zh>后市场服务：</span><span data-en>Aftermarket Service: </span></strong><span data-zh>参考徐工（10万种配件储备）和柳工（4万种配件+15-20%年增库存）的模式，在重点海外市场建立区域配件中心，目标将后市场收入占比提升至设备销售额的30%以上</span><span data-en>Follow XCMG (100K+ parts) and LiuGong (40K+ parts, 15-20% annual inventory increase) models, establish regional parts centers in key overseas markets, targeting aftermarket revenue above 30% of equipment sales</span></li>
+        <li><strong><span data-zh>数字化能力：</span><span data-en>Digital Capabilities: </span></strong><span data-zh>在2026年内完成数字化战略顶层设计，优先在fleet管理、预测性维护和远程监控三个场景落地AI应用</span><span data-en>Complete digital strategy top-level design in 2026, prioritize AI applications in fleet management, predictive maintenance, and remote monitoring</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="footer-brand">Supinfor Ltd.</div>
+  <div class="footer-text">
+    <span data-zh>发布日期：2026年3月</span><span data-en>Published: March 2026</span><br>
+    <span data-zh>本报告基于工程机械行业资讯月报2026-02编制，仅供参考，不构成投资建议。</span><span data-en>Based on Construction Machinery Industry Monthly Report 2026-02. For reference only, not investment advice.</span><br>
+    &copy; 2026 Supinfor Ltd.
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><i class="fas fa-arrow-up"></i></button>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// Theme toggle
+function toggleTheme(){
+  const h=document.documentElement, c=h.getAttribute('data-theme');
+  const n=c==='dark'?'light':c==='light'?'dark':'dark';
+  h.setAttribute('data-theme',n); localStorage.setItem('theme',n);
+}
+(function(){const s=localStorage.getItem('theme');if(s)document.documentElement.setAttribute('data-theme',s)})();
+
+// Language toggle
+function toggleLang(){
+  const h=document.documentElement, c=h.getAttribute('data-lang');
+  const n=c==='zh'?'en':'zh';
+  h.setAttribute('data-lang',n); h.setAttribute('lang',n);
+  document.getElementById('langLabel').textContent=n==='zh'?'EN':'中';
+  localStorage.setItem('lang',n);
+}
+(function(){const s=localStorage.getItem('lang');if(s){document.documentElement.setAttribute('data-lang',s);document.documentElement.setAttribute('lang',s);document.getElementById('langLabel').textContent=s==='zh'?'EN':'中'}})();
+
+// Scroll reveal
+const obs=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:.08});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+
+// Back to top
+window.addEventListener('scroll',()=>{document.getElementById('backToTop').style.display=window.scrollY>500?'flex':'none'});
+
+// Active TOC link
+const sections=document.querySelectorAll('section[id]');
+const tocLinks=document.querySelectorAll('.toc-link');
+window.addEventListener('scroll',()=>{
+  let current='';
+  sections.forEach(s=>{if(window.scrollY>=s.offsetTop-120)current=s.id});
+  tocLinks.forEach(l=>{l.classList.toggle('active',l.getAttribute('href')==='#'+current)});
+});
+</script>
+</body>
+</html>
