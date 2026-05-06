@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spinning Globe — Supinfor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: transparent;
+            overflow: hidden;
+            font-family: 'Manrope', 'JetBrains Mono', monospace;
+        }
+
+        .scene {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #globeCanvas {
+            width: 580px;
+            height: 580px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Outer scan ring */
+        .scan-ring {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 610px;
+            height: 610px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            border: 1px solid rgba(18, 32, 64, 0.35);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .scan-ring::before {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            border-radius: 50%;
+            border: 1px dashed rgba(18, 32, 64, 0.25);
+            animation: rotate-ring 30s linear infinite;
+        }
+
+        .scan-ring::after {
+            content: '';
+            position: absolute;
+            inset: -40px;
+            border-radius: 50%;
+            border: 1px solid rgba(18, 32, 64, 0.15);
+            animation: rotate-ring 45s linear infinite reverse;
+        }
+
+        @keyframes rotate-ring {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Atmosphere glow — cool blue rim */
+        .atmosphere {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 620px;
+            height: 620px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                rgba(10, 22, 40, 0.0) 40%,
+                rgba(18, 32, 64, 0.25) 47%,
+                rgba(10, 22, 40, 0.12) 52%,
+                transparent 60%
+            );
+            pointer-events: none;
+            z-index: 0;
+            animation: glow-pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes glow-pulse {
+            0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 1; transform: translate(-50%, -50%) scale(1.015); }
+        }
+
+        /* Data stream particles — gold */
+        .data-particles {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 560px;
+            height: 560px;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 3;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(232, 182, 89, 0.9);
+            border-radius: 50%;
+            box-shadow: 0 0 6px rgba(232, 182, 89, 0.6);
+            animation: float-particle 3s linear infinite;
+        }
+
+        .particle:nth-child(1) { top: 20%; left: 30%; animation-delay: 0s; animation-duration: 2.5s; }
+        .particle:nth-child(2) { top: 60%; left: 70%; animation-delay: 0.5s; animation-duration: 3.2s; }
+        .particle:nth-child(3) { top: 40%; left: 15%; animation-delay: 1s; animation-duration: 2.8s; }
+        .particle:nth-child(4) { top: 75%; left: 45%; animation-delay: 1.5s; animation-duration: 3.5s; }
+        .particle:nth-child(5) { top: 25%; left: 80%; animation-delay: 2s; animation-duration: 2.2s; }
+        .particle:nth-child(6) { top: 85%; left: 25%; animation-delay: 0.3s; animation-duration: 3s; }
+        .particle:nth-child(7) { top: 50%; left: 90%; animation-delay: 1.2s; animation-duration: 2.6s; }
+        .particle:nth-child(8) { top: 10%; left: 55%; animation-delay: 0.8s; animation-duration: 3.3s; }
+
+        @keyframes float-particle {
+            0% { opacity: 0; transform: translateY(0) scale(0.5); }
+            20% { opacity: 1; transform: translateY(-5px) scale(1); }
+            80% { opacity: 1; transform: translateY(-15px) scale(1); }
+            100% { opacity: 0; transform: translateY(-25px) scale(0.5); }
+        }
+
+        /* Corner data labels — gold */
+        .data-label {
+            position: absolute;
+            color: rgba(232, 182, 89, 0.55);
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            pointer-events: none;
+            z-index: 5;
+        }
+
+        .data-label.top-left { top: -30px; left: 20px; }
+        .data-label.top-right { top: -30px; right: 20px; }
+        .data-label.bottom-left { bottom: -30px; left: 20px; }
+        .data-label.bottom-right { bottom: -30px; right: 20px; animation: blink 2s ease-in-out infinite; }
+
+        @keyframes blink {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="scene">
+        <div class="atmosphere"></div>
+        <div class="scan-ring"></div>
+        <canvas id="globeCanvas" width="1160" height="1160"></canvas>
+        <div class="data-particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <span class="data-label top-left">GLOBAL INTEL</span>
+        <span class="data-label top-right">LAT 25° LON —</span>
+        <span class="data-label bottom-left">196 REGIONS</span>
+        <span class="data-label bottom-right">● LIVE FEED</span>
+    </div>
+
+    <!-- d3-geo for proper orthographic clipping + topojson-client -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-array@3/dist/d3-array.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-geo@3/dist/d3-geo.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+
+    <script>
+    (function () {
+        'use strict';
+
+        // ===================== Config =====================
+        var ROTATION_SPEED = 0.015;   // deg/ms (~15°/s, full rotation ~24s)
+        var TILT = -25;               // d3 uses negative for north-looking
+        var OCEAN_COLOR = '#0A1628';
+        var LAND_FILL   = '#E8B659';
+        var LAND_STROKE = '#A67B24';
+        var LAND_STROKE_W = 0.6;
+        var GRAT_STROKE = 'rgba(30, 52, 85, 0.4)';
+        var GRAT_STROKE_W = 0.5;
+        var TARGET_FPS = 30;
+        var FRAME_INTERVAL = 1000 / TARGET_FPS;
+
+        // ===================== Canvas =====================
+        var canvas = document.getElementById('globeCanvas');
+        var ctx = canvas.getContext('2d');
+        var W = canvas.width, H = canvas.height;
+        var CX = W / 2, CY = H / 2;
+        var R = Math.min(CX, CY) - 4;
+
+        var lonLabel = document.querySelector('.data-label.top-right');
+
+        // ===================== d3 projection =====================
+        // d3.geoOrthographic handles hemisphere clipping natively —
+        // polygons, lines, and graticules are all properly clipped
+        // to the visible hemisphere with correct limb arcs.
+        var projection = d3.geoOrthographic()
+            .translate([CX, CY])
+            .scale(R)
+            .rotate([0, TILT, 0])
+            .clipAngle(90)
+            .precision(0.5);
+
+        var path = d3.geoPath(projection, ctx);
+
+        // Graticule — generated once by d3
+        var graticule = d3.geoGraticule().step([30, 30])();
+
+        // Globe outline (for ocean fill)
+        var sphere = { type: 'Sphere' };
+
+        // ===================== GeoJSON data =====================
+        var land = null;
+
+        function loadGeoData() {
+            fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
+                .then(function (r) { return r.json(); })
+                .then(function (topo) {
+                    // Use merged land for fewer draw calls (no per-country needed)
+                    land = topojson.feature(topo, topo.objects.countries);
+                    requestAnimationFrame(tick);
+                });
+        }
+
+        // ===================== Draw =====================
+        function draw() {
+            ctx.clearRect(0, 0, W, H);
+
+            // Ocean
+            ctx.beginPath();
+            path(sphere);
+            ctx.fillStyle = OCEAN_COLOR;
+            ctx.fill();
+
+            // Graticule
+            ctx.beginPath();
+            path(graticule);
+            ctx.strokeStyle = GRAT_STROKE;
+            ctx.lineWidth = GRAT_STROKE_W;
+            ctx.stroke();
+
+            // Land — fill
+            if (land) {
+                ctx.beginPath();
+                path(land);
+                ctx.fillStyle = LAND_FILL;
+                ctx.globalAlpha = 0.92;
+                ctx.fill();
+                ctx.globalAlpha = 1;
+
+                // Land — stroke
+                ctx.beginPath();
+                path(land);
+                ctx.strokeStyle = LAND_STROKE;
+                ctx.lineWidth = LAND_STROKE_W;
+                ctx.stroke();
+            }
+        }
+
+        // ===================== Animation loop =====================
+        var rotLon = 0;
+        var lastTime = 0;
+        var lastLabelUpdate = 0;
+
+        function tick(now) {
+            requestAnimationFrame(tick);
+
+            var delta = now - lastTime;
+            if (delta < FRAME_INTERVAL) return;
+            lastTime = now - (delta % FRAME_INTERVAL);
+
+            rotLon += ROTATION_SPEED * delta;
+            if (rotLon > 360) rotLon -= 360;
+
+            // Update projection rotation (d3 handles clipping automatically)
+            projection.rotate([rotLon, TILT, 0]);
+
+            draw();
+
+            // Throttled label update
+            if (now - lastLabelUpdate > 250) {
+                lastLabelUpdate = now;
+                var lon = Math.round(rotLon % 360);
+                if (lon > 180) lon -= 360;
+                lonLabel.textContent = 'LAT 25\u00B0 LON ' + lon + '\u00B0';
+            }
+        }
+
+        // Pause when hidden
+        document.addEventListener('visibilitychange', function () {
+            if (!document.hidden) lastTime = performance.now();
+        });
+
+        loadGeoData();
+    })();
+    </script>
+</body>
+</html>
