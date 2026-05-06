@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supinfor — Research Reports</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/lang.js"></script>
+</head>
+<body data-page="insights">
+
+<!-- ═══ TOP BAR (rendered by js/components.js) ═══ -->
+<header class="top-bar" id="topBar"></header>
+
+<!-- ═══ DARK ZONE: Three-column hero (synced with home.html aesthetics) ═══ -->
+<div class="dark-zone">
+  <!-- Dot grid overlay -->
+  <div class="hero-dot-grid"></div>
+  <div class="hero-split">
+    <!-- Left: page intro + toggle -->
+    <div class="hero-left">
+      <div class="eyebrow" data-i18n="insights_eyebrow">Supinfor Intelligence</div>
+      <h1><span class="gradient-text" data-i18n="insights_h1_highlight">Research</span><span data-i18n="insights_h1_suffix"> Reports</span></h1>
+      <p class="subtitle" data-i18n="insights_subtitle">A curated collection of reports covering regional intelligence and global industry analysis — consistently, at scale, and tailored to what you're tracking.</p>
+      <div class="product-toggle" id="toggleBar"></div>
+      <div class="type-chips" id="typeChips"></div>
+    </div>
+    <!-- Center: illustration — report document (oversized, bottom cut off) -->
+    <div class="hero-center">
+      <div class="illus-dark" style="background:radial-gradient(ellipse at 50% 40%, rgba(91,108,249,.08) 0%, transparent 70%);border:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;backdrop-filter:blur(10px)">
+        <svg style="position:absolute;top:10px;left:50%;transform:translateX(-50%);width:90%;height:800px" viewBox="0 0 240 380" preserveAspectRatio="xMidYMin meet" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Report page shadow -->
+          <rect x="28" y="14" width="184" height="360" rx="8" fill="rgba(91,108,249,.05)"/>
+          <!-- Report page -->
+          <rect x="20" y="6" width="184" height="360" rx="8" fill="rgba(10,15,61,.85)" stroke="rgba(91,108,249,.35)" stroke-width="1.2"/>
+          <!-- Top accent bar -->
+          <rect x="20" y="6" width="184" height="6" rx="8" fill="rgba(244,203,122,.4)"/>
+          <!-- Header -->
+          <rect x="40" y="30" width="90" height="5" rx="2.5" fill="rgba(244,203,122,.7)"/>
+          <rect x="40" y="42" width="60" height="3.5" rx="1.75" fill="rgba(255,255,255,.25)"/>
+          <rect x="40" y="52" width="140" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="40" y="60" width="120" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <!-- Divider -->
+          <line x1="40" y1="74" x2="184" y2="74" stroke="rgba(91,108,249,.2)" stroke-width="0.6"/>
+          <!-- Chart area -->
+          <rect x="40" y="84" width="144" height="80" rx="6" fill="rgba(91,108,249,.05)" stroke="rgba(91,108,249,.15)" stroke-width="0.6"/>
+          <!-- Grid lines in chart -->
+          <line x1="40" y1="104" x2="184" y2="104" stroke="rgba(255,255,255,.04)" stroke-width="0.4"/>
+          <line x1="40" y1="124" x2="184" y2="124" stroke="rgba(255,255,255,.04)" stroke-width="0.4"/>
+          <line x1="40" y1="144" x2="184" y2="144" stroke="rgba(255,255,255,.04)" stroke-width="0.4"/>
+          <!-- Bar chart -->
+          <rect x="52" y="130" width="12" height="28" rx="2" fill="rgba(91,108,249,.55)"/>
+          <rect x="70" y="118" width="12" height="40" rx="2" fill="rgba(91,108,249,.65)"/>
+          <rect x="88" y="105" width="12" height="53" rx="2" fill="rgba(244,203,122,.7)"/>
+          <rect x="106" y="122" width="12" height="36" rx="2" fill="rgba(91,108,249,.5)"/>
+          <rect x="124" y="96" width="12" height="62" rx="2" fill="rgba(244,203,122,.8)"/>
+          <rect x="142" y="112" width="12" height="46" rx="2" fill="rgba(91,108,249,.6)"/>
+          <rect x="160" y="126" width="12" height="32" rx="2" fill="rgba(91,108,249,.4)"/>
+          <!-- Section 2: Key findings -->
+          <rect x="40" y="180" width="70" height="4" rx="2" fill="rgba(244,203,122,.5)"/>
+          <rect x="40" y="192" width="144" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
+          <rect x="40" y="200" width="130" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <rect x="40" y="208" width="144" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="40" y="216" width="100" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <!-- Section 3: Pie chart + legend -->
+          <rect x="40" y="236" width="55" height="4" rx="2" fill="rgba(244,203,122,.4)"/>
+          <!-- Pie chart -->
+          <circle cx="80" cy="285" r="28" fill="none" stroke="rgba(91,108,249,.12)" stroke-width="0.5"/>
+          <path d="M80 257 A28 28 0 0 1 108 285 L80 285 Z" fill="rgba(91,108,249,.6)"/>
+          <path d="M108 285 A28 28 0 0 1 80 313 L80 285 Z" fill="rgba(244,203,122,.55)"/>
+          <path d="M80 313 A28 28 0 0 1 52 285 L80 285 Z" fill="rgba(91,108,249,.35)"/>
+          <path d="M52 285 A28 28 0 0 1 80 257 L80 285 Z" fill="rgba(91,108,249,.18)"/>
+          <!-- Legend -->
+          <circle cx="125" cy="270" r="4" fill="rgba(91,108,249,.6)"/>
+          <rect x="134" y="268" width="40" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
+          <circle cx="125" cy="285" r="4" fill="rgba(244,203,122,.55)"/>
+          <rect x="134" y="283" width="35" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/>
+          <circle cx="125" cy="300" r="4" fill="rgba(91,108,249,.35)"/>
+          <rect x="134" y="298" width="42" height="3" rx="1.5" fill="rgba(255,255,255,.12)"/>
+          <!-- Bottom text (will be cut off) -->
+          <rect x="40" y="330" width="80" height="4" rx="2" fill="rgba(244,203,122,.35)"/>
+          <rect x="40" y="342" width="144" height="3" rx="1.5" fill="rgba(255,255,255,.1)"/>
+          <rect x="40" y="350" width="120" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+          <rect x="40" y="358" width="144" height="3" rx="1.5" fill="rgba(255,255,255,.08)"/>
+          <rect x="40" y="366" width="90" height="3" rx="1.5" fill="rgba(255,255,255,.06)"/>
+        </svg>
+      </div>
+    </div>
+    <!-- Right: product description -->
+    <div class="hero-right" id="productStrip"></div>
+  </div>
+</div>
+
+<!-- ═══ LIGHT ZONE: Split panel ═══ -->
+<div class="light-zone">
+  <div class="left">
+    <button class="mobile-sidebar-toggle" id="mobileSidebarToggle">
+      <span data-i18n="insights_browse_types">Browse Report Types</span>
+      <span class="toggle-arrow">▾</span>
+    </button>
+    <div class="type-list" id="typeList"></div>
+  </div>
+  <div class="right" id="rightPanel"></div>
+</div>
+
+<!-- ═══ FOOTER (rendered by js/components.js) ═══ -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+<script src="js/components.js"></script>
+<script>
+renderNav('insights');
+renderFooter();
+initTopbarScroll();
+Lang.apply();
+</script>
+<script src="js/data.js"></script>
+<script src="js/app-illus.js"></script>
+<script src="js/app.js"></script>
+<!-- Re-render nav/footer/content on language change -->
+<script>
+document.addEventListener('langchange', function() {
+  renderNav('insights');
+  renderFooter();
+  Lang.bindToggle();
+  rebuildProducts();
+  render();
+});
+</script>
+</body>
+</html>

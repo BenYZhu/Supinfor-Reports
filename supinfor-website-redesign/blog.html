@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supinfor — Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/lang.js"></script>
+<style>
+/* ══════════════════════════════
+   BLOG — page-specific styles
+══════════════════════════════ */
+html, body { display: flex; flex-direction: column; }
+
+/* ══════════════════════════════
+   HERO — dark zone, 3-column
+══════════════════════════════ */
+.blog-dark {
+  background: var(--blue-950);
+  background-image: var(--gradient-hero);
+  color: #fff;
+  padding-top: 80px;
+}
+.blog-hero-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 40px 90px;
+  display: grid;
+  grid-template-columns: 1fr auto 1.4fr auto 1fr;
+  gap: 0;
+  align-items: stretch;
+  min-height: 460px;
+}
+
+/* Divider between columns */
+.blog-hero-divider {
+  width: 1px;
+  background: rgba(255,255,255,.1);
+  align-self: stretch;
+  margin: 0 28px;
+}
+
+/* Left — page identity */
+.blog-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 8px;
+}
+.blog-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-bright);
+  margin-bottom: 18px;
+}
+.blog-hero-h1 {
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: 1.0;
+  margin-bottom: 10px;
+}
+.blog-hero-subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,.4);
+  letter-spacing: .01em;
+  margin-bottom: 20px;
+}
+.blog-hero-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,.35);
+  line-height: 1.8;
+}
+
+/* Middle — featured article */
+.blog-hero-mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8px;
+}
+.featured-label {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.featured-label::before,
+.featured-label::after {
+  content: '';
+  display: block;
+  height: 1px;
+  background: rgba(255,255,255,.15);
+}
+.featured-label::before { width: 20px; flex-shrink: 0; }
+.featured-label::after  { flex: 1; }
+.featured-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.featured-cat-badge {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 30px;
+  background: rgba(244,203,122,.15);
+  border: 1px solid rgba(244,203,122,.3);
+  color: var(--gold-bright);
+}
+.featured-date-txt {
+  font-size: 12px;
+  color: rgba(255,255,255,.28);
+}
+.featured-title {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -.025em;
+  line-height: 1.25;
+  color: #fff;
+  margin-bottom: 14px;
+}
+.featured-excerpt {
+  font-size: 14px;
+  color: rgba(255,255,255,.42);
+  line-height: 1.75;
+  margin-bottom: 26px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.featured-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+  background: rgba(91,108,249,.28);
+  border: 1px solid rgba(91,108,249,.45);
+  padding: 10px 20px;
+  border-radius: 9px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background .2s;
+}
+.featured-cta:hover { background: rgba(91,108,249,.45); }
+
+/* Right — article cover placeholder */
+.blog-hero-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 8px;
+}
+.cover-placeholder {
+  width: 100%;
+  aspect-ratio: 3/4;
+  max-height: 340px;
+  border-radius: 16px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.1);
+  overflow: hidden;
+  position: relative;
+}
+.cover-placeholder svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ══════════════════════════════
+   RIBBON — white bar, clear break
+══════════════════════════════ */
+.blog-ribbon-wrap {
+  background: #fff;
+  border-top: 3px solid var(--blue-500);
+  border-bottom: 1px solid #e4e6f5;
+  box-shadow: 0 4px 24px rgba(91,108,249,.07);
+  position: sticky;
+  top: 65px; /* sits below fixed topbar */
+  z-index: 90;
+}
+.blog-ribbon {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 58px;
+}
+.cat-tab {
+  padding: 7px 20px;
+  border-radius: 30px;
+  border: 1.5px solid #e0e3f5;
+  background: none;
+  color: #6670a8;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: var(--sans);
+  cursor: pointer;
+  transition: all .18s;
+  white-space: nowrap;
+}
+.cat-tab:hover { border-color: var(--blue-500); color: var(--blue-500); background: rgba(91,108,249,.04); }
+.cat-tab.active { background: var(--blue-950); border-color: var(--blue-950); color: #fff; box-shadow: 0 2px 10px rgba(10,15,61,.2); }
+
+/* ══════════════════════════════
+   CONTENT — light zone
+══════════════════════════════ */
+.blog-content { background: var(--paper); flex: 1; }
+.blog-section { max-width: 1440px; margin: 0 auto; padding: 60px 40px; }
+.blog-section-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: rgba(10,15,61,.25);
+  margin-bottom: 26px;
+}
+
+/* ══════════════════════════════
+   COLLAGE
+══════════════════════════════ */
+.collage-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+.collage-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1.5px solid rgba(10,15,61,.07);
+  transition: border-color .2s, box-shadow .2s, transform .2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.collage-card:hover {
+  border-color: var(--blue-500);
+  box-shadow: 0 8px 30px rgba(91,108,249,.1);
+  transform: translateY(-2px);
+}
+.cell-hero { grid-column: 1; grid-row: 1 / 3; }
+.cell-hero .collage-img { height: 260px; }
+.cell-hero .collage-title { font-size: 20px; }
+.cell-hero .collage-excerpt { display: block; }
+.cell-stack { grid-column: 2; grid-row: 1 / 3; display: flex; flex-direction: column; gap: 16px; }
+.cell-b, .cell-c { flex: 1; }
+.cell-b .collage-img, .cell-c .collage-img { height: 130px; }
+.cell-d { grid-column: 3; grid-row: 1; }
+.cell-e { grid-column: 3; grid-row: 2; }
+.cell-d .collage-img, .cell-e .collage-img { height: 130px; }
+.collage-img { overflow: hidden; flex-shrink: 0; }
+.collage-body { padding: 20px 22px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.collage-meta { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.collage-badge { font-size: 10px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; padding: 3px 10px; border-radius: 20px; }
+.collage-date { font-size: 12px; color: rgba(10,15,61,.3); }
+.collage-title { font-size: 15px; font-weight: 800; color: var(--blue-950); line-height: 1.35; letter-spacing: -.015em; }
+.collage-excerpt { font-size: 13px; color: rgba(10,15,61,.5); line-height: 1.65; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.cell-b .collage-excerpt, .cell-c .collage-excerpt, .cell-d .collage-excerpt, .cell-e .collage-excerpt { display: none; }
+.collage-link { font-size: 13px; font-weight: 700; color: var(--blue-500); text-decoration: none; margin-top: auto; padding-top: 4px; }
+.collage-link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════
+   MATRIX
+══════════════════════════════ */
+#matrix-section { border-top: 1px solid rgba(10,15,61,.07); padding-top: 48px; }
+.matrix-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.matrix-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1.5px solid rgba(10,15,61,.07);
+  transition: border-color .2s, box-shadow .2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+.matrix-card:hover { border-color: var(--blue-500); box-shadow: 0 5px 20px rgba(91,108,249,.08); }
+.matrix-img { height: 130px; overflow: hidden; flex-shrink: 0; }
+.matrix-body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.matrix-meta { display: flex; align-items: center; gap: 8px; }
+.matrix-badge { font-size: 10px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 20px; }
+.matrix-date { font-size: 11px; color: rgba(10,15,61,.28); }
+.matrix-title { font-size: 14px; font-weight: 800; color: var(--blue-950); line-height: 1.4; letter-spacing: -.01em; }
+.matrix-excerpt { font-size: 12px; color: rgba(10,15,61,.45); line-height: 1.6; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+.matrix-footer { display: flex; align-items: center; justify-content: space-between; padding-top: 8px; border-top: 1px solid rgba(10,15,61,.05); margin-top: 4px; }
+.matrix-read { font-size: 11px; color: rgba(10,15,61,.28); }
+.matrix-link { font-size: 12px; font-weight: 700; color: var(--blue-500); }
+.matrix-link:hover { text-decoration: underline; }
+
+/* ══════════════════════════════
+   PAGINATION
+══════════════════════════════ */
+#pager { display: flex; align-items: center; justify-content: center; gap: 6px; margin-top: 48px; }
+.page-btn {
+  min-width: 38px; height: 38px; padding: 0 12px;
+  border-radius: 9px; border: 1.5px solid rgba(10,15,61,.12);
+  background: #fff; color: rgba(10,15,61,.5);
+  font-size: 13px; font-weight: 700; font-family: var(--sans);
+  cursor: pointer; transition: all .15s;
+}
+.page-btn:hover:not(:disabled) { border-color: var(--blue-500); color: var(--blue-500); }
+.page-btn.active { background: var(--blue-950); border-color: var(--blue-950); color: #fff; }
+.page-btn:disabled { opacity: .3; cursor: default; }
+.page-prev, .page-next { min-width: 72px; }
+</style>
+</head>
+<body data-page="blog">
+
+<!-- ═══ TOP BAR (rendered by js/components.js) ═══ -->
+<header class="top-bar" id="topBar"></header>
+
+<!-- ═══ HERO ═══ -->
+<div class="blog-dark">
+  <div class="blog-hero-inner">
+
+    <!-- Left: Page identity — title, subtitle, description -->
+    <div class="blog-hero-left">
+      <div class="blog-eyebrow" data-i18n="blog_eyebrow">Supinfor Intelligence</div>
+      <h1 class="blog-hero-h1" data-i18n="blog_h1">Resources</h1>
+      <p class="blog-hero-subtitle" data-i18n="blog_subtitle">Guides &amp; Articles</p>
+      <p class="blog-hero-desc" data-i18n="blog_desc">Analysis, research, and guides from the Supinfor team — covering geopolitical risk, global industry dynamics, and the intelligence methods that keep you ahead.</p>
+    </div>
+
+    <!-- Divider -->
+    <div class="blog-hero-divider"></div>
+
+    <!-- Middle: Featured article -->
+    <div class="blog-hero-mid">
+      <div class="featured-label">
+        <span data-i18n="blog_featured">Featured Article</span>
+      </div>
+      <div class="featured-meta-row">
+        <span class="featured-cat-badge" id="feat-cat"></span>
+        <span class="featured-date-txt" id="feat-meta"></span>
+      </div>
+      <div class="featured-title" id="feat-title"></div>
+      <div class="featured-excerpt" id="feat-excerpt"></div>
+      <a href="#" class="featured-cta" data-i18n="blog_read_article">Read article →</a>
+    </div>
+
+    <!-- Divider -->
+    <div class="blog-hero-divider"></div>
+
+    <!-- Right: Article cover placeholder -->
+    <div class="blog-hero-right">
+      <div class="cover-placeholder" id="feat-art">
+        <svg viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="240" height="320" fill="rgba(255,255,255,.03)"/>
+          <rect x="30" y="40" width="180" height="8" rx="4" fill="rgba(255,255,255,.06)"/>
+          <rect x="30" y="60" width="140" height="6" rx="3" fill="rgba(255,255,255,.04)"/>
+          <rect x="30" y="80" width="160" height="6" rx="3" fill="rgba(255,255,255,.04)"/>
+          <rect x="30" y="110" width="180" height="100" rx="8" fill="rgba(255,255,255,.05)"/>
+          <circle cx="120" cy="160" r="20" fill="rgba(255,255,255,.06)"/>
+          <polygon points="114,152 130,160 114,168" fill="rgba(255,255,255,.12)"/>
+          <rect x="30" y="230" width="80" height="6" rx="3" fill="rgba(255,255,255,.05)"/>
+          <rect x="30" y="248" width="180" height="4" rx="2" fill="rgba(255,255,255,.03)"/>
+          <rect x="30" y="260" width="160" height="4" rx="2" fill="rgba(255,255,255,.03)"/>
+          <rect x="30" y="272" width="120" height="4" rx="2" fill="rgba(255,255,255,.03)"/>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ═══ RIBBON ═══ -->
+<div class="blog-ribbon-wrap">
+  <div class="blog-ribbon">
+    <button class="cat-tab active" data-cat="All" data-i18n="blog_cat_all">All</button>
+    <button class="cat-tab" data-cat="Trends" data-i18n="blog_cat_trends">Trends</button>
+    <button class="cat-tab" data-cat="Region" data-i18n="blog_cat_region">Region</button>
+    <button class="cat-tab" data-cat="Industry" data-i18n="blog_cat_industry">Industry</button>
+    <button class="cat-tab" data-cat="Guides" data-i18n="blog_cat_guides">Guides</button>
+  </div>
+</div>
+
+<!-- ═══ CONTENT ═══ -->
+<div class="blog-content">
+  <div class="blog-section">
+    <div class="blog-section-label" data-i18n="blog_featured_section">Featured</div>
+    <div id="collage"></div>
+  </div>
+  <div class="blog-section" id="matrix-section">
+    <div class="blog-section-label" data-i18n="blog_more">More Articles</div>
+    <div class="matrix-grid" id="matrix-grid"></div>
+    <div id="pager"></div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER (rendered by js/components.js) ═══ -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+<script src="js/components.js"></script>
+<script>
+renderNav('blog');
+renderFooter();
+initTopbarScroll();
+Lang.apply();
+</script>
+<script src="js/blog.js"></script>
+<!-- Re-render nav/footer on language change -->
+<script>
+document.addEventListener('langchange', function() {
+  renderNav('blog');
+  renderFooter();
+  Lang.bindToggle();
+});
+</script>
+</body>
+</html>

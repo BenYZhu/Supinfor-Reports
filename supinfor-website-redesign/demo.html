@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Supinfor — Request a Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="css/responsive.css">
+<script src="config.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/lang.js"></script>
+<style>
+/* ── Demo page specific styles ── */
+.demo-page {
+  min-height: calc(100vh - 200px);
+  display: flex; flex-direction: column;
+  background: radial-gradient(ellipse 80% 60% at 50% 20%, #2B3AC7 0%, #1E2B8C 40%, #0D1A5C 80%, #0A0F3D 100%);
+  color: #fff; position: relative; overflow: hidden; padding-top: 64px;
+}
+.demo-page::before {
+  content: ''; position: absolute; inset: 0;
+  background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent 70%);
+  pointer-events: none;
+}
+.demo-content {
+  flex: 1; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; padding: 40px; position: relative; z-index: 10; text-align: center;
+}
+.demo-badge {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px;
+  border-radius: 999px; background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2); font-size: 12px;
+  font-weight: 600; letter-spacing: 0.08em; margin-bottom: 32px;
+}
+.demo-h1 { font-size: clamp(40px, 5vw, 64px); font-weight: 700; letter-spacing: -0.03em; line-height: 1.05; margin-bottom: 20px; }
+.demo-h1 .gradient-text { background: linear-gradient(135deg, #F4CB7A 0%, #E8B659 50%, #D4DAFF 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.demo-desc { font-size: 17px; color: rgba(255,255,255,0.7); max-width: 560px; line-height: 1.6; margin-bottom: 48px; }
+.demo-card { background: rgba(255,255,255,0.06); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 48px; max-width: 560px; width: 100%; text-align: left; }
+.demo-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.demo-card p { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 28px; line-height: 1.6; }
+.demo-card .field { margin-bottom: 16px; }
+.demo-card label { display: block; font-size: 12px; font-weight: 600; color: rgba(255,255,255,0.5); letter-spacing: 0.06em; margin-bottom: 6px; }
+.demo-card input, .demo-card select { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: #fff; font-family: var(--sans); font-size: 14px; outline: none; transition: border-color 0.2s; }
+.demo-card input::placeholder, .demo-card textarea::placeholder { color: rgba(255,255,255,0.3); }
+.demo-card input:focus, .demo-card select:focus, .demo-card textarea:focus { border-color: var(--gold); }
+.demo-card select option { background: var(--blue-950); color: #fff; }
+.demo-card textarea { width: 100%; padding: 12px 14px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.06); color: #fff; font-family: var(--sans); font-size: 14px; outline: none; transition: border-color 0.2s; resize: vertical; min-height: 80px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.field label .req { color: var(--gold-bright); }
+.demo-submit { width: 100%; padding: 14px; border-radius: 12px; background: linear-gradient(135deg, #F4CB7A, #E8B659); color: #0A0F3D; font-size: 15px; font-weight: 600; border: none; cursor: pointer; margin-top: 8px; box-shadow: 0 10px 30px -10px rgba(232,182,89,0.4); transition: opacity 0.2s; }
+.demo-submit:hover { opacity: 0.9; }
+.demo-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+.field-error { display: block; font-size: 11px; color: #ff6b6b; margin-top: 4px; min-height: 16px; }
+.demo-card input.invalid, .demo-card select.invalid { border-color: #ff6b6b; }
+.cases-group { display: flex; flex-wrap: wrap; gap: 8px; }
+.case-check { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); background: rgba(255,255,255,0.04); color: rgba(255,255,255,0.65); font-size: 12px; font-weight: 500; cursor: pointer; transition: all 0.2s; letter-spacing: 0; margin-bottom: 0; }
+.case-check:hover { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); }
+.case-check input[type="checkbox"] { width: 14px; height: 14px; accent-color: var(--gold); cursor: pointer; }
+.case-check:has(input:checked) { border-color: var(--gold); background: rgba(244,203,122,0.1); color: var(--gold-bright); }
+.toast { position: fixed; top: 80px; left: 50%; transform: translateX(-50%) translateY(-20px); padding: 14px 28px; border-radius: 12px; font-size: 14px; font-weight: 600; font-family: var(--sans); z-index: 9999; opacity: 0; pointer-events: none; transition: opacity 0.3s, transform 0.3s; max-width: 480px; text-align: center; }
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); pointer-events: auto; }
+.toast.success { background: #1a7a4c; color: #fff; border: 1px solid #2ecc71; box-shadow: 0 8px 30px rgba(46,204,113,0.3); }
+.toast.error { background: #c0392b; color: #fff; border: 1px solid #e74c3c; box-shadow: 0 8px 30px rgba(231,76,60,0.3); }
+.demo-footer-note { margin-top: 24px; font-size: 11px; color: rgba(255,255,255,0.35); letter-spacing: 0.06em; display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
+.glow-1 { position: absolute; top: -150px; right: -100px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(232,182,89,0.15), transparent 60%); pointer-events: none; }
+.glow-2 { position: absolute; bottom: -200px; left: -100px; width: 600px; height: 600px; background: radial-gradient(circle, rgba(91,108,249,0.2), transparent 60%); pointer-events: none; }
+@media (max-width: 600px) { .field-row { grid-template-columns: 1fr; gap: 0; } .demo-card { padding: 32px 24px; } }
+</style>
+</head>
+<body data-page="demo">
+
+<!-- ═══ TOP BAR (rendered by js/components.js) ═══ -->
+<header class="top-bar" id="topBar"></header>
+
+<div class="demo-page">
+  <div class="glow-1"></div>
+  <div class="glow-2"></div>
+  <div class="demo-content">
+    <div class="demo-badge" data-i18n="demo_badge">◆ REQUEST A DEMO</div>
+    <h1 class="demo-h1"><span data-i18n="demo_h1_prefix">See what </span><span class="gradient-text" data-i18n="demo_h1_highlight">Supinfor</span><span data-i18n="demo_h1_suffix"> sees.</span></h1>
+    <p class="demo-desc" data-i18n="demo_desc">Book a 30-minute demo with a senior analyst. We'll show you the exact product modules that serve your mandate.</p>
+
+    <form class="demo-card" id="demoForm" novalidate>
+      <h3 data-i18n="demo_card_title">Book your demo</h3>
+      <p data-i18n="demo_card_desc">Fill in your details and a member of our team will be in touch within one business day.</p>
+      <div class="field-row">
+        <div class="field">
+          <label for="firstName"><span class="req">*</span> <span data-i18n="demo_label_firstname">FIRST NAME</span></label>
+          <input type="text" id="firstName" data-i18n-placeholder="demo_placeholder_firstname" placeholder="Jane" required>
+          <span class="field-error" id="err-firstName"></span>
+        </div>
+        <div class="field">
+          <label for="lastName"><span class="req">*</span> <span data-i18n="demo_label_lastname">LAST NAME</span></label>
+          <input type="text" id="lastName" data-i18n-placeholder="demo_placeholder_lastname" placeholder="Smith" required>
+          <span class="field-error" id="err-lastName"></span>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="email"><span class="req">*</span> <span data-i18n="demo_label_email">BUSINESS EMAIL</span></label>
+          <input type="email" id="email" data-i18n-placeholder="demo_placeholder_email" placeholder="jane@company.com" required>
+          <span class="field-error" id="err-email"></span>
+        </div>
+        <div class="field">
+          <label for="phone"><span class="req">*</span> <span data-i18n="demo_label_phone">PHONE NUMBER</span></label>
+          <input type="tel" id="phone" data-i18n-placeholder="demo_placeholder_phone" placeholder="+1 (555) 000-0000" required>
+          <span class="field-error" id="err-phone"></span>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="position" data-i18n="demo_label_jobtitle">JOB TITLE</label><input type="text" id="position" data-i18n-placeholder="demo_placeholder_jobtitle" placeholder="e.g. Marketing Director"></div>
+        <div class="field"><label for="city" data-i18n="demo_label_country">COUNTRY / CITY</label>
+          <select id="city"><option value="" data-i18n="demo_select_country">Select country…</option><option>China</option><option>Hong Kong</option><option>United States</option><option>United Kingdom</option><option>Singapore</option><option>Japan</option><option>South Korea</option><option>Germany</option><option>France</option><option>Australia</option><option>Canada</option><option>India</option><option>Brazil</option><option>UAE</option><option>Other</option></select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="industry" data-i18n="demo_label_industry">INDUSTRY</label><input type="text" id="industry" data-i18n-placeholder="demo_placeholder_industry" placeholder="e.g. Financial Services"></div>
+        <div class="field"><label for="company" data-i18n="demo_label_company">COMPANY NAME</label><input type="text" id="company" data-i18n-placeholder="demo_placeholder_company" placeholder="Acme Corp"></div>
+      </div>
+      <div class="field"><label for="people" data-i18n="demo_label_size">COMPANY SIZE</label>
+        <select id="people"><option value="" data-i18n="demo_select_size">Select company size…</option><option>1–10</option><option>11–50</option><option>51–200</option><option>201–500</option><option>501–1000</option><option>1001–5000</option><option>5000+</option></select>
+      </div>
+      <div class="field"><label data-i18n="demo_label_usecase">USE CASES (SELECT ALL THAT APPLY)</label>
+        <div class="cases-group" id="casesGroup">
+          <label class="case-check"><input type="checkbox" value="Brand management"> <span data-i18n="demo_usecase_brand">Brand management</span></label>
+          <label class="case-check"><input type="checkbox" value="Customer Care"> <span data-i18n="demo_usecase_care">Customer Care</span></label>
+          <label class="case-check"><input type="checkbox" value="Campaign Tracking"> <span data-i18n="demo_usecase_campaign">Campaign Tracking</span></label>
+          <label class="case-check"><input type="checkbox" value="Competitive Intelligence"> <span data-i18n="demo_usecase_competitive">Competitive Intelligence</span></label>
+          <label class="case-check"><input type="checkbox" value="Market Insight"> <span data-i18n="demo_usecase_market">Market Insight</span></label>
+          <label class="case-check"><input type="checkbox" value="Social Commerce"> <span data-i18n="demo_usecase_social">Social Commerce</span></label>
+          <label class="case-check"><input type="checkbox" value="Others"> <span data-i18n="demo_usecase_others">Others</span></label>
+        </div>
+      </div>
+      <div class="field"><label for="work" data-i18n="demo_label_agency">WORK TYPE</label>
+        <select id="work"><option value="">Select…</option><option value="Enterprise">Enterprise</option><option value="Agency">Agency</option><option value="Freelancer">Freelancer</option><option value="Other">Other</option></select>
+      </div>
+      <div class="field"><label for="message" data-i18n="demo_label_notes">NOTES</label><textarea id="message" data-i18n-placeholder="demo_placeholder_notes" placeholder="Tell us more about your needs…"></textarea></div>
+      <button type="submit" class="demo-submit" id="submitBtn" data-i18n="demo_submit">Submit →</button>
+    </form>
+    <div class="toast" id="toast"></div>
+    <div class="demo-footer-note">
+      <span data-i18n="demo_note_1">30-min tailored demo</span>
+      <span data-i18n="demo_note_2">Dedicated analyst assigned</span>
+      <span data-i18n="demo_note_3">No commitment required</span>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ FOOTER (rendered by js/components.js) ═══ -->
+<footer class="site-footer" id="siteFooter"></footer>
+
+<script src="js/components.js"></script>
+<script>
+renderNav('demo');
+renderFooter();
+initTopbarScroll();
+Lang.apply();
+</script>
+<script src="js/demo.js"></script>
+<!-- Re-render nav/footer on language change -->
+<script>
+document.addEventListener('langchange', function() {
+  renderNav('demo');
+  renderFooter();
+  Lang.bindToggle();
+});
+</script>
+</body>
+</html>
